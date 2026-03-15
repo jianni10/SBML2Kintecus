@@ -1,0 +1,100 @@
+# Kintecus model.dat — converted from SBML
+# Model : Legewie2006_apoptosis_NC  (id=Legewie2006_apoptosis_NC)
+# Source: BIOMD0000000103_url.xml
+#
+# --------------------------------------------------------------------
+# Notes:
+# This model represents the non-competitive binding of XIAP to Casapase-3 and Caspase-9. In other words, XIAP mediated feedback is abolished in this model. The authors state that this leads to bistable-reversible behaviour as depicted in Fig 4C. The wild-type model displays a bistable-irreversible profile. This shows that irreversibility requires XIAP mediated feedback. The model was tested on MathSBML. However, please note that the paper does not contain any  figure that corresponds to simulation of the Non-Competitive model.
+# To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. Please refer to
+# CC0 Public Domain Dedication
+# for more information.
+# In summary, you are entitled to use this encoded model in absolutely any manner you deem suitable, verbatim, or with modification, alone or embedded it in a larger context, redistribute it, commercially or not, in a restricted way or not.
+# To cite BioModels Database, please use:
+# Li C, Donizelli M, Rodriguez N, Dharuri H, Endler L, Chelliah V, Li L, He E, Henry A, Stefan MI, Snoep JL, Hucka M, Le Novère N, Laibe C (2010) BioModels Database: An enhanced, curated and annotated resource for published quantitative kinetic models. BMC Syst Biol., 4:92.
+# --------------------------------------------------------------------
+# Compartment (ignored in Kintecus): cytosol
+# Global params: k1=0.002  kb1=0.1  k2=5E-6  k3=0.00035  k9=0.001  k9b=0.001  k10=0.001  k10b=0.001  k13=0.002  k13b=0.1  k15=0.003  k15b=0.001  k4=0.0002  k5=0.0002  k8=0.002  k8b=0.1  k11=0.001  k11b=0.001  k12=0.001  k12b=0.001  k14=0.002  k14b=0.1  k6=5E-5  k7=0.0035  k16=0.001  k16prod=0.02  k17=0.001  k17prod=0.02  k18=0.001  k18prod=0.04  k19=0.001  k20=0.001  k21=0.001  k22=0.001  k22prod=0.2  k23=0.001  k24=0.001  k25=0.001  k26=0.001  k27=0.001  k28=0.001  k29=0.001  k30=0.001  k31=0.001  k32=0.001  a=1  d=1  k41=1  k42=1
+#
+# Species initial concentrations:
+#   A                 IC=          20  (APAF-1)
+#   C9                IC=          20  (Caspase 9)
+#   C9X               IC=           0  (Caspase 9-XIAP complex)
+#   X                 IC=          40  (XIAP)
+#   AC9X              IC=           0  (APAF-1-Caspase 9-XIAP complex)
+#   AC9               IC=           0  (APAF-1-Caspase 9 complex)
+#   C3                IC=         200  (Caspase 3)
+#   C3_star           IC=           0  (Caspase 3 cleaved)
+#   C3_starX          IC=           0  (Caspase 3 cleaved - XIAP complex)
+#   C9_starX          IC=           0  (Caspase 9 cleaved-XIAP complex)
+#   C9_star           IC=           0  (Caspase 9 cleaved)
+#   AC9_star          IC=           0  (APAF-1-Caspase 9 cleaved complex)
+#   AC9_starX         IC=           0  (Apaf-1-Caspase 9 cleaved -XIAP complex)
+#   C9X_C3_star       IC=           0  (Apaf-1-Caspase 9 cleaved -XIAP complex)
+#   AC9X_C3_star      IC=           0  (Apaf-1-Caspase 9 cleaved -XIAP complex)
+#   C9_starX_C3_star  IC=           0  (Apaf-1-Caspase 9 cleaved -XIAP complex)
+#   AC9_starX_C3_star  IC=           0  (Apaf-1-Caspase 9 cleaved -XIAP complex)
+#
+# Rate constant  Reaction               Comment
+#----------------------------------------------------------------------
+0.002	A+C9==>AC9	# Caspase 9 / Apaf-1 binding (v1) forward  k=k1
+0.1	AC9==>A+C9	# Caspase 9 / Apaf-1 binding (v1) reverse  k=kb1
+5E-6	C3+C9==>C3_star+C9	# Caspase 3 cleavage by Caspase 9 (v2)  k=k2
+0.00035	C3+AC9==>C3_star+AC9	# Caspase 3 cleavage by Caspase 9-Apaf-1 (v3)  k=k3
+0.001	C9+X==>C9X	# Caspase 9 Xiap binding (v9) forward  k=k9
+0.001	C9X==>C9+X	# Caspase 9 Xiap binding (v9) reverse  k=k9b
+0.001	AC9+X==>AC9X	# Caspase 9-Apaf-1 Xiap binding (v10) forward  k=k10
+0.001	AC9X==>AC9+X	# Caspase 9-Apaf-1 Xiap binding (v10) reverse  k=k10b
+0.002	C9X+A==>AC9X	# Caspase 9-Xiap Apaf-1 binding (v13) forward  k=k13
+0.1	AC9X==>C9X+A	# Caspase 9-Xiap Apaf-1 binding (v13) reverse  k=k13b
+0.003	C3_star+X==>C3_starX	# cleaved Caspase 3-Xiap binding (v15) forward  k=k15
+0.001	C3_starX==>C3_star+X	# cleaved Caspase 3-Xiap binding (v15) reverse  k=k15b
+0.0002	C9+C3_star==>C9_star+C3_star	# Caspase 9 cleavage by cleaved caspase 3 (v4)  k=k4
+0.0002	AC9+C3_star==>AC9_star+C3_star	# Caspase 9 cleavage by cleaved caspase 3 when Apaf-1 is bound (v5)  k=k5
+0.002	C9_star+A==>AC9_star	# cleaved Caspase 9 Apaf-1 binding (v8) forward  k=k8
+0.1	AC9_star==>C9_star+A	# cleaved Caspase 9 Apaf-1 binding (v8) reverse  k=k8b
+0.001	C9_star+X==>C9_starX	# cleaved Caspase 9 XIAP binding (v11) forward  k=k11
+0.001	C9_starX==>C9_star+X	# cleaved Caspase 9 XIAP binding (v11) reverse  k=k11b
+0.001	AC9_star+X==>AC9_starX	# cleaved Caspase 9-Apaf-1 XIAP binding (v12) forward  k=k12
+0.001	AC9_starX==>AC9_star+X	# cleaved Caspase 9-Apaf-1 XIAP binding (v12) reverse  k=k12b
+0.002	C9_starX+A==>AC9_starX	# cleaved Caspase 9-Xiap Apaf-1 binding (v14) forward  k=k14
+0.1	AC9_starX==>C9_starX+A	# cleaved Caspase 9-Xiap Apaf-1 binding (v14) reverse  k=k14b
+5E-5	C3+C9_star==>C3_star+C9_star	# Caspase 3 cleavage by cleaved Caspase 9 (v6)  k=k6
+0.0035	C3+AC9_star==>C3_star+AC9_star	# Caspase 3 cleavage by cleaved Caspase 9 - Apaf-1 (v7)  k=k7
+0.02	NULL==>A	# Apaf-1 turnover (v16)  k=k16prod
+0.02	NULL==>C9	# Caspase 9 turnover (v17)  k=k17prod
+0.04	NULL==>X	# Xiap turnover (v18)  k=k18prod
+0.001	C9X==>NULL	# Caspase 9-Xiap degradation (v19)  k=k19
+0.001	AC9X==>NULL	# Apaf-1-Caspase 9-Xiap degradation (v20)  k=k20
+0.001	AC9==>NULL	# Apaf-1-Caspase 9 degradation (v21)  k=k21
+0.2	NULL==>C3	# Caspase 3 turnover (v22)  k=k22prod
+0.001	C3_star==>NULL	# Caspase 3 cleaved degradation (v23)  k=k23
+0.001	C3_starX==>NULL	# Caspase 3 cleaved-Xiap degradation (v24)  k=k24
+0.001	C9_starX==>NULL	# Caspase 9 cleaved-Xiap degradation (v25)  k=k25
+0.001	C9_star==>NULL	# Caspase 9 cleaved degradation (v26)  k=k26
+0.001	AC9_star==>NULL	# Apaf-1 Caspase 9 cleaved degradation (v27)  k=k27
+0.001	AC9_starX==>NULL	# Apaf-1 Caspase 9 cleaved-Xiap degradation (v28)  k=k28
+0.001	C9X_C3_star==>NULL	# Caspase9-Xiap-Caspase3_star degradation (v29)  k=k29
+0.001	AC9_starX_C3_star==>NULL	# Apaf-1-Caspase9-Xiap-Caspase3_star degradation (v30)  k=k30
+0.001	C9_starX_C3_star==>NULL	# Caspase9_star-Xiap-Caspase3_star degradation (v31)  k=k31
+0.001	AC9_starX_C3_star==>NULL	# Apaf-1-Caspase9_star-Xiap-Caspase3_star degradation (v32)  k=k32
+0.003	C3_star+C9X==>C9X_C3_star	# Cleaved-Caspase 3 binding with Xiap-Caspase 9 (v33) forward  k=k15
+0.001	C9X_C3_star==>C3_star+C9X	# Cleaved-Caspase 3 binding with Xiap-Caspase 9 (v33) reverse  k=k15b
+0.003	C3_star+AC9X==>AC9X_C3_star	# Cleaved-Caspase 3 binding with Apaf-Xiap-Caspase 9 (v34) forward  k=k15
+0.001	AC9X_C3_star==>C3_star+AC9X	# Cleaved-Caspase 3 binding with Apaf-Xiap-Caspase 9 (v34) reverse  k=k15b
+0.003	C3_star+C9_starX==>C9_starX_C3_star	# Cleaved-Caspase 3 binding with Cleaved-Xiap-Caspase 9 (v35) forward  k=k15
+0.001	C9_starX_C3_star==>C3_star+C9_starX	# Cleaved-Caspase 3 binding with Cleaved-Xiap-Caspase 9 (v35) reverse  k=k15b
+0.003	C3_star+AC9_starX==>AC9_starX_C3_star	# Apaf-Xiap-cleaved Caspase 9 binding with cleaved Caspase 3 (v36) forward  k=k15
+0.001	AC9_starX_C3_star==>C3_star+AC9_starX	# Apaf-Xiap-cleaved Caspase 9 binding with cleaved Caspase 3 (v36) reverse  k=k15b
+0.001	C9+C3_starX==>C9X_C3_star	# Binding of Caspase 9 to cleaved Caspase 3-Xiap (v37) forward  k=k9
+0.001	C9X_C3_star==>C9+C3_starX	# Binding of Caspase 9 to cleaved Caspase 3-Xiap (v37) reverse  k=k9b
+0.001	AC9+C3_starX==>AC9X_C3_star	# Binding of Apaf-Caspase 9 to cleaved Caspase 3-Xiap (v38) forward  k=k9
+0.001	AC9X_C3_star==>AC9+C3_starX	# Binding of Apaf-Caspase 9 to cleaved Caspase 3-Xiap (v38) reverse  k=k9b
+0.001	C9_star+C3_starX==>C9_starX_C3_star	# Binding of cleaved Caspase 9 to cleaved Caspase 3-Xiap (v39) forward  k=k9
+0.001	C9_starX_C3_star==>C9_star+C3_starX	# Binding of cleaved Caspase 9 to cleaved Caspase 3-Xiap (v39) reverse  k=k9b
+0.001	AC9_star+C3_starX==>AC9_starX_C3_star	# Binding of cleaved Caspase 9-Apaf-1 to cleaved Caspase 3-Xiap (v40) forward  k=k9
+0.001	AC9_starX_C3_star==>AC9_star+C3_starX	# Binding of cleaved Caspase 9-Apaf-1 to cleaved Caspase 3-Xiap (v40) reverse  k=k9b
+0.002	C9X_C3_star+A==>AC9X_C3_star	# Binding of Caspase 9-Xiap-cleaved Caspase 3 with Apaf (v41) forward  k=k1
+0.1	AC9X_C3_star==>C9X_C3_star+A	# Binding of Caspase 9-Xiap-cleaved Caspase 3 with Apaf (v41) reverse  k=kb1
+0.002	C9_starX_C3_star+A==>AC9_starX_C3_star	# Binding of cleaved Caspase 9-Xiap-cleaved Caspase 3 with Apaf (v42) forward  k=k1
+0.1	AC9_starX_C3_star==>C9_starX_C3_star+A	# Binding of cleaved Caspase 9-Xiap-cleaved Caspase 3 with Apaf (v42) reverse  k=kb1
+END
