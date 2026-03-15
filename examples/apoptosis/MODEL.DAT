@@ -1,5 +1,6 @@
 # Kintecus model.dat — converted from SBML
 # Model : Legewie2006_apoptosis_NC  (id=Legewie2006_apoptosis_NC)
+# SBML  : Level 2 Version 1
 # Source: BIOMD0000000103_url.xml
 #
 # --------------------------------------------------------------------
@@ -60,13 +61,13 @@
 0.1	AC9_starX==>C9_starX+A	# cleaved Caspase 9-Xiap Apaf-1 binding (v14) reverse  k=k14b
 5E-5	C3+C9_star==>C3_star+C9_star	# Caspase 3 cleavage by cleaved Caspase 9 (v6)  k=k6
 0.0035	C3+AC9_star==>C3_star+AC9_star	# Caspase 3 cleavage by cleaved Caspase 9 - Apaf-1 (v7)  k=k7
-0.02	NULL==>A	# Apaf-1 turnover (v16)  k=k16prod
-0.02	NULL==>C9	# Caspase 9 turnover (v17)  k=k17prod
-0.04	NULL==>X	# Xiap turnover (v18)  k=k18prod
+0.02	0 NULL==>A	# Apaf-1 turnover (v16)  k=k16prod
+0.02	0 NULL==>C9	# Caspase 9 turnover (v17)  k=k17prod
+0.04	0 NULL==>X	# Xiap turnover (v18)  k=k18prod
 0.001	C9X==>NULL	# Caspase 9-Xiap degradation (v19)  k=k19
 0.001	AC9X==>NULL	# Apaf-1-Caspase 9-Xiap degradation (v20)  k=k20
 0.001	AC9==>NULL	# Apaf-1-Caspase 9 degradation (v21)  k=k21
-0.2	NULL==>C3	# Caspase 3 turnover (v22)  k=k22prod
+0.2	0 NULL==>C3	# Caspase 3 turnover (v22)  k=k22prod
 0.001	C3_star==>NULL	# Caspase 3 cleaved degradation (v23)  k=k23
 0.001	C3_starX==>NULL	# Caspase 3 cleaved-Xiap degradation (v24)  k=k24
 0.001	C9_starX==>NULL	# Caspase 9 cleaved-Xiap degradation (v25)  k=k25
