@@ -1,7 +1,6 @@
 # SBML2Kintecus
 
-Convert **SBML Level 2** XML models into the three input files required by
-[Kintecus](http://www.kintecus.com/) chemical kinetics simulation software.
+Converts SBML Level 2 (all versions) and Level 3 core models to Kintecus MODEL.DAT / SPECIES.DAT / PARM.DAT. Supports mass-action and complex kinetic laws (Michaelis–Menten, Arrhenius, Hill) via Kintecus USER syntax. Python 3.9+, no dependencies.
 
 ## Output files
 
