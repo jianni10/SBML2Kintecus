@@ -20,7 +20,11 @@ Supported SBML L2 features:
           forward_expr - reverse_expr  (top-level <minus/>)
       Each sub-expression is a <times/> block; the <ci> that matches a local
       kineticLaw parameter (and is not a species or compartment) is taken as k.
-    - Irreversible reactions written as a single LHS==>RHS line
+    - Irreversible reactions written as a single LHS==>RHS line, EXCEPT when the
+      kinetic law is a net difference (e.g. turnover  v = k_prod - k_deg*A  for
+      0 -> A).  If the first term is mass-action in the reactants and the second
+      in the products, the reaction is written as forward + reverse lines like a
+      reversible one; otherwise a warning says the second term is missing.
     - Compartment variables in kinetic law (ignored — Kintecus is compartment-free)
     - Multi-compartment models: species renamed speciesID{compartmentID} throughout
       (single-compartment models are unaffected — no suffix added)
@@ -1046,6 +1050,46 @@ def _split_reversible_math(kl_el, stag):
     return kids[1], kids[2]
 
 
+def _term_species(expr_el, species_ids: set) -> set:
+    """Species IDs referenced anywhere inside one MathML term."""
+    if expr_el is None:
+        return set()
+    tag = expr_el.tag.split("}")[-1] if "}" in expr_el.tag else expr_el.tag
+    cis = [expr_el] if tag == "ci" else list(expr_el.iter(mtag("ci")))
+    return {c.text.strip() for c in cis if c.text and c.text.strip() in species_ids}
+
+
+def split_net_difference(kl_el, r_refs, p_refs, species_ids: set, stag):
+    """
+    Detect a kinetic law of the form  [compartment *] (fwd - rev)  on a reaction
+    declared reversible="false".  Such a law is a net rate, not a single
+    irreversible step: e.g. turnover  v = k_prod - k_deg*A  for  0 -> A.
+    Taking only the first rate constant silently drops the second term.
+
+    Returns (status, message):
+      "split"     - fwd term uses exactly the reactant species and rev term
+                    exactly the product species, so the law is reproduced by
+                    a forward line LHS==>RHS plus a reverse line RHS==>LHS.
+      "unsplit"   - a <minus/> law whose terms do not map onto the two sides;
+                    it cannot be written as two mass-action lines.
+      None        - not a net-difference law.
+    """
+    fwd, rev = _split_reversible_math(kl_el, stag)
+    if fwd is None or rev is None:
+        return None, ""
+    reac = {sr.get("species") for sr in r_refs}
+    prod = {sr.get("species") for sr in p_refs}
+    fs, rs = _term_species(fwd, species_ids), _term_species(rev, species_ids)
+    if fs == reac and rs == prod:
+        return "split", ("declared irreversible, but the kinetic law is a net "
+                         "difference (fwd - rev); written as forward + reverse lines")
+    return "unsplit", (f"declared irreversible with a net-difference kinetic law, but "
+                       f"term species {sorted(fs)} / {sorted(rs)} do not match "
+                       f"reactants {sorted(reac)} / products {sorted(prod)}; only the "
+                       f"first term was converted - the second term is MISSING, "
+                       f"hand-encode it")
+
+
 def _kinetic_apply_to_user_rate(
     apply_el,
     r_refs:           list,
@@ -1608,7 +1652,16 @@ def convert(xml_path: str, output_path: str | None = None,
                 **{k: v["value"] for k, v in local_params_raw.items()},
             }
 
-            if reversible:
+            # An irreversible reaction whose law is a net difference (k_prod - k_deg*A)
+            # must be written as two lines, or its second term is lost.
+            net_split = False
+            if not reversible and kl_el is not None:
+                status, msg = split_net_difference(kl_el, r_refs, p_refs, species_ids, stag)
+                if status:
+                    rxn_warnings.append(msg)
+                net_split = status == "split"
+
+            if reversible or net_split:
                 # ── Two lines: forward then reverse ──────────────────────────
                 fwd_info, rev_info, kw = get_rate_column(
                     kl_el, r_refs, p_refs, True,
@@ -1619,10 +1672,15 @@ def convert(xml_path: str, output_path: str | None = None,
                 fwd_val, fwd_name = fwd_info
                 rev_val, rev_name = rev_info
 
-                fwd_comment = f"# {rxn_name} ({rxn_id}) forward  k={fwd_name}"
-                rev_comment = f"# {rxn_name} ({rxn_id}) reverse  k={rev_name}"
+                # Reverse line: products become reactants.  Rebuild both sides so an
+                # empty side is "0 NULL" as a reactant and "NULL" as a product.
+                rev_lhs, _ = side_string(p_refs, global_params, stag, species_rename, is_reactant=True)
+                rev_rhs, _ = side_string(r_refs, global_params, stag, species_rename)
+                tag = "net-rate " if net_split else ""
+                fwd_comment = f"# {rxn_name} ({rxn_id}) {tag}forward  k={fwd_name}"
+                rev_comment = f"# {rxn_name} ({rxn_id}) {tag}reverse  k={rev_name}"
                 out.append(f"{fwd_val}\t{lhs}==>{rhs}\t{fwd_comment}")
-                out.append(f"{rev_val}\t{rhs}==>{lhs}\t{rev_comment}")
+                out.append(f"{rev_val}\t{rev_lhs}==>{rev_rhs}\t{rev_comment}")
 
             else:
                 # ── Single line: irreversible ─────────────────────────────────
