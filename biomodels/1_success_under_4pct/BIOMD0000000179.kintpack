@@ -1,0 +1,620 @@
+{
+ "version": 3,
+ "created": "2026-11-05T15:46:01.611099+00:00",
+ "description": "Kim2007_CellularMemory_AsymmetricModel\nBioModels BIOMD0000000179 (curated). SBML file: BIOMD0000000179_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000179_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.2994011976047904.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.72e-05 of species peak (worst: R2)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Kim2007_CellularMemory_AsymmetricModel  (BIOMD0000000179, curated BioModels; source file BIOMD0000000179_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React2",
+     ""
+    ],
+    [
+     "0.23521",
+     "0",
+     "0",
+     "R1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React3",
+     ""
+    ],
+    [
+     "0.47305",
+     "0",
+     "0",
+     "R1==>P1+R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React4",
+     ""
+    ],
+    [
+     "0.22367",
+     "0",
+     "0",
+     "P1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React5",
+     ""
+    ],
+    [
+     "0.28687",
+     "0",
+     "0",
+     "P1==>P1_prime+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cP2_prime:(0.4/(1*cP2_prime^9+1))]==>P1_prime",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cP3_prime:(0.2/(1*cP3_prime^9+1))]==>P1_prime",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React8",
+     ""
+    ],
+    [
+     "0.37048",
+     "0",
+     "0",
+     "P1_prime==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2:(1*cSW1*cSW2)]==>R2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React10",
+     ""
+    ],
+    [
+     "0.23521",
+     "0",
+     "0",
+     "R2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React11",
+     ""
+    ],
+    [
+     "0.47305",
+     "0",
+     "0",
+     "R2==>P2+R2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React12",
+     ""
+    ],
+    [
+     "0.22367",
+     "0",
+     "0",
+     "P2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React13",
+     ""
+    ],
+    [
+     "0.28687",
+     "0",
+     "0",
+     "P2==>P2_prime+P2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React14",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cP1_prime:(0.3/(1*cP1_prime^9+1))]==>P2_prime",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React15",
+     ""
+    ],
+    [
+     "0.37048",
+     "0",
+     "0",
+     "P2_prime==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React16",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cP2_prime:(0.5*cP2_prime^9/(1*cP2_prime^9+1))]==>P3_prime",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "React17",
+     ""
+    ],
+    [
+     "0.37048",
+     "0",
+     "0",
+     "P3_prime==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "R1",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R1 [R1]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P1 [P1]",
+     ""
+    ],
+    [
+     "P1_prime",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P1_prime [P1_prime]",
+     ""
+    ],
+    [
+     "R2",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R2 [R2]",
+     ""
+    ],
+    [
+     "P2",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P2 [P2]",
+     ""
+    ],
+    [
+     "P2_prime",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P2_prime [P2_prime]",
+     ""
+    ],
+    [
+     "P3_prime",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P3_prime [P3_prime]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 50 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time switch at 100 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.299401198",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.299401198",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "50",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "100",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

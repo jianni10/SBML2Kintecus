@@ -1,0 +1,573 @@
+{
+ "version": 3,
+ "created": "2026-11-02T03:14:56.024444+00:00",
+ "description": "hodgkin-huxley squid-axon 1952\nBioModels BIOMD0000000020 (curated). SBML file: BIOMD0000000020_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000020_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.57e-06 of species peak (worst: n)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V' goes below zero in the SBML: integrated as p_V_o = value + 0.02, output as p_V = OUTC[p_V_o;-0.02*source]\nRenamed species (Kintecus name = SBML id): p_m = m; p_h = h; p_n = n; p_V = V",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "hodgkin-huxley squid-axon 1952  (BIOMD0000000020, curated BioModels; source file BIOMD0000000020_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 1 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "-3.1839",
+     "0",
+     "0",
+     "source==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 2 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_n:(432*cp_n^4)]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 3 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:((-1*0.3*(cp_V_o-0.02)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 4 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o,cp_n:((-1*36*cp_n^4*(cp_V_o-0.02)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 5 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_h,cp_m:((-1*13800*cp_h*cp_m^3))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 6 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o,cp_h,cp_m:((-1*120*cp_h*cp_m^3*(cp_V_o-0.02)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dm/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(2.5/(exp((cp_V_o-0.02)/10+2.5)-1))]==>p_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dm/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(0.1*(cp_V_o-0.02)/(exp((cp_V_o-0.02)/10+2.5)-1))]==>p_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dm/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_m+S[USER;cp_V_o:(4*exp(0.05555555555555555*(cp_V_o-0.02)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dm/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_m+S[USER;cp_V_o:(2.5/(exp((cp_V_o-0.02)/10+2.5)-1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dm/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_m+S[USER;cp_V_o:(0.1*(cp_V_o-0.02)/(exp((cp_V_o-0.02)/10+2.5)-1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dh/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(0.07*exp(0.05*(cp_V_o-0.02)))]==>p_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dh/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_h+S[USER;cp_V_o:(1/(exp((cp_V_o-0.02)/10+3)+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dh/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_h+S[USER;cp_V_o:(0.07*exp(0.05*(cp_V_o-0.02)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(0.1/(exp((cp_V_o-0.02)/10+1)-1))]==>p_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(0.01*(cp_V_o-0.02)/(exp((cp_V_o-0.02)/10+1)-1))]==>p_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_n+S[USER;cp_V_o:(0.125*exp(0.0125*(cp_V_o-0.02)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_n+S[USER;cp_V_o:(0.1/(exp((cp_V_o-0.02)/10+1)-1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_n+S[USER;cp_V_o:(0.01*(cp_V_o-0.02)/(exp((cp_V_o-0.02)/10+1)-1))]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "p_V_o",
+     "0",
+     "0.02",
+     "N",
+     "0",
+     "No",
+     "No",
+     "parameter V + 0.02 (shifted state) [__shifted__V]",
+     ""
+    ],
+    [
+     "p_m",
+     "0",
+     "0.052932",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter m [m]",
+     ""
+    ],
+    [
+     "p_h",
+     "0",
+     "0.59612",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter h [h]",
+     ""
+    ],
+    [
+     "p_n",
+     "0",
+     "0.31768",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter n [n]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "p_V",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[p_V_o;-0.02*source]",
+     "No",
+     "parameter V (= p_V_o - 0.02) [V]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

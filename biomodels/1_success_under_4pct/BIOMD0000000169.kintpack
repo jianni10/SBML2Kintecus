@@ -1,0 +1,779 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:54:49.521463+00:00",
+ "description": "Aguda1999_CellCycle\nBioModels BIOMD0000000169 (curated). SBML file: BIOMD0000000169_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000169_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.24e-06 of species peak (worst: Y6_1)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Aguda1999_CellCycle  (BIOMD0000000169, curated BioModels; source file BIOMD0000000169_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_1 term 1/3",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "Y3_1+Y6_1==>Y11_1+Y4_1+Y6_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_1 term 2/3",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "Y3_1+Y9_1==>Y11_1+Y4_1+Y9_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_1 term 3/3",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Y3_1+Y1_1==>Y11_1+Y4_1+Y1_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pRBE2Fcomplexformation_1",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Y4_1+Y5_1==>Y3_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cycECDK2activation_1",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Y2_1+Y1_1==>2Y1_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cycECDK2deactivation_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Y1_1==>Y2_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cycECDK2synthesis_1",
+     ""
+    ],
+    [
+     "1.42",
+     "0",
+     "0",
+     "Y4_1==>Y2_1+Y4_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E2Fsynthesis_1",
+     ""
+    ],
+    [
+     "1e-6",
+     "0",
+     "0",
+     "source==>Y4_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E2Fdegradation_1",
+     ""
+    ],
+    [
+     "0.016",
+     "0",
+     "0",
+     "Y4_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cycECDK2degradation_1",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Y2_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cycDCDK4synthesis_1",
+     ""
+    ],
+    [
+     "0.018",
+     "0",
+     "0",
+     "source==>Y6_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cycDCDK4degradation_1",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "Y6_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p27synthesis_1",
+     ""
+    ],
+    [
+     "1e-5",
+     "0",
+     "0",
+     "source==>Y7_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p27degradationviacycECDK2_1",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Y7_1+Y1_1==>Y1_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cycECDK2p27complexformation_1",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Y7_1+Y1_1==>Y8_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cycECDK2p27deassociation_1",
+     ""
+    ],
+    [
+     "0.035",
+     "0",
+     "0",
+     "Y8_1==>Y7_1+Y1_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cycDCDK4p16complexformation_1",
+     ""
+    ],
+    [
+     "3.5",
+     "0",
+     "0",
+     "Y6_1+Y10_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E2Fautostimulation_1",
+     ""
+    ],
+    [
+     "1e-5",
+     "0",
+     "0",
+     "Y4_1==>2Y4_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cycDCDK4p27complexformation_1",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "Y6_1+Y7_1==>Y9_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cycDCDK4p27complexdeassociation_1",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Y9_1==>Y6_1+Y7_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "acycECDK2degradation_1",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Y1_1+Y1_1==>Y1_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p27degradation_1",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Y7_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_20",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "source==>Y10_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p16degradation_1",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Y10_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p16synthesisinhibitedbypRB_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cY5_1:(0.01/(0.02*cY5_1+1))]==>Y10_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pRBpdephosphorilation_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cY10_1:(0.01/(0.1*cY10_1+1))]==>Y5_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pRBsynthesis_1",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "source==>Y5_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pRBdegradation_1",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Y5_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pRBpdephosphorylation_1",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Y11_1==>Y5_1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Y3_1",
+     "0",
+     "1.95",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pRB_E2F [Y3_1]",
+     ""
+    ],
+    [
+     "Y4_1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E2F [Y4_1]",
+     ""
+    ],
+    [
+     "Y11_1",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pRB_P [Y11_1]",
+     ""
+    ],
+    [
+     "Y2_1",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "i_cyclinE_CDK2 [Y2_1]",
+     ""
+    ],
+    [
+     "Y1_1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "a_cyclinE_CDK2 [Y1_1]",
+     ""
+    ],
+    [
+     "Y5_1",
+     "0",
+     "0.05",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pRB [Y5_1]",
+     ""
+    ],
+    [
+     "Y6_1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CycD_CDK4 [Y6_1]",
+     ""
+    ],
+    [
+     "Y7_1",
+     "0",
+     "15",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p27 [Y7_1]",
+     ""
+    ],
+    [
+     "Y8_1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cycE_CDK2_p27 [Y8_1]",
+     ""
+    ],
+    [
+     "Y10_1",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p16 [Y10_1]",
+     ""
+    ],
+    [
+     "Y9_1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cycD_CDK4_p27 [Y9_1]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

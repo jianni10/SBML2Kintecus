@@ -1,0 +1,450 @@
+{
+ "version": 3,
+ "created": "2026-11-01T23:01:08.494823+00:00",
+ "description": "Galante2012 - B7-H1 and a Mathematical Model for Cytotoxic T Cell and Tumor Cell Interaction\nBioModels BIOMD0000000812 (curated). SBML file: Galante2012.xml.\nSimulation: 0 to 12 time units (SED-ML: Galante2012.sedml), sampling 0.12.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.51e-06 of species peak (worst: C_Cancer_Uncomplexed)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'E_CTL' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'T_Cancer_Cell_Total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] P_Production term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - P_Perforin: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Galante2012 - B7-H1 and a Mathematical Model for Cytotoxic T Cell and Tumor Cell Interaction  (BIOMD0000000812, curated BioModels; source file Galante2012.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "X_Complex_Formation term 1/2",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "C_Cancer_Uncomplexed==>X_Complex",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "X_Complex_Formation term 2/2",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "X_Complex+C_Cancer_Uncomplexed==>2C_Cancer_Uncomplexed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "X_Complex_Dissociation",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "X_Complex==>C_Cancer_Uncomplexed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "X_Complex_Apoptosis",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "X_Complex==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P_Production term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cC_Cancer_Uncomplexed,cX_Complex:(0.097/(-80*cC_Cancer_Uncomplexed*cX_Complex+256*cC_Cancer_Uncomplexed))]==>P_Perforin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P_Production term 2/2 (consumes P_Perforin)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cC_Cancer_Uncomplexed,cX_Complex:((-1*0.097*cX_Complex/(-80*cC_Cancer_Uncomplexed*cX_Complex+256*cC_Cancer_Uncomplexed)))]==>P_Perforin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P_Apoptosis_Perforin",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "C_Cancer_Uncomplexed+P_Perforin==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C_Growth",
+     ""
+    ],
+    [
+     "0.035",
+     "0",
+     "0",
+     "C_Cancer_Uncomplexed==>2C_Cancer_Uncomplexed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C_Carrying_Capacity_Limit",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_Cancer_Uncomplexed+S[USER;cC_Cancer_Uncomplexed:(0.003*cC_Cancer_Uncomplexed)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T_Growth",
+     ""
+    ],
+    [
+     "0.035",
+     "0",
+     "0",
+     "T_ast==>2T_ast",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T_Carrying_Capacity_Limit",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T_ast+S[USER;cT_ast:(0.003*cT_ast)]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "X_Complex",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X_Complex [X_Complex]",
+     ""
+    ],
+    [
+     "P_Perforin",
+     "0",
+     "0.315",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P_Perforin [P_Perforin]",
+     ""
+    ],
+    [
+     "C_Cancer_Uncomplexed",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_Cancer_Uncomplexed [C_Cancer_Uncomplexed]",
+     ""
+    ],
+    [
+     "T_ast",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T_ast [T_ast]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.12",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "12",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.12",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

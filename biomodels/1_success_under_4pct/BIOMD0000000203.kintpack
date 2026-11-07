@@ -1,0 +1,636 @@
+{
+ "version": 3,
+ "created": "2026-11-06T06:00:28.911304+00:00",
+ "description": "Chickarmane2006 - Stem cell switch reversible\nBioModels BIOMD0000000203 (curated). SBML file: BIOMD0000000203_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000203_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.75e-06 of species peak (worst: Protein)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chickarmane2006 - Stem cell switch reversible  (BIOMD0000000203, curated BioModels; source file BIOMD0000000203_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J0 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNANOG,cOCT4_SOX2:(10.0001/(0.0007*cNANOG*cOCT4_SOX2+0.001*cOCT4_SOX2+1.0110001))]==>OCT4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J0 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "OCT4_SOX2+S[USER;cNANOG,cOCT4_SOX2:(0.01/(0.0007*cNANOG*cOCT4_SOX2+0.001*cOCT4_SOX2+1.0110001))]==>OCT4+OCT4_SOX2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J0 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NANOG+OCT4_SOX2+S[USER;cNANOG,cOCT4_SOX2:(0.2/(0.0007*cNANOG*cOCT4_SOX2+0.001*cOCT4_SOX2+1.0110001))]==>OCT4+NANOG+OCT4_SOX2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "OCT4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J2 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNANOG,cOCT4_SOX2:(0.0001/(0.001*cNANOG*cOCT4_SOX2+0.000995*cOCT4_SOX2+1.0000001))]==>NANOG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J2 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "OCT4_SOX2+S[USER;cNANOG,cOCT4_SOX2:(0.005/(0.001*cNANOG*cOCT4_SOX2+0.000995*cOCT4_SOX2+1.0000001))]==>NANOG+OCT4_SOX2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J2 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NANOG+OCT4_SOX2+S[USER;cNANOG,cOCT4_SOX2:(0.1/(0.001*cNANOG*cOCT4_SOX2+0.000995*cOCT4_SOX2+1.0000001))]==>2NANOG+OCT4_SOX2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NANOG==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J4 term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "OCT4_SOX2==>OCT4+SOX2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J4 term 2/2",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "OCT4+SOX2==>OCT4_SOX2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J5",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "OCT4_SOX2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J6 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNANOG,cOCT4_SOX2:(10.0001/(0.0007*cNANOG*cOCT4_SOX2+0.001*cOCT4_SOX2+1.0110001))]==>SOX2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J6 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "OCT4_SOX2+S[USER;cNANOG,cOCT4_SOX2:(0.01/(0.0007*cNANOG*cOCT4_SOX2+0.001*cOCT4_SOX2+1.0110001))]==>SOX2+OCT4_SOX2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J6 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NANOG+OCT4_SOX2+S[USER;cNANOG,cOCT4_SOX2:(0.2/(0.0007*cNANOG*cOCT4_SOX2+0.001*cOCT4_SOX2+1.0110001))]==>SOX2+NANOG+OCT4_SOX2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "SOX2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J8 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNANOG,cOCT4_SOX2:(0.0001/(0.05*cNANOG*cOCT4_SOX2+0.0019*cOCT4_SOX2+1.0000001))]==>Protein",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J8 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "OCT4_SOX2+S[USER;cNANOG,cOCT4_SOX2:(0.1/(0.05*cNANOG*cOCT4_SOX2+0.0019*cOCT4_SOX2+1.0000001))]==>Protein+OCT4_SOX2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J9",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Protein==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "OCT4_Gene",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "OCT4_Gene [OCT4_Gene]",
+     ""
+    ],
+    [
+     "NANOG_Gene",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "NANOG_Gene [NANOG_Gene]",
+     ""
+    ],
+    [
+     "SOX2_Gene",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "SOX2_Gene [SOX2_Gene]",
+     ""
+    ],
+    [
+     "targetGene",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "0.01",
+     "targetGene [targetGene]",
+     ""
+    ],
+    [
+     "degradation",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "degradation [degradation]",
+     ""
+    ],
+    [
+     "p53",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "p53 [p53]",
+     ""
+    ],
+    [
+     "A",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "A [A]",
+     ""
+    ],
+    [
+     "OCT4",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "OCT4 [OCT4]",
+     ""
+    ],
+    [
+     "SOX2",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SOX2 [SOX2]",
+     ""
+    ],
+    [
+     "NANOG",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NANOG [NANOG]",
+     ""
+    ],
+    [
+     "OCT4_SOX2",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "OCT4_SOX2 [OCT4_SOX2]",
+     ""
+    ],
+    [
+     "Protein",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Protein [Protein]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.03",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.03",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

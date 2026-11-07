@@ -1,0 +1,743 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:46:48.747597+00:00",
+ "description": "Grange2001 - PK interaction of L-dopa and benserazide\nBioModels BIOMD0000000320 (curated). SBML file: BIOMD0000000320_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000320_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.17e-06 of species peak (worst: C_dopa)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] l_dopa_absorption term 2/2 (volume 0.496): rate order differs from the stoichiometry; consumed on separate line(s) - C_dopa: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Grange2001 - PK interaction of L-dopa and benserazide  (BIOMD0000000320, curated BioModels; source file BIOMD0000000320_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "l_dopa_absorption term 1/2 (volume 0.496)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cA_dopa:(2.496626877337541*cA_dopa)]==>C_dopa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "l_dopa_absorption term 2/2 (volume 0.496) (consumes C_dopa)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cA_dopa,cC1_M:((-1*0.2318835685483871*cA_dopa/(406.5040650406504*cC1_M+1)))]==>C_dopa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "l_dopa_absorption term 1/2 (volume 1)",
+     ""
+    ],
+    [
+     "1.2383269311594203",
+     "0",
+     "0",
+     "A_dopa==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "l_dopa_absorption term 2/2 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A_dopa+S[USER;cC1_M:(0.11501425/(406.5040650406504*cC1_M+1))]==>2A_dopa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "l_dopa_blood_hepa_clearance term 1/2",
+     ""
+    ],
+    [
+     "0.05167306884057972",
+     "0",
+     "0",
+     "A_dopa==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "l_dopa_blood_hepa_clearance term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A_dopa+S[USER;cC1_M:(0.11501425/(406.5040650406504*cC1_M+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ro_04_5127_absorption (volume 0.0691)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cA_M:(35.7452966714906*cA_M)]==>C1_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ro_04_5127_absorption (volume 1)",
+     ""
+    ],
+    [
+     "2.47",
+     "0",
+     "0",
+     "A_M==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "benserazide_absorption (volume 0.202)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cA_B:(0.10237623762376236*cA_B)]==>C1_B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "benserazide_absorption (volume 1)",
+     ""
+    ],
+    [
+     "0.020679999999999997",
+     "0",
+     "0",
+     "A_B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "benserazide_gut_clearance",
+     ""
+    ],
+    [
+     "0.9193199999999999",
+     "0",
+     "0",
+     "A_B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AADC_clearance",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_dopa+S[USER;cC1_M:(1.144899193548387/(406.5040650406504*cC1_M+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "COMT_clearance (volume 0.128)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cC_dopa:(0.64296875*cC_dopa)]==>C_OMD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "COMT_clearance (volume 0.496)",
+     ""
+    ],
+    [
+     "0.1659274193548387",
+     "0",
+     "0",
+     "C_dopa==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rest_clearance",
+     ""
+    ],
+    [
+     "0.34844758064516135",
+     "0",
+     "0",
+     "C_dopa==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_3_OMD_clearance",
+     ""
+    ],
+    [
+     "0.069921875",
+     "0",
+     "0",
+     "C_OMD==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bens_clearance",
+     ""
+    ],
+    [
+     "8.267326732673267",
+     "0",
+     "0",
+     "C1_B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bens_metabolism (volume 0.0691)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cC1_B:(4.264918702647485*cC1_B)]==>C1_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bens_metabolism (volume 0.202)",
+     ""
+    ],
+    [
+     "1.4589400116482234",
+     "0",
+     "0",
+     "C1_B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ro_clearance",
+     ""
+    ],
+    [
+     "62.08393632416788",
+     "0",
+     "0",
+     "C1_M==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bens_distribution term 1/2 (volume 0.127)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cC1_B:(0.5669291338582677*cC1_B)]==>C2_B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bens_distribution term 2/2 (volume 0.127)",
+     ""
+    ],
+    [
+     "0.5669291338582677",
+     "0",
+     "0",
+     "C2_B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bens_distribution term 1/2 (volume 0.202)",
+     ""
+    ],
+    [
+     "0.35643564356435636",
+     "0",
+     "0",
+     "C1_B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bens_distribution term 2/2 (volume 0.202)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cC2_B:(0.35643564356435636*cC2_B)]==>C1_B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ro_distribution term 1/2 (volume 0.0691)",
+     ""
+    ],
+    [
+     "15.340086830680175",
+     "0",
+     "0",
+     "C1_M==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ro_distribution term 2/2 (volume 0.0691)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cC2_M:(15.340086830680175*cC2_M)]==>C1_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ro_distribution term 1/2 (volume 3.2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cC1_M:(0.33125*cC1_M)]==>C2_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ro_distribution term 2/2 (volume 3.2)",
+     ""
+    ],
+    [
+     "0.33125",
+     "0",
+     "0",
+     "C2_M==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "A_dopa",
+     "0",
+     "101",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A_dopa [A_dopa]",
+     ""
+    ],
+    [
+     "A_B",
+     "0",
+     "18.134999999999998",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A_B [A_B]",
+     ""
+    ],
+    [
+     "A_M",
+     "0",
+     "1.3650000000000002",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A_M [A_M]",
+     ""
+    ],
+    [
+     "C_dopa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_dopa [C_dopa]",
+     ""
+    ],
+    [
+     "C_OMD",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_3-OMD [C_OMD]",
+     ""
+    ],
+    [
+     "C1_M",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C1_M [C1_M]",
+     ""
+    ],
+    [
+     "C2_M",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C2_M [C2_M]",
+     ""
+    ],
+    [
+     "C1_B",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C1_B [C1_B]",
+     ""
+    ],
+    [
+     "C2_B",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C2_B [C2_B]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

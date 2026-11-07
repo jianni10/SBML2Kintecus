@@ -1,0 +1,861 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:14:05.437155+00:00",
+ "description": "Chitnis2012 - Model Rift Valley Fever transmission between cattle and mosquitoes (Model 1)\nBioModels BIOMD0000000950 (curated). SBML file: Chitnis2012_model_1.xml.\nSimulation: 0 to 3650 time units (SED-ML: Chitnis2012_model_1.sedml), sampling 3.65.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.68e-06 of species peak (worst: E_v)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dS_h/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dS_h/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dS_h/dt term 5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dS_v/dt term 5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dS_v/dt term 6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dS_v/dt term 7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dS_v/dt term 8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dS_v/dt term 9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dS_v/dt term 10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dS_v/dt term 11: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chitnis2012 - Model Rift Valley Fever transmission between cattle and mosquitoes (Model 1)  (BIOMD0000000950, curated BioModels; source file Chitnis2012_model_1.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_h/dt term 1",
+     ""
+    ],
+    [
+     "0.45662100456621",
+     "0",
+     "0",
+     "source==>S_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_h/dt term 2",
+     ""
+    ],
+    [
+     "0.00045662100456621003",
+     "0",
+     "0",
+     "S_h==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_h/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_h+I_v+I_v+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(1.3167/(19*cA_h*cE_v+19*cA_h*cI_v+19*cA_h*cS_v+0.33*cE_v^2+19*cE_v*cI_h+0.66*cE_v*cI_v+19*cE_v*cR_h+0.66*cE_v*cS_v+19*cE_v*(cS_h+1e-30)+19*cI_h*cI_v+19*cI_h*cS_v+0.33*cI_v^2+19*cI_v*cR_h+0.66*cI_v*cS_v+19*cI_v*(cS_h+1e-30)+19*cR_h*cS_v+0.33*cS_v^2+19*cS_v*(cS_h+1e-30)))]==>2I_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_h/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_h+E_v+I_v+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(1.3167/(19*cA_h*cE_v+19*cA_h*cI_v+19*cA_h*cS_v+0.33*cE_v^2+19*cE_v*cI_h+0.66*cE_v*cI_v+19*cE_v*cR_h+0.66*cE_v*cS_v+19*cE_v*(cS_h+1e-30)+19*cI_h*cI_v+19*cI_h*cS_v+0.33*cI_v^2+19*cI_v*cR_h+0.66*cI_v*cS_v+19*cI_v*(cS_h+1e-30)+19*cR_h*cS_v+0.33*cS_v^2+19*cS_v*(cS_h+1e-30)))]==>E_v+I_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_h/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_h+I_v+S_v+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(1.3167/(19*cA_h*cE_v+19*cA_h*cI_v+19*cA_h*cS_v+0.33*cE_v^2+19*cE_v*cI_h+0.66*cE_v*cI_v+19*cE_v*cR_h+0.66*cE_v*cS_v+19*cE_v*(cS_h+1e-30)+19*cI_h*cI_v+19*cI_h*cS_v+0.33*cI_v^2+19*cI_v*cR_h+0.66*cI_v*cS_v+19*cI_v*(cS_h+1e-30)+19*cR_h*cS_v+0.33*cS_v^2+19*cS_v*(cS_h+1e-30)))]==>I_v+S_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dA_h/dt term 1",
+     ""
+    ],
+    [
+     "0.2504566210045662",
+     "0",
+     "0",
+     "A_h==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dA_h/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_h+I_v+I_v+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(0.52668/(19*cA_h*cE_v+19*cA_h*cI_v+19*cA_h*cS_v+0.33*cE_v^2+19*cE_v*cI_h+0.66*cE_v*cI_v+19*cE_v*cR_h+19*cE_v*cS_h+0.66*cE_v*cS_v+19*cI_h*cI_v+19*cI_h*cS_v+0.33*cI_v^2+19*cI_v*cR_h+19*cI_v*cS_h+0.66*cI_v*cS_v+19*cR_h*cS_v+19*cS_h*cS_v+0.33*cS_v^2))]==>A_h+S_h+2I_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dA_h/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E_v+I_v+S_h+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(0.52668/(19*cA_h*cE_v+19*cA_h*cI_v+19*cA_h*cS_v+0.33*cE_v^2+19*cE_v*cI_h+0.66*cE_v*cI_v+19*cE_v*cR_h+19*cE_v*cS_h+0.66*cE_v*cS_v+19*cI_h*cI_v+19*cI_h*cS_v+0.33*cI_v^2+19*cI_v*cR_h+19*cI_v*cS_h+0.66*cI_v*cS_v+19*cR_h*cS_v+19*cS_h*cS_v+0.33*cS_v^2))]==>A_h+E_v+I_v+S_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dA_h/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I_v+S_h+S_v+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(0.52668/(19*cA_h*cE_v+19*cA_h*cI_v+19*cA_h*cS_v+0.33*cE_v^2+19*cE_v*cI_h+0.66*cE_v*cI_v+19*cE_v*cR_h+19*cE_v*cS_h+0.66*cE_v*cS_v+19*cI_h*cI_v+19*cI_h*cS_v+0.33*cI_v^2+19*cI_v*cR_h+19*cI_v*cS_h+0.66*cI_v*cS_v+19*cR_h*cS_v+19*cS_h*cS_v+0.33*cS_v^2))]==>A_h+I_v+S_h+S_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_h/dt term 1",
+     ""
+    ],
+    [
+     "0.3504566210045662",
+     "0",
+     "0",
+     "I_h==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_h/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_h+I_v+I_v+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(0.79002/(19*cA_h*cE_v+19*cA_h*cI_v+19*cA_h*cS_v+0.33*cE_v^2+19*cE_v*cI_h+0.66*cE_v*cI_v+19*cE_v*cR_h+19*cE_v*cS_h+0.66*cE_v*cS_v+19*cI_h*cI_v+19*cI_h*cS_v+0.33*cI_v^2+19*cI_v*cR_h+19*cI_v*cS_h+0.66*cI_v*cS_v+19*cR_h*cS_v+19*cS_h*cS_v+0.33*cS_v^2))]==>I_h+S_h+2I_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_h/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E_v+I_v+S_h+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(0.79002/(19*cA_h*cE_v+19*cA_h*cI_v+19*cA_h*cS_v+0.33*cE_v^2+19*cE_v*cI_h+0.66*cE_v*cI_v+19*cE_v*cR_h+19*cE_v*cS_h+0.66*cE_v*cS_v+19*cI_h*cI_v+19*cI_h*cS_v+0.33*cI_v^2+19*cI_v*cR_h+19*cI_v*cS_h+0.66*cI_v*cS_v+19*cR_h*cS_v+19*cS_h*cS_v+0.33*cS_v^2))]==>I_h+E_v+I_v+S_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_h/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I_v+S_h+S_v+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(0.79002/(19*cA_h*cE_v+19*cA_h*cI_v+19*cA_h*cS_v+0.33*cE_v^2+19*cE_v*cI_h+0.66*cE_v*cI_v+19*cE_v*cR_h+19*cE_v*cS_h+0.66*cE_v*cS_v+19*cI_h*cI_v+19*cI_h*cS_v+0.33*cI_v^2+19*cI_v*cR_h+19*cI_v*cS_h+0.66*cI_v*cS_v+19*cR_h*cS_v+19*cS_h*cS_v+0.33*cS_v^2))]==>I_h+I_v+S_h+S_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_h/dt term 1",
+     ""
+    ],
+    [
+     "0.25",
+     "0",
+     "0",
+     "A_h==>R_h+A_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_h/dt term 2",
+     ""
+    ],
+    [
+     "0.25",
+     "0",
+     "0",
+     "I_h==>R_h+I_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_h/dt term 3",
+     ""
+    ],
+    [
+     "0.00045662100456621003",
+     "0",
+     "0",
+     "R_h==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_v/dt term 1",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "S_v==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_v/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E_v+S[USER;cE_v,cI_v,cS_v:(1000/(cE_v+cI_v+cS_v))]==>S_v+E_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_v/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_v+S[USER;cE_v,cI_v,cS_v:(1000/(cE_v+cI_v+cS_v))]==>2S_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_v/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I_v+S[USER;cE_v,cI_v,cS_v:(900/(cE_v+cI_v+cS_v))]==>S_v+I_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_v/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_v+A_h+A_h+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(1.881/(19*cA_h^2+0.33*cA_h*cE_v+38*cA_h*cI_h+0.33*cA_h*cI_v+38*cA_h*cR_h+38*cA_h*cS_h+0.33*cA_h*(cS_v+1e-30)+0.33*cE_v*cI_h+0.33*cE_v*cR_h+0.33*cE_v*cS_h+19*cI_h^2+0.33*cI_h*cI_v+38*cI_h*cR_h+38*cI_h*cS_h+0.33*cI_h*(cS_v+1e-30)+0.33*cI_v*cR_h+0.33*cI_v*cS_h+19*cR_h^2+38*cR_h*cS_h+0.33*cR_h*(cS_v+1e-30)+19*cS_h^2+0.33*cS_h*(cS_v+1e-30)))]==>2A_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_v/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_v+I_h+I_h+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(4.389/(19*cA_h^2+0.33*cA_h*cE_v+38*cA_h*cI_h+0.33*cA_h*cI_v+38*cA_h*cR_h+38*cA_h*cS_h+0.33*cA_h*(cS_v+1e-30)+0.33*cE_v*cI_h+0.33*cE_v*cR_h+0.33*cE_v*cS_h+19*cI_h^2+0.33*cI_h*cI_v+38*cI_h*cR_h+38*cI_h*cS_h+0.33*cI_h*(cS_v+1e-30)+0.33*cI_v*cR_h+0.33*cI_v*cS_h+19*cR_h^2+38*cR_h*cS_h+0.33*cR_h*(cS_v+1e-30)+19*cS_h^2+0.33*cS_h*(cS_v+1e-30)))]==>2I_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_v/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_v+A_h+R_h+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(1.881/(19*cA_h^2+0.33*cA_h*cE_v+38*cA_h*cI_h+0.33*cA_h*cI_v+38*cA_h*cR_h+38*cA_h*cS_h+0.33*cA_h*(cS_v+1e-30)+0.33*cE_v*cI_h+0.33*cE_v*cR_h+0.33*cE_v*cS_h+19*cI_h^2+0.33*cI_h*cI_v+38*cI_h*cR_h+38*cI_h*cS_h+0.33*cI_h*(cS_v+1e-30)+0.33*cI_v*cR_h+0.33*cI_v*cS_h+19*cR_h^2+38*cR_h*cS_h+0.33*cR_h*(cS_v+1e-30)+19*cS_h^2+0.33*cS_h*(cS_v+1e-30)))]==>A_h+R_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_v/dt term 8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_v+A_h+S_h+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(1.881/(19*cA_h^2+0.33*cA_h*cE_v+38*cA_h*cI_h+0.33*cA_h*cI_v+38*cA_h*cR_h+38*cA_h*cS_h+0.33*cA_h*(cS_v+1e-30)+0.33*cE_v*cI_h+0.33*cE_v*cR_h+0.33*cE_v*cS_h+19*cI_h^2+0.33*cI_h*cI_v+38*cI_h*cR_h+38*cI_h*cS_h+0.33*cI_h*(cS_v+1e-30)+0.33*cI_v*cR_h+0.33*cI_v*cS_h+19*cR_h^2+38*cR_h*cS_h+0.33*cR_h*(cS_v+1e-30)+19*cS_h^2+0.33*cS_h*(cS_v+1e-30)))]==>A_h+S_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_v/dt term 9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_v+I_h+R_h+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(4.389/(19*cA_h^2+0.33*cA_h*cE_v+38*cA_h*cI_h+0.33*cA_h*cI_v+38*cA_h*cR_h+38*cA_h*cS_h+0.33*cA_h*(cS_v+1e-30)+0.33*cE_v*cI_h+0.33*cE_v*cR_h+0.33*cE_v*cS_h+19*cI_h^2+0.33*cI_h*cI_v+38*cI_h*cR_h+38*cI_h*cS_h+0.33*cI_h*(cS_v+1e-30)+0.33*cI_v*cR_h+0.33*cI_v*cS_h+19*cR_h^2+38*cR_h*cS_h+0.33*cR_h*(cS_v+1e-30)+19*cS_h^2+0.33*cS_h*(cS_v+1e-30)))]==>I_h+R_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_v/dt term 10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_v+I_h+S_h+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(4.389/(19*cA_h^2+0.33*cA_h*cE_v+38*cA_h*cI_h+0.33*cA_h*cI_v+38*cA_h*cR_h+38*cA_h*cS_h+0.33*cA_h*(cS_v+1e-30)+0.33*cE_v*cI_h+0.33*cE_v*cR_h+0.33*cE_v*cS_h+19*cI_h^2+0.33*cI_h*cI_v+38*cI_h*cR_h+38*cI_h*cS_h+0.33*cI_h*(cS_v+1e-30)+0.33*cI_v*cR_h+0.33*cI_v*cS_h+19*cR_h^2+38*cR_h*cS_h+0.33*cR_h*(cS_v+1e-30)+19*cS_h^2+0.33*cS_h*(cS_v+1e-30)))]==>I_h+S_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS_v/dt term 11",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_v+A_h+I_h+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(6.27/(19*cA_h^2+0.33*cA_h*cE_v+38*cA_h*cI_h+0.33*cA_h*cI_v+38*cA_h*cR_h+38*cA_h*cS_h+0.33*cA_h*(cS_v+1e-30)+0.33*cE_v*cI_h+0.33*cE_v*cR_h+0.33*cE_v*cS_h+19*cI_h^2+0.33*cI_h*cI_v+38*cI_h*cR_h+38*cI_h*cS_h+0.33*cI_h*(cS_v+1e-30)+0.33*cI_v*cR_h+0.33*cI_v*cS_h+19*cR_h^2+38*cR_h*cS_h+0.33*cR_h*(cS_v+1e-30)+19*cS_h^2+0.33*cS_h*(cS_v+1e-30)))]==>A_h+I_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dE_v/dt term 1",
+     ""
+    ],
+    [
+     "0.12142857142857143",
+     "0",
+     "0",
+     "E_v==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dE_v/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_v+A_h+A_h+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(1.881/(19*cA_h^2+0.33*cA_h*cE_v+38*cA_h*cI_h+0.33*cA_h*cI_v+38*cA_h*cR_h+38*cA_h*cS_h+0.33*cA_h*cS_v+0.33*cE_v*cI_h+0.33*cE_v*cR_h+0.33*cE_v*cS_h+19*cI_h^2+0.33*cI_h*cI_v+38*cI_h*cR_h+38*cI_h*cS_h+0.33*cI_h*cS_v+0.33*cI_v*cR_h+0.33*cI_v*cS_h+19*cR_h^2+38*cR_h*cS_h+0.33*cR_h*cS_v+19*cS_h^2+0.33*cS_h*cS_v))]==>E_v+S_v+2A_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dE_v/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_v+I_h+I_h+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(4.389/(19*cA_h^2+0.33*cA_h*cE_v+38*cA_h*cI_h+0.33*cA_h*cI_v+38*cA_h*cR_h+38*cA_h*cS_h+0.33*cA_h*cS_v+0.33*cE_v*cI_h+0.33*cE_v*cR_h+0.33*cE_v*cS_h+19*cI_h^2+0.33*cI_h*cI_v+38*cI_h*cR_h+38*cI_h*cS_h+0.33*cI_h*cS_v+0.33*cI_v*cR_h+0.33*cI_v*cS_h+19*cR_h^2+38*cR_h*cS_h+0.33*cR_h*cS_v+19*cS_h^2+0.33*cS_h*cS_v))]==>E_v+S_v+2I_h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dE_v/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A_h+R_h+S_v+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(1.881/(19*cA_h^2+0.33*cA_h*cE_v+38*cA_h*cI_h+0.33*cA_h*cI_v+38*cA_h*cR_h+38*cA_h*cS_h+0.33*cA_h*cS_v+0.33*cE_v*cI_h+0.33*cE_v*cR_h+0.33*cE_v*cS_h+19*cI_h^2+0.33*cI_h*cI_v+38*cI_h*cR_h+38*cI_h*cS_h+0.33*cI_h*cS_v+0.33*cI_v*cR_h+0.33*cI_v*cS_h+19*cR_h^2+38*cR_h*cS_h+0.33*cR_h*cS_v+19*cS_h^2+0.33*cS_h*cS_v))]==>E_v+A_h+R_h+S_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dE_v/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A_h+S_h+S_v+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(1.881/(19*cA_h^2+0.33*cA_h*cE_v+38*cA_h*cI_h+0.33*cA_h*cI_v+38*cA_h*cR_h+38*cA_h*cS_h+0.33*cA_h*cS_v+0.33*cE_v*cI_h+0.33*cE_v*cR_h+0.33*cE_v*cS_h+19*cI_h^2+0.33*cI_h*cI_v+38*cI_h*cR_h+38*cI_h*cS_h+0.33*cI_h*cS_v+0.33*cI_v*cR_h+0.33*cI_v*cS_h+19*cR_h^2+38*cR_h*cS_h+0.33*cR_h*cS_v+19*cS_h^2+0.33*cS_h*cS_v))]==>E_v+A_h+S_h+S_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dE_v/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I_h+R_h+S_v+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(4.389/(19*cA_h^2+0.33*cA_h*cE_v+38*cA_h*cI_h+0.33*cA_h*cI_v+38*cA_h*cR_h+38*cA_h*cS_h+0.33*cA_h*cS_v+0.33*cE_v*cI_h+0.33*cE_v*cR_h+0.33*cE_v*cS_h+19*cI_h^2+0.33*cI_h*cI_v+38*cI_h*cR_h+38*cI_h*cS_h+0.33*cI_h*cS_v+0.33*cI_v*cR_h+0.33*cI_v*cS_h+19*cR_h^2+38*cR_h*cS_h+0.33*cR_h*cS_v+19*cS_h^2+0.33*cS_h*cS_v))]==>E_v+I_h+R_h+S_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dE_v/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I_h+S_h+S_v+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(4.389/(19*cA_h^2+0.33*cA_h*cE_v+38*cA_h*cI_h+0.33*cA_h*cI_v+38*cA_h*cR_h+38*cA_h*cS_h+0.33*cA_h*cS_v+0.33*cE_v*cI_h+0.33*cE_v*cR_h+0.33*cE_v*cS_h+19*cI_h^2+0.33*cI_h*cI_v+38*cI_h*cR_h+38*cI_h*cS_h+0.33*cI_h*cS_v+0.33*cI_v*cR_h+0.33*cI_v*cS_h+19*cR_h^2+38*cR_h*cS_h+0.33*cR_h*cS_v+19*cS_h^2+0.33*cS_h*cS_v))]==>E_v+I_h+S_h+S_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dE_v/dt term 8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A_h+I_h+S_v+S[USER;cA_h,cE_v,cI_h,cI_v,cR_h,cS_h,cS_v:(6.27/(19*cA_h^2+0.33*cA_h*cE_v+38*cA_h*cI_h+0.33*cA_h*cI_v+38*cA_h*cR_h+38*cA_h*cS_h+0.33*cA_h*cS_v+0.33*cE_v*cI_h+0.33*cE_v*cR_h+0.33*cE_v*cS_h+19*cI_h^2+0.33*cI_h*cI_v+38*cI_h*cR_h+38*cI_h*cS_h+0.33*cI_h*cS_v+0.33*cI_v*cR_h+0.33*cI_v*cS_h+19*cR_h^2+38*cR_h*cS_h+0.33*cR_h*cS_v+19*cS_h^2+0.33*cS_h*cS_v))]==>E_v+A_h+I_h+S_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_v/dt term 1",
+     ""
+    ],
+    [
+     "0.07142857142857142",
+     "0",
+     "0",
+     "E_v==>I_v+E_v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_v/dt term 2",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "I_v==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_v/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I_v+S[USER;cE_v,cI_v,cS_v:(100/(cE_v+cI_v+cS_v))]==>2I_v",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "S_h",
+     "0",
+     "1000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S_h [S_h]",
+     ""
+    ],
+    [
+     "A_h",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A_h [A_h]",
+     ""
+    ],
+    [
+     "I_h",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I_h [I_h]",
+     ""
+    ],
+    [
+     "R_h",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R_h [R_h]",
+     ""
+    ],
+    [
+     "S_v",
+     "0",
+     "19999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S_v [S_v]",
+     ""
+    ],
+    [
+     "E_v",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E_v [E_v]",
+     ""
+    ],
+    [
+     "I_v",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I_v [I_v]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3.65",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3650",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3.65",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

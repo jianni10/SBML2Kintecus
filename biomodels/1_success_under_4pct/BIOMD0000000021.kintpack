@@ -1,0 +1,782 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:51:13.454081+00:00",
+ "description": "Leloup1999_CircClock\nBioModels BIOMD0000000021 (curated). SBML file: BIOMD0000000021_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000021_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.87e-06 of species peak (worst: P2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] P0_to_P1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] T0_to_T1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] P1_to_P0: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] T1_to_T0: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] P1_to_P2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] T1_to_T2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] P2_to_P1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] T2_to_T1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] P2_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] T2_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mp_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mt_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Leloup1999_CircClock  (BIOMD0000000021, curated BioModels; source file BIOMD0000000021_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P0_to_P1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P0+S[USER;cP0:(8/(1*cP0+2))]==>P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T0_to_T1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T0+S[USER;cT0:(8/(1*cT0+2))]==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P1_to_P0",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P1+S[USER;cP1:(1/(1*cP1+2))]==>P0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T1_to_T0",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T1+S[USER;cT1:(1/(1*cT1+2))]==>T0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P1_to_P2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P1+S[USER;cP1:(8/(1*cP1+2))]==>P2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T1_to_T2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T1+S[USER;cT1:(8/(1*cT1+2))]==>T2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P2_to_P1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P2+S[USER;cP2:(1/(1*cP2+2))]==>P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T2_to_T1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T2+S[USER;cT2:(1/(1*cT2+2))]==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P0_degradation",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "P0==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T0_degradation",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "T0==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P1_degradation",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "P1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T1_degradation",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "T1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P2_degradation term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "P2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P2_degradation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P2+S[USER;cP2:(2/(1*cP2+0.2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T2_degradation term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "T2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T2_degradation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T2+S[USER;cT2:(2/(1*cT2+0.2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PT_complex_formation term 1/2",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "CC==>P2+T2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PT_complex_formation term 2/2",
+     ""
+    ],
+    [
+     "1.2",
+     "0",
+     "0",
+     "P2+T2==>CC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PT_complex_nucleation term 1/2",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "CC==>Cn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PT_complex_nucleation term 2/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Cn==>CC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PT_complex_degradation",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "CC==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PTnucl_complex_degradation",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Cn==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mp_production",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCn:(1/(cCn^4+1))]==>Mp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mt_production",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCn:(1/(cCn^4+1))]==>Mt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P0_production",
+     ""
+    ],
+    [
+     "0.9",
+     "0",
+     "0",
+     "Mp==>P0+Mp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T0_production",
+     ""
+    ],
+    [
+     "0.9",
+     "0",
+     "0",
+     "Mt==>T0+Mt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mp_degradation term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Mp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mp_degradation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mp+S[USER;cMp:(0.7/(1*cMp+0.2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mt_degradation term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Mt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mt_degradation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mt+S[USER;cMt:(0.7/(1*cMt+0.2))]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "P0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PER Protein (unphosphorylated) [P0]",
+     ""
+    ],
+    [
+     "T0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TIM Protein (unphosphorylated) [T0]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PER Protein (mono-phosphorylated) [P1]",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TIM Protein (mono-phosphorylated) [T1]",
+     ""
+    ],
+    [
+     "P2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PER Protein (bi-phosphorylated) [P2]",
+     ""
+    ],
+    [
+     "T2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TIM Protein (bi-phosphorylated) [T2]",
+     ""
+    ],
+    [
+     "CC",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cytosolic PER-TIM Complex [CC]",
+     ""
+    ],
+    [
+     "Cn",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Nuclear PER-TIM Complex [Cn]",
+     ""
+    ],
+    [
+     "Mp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PER mRNA [Mp]",
+     ""
+    ],
+    [
+     "Mt",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TIM mRNA [Mt]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

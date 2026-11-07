@@ -1,0 +1,558 @@
+{
+ "version": 3,
+ "created": "2026-10-31T05:32:53.853917+00:00",
+ "description": "Heiland2012_CircadianClock_C.reinhardtii\nBioModels BIOMD0000000411 (curated). SBML file: BIOMD0000000411_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000411_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS (Kintecus within 0.00372% of the SBML; run on James's PC in 386 s)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] re14: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re15: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re16: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Heiland2012_CircadianClock_C.reinhardtii  (BIOMD0000000411, curated BioModels; source file BIOMD0000000411_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re12",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s10+S[USER;cTIME_:(0.1*exp(30068.062065290993*sin(0.08333333333333333*3.141592653589793*cTIME_)/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136)+30068.062065290993/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136)))]==>s11",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_,cs11:(2.6*exp(50514.34426968887*sin(0.08333333333333333*3.141592653589793*cTIME_)/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136)+50514.34426968887/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136))/(cs11^2+0.4))]==>s9",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re14",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s9+S[USER;cTIME_,cs9:(3*exp(30068.062065290993*sin(0.08333333333333333*3.141592653589793*cTIME_)/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136))*exp(30068.062065290993/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136))/(1*cs9+2))]==>species_12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re15",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s10+S[USER;cTIME_,cs10:(2.2*exp(30068.062065290993*sin(0.08333333333333333*3.141592653589793*cTIME_)/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136))*exp(30068.062065290993/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136))/(1*cs10+0.2))]==>species_12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re16",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s11+S[USER;cTIME_,cs11:(1.5*exp(30068.062065290993*sin(0.08333333333333333*3.141592653589793*cTIME_)/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136))*exp(30068.062065290993/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136))/(1*cs11+1.4))]==>species_12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re18",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s9+S[USER;cTIME_:(5*exp(50514.34426968887*sin(0.08333333333333333*3.141592653589793*cTIME_)/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136)+50514.34426968887/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136)))]==>s10+s9",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(19*exp(40291.20316748993*sin(0.08333333333333333*3.141592653589793*cTIME_)/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136)+40291.20316748993/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136)))]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s11+species_3+S[USER;cTIME_,cs11:(10*cs11*exp(50514.34426968887*sin(0.08333333333333333*3.141592653589793*cTIME_)/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136)+50514.34426968887/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136)))]==>species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_1+S[USER;cTIME_:(1*exp(36081.67447834919*sin(0.08333333333333333*3.141592653589793*cTIME_)/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136)+36081.67447834919/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136)))]==>species_3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_1+S[USER;cTIME_,cspecies_1:(30*exp(40291.20316748993*sin(0.08333333333333333*3.141592653589793*cTIME_)/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136))*exp(40291.20316748993/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136))/(1*cspecies_1+2))]==>species_12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_4+S[USER;cTIME_,cspecies_4:(20*exp(40291.20316748993*sin(0.08333333333333333*3.141592653589793*cTIME_)/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136))*exp(40291.20316748993/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136))/(1*cspecies_4+4))]==>species_12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_3+S[USER;cTIME_:(0.5*exp(40291.20316748993*sin(0.08333333333333333*3.141592653589793*cTIME_)/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136)+40291.20316748993/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136)))]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_3+S[USER;cTIME_,cspecies_3:(1*exp(40291.20316748993*sin(0.08333333333333333*3.141592653589793*cTIME_)/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136))*exp(40291.20316748993/(1455*sin(0.08333333333333333*3.141592653589793*cTIME_)+86136))/(1*cspecies_3+1))]==>species_12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "s2",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "C3_Gene [s2]",
+     ""
+    ],
+    [
+     "s9",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3_mRNA [s9]",
+     ""
+    ],
+    [
+     "s10",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_3 [s10]",
+     ""
+    ],
+    [
+     "s11",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_3_P [s11]",
+     ""
+    ],
+    [
+     "s13",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "C_3_pre [s13]",
+     ""
+    ],
+    [
+     "species_1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C1 [species_1]",
+     ""
+    ],
+    [
+     "species_2",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "C1_mRNA [species_2]",
+     ""
+    ],
+    [
+     "species_3",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C1_phos [species_3]",
+     ""
+    ],
+    [
+     "species_4",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "c1c3complex [species_4]",
+     ""
+    ],
+    [
+     "species_12",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "junk [species_12]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

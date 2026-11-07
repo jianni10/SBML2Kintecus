@@ -1,0 +1,880 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:06:31.635087+00:00",
+ "description": "Wodarz2003 Immunological Memory\nBioModels BIOMD0000000684 (curated). SBML file: BIOMD0000000684_url.xml.\nSimulation: 0 to 100 time units (SED-ML: MODEL1006230061.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.73e-06 of species peak (worst: R_12)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): p_S = S; p_I_1 = I_1; p_I_2 = I_2; p_I_12 = I_12; p_I_21 = I_21; p_R_1 = R_1; p_R_2 = R_2; p_R_12 = R_12; p_P_1 = P_1; p_P_2 = P_2",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wodarz2003 Immunological Memory  (BIOMD0000000684, curated BioModels; source file BIOMD0000000684_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_R_1:(0.01*cp_R_1)]==>p_S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_R_12:(0.01*cp_R_12)]==>p_S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_R_2:(0.01*cp_R_2)]==>p_S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 4",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "p_S==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_1,cp_I_12,cp_I_2,cp_I_21,cp_R_1,cp_R_12,cp_R_2,cp_S:(0.5*cp_I_1/(0.1*cp_I_1+0.1*cp_I_12+0.1*cp_I_2+0.1*cp_I_21+0.1*cp_R_1+0.1*cp_R_12+0.1*cp_R_2+0.1*cp_S+1))]==>p_S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_1,cp_I_12,cp_I_2,cp_I_21,cp_R_1,cp_R_12,cp_R_2,cp_S:(0.5*cp_I_12/(0.1*cp_I_1+0.1*cp_I_12+0.1*cp_I_2+0.1*cp_I_21+0.1*cp_R_1+0.1*cp_R_12+0.1*cp_R_2+0.1*cp_S+1))]==>p_S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_1,cp_I_12,cp_I_2,cp_I_21,cp_R_1,cp_R_12,cp_R_2,cp_S:(0.5*cp_I_2/(0.1*cp_I_1+0.1*cp_I_12+0.1*cp_I_2+0.1*cp_I_21+0.1*cp_R_1+0.1*cp_R_12+0.1*cp_R_2+0.1*cp_S+1))]==>p_S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_1,cp_I_12,cp_I_2,cp_I_21,cp_R_1,cp_R_12,cp_R_2,cp_S:(0.5*cp_I_21/(0.1*cp_I_1+0.1*cp_I_12+0.1*cp_I_2+0.1*cp_I_21+0.1*cp_R_1+0.1*cp_R_12+0.1*cp_R_2+0.1*cp_S+1))]==>p_S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_1,cp_I_12,cp_I_2,cp_I_21,cp_R_1,cp_R_12,cp_R_2,cp_S:(0.5*cp_R_1/(0.1*cp_I_1+0.1*cp_I_12+0.1*cp_I_2+0.1*cp_I_21+0.1*cp_R_1+0.1*cp_R_12+0.1*cp_R_2+0.1*cp_S+1))]==>p_S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_1,cp_I_12,cp_I_2,cp_I_21,cp_R_1,cp_R_12,cp_R_2,cp_S:(0.5*cp_R_12/(0.1*cp_I_1+0.1*cp_I_12+0.1*cp_I_2+0.1*cp_I_21+0.1*cp_R_1+0.1*cp_R_12+0.1*cp_R_2+0.1*cp_S+1))]==>p_S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 11",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_1,cp_I_12,cp_I_2,cp_I_21,cp_R_1,cp_R_12,cp_R_2,cp_S:(0.5*cp_R_2/(0.1*cp_I_1+0.1*cp_I_12+0.1*cp_I_2+0.1*cp_I_21+0.1*cp_R_1+0.1*cp_R_12+0.1*cp_R_2+0.1*cp_S+1))]==>p_S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 12",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_1,cp_I_12,cp_I_2,cp_I_21,cp_R_1,cp_R_12,cp_R_2,cp_S:(0.5*cp_S/(0.1*cp_I_1+0.1*cp_I_12+0.1*cp_I_2+0.1*cp_I_21+0.1*cp_R_1+0.1*cp_R_12+0.1*cp_R_2+0.1*cp_S+1))]==>p_S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_S+S[USER;cp_P_1:(1*cp_P_1)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 14",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_S+S[USER;cp_P_2:(1*cp_P_2)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_1/dt term 1",
+     ""
+    ],
+    [
+     "0.13",
+     "0",
+     "0",
+     "p_I_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_1/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_P_1,cp_S:(1*cp_P_1*cp_S)]==>p_I_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_2/dt term 1",
+     ""
+    ],
+    [
+     "1.1",
+     "0",
+     "0",
+     "p_I_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_2/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_P_2,cp_S:(1*cp_P_2*cp_S)]==>p_I_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_12/dt term 1",
+     ""
+    ],
+    [
+     "1.1",
+     "0",
+     "0",
+     "p_I_12==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_12/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_P_2,cp_R_1:(1*cp_P_2*cp_R_1)]==>p_I_12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_21/dt term 1",
+     ""
+    ],
+    [
+     "0.13",
+     "0",
+     "0",
+     "p_I_21==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_21/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_P_1,cp_R_2:(1*cp_P_1*cp_R_2)]==>p_I_21",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_1/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_1:(0.1*cp_I_1)]==>p_R_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_1/dt term 2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "p_R_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_1/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_R_1+S[USER;cp_P_2:(1*cp_P_2)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_2/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_2:(0.1*cp_I_2)]==>p_R_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_2/dt term 2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "p_R_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_2/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_R_2+S[USER;cp_P_1:(1*cp_P_1)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_12/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_12:(0.1*cp_I_12)]==>p_R_12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_12/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_21:(0.1*cp_I_21)]==>p_R_12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_12/dt term 3",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "p_R_12==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP_1/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_1:(0.1*cp_I_1)]==>p_P_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP_1/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_21:(0.1*cp_I_21)]==>p_P_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP_1/dt term 3",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "p_P_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP_2/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_12:(0.1*cp_I_12)]==>p_P_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP_2/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I_2:(0.1*cp_I_2)]==>p_P_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP_2/dt term 3",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "p_P_2==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "p_S",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter S [S]",
+     ""
+    ],
+    [
+     "p_I_1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter I_1 [I_1]",
+     ""
+    ],
+    [
+     "p_I_2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter I_2 [I_2]",
+     ""
+    ],
+    [
+     "p_I_12",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter I_12 [I_12]",
+     ""
+    ],
+    [
+     "p_I_21",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter I_21 [I_21]",
+     ""
+    ],
+    [
+     "p_R_1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter R_1 [R_1]",
+     ""
+    ],
+    [
+     "p_R_2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter R_2 [R_2]",
+     ""
+    ],
+    [
+     "p_R_12",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter R_12 [R_12]",
+     ""
+    ],
+    [
+     "p_P_1",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter P_1 [P_1]",
+     ""
+    ],
+    [
+     "p_P_2",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter P_2 [P_2]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

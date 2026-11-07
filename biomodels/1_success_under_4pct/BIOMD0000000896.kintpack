@@ -1,0 +1,609 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:30:47.519837+00:00",
+ "description": "Szymanska2009 - Mathematical modeling of heat shock protein synthesis in response to temperature change\nBioModels BIOMD0000000896 (curated). SBML file: Szymanska2009.xml.\nSimulation: 0 to 1000 time units (SED-ML: Szymanska2009.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.79e-06 of species peak (worst: HSF_3_HSE)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Protein_Denaturation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - S1: zero order, signed\nRenamed species (Kintecus name = SBML id): S1 = S",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Szymanska2009 - Mathematical modeling of heat shock protein synthesis in response to temperature change  (BIOMD0000000896, curated BioModels; source file Szymanska2009.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hsp70_Substrate_Association",
+     ""
+    ],
+    [
+     "0.42",
+     "0",
+     "0",
+     "HSF+Hsp70==>Hsp70_HSF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hsp70_Substrate_Dissociation",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "Hsp70_HSF==>HSF+Hsp70",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hsp70_S_Association",
+     ""
+    ],
+    [
+     "0.42",
+     "0",
+     "0",
+     "Hsp70+S1==>Hsp70_S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hsp70_S_Dissociation",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "Hsp70_S==>Hsp70+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Trimer_Formation",
+     ""
+    ],
+    [
+     "0.023",
+     "0",
+     "0",
+     "HSF+HSF+HSF==>HSF_3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Trimer_Dissociation",
+     ""
+    ],
+    [
+     "0.00575",
+     "0",
+     "0",
+     "HSF_3+Hsp70==>2HSF+Hsp70_HSF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hsp70_Synthesis",
+     ""
+    ],
+    [
+     "0.035",
+     "0",
+     "0",
+     "mRNA==>Hsp70",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hsp70_S_Substrate_Refolding",
+     ""
+    ],
+    [
+     "0.014",
+     "0",
+     "0",
+     "Hsp70_S==>Hsp70",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hsp70_Degradation",
+     ""
+    ],
+    [
+     "0.013",
+     "0",
+     "0",
+     "Hsp70==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hsp70_S_Formation",
+     ""
+    ],
+    [
+     "0.023",
+     "0",
+     "0",
+     "Hsp70_HSF+S1==>HSF+Hsp70_S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hsp70_S_Substrate_Dissociation",
+     ""
+    ],
+    [
+     "0.00036",
+     "0",
+     "0",
+     "HSF+Hsp70_S==>Hsp70_HSF+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "HSF_HSE_Association",
+     ""
+    ],
+    [
+     "0.035",
+     "0",
+     "0",
+     "HSE+HSF_3==>HSF_3_HSE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "HSF_HSE_Dissociation",
+     ""
+    ],
+    [
+     "0.035",
+     "0",
+     "0",
+     "HSF_3_HSE==>HSE+HSF_3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mRNA_Transcription",
+     ""
+    ],
+    [
+     "0.035",
+     "0",
+     "0",
+     "HSF_3_HSE==>mRNA+HSF_3_HSE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Protein_Denaturation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1:(0.16499999999999998*1.4^(5-5*cSW1))]==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Protein_Denaturation term 2/2 (consumes S1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1:((-1*0.0004447045019396408*1.4^(5-5*cSW1)*exp(5*cSW1)))]==>S1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Hsp70",
+     "0",
+     "2.73546",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hsp70 [Hsp70]",
+     ""
+    ],
+    [
+     "HSF",
+     "0",
+     "0.332019",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HSF [HSF]",
+     ""
+    ],
+    [
+     "S1",
+     "0",
+     "3.09e-17",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S [S]",
+     ""
+    ],
+    [
+     "Hsp70_HSF",
+     "0",
+     "76.4593",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hsp70_HSF [Hsp70_HSF]",
+     ""
+    ],
+    [
+     "Hsp70_S",
+     "0",
+     "1.74782e-14",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hsp70_S [Hsp70_S]",
+     ""
+    ],
+    [
+     "HSF_3",
+     "0",
+     "0.0535203",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HSF_3 [HSF_3]",
+     ""
+    ],
+    [
+     "HSE",
+     "0",
+     "18.984",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HSE [HSE]",
+     ""
+    ],
+    [
+     "HSF_3_HSE",
+     "0",
+     "1.01603",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HSF_3_HSE [HSF_3_HSE]",
+     ""
+    ],
+    [
+     "mRNA",
+     "0",
+     "1.01603",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mRNA [mRNA]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 10 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1.000000001",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1.000000001",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "10",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

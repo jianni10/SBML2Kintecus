@@ -1,0 +1,425 @@
+{
+ "version": 3,
+ "created": "2026-10-31T15:10:08.338974+00:00",
+ "description": "Marhl2000_CaOscillations\nBioModels BIOMD0000000039 (curated). SBML file: BIOMD0000000039_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000039_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.05e-05 of species peak (worst: Ca_cyt)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] v1 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v1 term 2/2: non-integer reactant coefficient 0.25 on CaER written as a Kintecus coefficient\n  [info] v3 term 1/2: non-integer reactant coefficient 0.25 on CaER written as a Kintecus coefficient\n  [info] v7 term 1/2: non-integer reactant coefficient 0.25 on CaM written as a Kintecus coefficient\n  [info] v7 term 2/2: non-integer reactant coefficient 0.25 on CaM written as a Kintecus coefficient\n  [info] v9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Marhl2000_CaOscillations  (BIOMD0000000039, curated BioModels; source file BIOMD0000000039_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_cyt+Ca_cyt+Ca_cyt+S[USER;cCa_cyt:(4100/(1*(cCa_cyt+1e-30)^2+25))]==>0.25CaER+2Ca_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_cyt+Ca_cyt+0.25CaER+S[USER;cCaER,cCa_cyt:(4100*cCaER^0.75/(cCa_cyt^2+25))]==>3Ca_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "0.25CaER+S[USER;cCaER:(0.05*cCaER^0.75)]==>Ca_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3 term 2/2",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "Ca_cyt==>0.25CaER",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "Ca_cyt==>0.25CaER",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "0.25CaM+S[USER;cCaM:(0.00625*cCaM^0.75)]==>Ca_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_cyt+Ca_cyt+0.25CaM+S[USER;cCaM,cCa_cyt:(125*cCaM^0.75/(cCa_cyt^2+25))]==>3Ca_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_cyt+S[USER;cCa_cyt:(300*cCa_cyt^7/(1*(cCa_cyt+1e-30)^8+0.1677721600000001))]==>0.25CaM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "CaPr==>Ca_cyt+Pr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Ca_cyt+Pr==>CaPr",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Ca_cyt",
+     "0",
+     "0.35",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ca_cyt [Ca_cyt]",
+     ""
+    ],
+    [
+     "CaER",
+     "0",
+     "0.76",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CaER [CaER]",
+     ""
+    ],
+    [
+     "CaM",
+     "0",
+     "0.29",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CaM [CaM]",
+     ""
+    ],
+    [
+     "CaPr",
+     "0",
+     "85.45",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CaPr [CaPr]",
+     ""
+    ],
+    [
+     "Pr",
+     "0",
+     "34.55",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pr [Pr]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

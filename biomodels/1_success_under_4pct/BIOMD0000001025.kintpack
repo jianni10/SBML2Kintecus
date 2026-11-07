@@ -1,0 +1,459 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:35:44.429703+00:00",
+ "description": "Chaudhury2020 - EC50 expansion and killing mathematical model of CAR-T cell and tumour kinetics\nBioModels BIOMD0000001025 (curated). SBML file: Chaudhury2020 Eq 7-9.xml.\nSimulation: 0 to 360 time units (SED-ML: Chaudhury2020 Eq 7-9 - Fig 3(A) simulation.sedml), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.81e-06 of species peak (worst: Persistent_CAR_T_cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'CAR_T_cells' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Tumor_cell_growth term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Tumor_cell_death: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dPersistent_CAR_T_cells/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - Persistent_CAR_T_cells: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chaudhury2020 - EC50 expansion and killing mathematical model of CAR-T cell and tumour kinetics  (BIOMD0000001025, curated BioModels; source file Chaudhury2020 Eq 7-9.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_cell_growth term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_cells+S[USER;cTumor_cells:(0.2/(0.0010000000000000002*(1/cTumor_cells)^3+1))]==>2Tumor_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_cell_growth term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_cells+S[USER;cTumor_cells:(0.02895296546021679*log(cTumor_cells)/(0.0010000000000000002*(1/(cTumor_cells+1e-30))^3+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_cell_death",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_cells+Expanding_CAR_T_cells+S[USER;cExpanding_CAR_T_cells,cTumor_cells:(0.35/(1*cExpanding_CAR_T_cells+1*cTumor_cells+10))]==>Expanding_CAR_T_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dExpanding_CAR_T_cells/dt term 1",
+     ""
+    ],
+    [
+     "0.1612",
+     "0",
+     "0",
+     "Expanding_CAR_T_cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dExpanding_CAR_T_cells/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Expanding_CAR_T_cells+S[USER;cSW1:(0.1612*cSW1)]==>2Expanding_CAR_T_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dExpanding_CAR_T_cells/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Expanding_CAR_T_cells+Tumor_cells+S[USER;cExpanding_CAR_T_cells,cSW1,cTumor_cells:(8.8*cSW1/(cExpanding_CAR_T_cells+cTumor_cells+1))]==>2Expanding_CAR_T_cells+Tumor_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPersistent_CAR_T_cells/dt term 1",
+     ""
+    ],
+    [
+     "0.0012",
+     "0",
+     "0",
+     "Expanding_CAR_T_cells==>Persistent_CAR_T_cells+Expanding_CAR_T_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPersistent_CAR_T_cells/dt term 2",
+     ""
+    ],
+    [
+     "0.0032",
+     "0",
+     "0",
+     "Persistent_CAR_T_cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPersistent_CAR_T_cells/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Persistent_CAR_T_cells+S[USER;cSW1:(0.0032*cSW1)]==>2Persistent_CAR_T_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPersistent_CAR_T_cells/dt term 4 (consumes Persistent_CAR_T_cells)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cExpanding_CAR_T_cells,cSW1:((-1*0.0012*cExpanding_CAR_T_cells*cSW1))]==>Persistent_CAR_T_cells",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Expanding_CAR_T_cells",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Expanding_CAR-T_cells [Expanding_CAR_T_cells]",
+     ""
+    ],
+    [
+     "Persistent_CAR_T_cells",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Persistent_CAR-T_cells [Persistent_CAR_T_cells]",
+     ""
+    ],
+    [
+     "Tumor_cells",
+     "0",
+     "900",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumor_cells [Tumor_cells]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 9.3 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3000000003",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "360",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3000000003",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "9.3",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

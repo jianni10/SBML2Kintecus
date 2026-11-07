@@ -1,0 +1,393 @@
+{
+ "version": 3,
+ "created": "2026-11-05T21:11:49.788126+00:00",
+ "description": "Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin\nBioModels BIOMD0000000234 (curated). SBML file: GemcitabineCorrected.xml.\nSimulation: 0 to 60 time units (SED-ML: GemcitabineCorrected.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.55e-06 of species peak (worst: Ce)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 2 event(s) depend only on time (and on variables only they change): unrolled into 11 firing(s) up to t = 60\n  [info] time event(s) on 'Ce' encoded as time/value pairs in EV_P_CE.TXT (ADD)\nRenamed species (Kintecus name = SBML id): p_Ce = Ce; p_TumorSize = TumorSize",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin  (BIOMD0000000234, curated BioModels; source file GemcitabineCorrected.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCe/dt term 1",
+     ""
+    ],
+    [
+     "0.09037120998173989",
+     "0",
+     "0",
+     "p_Ce==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTumorSize/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_TumorSize:(0.3055045871559633*cp_TumorSize)]==>p_TumorSize",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTumorSize/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_TumorSize+S[USER;cp_TumorSize:(0.04587155963302752*cp_TumorSize)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTumorSize/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_TumorSize+S[USER;cp_Ce:(0.3055045871559633*cp_Ce/(cp_Ce+10600))]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "p_Ce",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "EV_P_CE.TXT-ADD",
+     "parameter Ce [Ce]",
+     ""
+    ],
+    [
+     "p_TumorSize",
+     "0",
+     "6.66",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter TumorSize [TumorSize]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1000000002",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "60",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1000000002",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_CE.TXT",
+   "key": "O_EV_P_CE.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "1.0000000000000002",
+     "5203.84"
+    ],
+    [
+     "3",
+     "5203.84"
+    ],
+    [
+     "4.000000000000001",
+     "5203.84"
+    ],
+    [
+     "6",
+     "5203.84"
+    ],
+    [
+     "7.000000000000001",
+     "5203.84"
+    ],
+    [
+     "9",
+     "5203.84"
+    ],
+    [
+     "10.000000000000002",
+     "5203.84"
+    ],
+    [
+     "12",
+     "5203.84"
+    ],
+    [
+     "13",
+     "5203.84"
+    ],
+    [
+     "15",
+     "5203.84"
+    ],
+    [
+     "16",
+     "5203.84"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,778 @@
+{
+ "version": 3,
+ "created": "2026-10-26T21:51:01.148916+00:00",
+ "description": "Kallenberger2014 - CD95L induced apoptosis initiated by caspase-8, wild-type HeLa cells (cis/trans-cis/trans variant)\nBioModels BIOMD0000000526 (curated). SBML file: BIOMD0000000526_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000526_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.93e-06 of species peak (worst: p18inactive)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Kallenberger2014 - CD95L induced apoptosis initiated by caspase-8, wild-type HeLa cells (cis/trans-cis/trans variant)  (BIOMD0000000526, curated BioModels; source file BIOMD0000000526_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1",
+     ""
+    ],
+    [
+     "0.0023761038110712823",
+     "0",
+     "0",
+     "FADD==>DISC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2",
+     ""
+    ],
+    [
+     "0.00130854998177646",
+     "0",
+     "0",
+     "DISC==>FADD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3",
+     ""
+    ],
+    [
+     "0.000364965874405544",
+     "0",
+     "0",
+     "p55free+DISC==>DISCp55",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "0.00639775937416746",
+     "0",
+     "0",
+     "DISCp55==>p30",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 1/2",
+     ""
+    ],
+    [
+     "0.000223246421372882",
+     "0",
+     "0",
+     "DISCp55+DISCp55==>p30+DISCp55",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 2/2",
+     ""
+    ],
+    [
+     "0.000223246421372882",
+     "0",
+     "0",
+     "DISCp55+p30==>2p30",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6",
+     ""
+    ],
+    [
+     "5.29906975294056e-5",
+     "0",
+     "0",
+     "DISCp55+p43==>p30+p43",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7",
+     ""
+    ],
+    [
+     "0.00639775937416746",
+     "0",
+     "0",
+     "p43==>p18+DISC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8 term 1/2",
+     ""
+    ],
+    [
+     "0.000223246421372882",
+     "0",
+     "0",
+     "p43+DISCp55==>p18+DISC+DISCp55",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8 term 2/2",
+     ""
+    ],
+    [
+     "0.000223246421372882",
+     "0",
+     "0",
+     "p43+p30==>p18+DISC+p30",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9",
+     ""
+    ],
+    [
+     "5.29906975294056e-5",
+     "0",
+     "0",
+     "p43+p43==>p18+DISC+p43",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10",
+     ""
+    ],
+    [
+     "0.000644612643975149",
+     "0",
+     "0",
+     "DISCp55==>p43",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_11 term 1/2",
+     ""
+    ],
+    [
+     "0.000543518631342483",
+     "0",
+     "0",
+     "DISCp55+DISCp55==>p43+DISCp55",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_11 term 2/2",
+     ""
+    ],
+    [
+     "0.000543518631342483",
+     "0",
+     "0",
+     "DISCp55+p30==>p43+p30",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_12",
+     ""
+    ],
+    [
+     "0.00413530054938906",
+     "0",
+     "0",
+     "DISCp55+p43==>2p43",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_13",
+     ""
+    ],
+    [
+     "0.000644612643975149",
+     "0",
+     "0",
+     "p30==>p18+DISC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_14 term 1/2",
+     ""
+    ],
+    [
+     "0.000543518631342483",
+     "0",
+     "0",
+     "p30+p30==>p18+DISC+p30",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_14 term 2/2",
+     ""
+    ],
+    [
+     "0.000543518631342483",
+     "0",
+     "0",
+     "p30+DISCp55==>p18+DISC+DISCp55",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_15",
+     ""
+    ],
+    [
+     "0.00413530054938906",
+     "0",
+     "0",
+     "p30+p43==>p18+DISC+p43",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16",
+     ""
+    ],
+    [
+     "0.064713651554491",
+     "0",
+     "0",
+     "p18==>p18inactive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17 term 1/2",
+     ""
+    ],
+    [
+     "0.00052134055139547",
+     "0",
+     "0",
+     "Bid+p18==>tBid+p18",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17 term 2/2",
+     ""
+    ],
+    [
+     "0.00052134055139547",
+     "0",
+     "0",
+     "Bid+p43==>tBid+p43",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_18 term 1/2",
+     ""
+    ],
+    [
+     "0.00153710001025539",
+     "0",
+     "0",
+     "PrNES_mCherry+p18==>PrNES+mCherry+p18",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_18 term 2/2",
+     ""
+    ],
+    [
+     "0.00153710001025539",
+     "0",
+     "0",
+     "PrNES_mCherry+p43==>PrNES+mCherry+p43",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_19",
+     ""
+    ],
+    [
+     "0.00153710001025539",
+     "0",
+     "0",
+     "PrER_mGFP+p18==>mGFP+PrER+p18",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "CD95",
+     "0",
+     "12",
+     "Y",
+     "0",
+     "No",
+     "12",
+     "CD95 [CD95]",
+     ""
+    ],
+    [
+     "FADD",
+     "0",
+     "90",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FADD [FADD]",
+     ""
+    ],
+    [
+     "p55free",
+     "0",
+     "127",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p55free [p55free]",
+     ""
+    ],
+    [
+     "Bid",
+     "0",
+     "224",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Bid [Bid]",
+     ""
+    ],
+    [
+     "PrNES_mCherry",
+     "0",
+     "1909",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PrNES_mCherry [PrNES_mCherry]",
+     ""
+    ],
+    [
+     "PrER_mGFP",
+     "0",
+     "3316",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PrER_mGFP [PrER_mGFP]",
+     ""
+    ],
+    [
+     "DISC",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DISC [DISC]",
+     ""
+    ],
+    [
+     "DISCp55",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DISCp55 [DISCp55]",
+     ""
+    ],
+    [
+     "p30",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p30 [p30]",
+     ""
+    ],
+    [
+     "p43",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p43 [p43]",
+     ""
+    ],
+    [
+     "p18",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p18 [p18]",
+     ""
+    ],
+    [
+     "p18inactive",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p18inactive [p18inactive]",
+     ""
+    ],
+    [
+     "tBid",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "tBid [tBid]",
+     ""
+    ],
+    [
+     "PrNES",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PrNES [PrNES]",
+     ""
+    ],
+    [
+     "mCherry",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mCherry [mCherry]",
+     ""
+    ],
+    [
+     "PrER",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PrER [PrER]",
+     ""
+    ],
+    [
+     "mGFP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mGFP [mGFP]",
+     ""
+    ],
+    [
+     "CD95L",
+     "0",
+     "16.6",
+     "Y",
+     "0",
+     "No",
+     "16.6",
+     "CD95L [CD95L]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,467 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:45:41.769724+00:00",
+ "description": "Komarova2005_PTHaction_OsteoclastOsteoblastCoupling\nBioModels BIOMD0000000279 (curated). SBML file: BIOMD0000000279_url.xml.\nSimulation: 0 to 150 time units (SED-ML: figA_blue.sedml), sampling 0.15.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.52e-07 of species peak (worst: x1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dz/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed\n  [info] rate rule dz/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed\n  [info] rate rule dz/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed\n  [info] rate rule dz/dt term 8: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed\n  [info] rate rule dz/dt term 9: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Komarova2005_PTHaction_OsteoclastOsteoblastCoupling  (BIOMD0000000279, curated BioModels; source file BIOMD0000000279_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 1",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "x1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx1,cx2:(3*cx1^0.5/cx2^0.5)]==>x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx1:(4*cx1)]==>x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "x2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dz/dt term 1 (consumes z)",
+     ""
+    ],
+    [
+     "-0.05303300858899105",
+     "0",
+     "0",
+     "source==>z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dz/dt term 2",
+     ""
+    ],
+    [
+     "0.00085",
+     "0",
+     "0",
+     "x2==>z+x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dz/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx2:(76.49999999999999/(2*abs(cx2-212.13203435596424)+2e-300))]==>z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dz/dt term 4 (consumes z)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx1:((-1*0.12*cx1))]==>z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dz/dt term 5 (consumes z)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx1:((-1*0.26999999999999996/(2*abs(cx1-1.0606601717798212)+2e-300)))]==>z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dz/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x2+x2+S[USER;cx2:(0.0017/(2*abs(cx2-212.13203435596424)+2e-300))]==>z+2x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dz/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x1+S[USER;cx1:(0.5091168824543142/(2*abs(cx1-1.0606601717798212)+2e-300))]==>z+x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dz/dt term 8 (consumes z)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx1:((-1*0.24*cx1^2/(2*abs(cx1-1.0606601717798212)+2e-300)))]==>z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dz/dt term 9 (consumes z)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx2:((-1*0.7212489168102784*cx2/(2*abs(cx2-212.13203435596424)+2e-300)))]==>z",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x1",
+     "0",
+     "1.06066",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Osteoclasts [x1]",
+     ""
+    ],
+    [
+     "x2",
+     "0",
+     "212.132",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Osteoblasts [x2]",
+     ""
+    ],
+    [
+     "z",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "BoneMass [z]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.15",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "150",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.15",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

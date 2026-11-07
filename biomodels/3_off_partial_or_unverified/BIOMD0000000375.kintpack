@@ -1,0 +1,875 @@
+{
+ "version": 3,
+ "created": "2026-11-06T15:11:34.810234+00:00",
+ "description": "Mears1997_CRAC_PancreaticBetaCells\nBioModels BIOMD0000000375 (curated). SBML file: BIOMD0000000375_url.xml.\nSimulation: 0 to 800000 time units (SED-ML: 375.sedml), sampling 800.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH, max |difference| = 2.12e-01 of species peak (worst: n)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 5.15e-02 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V_membrane' goes below zero in the SBML: integrated as V_membrane_o = value + 200, output as V_membrane = OUTC[V_membrane_o;-200*source]\n  [info] rate rule djm/dt term 2: rate order differs from the stoichiometry; consumed on separate line(s) - jm: zero order, signed\n  [info] rate rule dCa_i/dt term 5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dCa_i/dt term 6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dCa_i/dt term 7: rate order differs from the stoichiometry; consumed on separate line(s) - Ca_i: zero order, signed\n  [info] rate rule dCa_i/dt term 8: rate order differs from the stoichiometry; consumed on separate line(s) - Ca_i: zero order, signed\n  [info] rate rule dCa_i/dt term 9: rate order differs from the stoichiometry; consumed on separate line(s) - Ca_i: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mears1997_CRAC_PancreaticBetaCells  (BIOMD0000000375, curated BioModels; source file BIOMD0000000375_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 1 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "-1.7050990581357583",
+     "0",
+     "0",
+     "source==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 2 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o:(8.281909710945111/(1+0.2018965179946554*exp((-1*0.1*(cV_membrane_o-200)))))]==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 3 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o:(13.153621305618707/(1+0.06948345122280153*exp((-1*0.13333333333333333*(cV_membrane_o-200)))))]==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 4 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o:((-1*0.024358557973367976*(cV_membrane_o-200)))]==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 5 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cn:((-1*44.33257551152972*cn))]==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 6 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCa_i:((-1*13.640792465086067*cCa_i^5/(cCa_i^5+0.05032843750000002)))]==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 7 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o,cjm:((-1*8.281909710945111*cjm/(1+0.2018965179946554*exp((-1*0.1*(cV_membrane_o-200))))))]==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 8 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCa_er_Ca_equations,cV_membrane_o:((-1*0.012179278986683988*(cV_membrane_o-200)/(1.6195967923126108e-6*exp(0.3333333333333333*cCa_er_Ca_equations)+1)))]==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 9 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o:((-1*0.13153621305618707*(cV_membrane_o-200)/(1+0.06948345122280153*exp((-1*0.13333333333333333*(cV_membrane_o-200))))))]==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 10 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o,cn:((-1*0.6333225073075673*cn*(cV_membrane_o-200)))]==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 11 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2:((-1*21.02955505034102*cSW1*cSW2))]==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 12 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o:((-1*0.08281909710945112*(cV_membrane_o-200)/(1+0.2018965179946554*exp((-1*0.1*(cV_membrane_o-200))))))]==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 13 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o,cjm:(0.08281909710945112*cjm*(cV_membrane_o-200)/(1+0.2018965179946554*exp((-1*0.1*(cV_membrane_o-200)))))]==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 14 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2,cV_membrane_o:((-1*0.3004222150048717*cSW1*cSW2*(cV_membrane_o-200)))]==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_membrane/dt term 15 (shifted V_membrane_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCa_i,cV_membrane_o:((-1*0.1948684637869438*cCa_i^5*(cV_membrane_o-200)/(cCa_i^5+0.05032843750000002)))]==>V_membrane_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o:(0.20352035203520352/(1+0.0820849986238988*exp((-1*0.16666666666666666*(cV_membrane_o-200)))))]==>n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 2",
+     ""
+    ],
+    [
+     "0.20352035203520352",
+     "0",
+     "0",
+     "n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o:(2.479385459549112*exp(0.16666666666666666*(cV_membrane_o-200))/(1+0.0820849986238988*exp((-1*0.16666666666666666*(cV_membrane_o-200)))))]==>n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "n+S[USER;cV_membrane_o:(2.479385459549112*exp(0.16666666666666666*(cV_membrane_o-200)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule djm/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o:(1/(1500+50000/(568070.0400224912*exp(0.25*(cV_membrane_o-200))+1.7603463121561693e-6*exp((-1*0.25*(cV_membrane_o-200))))))]==>jm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule djm/dt term 2 (consumes jm)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o:((-1*1/(484055355556732.25*exp(0.5*(cV_membrane_o-200))+1500+1.6135178518557742e16*exp(0.5*(cV_membrane_o-200))/(568070.0400224912*exp(0.25*(cV_membrane_o-200))+1.7603463121561693e-6*exp((-1*0.25*(cV_membrane_o-200))))+50000/(568070.0400224912*exp(0.25*(cV_membrane_o-200))+1.7603463121561693e-6*exp((-1*0.25*(cV_membrane_o-200)))))))]==>jm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule djm/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "jm+S[USER;cV_membrane_o:(1/(1500+50000/(568070.0400224912*exp(0.25*(cV_membrane_o-200))+1.7603463121561693e-6*exp((-1*0.25*(cV_membrane_o-200))))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_er_Ca_equations/dt term 1",
+     ""
+    ],
+    [
+     "1.2e-5",
+     "0",
+     "0",
+     "Ca_i==>Ca_er_Ca_equations+Ca_i",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_er_Ca_equations/dt term 2",
+     ""
+    ],
+    [
+     "1.2e-5",
+     "0",
+     "0",
+     "Ca_er_Ca_equations==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_er_Ca_equations/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCa_i:(0.0009599999999999999*cCa_i^2/(cCa_i^2+0.0081))]==>Ca_er_Ca_equations",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_i/dt term 1",
+     ""
+    ],
+    [
+     "1.2e-5",
+     "0",
+     "0",
+     "Ca_er_Ca_equations==>Ca_i+Ca_er_Ca_equations",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_i/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o:(0.00292167/(1+0.06948345122280153*exp((-1*0.13333333333333333*(cV_membrane_o-200)))))]==>Ca_i",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_i/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o:(0.00183957/(1+0.2018965179946554*exp((-1*0.1*(cV_membrane_o-200)))))]==>Ca_i",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_i/dt term 4",
+     ""
+    ],
+    [
+     "1.2e-5",
+     "0",
+     "0",
+     "Ca_i==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_i/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_i+S[USER;cCa_i:(0.0008*cCa_i/(1*(cCa_i+1e-30)^2+0.12249999999999998))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_i/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_i+S[USER;cCa_i:(0.0009599999999999999*cCa_i/(1*(cCa_i+1e-30)^2+0.0081))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_i/dt term 7 (consumes Ca_i)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o:((-1*1.83957e-5*(cV_membrane_o-200)/(1+0.2018965179946554*exp((-1*0.1*(cV_membrane_o-200))))))]==>Ca_i",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_i/dt term 8 (consumes Ca_i)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o,cjm:((-1*0.00183957*cjm/(1+0.2018965179946554*exp((-1*0.1*(cV_membrane_o-200))))))]==>Ca_i",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_i/dt term 9 (consumes Ca_i)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_membrane_o:((-1*2.92167e-5*(cV_membrane_o-200)/(1+0.06948345122280153*exp((-1*0.13333333333333333*(cV_membrane_o-200))))))]==>Ca_i",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_i/dt term 10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "jm+S[USER;cV_membrane_o:(1.83957e-5*(cV_membrane_o-200)/(1+0.2018965179946554*exp((-1*0.1*(cV_membrane_o-200)))))]==>Ca_i+jm",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "V_membrane_o",
+     "0",
+     "139",
+     "N",
+     "0",
+     "No",
+     "No",
+     "V_membrane + 200 (shifted state) [__shifted__V_membrane]",
+     ""
+    ],
+    [
+     "n",
+     "0",
+     "0.0005",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "n [n]",
+     ""
+    ],
+    [
+     "jm",
+     "0",
+     "0.12",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "jm [jm]",
+     ""
+    ],
+    [
+     "Ca_er_Ca_equations",
+     "0",
+     "60",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ca_er_Ca_equations [Ca_er_Ca_equations]",
+     ""
+    ],
+    [
+     "Ca_i",
+     "0",
+     "0.11",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ca_i [Ca_i]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 60000 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time switch at 660000 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "V_membrane",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[V_membrane_o;-200*source]",
+     "No",
+     "V_membrane (= V_membrane_o - 200) [V_membrane]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "800.0000009",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "800000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "800.0000009",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "60000",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "660000",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,425 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:54:45.351065+00:00",
+ "description": "Zhu2007_TF_modulated_by_Calcium\nBioModels BIOMD0000000166 (curated). SBML file: BIOMD0000000166_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000166_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.64e-06 of species peak (worst: Y)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Calcium_into_store: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Calcium_into_cytoplasm: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Zhu2007_TF_modulated_by_Calcium  (BIOMD0000000166, curated BioModels; source file BIOMD0000000166_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TF_synthesis term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X+X+S[USER;cX,cZ:(6/(cX^2+10/(16*cZ^4+1)))]==>3X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TF_synthesis term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X+X+S[USER;cX,cZ:(54*cZ^4/(cX^2*cZ^4+0.0625*cX^2+10*cZ^4/(16*cZ^4+1)+0.625/(16*cZ^4+1)))]==>3X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TF_degradation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TF_synthesis_basal",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "source==>X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Calcium_Influx",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>Z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Calcium_Influx_stimulation",
+     ""
+    ],
+    [
+     "1.71",
+     "0",
+     "0",
+     "source==>Z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Calcium_into_store",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Z+S[USER;cZ:(30*cZ/(1*(cZ+1e-30)^2+0.25))]==>Y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Calcium_into_cytoplasm",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Y+S[USER;cY,cZ:(325*cY*cZ^4/(1*cZ^4*(cY+1e-30)^2+2.8899999999999997*cZ^4+0.044774560000000005*(cY+1e-30)^2+0.12939847840000002))]==>Z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Leakage",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "Y==>Z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Leakage_from_cytoplasm",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "Z==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "15",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF_A [X]",
+     ""
+    ],
+    [
+     "Y",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Calcium in store [Y]",
+     ""
+    ],
+    [
+     "Z",
+     "0",
+     "0.25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Calcium in cytoplasm [Z]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

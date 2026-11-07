@@ -1,0 +1,498 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:29:57.891285+00:00",
+ "description": "Wilson2012 - tumor vaccine efficacy\nBioModels BIOMD0000000791 (curated). SBML file: Wilson2012.xml.\nSimulation: 0 to 30 time units (SED-ML: Wilson2012.sedml), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.47e-06 of species peak (worst: E)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time event(s) on 'V' encoded as time/value pairs in EV_V.TXT (SET)\nRenamed species (Kintecus name = SBML id): T1 = T; E1 = E; R1 = R",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wilson2012 - tumor vaccine efficacy  (BIOMD0000000791, curated BioModels; source file Wilson2012.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth term 1/2",
+     ""
+    ],
+    [
+     "0.1946",
+     "0",
+     "0",
+     "T1==>2T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth term 2/2",
+     ""
+    ],
+    [
+     "0.0005273712737127372",
+     "0",
+     "0",
+     "T1+T1==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_immune",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T1+E1+S[USER;cB:(1e-5/(100*cB+1))]==>E1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_immune_induced",
+     ""
+    ],
+    [
+     "1e-5",
+     "0",
+     "0",
+     "T1+V==>V",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tgfb_secretion",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cT1:(0.3*cT1^2/(cT1^2+300))]==>B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tgfb_decay",
+     ""
+    ],
+    [
+     "0.0007",
+     "0",
+     "0",
+     "B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "effector_stimulation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E1+T1+S[USER;cB,cT1:(0.62/(300*cB*cT1+1))]==>2E1+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "effector_death",
+     ""
+    ],
+    [
+     "1e-5",
+     "0",
+     "0",
+     "E1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "effector_regulation",
+     ""
+    ],
+    [
+     "1e-5",
+     "0",
+     "0",
+     "E1+R1==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "effector_conversion",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "E1==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Treg_death",
+     ""
+    ],
+    [
+     "1e-5",
+     "0",
+     "0",
+     "R1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vaccine_decay",
+     ""
+    ],
+    [
+     "1e-5",
+     "0",
+     "0",
+     "V==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T [T]",
+     ""
+    ],
+    [
+     "B",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B [B]",
+     ""
+    ],
+    [
+     "E1",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E [E]",
+     ""
+    ],
+    [
+     "R1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R [R]",
+     ""
+    ],
+    [
+     "V",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "EV_V.TXT-SET",
+     "V [V]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3000000003",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3000000003",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_V.TXT",
+   "key": "O_EV_V.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "3",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

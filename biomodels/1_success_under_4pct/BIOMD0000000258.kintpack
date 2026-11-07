@@ -1,0 +1,319 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:56:17.062089+00:00",
+ "description": "Ortega2006 - bistability from double phosphorylation in signal transduction\nBioModels BIOMD0000000258 (curated). SBML file: BIOMD0000000258_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000258_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.50e-06 of species peak (worst: beta)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] v1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ortega2006 - bistability from double phosphorylation in signal transduction  (BIOMD0000000258, curated BioModels; source file BIOMD0000000258_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "alpha+S[USER;calpha,cbeta:(100/(100*calpha+100*cbeta+1))]==>beta",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "beta+S[USER;cbeta,cgamma:(90.9090909090909/(100*cbeta+100*cgamma+1))]==>alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "beta+S[USER;calpha,cbeta:(100/(100*calpha+100*cbeta+1))]==>gamma",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "gamma+S[USER;cbeta,cgamma:(90.9090909090909/(100*cbeta+100*cgamma+1))]==>beta",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "alpha",
+     "0",
+     "0.462",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "alpha [alpha]",
+     ""
+    ],
+    [
+     "beta",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "beta [beta]",
+     ""
+    ],
+    [
+     "gamma",
+     "0",
+     "0.338",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "gamma [gamma]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.03",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.03",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

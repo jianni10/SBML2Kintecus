@@ -1,0 +1,408 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:07:32.248625+00:00",
+ "description": "Kirschner1998_Immunotherapy_Tumour\nBioModels BIOMD0000000732 (curated). SBML file: Kirschner_1998.xml.\nSimulation: 0 to 1000 time units (SED-ML: Kirschner_1998.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.75e-06 of species peak (worst: Tumor)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_Killing: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): Source1 = Source; Sink1 = Sink",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Kirschner1998_Immunotherapy_Tumour  (BIOMD0000000732, curated BioModels; source file Kirschner_1998.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_growth term 1/2",
+     ""
+    ],
+    [
+     "0.18",
+     "0",
+     "0",
+     "Tumor==>2Tumor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_growth term 2/2",
+     ""
+    ],
+    [
+     "1.8e-10",
+     "0",
+     "0",
+     "Tumor+Tumor==>Tumor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Killing",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor+Immune_cells+S[USER;cTumor:(1/(1*cTumor+100000))]==>Immune_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Immune_cell_Activation term 1/2",
+     ""
+    ],
+    [
+     "0.035",
+     "0",
+     "0",
+     "Tumor==>Immune_cells+Tumor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Immune_cell_Activation term 2/2",
+     ""
+    ],
+    [
+     "6.225e-9",
+     "0",
+     "0",
+     "IL2+Immune_cells==>2Immune_cells+IL2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Immune_cell_Utilization",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "Immune_cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL2_Synthesis",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Immune_cells+Tumor+S[USER;cTumor:(5/(cTumor+1000))]==>IL2+Immune_cells+Tumor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL2_Degradation",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "IL2==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Source1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Source [Source]",
+     ""
+    ],
+    [
+     "Tumor",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumor [Tumor]",
+     ""
+    ],
+    [
+     "Sink1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Sink [Sink]",
+     ""
+    ],
+    [
+     "IL2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IL2 [IL2]",
+     ""
+    ],
+    [
+     "Immune_cells",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Immune_cells [Immune_cells]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

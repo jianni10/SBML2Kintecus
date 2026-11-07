@@ -1,0 +1,894 @@
+{
+ "version": 3,
+ "created": "2026-11-05T15:53:58.975645+00:00",
+ "description": "Wang1996_Synaptic_Inhibition_Two_Neuron\nBioModels BIOMD0000000302 (curated). SBML file: BIOMD0000000302_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000302_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.29411764705882354.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.70e-05 of species peak (worst: V_pre)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V_post' goes below zero in the SBML: integrated as p_V_post_o = value + 200, output as p_V_post = OUTC[p_V_post_o;-200*source]\n  [info] 'V_pre' goes below zero in the SBML: integrated as p_V_pre_o = value + 200, output as p_V_pre = OUTC[p_V_pre_o;-200*source]\n  [info] rate rule dn_post/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - p_n_post: zero order, signed\n  [info] rate rule dn_post/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - p_n_post: zero order, signed\n  [info] rate rule dn_pre/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - p_n_pre: zero order, signed\n  [info] rate rule dn_pre/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - p_n_pre: zero order, signed\nRenamed species (Kintecus name = SBML id): p_h_post = h_post; p_n_post = n_post; p_s = s; p_h_pre = h_pre; p_n_pre = n_pre; p_V_post = V_post; p_V_pre = V_pre",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wang1996_Synaptic_Inhibition_Two_Neuron  (BIOMD0000000302, curated BioModels; source file BIOMD0000000302_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dh_post/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_post_o:(0.35000000000000003*exp(-(cp_V_post_o-200)/20-2.9))]==>p_h_post",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dh_post/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_h_post+S[USER;cp_V_post_o:(5/(1+0.06081006262521796*exp((-1*0.1*(cp_V_post_o-200)))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dh_post/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_h_post+S[USER;cp_V_post_o:(0.35000000000000003*exp(-(cp_V_post_o-200)/20-2.9))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_post/dt term 1 (shifted p_V_post_o)",
+     ""
+    ],
+    [
+     "-6.5",
+     "0",
+     "0",
+     "source==>p_V_post_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_post/dt term 2 (shifted p_V_post_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_n_post:((-1*810*cp_n_post^4))]==>p_V_post_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_post/dt term 3 (shifted p_V_post_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_post_o:((-1*0.1*(cp_V_post_o-200)))]==>p_V_post_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_post/dt term 4 (shifted p_V_post_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_s:((-1*7.5*cp_s))]==>p_V_post_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_post/dt term 5 (shifted p_V_post_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_post_o,cp_n_post:((-1*9*cp_n_post^4*(cp_V_post_o-200)))]==>p_V_post_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_post/dt term 6 (shifted p_V_post_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_post_o,cp_s:((-1*0.1*cp_s*(cp_V_post_o-200)))]==>p_V_post_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_post/dt term 7 (shifted p_V_post_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_post_o,cp_h_post:(1925*cp_h_post*(-0.1*(cp_V_post_o-200)-3.5)^3/((-1+0.030197383422318494*exp((-1*0.1*(cp_V_post_o-200))))^3*(4*exp(-(cp_V_post_o-200)/18-3.3333333333333335)-0.1*(cp_V_post_o-200)/(-1+0.030197383422318494*exp((-1*0.1*(cp_V_post_o-200))))-3.5/(-1+0.030197383422318494*exp((-1*0.1*(cp_V_post_o-200)))))^3))]==>p_V_post_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_post/dt term 8 (shifted p_V_post_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_post_o,cp_h_post:((-1*35*cp_h_post*(-0.1*(cp_V_post_o-200)-3.5)^3*(cp_V_post_o-200)/((-1+0.030197383422318494*exp((-1*0.1*(cp_V_post_o-200))))^3*(4*exp(-(cp_V_post_o-200)/18-3.3333333333333335)-0.1*(cp_V_post_o-200)/(-1+0.030197383422318494*exp((-1*0.1*(cp_V_post_o-200))))-3.5/(-1+0.030197383422318494*exp((-1*0.1*(cp_V_post_o-200)))))^3)))]==>p_V_post_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn_post/dt term 1 (consumes p_n_post)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_post_o:((-1*1.7/(-1+0.03337326996032607*exp((-1*0.1*(cp_V_post_o-200))))))]==>p_n_post",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn_post/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_post_o,cp_n_post:(1.7*cp_n_post/(-1+0.03337326996032607*exp((-1*0.1*(cp_V_post_o-200)))))]==>p_n_post",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn_post/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_n_post+S[USER;cp_V_post_o:(0.625*exp(-(cp_V_post_o-200)/80-0.55))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn_post/dt term 4 (consumes p_n_post)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_post_o:((-1*0.05*(cp_V_post_o-200)/(-1+0.03337326996032607*exp((-1*0.1*(cp_V_post_o-200))))))]==>p_n_post",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn_post/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_post_o,cp_n_post:(0.05*cp_n_post*(cp_V_post_o-200)/(-1+0.03337326996032607*exp((-1*0.1*(cp_V_post_o-200)))))]==>p_n_post",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule ds/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_pre_o:(12/(1+exp((-1*(cp_V_pre_o-200)/2))))]==>p_s",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule ds/dt term 2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "p_s==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule ds/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_s+S[USER;cp_V_pre_o:(12/(1+exp((-1*(cp_V_pre_o-200)/2))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_pre/dt term 1 (shifted p_V_pre_o)",
+     ""
+    ],
+    [
+     "-6.5",
+     "0",
+     "0",
+     "source==>p_V_pre_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_pre/dt term 2 (shifted p_V_pre_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_n_pre:((-1*810*cp_n_pre^4))]==>p_V_pre_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_pre/dt term 3 (shifted p_V_pre_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_pre_o:((-1*0.1*(cp_V_pre_o-200)))]==>p_V_pre_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_pre/dt term 4 (shifted p_V_pre_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2:(2*cSW1*cSW2)]==>p_V_pre_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_pre/dt term 5 (shifted p_V_pre_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_pre_o,cp_n_pre:((-1*9*cp_n_pre^4*(cp_V_pre_o-200)))]==>p_V_pre_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_pre/dt term 6 (shifted p_V_pre_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_pre_o,cp_h_pre:(1925*cp_h_pre*(-0.1*(cp_V_pre_o-200)-3.5)^3/((-1+0.030197383422318494*exp((-1*0.1*(cp_V_pre_o-200))))^3*(4*exp(-(cp_V_pre_o-200)/18-3.3333333333333335)-0.1*(cp_V_pre_o-200)/(-1+0.030197383422318494*exp((-1*0.1*(cp_V_pre_o-200))))-3.5/(-1+0.030197383422318494*exp((-1*0.1*(cp_V_pre_o-200)))))^3))]==>p_V_pre_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_pre/dt term 7 (shifted p_V_pre_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_pre_o,cp_h_pre:((-1*35*cp_h_pre*(-0.1*(cp_V_pre_o-200)-3.5)^3*(cp_V_pre_o-200)/((-1+0.030197383422318494*exp((-1*0.1*(cp_V_pre_o-200))))^3*(4*exp(-(cp_V_pre_o-200)/18-3.3333333333333335)-0.1*(cp_V_pre_o-200)/(-1+0.030197383422318494*exp((-1*0.1*(cp_V_pre_o-200))))-3.5/(-1+0.030197383422318494*exp((-1*0.1*(cp_V_pre_o-200)))))^3)))]==>p_V_pre_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dh_pre/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_pre_o:(0.35000000000000003*exp(-(cp_V_pre_o-200)/20-2.9))]==>p_h_pre",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dh_pre/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_h_pre+S[USER;cp_V_pre_o:(5/(1+0.06081006262521796*exp((-1*0.1*(cp_V_pre_o-200)))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dh_pre/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_h_pre+S[USER;cp_V_pre_o:(0.35000000000000003*exp(-(cp_V_pre_o-200)/20-2.9))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn_pre/dt term 1 (consumes p_n_pre)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_pre_o:((-1*1.7/(-1+0.03337326996032607*exp((-1*0.1*(cp_V_pre_o-200))))))]==>p_n_pre",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn_pre/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_pre_o,cp_n_pre:(1.7*cp_n_pre/(-1+0.03337326996032607*exp((-1*0.1*(cp_V_pre_o-200)))))]==>p_n_pre",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn_pre/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_n_pre+S[USER;cp_V_pre_o:(0.625*exp(-(cp_V_pre_o-200)/80-0.55))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn_pre/dt term 4 (consumes p_n_pre)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_pre_o:((-1*0.05*(cp_V_pre_o-200)/(-1+0.03337326996032607*exp((-1*0.1*(cp_V_pre_o-200))))))]==>p_n_pre",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn_pre/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_pre_o,cp_n_pre:(0.05*cp_n_pre*(cp_V_pre_o-200)/(-1+0.03337326996032607*exp((-1*0.1*(cp_V_pre_o-200)))))]==>p_n_pre",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "p_h_post",
+     "0",
+     "0.7803482670176681",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter h_post [h_post]",
+     ""
+    ],
+    [
+     "p_V_post_o",
+     "0",
+     "136",
+     "N",
+     "0",
+     "No",
+     "No",
+     "parameter V_post + 200 (shifted state) [__shifted__V_post]",
+     ""
+    ],
+    [
+     "p_n_post",
+     "0",
+     "0.08919839244259657",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter n_post [n_post]",
+     ""
+    ],
+    [
+     "p_s",
+     "0",
+     "1.5196998658889723e-12",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter s [s]",
+     ""
+    ],
+    [
+     "p_V_pre_o",
+     "0",
+     "136",
+     "N",
+     "0",
+     "No",
+     "No",
+     "parameter V_pre + 200 (shifted state) [__shifted__V_pre]",
+     ""
+    ],
+    [
+     "p_h_pre",
+     "0",
+     "0.7803482670176681",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter h_pre [h_pre]",
+     ""
+    ],
+    [
+     "p_n_pre",
+     "0",
+     "0.08919839244259657",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter n_pre [n_pre]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 10 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time switch at 20 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "p_V_post",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[p_V_post_o;-200*source]",
+     "No",
+     "parameter V_post (= p_V_post_o - 200) [V_post]",
+     ""
+    ],
+    [
+     "p_V_pre",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[p_V_pre_o;-200*source]",
+     "No",
+     "parameter V_pre (= p_V_pre_o - 200) [V_pre]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.2941176474",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.2941176474",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "10",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "20",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,651 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:08:16.025705+00:00",
+ "description": "Abernathy2016 - glioblastoma treatment\nBioModels BIOMD0000000757 (curated). SBML file: Abernathy2016.xml.\nSimulation: 0 to 3500 time units (SED-ML: Abernathy2016.sedml), sampling 3.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.48e-06 of species peak (worst: MHC2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Tumor_Plot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'CSC_Plot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'CTL_Plot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] tumor_killing term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] tumor_killing term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] csc_killing term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] csc_killing term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Abernathy2016 - glioblastoma treatment  (BIOMD0000000757, curated BioModels; source file Abernathy2016.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Tumor==>2Tumor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth term 2/2",
+     ""
+    ],
+    [
+     "1.0000000000000001e-11",
+     "0",
+     "0",
+     "Tumor+Tumor==>Tumor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_transformation term 1/2",
+     ""
+    ],
+    [
+     "6e-10",
+     "0",
+     "0",
+     "CancerStemCell+Tumor==>2Tumor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_transformation term 2/2",
+     ""
+    ],
+    [
+     "6.0000000000000004e-18",
+     "0",
+     "0",
+     "Tumor+Tumor+CancerStemCell==>2CancerStemCell+Tumor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_killing term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor+CytotoxicTcell+MHC1+S[USER;cMHC1,cTumor:(0.08279999999999998/(1*cMHC1*(cTumor+1e-30)+500000000*cMHC1+10000*cTumor+5000000000000))]==>CytotoxicTcell+MHC1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_killing term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor+CytotoxicTcell+MHC1+S[USER;cMHC1,cTGFb,cTumor:(372.00000000000006/(1*cMHC1*cTGFb*(cTumor+1e-30)+500000000*cMHC1*cTGFb+10000*cMHC1*(cTumor+1e-30)+5000000000000*cMHC1+10000*cTGFb*(cTumor+1e-30)+5000000000000*cTGFb+100000000*cTumor+5e16))]==>CytotoxicTcell+MHC1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "csc_growth term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "CancerStemCell==>2CancerStemCell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "csc_growth term 2/2",
+     ""
+    ],
+    [
+     "1e-8",
+     "0",
+     "0",
+     "CancerStemCell+CancerStemCell==>CancerStemCell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "csc_killing term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CancerStemCell+CytotoxicTcell+MHC1+S[USER;cCancerStemCell,cMHC1,cTGFb:(37.20000000000001/(100000000*cCancerStemCell+1*cMHC1*cTGFb*(cCancerStemCell+1e-30)+500000000*cMHC1*cTGFb+10000*cMHC1*(cCancerStemCell+1e-30)+5000000000000*cMHC1+10000*cTGFb*(cCancerStemCell+1e-30)+5000000000000*cTGFb+5e16))]==>CytotoxicTcell+MHC1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "csc_killing term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CancerStemCell+CytotoxicTcell+MHC1+S[USER;cCancerStemCell,cMHC1:(0.00828/(10000*cCancerStemCell+1*cMHC1*(cCancerStemCell+1e-30)+500000000*cMHC1+5000000000000))]==>CytotoxicTcell+MHC1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ctl_death",
+     ""
+    ],
+    [
+     "0.007",
+     "0",
+     "0",
+     "CytotoxicTcell==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tgfb_source",
+     ""
+    ],
+    [
+     "63945",
+     "0",
+     "0",
+     "source==>TGFb",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tgfb_by_tumor",
+     ""
+    ],
+    [
+     "5.75e-6",
+     "0",
+     "0",
+     "Tumor==>TGFb+Tumor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tgfb_by_csc",
+     ""
+    ],
+    [
+     "5.75e-6",
+     "0",
+     "0",
+     "CancerStemCell==>TGFb+CancerStemCell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tgfb_decay",
+     ""
+    ],
+    [
+     "7",
+     "0",
+     "0",
+     "TGFb==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ifny_production",
+     ""
+    ],
+    [
+     "0.000102",
+     "0",
+     "0",
+     "CytotoxicTcell==>IFNy+CytotoxicTcell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ifny_decay",
+     ""
+    ],
+    [
+     "0.102",
+     "0",
+     "0",
+     "IFNy==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mhc1_source",
+     ""
+    ],
+    [
+     "1.44",
+     "0",
+     "0",
+     "source==>MHC1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mhc1_decay",
+     ""
+    ],
+    [
+     "0.0144",
+     "0",
+     "0",
+     "MHC1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mhc1_stimulation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IFNy+S[USER;cIFNy:(2.88/(cIFNy+338000))]==>MHC1+IFNy",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mhc2_production term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IFNy+S[USER;cIFNy,cTGFb:(855608000/(cIFNy*cTGFb+100000*cIFNy+1420*cTGFb+142000000))]==>MHC2+IFNy",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mhc2_production term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IFNy+S[USER;cIFNy:(103.92/(cIFNy+1420))]==>MHC2+IFNy",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mhc2_decay",
+     ""
+    ],
+    [
+     "0.0144",
+     "0",
+     "0",
+     "MHC2==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Tumor",
+     "0",
+     "70",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumor [Tumor]",
+     ""
+    ],
+    [
+     "CancerStemCell",
+     "0",
+     "30",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CancerStemCell [CancerStemCell]",
+     ""
+    ],
+    [
+     "CytotoxicTcell",
+     "0",
+     "250",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CytotoxicTcell [CytotoxicTcell]",
+     ""
+    ],
+    [
+     "TGFb",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TGFb [TGFb]",
+     ""
+    ],
+    [
+     "IFNy",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IFNy [IFNy]",
+     ""
+    ],
+    [
+     "MHC1",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MHC1 [MHC1]",
+     ""
+    ],
+    [
+     "MHC2",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MHC2 [MHC2]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3.5",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3500",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3.5",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

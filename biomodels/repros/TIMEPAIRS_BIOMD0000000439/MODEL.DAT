@@ -1,0 +1,47 @@
+#			Model Description SpreadSheet	
+#			Smith2009 - RGS mediated GTP hydrolysis  (BIOMD0000000439, curated BioModels; source file BIOMD0000000439_url.xml)	
+#			Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)	
+#	T^m	Ea	Reaction	Comments
+#			R1	
+0.0025	0	0	L+R1==>RL	
+#			R2	
+0.005	0	0	Gabg+R1==>RGabg	
+#			R3	
+0.02	0	0	Gabg+RL==>RGabgL	
+#			R4	
+0.005	0	0	L+RGabg==>RGabgL	
+#			R5	
+50	0	0	RGabgL==>GaGTP+Gbg+RL	
+#			R6	
+0.2	0	0	Gabg==>GaGTP+Gbg	
+#			R7	
+500	0	0	GaGTP+RGS==>RGSGaGTP	
+#			R8	
+2.5	0	0	RGSGaGTP==>GaGDPP+RGS	
+#			R9	
+0.005	0	0	GaGTP==>GaGDPP	
+#			R10	
+10	0	0	Effector+GaGTP==>GaGTPEffector	
+#			R11	
+1	0	0	GaGTPEffector==>Effector+inertGaGTP	
+#			R12	
+50	0	0	RGS+inertGaGTP==>RGSinertGaGTP	
+#			R13	
+0.3	0	0	RGSinertGaGTP==>GaGDPP+RGS	
+#			R14	
+0.005	0	0	inertGaGTP==>GaGDPP	
+#			R15	
+1000	0	0	GaGDPP==>GaGDP+P1	
+#			R16	
+1000	0	0	GaGDP+Gbg==>Gabg	
+#			R17	
+10	0	0	P1==>sink	
+#			R18	
+1.5	0	0	GaGTPEffector==>z1+GaGTPEffector	
+#			R19	
+1.5	0	0	z1==>z2	
+#			R20	
+1.5	0	0	z2==>z3	
+#			R21	
+1.5	0	0	z3==>sink	
+END				

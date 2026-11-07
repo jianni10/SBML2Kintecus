@@ -1,0 +1,875 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:46:17.490973+00:00",
+ "description": "Nikolaev2005_AlbuminBilirubinAdsorption\nBioModels BIOMD0000000291 (curated). SBML file: BIOMD0000000291_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000291_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.95e-06 of species peak (worst: x1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'x5' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'x6' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'x7' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dx1/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - x1: zero order, signed\n  [info] rate rule dx1/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - x1: zero order, signed\n  [info] rate rule dx1/dt term 7: rate order differs from the stoichiometry; consumed on separate line(s) - x1: zero order, signed\n  [info] rate rule dx2/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - x2: zero order, signed\n  [info] rate rule dx2/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - x2: zero order, signed\n  [info] rate rule dx2/dt term 12: rate order differs from the stoichiometry; consumed on separate line(s) - x2: zero order, signed\n  [info] rate rule dx3/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - x3: zero order, signed\n  [info] rate rule dx3/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - x3: zero order, signed\n  [info] rate rule dx4/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - x4: zero order, signed\n  [info] rate rule dx4/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - x4: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Nikolaev2005_AlbuminBilirubinAdsorption  (BIOMD0000000291, curated BioModels; source file BIOMD0000000291_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 1",
+     ""
+    ],
+    [
+     "0.039192311742179554",
+     "0",
+     "0",
+     "source==>x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 2",
+     ""
+    ],
+    [
+     "0.563705",
+     "0",
+     "0",
+     "x1+x1==>3x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 3",
+     ""
+    ],
+    [
+     "0.9680500000000001",
+     "0",
+     "0",
+     "x4+x4==>x1+2x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 4 (consumes x1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx2:((-1*0.22339617246250001*cx2))]==>x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 5 (consumes x1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx4:((-1*0.3761274532900001*cx4))]==>x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 6",
+     ""
+    ],
+    [
+     "0.3222968834755",
+     "0",
+     "0",
+     "x1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 7 (consumes x1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx3:((-1*0.084916668365*cx3))]==>x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 8",
+     ""
+    ],
+    [
+     "0.563705",
+     "0",
+     "0",
+     "x1+x2==>2x1+x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 9",
+     ""
+    ],
+    [
+     "1.6114350000000002",
+     "0",
+     "0",
+     "x1+x4==>2x1+x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 10",
+     ""
+    ],
+    [
+     "0.35152500000000003",
+     "0",
+     "0",
+     "x2+x4==>x1+x2+x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 11",
+     ""
+    ],
+    [
+     "0.83555",
+     "0",
+     "0",
+     "x3+x4==>x1+x3+x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 12",
+     ""
+    ],
+    [
+     "0.48402500000000004",
+     "0",
+     "0",
+     "x1+x3==>2x1+x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 13",
+     ""
+    ],
+    [
+     "0.48402500000000004",
+     "0",
+     "0",
+     "x2+x3==>x1+x2+x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 14",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x1+S[USER;cx2,cx3:(0.01685*(-cx2-1*cx3+1.174)^2)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 1",
+     ""
+    ],
+    [
+     "6.644428203064e-8",
+     "0",
+     "0",
+     "source==>x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 2",
+     ""
+    ],
+    [
+     "3.226e-7",
+     "0",
+     "0",
+     "x2+x2==>3x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 3",
+     ""
+    ],
+    [
+     "0.1555542425352",
+     "0",
+     "0",
+     "x4==>x2+x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 4",
+     ""
+    ],
+    [
+     "5.3642889236e-7",
+     "0",
+     "0",
+     "x2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 5 (consumes x2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx1:((-1*3.787324e-7*cx1))]==>x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 6 (consumes x2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx3:((-1*5.659649236e-8*cx3))]==>x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 7",
+     ""
+    ],
+    [
+     "3.226e-7",
+     "0",
+     "0",
+     "x1+x2==>2x2+x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 8",
+     ""
+    ],
+    [
+     "3.226e-7",
+     "0",
+     "0",
+     "x1+x3==>x2+x1+x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 9",
+     ""
+    ],
+    [
+     "3.226e-7",
+     "0",
+     "0",
+     "x2+x3==>2x2+x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x1+S[USER;cx2,cx3:(0.01685*(-cx2-1*cx3+1.174)^2)]==>x2+x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 11",
+     ""
+    ],
+    [
+     "0.1324993548",
+     "0",
+     "0",
+     "x2+x4==>x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 12 (consumes x2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx3,cx4:((-1*0.1324993548*cx3*cx4))]==>x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx3/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx2,cx3:(0.0025333848265*(-cx2-1*cx3+1.174))]==>x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx3/dt term 2",
+     ""
+    ],
+    [
+     "0.00301",
+     "0",
+     "0",
+     "x3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx3/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x1+S[USER;cx2,cx3:(0.01685*(-cx2-1*cx3+1.174)^2)]==>x3+x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx3/dt term 4 (consumes x3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx1,cx2,cx3:((-1*0.005489*cx1*(-cx2-1*cx3+1.174)))]==>x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx3/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x3+S[USER;cx2,cx3:(0.005489*(-cx2-1*cx3+1.174))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx3/dt term 6 (consumes x3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx2,cx3,cx4:((-1*0.005489*cx4*(-cx2-1*cx3+1.174)))]==>x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx4/dt term 1",
+     ""
+    ],
+    [
+     "0.013978947648",
+     "0",
+     "0",
+     "x1==>x4+x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx4/dt term 2",
+     ""
+    ],
+    [
+     "0.15558156",
+     "0",
+     "0",
+     "x4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx4/dt term 3 (consumes x4)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx1:((-1*0.07968*cx1^2))]==>x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx4/dt term 4",
+     ""
+    ],
+    [
+     "0.1325",
+     "0",
+     "0",
+     "x2+x4==>2x4+x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx4/dt term 5",
+     ""
+    ],
+    [
+     "0.1325",
+     "0",
+     "0",
+     "x3+x4==>2x4+x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx4/dt term 6 (consumes x4)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx1,cx2:((-1*0.07968*cx1*cx2))]==>x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx4/dt term 7",
+     ""
+    ],
+    [
+     "0.15936",
+     "0",
+     "0",
+     "x4+x1==>x1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AlB [x1]",
+     ""
+    ],
+    [
+     "x2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "BC [x2]",
+     ""
+    ],
+    [
+     "x3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AlCn [x3]",
+     ""
+    ],
+    [
+     "x4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AlB2 [x4]",
+     ""
+    ],
+    [
+     "A0",
+     "0",
+     "0.4615385",
+     "Y",
+     "0",
+     "No",
+     "0.4615385",
+     "A0 [A0]",
+     ""
+    ],
+    [
+     "B0",
+     "0",
+     "0.1754386",
+     "Y",
+     "0",
+     "No",
+     "0.1754386",
+     "B0 [B0]",
+     ""
+    ],
+    [
+     "C0",
+     "0",
+     "1.174",
+     "Y",
+     "0",
+     "No",
+     "1.174",
+     "C0 [C0]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

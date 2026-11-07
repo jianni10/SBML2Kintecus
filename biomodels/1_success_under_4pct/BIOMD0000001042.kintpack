@@ -1,0 +1,640 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:16:13.274970+00:00",
+ "description": "Makhlouf2020 - No treatment model of the role of CD4 T cells in tumor-immune interactions\nBioModels BIOMD0000001042 (curated). SBML file: Makhlouf2020.xml.\nSimulation: 0 to 100 time units (SED-ML: Makhlouf2020 - Fig1(a).sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.45e-06 of species peak (worst: CD4_T_cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumour_death term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Tumour_death term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Makhlouf2020 - No treatment model of the role of CD4 T cells in tumor-immune interactions  (BIOMD0000001042, curated BioModels; source file Makhlouf2020.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumour_growth term 1/2",
+     ""
+    ],
+    [
+     "0.431",
+     "0",
+     "0",
+     "Tumor_cells==>2Tumor_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumour_growth term 2/2",
+     ""
+    ],
+    [
+     "4.3962e-10",
+     "0",
+     "0",
+     "Tumor_cells+Tumor_cells==>Tumor_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumour_death term 1/3",
+     ""
+    ],
+    [
+     "6.41e-11",
+     "0",
+     "0",
+     "Tumor_cells+NK_cells==>NK_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumour_death term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_cells+S[USER;cCD8_T_cells,cTumor_cells:(2.34*(cCD8_T_cells/(cTumor_cells+1e-10))^2.09/(1*(cCD8_T_cells/(cTumor_cells+1e-10))^2.09+0.0839))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumour_death term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_cells+IL_2+S[USER;cTumor_cells:(0.2/(1*cTumor_cells+100000))]==>IL_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_cell_production term 1/2",
+     ""
+    ],
+    [
+     "2.08e-7",
+     "0",
+     "0",
+     "Circulating_lymphocytes==>NK_cells+Circulating_lymphocytes",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_cell_production term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NK_cells+S[USER;cTumor_cells:(0.0125*cTumor_cells^2/(cTumor_cells^2+20200000))]==>2NK_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_cell_depletion term 1/2",
+     ""
+    ],
+    [
+     "0.0412",
+     "0",
+     "0",
+     "NK_cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_cell_depletion term 2/2",
+     ""
+    ],
+    [
+     "3.42e-6",
+     "0",
+     "0",
+     "NK_cells+Tumor_cells==>Tumor_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_cell_production term 1/4",
+     ""
+    ],
+    [
+     "1.1e-7",
+     "0",
+     "0",
+     "NK_cells+Tumor_cells==>CD8_T_cells+NK_cells+Tumor_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_cell_production term 2/4",
+     ""
+    ],
+    [
+     "6.5e-11",
+     "0",
+     "0",
+     "Circulating_lymphocytes+Tumor_cells==>CD8_T_cells+Circulating_lymphocytes+Tumor_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_cell_production term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD8_T_cells+IL_2+S[USER;cIL_2:(0.125/(cIL_2+20000000))]==>2CD8_T_cells+IL_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_cell_production term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD8_T_cells+S[USER;cCD8_T_cells,cTumor_cells:(0.13634243999999998*cTumor_cells^2*((cCD8_T_cells/(cTumor_cells+1e-10))^2.09/((cCD8_T_cells/(cTumor_cells+1e-10))^2.09+0.0839))^2/(5.475599999999999*cTumor_cells^2*((cCD8_T_cells/(cTumor_cells+1e-10))^2.09/((cCD8_T_cells/(cTumor_cells+1e-10))^2.09+0.0839))^2+36600000))]==>2CD8_T_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_cell_depletion term 1/3",
+     ""
+    ],
+    [
+     "0.204",
+     "0",
+     "0",
+     "CD8_T_cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_cell_depletion term 2/3",
+     ""
+    ],
+    [
+     "1.42e-6",
+     "0",
+     "0",
+     "CD8_T_cells+Tumor_cells==>Tumor_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_cell_depletion term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD8_T_cells+NK_cells+S[USER;cCD8_T_cells:(3e-10*cCD8_T_cells)]==>NK_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4_T_cell_production",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IL_2+Tumor_cells+S[USER;cTumor_cells:(0.835/(cTumor_cells+1000))]==>CD4_T_cells+IL_2+Tumor_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4_T_cell_depletion term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "CD4_T_cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4_T_cell_depletion term 2/2",
+     ""
+    ],
+    [
+     "1e-7",
+     "0",
+     "0",
+     "CD4_T_cells+Tumor_cells==>Tumor_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Circulating_lymphocyte_production",
+     ""
+    ],
+    [
+     "750000000",
+     "0",
+     "0",
+     "source==>Circulating_lymphocytes",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Circulating_lymphocyte_depletion",
+     ""
+    ],
+    [
+     "0.012",
+     "0",
+     "0",
+     "Circulating_lymphocytes==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL_2_production",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD4_T_cells+Tumor_cells+S[USER;cTumor_cells:(5.4/(cTumor_cells+1000))]==>IL_2+CD4_T_cells+Tumor_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL_2_depletion",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "IL_2==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Tumor_cells",
+     "0",
+     "10000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumor_cells [Tumor_cells]",
+     ""
+    ],
+    [
+     "NK_cells",
+     "0",
+     "1000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NK_cells [NK_cells]",
+     ""
+    ],
+    [
+     "CD8_T_cells",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CD8_T_cells [CD8_T_cells]",
+     ""
+    ],
+    [
+     "CD4_T_cells",
+     "0",
+     "1000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CD4_T_cells [CD4_T_cells]",
+     ""
+    ],
+    [
+     "Circulating_lymphocytes",
+     "0",
+     "60000000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Circulating_lymphocytes [Circulating_lymphocytes]",
+     ""
+    ],
+    [
+     "IL_2",
+     "0",
+     "100000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IL-2 [IL_2]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

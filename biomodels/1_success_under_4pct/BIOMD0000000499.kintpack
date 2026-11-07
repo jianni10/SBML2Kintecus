@@ -1,0 +1,1358 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:52:46.341919+00:00",
+ "description": "Vizan2013 - TGF pathway long term signaling\nBioModels BIOMD0000000499 (curated). SBML file: BIOMD0000000499_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000499_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.18e-06 of species peak (worst: species_6)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'species_9' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_10' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_11' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_12' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_14' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_15' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_16' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_18' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_20' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_21' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_23' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_25' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dspecies_2/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - species_2: zero order, signed\n  [info] rate rule dspecies_2/dt term 8: rate order differs from the stoichiometry; consumed on separate line(s) - species_2: zero order, signed\n  [info] rate rule dspecies_2/dt term 17: rate order differs from the stoichiometry; consumed on separate line(s) - species_2: zero order, signed\n  [info] rate rule dspecies_2/dt term 18: rate order differs from the stoichiometry; consumed on separate line(s) - species_2: zero order, signed\n  [info] rate rule dspecies_2/dt term 19: rate order differs from the stoichiometry; consumed on separate line(s) - species_2: zero order, signed\n  [info] rate rule dspecies_2/dt term 20: rate order differs from the stoichiometry; consumed on separate line(s) - species_2: zero order, signed\n  [info] rate rule dspecies_2/dt term 21: rate order differs from the stoichiometry; consumed on separate line(s) - species_2: zero order, signed\n  [info] rate rule dspecies_3/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - species_3: zero order, signed\n  [info] rate rule dspecies_3/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - species_3: zero order, signed\n  [info] rate rule dspecies_6/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - species_6: zero order, signed\n  [info] rate rule dspecies_8/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - species_8: zero order, signed\n  [info] rate rule dspecies_8/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - species_8: zero order, signed\n  [info] rate rule dspecies_17/dt term 7: rate order differs from the stoichiometry; consumed on separate line(s) - species_17: zero order, signed\n  [info] rate rule dspecies_19/dt term 2: rate order differs from the stoichiometry; consumed on separate line(s) - species_19: zero order, signed\n  [info] rate rule dspecies_19/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - species_19: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vizan2013 - TGF pathway long term signaling  (BIOMD0000000499, curated BioModels; source file BIOMD0000000499_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_1/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_13,cspecies_17,cspecies_8:(243.57529910402917*(-2*cspecies_13-cspecies_17+cspecies_8)^2)]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_1/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_1,cspecies_13,cspecies_17,cspecies_2,cspecies_3,cspecies_8:(107.30189387842695*(-6.54*cspecies_1+4.54*cspecies_13+2.27*cspecies_17-3.27*cspecies_2+3.27*cspecies_3-2.27*cspecies_8)^2)]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_1/dt term 3",
+     ""
+    ],
+    [
+     "60",
+     "0",
+     "0",
+     "species_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 1",
+     ""
+    ],
+    [
+     "1147.3684210526314",
+     "0",
+     "0",
+     "species_3==>species_2+species_3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 2",
+     ""
+    ],
+    [
+     "1147.3684210526314",
+     "0",
+     "0",
+     "species_2+species_2==>3species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 3",
+     ""
+    ],
+    [
+     "796.4912280701753",
+     "0",
+     "0",
+     "species_17==>species_2+species_17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 4",
+     ""
+    ],
+    [
+     "796.4912280701753",
+     "0",
+     "0",
+     "species_17+species_17==>species_2+2species_17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 5",
+     ""
+    ],
+    [
+     "1592.9824561403507",
+     "0",
+     "0",
+     "species_13==>species_2+species_13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 6 (consumes species_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_1:((-1*2294.736842105263*cspecies_1))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 7",
+     ""
+    ],
+    [
+     "1207.3684210526314",
+     "0",
+     "0",
+     "species_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 8 (consumes species_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_8:((-1*796.4912280701753*cspecies_8))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 9",
+     ""
+    ],
+    [
+     "2294.736842105263",
+     "0",
+     "0",
+     "species_1+species_2==>2species_2+species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 10",
+     ""
+    ],
+    [
+     "796.4912280701753",
+     "0",
+     "0",
+     "species_17+species_3==>species_2+species_17+species_3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 11",
+     ""
+    ],
+    [
+     "796.4912280701753",
+     "0",
+     "0",
+     "species_19+species_2==>2species_2+species_19",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 12",
+     ""
+    ],
+    [
+     "796.4912280701753",
+     "0",
+     "0",
+     "species_19+species_8==>species_2+species_19+species_8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 13",
+     ""
+    ],
+    [
+     "796.4912280701753",
+     "0",
+     "0",
+     "species_2+species_8==>2species_2+species_8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 14",
+     ""
+    ],
+    [
+     "1592.9824561403507",
+     "0",
+     "0",
+     "species_1+species_19==>species_2+species_1+species_19",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 15",
+     ""
+    ],
+    [
+     "1592.9824561403507",
+     "0",
+     "0",
+     "species_13+species_17==>species_2+species_13+species_17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 16",
+     ""
+    ],
+    [
+     "1147.3684210526314",
+     "0",
+     "0",
+     "species_2+species_3==>species_3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 17 (consumes species_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_17,cspecies_19:((-1*796.4912280701753*cspecies_17*cspecies_19))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 18 (consumes species_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_17,cspecies_8:((-1*796.4912280701753*cspecies_17*cspecies_8))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 19 (consumes species_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_19,cspecies_3:((-1*796.4912280701753*cspecies_19*cspecies_3))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 20 (consumes species_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_1,cspecies_17:((-1*1592.9824561403507*cspecies_1*cspecies_17))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 21 (consumes species_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_13,cspecies_19:((-1*1592.9824561403507*cspecies_13*cspecies_19))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 22",
+     ""
+    ],
+    [
+     "1592.9824561403507",
+     "0",
+     "0",
+     "species_2+species_13==>species_13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_2/dt term 23",
+     ""
+    ],
+    [
+     "1592.9824561403507",
+     "0",
+     "0",
+     "species_2+species_17==>species_17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_3/dt term 1",
+     ""
+    ],
+    [
+     "24",
+     "0",
+     "0",
+     "species_2==>species_3+species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_3/dt term 2",
+     ""
+    ],
+    [
+     "48",
+     "0",
+     "0",
+     "species_1==>species_3+species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_3/dt term 3",
+     ""
+    ],
+    [
+     "16.660550458715598",
+     "0",
+     "0",
+     "species_8==>species_3+species_8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_3/dt term 4",
+     ""
+    ],
+    [
+     "24",
+     "0",
+     "0",
+     "species_3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_3/dt term 5 (consumes species_3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_17:((-1*16.660550458715598*cspecies_17))]==>species_3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_3/dt term 6 (consumes species_3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_13:((-1*33.321100917431195*cspecies_13))]==>species_3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_3/dt term 7",
+     ""
+    ],
+    [
+     "14.835873088685016",
+     "0",
+     "0",
+     "species_26+species_6==>species_3+species_26+species_6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_4/dt term 1",
+     ""
+    ],
+    [
+     "0.11199999999999999",
+     "0",
+     "0",
+     "species_4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_4/dt term 2",
+     ""
+    ],
+    [
+     "13.292307692307693",
+     "0",
+     "0",
+     "species_4+species_7==>species_7",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_5/dt term 1",
+     ""
+    ],
+    [
+     "0.304",
+     "0",
+     "0",
+     "source==>species_5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_5/dt term 2",
+     ""
+    ],
+    [
+     "0.3456",
+     "0",
+     "0",
+     "species_5==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_6/dt term 1",
+     ""
+    ],
+    [
+     "65.4",
+     "0",
+     "0",
+     "source==>species_6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_6/dt term 2",
+     ""
+    ],
+    [
+     "54.76",
+     "0",
+     "0",
+     "species_6==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_6/dt term 3 (consumes species_6)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_3:((-1*65.4*cspecies_3))]==>species_6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_6/dt term 4",
+     ""
+    ],
+    [
+     "21.3715",
+     "0",
+     "0",
+     "species_6+species_26==>species_26",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_7/dt term 1",
+     ""
+    ],
+    [
+     "0.0256",
+     "0",
+     "0",
+     "species_5==>species_7+species_5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_7/dt term 2",
+     ""
+    ],
+    [
+     "0.18707692307692309",
+     "0",
+     "0",
+     "species_7==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_7/dt term 3",
+     ""
+    ],
+    [
+     "13.292307692307693",
+     "0",
+     "0",
+     "species_7+species_4==>species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_8/dt term 1",
+     ""
+    ],
+    [
+     "1.4080000000000013",
+     "0",
+     "0",
+     "species_17==>species_8+species_17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_8/dt term 2",
+     ""
+    ],
+    [
+     "2.8160000000000025",
+     "0",
+     "0",
+     "species_13==>species_8+species_13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_8/dt term 3",
+     ""
+    ],
+    [
+     "65.4",
+     "0",
+     "0",
+     "species_3==>species_8+species_3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_8/dt term 4",
+     ""
+    ],
+    [
+     "54.76",
+     "0",
+     "0",
+     "species_8==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_8/dt term 5 (consumes species_8)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_2:((-1*65.4*cspecies_2))]==>species_8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_8/dt term 6 (consumes species_8)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_1:((-1*130.8*cspecies_1))]==>species_8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_8/dt term 7",
+     ""
+    ],
+    [
+     "21.3715",
+     "0",
+     "0",
+     "species_26+species_6==>species_8+species_26+species_6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_13/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_13,cspecies_17,cspecies_8:(350.8771929824561*(-2*cspecies_13-cspecies_17+cspecies_8)^2)]==>species_13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_13/dt term 2",
+     ""
+    ],
+    [
+     "113.352",
+     "0",
+     "0",
+     "species_13==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_17/dt term 1",
+     ""
+    ],
+    [
+     "350.8771929824561",
+     "0",
+     "0",
+     "species_17+species_17==>3species_17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_17/dt term 2",
+     ""
+    ],
+    [
+     "113.352",
+     "0",
+     "0",
+     "species_17==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_17/dt term 3",
+     ""
+    ],
+    [
+     "350.8771929824561",
+     "0",
+     "0",
+     "species_19+species_8==>species_17+species_19+species_8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_17/dt term 4",
+     ""
+    ],
+    [
+     "701.7543859649122",
+     "0",
+     "0",
+     "species_13+species_17==>2species_17+species_13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_17/dt term 5",
+     ""
+    ],
+    [
+     "350.8771929824561",
+     "0",
+     "0",
+     "species_17+species_19==>species_19",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_17/dt term 6",
+     ""
+    ],
+    [
+     "350.8771929824561",
+     "0",
+     "0",
+     "species_17+species_8==>species_8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_17/dt term 7 (consumes species_17)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_13,cspecies_19:((-1*701.7543859649122*cspecies_13*cspecies_19))]==>species_17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_19/dt term 1",
+     ""
+    ],
+    [
+     "30.6072",
+     "0",
+     "0",
+     "source==>species_19",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_19/dt term 2 (consumes species_19)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_17:((-1*22.7448*cspecies_17))]==>species_19",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_19/dt term 3",
+     ""
+    ],
+    [
+     "30.6072",
+     "0",
+     "0",
+     "species_19==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_19/dt term 4 (consumes species_19)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_2:((-1*30.6072*cspecies_2))]==>species_19",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_24/dt term 1",
+     ""
+    ],
+    [
+     "9.132256",
+     "0",
+     "0",
+     "species_24==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_24/dt term 2",
+     ""
+    ],
+    [
+     "13.292307692307693",
+     "0",
+     "0",
+     "species_4+species_7==>species_24+species_4+species_7",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_26/dt term 1",
+     ""
+    ],
+    [
+     "7.852256",
+     "0",
+     "0",
+     "species_24==>species_26+species_24",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dspecies_26/dt term 2",
+     ""
+    ],
+    [
+     "1.28",
+     "0",
+     "0",
+     "species_26==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "species_1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S22 [species_1]",
+     ""
+    ],
+    [
+     "species_2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S24 [species_2]",
+     ""
+    ],
+    [
+     "species_3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pS2tot [species_3]",
+     ""
+    ],
+    [
+     "species_4",
+     "0",
+     "4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TGF [species_4]",
+     ""
+    ],
+    [
+     "species_5",
+     "0",
+     "0.8796296296296295",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R [species_5]",
+     ""
+    ],
+    [
+     "species_6",
+     "0",
+     "1.1943024105186268",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S2c [species_6]",
+     ""
+    ],
+    [
+     "species_7",
+     "0",
+     "0.12037037037037036",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rcom [species_7]",
+     ""
+    ],
+    [
+     "species_8",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pS2c [species_8]",
+     ""
+    ],
+    [
+     "species_13",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S22c [species_13]",
+     ""
+    ],
+    [
+     "species_17",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S24c [species_17]",
+     ""
+    ],
+    [
+     "species_19",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S4c [species_19]",
+     ""
+    ],
+    [
+     "species_22",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "SBI [species_22]",
+     ""
+    ],
+    [
+     "species_24",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RT [species_24]",
+     ""
+    ],
+    [
+     "species_26",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ract [species_26]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

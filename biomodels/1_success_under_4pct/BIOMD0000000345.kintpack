@@ -1,0 +1,1168 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:48:25.670451+00:00",
+ "description": "Koschorreck2008_InsulinClearance\nBioModels BIOMD0000000345 (curated). SBML file: BIOMD0000000345_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000345_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 10.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.63e-06 of species peak (worst: RPen)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'I2RPen' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dI2Ren/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - I2Ren: zero order, signed\n  [info] rate rule dI2Ren/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - I2Ren: zero order, signed\n  [info] rate rule dI2Ren/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - I2Ren: zero order, signed\n  [info] rate rule dI2Ren/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - I2Ren: zero order, signed\n  [info] rate rule dI2Ren/dt term 7: rate order differs from the stoichiometry; consumed on separate line(s) - I2Ren: zero order, signed\n  [info] rate rule dI2Ren/dt term 8: rate order differs from the stoichiometry; consumed on separate line(s) - I2Ren: zero order, signed\n  [info] rate rule dI2Ren/dt term 9: rate order differs from the stoichiometry; consumed on separate line(s) - I2Ren: zero order, signed\n  [info] rate rule dI2Ren/dt term 10: rate order differs from the stoichiometry; consumed on separate line(s) - I2Ren: zero order, signed\n  [info] rate rule dI2Ren/dt term 11: rate order differs from the stoichiometry; consumed on separate line(s) - I2Ren: zero order, signed\n  [info] rate rule dI2Ren/dt term 12: rate order differs from the stoichiometry; consumed on separate line(s) - I2Ren: zero order, signed\n  [info] rate rule dIRPen/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - IRPen: zero order, signed\n  [info] rate rule dIRPen/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - IRPen: zero order, signed\n  [info] rate rule dIRPen/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - IRPen: zero order, signed\n  [info] rate rule dIRPen/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - IRPen: zero order, signed\n  [info] rate rule dIRPen/dt term 7: rate order differs from the stoichiometry; consumed on separate line(s) - IRPen: zero order, signed\n  [info] rate rule dIRPen/dt term 8: rate order differs from the stoichiometry; consumed on separate line(s) - IRPen: zero order, signed\n  [info] rate rule dIRPen/dt term 9: rate order differs from the stoichiometry; consumed on separate line(s) - IRPen: zero order, signed\n  [info] rate rule dIRPen/dt term 10: rate order differs from the stoichiometry; consumed on separate line(s) - IRPen: zero order, signed\n  [info] rate rule dIRPen/dt term 12: rate order differs from the stoichiometry; consumed on separate line(s) - IRPen: zero order, signed\nRenamed species (Kintecus name = SBML id): R1 = R",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Koschorreck2008_InsulinClearance  (BIOMD0000000345, curated BioModels; source file BIOMD0000000345_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 1",
+     ""
+    ],
+    [
+     "0.001533",
+     "0",
+     "0",
+     "Ren==>R1+Ren",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 2",
+     ""
+    ],
+    [
+     "0.00385",
+     "0",
+     "0",
+     "Rp==>R1+Rp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 3",
+     ""
+    ],
+    [
+     "0.0004",
+     "0",
+     "0",
+     "IR==>R1+IR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 4",
+     ""
+    ],
+    [
+     "0.1002",
+     "0",
+     "0",
+     "R1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIR/dt term 1",
+     ""
+    ],
+    [
+     "0.00385",
+     "0",
+     "0",
+     "IRp==>IR+IRp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIR/dt term 2",
+     ""
+    ],
+    [
+     "0.04",
+     "0",
+     "0",
+     "I2R==>IR+I2R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIR/dt term 3",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "R1==>IR+R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIR/dt term 4",
+     ""
+    ],
+    [
+     "0.1237",
+     "0",
+     "0",
+     "IR==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2R/dt term 1",
+     ""
+    ],
+    [
+     "0.00385",
+     "0",
+     "0",
+     "I2Rp==>I2R+I2Rp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2R/dt term 2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "IR==>I2R+IR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2R/dt term 3",
+     ""
+    ],
+    [
+     "0.0633",
+     "0",
+     "0",
+     "I2R==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRp/dt term 1",
+     ""
+    ],
+    [
+     "0.001533",
+     "0",
+     "0",
+     "RPen==>Rp+RPen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRp/dt term 2",
+     ""
+    ],
+    [
+     "0.0004",
+     "0",
+     "0",
+     "IRp==>Rp+IRp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRp/dt term 3",
+     ""
+    ],
+    [
+     "0.1044",
+     "0",
+     "0",
+     "Rp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRp/dt term 1",
+     ""
+    ],
+    [
+     "0.04",
+     "0",
+     "0",
+     "I2Rp==>IRp+I2Rp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRp/dt term 2",
+     ""
+    ],
+    [
+     "0.0231",
+     "0",
+     "0",
+     "IR==>IRp+IR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRp/dt term 3",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Rp==>IRp+Rp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRp/dt term 4",
+     ""
+    ],
+    [
+     "0.1048",
+     "0",
+     "0",
+     "IRp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Rp/dt term 1",
+     ""
+    ],
+    [
+     "0.0231",
+     "0",
+     "0",
+     "I2R==>I2Rp+I2R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Rp/dt term 2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "IRp==>I2Rp+IRp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Rp/dt term 3",
+     ""
+    ],
+    [
+     "0.0444",
+     "0",
+     "0",
+     "I2Rp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRen/dt term 1",
+     ""
+    ],
+    [
+     "0.001925",
+     "0",
+     "0",
+     "IRen==>Ren+IRen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRen/dt term 2",
+     ""
+    ],
+    [
+     "0.0002",
+     "0",
+     "0",
+     "R1==>Ren+R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRen/dt term 3",
+     ""
+    ],
+    [
+     "0.00722",
+     "0",
+     "0",
+     "RPen==>Ren+RPen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRen/dt term 4",
+     ""
+    ],
+    [
+     "0.001533",
+     "0",
+     "0",
+     "Ren==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRen/dt term 1",
+     ""
+    ],
+    [
+     "0.00385",
+     "0",
+     "0",
+     "I2Ren==>IRen+I2Ren",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRen/dt term 2",
+     ""
+    ],
+    [
+     "0.0002",
+     "0",
+     "0",
+     "IR==>IRen+IR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRen/dt term 3",
+     ""
+    ],
+    [
+     "0.00722",
+     "0",
+     "0",
+     "IRPen==>IRen+IRPen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRen/dt term 4",
+     ""
+    ],
+    [
+     "0.025025",
+     "0",
+     "0",
+     "IRen==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Ren/dt term 1",
+     ""
+    ],
+    [
+     "0.2888",
+     "0",
+     "0",
+     "source==>I2Ren",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Ren/dt term 2",
+     ""
+    ],
+    [
+     "0.03417",
+     "0",
+     "0",
+     "I2Ren==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Ren/dt term 3 (consumes I2Ren)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cI2Rp:((-1*0.00722*cI2Rp))]==>I2Ren",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Ren/dt term 4 (consumes I2Ren)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cIR:((-1*0.00722*cIR))]==>I2Ren",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Ren/dt term 5 (consumes I2Ren)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cIRPen:((-1*0.00722*cIRPen))]==>I2Ren",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Ren/dt term 6 (consumes I2Ren)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cIRen:((-1*0.00722*cIRen))]==>I2Ren",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Ren/dt term 7 (consumes I2Ren)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cIRp:((-1*0.00722*cIRp))]==>I2Ren",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Ren/dt term 8 (consumes I2Ren)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cR1:((-1*0.00722*cR1))]==>I2Ren",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Ren/dt term 9 (consumes I2Ren)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cRPen:((-1*0.00722*cRPen))]==>I2Ren",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Ren/dt term 10 (consumes I2Ren)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cRen:((-1*0.00722*cRen))]==>I2Ren",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Ren/dt term 11 (consumes I2Ren)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cRp:((-1*0.00722*cRp))]==>I2Ren",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI2Ren/dt term 12 (consumes I2Ren)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cI2R:((-1*0.00702*cI2R))]==>I2Ren",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRPen/dt term 1",
+     ""
+    ],
+    [
+     "0.001925",
+     "0",
+     "0",
+     "IRPen==>RPen+IRPen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRPen/dt term 2",
+     ""
+    ],
+    [
+     "0.00055",
+     "0",
+     "0",
+     "Rp==>RPen+Rp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRPen/dt term 3",
+     ""
+    ],
+    [
+     "0.008753",
+     "0",
+     "0",
+     "RPen==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRPen/dt term 1",
+     ""
+    ],
+    [
+     "0.154",
+     "0",
+     "0",
+     "source==>IRPen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRPen/dt term 2",
+     ""
+    ],
+    [
+     "0.01925",
+     "0",
+     "0",
+     "IRen==>IRPen+IRen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRPen/dt term 3 (consumes IRPen)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cI2R:((-1*0.00385*cI2R))]==>IRPen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRPen/dt term 4 (consumes IRPen)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cI2Ren:((-1*0.00385*cI2Ren))]==>IRPen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRPen/dt term 5 (consumes IRPen)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cI2Rp:((-1*0.00385*cI2Rp))]==>IRPen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRPen/dt term 6 (consumes IRPen)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cIR:((-1*0.00385*cIR))]==>IRPen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRPen/dt term 7 (consumes IRPen)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cR1:((-1*0.00385*cR1))]==>IRPen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRPen/dt term 8 (consumes IRPen)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cRPen:((-1*0.00385*cRPen))]==>IRPen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRPen/dt term 9 (consumes IRPen)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cRen:((-1*0.00385*cRen))]==>IRPen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRPen/dt term 10 (consumes IRPen)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cRp:((-1*0.00385*cRp))]==>IRPen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRPen/dt term 11",
+     ""
+    ],
+    [
+     "0.012995",
+     "0",
+     "0",
+     "IRPen==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRPen/dt term 12 (consumes IRPen)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cIRp:((-1*0.0033*cIRp))]==>IRPen",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "R1",
+     "0",
+     "35.3837",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R [R]",
+     ""
+    ],
+    [
+     "ins",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "100",
+     "ins [ins]",
+     ""
+    ],
+    [
+     "IR",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IR [IR]",
+     ""
+    ],
+    [
+     "I2R",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I2R [I2R]",
+     ""
+    ],
+    [
+     "Rp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rp [Rp]",
+     ""
+    ],
+    [
+     "IRp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRp [IRp]",
+     ""
+    ],
+    [
+     "I2Rp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I2Rp [I2Rp]",
+     ""
+    ],
+    [
+     "Ren",
+     "0",
+     "4.6163",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ren [Ren]",
+     ""
+    ],
+    [
+     "IRen",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRen [IRen]",
+     ""
+    ],
+    [
+     "I2Ren",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I2Ren [I2Ren]",
+     ""
+    ],
+    [
+     "RPen",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RPen [RPen]",
+     ""
+    ],
+    [
+     "IRPen",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRPen [IRPen]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

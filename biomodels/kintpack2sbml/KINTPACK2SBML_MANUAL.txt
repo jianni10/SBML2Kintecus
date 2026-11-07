@@ -1,0 +1,160 @@
+KINTPACK2SBML - export a Kintecus model to SBML (and to a lossless Kintecus XML file)
+====================================================================================
+
+kintpack2sbml converts a Kintecus model into SBML Level 3 Version 2, the standard exchange format used by
+COPASI, libRoadRunner/Tellurium, BioModels and most other simulators. It also writes a SED-ML file with the
+run length and output spacing, and can write a lossless XML copy of everything in the Kintecus model.
+Anything SBML cannot represent is exported as far as possible and listed, with its original text, in three
+places: an XML comment block at the top of the SBML file, the SBML model notes, and a text report.
+
+Requirements: Python 3.8 or newer, plus   pip install python-libsbml   (only needed for SBML output).
+Files:        kintpack2sbml.py (the program) and kintpack2sbml.bat (finds Python and runs it).
+
+
+USAGE
+-----
+    kintpack2sbml.bat INPUT [options]
+    python kintpack2sbml.py INPUT [options]
+
+INPUT is any of:
+    a .kintpack file                         BIOMD0000000010.kintpack
+    a folder with MODEL.DAT, SPECIES.DAT, PARM.DAT (and any THERM.DAT, TRANSPORT.DAT, profile files,
+    FITDATA*.TXT)                           C:\Kintecus\mymodel
+    the MODEL.DAT of such a folder           C:\Kintecus\mymodel\MODEL.DAT
+
+
+OUTPUT
+------
+Written next to the input (or into -o DIR), named after the input (or --name NAME):
+
+    NAME.xml                        the SBML model (Level 3 Version 2)
+    NAME.sedml                      SED-ML time course: 0 to the PARM.DAT run length, at the sampling interval,
+                                    reporting the species marked Display = Y (skip with --no-sedml)
+    NAME_kintecus_unsupported.txt   the report: what was converted how, and everything that is NOT in the SBML,
+                                    with the original lines and the full content of unexported sheets/files
+                                    (skip with --no-report)
+    NAME.kintecus.xml               with --format xml or both: a lossless XML copy of the whole Kintecus model -
+                                    every sheet (with its column headers), every file, the description and the
+                                    pack settings, cell by cell
+
+
+OPTIONS
+-------
+  -o DIR            output folder
+  --name NAME       base name of the output files
+  --format FMT      sbml (default), xml (only the lossless Kintecus XML; needs no libSBML), or both
+  --no-sedml        do not write NAME.sedml
+  --no-report       do not write NAME_kintecus_unsupported.txt
+  --max-events N    largest number of SBML events made from Constant File profiles [5000]
+  -i                international inputs: numbers written with a decimal comma (4,34) are read as 4.34
+                    (also automatic when the pack's own international setting is on)
+  --validate        run the libSBML consistency check on the written SBML and print the result
+                    (exit code 1 if it finds errors)
+  -h, --help        the built-in help
+
+Exit codes: 0 = written (and valid, with --validate), 1 = --validate found errors, 2 = usage error.
+
+
+HOW KINTECUS MAPS ONTO SBML
+---------------------------
+  Kintecus                                SBML
+  --------------------------------------  ---------------------------------------------------------------------
+  concentrations (PARM conc. units)       one compartment "cell" of volume 1; species carry concentrations;
+                                          model units mole/litre, mole/cm3 or item/cm3 from PARM.DAT; time second
+  SPECIES.DAT species                     species (id = the name, made SBML-safe; name = the Kintecus name);
+                                          the original SPECIES.DAT line and comment are in the species notes
+  initial concentration                   initialConcentration
+  column 7 = a number                     boundary + constant species held at that number
+  column 7 = Constant File profile        boundary species (plain profile) or free species (-SET / -ADD) whose
+                                          values are changed by SBML events at the profile times; a positive
+                                          spacing (repeating profile) is unrolled up to the run length
+  residence time + external conc. (CSTR)  two reactions per species: inflow ext/tau and outflow [X]/tau
+  MODEL.DAT line  A  m  Ea  reaction      reaction; rate = cell * k * product of reactant concentrations, with
+                                          k = A * T^m * exp(-Ea/(R*T)) (A, m, Ea are local parameters; R in the
+                                          PARM Ea units: KCAL, KJ, J, CAL or K)
+  coefficients  2A, 0.5B, A+A             stoichiometries; species on both sides with no net change become
+                                          modifiers
+  S[USER;vars:(expr)]                     rate = cell * expr * product of reactant concentrations; cX -> species X,
+                                          T -> temperature, M -> total concentration; log -> ln, atn -> arctan,
+                                          ^ -> power; every species used in expr is declared as a modifier
+  third body M (no efficiencies)          parameter M_total = sum of all species (assignment rule)
+  temperature (number)                    parameter T
+  run length, sampling interval           SED-ML uniformTimeCourse
+  the original MODEL.DAT line             annotation on each reaction (<kintecus:line>)
+  pack description, switches, notes       model notes
+
+NOT REPRESENTED IN SBML (listed in the XML comment, the model notes and the report):
+  - reversible reactions (A+B=C): Kintecus takes the reverse rate from thermodynamic data; the reaction is
+    exported reversible with the forward rate law only
+  - fall-off and other special rate forms (S[TROE..], SRI, Lindemann, JPL, PLOG, Chebyshev, Landau-Teller,
+    MCM ...), third-body efficiencies M[...], photolysis (hv) reactions: the reaction is left out and its line
+    is listed
+  - temperature profiles (T is held at 298 K), constant-pressure and thermodynamic mode (-THERM, -EQUIL),
+    volume profiles, external heat source, hv files
+  - THERM.DAT, TRANSPORT.DAT, SPNAME/PERIOD sheets, fitdata and other data files: their full content is
+    copied into the report and the XML comment
+  - SSA / species-special settings
+For a complete, lossless copy of the Kintecus model alongside the SBML, use --format both.
+
+
+EXAMPLES
+--------
+1. Export a pack and check the SBML:
+
+       kintpack2sbml.bat BIOMD0000000010.kintpack --validate
+
+   Writes BIOMD0000000010.xml, .sedml and _kintecus_unsupported.txt next to the pack.
+
+2. Export a Kintecus deck folder into another folder:
+
+       kintpack2sbml.bat C:\Kintecus\h2o2 -o C:\exports --name h2o2_mech
+
+3. SBML plus the lossless Kintecus XML:
+
+       kintpack2sbml.bat mech.kintpack --format both
+
+4. Only the lossless Kintecus XML (no libSBML needed):
+
+       kintpack2sbml.bat mech.kintpack --format xml
+
+5. A pack with decimal commas:
+
+       kintpack2sbml.bat euro.kintpack -i
+
+6. Many packs at once (in a .bat file):
+
+       for %%F in (packs\*.kintpack) do call kintpack2sbml.bat "%%F" -o sbml_out --no-report
+
+7. Simulate the export (Python, with libroadrunner installed):
+
+       import roadrunner
+       r = roadrunner.RoadRunner("BIOMD0000000010.xml")
+       print(r.simulate(0, 9000, 1001))
+
+
+VERIFICATION
+------------
+The exporter was tested on the 784 BioModels packs whose decks are verified to reproduce the original SBML:
+each pack was exported, the SBML simulated with libRoadRunner, and the result compared with the original
+model (max |difference| / species peak):
+  - 784 of 784 exports pass the libSBML consistency check with no errors;
+  - 769 reproduce the original SBML within 0.1% of peak (typically within 1e-8);
+  - 8 more reproduce their Kintecus deck exactly (2 packs whose original SBML has events that were never
+    converted to Kintecus, and 6 very stiff models that need looser solver tolerances, e.g. rtol 1e-8);
+  - the remaining 7 are numerically sensitive models (a bistable switch started at its symmetric point,
+    discontinuous step functions, models where the solver diverges) whose export is equation-for-equation
+    the deck but where CVODE and the deck's own integrator settle differently.
+Special Kintecus features that BioModels packs do not use (reversible "=", Arrhenius A/m/Ea, M, Troe, hv,
+CSTR flow, temperature profiles, THERM sheets) were tested on a synthetic deck: converted or reported as
+described above, and the SBML validates.
+
+
+MESSAGES
+--------
+  reaction not exported: special rate form S[...]    a Kintecus special reaction (fall-off etc.); see the report
+  reaction not exported: photolysis (hv) reaction    photolysis needs the hv file; see the report
+  unknown variable 'X' in a USER expression          the expression uses a name that is not cSPECIES, T or M
+  function 'X' in a USER expression has no SBML equivalent
+  species X is used in MODEL.DAT but not listed in SPECIES.DAT; initial concentration 0
+  libSBML consistency check: N error(s)              (with --validate) the errors are printed with line numbers
+  SBML output needs python-libsbml                   pip install python-libsbml

@@ -1,0 +1,439 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:09:18.995874+00:00",
+ "description": "Lopez2014 - A Validated Mathematical Model of Tumor Growth Including Tumor-Host Interaction and Cell-Mediated Immune Response\nBioModels BIOMD0000000784 (curated). SBML file: Lopez2014.xml.\nSimulation: 0 to 30 time units (SED-ML: Lopez2014.sedml), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.33e-06 of species peak (worst: z_Effector_Cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_Killing: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lopez2014 - A Validated Mathematical Model of Tumor Growth Including Tumor-Host Interaction and Cell-Mediated Immune Response  (BIOMD0000000784, curated BioModels; source file Lopez2014.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Growth term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x_Tumor_Cells==>2x_Tumor_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Growth term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x_Tumor_Cells+x_Tumor_Cells==>x_Tumor_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Competition_Healthy_Cells",
+     ""
+    ],
+    [
+     "0.195",
+     "0",
+     "0",
+     "x_Tumor_Cells+y_Healthy_Cells==>y_Healthy_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Killing",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x_Tumor_Cells+S[USER;cx_Tumor_Cells,cz_Effector_Cells:(5*cz_Effector_Cells^0.21/(1*cz_Effector_Cells^0.21+11.5*(cx_Tumor_Cells+1e-30)^0.21))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Healthy_Cells_Production term 1/2",
+     ""
+    ],
+    [
+     "0.35",
+     "0",
+     "0",
+     "y_Healthy_Cells==>2y_Healthy_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Healthy_Cells_Production term 2/2",
+     ""
+    ],
+    [
+     "0.35",
+     "0",
+     "0",
+     "y_Healthy_Cells+y_Healthy_Cells==>y_Healthy_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Healthy_Cells_Competition_Tumor",
+     ""
+    ],
+    [
+     "0.954",
+     "0",
+     "0",
+     "y_Healthy_Cells+x_Tumor_Cells==>x_Tumor_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Effector_Production_Constant",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>z_Effector_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Effector_Death",
+     ""
+    ],
+    [
+     "0.112",
+     "0",
+     "0",
+     "z_Effector_Cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Effector_Recruitment",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx_Tumor_Cells,cz_Effector_Cells:(7.249999999999999*cx_Tumor_Cells^2*(cz_Effector_Cells^0.21/(11.5*cx_Tumor_Cells^0.21+cz_Effector_Cells^0.21))^2/(25*cx_Tumor_Cells^2*(cz_Effector_Cells^0.21/(11.5*cx_Tumor_Cells^0.21+cz_Effector_Cells^0.21))^2+7.95e-11))]==>z_Effector_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Effector_Competition_Tumor",
+     ""
+    ],
+    [
+     "5.25",
+     "0",
+     "0",
+     "z_Effector_Cells+x_Tumor_Cells==>x_Tumor_Cells",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x_Tumor_Cells",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x_Tumor_Cells [x_Tumor_Cells]",
+     ""
+    ],
+    [
+     "y_Healthy_Cells",
+     "0",
+     "0.9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "y_Healthy_Cells [y_Healthy_Cells]",
+     ""
+    ],
+    [
+     "z_Effector_Cells",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "z_Effector_Cells [z_Effector_Cells]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

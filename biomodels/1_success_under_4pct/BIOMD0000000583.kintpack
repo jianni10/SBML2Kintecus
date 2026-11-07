@@ -1,0 +1,1325 @@
+{
+ "version": 3,
+ "created": "2026-11-02T04:00:48.043390+00:00",
+ "description": "Leber2015 - Mucosal immunity and gut microbiome interaction during C. difficile infection\nBioModels BIOMD0000000583 (curated). SBML file: BIOMD0000000583_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000583_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:5:10:0 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.71e-06 of species peak (worst: E)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'E_d' goes below zero in the SBML: integrated as E_d_o = value + 20, output as E_d = OUTC[E_d_o;-20*source]\n  [info] 'M_LP' goes below zero in the SBML: integrated as M_LP_o = value + 500, output as M_LP = OUTC[M_LP_o;-500*source]\n  [info] N_Activation_Migration term 1/3: rate order differs from the stoichiometry; consumed on separate line(s) - N_Lum: zero order, signed\nRenamed species (Kintecus name = SBML id): E1 = E",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5:10:0 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Leber2015 - Mucosal immunity and gut microbiome interaction during C. difficile infection  (BIOMD0000000583, curated BioModels; source file BIOMD0000000583_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Treg_Degradation",
+     ""
+    ],
+    [
+     "0.5069887",
+     "0",
+     "0",
+     "iTreg_LP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "eDC_Degradation",
+     ""
+    ],
+    [
+     "1.72495199303666e-5",
+     "0",
+     "0",
+     "eDC_MLN==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th17_Degradation",
+     ""
+    ],
+    [
+     "2.39665140586358",
+     "0",
+     "0",
+     "Th17_LP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th1_Degradation",
+     ""
+    ],
+    [
+     "0.99505694359",
+     "0",
+     "0",
+     "Th1_LP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "N_Degradation",
+     ""
+    ],
+    [
+     "2.35932924820229e-7",
+     "0",
+     "0",
+     "N_Lum+Commensal_Beneficial==>Commensal_Beneficial",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_Damage term 1/3 (shifted E_d_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cE1,cM_LP_o:(0.00010009621201720461*cE1*(cM_LP_o-500))]==>E_d_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_Damage term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E1+S[USER;cM_LP_o:(0.00010009621201720461*(cM_LP_o-500))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_Damage term 2/3 (shifted E_d_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cE1,cTh17_LP:(3.739149569319632e-12*cE1*cTh17_LP)]==>E_d_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_Damage term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E1+S[USER;cTh17_LP:(3.739149569319632e-12*cTh17_LP)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_Damage term 3/3 (shifted E_d_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cE1,cN_Lum:(1.7591274046519358e-11*cE1*cN_Lum)]==>E_d_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_Damage term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E1+S[USER;cN_Lum:(1.7591274046519358e-11*cN_Lum)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "eDC_Migration (volume 0.07)",
+     ""
+    ],
+    [
+     "150",
+     "0",
+     "0",
+     "eDC_LP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "eDC_Migration (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ceDC_LP:(10.5*ceDC_LP)]==>eDC_MLN",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "eDC_Production (volume 1)",
+     ""
+    ],
+    [
+     "0.55",
+     "0",
+     "0",
+     "Cdiff==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "eDC_Production (volume 0.07)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCdiff:(7.857142857142857*cCdiff)]==>eDC_LP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdiff_Death term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdiff+S[USER;cM_LP_o:(6.27092296294148e-10*(cM_LP_o-500))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdiff_Death term 2/3",
+     ""
+    ],
+    [
+     "3.730550413489403e-7",
+     "0",
+     "0",
+     "Cdiff+N_Lum==>N_Lum",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdiff_Death term 3/3",
+     ""
+    ],
+    [
+     "6.440394893150866e-11",
+     "0",
+     "0",
+     "Cdiff+Commensal_Harmful==>2Cdiff+Commensal_Harmful",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "N_Activation_Migration term 1/3 (consumes N_Lum)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ciTreg_LP:((-1*4.909131858468986*ciTreg_LP))]==>N_Lum",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "N_Activation_Migration term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdiff+S[USER;cE_d_o:(4.576778452979358*(cE_d_o-20))]==>N_Lum+Cdiff",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "N_Activation_Migration term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdiff+S[USER;cTh17_LP:(6.478687218605793*cTh17_LP)]==>N_Lum+Cdiff",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdiff_Growth",
+     ""
+    ],
+    [
+     "5e-11",
+     "0",
+     "0",
+     "Cdiff+Commensal_Harmful==>2Cdiff+Commensal_Harmful",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Treg_Migration (volume 0.07)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ciTreg_MLN:(78.57142857142857*ciTreg_MLN)]==>iTreg_LP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Treg_Migration (volume 1)",
+     ""
+    ],
+    [
+     "5.5",
+     "0",
+     "0",
+     "iTreg_MLN==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th1_Migration (volume 0.07)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTh1_MLN:(20.84285714285714*cTh1_MLN)]==>Th1_LP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th1_Migration (volume 1)",
+     ""
+    ],
+    [
+     "1.459",
+     "0",
+     "0",
+     "Th1_MLN==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th17_Plasticity term 1/2",
+     ""
+    ],
+    [
+     "1.27393226093773",
+     "0",
+     "0",
+     "Th17_LP==>iTreg_LP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th17_Plasticity term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "iTreg_LP+S[USER;cCdiff:(0.0020401460213434*cCdiff)]==>Th17_LP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th17_Migration (volume 0.07)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTh17_MLN:(35.77920388163485*cTh17_MLN)]==>Th17_LP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th17_Migration (volume 1)",
+     ""
+    ],
+    [
+     "2.50454427171444",
+     "0",
+     "0",
+     "Th17_MLN==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_Inflame",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E1+S[USER;cCdiff:(0.000171079818745428*cCdiff)]==>E_i",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_i_Damage term 1/3 (shifted E_d_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cE_i,cM_LP_o:(7.540874707402335e-8*cE_i*(cM_LP_o-500))]==>E_d_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_i_Damage term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E_i+S[USER;cM_LP_o:(7.540874707402335e-8*(cM_LP_o-500))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_i_Damage term 2/3 (shifted E_d_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cE_i,cTh17_LP:(0.0006935390202630111*cE_i*cTh17_LP)]==>E_d_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_i_Damage term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E_i+S[USER;cTh17_LP:(0.0006935390202630111*cTh17_LP)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_i_Damage term 3/3 (shifted E_d_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cE_i,cN_Lum:(0.00039000000000000005*cE_i*cN_Lum)]==>E_d_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_i_Damage term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E_i+S[USER;cN_Lum:(0.00039000000000000005*cN_Lum)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_Activation term 1/3 (shifted M_LP_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCdiff:(19.28571428571424*cCdiff)]==>M_LP_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_Activation term 2/3 (shifted M_LP_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTh17_LP:(38.57142857142848*cTh17_LP)]==>M_LP_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_Activation term 3/3 (shifted M_LP_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ciTreg_LP:((-1*1.7802370003893127*ciTreg_LP))]==>M_LP_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_Death (shifted M_LP_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cM_LP_o:((-1*20*(cM_LP_o-500)))]==>M_LP_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Commensal_Regrowth term 1/2",
+     ""
+    ],
+    [
+     "0.156287382551622",
+     "0",
+     "0",
+     "Commensal_Dead==>Commensal_Beneficial",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Commensal_Regrowth term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Commensal_Beneficial+N_Lum+S[USER;cE_i:(4.5e-10*cE_i)]==>Commensal_Dead+N_Lum",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_Heal (shifted E_d_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cE_d_o:((-1*4000*(cE_d_o-20)))]==>E_d_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_Heal",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cE_d_o:(4000*(cE_d_o-20))]==>E1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tDC_Production term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdiff+S[USER;cE1,cE_i:(0.005374946655391841*cE1/(cE_i+100))]==>tDC_LP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tDC_Production term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdiff+Commensal_Beneficial+S[USER;cCommensal_Dead:(0.1118594283055966/cCommensal_Dead)]==>tDC_LP+Commensal_Beneficial",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tDC_Migration",
+     ""
+    ],
+    [
+     "3.65",
+     "0",
+     "0",
+     "tDC_LP==>tDC_MLN",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tDC_Degradation",
+     ""
+    ],
+    [
+     "0.00095",
+     "0",
+     "0",
+     "tDC_MLN==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th17_Differentiation",
+     ""
+    ],
+    [
+     "2255.80469507059",
+     "0",
+     "0",
+     "eDC_MLN==>Th17_MLN",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th1_Differentiation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "eDC_MLN+Commensal_Dead+S[USER;cCommensal_Beneficial,cE1:(0.0430096/(0.0648415756801505*cCommensal_Beneficial+9.65568121975566e-5*cE1))]==>Th1_MLN+Commensal_Dead",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Treg_Differentiation",
+     ""
+    ],
+    [
+     "53.9130568911728",
+     "0",
+     "0",
+     "tDC_MLN==>iTreg_MLN",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Commensal_Harmful_Death term 1/2",
+     ""
+    ],
+    [
+     "0.07962967857142854",
+     "0",
+     "0",
+     "Commensal_Harmful==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Commensal_Harmful_Death term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Commensal_Harmful+S[USER;cE_i:(4.1980499999999996e-6*cE_i)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Commensal_Death",
+     ""
+    ],
+    [
+     "0.0933277452272273",
+     "0",
+     "0",
+     "Commensal_Dead==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_i_Natural_Death (shifted E_d_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cE_i:(2.5*cE_i)]==>E_d_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E_i_Natural_Death",
+     ""
+    ],
+    [
+     "2.5",
+     "0",
+     "0",
+     "E_i==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Cdiff",
+     "0",
+     "484",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdiff [Cdiff]",
+     ""
+    ],
+    [
+     "Commensal_Beneficial",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Commensal_Beneficial [Commensal_Beneficial]",
+     ""
+    ],
+    [
+     "Commensal_Dead",
+     "0",
+     "50000000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Commensal_Dead [Commensal_Dead]",
+     ""
+    ],
+    [
+     "tDC_LP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "tDC_LP [tDC_LP]",
+     ""
+    ],
+    [
+     "tDC_MLN",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "tDC_MLN [tDC_MLN]",
+     ""
+    ],
+    [
+     "Commensal_Harmful",
+     "0",
+     "15000000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Commensal_Harmful [Commensal_Harmful]",
+     ""
+    ],
+    [
+     "N_Lum",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N_Lum [N_Lum]",
+     ""
+    ],
+    [
+     "E1",
+     "0",
+     "1052500",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E [E]",
+     ""
+    ],
+    [
+     "E_d_o",
+     "0",
+     "20",
+     "N",
+     "0",
+     "No",
+     "No",
+     "E_d + 20 (shifted state) [__shifted__E_d]",
+     ""
+    ],
+    [
+     "iDC_E",
+     "0",
+     "500000",
+     "Y",
+     "0",
+     "No",
+     "500000",
+     "iDC_E [iDC_E]",
+     ""
+    ],
+    [
+     "E_i",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E_i [E_i]",
+     ""
+    ],
+    [
+     "M_LP_o",
+     "0",
+     "3750",
+     "N",
+     "0",
+     "No",
+     "No",
+     "M_LP + 500 (shifted state) [__shifted__M_LP]",
+     ""
+    ],
+    [
+     "eDC_LP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "eDC_LP [eDC_LP]",
+     ""
+    ],
+    [
+     "M0",
+     "0",
+     "1714285.71428571",
+     "Y",
+     "0",
+     "No",
+     "1714285.71428571",
+     "M0 [M0]",
+     ""
+    ],
+    [
+     "N_LP",
+     "0",
+     "714285.714285714",
+     "Y",
+     "0",
+     "No",
+     "714285.714285714",
+     "N_LP [N_LP]",
+     ""
+    ],
+    [
+     "Th17_LP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Th17_LP [Th17_LP]",
+     ""
+    ],
+    [
+     "Th1_LP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Th1_LP [Th1_LP]",
+     ""
+    ],
+    [
+     "iTreg_LP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iTreg_LP [iTreg_LP]",
+     ""
+    ],
+    [
+     "eDC_MLN",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "eDC_MLN [eDC_MLN]",
+     ""
+    ],
+    [
+     "iTreg_MLN",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iTreg_MLN [iTreg_MLN]",
+     ""
+    ],
+    [
+     "nT",
+     "0",
+     "12000000",
+     "Y",
+     "0",
+     "No",
+     "12000000",
+     "nT [nT]",
+     ""
+    ],
+    [
+     "Th17_MLN",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Th17_MLN [Th17_MLN]",
+     ""
+    ],
+    [
+     "Th1_MLN",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Th1_MLN [Th1_MLN]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "E_d",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[E_d_o;-20*source]",
+     "No",
+     "E_d (= E_d_o - 20) [E_d]",
+     ""
+    ],
+    [
+     "M_LP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[M_LP_o;-500*source]",
+     "No",
+     "M_LP (= M_LP_o - 500) [M_LP]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

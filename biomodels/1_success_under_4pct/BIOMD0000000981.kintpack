@@ -1,0 +1,684 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:14:35.618021+00:00",
+ "description": "Wan2020 - risk estimation and prediction of the transmission of COVID-19 in maninland China excluding Hubei province\nBioModels BIOMD0000000981 (curated). SBML file: Wan2020.xml.\nSimulation: 0 to 80 time units (SED-ML: Wan2020.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.27e-06 of species peak (worst: Recovered_from_hospitals)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Total_population' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Susceptible_to_Exposed term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Susceptible_to_Exposed term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Susceptible_to_isolated term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Susceptible_to_isolated term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Exposed_to_Quarantined term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Exposed_to_Quarantined term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Infected_to_Quarantined term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Infected_to_Quarantined term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Asymptomatic_to_Quarantined term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Asymptomatic_to_Quarantined term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wan2020 - risk estimation and prediction of the transmission of COVID-19 in maninland China excluding Hubei province  (BIOMD0000000981, curated BioModels; source file Wan2020.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Exposed term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Infected+S[USER;cAsymptomatic,cExposed,cInfected,cRecovered,cSusceptible,cTotal_reported_cases:(2.178959717/(1*cAsymptomatic*exp(0.00028286*cTotal_reported_cases)+1*cExposed*exp(0.00028286*cTotal_reported_cases)+1*cInfected*exp(0.00028286*cTotal_reported_cases)+1*cRecovered*exp(0.00028286*cTotal_reported_cases)+1*(cSusceptible+1e-30)*exp(0.00028286*cTotal_reported_cases)))]==>Exposed+Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Exposed term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Asymptomatic+S[USER;cAsymptomatic,cExposed,cInfected,cRecovered,cSusceptible,cTotal_reported_cases:(1.76467410600679/(1*cAsymptomatic*exp(0.00028286*cTotal_reported_cases)+1*cExposed*exp(0.00028286*cTotal_reported_cases)+1*cInfected*exp(0.00028286*cTotal_reported_cases)+1*cRecovered*exp(0.00028286*cTotal_reported_cases)+1*(cSusceptible+1e-30)*exp(0.00028286*cTotal_reported_cases)))]==>Exposed+Asymptomatic",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_isolated term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Infected+S[USER;cAsymptomatic,cExposed,cInfected,cRecovered,cSusceptible:(1.2727139719999998/(1*cAsymptomatic+1*cExposed+1*cInfected+1*cRecovered+1*cSusceptible+1e-30))]==>Susceptible_isolated+Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_isolated term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Quarantined+S[USER;cAsymptomatic,cExposed,cInfected,cRecovered,cSusceptible:(46.8433566/(1*cAsymptomatic+1*cExposed+1*cInfected+1*cRecovered+1*cSusceptible+1e-30))]==>Susceptible_isolated+Quarantined",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Isolated_to_Susceptible",
+     ""
+    ],
+    [
+     "0.07142857",
+     "0",
+     "0",
+     "Susceptible_isolated==>Susceptible",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Exposed_to_Infected",
+     ""
+    ],
+    [
+     "0.12746306799999998",
+     "0",
+     "0",
+     "Exposed==>Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Exposed_to_Asymptomatic",
+     ""
+    ],
+    [
+     "0.06484693200000001",
+     "0",
+     "0",
+     "Exposed==>Asymptomatic",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Exposed_to_Quarantined term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Exposed+Infected+S[USER;cAsymptomatic,cExposed,cInfected,cRecovered,cSusceptible:(1.2727139719999998/(1*cAsymptomatic+1*cExposed+1*cInfected+1*cRecovered+1*cSusceptible+1e-30))]==>Quarantined+Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Exposed_to_Quarantined term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Exposed+Quarantined+S[USER;cAsymptomatic,cExposed,cInfected,cRecovered,cSusceptible:(46.8433566/(1*cAsymptomatic+1*cExposed+1*cInfected+1*cRecovered+1*cSusceptible+1e-30))]==>2Quarantined",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_to_Hospitalised",
+     ""
+    ],
+    [
+     "0.47218",
+     "0",
+     "0",
+     "Infected==>Hospitalised",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_to_dead",
+     ""
+    ],
+    [
+     "0.00055888",
+     "0",
+     "0",
+     "Infected==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_to_Recovered",
+     ""
+    ],
+    [
+     "0.15796",
+     "0",
+     "0",
+     "Infected==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_to_Quarantined term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Infected+Infected+S[USER;cAsymptomatic,cExposed,cInfected,cRecovered,cSusceptible:(1.2727139719999998/(1*cAsymptomatic+1*cExposed+1*cInfected+1*cRecovered+1*cSusceptible+1e-30))]==>Quarantined+Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_to_Quarantined term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Infected+Quarantined+S[USER;cAsymptomatic,cExposed,cInfected,cRecovered,cSusceptible:(46.8433566/(1*cAsymptomatic+1*cExposed+1*cInfected+1*cRecovered+1*cSusceptible+1e-30))]==>2Quarantined",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Asymptomatic_to_Recovered",
+     ""
+    ],
+    [
+     "0.55671",
+     "0",
+     "0",
+     "Asymptomatic==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Asymptomatic_to_Quarantined term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Asymptomatic+Infected+S[USER;cAsymptomatic,cExposed,cInfected,cRecovered,cSusceptible:(1.2727139719999998/(1*cAsymptomatic+1*cExposed+1*cInfected+1*cRecovered+1*cSusceptible+1e-30))]==>Quarantined+Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Asymptomatic_to_Quarantined term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Asymptomatic+Quarantined+S[USER;cAsymptomatic,cExposed,cInfected,cRecovered,cSusceptible:(46.8433566/(1*cAsymptomatic+1*cExposed+1*cInfected+1*cRecovered+1*cSusceptible+1e-30))]==>2Quarantined",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Quarantined_to_Hospitalised",
+     ""
+    ],
+    [
+     "17.379",
+     "0",
+     "0",
+     "Quarantined==>Hospitalised",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hospitalised_to_Deceased",
+     ""
+    ],
+    [
+     "0.00055888",
+     "0",
+     "0",
+     "Hospitalised==>Deceased",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hospitalised_to_Recovered",
+     ""
+    ],
+    [
+     "0.035352",
+     "0",
+     "0",
+     "Hospitalised==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRecovered_from_hospitals/dt term 1",
+     ""
+    ],
+    [
+     "0.035352",
+     "0",
+     "0",
+     "Hospitalised==>Recovered_from_hospitals+Hospitalised",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTotal_reported_cases/dt term 1",
+     ""
+    ],
+    [
+     "17.379",
+     "0",
+     "0",
+     "Quarantined==>Total_reported_cases+Quarantined",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTotal_reported_cases/dt term 2",
+     ""
+    ],
+    [
+     "0.47218",
+     "0",
+     "0",
+     "Infected==>Total_reported_cases+Infected",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Susceptible",
+     "0",
+     "1336210000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible [Susceptible]",
+     ""
+    ],
+    [
+     "Exposed",
+     "0",
+     "501.23",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Exposed [Exposed]",
+     ""
+    ],
+    [
+     "Infected",
+     "0",
+     "0.22839",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected [Infected]",
+     ""
+    ],
+    [
+     "Asymptomatic",
+     "0",
+     "991.29",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Asymptomatic [Asymptomatic]",
+     ""
+    ],
+    [
+     "Susceptible_isolated",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible_isolated [Susceptible_isolated]",
+     ""
+    ],
+    [
+     "Quarantined",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Quarantined [Quarantined]",
+     ""
+    ],
+    [
+     "Hospitalised",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hospitalised [Hospitalised]",
+     ""
+    ],
+    [
+     "Recovered",
+     "0",
+     "240.76",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Recovered [Recovered]",
+     ""
+    ],
+    [
+     "Recovered_from_hospitals",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Recovered_from_hospitals [Recovered_from_hospitals]",
+     ""
+    ],
+    [
+     "Deceased",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Deceased [Deceased]",
+     ""
+    ],
+    [
+     "Total_reported_cases",
+     "0",
+     "21",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Total_reported_cases [Total_reported_cases]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "80",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,489 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:15:39.466105+00:00",
+ "description": "Lavigne2021 - Non-spatial model of viral infection dynamics and interferon response of well-mixed viral infection\nBioModels BIOMD0000001021 (curated). SBML file: Lavigne2021 - ODE model.xml.\nSimulation: 0 to 4 time units (SED-ML: Lavigne2021 - ODE model (no IFN condition).sedml), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.62e-06 of species peak (worst: IFN)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Fraction_target_cells_remaining' is defined by an assignment rule; not a Kintecus state (not output)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lavigne2021 - Non-spatial model of viral infection dynamics and interferon response of well-mixed viral infection  (BIOMD0000001021, curated BioModels; source file Lavigne2021 - ODE model.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infection",
+     ""
+    ],
+    [
+     "5e-10",
+     "0",
+     "0",
+     "Target_cells+Virions==>Infected_cells+Virions",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Refractory_state term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Refractory_cells==>Target_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Refractory_state term 2/2",
+     ""
+    ],
+    [
+     "5e-10",
+     "0",
+     "0",
+     "Target_cells+IFN==>Refractory_cells+IFN",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Antiviral_response term 1/2",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Infected_cells==>Infected_cells_antiviral",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Antiviral_response term 2/2",
+     ""
+    ],
+    [
+     "5e-10",
+     "0",
+     "0",
+     "Infected_cells+IFN==>Infected_cells_antiviral+IFN",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_cell_death",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "Infected_cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Antiviral_infected_cell_death",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "Infected_cells_antiviral==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Virus_release term 1/2",
+     ""
+    ],
+    [
+     "2400",
+     "0",
+     "0",
+     "Infected_cells==>Virions+Infected_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Virus_release term 2/2",
+     ""
+    ],
+    [
+     "239.99999999999994",
+     "0",
+     "0",
+     "Infected_cells_antiviral==>Virions+Infected_cells_antiviral",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFN_release term 1/2",
+     ""
+    ],
+    [
+     "2400",
+     "0",
+     "0",
+     "Infected_cells==>IFN+Infected_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFN_release term 2/2",
+     ""
+    ],
+    [
+     "2400",
+     "0",
+     "0",
+     "Infected_cells_antiviral==>IFN+Infected_cells_antiviral",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Virus_clearence",
+     ""
+    ],
+    [
+     "14",
+     "0",
+     "0",
+     "Virions==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFN_clearence",
+     ""
+    ],
+    [
+     "14",
+     "0",
+     "0",
+     "IFN==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Target_cells",
+     "0",
+     "400000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Target_cells [Target_cells]",
+     ""
+    ],
+    [
+     "Infected_cells",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected_cells [Infected_cells]",
+     ""
+    ],
+    [
+     "Infected_cells_antiviral",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected_cells_antiviral [Infected_cells_antiviral]",
+     ""
+    ],
+    [
+     "Refractory_cells",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Refractory_cells [Refractory_cells]",
+     ""
+    ],
+    [
+     "Virions",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Virions [Virions]",
+     ""
+    ],
+    [
+     "IFN",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IFN [IFN]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "4",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

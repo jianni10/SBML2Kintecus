@@ -1,0 +1,391 @@
+{
+ "version": 3,
+ "created": "2026-10-25T11:54:18.916112+00:00",
+ "description": "Cui2008 - in vitro transcriptional response of zinc homeostasis system in Escherichia coli\nBioModels BIOMD0000000966 (curated). SBML file: Cui2008.xml.\nSimulation: 0 to 45 time units (SED-ML: Cui2008.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.30e-06 of species peak (worst: Py1)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cui2008 - in vitro transcriptional response of zinc homeostasis system in Escherichia coli  (BIOMD0000000966, curated BioModels; source file Cui2008.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_the_Zn4Zur_complex",
+     ""
+    ],
+    [
+     "4.410000000000001",
+     "0",
+     "0",
+     "Py==>Py1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Dissociation_of_Zn4Zur_complex",
+     ""
+    ],
+    [
+     "0.009",
+     "0",
+     "0",
+     "Py1==>Zn_2+Py",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_DNA_binding_complex",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Dw+Py1==>Qw2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Disassociation_of_DNA_binding_complex",
+     ""
+    ],
+    [
+     "0.9",
+     "0",
+     "0",
+     "Qw2==>Dw+Py1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_transcription_initiation_complex",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Dw+Rw==>Qw1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Disassociation_of_transcription_initiation_complex",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "Qw1==>Dw+Rw",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Py",
+     "0",
+     "25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Py [Py]",
+     ""
+    ],
+    [
+     "Py1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Py1 [Py1]",
+     ""
+    ],
+    [
+     "Dw",
+     "0",
+     "4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Dw [Dw]",
+     ""
+    ],
+    [
+     "Rw",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rw [Rw]",
+     ""
+    ],
+    [
+     "Qw1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Qw1 [Qw1]",
+     ""
+    ],
+    [
+     "Qw2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Qw2 [Qw2]",
+     ""
+    ],
+    [
+     "Zn_2",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Zn^2 [Zn_2]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-06",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "45",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-08",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

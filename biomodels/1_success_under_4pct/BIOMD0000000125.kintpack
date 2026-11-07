@@ -1,0 +1,414 @@
+{
+ "version": 3,
+ "created": "2026-11-05T15:39:30.861608+00:00",
+ "description": "Komarova2005_TheoreticalFramework_BasicArchitecture\nBioModels BIOMD0000000125 (curated). SBML file: BIOMD0000000125_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000125_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.029411764705882353.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.10e-06 of species peak (worst: x2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time event(s) on 'x0' encoded as time/value pairs in EV_X0.TXT (SET)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Komarova2005_TheoreticalFramework_BasicArchitecture  (BIOMD0000000125, curated BioModels; source file BIOMD0000000125_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000001",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx0:(2*cx0)]==>x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000003",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "x1==>x2+x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000004",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x1==>y2+x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000005",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000006",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000007",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "y2==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x1 [x1]",
+     ""
+    ],
+    [
+     "x2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x2 [x2]",
+     ""
+    ],
+    [
+     "y2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "y2 [y2]",
+     ""
+    ],
+    [
+     "x0",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "EV_X0.TXT-SET",
+     "x0 [x0]",
+     ""
+    ],
+    [
+     "y0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "y0 [y0]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.02941176474",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.02941176474",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_X0.TXT",
+   "key": "O_EV_X0.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "1",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

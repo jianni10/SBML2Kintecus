@@ -1,0 +1,917 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:47:19.648648+00:00",
+ "description": "Fridlyand2010_GlucoseSensitivity_A\nBioModels BIOMD0000000348 (curated). SBML file: BIOMD0000000348_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000348_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.10e-06 of species peak (worst: NADHm)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dG3P/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dPYR/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dPYR/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dPYR/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - PYR: zero order, signed\n  [info] rate rule dATP/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dATP/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - ATP: zero order, signed\n  [info] rate rule dNADHm/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dNADHm/dt term 6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dNADHm/dt term 7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dNADHc/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dNADHc/dt term 5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dNADHc/dt term 6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dVm/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - Vm: zero order, signed\n  [info] rate rule dVm/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - Vm: zero order, signed\n  [info] rate rule dVm/dt term 8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dVm/dt term 9: rate order differs from the stoichiometry; consumed on separate line(s) - Vm: zero order, signed\n  [info] rate rule dVm/dt term 10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dCam/dt term 2: rate order differs from the stoichiometry; consumed on separate line(s) - Cam: zero order, signed\n  [info] rate rule dCam/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - Cam: zero order, signed\n  [info] rate rule dCam/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - Cam: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fridlyand2010_GlucoseSensitivity_A  (BIOMD0000000348, curated BioModels; source file BIOMD0000000348_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG3P/dt term 1",
+     ""
+    ],
+    [
+     "1e-5",
+     "0",
+     "0",
+     "G3P==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG3P/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+S[USER;cATP:(0.023100348308819803/(cATP+500))]==>G3P+ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG3P/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G3P+S[USER;cG3P,cNADHc:((-1*1886.7924528301885/(-2000*cG3P+0.91*cNADHc*(cG3P+1e-30)+182*cNADHc-400000)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG3P/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G3P+NADHc+S[USER;cG3P,cNADHc:(0.9433962264150942/(-0.91*cG3P*cNADHc+2000*cG3P-182*cNADHc+400000))]==>2G3P+NADHc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPYR/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G3P+S[USER;cG3P,cNADHc:(1836.8846436443791/(-0.91*cG3P*cNADHc+2000*cG3P-182*cNADHc+400000))]==>PYR+G3P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPYR/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PYR+S[USER;cCam,cNADHm,cPYR:(1212.3438648052902*(20*cCam+1)^2/(168*cNADHm*(20*cCam+1)^2*(cPYR+1e-30)+7980*cNADHm*(20*cCam+1)^2+132*cNADHm*(cPYR+1e-30)+6270.000000000001*cNADHm+3630.0000000000005*cPYR+4620*(20*cCam+1)^2*(cPYR+1e-30)+219450*(20*cCam+1)^2+172425))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPYR/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADHm+PYR+S[USER;cCam,cNADHm,cPYR:(0.5510653930933137/(132*cNADHm*cPYR/(20*cCam+1)^2+168*cNADHm*cPYR+6270.000000000001*cNADHm/(20*cCam+1)^2+7980*cNADHm+3630.0000000000005*cPYR/(20*cCam+1)^2+4620*cPYR+172425/(20*cCam+1)^2+219450))]==>2PYR+NADHm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPYR/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PYR+S[USER;cNADHc,cPYR:((2.204261572373255*cNADHc^2-4408.523144746509*cNADHc)/(2000*cNADHc*(cPYR+1e-30)+95000*cNADHc-4000000*cPYR-190000000))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPYR/dt term 5 (consumes PYR)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG3P,cNADHc:((-1*0.9184423218221895*cG3P*cNADHc/(-0.91*cG3P*cNADHc+2000*cG3P-182*cNADHc+400000)))]==>PYR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dATP/dt term 1",
+     ""
+    ],
+    [
+     "4.8100000000000004e-5",
+     "0",
+     "0",
+     "ATP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dATP/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+S[USER;cATP:(0.023100348308819803/(cATP+500))]==>2ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dATP/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cVm:(3.486792452830189*cVm^8*(220-0.055*cATP)^2/(cVm^8*(220-0.055*cATP)^2+400*cVm^8+8.887158418790114e16*(220-0.055*cATP)^2+3.5548633675160453e19))]==>ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dATP/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+S[USER;cATP:(2.25e-5*((-1*cATP/(cATP-4000)))^4/(1*((-1*(cATP+1e-30)/(cATP-4000)))^4+390625))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dATP/dt term 5 (consumes ATP)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cCam,cVm:((-1*3.486792452830189*cVm^8*(220-0.055*cATP)^2/(cVm^8*(220-0.055*cATP)^2*exp(6.0606060606060606*cCam)+400*cVm^8*exp(6.0606060606060606*cCam)+8.887158418790114e16*(220-0.055*cATP)^2*exp(6.0606060606060606*cCam)+3.5548633675160453e19*exp(6.0606060606060606*cCam))))]==>ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADHm/dt term 1",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "NADHm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADHm/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PYR+S[USER;cCam,cNADHm,cPYR:(210833.3333333333/(132*cNADHm*cPYR/(20*cCam+1)^2+168*cNADHm*cPYR+6270.000000000001*cNADHm/(20*cCam+1)^2+7980*cNADHm+3630.0000000000005*cPYR/(20*cCam+1)^2+4620*cPYR+172425/(20*cCam+1)^2+219450))]==>NADHm+PYR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADHm/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADHc+S[USER;cNADHc,cNADHm:(7638.88888888889/(-15.780000000000001*cNADHc^2*cNADHm/(2000-cNADHc)-2200*cNADHc^2/(2000-cNADHc)-0.031560000000000005*cNADHc*cNADHm+31560.000000000004*cNADHc*cNADHm/(2000-cNADHc)-4.4*cNADHc+4400000*cNADHc/(2000-cNADHc)+63.120000000000005*cNADHm+8800))]==>NADHm+NADHc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADHm/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADHm+S[USER;cNADHm,cVm:((-1*152.7777777777778/(-1*cNADHm+0.00443*cVm*(cNADHm+1e-30)+13.29*cVm-3000)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADHm/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADHm+Vm+S[USER;cNADHm,cVm:(0.7516666666666667/(-0.00443*cNADHm*cVm+1*cNADHm-13.29*cVm+3000))]==>2NADHm+Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADHm/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADHm+PYR+S[USER;cCam,cNADHm,cPYR:(95.83333333333333*(20*cCam+1)^2/(6270.000000000001*cNADHm+168*cPYR*(20*cCam+1)^2*(cNADHm+1e-30)+4620*cPYR*(20*cCam+1)^2+132*cPYR*(cNADHm+1e-30)+3630.0000000000005*cPYR+7980*(20*cCam+1)^2*(cNADHm+1e-30)+219450*(20*cCam+1)^2+172425))]==>PYR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADHm/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADHm+S[USER;cNADHc,cNADHm:((3.4722222222222223*cNADHc^2-6944.444444444445*cNADHc)/(15.74844*cNADHc^2*(cNADHm+1e-30)+2195.6*cNADHc^2-31433.760000000002*cNADHc*(cNADHm+1e-30)-4382400*cNADHc-126240.00000000001*cNADHm-17600000))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADHc/dt term 1",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "NADHc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADHc/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G3P+S[USER;cG3P,cNADHc:(1886.7924528301885/(-0.91*cG3P*cNADHc+2000*cG3P-182*cNADHc+400000))]==>NADHc+G3P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADHc/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADHc+S[USER;cNADHc,cNADHm:((207.54716981132074*cNADHc-415094.3396226415)/(-4382400*cNADHc+15.74844*cNADHm*(cNADHc+1e-30)^2-31433.760000000002*cNADHm*(cNADHc+1e-30)-126240.00000000001*cNADHm+2195.6*(cNADHc+1e-30)^2-17600000))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADHc/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADHc+NADHm+S[USER;cNADHc,cNADHm:(0.09433962264150944/(-15.780000000000001*cNADHc^2*cNADHm/(2000-cNADHc)-2200*cNADHc^2/(2000-cNADHc)-0.031560000000000005*cNADHc*cNADHm+31560.000000000004*cNADHc*cNADHm/(2000-cNADHc)-4.4*cNADHc+4400000*cNADHc/(2000-cNADHc)+63.120000000000005*cNADHm+8800))]==>2NADHc+NADHm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADHc/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADHc+S[USER;cNADHc,cPYR:((2.2641509433962264*cNADHc*cPYR-4528.301886792452*cPYR)/(95000*cNADHc+2000*cPYR*(cNADHc+1e-30)-4000000*cPYR-190000000))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADHc/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADHc+G3P+S[USER;cG3P,cNADHc:((-1*0.9433962264150942/(0.91*cG3P*(cNADHc+1e-30)-2000*cG3P+182*cNADHc-400000)))]==>G3P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 1 (consumes Vm)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cVm:((-1*0.044529230769230765*exp(0.0305*cVm)))]==>Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Vm+S[USER;cVm:(0.00034084102564102564/(-1+exp((-1*0.07482229704451926*cVm))))]==>2Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADHm+S[USER;cNADHm,cVm:(408.18461538461537/(-0.00443*cNADHm*cVm+1*cNADHm-13.29*cVm+3000))]==>Vm+NADHm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cCam,cVm:(0.46384615384615385*exp(-0.00014271220597175457*cVm*(cATP/(4000-cATP))^4/(1*(cATP/(4000-cATP))^4+390625)-5.1376394149831646e-5*cVm)/(0.369140625*cCam+0.03887939453125*(cATP/(4000-cATP))^4/(1*(cATP/(4000-cATP))^4+390625)+3.21126220703125))]==>Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 5 (consumes Vm)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cCam,cVm:((-1*0.46384615384615385*exp(0.004566790591096146*cCam*cVm)/(0.369140625*cCam+0.03887939453125*(cATP/(4000-cATP))^4/(1*(cATP/(4000-cATP))^4+390625)+3.21126220703125)))]==>Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cCam,cVm:(148.43076923076924*cVm^8*(220-0.055*cATP)^2/(cVm^8*(220-0.055*cATP)^2*exp(6.0606060606060606*cCam)+400*cVm^8*exp(6.0606060606060606*cCam)+8.887158418790114e16*(220-0.055*cATP)^2*exp(6.0606060606060606*cCam)+3.5548633675160453e19*exp(6.0606060606060606*cCam)))]==>Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Vm+S[USER;cATP,cVm:(0.0009467806267806269*(cATP/(4000-cATP))^4/(-1*(cATP/(4000-cATP))^4+1*(cATP/(4000-cATP))^4*exp((-1*0.07482229704451926*cVm))-390625+390625*exp((-1*0.07482229704451926*cVm))))]==>2Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Vm+NADHm+S[USER;cNADHm,cVm:((-1*2.008268307692308/(0.00443*cNADHm*(cVm+1e-30)-1*cNADHm+13.29*cVm-3000)))]==>NADHm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 9 (consumes Vm)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCam,cVm:((-1*0.0022211862211862212*cCam*cVm/(1-1*exp(0.07482229704451926*cVm))))]==>Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Vm+S[USER;cATP,cVm:((0.44900307692307695*cATP^2*cVm^7-3592.0246153846156*cATP*cVm^7+7184049.230769231*cVm^7)/(0.003025*cATP^2*(cVm+1e-30)^8+268836542168400.9*cATP^2-24.2*cATP*(cVm+1e-30)^8-2.1506923373472074e18*cATP+48800*(cVm+1e-30)^8+4.3369333083695753e21))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCam/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cCam,cVm:(0.0005208333333333333*exp(-0.00014271220597175457*cVm*(cATP/(4000-cATP))^4/(1*(cATP/(4000-cATP))^4+390625)-5.1376394149831646e-5*cVm)/(0.369140625*cCam+0.03887939453125*(cATP/(4000-cATP))^4/(1*(cATP/(4000-cATP))^4+390625)+3.21126220703125))]==>Cam",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCam/dt term 2 (consumes Cam)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cVm:((-1*1.9135802469135803e-7*cVm/(-1+exp((-1*0.07482229704451926*cVm)))))]==>Cam",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCam/dt term 3 (consumes Cam)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cCam,cVm:((-1*0.0005208333333333333*exp(0.004566790591096146*cCam*cVm)/(0.369140625*cCam+0.03887939453125*(cATP/(4000-cATP))^4/(1*(cATP/(4000-cATP))^4+390625)+3.21126220703125)))]==>Cam",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCam/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cam+Vm+S[USER;cVm:(1.2470382840753212e-6/(1-1*exp(0.07482229704451926*cVm)))]==>2Cam+Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCam/dt term 5 (consumes Cam)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cVm:((-1*5.315500685871056e-7*cVm*(cATP/(4000-cATP))^4/(-1*(cATP/(4000-cATP))^4+1*(cATP/(4000-cATP))^4*exp((-1*0.07482229704451926*cVm))-390625+390625*exp((-1*0.07482229704451926*cVm)))))]==>Cam",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "G3P",
+     "0",
+     "30",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G3P [G3P]",
+     ""
+    ],
+    [
+     "PYR",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PYR [PYR]",
+     ""
+    ],
+    [
+     "ATP",
+     "0",
+     "3700",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP [ATP]",
+     ""
+    ],
+    [
+     "NADHm",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADHm [NADHm]",
+     ""
+    ],
+    [
+     "NADHc",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADHc [NADHc]",
+     ""
+    ],
+    [
+     "Vm",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Vm [Vm]",
+     ""
+    ],
+    [
+     "Cam",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cam [Cam]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

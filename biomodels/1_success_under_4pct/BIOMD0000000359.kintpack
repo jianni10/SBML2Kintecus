@@ -1,0 +1,483 @@
+{
+ "version": 3,
+ "created": "2026-10-26T21:26:44.901322+00:00",
+ "description": "Panteleev2002_TFPImechanism_schmema3\nBioModels BIOMD0000000359 (curated). SBML file: BIOMD0000000359_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000359_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.56e-06 of species peak (worst: Xa_TFPI)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Panteleev2002_TFPImechanism_schmema3  (BIOMD0000000359, curated BioModels; source file BIOMD0000000359_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 1/2",
+     ""
+    ],
+    [
+     "770",
+     "0",
+     "0",
+     "VIIa_TF_X==>X+VIIa_TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 2/2",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "X+VIIa_TF==>VIIa_TF_X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2",
+     ""
+    ],
+    [
+     "420",
+     "0",
+     "0",
+     "VIIa_TF_X==>VIIa_TF_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 1/2",
+     ""
+    ],
+    [
+     "770",
+     "0",
+     "0",
+     "VIIa_TF_Xa==>Xa+VIIa_TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 2/2",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "Xa+VIIa_TF==>VIIa_TF_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4 term 1/2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Xa_TFPI==>Xa+TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4 term 2/2",
+     ""
+    ],
+    [
+     "0.054",
+     "0",
+     "0",
+     "Xa+TFPI==>Xa_TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "0.44",
+     "0",
+     "0",
+     "Xa_TFPI+VIIa_TF==>Xa_TFPI_VIIa_TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 1/2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "VIIa_TF_Xa_TFPI==>VIIa_TF_Xa+TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 2/2",
+     ""
+    ],
+    [
+     "6",
+     "0",
+     "0",
+     "VIIa_TF_Xa+TFPI==>VIIa_TF_Xa_TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "VIIa_TF_X+Xa_TFPI==>X+VIIa_TF_Xa_TFPI",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "VIIa_TF",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIa_TF [VIIa_TF]",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "170",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X [X]",
+     ""
+    ],
+    [
+     "VIIa_TF_X",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIa_TF_X [VIIa_TF_X]",
+     ""
+    ],
+    [
+     "VIIa_TF_Xa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIa_TF_Xa [VIIa_TF_Xa]",
+     ""
+    ],
+    [
+     "Xa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa [Xa]",
+     ""
+    ],
+    [
+     "TFPI",
+     "0",
+     "2.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TFPI [TFPI]",
+     ""
+    ],
+    [
+     "Xa_TFPI",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa_TFPI [Xa_TFPI]",
+     ""
+    ],
+    [
+     "Xa_TFPI_VIIa_TF",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa_TFPI_VIIa_TF [Xa_TFPI_VIIa_TF]",
+     ""
+    ],
+    [
+     "VIIa_TF_Xa_TFPI",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIa_TF_Xa_TFPI [VIIa_TF_Xa_TFPI]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,1106 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:43:37.644696+00:00",
+ "description": "Fisher2006_NFAT_Activation\nBioModels BIOMD0000000123 (curated). SBML file: BIOMD0000000123_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000123_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.02e-06 of species peak (worst: NFAT_Cyt)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R1: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for NFAT_Pi_Nuc\n  [info] R12: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for NFAT_Pi_Cyt\n  [info] R13 term 2/2: 4 reactants split over 2 lines (Kintecus allows 3 per line)\n  [info] R14 term 2/2: 4 reactants split over 2 lines (Kintecus allows 3 per line)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fisher2006_NFAT_Activation  (BIOMD0000000123, curated BioModels; source file BIOMD0000000123_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNFAT_Nuc,cNFAT_Pi_Nuc:(-0.00256*cNFAT_Nuc+2.56e-5*cNFAT_Pi_Nuc)]==>NFAT_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1 (consumes NFAT_Pi_Nuc)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNFAT_Nuc,cNFAT_Pi_Nuc:(0.00256*cNFAT_Nuc-2.56e-5*cNFAT_Pi_Nuc)]==>NFAT_Pi_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2 term 1/2",
+     ""
+    ],
+    [
+     "0.00168",
+     "0",
+     "0",
+     "NFAT_Act_C_Nuc==>NFAT_Nuc+Act_C_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2 term 2/2",
+     ""
+    ],
+    [
+     "6.63",
+     "0",
+     "0",
+     "NFAT_Nuc+Act_C_Nuc==>NFAT_Act_C_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3 term 1/2 (volume 2.69e-13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNFAT_Nuc:(0.000403271375464684*cNFAT_Nuc)]==>NFAT_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3 term 2/2 (volume 2.69e-13)",
+     ""
+    ],
+    [
+     "0.0015",
+     "0",
+     "0",
+     "NFAT_Cyt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3 term 1/2 (volume 1.13e-13)",
+     ""
+    ],
+    [
+     "0.00096",
+     "0",
+     "0",
+     "NFAT_Nuc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3 term 2/2 (volume 1.13e-13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNFAT_Cyt:(0.0035707964601769913*cNFAT_Cyt)]==>NFAT_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4 term 1/2 (volume 1.13e-13)",
+     ""
+    ],
+    [
+     "0.00092",
+     "0",
+     "0",
+     "Act_C_Nuc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4 term 2/2 (volume 1.13e-13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAct_C_Cyt:(0.004523008849557523*cAct_C_Cyt)]==>Act_C_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4 term 1/2 (volume 2.69e-13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAct_C_Nuc:(0.00038646840148698884*cAct_C_Nuc)]==>Act_C_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4 term 2/2 (volume 2.69e-13)",
+     ""
+    ],
+    [
+     "0.0019",
+     "0",
+     "0",
+     "Act_C_Cyt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5 term 1/2",
+     ""
+    ],
+    [
+     "0.00256",
+     "0",
+     "0",
+     "NFAT_Act_C_Nuc==>NFAT_Pi_Act_C_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5 term 2/2",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "NFAT_Pi_Act_C_Nuc==>NFAT_Act_C_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6 term 1/2",
+     ""
+    ],
+    [
+     "0.00168",
+     "0",
+     "0",
+     "NFAT_Pi_Act_C_Nuc==>NFAT_Pi_Nuc+Act_C_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6 term 2/2",
+     ""
+    ],
+    [
+     "6.63",
+     "0",
+     "0",
+     "NFAT_Pi_Nuc+Act_C_Nuc==>NFAT_Pi_Act_C_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7 term 1/2 (volume 2.69e-13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNFAT_Act_C_Nuc:(0.002100371747211896*cNFAT_Act_C_Nuc)]==>NFAT_Act_C_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7 term 2/2 (volume 2.69e-13)",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "NFAT_Act_C_Cyt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7 term 1/2 (volume 1.13e-13)",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "NFAT_Act_C_Nuc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7 term 2/2 (volume 1.13e-13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNFAT_Act_C_Cyt:(1.190265486725664*cNFAT_Act_C_Cyt)]==>NFAT_Act_C_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8 term 1/2",
+     ""
+    ],
+    [
+     "0.00256",
+     "0",
+     "0",
+     "NFAT_Act_C_Cyt==>NFAT_Pi_Act_C_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8 term 2/2",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "NFAT_Pi_Act_C_Cyt==>NFAT_Act_C_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9 term 1/2",
+     ""
+    ],
+    [
+     "0.00168",
+     "0",
+     "0",
+     "NFAT_Pi_Act_C_Cyt==>NFAT_Pi_Cyt+Act_C_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9 term 2/2",
+     ""
+    ],
+    [
+     "6.63",
+     "0",
+     "0",
+     "NFAT_Pi_Cyt+Act_C_Cyt==>NFAT_Pi_Act_C_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10 term 1/2 (volume 1.13e-13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNFAT_Pi_Cyt:(0.011902654867256638*cNFAT_Pi_Cyt)]==>NFAT_Pi_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10 term 2/2 (volume 1.13e-13)",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "NFAT_Pi_Nuc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10 term 1/2 (volume 2.69e-13)",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "NFAT_Pi_Cyt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10 term 2/2 (volume 2.69e-13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNFAT_Pi_Nuc:(0.21003717472118957*cNFAT_Pi_Nuc)]==>NFAT_Pi_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 1/2",
+     ""
+    ],
+    [
+     "0.00168",
+     "0",
+     "0",
+     "NFAT_Act_C_Cyt==>NFAT_Cyt+Act_C_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 2/2",
+     ""
+    ],
+    [
+     "6.63",
+     "0",
+     "0",
+     "NFAT_Cyt+Act_C_Cyt==>NFAT_Act_C_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 1/2 (volume 2.69e-13)",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "NFAT_Pi_Act_C_Cyt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 2/2 (volume 2.69e-13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNFAT_Pi_Act_C_Nuc:(0.21003717472118957*cNFAT_Pi_Act_C_Nuc)]==>NFAT_Pi_Act_C_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 1/2 (volume 1.13e-13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNFAT_Pi_Act_C_Cyt:(0.011902654867256638*cNFAT_Pi_Act_C_Cyt)]==>NFAT_Pi_Act_C_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 2/2 (volume 1.13e-13)",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "NFAT_Pi_Act_C_Nuc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNFAT_Cyt,cNFAT_Pi_Cyt:(-0.00256*cNFAT_Cyt+2.56e-5*cNFAT_Pi_Cyt)]==>NFAT_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 (consumes NFAT_Pi_Cyt)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNFAT_Cyt,cNFAT_Pi_Cyt:(0.00256*cNFAT_Cyt-2.56e-5*cNFAT_Pi_Cyt)]==>NFAT_Pi_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Act_C_Cyt==>3Ca_Cyt+Inact_C_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13 term 2/2 part 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_Cyt+Ca_Cyt+Ca_Cyt+S[USER;cInact_C_Cyt:(1*cInact_C_Cyt)]==>Act_C_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13 term 2/2 part 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Inact_C_Cyt+S[USER;cCa_Cyt:(1*cCa_Cyt^3)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Act_C_Nuc==>3Ca_Nuc+Inact_C_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14 term 2/2 part 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_Nuc+Ca_Nuc+Ca_Nuc+S[USER;cInact_C_Nuc:(1*cInact_C_Nuc)]==>Act_C_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14 term 2/2 part 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Inact_C_Nuc+S[USER;cCa_Nuc:(1*cCa_Nuc^3)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15 term 1/2 (volume 1.13e-13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cInact_C_Cyt:(0.004523008849557523*cInact_C_Cyt)]==>Inact_C_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15 term 2/2 (volume 1.13e-13)",
+     ""
+    ],
+    [
+     "0.00092",
+     "0",
+     "0",
+     "Inact_C_Nuc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15 term 1/2 (volume 2.69e-13)",
+     ""
+    ],
+    [
+     "0.0019",
+     "0",
+     "0",
+     "Inact_C_Cyt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15 term 2/2 (volume 2.69e-13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cInact_C_Nuc:(0.00038646840148698884*cInact_C_Nuc)]==>Inact_C_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16 term 1/2 (volume 2.69e-13)",
+     ""
+    ],
+    [
+     "0.21",
+     "0",
+     "0",
+     "Ca_Cyt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16 term 2/2 (volume 2.69e-13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCa_Nuc:(0.21003717472118957*cCa_Nuc)]==>Ca_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16 term 1/2 (volume 1.13e-13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCa_Cyt:(0.4999115044247788*cCa_Cyt)]==>Ca_Nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16 term 2/2 (volume 1.13e-13)",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "Ca_Nuc==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Ca_Nuc",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Calcium in Nucleus [Ca_Nuc]",
+     ""
+    ],
+    [
+     "Ca_Cyt",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Calcium in Cytosol [Ca_Cyt]",
+     ""
+    ],
+    [
+     "NFAT_Nuc",
+     "0",
+     "0.0005219",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NFAT_Nuc [NFAT_Nuc]",
+     ""
+    ],
+    [
+     "Act_C_Nuc",
+     "0",
+     "5.05e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Active Calcineurin in nucleus [Act_C_Nuc]",
+     ""
+    ],
+    [
+     "NFAT_Pi_Nuc",
+     "0",
+     "0.0002272",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphorylated NFAT in nucleus [NFAT_Pi_Nuc]",
+     ""
+    ],
+    [
+     "NFAT_Act_C_Nuc",
+     "0",
+     "0.0009477",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NFAT Calcineurin complex in nucleus [NFAT_Act_C_Nuc]",
+     ""
+    ],
+    [
+     "NFAT_Pi_Act_C_Nuc",
+     "0",
+     "2.5e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphorylated NFAT Calcineurin complex in nucleus [NFAT_Pi_Act_C_Nuc]",
+     ""
+    ],
+    [
+     "Inact_C_Nuc",
+     "0",
+     "0.049198",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Inactive Calcineurin in nucleus [Inact_C_Nuc]",
+     ""
+    ],
+    [
+     "NFAT_Cyt",
+     "0",
+     "0.0001101",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NFAT_Cyt [NFAT_Cyt]",
+     ""
+    ],
+    [
+     "Act_C_Cyt",
+     "0",
+     "9.1e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Active Calcineurin in cytosol [Act_C_Cyt]",
+     ""
+    ],
+    [
+     "NFAT_Pi_Cyt",
+     "0",
+     "0.0094397",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphorylated NFAT in cytosol [NFAT_Pi_Cyt]",
+     ""
+    ],
+    [
+     "NFAT_Act_C_Cyt",
+     "0",
+     "6.1e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NFAT Calcineurin complex in cytosol [NFAT_Act_C_Cyt]",
+     ""
+    ],
+    [
+     "NFAT_Pi_Act_C_Cyt",
+     "0",
+     "2.2e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphorylated NFAT Calcineurin complex in cytosol [NFAT_Pi_Act_C_Cyt]",
+     ""
+    ],
+    [
+     "Inact_C_Cyt",
+     "0",
+     "0.0097108",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Inactive Calcineurin in cytosol [Inact_C_Cyt]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

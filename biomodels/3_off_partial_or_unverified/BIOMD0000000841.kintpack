@@ -1,0 +1,422 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:21:09.195768+00:00",
+ "description": "Dhawan2019 - Endogenous miRNA sponges mediate the generation of oscillatory dynamics for a non-coding RNA network\nBioModels BIOMD0000000841 (curated). SBML file: Dhawan2019.xml.\nSimulation: 0 to 100 time units (SED-ML: Dhawan2019.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): RAN_UNVERIFIED_PARTIAL\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] reaction 'miRNA_Activation_Transcription_Factor' not converted (delay)\n  [blocker] reaction 'TF_Protein_Translation' not converted (delay)\nRenamed species (Kintecus name = SBML id): M1 = M; P1 = P",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Dhawan2019 - Endogenous miRNA sponges mediate the generation of oscillatory dynamics for a non-coding RNA network  (BIOMD0000000841, curated BioModels; source file Dhawan2019.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sponge_Production_Basal",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "miRNA_Production_Basal",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TF_mRNA_Production_Basal",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>F",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sponge_Degradation",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "C==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "miRNA_Degradation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TF_mRNA_Degradation",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "F==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sponge_Inhibition_miRNA",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "M1+C==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TF_mRNA_Inhibition_miRNA",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "F+M1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TF_Protein_Degradation",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "P1==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "C",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C [C]",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M [M]",
+     ""
+    ],
+    [
+     "F",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "F [F]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P [P]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

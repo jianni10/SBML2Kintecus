@@ -1,0 +1,502 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:49:05.441507+00:00",
+ "description": "Arnold2011_Giersch1990_CalvinCycle\nBioModels BIOMD0000000390 (curated). SBML file: BIOMD0000000390_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000390_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.12e-06 of species peak (worst: ATP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'totRuBP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] RuBisCO: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for RuBP\n  [info] PGA_red term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PGA_red term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] TP_red: rate order differs from the stoichiometry; consumed on separate line(s) - TP: first order\n  [info] RuBP_reg: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] TPT term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] TPT term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ATP_S: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Arnold2011_Giersch1990_CalvinCycle  (BIOMD0000000390, curated BioModels; source file BIOMD0000000390_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RuBisCO",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cPGA,cPi,cRu5P,cTP:(-0.126*cATP-0.126*cPGA-0.126*cPi-0.126*cRu5P-0.126*cTP-0.252*sqrt(7.12*cATP+7.12*cPGA+7.12*cPi+7.12*cRu5P+7.12*cTP+(-0.5*cATP-0.5*cPGA-0.5*cPi-0.5*cRu5P-0.5*cTP+11.6)^2-113.92)+2.9232)]==>2PGA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RuBisCO (consumes RuBP)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cPGA,cPi,cRu5P,cTP:(0.126*cATP+0.126*cPGA+0.126*cPi+0.126*cRu5P+0.126*cTP+0.252*sqrt(7.12*cATP+7.12*cPGA+7.12*cPi+7.12*cRu5P+7.12*cTP+(-0.5*cATP-0.5*cPGA-0.5*cPi-0.5*cRu5P-0.5*cTP+11.6)^2-113.92)-2.9232)]==>RuBP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PGA_red term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+PGA+S[USER;cADP,cATP,cPGA,cPi,cTP:(3.49/(0.07142857142857142*cADP*cPi*cTP+1*(cATP+1e-30)*(cPGA+1e-30)+1))]==>TP+ADP+Pi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PGA_red term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TP+ADP+Pi+S[USER;cADP,cATP,cPGA,cPi,cTP:(0.2492857142857143/(1*cATP*cPGA+0.07142857142857142*(cADP+1e-30)*(cPi+1e-30)*(cTP+1e-30)+1))]==>ATP+PGA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TP_red",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTP:(1.06*cTP/(cTP+0.4))]==>2Pi+3Ru5P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TP_red (consumes TP)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TP+S[USER;cTP:(5.300000000000001/(1*cTP+0.4))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RuBP_reg",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+Ru5P+S[USER;cATP,cPi,cRu5P:(4.81/(0.5*cATP+0.05*cPi+1*(cATP+1e-30)*(cRu5P+1e-30)+0.025))]==>RuBP+ADP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TPT term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TP+S[USER;cPi,cTP:(4.619999999999999/(0.728*cPi+2.275*cTP+0.162))]==>Pi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TPT term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pi+S[USER;cPi,cTP:(0.66/(0.728*cPi+2.275*cTP+0.162))]==>TP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ATP_S",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pi+ADP+S[USER;cADP,cPi:(5.8801285588795/(0.5*cADP+0.08*cPi+1*(cADP+1e-30)*(cPi+1e-30)+0.04))]==>ATP",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "RuBP",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RuBP [RuBP]",
+     ""
+    ],
+    [
+     "PGA",
+     "0",
+     "2.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PGA [PGA]",
+     ""
+    ],
+    [
+     "TP",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TP [TP]",
+     ""
+    ],
+    [
+     "Ru5P",
+     "0",
+     "0.0500747384155456",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ru5P [Ru5P]",
+     ""
+    ],
+    [
+     "Pi",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pi [Pi]",
+     ""
+    ],
+    [
+     "ATP",
+     "0",
+     "0.68",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP [ATP]",
+     ""
+    ],
+    [
+     "ADP",
+     "0",
+     "0.82",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ADP [ADP]",
+     ""
+    ],
+    [
+     "E_RuBisCO",
+     "0",
+     "3.56",
+     "Y",
+     "0",
+     "No",
+     "3.56",
+     "RuBisCo [E_RuBisCO]",
+     ""
+    ],
+    [
+     "TPc",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "0.2",
+     "TPc [TPc]",
+     ""
+    ],
+    [
+     "Pic",
+     "0",
+     "1.4",
+     "Y",
+     "0",
+     "No",
+     "1.4",
+     "Pic [Pic]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

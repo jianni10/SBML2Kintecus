@@ -1,0 +1,687 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:34:10.098793+00:00",
+ "description": "Tang2020 - Estimation of transmission risk of COVID-19 and impact of public health interventions\nBioModels BIOMD0000000971 (curated). SBML file: Tang2020.xml.\nSimulation: 0 to 55 time units (SED-ML: Tang2020.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.44e-06 of species peak (worst: Susceptible)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Susceptible_to_Exposed term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - Exposed: zero order, signed\n  [info] Susceptible_to_Exposed term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - Exposed: zero order, signed\n  [info] time event(s) on 'c' encoded as time/value pairs in EV_P_C.TXT (SET)\n  [info] time event(s) on 'q' encoded as time/value pairs in EV_P_Q.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_c = c; p_q = q",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tang2020 - Estimation of transmission risk of COVID-19 and impact of public health interventions  (BIOMD0000000971, curated BioModels; source file Tang2020.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Exposed term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Asymptomatic+S[USER;cp_c:(2.1011e-8*cp_c)]==>Exposed+Asymptomatic",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Exposed term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Infected+S[USER;cp_c:(2.1011e-8*cp_c)]==>Exposed+Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Exposed term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAsymptomatic,cSusceptible,cp_c,cp_q:(2.1011e-8*cAsymptomatic*cSusceptible*cp_c*cp_q)]==>Susceptible",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Exposed term 3/4 (consumes Exposed)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAsymptomatic,cSusceptible,cp_c,cp_q:((-1*2.1011e-8*cAsymptomatic*cSusceptible*cp_c*cp_q))]==>Exposed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Exposed term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cInfected,cSusceptible,cp_c,cp_q:(2.1011e-8*cInfected*cSusceptible*cp_c*cp_q)]==>Susceptible",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Exposed term 4/4 (consumes Exposed)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cInfected,cSusceptible,cp_c,cp_q:((-1*2.1011e-8*cInfected*cSusceptible*cp_c*cp_q))]==>Exposed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Susceptible_quarantined term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Asymptomatic+S[USER;cp_c,cp_q:(0.999999978989*cp_c*cp_q)]==>Susceptible_quarantined+Asymptomatic",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Susceptible_quarantined term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Infected+S[USER;cp_c,cp_q:(0.999999978989*cp_c*cp_q)]==>Susceptible_quarantined+Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Quarantined_to_Susceptible",
+     ""
+    ],
+    [
+     "0.0714285",
+     "0",
+     "0",
+     "Susceptible_quarantined==>Susceptible",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Exposed_to_Infected",
+     ""
+    ],
+    [
+     "0.12404844738000001",
+     "0",
+     "0",
+     "Exposed==>Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Exposed_to_Asymptomatic",
+     ""
+    ],
+    [
+     "0.018808552620000002",
+     "0",
+     "0",
+     "Exposed==>Asymptomatic",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_to_Hospitalised",
+     ""
+    ],
+    [
+     "0.13266",
+     "0",
+     "0",
+     "Infected==>Hospitalised",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_to_Recovered",
+     ""
+    ],
+    [
+     "0.33029",
+     "0",
+     "0",
+     "Infected==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Asymptomatic_to_Recovered",
+     ""
+    ],
+    [
+     "0.13978",
+     "0",
+     "0",
+     "Asymptomatic==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hospitalised_to_Recovered",
+     ""
+    ],
+    [
+     "0.11624",
+     "0",
+     "0",
+     "Hospitalised==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_to_Deceased",
+     ""
+    ],
+    [
+     "1.7826e-5",
+     "0",
+     "0",
+     "Infected==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hospitalised_to_Deceased",
+     ""
+    ],
+    [
+     "1.7826e-5",
+     "0",
+     "0",
+     "Hospitalised==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Exposed_quarantined term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Asymptomatic+S[USER;cp_c,cp_q:(2.1011e-8*cp_c*cp_q)]==>Exposed_quarantined+Asymptomatic",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Exposed_quarantined term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Infected+S[USER;cp_c,cp_q:(2.1011e-8*cp_c*cp_q)]==>Exposed_quarantined+Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Exposed_quarantined_to_Hospitalised",
+     ""
+    ],
+    [
+     "0.1259",
+     "0",
+     "0",
+     "Exposed_quarantined==>Hospitalised",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Susceptible",
+     "0",
+     "11081000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible [Susceptible]",
+     ""
+    ],
+    [
+     "Exposed",
+     "0",
+     "105.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Exposed [Exposed]",
+     ""
+    ],
+    [
+     "Infected",
+     "0",
+     "27.679",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected [Infected]",
+     ""
+    ],
+    [
+     "Asymptomatic",
+     "0",
+     "53.539",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Asymptomatic [Asymptomatic]",
+     ""
+    ],
+    [
+     "Susceptible_quarantined",
+     "0",
+     "739",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible_quarantined [Susceptible_quarantined]",
+     ""
+    ],
+    [
+     "Exposed_quarantined",
+     "0",
+     "1.1642",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Exposed_quarantined [Exposed_quarantined]",
+     ""
+    ],
+    [
+     "Hospitalised",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hospitalised [Hospitalised]",
+     ""
+    ],
+    [
+     "Recovered",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Recovered [Recovered]",
+     ""
+    ],
+    [
+     "p_c",
+     "0",
+     "14.781",
+     "N",
+     "0",
+     "No",
+     "EV_P_C.TXT-SET",
+     "parameter c [c]",
+     ""
+    ],
+    [
+     "p_q",
+     "0",
+     "1.8887e-7",
+     "N",
+     "0",
+     "No",
+     "EV_P_Q.TXT-SET",
+     "parameter q [q]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.5000000005",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "55",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.5000000005",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_C.TXT",
+   "key": "O_EV_P_C.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "9",
+     "14.781"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_Q.TXT",
+   "key": "O_EV_P_Q.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "9",
+     "1.8887e-7"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

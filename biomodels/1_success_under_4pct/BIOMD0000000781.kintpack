@@ -1,0 +1,397 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:09:10.607003+00:00",
+ "description": "Wang2016/2 - oncolytic efficacy of M1 virus-SNT model\nBioModels BIOMD0000000781 (curated). SBML file: Wang2016_2.xml.\nSimulation: 0 to 800 time units (SED-ML: Wang2016_2.sedml), sampling 0.8.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.23e-06 of species peak (worst: S)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): S1 = S; T1 = T",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wang2016/2 - oncolytic efficacy of M1 virus-SNT model  (BIOMD0000000781, curated BioModels; source file Wang2016_2.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "nutrient_supply",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "source==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "nutrient_decay",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "S1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "nutrient_consumption_N",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "S1+N==>N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "nutrient_consumption_T",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "S1+T1==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "normal_cell_growth",
+     ""
+    ],
+    [
+     "0.16000000000000003",
+     "0",
+     "0",
+     "N+S1==>2N+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "normal_cell_death",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "N==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "S1+T1==>2T1+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_death",
+     ""
+    ],
+    [
+     "0.028",
+     "0",
+     "0",
+     "T1==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "S1",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S [S]",
+     ""
+    ],
+    [
+     "N",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N [N]",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T [T]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.8",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "800",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.8",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,692 @@
+{
+ "version": 3,
+ "created": "2026-10-25T09:43:53.089716+00:00",
+ "description": "Lee2010_ThrombinActivation_OneForm\nBioModels BIOMD0000000364 (curated). SBML file: BIOMD0000000364_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: BIOMD0000000364_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 30.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.82e-06 of species peak (worst: M1)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): E1 = E; P1 = P; M1 = M; M11 = M1; T1 = T",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lee2010_ThrombinActivation_OneForm  (BIOMD0000000364, curated BioModels; source file BIOMD0000000364_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1 term 1/2",
+     ""
+    ],
+    [
+     "33.4",
+     "0",
+     "0",
+     "E_P_1==>E1+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1 term 2/2",
+     ""
+    ],
+    [
+     "91.8",
+     "0",
+     "0",
+     "E1+P1==>E_P_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r2",
+     ""
+    ],
+    [
+     "82.4",
+     "0",
+     "0",
+     "E_P_1==>E1+M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3",
+     ""
+    ],
+    [
+     "3.12e-08",
+     "0",
+     "0",
+     "M1==>M11",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r4 term 1/2",
+     ""
+    ],
+    [
+     "1.58e-06",
+     "0",
+     "0",
+     "E_M1==>E1+M11",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r4 term 2/2",
+     ""
+    ],
+    [
+     "38.1",
+     "0",
+     "0",
+     "E1+M11==>E_M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r5 term 1/2",
+     ""
+    ],
+    [
+     "0.185",
+     "0",
+     "0",
+     "E_M==>E1+M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r5 term 2/2",
+     ""
+    ],
+    [
+     "151.5",
+     "0",
+     "0",
+     "E1+M1==>E_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r6",
+     ""
+    ],
+    [
+     "38.1",
+     "0",
+     "0",
+     "E_M1==>E1+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r7",
+     ""
+    ],
+    [
+     "209.9",
+     "0",
+     "0",
+     "E_M==>E1+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 term 1/2",
+     ""
+    ],
+    [
+     "21.8",
+     "0",
+     "0",
+     "E_P_2==>E1+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 term 2/2",
+     ""
+    ],
+    [
+     "5.16",
+     "0",
+     "0",
+     "E1+P1==>E_P_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9",
+     ""
+    ],
+    [
+     "32.3",
+     "0",
+     "0",
+     "E_P_2==>P2+E1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r10",
+     ""
+    ],
+    [
+     "7.23e-10",
+     "0",
+     "0",
+     "P2==>P21",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r11 term 1/2",
+     ""
+    ],
+    [
+     "4.46e-09",
+     "0",
+     "0",
+     "E_P21==>E1+P21",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r11 term 2/2",
+     ""
+    ],
+    [
+     "6.76e-08",
+     "0",
+     "0",
+     "E1+P21==>E_P21",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r12 term 1/2",
+     ""
+    ],
+    [
+     "2.66e-05",
+     "0",
+     "0",
+     "E_P2==>E1+P2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r12 term 2/2",
+     ""
+    ],
+    [
+     "4.7",
+     "0",
+     "0",
+     "E1+P2==>E_P2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r13",
+     ""
+    ],
+    [
+     "0.00599",
+     "0",
+     "0",
+     "E_P21==>E1+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r14",
+     ""
+    ],
+    [
+     "42.6",
+     "0",
+     "0",
+     "E_P2==>E1+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r15",
+     ""
+    ],
+    [
+     "2.39e-06",
+     "0",
+     "0",
+     "E_P_1==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r16",
+     ""
+    ],
+    [
+     "0.031",
+     "0",
+     "0",
+     "E_P_2==>T1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "E1",
+     "0",
+     "0.00015",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E [E]",
+     ""
+    ],
+    [
+     "E_P_1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E_P_1 [E_P_1]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P [P]",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M [M]",
+     ""
+    ],
+    [
+     "M11",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M1 [M1]",
+     ""
+    ],
+    [
+     "E_M1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E_M1 [E_M1]",
+     ""
+    ],
+    [
+     "E_M",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E_M [E_M]",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T [T]",
+     ""
+    ],
+    [
+     "E_P_2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E_P_2 [E_P_2]",
+     ""
+    ],
+    [
+     "P2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P2 [P2]",
+     ""
+    ],
+    [
+     "P21",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P21 [P21]",
+     ""
+    ],
+    [
+     "E_P21",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E_P21 [E_P21]",
+     ""
+    ],
+    [
+     "E_P2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E_P2 [E_P2]",
+     ""
+    ],
+    [
+     "E_P1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "E_P1 [E_P1]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-06",
+     "30",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "30",
+     "0",
+     "1e-08",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

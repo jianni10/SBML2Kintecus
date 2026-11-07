@@ -1,0 +1,483 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:39:38.498649+00:00",
+ "description": "Al-Tuwairqi2020 - Dynamics of cancer radiovirotherapy - Phase II treatment\nBioModels BIOMD0000001032 (curated). SBML file: Al-Tuwairqi2020 - Phase II radiovirotherapy treatment.xml.\nSimulation: 0 to 80 time units (SED-ML: Al-Tuwairqi2020 - Fig8 simulation.sedml), sampling 0.07936507936507936.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.91e-05 of species peak (worst: damaged_cancer_cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time event(s) on 'alpha_1' encoded as time/value pairs in EV_P_ALPHA_1.TXT (SET)\n  [info] time event(s) on 'alpha_2' encoded as time/value pairs in EV_P_ALPHA_2.TXT (SET)\n  [info] time event(s) on 'alpha_3' encoded as time/value pairs in EV_P_ALPHA_3.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_alpha_1 = alpha_1; p_alpha_2 = alpha_2; p_alpha_3 = alpha_3",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Al-Tuwairqi2020 - Dynamics of cancer radiovirotherapy - Phase II treatment  (BIOMD0000001032, curated BioModels; source file Al-Tuwairqi2020 - Phase II radiovirotherapy treatment.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cancer_cell_infection",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "uninfected_cancer_cells+free_virus==>infected_cancer_cells+free_virus",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "infected_cancer_cell_lysis",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "infected_cancer_cells==>free_virus",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "virus_infection_removal term 1/2",
+     ""
+    ],
+    [
+     "0.15",
+     "0",
+     "0",
+     "free_virus==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "virus_infection_removal term 2/2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "free_virus+uninfected_cancer_cells==>uninfected_cancer_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "radiotherapy_uninfected_cells",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "uninfected_cancer_cells+S[USER;cp_alpha_1:(1*cp_alpha_1)]==>damaged_cancer_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "radiotherapy_infected_cells",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "infected_cancer_cells+S[USER;cp_alpha_2:(1*cp_alpha_2)]==>damaged_cancer_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "damaged_cell_removal",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "damaged_cancer_cells+S[USER;cp_alpha_3:(1*cp_alpha_3)]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "uninfected_cancer_cells",
+     "0",
+     "0.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "uninfected_cancer_cells [uninfected_cancer_cells]",
+     ""
+    ],
+    [
+     "infected_cancer_cells",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "infected_cancer_cells [infected_cancer_cells]",
+     ""
+    ],
+    [
+     "free_virus",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "free_virus [free_virus]",
+     ""
+    ],
+    [
+     "damaged_cancer_cells",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "damaged_cancer_cells [damaged_cancer_cells]",
+     ""
+    ],
+    [
+     "p_alpha_1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "EV_P_ALPHA_1.TXT-SET",
+     "parameter alpha_1 [alpha_1]",
+     ""
+    ],
+    [
+     "p_alpha_2",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "EV_P_ALPHA_2.TXT-SET",
+     "parameter alpha_2 [alpha_2]",
+     ""
+    ],
+    [
+     "p_alpha_3",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "EV_P_ALPHA_3.TXT-SET",
+     "parameter alpha_3 [alpha_3]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.07936507945",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "80",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.07936507945",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_ALPHA_1.TXT",
+   "key": "O_EV_P_ALPHA_1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "35",
+     "0.5"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_ALPHA_2.TXT",
+   "key": "O_EV_P_ALPHA_2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "35",
+     "0.5"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_ALPHA_3.TXT",
+   "key": "O_EV_P_ALPHA_3.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "35",
+     "0.9"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

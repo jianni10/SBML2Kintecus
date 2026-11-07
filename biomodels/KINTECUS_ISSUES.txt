@@ -1,0 +1,141 @@
+Kintecus V2027 issues found while converting BioModels (minimal repros; all deterministic)
+=================================================================================
+
+FIXED in the build compiled 2026-10-25 12:23
+1. Species variables in a USER line read the wrong concentrations unless that line is the LAST USER line.
+   1  B+S[USER;cA:(0.1*cA)]==>NULL         A=2, D=1 pinned (SPECIES col 7); B=C=1; 10 s
+   1  C+S[USER;cD:(0.3*cD)]==>NULL
+   Original build: B(10)=0.7285. Fixed build: B(10)=0.135335 (exact).
+
+FIXED in the build compiled 2026-10-26 14:44 (and kept in 15:30)
+5. Function and constant names were recognized INSIDE USER variable names: 'pi' was substituted
+   (cnfatpinu1 -> cnfat3.14159265nu1), and a variable containing ln, exp, log, sqrt, abs, sin, cos, tan or
+   floor gave FATAL #999 (A+S[USER;cCln:(0.2*cCln)]==>Z). Now ln, exp, log, log10, sqrt, abs, sin, cos, tan,
+   floor, asin, acos, sinh, atn and pi all work at the start, middle or end of a name, also followed by
+   digits (cPI3K, cLN2). The converter no longer renames such species (Glucose was Glucxose1 before).
+   USER evaluation is also 3-7x faster (BIOMD0000000236: 154 s -> 23 s, BIOMD0000000015: 115 s -> 28 s);
+   96 packs that were too slow before now finish and match the SBML.
+
+FIXED in the build compiled 2026-10-26 15:30
+4. USER variable names were limited to 10 characters ('c' + a 9-character species name; longer gave
+   FATAL #999). Now variables up to 27 characters work - 'c' + a 26-character species name:
+       1 0 0 A+S[USER;cXXXXXXXXXXXXXXXXXXXXXXXXX1:(0.2*cXXXXXXXXXXXXXXXXXXXXXXXXX1)]==>Z   (27) correct
+       1 0 0 A+S[USER;cXXXXXXXXXXXXXXXXXXXXXXXXXX1:(...)]==>Z                                (28) FATAL #999
+   (if 27-character species names were intended, the limit is one short). The converter now keeps
+   species names to 26 characters, so 5,228 species in 422 packs got their SBML names back.
+   Packs built this way need the 2026-10-26 15:30 build or later.
+
+STILL PRESENT
+2. LONG USER EXPRESSIONS ARE MIS-READ - FATAL #999 or a silently WRONG value. This is the cause of every
+   FATAL #999 seen in the collection (35 packs) and of many stalls. Deck: A=1 free, B=0.5 pinned; 1 s;
+       1  0  0  A+S[USER;cA,cB:(EXPR)]==>Z
+   (a) EXPR = 16 copies of 0.001*cB^(cB+0.5) joined by '+' (287 characters). Correct rate 0.008 -> A(1)=0.992032.
+       Kintecus gives A(1)=0.993024 = exp(-0.007): two terms are dropped, no message. 18, 20, 24, 30, 36 copies
+       likewise lose exactly two terms. 14 copies (251 characters) -> FATAL #999. 10 copies (179) correct.
+   (b) Any '^' in the expression: correct up to 248 characters, FATAL #999 or wrong from ~252 on
+       (0.001*cB^2 followed by +0.0001 terms padded to length L: L=248 right, 252 FATAL, 256-268 wrong).
+       With more '^' the limit drops a little (8 powers: 244 already fails).
+   (c) Without '^' long expressions work (constant/variable terms right at 740 characters), but some
+       lengths still give FATAL #999 depending only on where the characters fall: the same 573-character
+       expression with 0..9 extra trailing zeros on one constant (same value) -> OK OK 999 999 OK OK 999 OK OK OK.
+       The case reported earlier (BIOMD0000000013: a 400-character expression evaluating to 0; changing
+       0.00064 -> 0.0006 fixed it) is the same issue.
+   It looks like a fixed ~255-character work buffer in the expression handling ('^' path), plus an
+   off-by-one/boundary effect elsewhere. Converter workaround: see README (shorter text, '^'-free powers,
+   short names, per-line evaluation check and re-padding); a longer buffer in Kintecus would remove it.
+3. At most 3 reactant entries per reaction line: A+B+C+D==>E (plain or with S[USER...]) gives FATAL #39
+   "exceeded the number of reactants". (Not line length - an earlier note blaming long lines was wrong.)
+   9 packs hit this; the converter now keeps lines to 3 reactants.
+6. A species referenced only inside a USER expression (in no reaction line) stalls the run or gives
+   FATAL #999 unless it is pinned with SPECIES column 7.
+7. A USER rate with a time discontinuity (step built from abs()) stalls the integrator at the step;
+   Constant File profiles handle the same discontinuity cleanly.
+8. Negative zero-order USER rates crawl/stall; negative product coefficients (B+-1A) are not parsed.
+9. '0 NULL+S[USER...]==>X' whose rate depends on X hides that dependence from the Jacobian; on a stiff
+   system (Oregonator) the result is wrong. Writing X on both sides (gross stoichiometry) fixes it.
+
+OPEN - not diagnosed
+10a. 2026-10-30: the Cash-Karp integrator (-INT:2, no Jacobian) was added as a third attempt on the 170 packs that
+    ran out of time with -INT:1 and -INT:5 (300 s; 600 s without the projected-time cut-off for the 19 closest).
+    It finishes some of them quickly where the Jacobian-based integrators crawl (e.g. BIOMD0000000496/497 in
+    2 s); on strongly stiff packs it stalls, or finishes with NaN/Inf (e.g. BIOMD0000000214, 571). All 170 packs
+    that ran out of time use USER rate lines (none of the 225 pure mass-action packs did), consistent with the
+    interpreted USER evaluation, multiplied by finite-difference Jacobians, being the cost.
+10b. FATAL #95 with -INT:2 (no message) on BIOMD0000000127, 582, 801; the packs are the repro decks.
+10c. 'SOFTWARE ERROR AT UFHS88' right after 'Running Simulation' on 13 large USER packs (470-2,691 lines,
+    400+ USER lines; e.g. BIOMD0000000332, 603-610) - likely an internal table limit.
+10. Integrator behavior on the folder-2 packs (deck verified, Kintecus too slow): all 200 were rerun with
+    nothing else running. -INT:1 does advance but would need 2,000-26,000 s (300 s allowed); both
+    -INT:5:59:1e-20 and plain -INT:5 produce no output row at all within 30 s on almost every one
+    (BIOMD0000000018: none in 140 s with -INT:5 at accuracy 1e-8 or 1e-10, while -INT:1 reached t=500).
+    Packs whose deck is verified correct but where Kintecus stalls at t=0 or is far too slow with both
+    -INT:1 and -INT:5:59:1e-20 (folder 2; FINAL_RESULTS_TABLE notes give the attempt details), and packs
+    where Kintecus completes but differs although the deck is verified (also folder 2). Example to start
+    with: BIOMD0000000202 (Ca2+ / ER channel; stalls at t=0 on both integrators).
+
+INTERFACE NOTES
+11. With -i, a FATAL number is written only to KERR.OUT (KDONE.OUT: "FATAL ERROR ENCOUNTERED!!").
+    KRUN.TMP only says "Kintecus is running...." - a current simulated time there would let external tools
+    tell "slow" from "stuck" exactly (CONC.TXT growth is used now). -i needs no key presses at all.
+12. Kintecus enforces at least ~61 output rows; Constant File / -SET / -ADD changes take effect at the
+    first output step at or after the profile time, so event times must lie on the sampling grid to be
+    exact - and the grid is reached by accumulating the sampling interval, so an interval like 1/7 written
+    exactly (0.14285714285714285) makes 7 steps fall a hair short of t = 1 and the change lands one step
+    late (BIOMD0000000818: 0.002% -> 99.9% off). The converter now writes the interval rounded UP in the
+    10th digit (0.1428571429). A tolerance of ~1e-12 x interval in Kintecus' "has the profile time been
+    reached" test would remove the trap. Accumulation does it too: 100 x 0.1 = 9.99999999999998 < 10, so
+    with any interval that is not exact in binary a change at t=10 also lands one step late. The converter
+    now writes the interval a hair long when a deck has profiles (0.1 -> 0.1000000002); this moved
+    BIOMD0000000001, 120, 318, 404, 527, 563, 601, 806, 818, 820, 918, 955 and 960 to PASS.
+15. "Run once and hold" profiles (negative spacing) with -SET or -ADD keep re-applying the LAST entry every
+    period after the profile ends: a -SET profile 0, 5 at spacing -2 sets 5 at t = 2, 4, 6, 8, 10, ...;
+    -ADD keeps adding. Plain (pinned) profiles hold correctly. The converter ends -ADD profiles with a 0;
+    -SET cannot be worked around in the deck. BIOMD0000000077, 281, 337, 1019 and 1020 differ for this
+    reason (their decks reproduce the SBML; Kintecus diverges at twice the profile spacing).
+    Since 2026-11-05 the packs use Time/value-pair files (item 21), which apply each value once; the five
+    -SET packs affected (0077, 0281, 0337, 1019, 1020) now match the SBML within 0.002%.
+16. (2026-11-01) A variable driven below zero stalls the integration. Repro: repros/NEG_FROM_ZERO_stall/
+    (A = 0, B = 1.25; -0.8275 source==>A; 0.678 B==>sink; 1 source+S[USER;cB:(0.662*cB)]==>A; exact
+    A(10) = -7.0559). -INT:1, -INT:2 and -INT:5 produce no row after t = 0. -INT:5:10:0 (DASPK without the
+    non-negativity constraint) gives A(10) = -7.05589, then loops at the end ("AFTER DASPK, IDID= -33",
+    TEMP 9.99999999999999 vs RTEMP 10) and never writes KDONE.OUT. Many SBML models have state variables
+    that go to or below zero (parameters with rate rules such as deviations from a basal level); the packs
+    now write those terms exactly (signed lines) and also try -INT:5:10:0. See repros/README_NEGATIVE_VALUES.txt.
+17. (2026-11-01) -INT:5 and -INT:2 can run to the end time with NaN in CONC.TXT and only Warning #6 in
+    KWARN.OUT (e.g. BIOMD0000000180, 215, 568, 675, 896, 961 before the 11-01 converter changes). A FATAL
+    error there would be clearer.
+18. (2026-11-01) OUTC[] with a one-character factor at the END of a term fails while reading SPECIES.DAT:
+    OUTC[As;-source*2] or OUTC[As;-source*5] -> "*ERROR* Soft error u82n (M+1).GE.FIRSTN(temp2)" and no
+    output; OUTC[As;-source*20], OUTC[As;-2*source] and OUTC[As;-source*2.0] work. The packs write the factor
+    first (OUTC[X_o;-2*source]).
+19. (2026-11-02) A Constant File profile can hold at most 20,002 values (20,003 lines with the spacing line):
+    one more value gives FATAL Error #94 while reading SPECIES.DAT. The packs keep profiles at or under
+    20,001 values and stop a profile just after its last event (negative spacing holds the last value).
+    BIOMD0000001029 needs 36,002 values, so it stays blocked until the limit is raised (40,000 would cover it).
+    Since 2026-11-05 BIOMD0000001029 uses a Time/value-pair file instead and matches the SBML (0.00047%).
+20. (2026-11-02) Far into a long profile, an -ADD entry can be applied one interval late (profile clock in
+    limited precision?). Repro: repros/PROFILE_ADD_TIMING (spacing -0.1, 1.0 every 500th entry): the steps
+    show at 100.2-300.2 and 1250.2-1650.2 instead of x.1. BIOMD0000000537: the 1344 h dose lands 0.1 h late
+    (99% difference on one row; 0.6% elsewhere), so it is reported as MISMATCH.
+    Since 2026-11-05 the packs use Time/value-pair files (item 21); BIOMD0000000537 now matches (0.00046%).
+21. FIXED in the build compiled 2026-11-05 08:40:46 (md5 9b45994d...): Time/value-pair Constant Files (first
+    line contains "Time", pairs until END). On the 11-03 builds only the FIRST pair was applied, a single pair
+    could be skipped (14 s pair lost in a 60 s run) and a pair below the first step (1e-12) was never applied.
+    Now correct under -INT:1, -INT:5 and -INT:2 for -ADD, -SET, 1,000 pairs in one file and 50 pair files.
+    Still open (minor): a PINNED pair file (no -ADD/-SET) reads -987654000 before its first pair instead of
+    the SPECIES.DAT value; the packs never use pinned pair files. Repros: repros/TIMEPAIRS_*,
+    repros/README_1105_BUILD.txt.
+23. (2026-11-05, question) After each Time/value pair Kintecus writes a row at the pair time and restarts the
+    output grid from it (pair at 14, step 0.98: rows 13.77, 14.0, 14.98, ... instead of 13.77, 14.75, ...);
+    spacing-format profiles keep the grid. Values are correct; row times move. The references in this
+    release are written at the times Kintecus prints (if the grid changes, kintcheck interpolates between
+    rows, which is inexact across a dose). Repro: repros/TIMEPAIRS_OUTPUT_GRID (pairs/ and spacing/).
+22. FIXED in the build compiled 2026-11-03 16:34:03: USER rates were re-parsed on every call on the 11-03
+    12:39/13:35 builds (interpreter cache key 1,024 characters < 2,159-character caller buffer; earlier builds
+    thrashed a 64-entry round-robin cache). New hashed cache: same output bit-for-bit, 33-64x faster on USER
+    models (BIOMD0000000010, 0100, 0255, 1028). Repro: repros/SPEED_USER_BIOMD0000000010.
+13. Under Wine, Kintecus.exe is re-parented away from its launcher; killing the launcher leaves it running
+    (the harness here now kills it by working directory). Not an issue on Windows.
+14. FIXED in the build compiled 2026-11-03 16:34:03: the reaction field was limited to 897 characters; it is
+    now 2,153 (2,154 -> FATAL #24). Repros: repros/REACTION_FIELD_897, REACTION_FIELD_898. The packs keep
+    reaction comments on a '#' line above each reaction (longest reaction field in the collection: 2,148).

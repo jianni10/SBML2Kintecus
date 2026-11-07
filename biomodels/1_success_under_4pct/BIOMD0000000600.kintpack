@@ -1,0 +1,982 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:05:16.681393+00:00",
+ "description": "Celli\u00e8re2011 - Plasticity of TGF-\u03b2 Signalling\nBioModels BIOMD0000000600 (curated). SBML file: BIOMD0000000600_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000600_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.94e-06 of species peak (worst: I_Smad_TGFb_TGFbR_P)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Celli\u00e8re2011 - Plasticity of TGF-\u03b2 Signalling  (BIOMD0000000600, curated BioModels; source file BIOMD0000000600_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1",
+     ""
+    ],
+    [
+     "0.00446",
+     "0",
+     "0",
+     "TGFb_TGFbR==>TGFbR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r2",
+     ""
+    ],
+    [
+     "0.0008780000000000001",
+     "0",
+     "0",
+     "TGFbR==>TGFb_TGFbR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3",
+     ""
+    ],
+    [
+     "0.324",
+     "0",
+     "0",
+     "TGFb_TGFbR==>TGFb_TGFbR_P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r4",
+     ""
+    ],
+    [
+     "0.00192",
+     "0",
+     "0",
+     "TGFb_TGFbR_P==>TGFb_TGFbR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r5",
+     ""
+    ],
+    [
+     "0.000549",
+     "0",
+     "0",
+     "I_Smad+TGFb_TGFbR_P==>I_Smad_TGFb_TGFbR_P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r6",
+     ""
+    ],
+    [
+     "1.29e-5",
+     "0",
+     "0",
+     "I_Smad_TGFb_TGFbR_P==>TGFb_TGFbR+I_Smad",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r7",
+     ""
+    ],
+    [
+     "9.35e-6",
+     "0",
+     "0",
+     "Smad+TGFb_TGFbR_P==>Smad_P+TGFb_TGFbR_P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSmad:(0.0104*cSmad)]==>Smad_N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 (volume 2.3)",
+     ""
+    ],
+    [
+     "0.004521739130434783",
+     "0",
+     "0",
+     "Smad==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9 (volume 1)",
+     ""
+    ],
+    [
+     "0.00075",
+     "0",
+     "0",
+     "Smad_N==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9 (volume 2.3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSmad_N:(0.00032608695652173916*cSmad_N)]==>Smad",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r10",
+     ""
+    ],
+    [
+     "5.12e-8",
+     "0",
+     "0",
+     "Smad_P+Smad_P==>Smad_P_Smad_P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r11",
+     ""
+    ],
+    [
+     "0.00923",
+     "0",
+     "0",
+     "Smad_P_Smad_P==>2Smad_P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r12",
+     ""
+    ],
+    [
+     "5.12e-8",
+     "0",
+     "0",
+     "Smad_P+CoSmad==>Smad_P_CoSmad",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r13",
+     ""
+    ],
+    [
+     "0.00923",
+     "0",
+     "0",
+     "Smad_P_CoSmad==>Smad_P+CoSmad",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r14 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCoSmad:(0.0104*cCoSmad)]==>CoSmad_N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r14 (volume 2.3)",
+     ""
+    ],
+    [
+     "0.004521739130434783",
+     "0",
+     "0",
+     "CoSmad==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r15 (volume 1)",
+     ""
+    ],
+    [
+     "0.00075",
+     "0",
+     "0",
+     "CoSmad_N==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r15 (volume 2.3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCoSmad_N:(0.00032608695652173916*cCoSmad_N)]==>CoSmad",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r16 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSmad_P_Smad_P:(0.00053352*cSmad_P_Smad_P)]==>Smad_P_Smad_P_N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r16 (volume 2.3)",
+     ""
+    ],
+    [
+     "0.00023196521739130436",
+     "0",
+     "0",
+     "Smad_P_Smad_P==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r17 (volume 2.3)",
+     ""
+    ],
+    [
+     "0.004521739130434783",
+     "0",
+     "0",
+     "Smad_P==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r17 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSmad_P:(0.0104*cSmad_P)]==>Smad_P_N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r18 (volume 2.3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSmad_P_N:(0.00032608695652173916*cSmad_P_N)]==>Smad_P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r18 (volume 1)",
+     ""
+    ],
+    [
+     "0.00075",
+     "0",
+     "0",
+     "Smad_P_N==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r19 (volume 2.3)",
+     ""
+    ],
+    [
+     "0.00023196521739130436",
+     "0",
+     "0",
+     "Smad_P_CoSmad==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r19 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSmad_P_CoSmad:(0.00053352*cSmad_P_CoSmad)]==>Smad_P_CoSmad_N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r20",
+     ""
+    ],
+    [
+     "0.00164",
+     "0",
+     "0",
+     "Smad_P_N==>Smad_N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r21",
+     ""
+    ],
+    [
+     "5.12e-8",
+     "0",
+     "0",
+     "Smad_P_N+Smad_P_N==>Smad_P_Smad_P_N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r22",
+     ""
+    ],
+    [
+     "0.00923",
+     "0",
+     "0",
+     "Smad_P_Smad_P_N==>2Smad_P_N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r23",
+     ""
+    ],
+    [
+     "5.12e-8",
+     "0",
+     "0",
+     "CoSmad_N+Smad_P_N==>Smad_P_CoSmad_N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r24",
+     ""
+    ],
+    [
+     "0.00923",
+     "0",
+     "0",
+     "Smad_P_CoSmad_N==>CoSmad_N+Smad_P_N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r25",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSmad_P_CoSmad_N:(0.038*cSmad_P_CoSmad_N^2.06/(cSmad_P_CoSmad_N^2.06+994.507387701449))]==>I_Smad_mRNA1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r26 (volume 2.3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cI_Smad_mRNA1:(0.009304347826086957*cI_Smad_mRNA1)]==>I_Smad_mRNA2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r26 (volume 1)",
+     ""
+    ],
+    [
+     "0.0214",
+     "0",
+     "0",
+     "I_Smad_mRNA1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r27",
+     ""
+    ],
+    [
+     "8.05e-5",
+     "0",
+     "0",
+     "I_Smad_mRNA2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r28",
+     ""
+    ],
+    [
+     "0.0434",
+     "0",
+     "0",
+     "I_Smad_mRNA2==>I_Smad+I_Smad_mRNA2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r29",
+     ""
+    ],
+    [
+     "0.000412",
+     "0",
+     "0",
+     "I_Smad==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "TGFbR",
+     "0",
+     "1010.0000000000001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TGFbR [TGFbR]",
+     ""
+    ],
+    [
+     "TGFb_TGFbR",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TGFb_TGFbR [TGFb_TGFbR]",
+     ""
+    ],
+    [
+     "TGFb_TGFbR_P",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TGFb_TGFbR_P [TGFb_TGFbR_P]",
+     ""
+    ],
+    [
+     "I_Smad_TGFb_TGFbR_P",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I_Smad_TGFb_TGFbR_P [I_Smad_TGFb_TGFbR_P]",
+     ""
+    ],
+    [
+     "Smad",
+     "0",
+     "7000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad [Smad]",
+     ""
+    ],
+    [
+     "Smad_P",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad_P [Smad_P]",
+     ""
+    ],
+    [
+     "CoSmad",
+     "0",
+     "12000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CoSmad [CoSmad]",
+     ""
+    ],
+    [
+     "Smad_P_Smad_P",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad_P_Smad_P [Smad_P_Smad_P]",
+     ""
+    ],
+    [
+     "Smad_P_CoSmad",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad_P_CoSmad [Smad_P_CoSmad]",
+     ""
+    ],
+    [
+     "I_Smad_mRNA2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I_Smad_mRNA2 [I_Smad_mRNA2]",
+     ""
+    ],
+    [
+     "I_Smad",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I_Smad [I_Smad]",
+     ""
+    ],
+    [
+     "Smad_N",
+     "0",
+     "82000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad_N [Smad_N]",
+     ""
+    ],
+    [
+     "Smad_P_Smad_P_N",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad_P_Smad_P_N [Smad_P_Smad_P_N]",
+     ""
+    ],
+    [
+     "Smad_P_N",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad_P_N [Smad_P_N]",
+     ""
+    ],
+    [
+     "Smad_P_CoSmad_N",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad_P_CoSmad_N [Smad_P_CoSmad_N]",
+     ""
+    ],
+    [
+     "CoSmad_N",
+     "0",
+     "135000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CoSmad_N [CoSmad_N]",
+     ""
+    ],
+    [
+     "I_Smad_mRNA1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I_Smad_mRNA1 [I_Smad_mRNA1]",
+     ""
+    ],
+    [
+     "TGFb",
+     "0",
+     "460",
+     "Y",
+     "0",
+     "No",
+     "460",
+     "TGFb [TGFb]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

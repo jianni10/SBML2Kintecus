@@ -1,0 +1,578 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:31:42.012386+00:00",
+ "description": "Landberg2009 - Alkylresorcinol Dose Response\nBioModels BIOMD0000000948 (curated). SBML file: Landberg2009.xml.\nSimulation: 0 to 25 time units (SED-ML: Landberg2009.sedml), sampling 0.025.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.34e-06 of species peak (worst: AR_Central)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'F1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'F2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - AR_A1: zero order, signed\n  [info] reaction term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - AR_A1: zero order, signed\n  [info] reaction_1 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - AR_A2: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Landberg2009 - Alkylresorcinol Dose Response  (BIOMD0000000948, curated BioModels; source file Landberg2009.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 1/4",
+     ""
+    ],
+    [
+     "0.052",
+     "0",
+     "0",
+     "AR_Dose==>AR_A1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAR_Dose,cSW3:(0.052*cAR_Dose*cSW3)]==>AR_Dose",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 2/4 (consumes AR_A1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAR_Dose,cSW3:((-1*0.052*cAR_Dose*cSW3))]==>AR_A1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AR_Dose+S[USER;cSW1,cSW2:(0.04800000000000001*cSW1*cSW2)]==>AR_A1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAR_Dose,cSW1,cSW2,cSW3:(0.04800000000000001*cAR_Dose*cSW1*cSW2*cSW3)]==>AR_Dose",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 4/4 (consumes AR_A1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAR_Dose,cSW1,cSW2,cSW3:((-1*0.04800000000000001*cAR_Dose*cSW1*cSW2*cSW3))]==>AR_A1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 1/2",
+     ""
+    ],
+    [
+     "0.048",
+     "0",
+     "0",
+     "AR_Dose==>AR_A2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAR_Dose,cSW2:(0.048*cAR_Dose*cSW2)]==>AR_Dose",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 2/2 (consumes AR_A2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAR_Dose,cSW2:((-1*0.048*cAR_Dose*cSW2))]==>AR_A2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "AR_A1==>AR_Central",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3",
+     ""
+    ],
+    [
+     "1.8",
+     "0",
+     "0",
+     "AR_A2==>AR_Central",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "0.32",
+     "0",
+     "0",
+     "source==>AR_Central",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "AR_Central==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "AR_A1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AR [AR_A1]",
+     ""
+    ],
+    [
+     "AR_A2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AR [AR_A2]",
+     ""
+    ],
+    [
+     "AR_Central",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AR [AR_Central]",
+     ""
+    ],
+    [
+     "AR_Dose",
+     "0",
+     "485",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AR_Dose [AR_Dose]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 0.9 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time switch at 4.7 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW3.TXT-SET",
+     "time switch at 0.9 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.02500000003",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "25",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.02500000003",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.9",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "4.7",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW3.TXT",
+   "key": "O_SW3.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.9",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,564 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:13:45.671314+00:00",
+ "description": "Gerard2010 - Progression of mammalian cell cycle by successive activation of various cyclin cdk complexes\nBioModels BIOMD0000000941 (curated). SBML file: gerard2010.xml.\nSimulation: 0 to 100 time units (SED-ML: gerard2010.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.08e-06 of species peak (worst: Cdc20_active)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R2_Degradation_of_cyclin_D_Cdk4_6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R3_E2F_activation term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R3_E2F_activation term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R4_E2F_inactivation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R6_Degradation_of_cyclin_E_Cdk2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R8_Degradation_of_cyclin_A_Cdk2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R10_Degradation_of_cyclin_B_Cdk1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R11_Phosphorylation_and_activation_of_Cdc20 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R12_Dephosphorylation_and_inactivation_of_Cdc20: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): transcriptionfactorE2Fact1 = transcription_factor_E2F_active",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Gerard2010 - Progression of mammalian cell cycle by successive activation of various cyclin cdk complexes  (BIOMD0000000941, curated BioModels; source file gerard2010.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1_Synthesis_of_cyclin_D_Cdk4_6",
+     ""
+    ],
+    [
+     "0.1590909090909091",
+     "0",
+     "0",
+     "source==>cyclin_D_Cdk4_6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2_Degradation_of_cyclin_D_Cdk4_6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cyclin_D_Cdk4_6+S[USER;ccyclin_D_Cdk4_6:(0.245/(1*ccyclin_D_Cdk4_6+0.1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3_E2F_activation term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cyclin_D_Cdk4_6+S[USER;ctranscriptionfactorE2Fact1:(2.415/(3.01-ctranscriptionfactorE2Fact1))]==>transcriptionfactorE2Fact1+cyclin_D_Cdk4_6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3_E2F_activation term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cyclin_E_Cdk2+S[USER;ctranscriptionfactorE2Fact1:(2.415/(3.01-ctranscriptionfactorE2Fact1))]==>transcriptionfactorE2Fact1+cyclin_E_Cdk2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3_E2F_activation term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "transcriptionfactorE2Fact1+cyclin_D_Cdk4_6+S[USER;ctranscriptionfactorE2Fact1:((-1*0.805/(1*ctranscriptionfactorE2Fact1-3.01)))]==>cyclin_D_Cdk4_6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3_E2F_activation term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "transcriptionfactorE2Fact1+cyclin_E_Cdk2+S[USER;ctranscriptionfactorE2Fact1:((-1*0.805/(1*ctranscriptionfactorE2Fact1-3.01)))]==>cyclin_E_Cdk2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4_E2F_inactivation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "transcriptionfactorE2Fact1+cyclin_A_Cdk2+S[USER;ctranscriptionfactorE2Fact1:(0.7/(1*ctranscriptionfactorE2Fact1+0.01))]==>cyclin_A_Cdk2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5_Synthesis_of_cyclin_E_Cdk2",
+     ""
+    ],
+    [
+     "0.21",
+     "0",
+     "0",
+     "transcriptionfactorE2Fact1==>cyclin_E_Cdk2+transcriptionfactorE2Fact1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6_Degradation_of_cyclin_E_Cdk2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cyclin_E_Cdk2+cyclin_A_Cdk2+S[USER;ccyclin_E_Cdk2:(0.35/(1*ccyclin_E_Cdk2+0.1))]==>cyclin_A_Cdk2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7_Synthesis_of_cyclin_A_Cdk2",
+     ""
+    ],
+    [
+     "0.175",
+     "0",
+     "0",
+     "transcriptionfactorE2Fact1==>cyclin_A_Cdk2+transcriptionfactorE2Fact1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8_Degradation_of_cyclin_A_Cdk2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cyclin_A_Cdk2+Cdc20_active+S[USER;ccyclin_A_Cdk2:(0.245/(1*ccyclin_A_Cdk2+0.1))]==>Cdc20_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9_Synthesis_of_cyclin_B_Cdk1",
+     ""
+    ],
+    [
+     "0.21",
+     "0",
+     "0",
+     "cyclin_A_Cdk2==>cyclin_B_Cdk1+cyclin_A_Cdk2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10_Degradation_of_cyclin_B_Cdk1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cyclin_B_Cdk1+Cdc20_active+S[USER;ccyclin_B_Cdk1:(0.28/(1*ccyclin_B_Cdk1+0.005))]==>Cdc20_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11_Phosphorylation_and_activation_of_Cdc20 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cyclin_B_Cdk1+S[USER;cCdc20_active:(1.05/(6-cCdc20_active))]==>Cdc20_active+cyclin_B_Cdk1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11_Phosphorylation_and_activation_of_Cdc20 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20_active+cyclin_B_Cdk1+S[USER;cCdc20_active:((-1*0.21/(1*cCdc20_active-6)))]==>cyclin_B_Cdk1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12_Dephosphorylation_and_inactivation_of_Cdc20",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20_active+S[USER;cCdc20_active:(0.35/(1*cCdc20_active+1))]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "cyclin_D_Cdk4_6",
+     "0",
+     "0.7205",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cyclin D Cdk4-6 [cyclin_D_Cdk4_6]",
+     ""
+    ],
+    [
+     "transcriptionfactorE2Fact1",
+     "0",
+     "2.4855",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "transcription factor E2F active [transcription_factor_E2F_active]",
+     ""
+    ],
+    [
+     "cyclin_E_Cdk2",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cyclin E Cdk2 [cyclin_E_Cdk2]",
+     ""
+    ],
+    [
+     "cyclin_A_Cdk2",
+     "0",
+     "2.6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cyclin A Cdk2 [cyclin_A_Cdk2]",
+     ""
+    ],
+    [
+     "cyclin_B_Cdk1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cyclin B Cdk1 [cyclin_B_Cdk1]",
+     ""
+    ],
+    [
+     "Cdc20_active",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdc20 active [Cdc20_active]",
+     ""
+    ],
+    [
+     "E2F_total",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "3",
+     "E2F_total [E2F_total]",
+     ""
+    ],
+    [
+     "Cdc20_total",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "5",
+     "Cdc20_total [Cdc20_total]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

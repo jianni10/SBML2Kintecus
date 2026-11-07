@@ -1,0 +1,536 @@
+{
+ "version": 3,
+ "created": "2026-10-26T22:47:45.035348+00:00",
+ "description": "Ito2019 - gefitnib resistance of lung adenocarcinoma caused by MET amplification\nBioModels BIOMD0000000827 (curated). SBML file: Ito2019 - gefitnib resistance of lung adenocarcinoma caused by MET amplification.xml.\nSimulation: 0 to 200 time units (SED-ML: Ito2019 - gefitnib resistance of lung adenocarcinoma caused by MET amplification.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.74e-06 of species peak (worst: X_4_EGFR_EGFR)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ito2019 - gefitnib resistance of lung adenocarcinoma caused by MET amplification  (BIOMD0000000827, curated BioModels; source file Ito2019 - gefitnib resistance of lung adenocarcinoma caused by MET amplification.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "EGFR_EGFR_formation term 1/2",
+     ""
+    ],
+    [
+     "11500000000",
+     "0",
+     "0",
+     "X_1_EGFR+X_1_EGFR==>X_4_EGFR_EGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "EGFR_EGFR_formation term 2/2",
+     ""
+    ],
+    [
+     "1.24",
+     "0",
+     "0",
+     "X_4_EGFR_EGFR==>2X_1_EGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ErbB3_ErbB3_formation term 1/2",
+     ""
+    ],
+    [
+     "950000000000",
+     "0",
+     "0",
+     "X_2_ErbB3+X_2_ErbB3==>X_6_ErbB3_ErbB3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ErbB3_ErbB3_formation term 2/2",
+     ""
+    ],
+    [
+     "1.08",
+     "0",
+     "0",
+     "X_6_ErbB3_ErbB3==>2X_2_ErbB3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "EGFR_ErbB3_formation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X_5_EGFR_ErbB3==>X_2_ErbB3+X_1_EGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "EGFR_ErbB3_formation term 2/2",
+     ""
+    ],
+    [
+     "240000000000",
+     "0",
+     "0",
+     "X_2_ErbB3+X_1_EGFR==>X_5_EGFR_ErbB3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MET_MET_formation term 1/2",
+     ""
+    ],
+    [
+     "1300000000000",
+     "0",
+     "0",
+     "X_3_MET+X_3_MET==>X_7_MET_MET",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MET_MET_formation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X_7_MET_MET==>2X_3_MET",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MET_MET_transformation term 1/2",
+     ""
+    ],
+    [
+     "0.045",
+     "0",
+     "0",
+     "X_7_MET_MET==>X_10_p_MET_MET",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MET_MET_transformation term 2/2",
+     ""
+    ],
+    [
+     "0.028",
+     "0",
+     "0",
+     "X_10_p_MET_MET==>X_7_MET_MET",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "phosphorylation_1",
+     ""
+    ],
+    [
+     "10000000000",
+     "0",
+     "0",
+     "X_5_EGFR_ErbB3+X_10_p_MET_MET==>X_10_p_MET_MET+X_8_p_EGFR_ErbB3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "phosphorylation_2",
+     ""
+    ],
+    [
+     "10000000000",
+     "0",
+     "0",
+     "X_6_ErbB3_ErbB3+X_10_p_MET_MET==>X_10_p_MET_MET+X_9_p_ErbB3_ErbB3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "gefitinib_1",
+     ""
+    ],
+    [
+     "0.028",
+     "0",
+     "0",
+     "X_8_p_EGFR_ErbB3==>X_5_EGFR_ErbB3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "gefitnib_2",
+     ""
+    ],
+    [
+     "0.028",
+     "0",
+     "0",
+     "X_9_p_ErbB3_ErbB3==>X_6_ErbB3_ErbB3",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "X_1_EGFR",
+     "0",
+     "3.6e-12",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X_1(EGFR) [X_1_EGFR]",
+     ""
+    ],
+    [
+     "X_4_EGFR_EGFR",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X_4(EGFR/EGFR) [X_4_EGFR_EGFR]",
+     ""
+    ],
+    [
+     "X_2_ErbB3",
+     "0",
+     "5.5e-14",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X_2(ErbB3) [X_2_ErbB3]",
+     ""
+    ],
+    [
+     "X_6_ErbB3_ErbB3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X_6(ErbB3/ErbB3) [X_6_ErbB3_ErbB3]",
+     ""
+    ],
+    [
+     "X_5_EGFR_ErbB3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X_5(EGFR/ErbB3) [X_5_EGFR_ErbB3]",
+     ""
+    ],
+    [
+     "X_3_MET",
+     "0",
+     "7.4e-12",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X_3(MET) [X_3_MET]",
+     ""
+    ],
+    [
+     "X_7_MET_MET",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X_7(MET/MET) [X_7_MET_MET]",
+     ""
+    ],
+    [
+     "X_10_p_MET_MET",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X_10(p-MET/MET) [X_10_p_MET_MET]",
+     ""
+    ],
+    [
+     "X_8_p_EGFR_ErbB3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X_8(p-EGFR/ErbB3) [X_8_p_EGFR_ErbB3]",
+     ""
+    ],
+    [
+     "X_9_p_ErbB3_ErbB3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X_9(p-ErbB3/ErbB3) [X_9_p_ErbB3_ErbB3]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

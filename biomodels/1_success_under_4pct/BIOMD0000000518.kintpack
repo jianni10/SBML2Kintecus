@@ -1,0 +1,772 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:52:59.342631+00:00",
+ "description": "Smallbone2013 - Colon Crypt cycle - Version 2\nBioModels BIOMD0000000518 (curated). SBML file: BIOMD0000000518_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000518_url.sedml (auto-generated placeholder); duration chosen from the dynamics: no dynamics), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.80e-06 of species peak (worst: N1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R01 term 2/5: rate order differs from the stoichiometry; consumed on separate line(s) - N1: zero order, signed\n  [info] R01 term 4/5: rate order differs from the stoichiometry; consumed on separate line(s) - N1: zero order, signed\n  [info] R01 term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - N1: zero order, signed\n  [info] R00 term 4/10: rate order differs from the stoichiometry; consumed on separate line(s) - N0: first order\n  [info] R00 term 5/10: rate order differs from the stoichiometry; consumed on separate line(s) - N0: first order\n  [info] R00 term 6/10: rate order differs from the stoichiometry; consumed on separate line(s) - N0: first order\n  [info] R00 term 7/10: rate order differs from the stoichiometry; consumed on separate line(s) - N0: first order\n  [info] R12 term 2/5: rate order differs from the stoichiometry; consumed on separate line(s) - N2: zero order, signed\n  [info] R12 term 3/5: rate order differs from the stoichiometry; consumed on separate line(s) - N2: zero order, signed\n  [info] R12 term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - N2: zero order, signed\n  [info] R11 term 3/5: rate order differs from the stoichiometry; consumed on separate line(s) - N1: first order\n  [info] R11 term 4/5: rate order differs from the stoichiometry; consumed on separate line(s) - N1: first order\n  [info] R11 term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - N1: first order\n  [info] R03 term 2/5: rate order differs from the stoichiometry; consumed on separate line(s) - N3: zero order, signed\n  [info] R03 term 3/5: rate order differs from the stoichiometry; consumed on separate line(s) - N3: zero order, signed\n  [info] R03 term 4/5: rate order differs from the stoichiometry; consumed on separate line(s) - N3: zero order, signed\n  [info] R03 term 5/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Smallbone2013 - Colon Crypt cycle - Version 2  (BIOMD0000000518, curated BioModels; source file BIOMD0000000518_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R0X",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N0+S[USER;cN3:(0.31419642858/(cN3+1.5709821429))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R01 term 1/5",
+     ""
+    ],
+    [
+     "1.6302566267382808",
+     "0",
+     "0",
+     "N0==>N0+N1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R01 term 2/5 (consumes N1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN0:((-1*0.013585471889485673*cN0^2))]==>N1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R01 term 3/5",
+     ""
+    ],
+    [
+     "0.013585471889485673",
+     "0",
+     "0",
+     "N0+N1==>N0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R01 term 4/5 (consumes N1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN0,cN2:((-1*0.013585471889485673*cN0*cN2))]==>N1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R01 term 5/5 (consumes N1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN0,cN3:((-1*0.013585471889485673*cN0*cN3))]==>N1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R00 term 1/10",
+     ""
+    ],
+    [
+     "0.36836779701196926",
+     "0",
+     "0",
+     "N0==>2N0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R00 term 2/10",
+     ""
+    ],
+    [
+     "0.0030697316417664104",
+     "0",
+     "0",
+     "N0+N0==>N0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R00 term 3/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N0+N0+S[USER;cN3:(0.0024468307802846777/(cN3+1.5709821429))]==>3N0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R00 term 4/10 (consumes N0)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N0+S[USER;cN3:(0.2936196936341613/(1*cN3+1.5709821429))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R00 term 5/10 (consumes N0)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N0+S[USER;cN1:(0.0030697316417664104*cN1)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R00 term 6/10 (consumes N0)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N0+S[USER;cN2:(0.0030697316417664104*cN2)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R00 term 7/10 (consumes N0)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N0+S[USER;cN3:(0.0030697316417664104*cN3)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R00 term 8/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N0+N1+S[USER;cN3:(0.0024468307802846777/(cN3+1.5709821429))]==>2N0+N1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R00 term 9/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N0+N2+S[USER;cN3:(0.0024468307802846777/(cN3+1.5709821429))]==>2N0+N2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R00 term 10/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N0+N3+S[USER;cN3:(0.0024468307802846777/(cN3+1.5709821429))]==>2N0+N3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1X",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N1+S[USER;cN3:(1.3210925883029496/(cN3+1.5709821429))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 1/5",
+     ""
+    ],
+    [
+     "5.04016173564854",
+     "0",
+     "0",
+     "N1==>N1+N2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 2/5 (consumes N2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN1:((-1*0.04200134779707116*cN1^2))]==>N2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 3/5 (consumes N2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN0,cN1:((-1*0.04200134779707116*cN0*cN1))]==>N2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 4/5",
+     ""
+    ],
+    [
+     "0.04200134779707116",
+     "0",
+     "0",
+     "N1+N2==>N1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 5/5 (consumes N2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN1,cN3:((-1*0.04200134779707116*cN1*cN3))]==>N2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 1/5",
+     ""
+    ],
+    [
+     "1.0515700653445998",
+     "0",
+     "0",
+     "N1==>2N1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 2/5",
+     ""
+    ],
+    [
+     "0.008763083877871666",
+     "0",
+     "0",
+     "N1+N1==>N1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 3/5 (consumes N1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N1+S[USER;cN0:(0.008763083877871666*cN0)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 4/5 (consumes N1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N1+S[USER;cN2:(0.008763083877871666*cN2)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 5/5 (consumes N1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N1+S[USER;cN3:(0.008763083877871666*cN3)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2X",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N2+S[USER;cN3:(3.4605134274473834/(cN3+1.5709821429))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R03 term 1/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N0+S[USER;cN3:(0.2936196936341613/(cN3+1.5709821429))]==>N0+N3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R03 term 2/5 (consumes N3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN0,cN3:((-1*0.0024468307802846777*cN0^2/(cN3+1.5709821429)))]==>N3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R03 term 3/5 (consumes N3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN0,cN1,cN3:((-1*0.0024468307802846777*cN0*cN1/(cN3+1.5709821429)))]==>N3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R03 term 4/5 (consumes N3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN0,cN2,cN3:((-1*0.0024468307802846777*cN0*cN2/(cN3+1.5709821429)))]==>N3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R03 term 5/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N0+N3+S[USER;cN3:(0.0024468307802846777/(1*cN3+1.5709821429))]==>N0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3X",
+     ""
+    ],
+    [
+     "0.0379622536021846",
+     "0",
+     "0",
+     "N3==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "N0",
+     "0",
+     "1.75444831412765",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N0 [N0]",
+     ""
+    ],
+    [
+     "N1",
+     "0",
+     "27.40585059",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N1 [N1]",
+     ""
+    ],
+    [
+     "N2",
+     "0",
+     "45.6191494109",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N2 [N2]",
+     ""
+    ],
+    [
+     "N3",
+     "0",
+     "1.5709821429",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N3 [N3]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,679 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:58:04.701130+00:00",
+ "description": "Larsen2004_CalciumSpiking_EnzymeBinding\nBioModels BIOMD0000000331 (curated). SBML file: BIOMD0000000331_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000331_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.33e-06 of species peak (worst: PLC)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dG_alpha/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dG_alpha/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dPLC/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dCa_cyt/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dCa_cyt/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dCa_cyt/dt term 5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dCa_cyt/dt term 6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Larsen2004_CalciumSpiking_EnzymeBinding  (BIOMD0000000331, curated BioModels; source file BIOMD0000000331_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG_alpha/dt term 1",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "source==>G_alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG_alpha/dt term 2",
+     ""
+    ],
+    [
+     "1.65",
+     "0",
+     "0",
+     "G_alpha==>2G_alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG_alpha/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G_alpha+Ca_cyt+S[USER;cG_alpha:(4.88/(1*cG_alpha+1.18))]==>Ca_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG_alpha/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G_alpha+PLC+S[USER;cG_alpha:(0.64/(1*cG_alpha+0.09))]==>PLC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPLC/dt term 1",
+     ""
+    ],
+    [
+     "2.08",
+     "0",
+     "0",
+     "G_alpha==>PLC+G_alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPLC/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PLC+S[USER;cPLC:(32.24/(1*cPLC+29.09))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_cyt/dt term 1",
+     ""
+    ],
+    [
+     "2.8",
+     "0",
+     "0",
+     "PLC==>Ca_cyt+PLC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_cyt/dt term 2",
+     ""
+    ],
+    [
+     "13.4",
+     "0",
+     "0",
+     "G_alpha==>Ca_cyt+G_alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_cyt/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_cyt+S[USER;cCa_cyt:(7/(1*cCa_cyt+0.05))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_cyt/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_cyt+S[USER;cCa_cyt:(79*cCa_cyt^7/(1*(cCa_cyt+1e-30)^8+22518.75390625))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_cyt/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_cyt+S[USER;cCa_cyt:(153/(1*cCa_cyt+0.16))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_cyt/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_cyt+Ca_cyt+S[USER;cCa_cyt:(0.81/(1*cCa_cyt+4.5))]==>Ca_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_cyt/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_cyt+Ca_mit+S[USER;cCa_cyt:(0.81/(cCa_cyt+4.5))]==>2Ca_cyt+Ca_mit",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_cyt/dt term 8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_cyt+Ca_cyt+S[USER;cPLC:(0.7*cPLC^4/(cPLC^4+81))]==>Ca_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_cyt/dt term 9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_ER+Ca_cyt+S[USER;cPLC:(0.7*cPLC^4/(cPLC^4+81))]==>2Ca_cyt+Ca_ER",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_ER/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_cyt+S[USER;cCa_cyt:(7/(cCa_cyt+0.05))]==>Ca_ER+Ca_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_ER/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_cyt+Ca_cyt+S[USER;cPLC:(0.7*cPLC^4/(cPLC^4+81))]==>Ca_ER+2Ca_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_ER/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_ER+Ca_cyt+S[USER;cPLC:(0.7*cPLC^4/(cPLC^4+81))]==>Ca_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_mit/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCa_cyt:(79*cCa_cyt^8/(cCa_cyt^8+22518.75390625))]==>Ca_mit",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_mit/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_cyt+Ca_cyt+S[USER;cCa_cyt:(0.81/(cCa_cyt+4.5))]==>Ca_mit+2Ca_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa_mit/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_mit+Ca_cyt+S[USER;cCa_cyt:(0.81/(cCa_cyt+4.5))]==>Ca_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dEnz/dt term 1",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "Enz==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dEnz/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCa_cyt:(5*cCa_cyt^4/(cCa_cyt^4+0.14776335999999998))]==>Enz",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dProduct/dt term 1",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "Enz==>Product+Enz",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dProduct/dt term 2",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "Product==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "G_alpha",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G-alpha [G_alpha]",
+     ""
+    ],
+    [
+     "PLC",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PLC [PLC]",
+     ""
+    ],
+    [
+     "Ca_cyt",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Calcium-Cyt [Ca_cyt]",
+     ""
+    ],
+    [
+     "Ca_ER",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Calcium-ER [Ca_ER]",
+     ""
+    ],
+    [
+     "Ca_mit",
+     "0",
+     "0.001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Calcium-mit [Ca_mit]",
+     ""
+    ],
+    [
+     "Enz",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Enzyme [Enz]",
+     ""
+    ],
+    [
+     "Product",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "EnzCatlysedProduct [Product]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

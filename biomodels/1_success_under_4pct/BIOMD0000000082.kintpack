@@ -1,0 +1,480 @@
+{
+ "version": 3,
+ "created": "2026-10-25T08:46:28.272647+00:00",
+ "description": "Thomsen1988_AdenylateCyclase_Inhibition\nBioModels BIOMD0000000082 (curated). SBML file: BIOMD0000000082_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000082_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.66e-06 of species peak (worst: DRG)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Thomsen1988_AdenylateCyclase_Inhibition  (BIOMD0000000082, curated BioModels; source file BIOMD0000000082_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Forming term 1/2",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "DR==>agonist+Recptor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Forming term 2/2",
+     ""
+    ],
+    [
+     "5000000",
+     "0",
+     "0",
+     "agonist+Recptor==>DR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "DRG_GDP==>DR+G_GDP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "DR+G_GDP==>DRG_GDP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "DRG_GDP==>GDP+DRG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 2/2",
+     ""
+    ],
+    [
+     "100000",
+     "0",
+     "0",
+     "GDP+DRG==>DRG_GDP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "DRG_GTP==>GTP+DRG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 2/2",
+     ""
+    ],
+    [
+     "10000000",
+     "0",
+     "0",
+     "GTP+DRG==>DRG_GTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "DRG_GTP==>G_GTP+DR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "G_GTP==>G_GDP",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "agonist",
+     "0",
+     "1e-08",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "D [agonist]",
+     ""
+    ],
+    [
+     "DR",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DR [DR]",
+     ""
+    ],
+    [
+     "DRG_GDP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DRG_GDP [DRG_GDP]",
+     ""
+    ],
+    [
+     "DRG",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DRG [DRG]",
+     ""
+    ],
+    [
+     "GDP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GDP [GDP]",
+     ""
+    ],
+    [
+     "DRG_GTP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DRG_GTP [DRG_GTP]",
+     ""
+    ],
+    [
+     "GTP",
+     "0",
+     "1e-05",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GTP [GTP]",
+     ""
+    ],
+    [
+     "Recptor",
+     "0",
+     "1e-09",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R [Recptor]",
+     ""
+    ],
+    [
+     "G_GDP",
+     "0",
+     "1e-09",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G_GDP [G_GDP]",
+     ""
+    ],
+    [
+     "G_GTP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G_GTP [G_GTP]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-06",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-08",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

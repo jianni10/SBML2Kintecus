@@ -1,0 +1,79 @@
+CONTENTS - biomodels_kintpacks_final.zip   (2026-11-06)
+================================================================================================
+Start with README.txt, then FINAL_RESULTS_TABLE.csv.
+
+PACKS (1045 .kintpack files, sorted by result)
+  1_success_under_4pct/                           942 packs    14.2 MB
+      Kintecus output matches the original SBML to under 4% (most within 0.1%; see within_0.1pct).
+  2_deck_verified_kintecus_too_slow_or_differs/     4 packs     0.3 MB
+      The deck reproduces the SBML when run on its own, but Kintecus is too slow, stops, or gives different numbers.
+  3_off_partial_or_unverified/                     99 packs     6.7 MB
+      Off by 4% or more, has parts that couldn't be converted, or has no SBML result to check against.
+  The other 27 of the 1072 models produced no pack; FINAL_RESULTS_TABLE says why.
+
+RESULTS AND DOCUMENTATION
+  README.txt                What's in the zip, how to load a pack, how the match is scored, how to run the
+                            self-check, how to convert your own SBML files, and the conversion conventions.
+  CONTENTS.txt              This file.
+  FINAL_RESULTS_TABLE.csv   One row per model (1072 rows), opens in Excel. Columns: success yes/no at 4%, within 0.1% yes/no,
+                            Kintecus match %, deck match %, status, folder, a note on why it failed or how far
+                            off it is, what each integrator attempt did, number of unconverted parts, duration,
+                            and whether the pack was rebuilt with the latest fixes.
+  FINAL_RESULTS_TABLE.txt   The same table as readable text, with a summary of counts at the top.
+  DESCRIPTIONS.txt          One block per model: results, switches, run length, sizes, notes, and the full list
+                            of anything not converted.
+  KINTECUS_ISSUES.txt       Kintecus V2027 problems found, each with a minimal repro: fixed in your build, still
+                            present (long USER expressions behind #999, the 3-reactant limit behind #39, function
+                            names inside variable names, ...), open, and interface notes.
+  results_detail.csv        The full data behind the table, including conversion notes and the not-converted
+                            list per model.
+
+SELF-CHECK ON YOUR PC
+  RUN_ALL_CHECKS.bat        Double-click to run every pack through your Kintecus.exe and compare each against its
+                            SBML reference. Set the Kintecus.exe path on one line, or answer the prompt.
+  RUN_SLOW_JOBS.bat         Runs the packs in SLOW_JOBS.csv (those that ran out of time here) with no time limit,
+                            each with its recommended integrator, and checks them (slow_jobs_report.csv).
+  SLOW_JOBS.csv             The slow packs: order, recommended switches, run-time estimate, deck verified,
+                            other integrators to try, what each attempt did here.
+  SLOW_JOBS_README.txt      What to do on your PC to run and finish those jobs.
+  NOT_TIME_PROBLEMS.csv     Packs that stopped on a Kintecus error (FATAL #999/#167/#95, UFHS88), not on time.
+  kintcheck.py              The checker the .bat runs (Python 3.8+, no extra packages). Writes
+                            kintcheck_report.csv / .txt, including the result each pack gave when it was built.
+  references/               1029 CSV files of reference output from the original SBML (190 MB, the bulk of
+                            the zip). The other 16 packs have no reference (their SBML can't be simulated by
+                            libRoadRunner, or nothing in it changes); the checker reports those as NO_REFERENCE.
+
+CONVERT YOUR OWN SBML FILES
+  sbml2kintpack/sbml2kintpack.py   One SBML file in -> <name>.kintpack + <name>_deck\ (MODEL.DAT, SPECIES.DAT,
+                                   PARM.DAT, profile files). Duration from --t-end, a .sedml next to the model,
+                                   or the dynamics. --kintecus PATH checks long USER lines in Kintecus itself.
+                                   Needs: pip install python-libsbml sympy (libroadrunner numpy recommended).
+  sbml2kintpack/sbml2kin_batch.py  The converter it uses (the same one that built this collection).
+  sbml2kintpack/release_settings.csv  Duration, sampling, switches, accuracy, deck variant of every released pack.
+  sbml2kintpack/MAKE_KINTPACK.bat  Drag SBML files onto it (set the Kintecus.exe path at the top for the check).
+
+RUN A PACK FROM THE COMMAND LINE
+  runkintpack/runkintpack.py       Unpacks any .kintpack (all sheets and files, tab-delimited) into a run folder
+                                   and runs Kintecus.exe there; the .kintpack is never changed. -k switches,
+                                   -p Kintecus.exe, -i international inputs, --set sheet.field=value overrides
+                                   (species, parm, model lines, therm, transport, fitdata/profile files) with
+                                   checking, --list, --check, -u, --batch. Python 3.8+, no extra packages.
+  runkintpack/runkintpack.bat      runkintpack.bat PACK.kintpack [options]  (finds Python for you)
+  runkintpack/RUNKINTPACK_MANUAL.txt  the manual: options, the --set syntax, examples, messages
+
+EXPORT TO SBML
+  kintpack2sbml/kintpack2sbml.py   .kintpack or Kintecus deck -> SBML L3V2 (+ SED-ML, + report of everything SBML
+                                   cannot hold; --format xml/both for a lossless Kintecus XML). Needs python-libsbml.
+  kintpack2sbml/kintpack2sbml.bat  kintpack2sbml.bat INPUT [options]
+  kintpack2sbml/KINTPACK2SBML_MANUAL.txt  the manual: options, how Kintecus maps onto SBML, examples, test results
+
+converter/  (reference: the Linux scripts that built and verified the collection; they need the BioModels
+            mirror, libRoadRunner and Wine, so they are not meant to be run on your PC)
+  sbml2kin_batch.py       the SBML -> Kintecus converter
+  run_model.py, driver.py convert + run + verify one model / a batch
+  deck_sim.py             runs a deck on its own (SciPy, Kintecus semantics) - the independent deck check
+  validate_packs.py       checks each pack against the deck that was run
+  gen_refs.py             builds the reference files
+  make_final_table.py     builds FINAL_RESULTS_TABLE
+  package_v3.py           builds this zip
+  probe.py                the Kintecus run harness (Wine)

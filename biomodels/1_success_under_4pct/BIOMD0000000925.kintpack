@@ -1,0 +1,851 @@
+{
+ "version": 3,
+ "created": "2026-11-01T23:02:31.065170+00:00",
+ "description": "Dunster2016 - Nondimensional Coagulation Model\nBioModels BIOMD0000000925 (curated). SBML file: Dunster2016_Nondimensional_Model_Curated.xml.\nSimulation: 0 to 1000 time units (SED-ML: Dunster2016_Nondimensional_Model1.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.81e-06 of species peak (worst: Inactive_Thrombin)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Xa_L' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Va_Xa_L' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Reaction_for_Inactivation_of_Va: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_Inactivation_of_prothrombinase_2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_Generation_of_thrombin term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_Generation_of_thrombin term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_Generation_of_thrombin term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - Thrombin__IIa: zero order, signed\n  [info] Reaction_of_V_Inactivation term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Reaction_of_V_Inactivation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Reaction_for_Thrombin_Inactivation term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - Thrombin__IIa: zero order, signed\n  [info] Reaction_for_Prothrombin_inactivation term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Reaction_for_Prothrombin_inactivation term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Dunster2016 - Nondimensional Coagulation Model  (BIOMD0000000925, curated BioModels; source file Dunster2016_Nondimensional_Model_Curated.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Generation_of_Xa",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(115.5*exp((-1*0.77*cTIME_)))]==>Factor_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Generation_of_Va term 1/4",
+     ""
+    ],
+    [
+     "0.038",
+     "0",
+     "0",
+     "Prothrombinase__Va_Xa==>Factor_Va+Prothrombinase__Va_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Generation_of_Va term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Factor_Va+Factor_Xa==>Factor_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Generation_of_Va term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Factor_V+Thrombin__IIa+S[USER;cFactor_V,cFibrinogen:(1/(cFactor_V+7.2*cFibrinogen+7.2))]==>Factor_Va+Factor_V+Thrombin__IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Generation_of_Va term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Factor_V+Factor_Xa+S[USER;cFactor_V,cProthrombin__II:(0.013/(cFactor_V+cProthrombin__II+1))]==>Factor_Va+Factor_V+Factor_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Inactivation_of_Xa",
+     ""
+    ],
+    [
+     "0.19",
+     "0",
+     "0",
+     "Factor_Xa==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Inactivation_of_Va",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Factor_Va+APC+S[USER;cFactor_Va:(1/(1*cFactor_Va+1))]==>VInactive+APC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Formation_of_Prothrombinase term 1/2",
+     ""
+    ],
+    [
+     "150",
+     "0",
+     "0",
+     "Factor_Xa+Factor_Va==>Factor_Va",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Formation_of_Prothrombinase term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC+Prothrombinase__Va_Xa+S[USER;cProthrombinase__Va_Xa:(150/(cProthrombinase__Va_Xa+1))]==>Factor_Xa+APC+Prothrombinase__Va_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Inactivation_of_prothrombinase_1 term 1/2",
+     ""
+    ],
+    [
+     "0.038",
+     "0",
+     "0",
+     "Prothrombinase__Va_Xa==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Inactivation_of_prothrombinase_1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Factor_Va+Factor_Xa==>Prothrombinase__Va_Xa+Factor_Va+Factor_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_Inactivation_of_prothrombinase_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Prothrombinase__Va_Xa+APC+S[USER;cProthrombinase__Va_Xa:(1/(1*cProthrombinase__Va_Xa+1))]==>VInactive+APC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_Generation_of_thrombin term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Prothrombin__II+S[USER;cFactor_V,cProthrombin__II:(0.78538/(1*cFactor_V+1*cProthrombin__II+1))]==>Thrombin__IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_Generation_of_thrombin term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Prothrombin__II+Factor_Xa+S[USER;cFactor_V,cProthrombin__II:(0.002/(1*cFactor_V+1*cProthrombin__II+1))]==>Thrombin__IIa+Factor_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_Generation_of_thrombin term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cFactor_V,cFactor_Xa,cProthrombin__II:(0.002*cProthrombin__II*(-30.76*cFactor_Xa+(cFactor_Xa+392.69)^2)^0.5/(cFactor_V+cProthrombin__II+1))]==>Prothrombin__II",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_Generation_of_thrombin term 3/3 (consumes Thrombin__IIa)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cFactor_V,cFactor_Xa,cProthrombin__II:((-1*0.002*cProthrombin__II*(-30.76*cFactor_Xa+(cFactor_Xa+392.69)^2)^0.5/(cFactor_V+cProthrombin__II+1)))]==>Thrombin__IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_Generation_of_protein_C",
+     ""
+    ],
+    [
+     "0.0011",
+     "0",
+     "0",
+     "Protein_C==>APC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Inactivation_of_protein_C",
+     ""
+    ],
+    [
+     "0.27",
+     "0",
+     "0",
+     "APC==>Inactive_protein_C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_Generation_of__Fibrin",
+     ""
+    ],
+    [
+     "1500",
+     "0",
+     "0",
+     "Fibrinogen==>Fibrin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_of_V_Inactivation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Factor_V+Thrombin__IIa+S[USER;cFactor_V,cFibrinogen:(2/(1*cFactor_V+14.4*cFibrinogen+14.4))]==>Thrombin__IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_of_V_Inactivation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Factor_V+Factor_Xa+S[USER;cFactor_V,cProthrombinase__Va_Xa:(0.026/(1*cFactor_V+1*cProthrombinase__Va_Xa+1))]==>Factor_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Thrombin_Generation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Thrombin__IIa==>Inactive_Thrombin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Thrombin_Inactivation term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Prothrombin__II+S[USER;cProthrombin__II:(0.05353/(0.004*cProthrombin__II+0.014400000000000001))]==>Thrombin__IIa+Prothrombin__II",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Thrombin_Inactivation term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Prothrombin__II+Prothrombinase__Va_Xa+S[USER;cProthrombin__II:(1.06/(0.004*cProthrombin__II+0.014400000000000001))]==>Thrombin__IIa+Prothrombin__II+Prothrombinase__Va_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Thrombin_Inactivation term 3/3 (consumes Thrombin__IIa)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cProthrombin__II,cProthrombinase__Va_Xa:((-1*1.06*cProthrombin__II*(-0.2*cProthrombinase__Va_Xa+(cProthrombinase__Va_Xa+0.0505)^2)^0.5/(0.004*cProthrombin__II+0.014400000000000001)))]==>Thrombin__IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Prothrombin_inactivation term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Prothrombin__II+S[USER;cProthrombin__II:(13.3825/(1*cProthrombin__II+3.6))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Prothrombin_inactivation term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Prothrombin__II+Prothrombinase__Va_Xa+S[USER;cProthrombin__II:(265/(1*cProthrombin__II+3.6))]==>Prothrombinase__Va_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Prothrombin_inactivation term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Prothrombin__II+S[USER;cProthrombin__II,cProthrombinase__Va_Xa:(265*(-0.2*cProthrombinase__Va_Xa+(cProthrombinase__Va_Xa+0.0505)^2)^0.5/(cProthrombin__II+3.6))]==>2Prothrombin__II",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Inactive_Xa term 1/2",
+     ""
+    ],
+    [
+     "0.19",
+     "0",
+     "0",
+     "Factor_Xa==>Factor_Xi+Factor_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_for_Inactive_Xa term 2/2",
+     ""
+    ],
+    [
+     "0.076",
+     "0",
+     "0",
+     "Prothrombinase__Va_Xa==>Factor_Xi+Prothrombinase__Va_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Factor_Xa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Factor Xa [Factor_Xa]",
+     ""
+    ],
+    [
+     "Thrombin__IIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Thrombin (IIa) [Thrombin__IIa]",
+     ""
+    ],
+    [
+     "Factor_V",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Factor V [Factor_V]",
+     ""
+    ],
+    [
+     "Factor_Va",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Factor Va [Factor_Va]",
+     ""
+    ],
+    [
+     "APC",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC [APC]",
+     ""
+    ],
+    [
+     "VInactive",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VInactive [VInactive]",
+     ""
+    ],
+    [
+     "Prothrombinase__Va_Xa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Prothrombinase (Va:Xa) [Prothrombinase__Va_Xa]",
+     ""
+    ],
+    [
+     "Prothrombin__II",
+     "0",
+     "17",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Prothrombin (II) [Prothrombin__II]",
+     ""
+    ],
+    [
+     "Protein_C",
+     "0",
+     "92",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Protein C [Protein_C]",
+     ""
+    ],
+    [
+     "Inactive_protein_C",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Inactive protein C [Inactive_protein_C]",
+     ""
+    ],
+    [
+     "Fibrin",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fibrin [Fibrin]",
+     ""
+    ],
+    [
+     "Fibrinogen",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fibrinogen [Fibrinogen]",
+     ""
+    ],
+    [
+     "Inactive_Thrombin",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Inactive Thrombin [Inactive_Thrombin]",
+     ""
+    ],
+    [
+     "Factor_Xi",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Factor Xi [Factor_Xi]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

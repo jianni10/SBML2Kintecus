@@ -1,0 +1,575 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:05:09.032822+00:00",
+ "description": "Boehm2014 - isoform-specific dimerization of pSTAT5A and pSTAT5B\nBioModels BIOMD0000000591 (curated). SBML file: BIOMD0000000591_url.xml.\nSimulation: 0 to 250 time units (SED-ML: Model_Fig5D.sedml), sampling 0.25.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.27e-06 of species peak (worst: nucpApB)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Boehm2014 - isoform-specific dimerization of pSTAT5A and pSTAT5B  (BIOMD0000000591, curated BioModels; source file BIOMD0000000591_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STAT5A+STAT5A+S[USER;cTIME_:(0.0014078256242277144*exp((-1*0.0269765368088175*cTIME_)))]==>pApA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STAT5A+STAT5B+S[USER;cTIME_:(0.0014078256242277144*exp((-1*0.0269765368088175*cTIME_)))]==>pApB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STAT5B+STAT5B+S[USER;cTIME_:(0.0014078256242277144*exp((-1*0.0269765368088175*cTIME_)))]==>pBpB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction4 (volume 1.4)",
+     ""
+    ],
+    [
+     "69148.344136389",
+     "0",
+     "0",
+     "pApA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction4 (volume 0.45)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpApA:(215128.18175765465*cpApA)]==>nucpApA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction5 (volume 1.4)",
+     ""
+    ],
+    [
+     "0.0116929687008905",
+     "0",
+     "0",
+     "pApB==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction5 (volume 0.45)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpApB:(0.036378124847214886*cpApB)]==>nucpApB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction6 (volume 1.4)",
+     ""
+    ],
+    [
+     "69148.344136389",
+     "0",
+     "0",
+     "pBpB==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction6 (volume 0.45)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpBpB:(215128.18175765465*cpBpB)]==>nucpBpB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction7 (volume 1.4)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cnucpApA:(0.004408842829901*cnucpApA)]==>2STAT5A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction7 (volume 0.45)",
+     ""
+    ],
+    [
+     "0.013716399915247555",
+     "0",
+     "0",
+     "nucpApA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction8 (volume 1.4)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cnucpApB:(7.149793902567001e-6*cnucpApB)]==>STAT5A+STAT5B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction8 (volume 0.45)",
+     ""
+    ],
+    [
+     "2.224380325243067e-5",
+     "0",
+     "0",
+     "nucpApB==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction9 (volume 0.45)",
+     ""
+    ],
+    [
+     "0.013716399915247555",
+     "0",
+     "0",
+     "nucpBpB==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction9 (volume 1.4)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cnucpBpB:(0.004408842829901*cnucpBpB)]==>2STAT5B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "STAT5A",
+     "0",
+     "143.86679999999998",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STAT5A [STAT5A]",
+     ""
+    ],
+    [
+     "STAT5B",
+     "0",
+     "63.73320000000001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STAT5B [STAT5B]",
+     ""
+    ],
+    [
+     "pApB",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pApB [pApB]",
+     ""
+    ],
+    [
+     "pApA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pApA [pApA]",
+     ""
+    ],
+    [
+     "pBpB",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pBpB [pBpB]",
+     ""
+    ],
+    [
+     "nucpApA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "nucpApA [nucpApA]",
+     ""
+    ],
+    [
+     "nucpApB",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "nucpApB [nucpApB]",
+     ""
+    ],
+    [
+     "nucpBpB",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "nucpBpB [nucpBpB]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.25",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "250",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.25",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,638 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:51:46.406072+00:00",
+ "description": "Olsen2003_peroxidase\nBioModels BIOMD0000000046 (curated). SBML file: BIOMD0000000046_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000046_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.47e-06 of species peak (worst: O2)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Olsen2003_peroxidase  (BIOMD0000000046, curated BioModels; source file BIOMD0000000046_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1",
+     ""
+    ],
+    [
+     "3e-6",
+     "0",
+     "0",
+     "O2+NADH==>H2O2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2",
+     ""
+    ],
+    [
+     "18",
+     "0",
+     "0",
+     "H2O2+per3==>coI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3",
+     ""
+    ],
+    [
+     "0.15",
+     "0",
+     "0",
+     "coI+ArH==>Ar+coII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4",
+     ""
+    ],
+    [
+     "0.0052",
+     "0",
+     "0",
+     "ArH+coII==>Ar+per3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "NADrad+O2==>super",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6",
+     ""
+    ],
+    [
+     "17",
+     "0",
+     "0",
+     "super+per3==>coIII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "super+super==>H2O2+O2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8",
+     ""
+    ],
+    [
+     "40",
+     "0",
+     "0",
+     "NADrad+coIII==>coI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9",
+     ""
+    ],
+    [
+     "60",
+     "0",
+     "0",
+     "NADrad+NADrad==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10",
+     ""
+    ],
+    [
+     "1.8",
+     "0",
+     "0",
+     "NADrad+per3==>per2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "per2+O2==>coIII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12",
+     ""
+    ],
+    [
+     "0.08",
+     "0",
+     "0",
+     "source==>NADH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v131",
+     ""
+    ],
+    [
+     "0.07200000000000001",
+     "0",
+     "0",
+     "source==>O2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v132",
+     ""
+    ],
+    [
+     "0.006",
+     "0",
+     "0",
+     "O2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v14",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "Ar+NADH==>ArH+NADrad",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "NADH",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADH [NADH]",
+     ""
+    ],
+    [
+     "O2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "O2 [O2]",
+     ""
+    ],
+    [
+     "H2O2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "H2O2 [H2O2]",
+     ""
+    ],
+    [
+     "per3",
+     "0",
+     "1.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "per3 [per3]",
+     ""
+    ],
+    [
+     "coI",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "coI [coI]",
+     ""
+    ],
+    [
+     "ArH",
+     "0",
+     "500",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ArH [ArH]",
+     ""
+    ],
+    [
+     "coII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "coII [coII]",
+     ""
+    ],
+    [
+     "Ar",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ar [Ar]",
+     ""
+    ],
+    [
+     "NADrad",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADrad [NADrad]",
+     ""
+    ],
+    [
+     "super",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "super [super]",
+     ""
+    ],
+    [
+     "coIII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "coIII [coIII]",
+     ""
+    ],
+    [
+     "per2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "per2 [per2]",
+     ""
+    ],
+    [
+     "NAD2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "NAD2 [NAD2]",
+     ""
+    ],
+    [
+     "NAD",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "NAD [NAD]",
+     ""
+    ],
+    [
+     "O2g",
+     "0",
+     "12",
+     "Y",
+     "0",
+     "No",
+     "12",
+     "O2g [O2g]",
+     ""
+    ],
+    [
+     "NADHres",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "NADHres [NADHres]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

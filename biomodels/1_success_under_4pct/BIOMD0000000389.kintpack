@@ -1,0 +1,788 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:48:59.936143+00:00",
+ "description": "Arnold2011_Hahn1986_CalvinCycle_Starch_Sucrose\nBioModels BIOMD0000000389 (curated). SBML file: BIOMD0000000389_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000389_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.57e-06 of species peak (worst: GG)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Suc_S: rate order differs from the stoichiometry; consumed on separate line(s) - HePc: first order\nRenamed species (Kintecus name = SBML id): E1 = E",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Arnold2011_Hahn1986_CalvinCycle_Starch_Sucrose  (BIOMD0000000389, curated BioModels; source file BIOMD0000000389_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RuBisCO",
+     ""
+    ],
+    [
+     "0.186",
+     "0",
+     "0",
+     "RuBP==>2PGA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PGA_red",
+     ""
+    ],
+    [
+     "0.0207",
+     "0",
+     "0",
+     "ATP+PGA==>Pi+ADP+TP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FBP_A_ase",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "TP+TP==>Pi+HeP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "F6P_TK1",
+     ""
+    ],
+    [
+     "0.031",
+     "0",
+     "0",
+     "HeP==>E4P+TPGA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBP_A_ase",
+     ""
+    ],
+    [
+     "3.1",
+     "0",
+     "0",
+     "TP+E4P==>Pi+S7P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "S7P_TK1_R5P_I",
+     ""
+    ],
+    [
+     "0.31",
+     "0",
+     "0",
+     "S7P==>Ru5P+TPGA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TK2_Ru5P_E",
+     ""
+    ],
+    [
+     "6.2",
+     "0",
+     "0",
+     "TPGA+TP==>Ru5P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ru5P_K",
+     ""
+    ],
+    [
+     "0.031",
+     "0",
+     "0",
+     "ATP+Ru5P==>RuBP+ADP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ATP_S",
+     ""
+    ],
+    [
+     "0.279",
+     "0",
+     "0",
+     "Pi+ADP==>ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Starch_S",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "ATP+HeP==>2Pi+ADP+GG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Starch_P",
+     ""
+    ],
+    [
+     "4e-5",
+     "0",
+     "0",
+     "Pi+GG==>HeP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TPT",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "TP+Pic==>Pi+TPc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FBPc_A_ase",
+     ""
+    ],
+    [
+     "1.55",
+     "0",
+     "0",
+     "TPc+TPc==>HePc+Pic",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Suc_S",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "UTP+S[USER;cHePc:(0.0258*cHePc)]==>Suc+UDP+3Pic",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Suc_S (consumes HePc)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "HePc+S[USER;cUTP:(0.0516*cUTP)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "UTP_S",
+     ""
+    ],
+    [
+     "0.00755",
+     "0",
+     "0",
+     "UDP+Pic==>UTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Respi",
+     ""
+    ],
+    [
+     "3e-5",
+     "0",
+     "0",
+     "Suc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Diffu term 1/2",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "Suc==>SucV",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Diffu term 2/2",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "SucV==>Suc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transl term 1/2",
+     ""
+    ],
+    [
+     "5e-5",
+     "0",
+     "0",
+     "source==>Suc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transl term 2/2",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "Suc==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "RuBP",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RuBP [RuBP]",
+     ""
+    ],
+    [
+     "PGA",
+     "0",
+     "2.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PGA [PGA]",
+     ""
+    ],
+    [
+     "TP",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TP [TP]",
+     ""
+    ],
+    [
+     "HeP",
+     "0",
+     "2.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HeP [HeP]",
+     ""
+    ],
+    [
+     "TPGA",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TPGA [TPGA]",
+     ""
+    ],
+    [
+     "E4P",
+     "0",
+     "0.05",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E4P [E4P]",
+     ""
+    ],
+    [
+     "S7P",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S7P [S7P]",
+     ""
+    ],
+    [
+     "Ru5P",
+     "0",
+     "0.05",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ru5P [Ru5P]",
+     ""
+    ],
+    [
+     "GG",
+     "0",
+     "99.9999999999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GG [GG]",
+     ""
+    ],
+    [
+     "ATP",
+     "0",
+     "3.875",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP [ATP]",
+     ""
+    ],
+    [
+     "ADP",
+     "0",
+     "0.53",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ADP [ADP]",
+     ""
+    ],
+    [
+     "UTP",
+     "0",
+     "3.871",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "UTP [UTP]",
+     ""
+    ],
+    [
+     "UDP",
+     "0",
+     "1.613",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "UDP [UDP]",
+     ""
+    ],
+    [
+     "Pi",
+     "0",
+     "2.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pi [Pi]",
+     ""
+    ],
+    [
+     "CO2",
+     "0",
+     "31",
+     "Y",
+     "0",
+     "No",
+     "31",
+     "CO2 [CO2]",
+     ""
+    ],
+    [
+     "TPc",
+     "0",
+     "0.114",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TPc [TPc]",
+     ""
+    ],
+    [
+     "HePc",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HePc [HePc]",
+     ""
+    ],
+    [
+     "Suc",
+     "0",
+     "77.31",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Suc [Suc]",
+     ""
+    ],
+    [
+     "Pic",
+     "0",
+     "0.8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pic [Pic]",
+     ""
+    ],
+    [
+     "SucV",
+     "0",
+     "77.31",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SucV [SucV]",
+     ""
+    ],
+    [
+     "E1",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "0.5",
+     "E [E]",
+     ""
+    ],
+    [
+     "Resp",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "Resp [Resp]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

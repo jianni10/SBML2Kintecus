@@ -1,0 +1,524 @@
+{
+ "version": 3,
+ "created": "2026-10-26T21:12:41.953715+00:00",
+ "description": "Santolini2001_nNOS_Mechanism_Regulation\nBioModels BIOMD0000000199 (curated). SBML file: BIOMD0000000199_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000199_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.93e-06 of species peak (worst: FeIII_NO)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'FeIII_t' is defined by an assignment rule; not a Kintecus state (not output)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Santolini2001_nNOS_Mechanism_Regulation  (BIOMD0000000199, curated BioModels; source file BIOMD0000000199_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1",
+     ""
+    ],
+    [
+     "2.6",
+     "0",
+     "0",
+     "FeIII==>FeII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r2",
+     ""
+    ],
+    [
+     "126",
+     "0",
+     "0",
+     "FeII==>FeII_O2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3",
+     ""
+    ],
+    [
+     "26",
+     "0",
+     "0",
+     "FeII_O2==>FeIII_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r4",
+     ""
+    ],
+    [
+     "2.6",
+     "0",
+     "0",
+     "FeIII_star==>FeII_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r5",
+     ""
+    ],
+    [
+     "126",
+     "0",
+     "0",
+     "FeII_star==>FeII_star_O2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r6",
+     ""
+    ],
+    [
+     "26",
+     "0",
+     "0",
+     "FeII_star_O2==>FeIII_NO",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rF",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "FeIII_NO==>FeIII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rG",
+     ""
+    ],
+    [
+     "2.6",
+     "0",
+     "0",
+     "FeIII_NO==>FeII_NO",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "FeII_NO==>FeII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r10",
+     ""
+    ],
+    [
+     "0.182",
+     "0",
+     "0",
+     "FeII_NO==>FeIII",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "FeIII",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FeIII [FeIII]",
+     ""
+    ],
+    [
+     "FeII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FeII [FeII]",
+     ""
+    ],
+    [
+     "FeII_O2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FeII_O2 [FeII_O2]",
+     ""
+    ],
+    [
+     "FeIII_star",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FeIII_star [FeIII_star]",
+     ""
+    ],
+    [
+     "FeII_star",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FeII_star [FeII_star]",
+     ""
+    ],
+    [
+     "FeII_star_O2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FeII_star_O2 [FeII_star_O2]",
+     ""
+    ],
+    [
+     "FeIII_NO",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FeIII_NO [FeIII_NO]",
+     ""
+    ],
+    [
+     "FeII_NO",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FeII_NO [FeII_NO]",
+     ""
+    ],
+    [
+     "NADPH",
+     "0",
+     "40",
+     "Y",
+     "0",
+     "No",
+     "40",
+     "NADPH [NADPH]",
+     ""
+    ],
+    [
+     "O2",
+     "0",
+     "140",
+     "Y",
+     "0",
+     "No",
+     "140",
+     "O2 [O2]",
+     ""
+    ],
+    [
+     "citrulline",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "citruline [citrulline]",
+     ""
+    ],
+    [
+     "NO3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "NO3 [NO3]",
+     ""
+    ],
+    [
+     "NO",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "NO [NO]",
+     ""
+    ],
+    [
+     "NADPplus",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "NADPplus [NADPplus]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

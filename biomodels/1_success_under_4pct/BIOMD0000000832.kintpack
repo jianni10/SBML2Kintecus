@@ -1,0 +1,856 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:45:27.369418+00:00",
+ "description": "Shin2016 - Unveiling Hidden Dynamics of Hippo Signalling\nBioModels BIOMD0000000832 (curated). SBML file: Shin2016.xml.\nSimulation: 0 to 120 time units (SED-ML: Shin2016.sedml), sampling 0.12.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.31e-06 of species peak (worst: RASSF1A)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] v1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v11: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v13: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v14: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v15: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v16: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v17: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v18: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v19: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v20: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v21: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v22: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v23: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v24: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v25: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v26: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Shin2016 - Unveiling Hidden Dynamics of Hippo Signalling  (BIOMD0000000832, curated BioModels; source file Shin2016.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Akt+S[USER;cAkt:(0.5745/(1*cAkt+51.21))]==>pAkt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pAkt+S[USER;cpAkt:(0.08687/(1*cpAkt+0.01497))]==>Akt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Akt+RasGTP+S[USER;cAkt:(0.717/(1*cAkt+0.744))]==>pAkt+RasGTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "aMST2+S[USER;caMST2:(1414/(1*caMST2+427.3))]==>MST2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "iMST2+S[USER;ciMST2:(7511/(1*ciMST2+816.2))]==>MST2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6",
+     ""
+    ],
+    [
+     "4472",
+     "0",
+     "0",
+     "MST2+MST2==>dMST2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7 term 1/2",
+     ""
+    ],
+    [
+     "0.113",
+     "0",
+     "0",
+     "MST2uRASSF1A==>MST2+RASSF1A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7 term 2/2",
+     ""
+    ],
+    [
+     "0.0684",
+     "0",
+     "0",
+     "MST2+RASSF1A==>MST2uRASSF1A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MST2+pAkt+S[USER;cMST2:(6684/(1*cMST2+0.0008313))]==>iMST2+pAkt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9",
+     ""
+    ],
+    [
+     "0.6117",
+     "0",
+     "0",
+     "dMST2==>2aMST2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10 term 1/2",
+     ""
+    ],
+    [
+     "1.226",
+     "0",
+     "0",
+     "aMST2uRASSF1A==>RASSF1A+aMST2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10 term 2/2",
+     ""
+    ],
+    [
+     "0.4237",
+     "0",
+     "0",
+     "RASSF1A+aMST2==>aMST2uRASSF1A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MST2uRASSF1A+S[USER;cMST2uRASSF1A:(0.0005688/(1*cMST2uRASSF1A+6.708))]==>aMST2uRASSF1A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12 term 1/2",
+     ""
+    ],
+    [
+     "0.0004886",
+     "0",
+     "0",
+     "iRaf1uiMST2==>iRaf1+iMST2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12 term 2/2",
+     ""
+    ],
+    [
+     "28.12",
+     "0",
+     "0",
+     "iRaf1+iMST2==>iRaf1uiMST2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "aLATS1+S[USER;caLATS1:(2261/(1*caLATS1+0.08503))]==>LATS1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v14",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "LATS1+aMST2+S[USER;cLATS1:(6189/(1*cLATS1+3961))]==>aLATS1+aMST2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v15",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "LATS1+aMST2uRASSF1A+S[USER;cLATS1:(0.000293/(1*cLATS1+22.26))]==>aLATS1+aMST2uRASSF1A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v16",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Raf1+S[USER;cRaf1:(2.071/(1*cRaf1+0.8821))]==>iRaf1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v17",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Raf1+aLATS1+S[USER;cRaf1:(0.1177/(1*cRaf1+10.68))]==>iRaf1+aLATS1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v18",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "iRaf1+RasGTP+S[USER;ciRaf1:(0.9203/(1*ciRaf1+0.9015))]==>Raf1+RasGTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v19",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "aRaf1+S[USER;caRaf1:(994.8/(1*caRaf1+457.5))]==>Raf1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v20",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Raf1+S[USER;cRaf1:(317.3/(1*cRaf1+3.197))]==>aRaf1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v21",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ipRaf1+S[USER;cipRaf1:(254.7/(1*cipRaf1+0.07678))]==>aRaf1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v22",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "aRaf1+ppERK+S[USER;caRaf1:(0.002742/(1*caRaf1+207.1))]==>ipRaf1+ppERK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v23",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "RasGDP+S[USER;cRasGDP:(103.05/(1*cRasGDP+120.5))]==>RasGTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v24",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "RasGTP+S[USER;cRasGTP:(1027/(1*cRasGTP+297.2))]==>RasGDP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v25",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ERK+aRaf1+S[USER;cERK:(5.342/(1*cERK+0.03676))]==>ppERK+aRaf1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v26",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ppERK+S[USER;cppERK:(995.3/(1*cppERK+151))]==>ERK",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Akt",
+     "0",
+     "200",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Akt [Akt]",
+     ""
+    ],
+    [
+     "RASSF1A",
+     "0",
+     "1.77",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RASSF1A [RASSF1A]",
+     ""
+    ],
+    [
+     "MST2",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MST2 [MST2]",
+     ""
+    ],
+    [
+     "dMST2",
+     "0",
+     "350",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "dMST2 [dMST2]",
+     ""
+    ],
+    [
+     "aMST2",
+     "0",
+     "185.6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "aMST2 [aMST2]",
+     ""
+    ],
+    [
+     "aMST2uRASSF1A",
+     "0",
+     "113.9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "aMST2uRASSF1A [aMST2uRASSF1A]",
+     ""
+    ],
+    [
+     "MST2uRASSF1A",
+     "0",
+     "0.23",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MST2uRASSF1A [MST2uRASSF1A]",
+     ""
+    ],
+    [
+     "iMST2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iMST2 [iMST2]",
+     ""
+    ],
+    [
+     "iRaf1uiMST2",
+     "0",
+     "200",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iRaf1uiMST2 [iRaf1uiMST2]",
+     ""
+    ],
+    [
+     "aLATS1",
+     "0",
+     "192.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "aLATS1 [aLATS1]",
+     ""
+    ],
+    [
+     "LATS1",
+     "0",
+     "7.8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LATS1 [LATS1]",
+     ""
+    ],
+    [
+     "iRaf1",
+     "0",
+     "750",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iRaf1 [iRaf1]",
+     ""
+    ],
+    [
+     "Raf1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Raf1 [Raf1]",
+     ""
+    ],
+    [
+     "aRaf1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "aRaf1 [aRaf1]",
+     ""
+    ],
+    [
+     "ipRaf1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ipRaf1 [ipRaf1]",
+     ""
+    ],
+    [
+     "RasGDP",
+     "0",
+     "300",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RasGDP [RasGDP]",
+     ""
+    ],
+    [
+     "RasGTP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RasGTP [RasGTP]",
+     ""
+    ],
+    [
+     "ERK",
+     "0",
+     "3000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERK [ERK]",
+     ""
+    ],
+    [
+     "ppERK",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ppERK [ppERK]",
+     ""
+    ],
+    [
+     "pAkt",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pAkt [pAkt]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.12",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "120",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.12",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

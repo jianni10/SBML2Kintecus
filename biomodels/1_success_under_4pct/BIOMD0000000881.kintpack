@@ -1,0 +1,464 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:11:43.109806+00:00",
+ "description": "Kogan2013 - A mathematical model for the immunotherapeutic control of the TH1 TH2 imbalance in melanoma\nBioModels BIOMD0000000881 (curated). SBML file: Kogan2013.xml.\nSimulation: 0 to 10000 time units (SED-ML: none; duration chosen from the dynamics: settled), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 9.96e-07 of species peak (worst: T_1)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Kogan2013 - A mathematical model for the immunotherapeutic control of the TH1 TH2 imbalance in melanoma  (BIOMD0000000881, curated BioModels; source file Kogan2013.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th1_Recruitment",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cI:(350/(cI+0.35))]==>T_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th1_Elimination",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "T_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th2_Recruitment",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG:(180/(cG+0.18))]==>T_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th2_Elimination",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "T_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFN_gamma_Production_NK_CTL",
+     ""
+    ],
+    [
+     "0.016",
+     "0",
+     "0",
+     "source==>G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFN_gamma_Production_Th2 term 1/2",
+     ""
+    ],
+    [
+     "5.899999999999999e-8",
+     "0",
+     "0",
+     "T_1==>G+T_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFN_gamma_Production_Th2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T_1+S[USER;cI:(5.33e-9/(cI+0.13))]==>G+T_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFN_gamma_Elimination",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "G==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL_10_Production_DC term 1/2",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "source==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL_10_Production_DC term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG:(0.011000000000000001/(cG+0.025))]==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL_10_Production_Th1",
+     ""
+    ],
+    [
+     "1e-7",
+     "0",
+     "0",
+     "T_2==>I+T_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL_10_Elimination",
+     ""
+    ],
+    [
+     "0.36",
+     "0",
+     "0",
+     "I==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "T_1",
+     "0",
+     "500000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T_1 [T_1]",
+     ""
+    ],
+    [
+     "T_2",
+     "0",
+     "1000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T_2 [T_2]",
+     ""
+    ],
+    [
+     "G",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G [G]",
+     ""
+    ],
+    [
+     "I",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I [I]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,397 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:57:59.378538+00:00",
+ "description": "Kummer2000 - Oscillations in Calcium Signalling\nBioModels BIOMD0000000329 (curated). SBML file: BIOMD0000000329_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000329_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.11e-06 of species peak (worst: c)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Kummer2000 - Oscillations in Calcium Signalling  (BIOMD0000000329, curated BioModels; source file BIOMD0000000329_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1",
+     ""
+    ],
+    [
+     "0.212",
+     "0",
+     "0",
+     "source==>a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2",
+     ""
+    ],
+    [
+     "2.9",
+     "0",
+     "0",
+     "a==>2a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "a+b+S[USER;ca:(1.52/(1*ca+0.19))]==>b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "a+c+S[USER;ca:(4.88/(1*ca+1.18))]==>c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5",
+     ""
+    ],
+    [
+     "1.24",
+     "0",
+     "0",
+     "a==>b+a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "b+S[USER;cb:(32.24/(1*cb+29.09))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7",
+     ""
+    ],
+    [
+     "13.58",
+     "0",
+     "0",
+     "a==>c+a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "c+S[USER;cc:(153/(1*cc+0.16))]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "a",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G-alpha [a]",
+     ""
+    ],
+    [
+     "b",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "activePLC [b]",
+     ""
+    ],
+    [
+     "c",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Calcium [c]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

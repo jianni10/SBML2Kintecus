@@ -1,0 +1,436 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:59:10.241430+00:00",
+ "description": "Wang2019 - A mathematical model of oncolytic virotherapy with time delay\nBioModels BIOMD0000000772 (curated). SBML file: Wang2019.xml.\nSimulation: 0 to 50 time units (SED-ML: Wang2019.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.32e-06 of species peak (worst: x)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Length_of_Eclipse_Phase: rate order differs from the stoichiometry; consumed on separate line(s) - I: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wang2019 - A mathematical model of oncolytic virotherapy with time delay  (BIOMD0000000772, curated BioModels; source file Wang2019.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_Cells_Proliferation term 1/3",
+     ""
+    ],
+    [
+     "0.206",
+     "0",
+     "0",
+     "x==>2x",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_Cells_Proliferation term 2/3",
+     ""
+    ],
+    [
+     "9.630668536699392e-5",
+     "0",
+     "0",
+     "x+x==>x",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_Cells_Proliferation term 3/3",
+     ""
+    ],
+    [
+     "9.630668536699392e-5",
+     "0",
+     "0",
+     "x+y==>y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_Cells_Infection",
+     ""
+    ],
+    [
+     "0.000448",
+     "0",
+     "0",
+     "x+y==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Length_of_Eclipse_Phase",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx,cy:(0.000448*cx*cy)]==>y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Length_of_Eclipse_Phase (consumes I)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx,cy:((-1*0.000448*cx*cy))]==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cytotoxicity",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "y==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Immune_Kill",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "y+z==>z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stimulation",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "y+z==>2z+y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Clearance",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "z==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x",
+     "0",
+     "200",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x [x]",
+     ""
+    ],
+    [
+     "I",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I [I]",
+     ""
+    ],
+    [
+     "y",
+     "0",
+     "800",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "y [y]",
+     ""
+    ],
+    [
+     "z",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "z [z]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.5",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "50",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.5",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

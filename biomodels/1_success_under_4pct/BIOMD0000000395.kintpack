@@ -1,0 +1,763 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:59:51.007263+00:00",
+ "description": "Sivakumar2011 - Hedgehog Signaling Pathway\nBioModels BIOMD0000000395 (curated). SBML file: BIOMD0000000395_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000395_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.64e-06 of species peak (worst: s69)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r14 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r14 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sivakumar2011 - Hedgehog Signaling Pathway  (BIOMD0000000395, curated BioModels; source file BIOMD0000000395_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r52 term 1/2",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "s140==>s75",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r52 term 2/2",
+     ""
+    ],
+    [
+     "1.67",
+     "0",
+     "0",
+     "s75==>s140",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r55",
+     ""
+    ],
+    [
+     "1.56",
+     "0",
+     "0",
+     "s158==>s75",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r7 term 1/2",
+     ""
+    ],
+    [
+     "1.122",
+     "0",
+     "0",
+     "s21==>s7+s1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r7 term 2/2",
+     ""
+    ],
+    [
+     "1.13",
+     "0",
+     "0",
+     "s7+s1==>s21",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r14 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s69+s21+S[USER;cs46,cs69:(1.1126213592233007/(4.651162790697675*cs46+0.970873786407767*cs69+1))]==>s46+s21",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r14 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s46+s21+S[USER;cs46,cs69:(8.13953488372093/(4.651162790697675*cs46+0.970873786407767*cs69+1))]==>s69+s21",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r51 term 1/2",
+     ""
+    ],
+    [
+     "0.46",
+     "0",
+     "0",
+     "s140==>s135+s128",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r51 term 2/2",
+     ""
+    ],
+    [
+     "1.23",
+     "0",
+     "0",
+     "s135+s128==>s140",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re24",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "s150+s148==>s159",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r15 term 1/2",
+     ""
+    ],
+    [
+     "1.53",
+     "0",
+     "0",
+     "s9+s46+s21==>s48+s10+s21",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r15 term 2/2",
+     ""
+    ],
+    [
+     "0.89",
+     "0",
+     "0",
+     "s48+s10+s21==>s9+s46+s21",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r23 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s159+s21==>s68+s160+s21",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r23 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s68+s160+s21==>s159+s21",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r54 term 1/2",
+     ""
+    ],
+    [
+     "0.71",
+     "0",
+     "0",
+     "s158==>s71+s70",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r54 term 2/2",
+     ""
+    ],
+    [
+     "1.28",
+     "0",
+     "0",
+     "s71+s70==>s158",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r26 term 1/2",
+     ""
+    ],
+    [
+     "1.33",
+     "0",
+     "0",
+     "s161==>s70",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r26 term 2/2",
+     ""
+    ],
+    [
+     "0.61",
+     "0",
+     "0",
+     "s70==>s161",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r25 term 1/2",
+     ""
+    ],
+    [
+     "1.27",
+     "0",
+     "0",
+     "s160==>s69+s161",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r25 term 2/2",
+     ""
+    ],
+    [
+     "0.73",
+     "0",
+     "0",
+     "s69+s161==>s160",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "s9",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP [s9]",
+     ""
+    ],
+    [
+     "s10",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ADP [s10]",
+     ""
+    ],
+    [
+     "s1",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Patched [s1]",
+     ""
+    ],
+    [
+     "s75",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hedgehog target gene [s75]",
+     ""
+    ],
+    [
+     "s135",
+     "0",
+     "2.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Sap18 [s135]",
+     ""
+    ],
+    [
+     "s7",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hedgehog [s7]",
+     ""
+    ],
+    [
+     "s21",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Patched/Hedgehog) [s21]",
+     ""
+    ],
+    [
+     "s46",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Costal2/Fused/_br_Smoothened) [s46]",
+     ""
+    ],
+    [
+     "s48",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Costal2/Smoothened/_br_Fused) [s48]",
+     ""
+    ],
+    [
+     "s69",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Costal2/Fused/_br_Smoothened) [s69]",
+     ""
+    ],
+    [
+     "s71",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CBP [s71]",
+     ""
+    ],
+    [
+     "s68",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Microtubule [s68]",
+     ""
+    ],
+    [
+     "s70",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cubitus_space_interruptus [s70]",
+     ""
+    ],
+    [
+     "s128",
+     "0",
+     "2.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Cubitus_space_interruptus_space_repressor/Su(fu)) [s128]",
+     ""
+    ],
+    [
+     "s140",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Sap18/Su(fu)/_br_Cubitus_space_interruptus_space_repressor) [s140]",
+     ""
+    ],
+    [
+     "s148",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "smoothened [s148]",
+     ""
+    ],
+    [
+     "s150",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "complex [s150]",
+     ""
+    ],
+    [
+     "s152",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "MIcrotubule [s152]",
+     ""
+    ],
+    [
+     "s157",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "0.5",
+     "sag [s157]",
+     ""
+    ],
+    [
+     "s158",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(CBP/Cubitus) [s158]",
+     ""
+    ],
+    [
+     "s159",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Costal2/Fused/../microtubule) [s159]",
+     ""
+    ],
+    [
+     "s160",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Su(fu)/Fused/../_br_Smoothened) [s160]",
+     ""
+    ],
+    [
+     "s161",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Su(fu)/Cubitus) [s161]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

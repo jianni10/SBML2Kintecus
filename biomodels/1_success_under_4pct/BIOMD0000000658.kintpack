@@ -1,0 +1,812 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:28:30.309203+00:00",
+ "description": "Lee2003 - Roles of APC and Axin in Wnt Pathway (without regulatory loop)\nBioModels BIOMD0000000658 (curated). SBML file: BIOMD0000000658_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: MODEL1708310000_edited.sedml), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.39e-06 of species peak (worst: B_catenin__APC__axin__GSK3)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'W' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] v1 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Dsh_a: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lee2003 - Roles of APC and Axin in Wnt Pathway (without regulatory loop)  (BIOMD0000000658, curated BioModels; source file BIOMD0000000658_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Dsh_i+S[USER;cTIME_:(1.3448082100053784*exp((-1*0.05*cTIME_)))]==>Dsh_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cDsh_i,cSW1,cTIME_:(1.3448082100053784*cDsh_i*cSW1*exp((-1*0.05*cTIME_)))]==>Dsh_i",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1 term 2/2 (consumes Dsh_a)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cDsh_i,cSW1,cTIME_:((-1*1.3448082100053784*cDsh_i*cSW1*exp((-1*0.05*cTIME_))))]==>Dsh_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2",
+     ""
+    ],
+    [
+     "0.0182",
+     "0",
+     "0",
+     "Dsh_a==>Dsh_i",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "APC_axin_GSK3+Dsh_a==>APC_axin+GSK3+Dsh_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4",
+     ""
+    ],
+    [
+     "0.267",
+     "0",
+     "0",
+     "APC_axin_GSK3==>APC__axin__GSK3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5",
+     ""
+    ],
+    [
+     "0.133",
+     "0",
+     "0",
+     "APC__axin__GSK3==>APC_axin_GSK3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6 term 1/2",
+     ""
+    ],
+    [
+     "0.909",
+     "0",
+     "0",
+     "APC_axin_GSK3==>APC_axin+GSK3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6 term 2/2",
+     ""
+    ],
+    [
+     "0.0909",
+     "0",
+     "0",
+     "APC_axin+GSK3==>APC_axin_GSK3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7 term 1/2",
+     ""
+    ],
+    [
+     "25000",
+     "0",
+     "0",
+     "APC_axin==>APC+Axin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7 term 2/2",
+     ""
+    ],
+    [
+     "500",
+     "0",
+     "0",
+     "APC+Axin==>APC_axin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8 term 1/2",
+     ""
+    ],
+    [
+     "60000",
+     "0",
+     "0",
+     "B_catenin_APC__axin__GSK3==>APC__axin__GSK3+B_catenin_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8 term 2/2",
+     ""
+    ],
+    [
+     "500",
+     "0",
+     "0",
+     "APC__axin__GSK3+B_catenin_0==>B_catenin_APC__axin__GSK3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9",
+     ""
+    ],
+    [
+     "206",
+     "0",
+     "0",
+     "B_catenin_APC__axin__GSK3==>B_catenin__APC__axin__GSK3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10",
+     ""
+    ],
+    [
+     "206",
+     "0",
+     "0",
+     "B_catenin__APC__axin__GSK3==>APC__axin__GSK3+B_catenin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11",
+     ""
+    ],
+    [
+     "0.417",
+     "0",
+     "0",
+     "B_catenin==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12",
+     ""
+    ],
+    [
+     "0.423",
+     "0",
+     "0",
+     "source==>B_catenin_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v13",
+     ""
+    ],
+    [
+     "0.000257",
+     "0",
+     "0",
+     "B_catenin_0==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v14",
+     ""
+    ],
+    [
+     "8.22e-5",
+     "0",
+     "0",
+     "source==>Axin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v15",
+     ""
+    ],
+    [
+     "0.167",
+     "0",
+     "0",
+     "Axin==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v16 term 1/2",
+     ""
+    ],
+    [
+     "15000",
+     "0",
+     "0",
+     "B_catenin_TCF==>B_catenin_0+TCF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v16 term 2/2",
+     ""
+    ],
+    [
+     "500",
+     "0",
+     "0",
+     "B_catenin_0+TCF==>B_catenin_TCF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v17 term 1/2",
+     ""
+    ],
+    [
+     "600000",
+     "0",
+     "0",
+     "B_catenin_APC==>APC+B_catenin_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v17 term 2/2",
+     ""
+    ],
+    [
+     "500",
+     "0",
+     "0",
+     "APC+B_catenin_0==>B_catenin_APC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Dsh_i",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Dsh_i [Dsh_i]",
+     ""
+    ],
+    [
+     "Dsh_a",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Dsh_a [Dsh_a]",
+     ""
+    ],
+    [
+     "APC__axin__GSK3",
+     "0",
+     "0.00966",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC*/axin*/GSK3 [APC__axin__GSK3]",
+     ""
+    ],
+    [
+     "APC_axin_GSK3",
+     "0",
+     "0.00483",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC/axin/GSK3 [APC_axin_GSK3]",
+     ""
+    ],
+    [
+     "GSK3",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GSK3 [GSK3]",
+     ""
+    ],
+    [
+     "APC_axin",
+     "0",
+     "0.00098065",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC/axin [APC_axin]",
+     ""
+    ],
+    [
+     "APC",
+     "0",
+     "98",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC [APC]",
+     ""
+    ],
+    [
+     "B_catenin_APC__axin__GSK3",
+     "0",
+     "0.00202",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B_catenin/APC*/axin*/GSK3 [B_catenin_APC__axin__GSK3]",
+     ""
+    ],
+    [
+     "B_catenin__APC__axin__GSK3",
+     "0",
+     "0.00202",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B_catenin*/APC*/axin*/GSK3 [B_catenin__APC__axin__GSK3]",
+     ""
+    ],
+    [
+     "B_catenin",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B_catenin* [B_catenin]",
+     ""
+    ],
+    [
+     "B_catenin_0",
+     "0",
+     "25.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B_catenin [B_catenin_0]",
+     ""
+    ],
+    [
+     "Axin",
+     "0",
+     "0.000493",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Axin [Axin]",
+     ""
+    ],
+    [
+     "TCF",
+     "0",
+     "8.17",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TCF [TCF]",
+     ""
+    ],
+    [
+     "B_catenin_TCF",
+     "0",
+     "6.83",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B_catenin/TCF [B_catenin_TCF]",
+     ""
+    ],
+    [
+     "B_catenin_APC",
+     "0",
+     "2.05",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B_catenin/APC [B_catenin_APC]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 40 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1.000000001",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1.000000001",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "40",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

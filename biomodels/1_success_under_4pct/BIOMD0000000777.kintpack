@@ -1,0 +1,386 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:08:57.378159+00:00",
+ "description": "Chakrabarty2010 - A control theory approach to cancer remission aided by an optimal therapy\nBioModels BIOMD0000000777 (curated). SBML file: Chakrabarty2010.xml.\nSimulation: 0 to 60 time units (SED-ML: Chakrabarty2010.sedml), sampling 0.6.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.50e-06 of species peak (worst: N_CTL)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chakrabarty2010 - A control theory approach to cancer remission aided by an optimal therapy  (BIOMD0000000777, curated BioModels; source file Chakrabarty2010.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Growth term 1/2",
+     ""
+    ],
+    [
+     "0.18",
+     "0",
+     "0",
+     "M_Tumor_Cells==>2M_Tumor_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Growth term 2/2",
+     ""
+    ],
+    [
+     "3.6e-8",
+     "0",
+     "0",
+     "M_Tumor_Cells+M_Tumor_Cells==>M_Tumor_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Killing_T_Cells",
+     ""
+    ],
+    [
+     "1.101e-7",
+     "0",
+     "0",
+     "M_Tumor_Cells+N_CTL==>N_CTL",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CTL_Death",
+     ""
+    ],
+    [
+     "0.0412",
+     "0",
+     "0",
+     "N_CTL==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CTL_Decay",
+     ""
+    ],
+    [
+     "3.422e-10",
+     "0",
+     "0",
+     "N_CTL+M_Tumor_Cells==>M_Tumor_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "THL_Growth term 1/2",
+     ""
+    ],
+    [
+     "0.0245",
+     "0",
+     "0",
+     "Z_THL==>2Z_THL",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "THL_Growth term 2/2",
+     ""
+    ],
+    [
+     "2.45e-9",
+     "0",
+     "0",
+     "Z_THL+Z_THL==>Z_THL",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Killing_ACI",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "M_Tumor_Cells==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "M_Tumor_Cells",
+     "0",
+     "2750000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M_Tumor_Cells [M_Tumor_Cells]",
+     ""
+    ],
+    [
+     "N_CTL",
+     "0",
+     "200000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N_CTL [N_CTL]",
+     ""
+    ],
+    [
+     "Z_THL",
+     "0",
+     "7200000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Z_THL [Z_THL]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.6",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "60",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.6",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

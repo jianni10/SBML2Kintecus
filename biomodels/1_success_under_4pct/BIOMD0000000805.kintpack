@@ -1,0 +1,534 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:59:27.621152+00:00",
+ "description": "Al-Husari2013 - pH and lactate in tumor\nBioModels BIOMD0000000805 (curated). SBML file: Al-Husari2013.xml.\nSimulation: 0 to 10 time units (SED-ML: Al-Husari2013.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.56e-06 of species peak (worst: Hi)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] H_antiporter: piecewise/conditional rate encoded with abs()-based step functions\n  [info] H_antiporter term 3/5: rate order differs from the stoichiometry; consumed on separate line(s) - Hi: zero order, signed\n  [info] H_antiporter term 4/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] H_antiporter term 5/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] glycolysis_H: piecewise/conditional rate encoded with abs()-based step functions\n  [info] glycolysis_L: piecewise/conditional rate encoded with abs()-based step functions",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Al-Husari2013 - pH and lactate in tumor  (BIOMD0000000805, curated BioModels; source file Al-Husari2013.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "H_leak term 1/2",
+     ""
+    ],
+    [
+     "0.017174",
+     "0",
+     "0",
+     "He==>Hi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "H_leak term 2/2",
+     ""
+    ],
+    [
+     "0.017174",
+     "0",
+     "0",
+     "Hi==>He",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "H_antiporter term 1/5",
+     ""
+    ],
+    [
+     "8587",
+     "0",
+     "0",
+     "Hi==>He",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "H_antiporter term 2/5",
+     ""
+    ],
+    [
+     "8587",
+     "0",
+     "0",
+     "He==>Hi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "H_antiporter term 3/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cHe,cHi:(8587*cHe^2/(abs(cHe-cHi)+1e-300))]==>He",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "H_antiporter term 3/5 (consumes Hi)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cHe,cHi:((-1*8587*cHe^2/(abs(cHe-cHi)+1e-300)))]==>Hi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "H_antiporter term 4/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Hi+Hi+S[USER;cHe,cHi:(8587/(1*abs(-cHe+cHi+1e-30)+1e-300))]==>He+Hi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "H_antiporter term 5/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "He+Hi+S[USER;cHe,cHi:(17174/(1*abs(cHe-cHi+1e-30)+1e-300))]==>2Hi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MCT term 1/2",
+     ""
+    ],
+    [
+     "76042.40000000001",
+     "0",
+     "0",
+     "Hi+Li==>He+Le",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MCT term 2/2",
+     ""
+    ],
+    [
+     "76042.40000000001",
+     "0",
+     "0",
+     "He+Le==>Hi+Li",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glycolysis_H",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cHi:(7904.4/(cHi+1))]==>Hi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "H__source",
+     ""
+    ],
+    [
+     "7999.6",
+     "0",
+     "0",
+     "source==>Hi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "removal_of_H",
+     ""
+    ],
+    [
+     "30136.166769420124",
+     "0",
+     "0",
+     "He==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "lactate_source",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>Li",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "lactate_degradation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Li==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "removal_of_lactate",
+     ""
+    ],
+    [
+     "0.4284599575030271",
+     "0",
+     "0",
+     "Le==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glycolysis_L",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cHi:(0.5646/(cHi+1))]==>Li",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Hi",
+     "0",
+     "0.5011872336272722",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hi [Hi]",
+     ""
+    ],
+    [
+     "He",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "He [He]",
+     ""
+    ],
+    [
+     "Li",
+     "0",
+     "0.00125",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Li [Li]",
+     ""
+    ],
+    [
+     "Le",
+     "0",
+     "0.00125",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Le [Le]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

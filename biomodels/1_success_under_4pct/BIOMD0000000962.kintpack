@@ -1,0 +1,316 @@
+{
+ "version": 3,
+ "created": "2026-10-26T22:52:46.305594+00:00",
+ "description": "Zhao2020 - SUQC model of COVID-19 transmission dynamics in Wuhan, Hubei, and China\nBioModels BIOMD0000000962 (curated). SBML file: Zhao2020.xml.\nSimulation: 0 to 500 time units (SED-ML: Zhao2020.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.54e-06 of species peak (worst: Quarantined_Infected)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Cumulative_Infected' is defined by an assignment rule; not a Kintecus state (not output)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Zhao2020 - SUQC model of COVID-19 transmission dynamics in Wuhan, Hubei, and China  (BIOMD0000000962, curated BioModels; source file Zhao2020.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Unquarantined",
+     ""
+    ],
+    [
+     "3.292781354051054e-8",
+     "0",
+     "0",
+     "Susceptible+Unquarantined_Infected==>2Unquarantined_Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Unquarantined_to_Quarantined",
+     ""
+    ],
+    [
+     "0.063",
+     "0",
+     "0",
+     "Unquarantined_Infected==>Quarantined_Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Quarantined_to_Confirmed",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "Quarantined_Infected==>Confirmed_Infected",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Susceptible",
+     "0",
+     "9010000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible [Susceptible]",
+     ""
+    ],
+    [
+     "Unquarantined_Infected",
+     "0",
+     "258",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Unquarantined_Infected [Unquarantined_Infected]",
+     ""
+    ],
+    [
+     "Quarantined_Infected",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Quarantined_Infected [Quarantined_Infected]",
+     ""
+    ],
+    [
+     "Confirmed_Infected",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Confirmed_Infected [Confirmed_Infected]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.5",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "500",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.5",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

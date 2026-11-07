@@ -1,0 +1,833 @@
+{
+ "version": 3,
+ "created": "2026-10-26T21:37:50.843992+00:00",
+ "description": "Amara2013 - PCNA ubiquitylation in the activation of PRR pathway\nBioModels BIOMD0000000475 (curated). SBML file: BIOMD0000000475_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000475_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.98e-06 of species peak (worst: species_23)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Amara2013 - PCNA ubiquitylation in the activation of PRR pathway  (BIOMD0000000475, curated BioModels; source file BIOMD0000000475_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1",
+     ""
+    ],
+    [
+     "1.5e-8",
+     "0",
+     "0",
+     "species_2+species_1==>species_3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "species_5+species_5==>species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "species_4==>2species_5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "2.5e-7",
+     "0",
+     "0",
+     "species_6+species_8==>species_7",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "100000",
+     "0",
+     "0",
+     "species_4+species_3==>species_9",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "species_9==>species_3+species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7",
+     ""
+    ],
+    [
+     "0.0351",
+     "0",
+     "0",
+     "species_9+species_7==>species_10",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "species_10==>species_9+species_7",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "species_10==>species_6+species_11",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_11==>species_12+species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_11",
+     ""
+    ],
+    [
+     "100000",
+     "0",
+     "0",
+     "species_18+species_8==>species_15",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_12",
+     ""
+    ],
+    [
+     "5e-6",
+     "0",
+     "0",
+     "species_12+species_13==>species_14",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_13",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "species_14==>species_12+species_13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_14",
+     ""
+    ],
+    [
+     "0.078",
+     "0",
+     "0",
+     "species_15+species_14==>species_16",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_15",
+     ""
+    ],
+    [
+     "1e-10",
+     "0",
+     "0",
+     "species_16==>species_15+species_14",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "species_16==>species_18+species_17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17",
+     ""
+    ],
+    [
+     "7.5e-6",
+     "0",
+     "0",
+     "species_17==>species_13+species_19",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_18",
+     ""
+    ],
+    [
+     "5e-6",
+     "0",
+     "0",
+     "species_13+species_19==>species_17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_19",
+     ""
+    ],
+    [
+     "0.078",
+     "0",
+     "0",
+     "species_17+species_15==>species_20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_20",
+     ""
+    ],
+    [
+     "1e-10",
+     "0",
+     "0",
+     "species_20==>species_15+species_17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_21",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "species_20==>species_18+species_21",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_22",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "species_21==>species_22+species_13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_23",
+     ""
+    ],
+    [
+     "3e-8",
+     "0",
+     "0",
+     "species_12==>species_8+species_23",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_24",
+     ""
+    ],
+    [
+     "0.0008",
+     "0",
+     "0",
+     "species_19==>2species_8+species_23",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_25",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "species_22==>3species_8+species_23",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "species_1",
+     "0",
+     "1001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L [species_1]",
+     ""
+    ],
+    [
+     "species_2",
+     "0",
+     "7480",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PCNA [species_2]",
+     ""
+    ],
+    [
+     "species_3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PCNAon [species_3]",
+     ""
+    ],
+    [
+     "species_4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rad18:Rad18 [species_4]",
+     ""
+    ],
+    [
+     "species_5",
+     "0",
+     "206",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rad18 [species_5]",
+     ""
+    ],
+    [
+     "species_6",
+     "0",
+     "194",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rad6 [species_6]",
+     ""
+    ],
+    [
+     "species_7",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rad6U [species_7]",
+     ""
+    ],
+    [
+     "species_8",
+     "0",
+     "8698",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "U [species_8]",
+     ""
+    ],
+    [
+     "species_9",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rad18:Rad18:PCNAon [species_9]",
+     ""
+    ],
+    [
+     "species_10",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rad18:Rad18:PCNAon:Rad6U [species_10]",
+     ""
+    ],
+    [
+     "species_11",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rad18:Rad18:PCNAonU [species_11]",
+     ""
+    ],
+    [
+     "species_12",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PCNAonU [species_12]",
+     ""
+    ],
+    [
+     "species_13",
+     "0",
+     "1520",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rad5 [species_13]",
+     ""
+    ],
+    [
+     "species_14",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rad5:PCNAonU [species_14]",
+     ""
+    ],
+    [
+     "species_15",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ubc13U:Mms2 [species_15]",
+     ""
+    ],
+    [
+     "species_16",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ubc13U:Mms2:Rad5:PCNAonU [species_16]",
+     ""
+    ],
+    [
+     "species_17",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rad5:PCNAonU:U [species_17]",
+     ""
+    ],
+    [
+     "species_18",
+     "0",
+     "193",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ubc13:Mms2 [species_18]",
+     ""
+    ],
+    [
+     "species_19",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PCNAonU:U [species_19]",
+     ""
+    ],
+    [
+     "species_20",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ubc13U:Mms2:Rad5:PCNAonU:U [species_20]",
+     ""
+    ],
+    [
+     "species_21",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rad5:PCNAonU:U:U [species_21]",
+     ""
+    ],
+    [
+     "species_22",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PCNAonU:U:U [species_22]",
+     ""
+    ],
+    [
+     "species_23",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PCNAoff [species_23]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

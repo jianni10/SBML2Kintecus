@@ -1,0 +1,472 @@
+{
+ "version": 3,
+ "created": "2026-11-06T06:16:17.777551+00:00",
+ "description": "Ortega2013 - Interplay between secretases determines biphasic amyloid-beta level\nBioModels BIOMD0000000556 (curated). SBML file: BIOMD0000000556_url.xml.\nSimulation: 0 to 57600 time units (SED-ML: Ortega2013(NoDrug).sedml), sampling 822.8571428571429.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.83e-06 of species peak (worst: AB)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dAPP/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dAPP/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dC83/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dC99/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dC99/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ortega2013 - Interplay between secretases determines biphasic amyloid-beta level  (BIOMD0000000556, curated BioModels; source file BIOMD0000000556_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAPP/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>APP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAPP/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APP+S[USER;cAPP,cC99:(5.913978494623656/(5.376344086021505*cAPP+14.880952380952381*cC99+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAPP/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APP+S[USER;cAPP:(0.09329268292682927/(0.6097560975609756*cAPP+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC83/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APP+S[USER;cAPP,cC99:(5.913978494623656/(5.376344086021505*cAPP+14.880952380952381*cC99+1))]==>C83+APP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC83/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C99+S[USER;cAPP,cC99:(0.33184523809523814/(5.376344086021505*cAPP+14.880952380952381*cC99+1))]==>C83+C99",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC83/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C83+S[USER;cC83,cC99:(0.5069444444444444/(0.034722222222222224*cC83+1.0928961748633879*cC99+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC99/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APP+S[USER;cAPP:(0.09329268292682927/(0.6097560975609756*cAPP+1))]==>C99+APP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC99/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C99+S[USER;cC83,cC99:(1.8688524590163933/(0.034722222222222224*cC83+1.0928961748633879*cC99+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC99/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C99+S[USER;cAPP,cC99:(0.33184523809523814/(5.376344086021505*cAPP+14.880952380952381*cC99+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAB/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C99+S[USER;cC83,cC99:(1.8688524590163933/(0.034722222222222224*cC83+1.0928961748633879*cC99+1))]==>AB+C99",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dp3/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C83+S[USER;cC83,cC99:(0.5069444444444444/(0.034722222222222224*cC83+1.0928961748633879*cC99+1))]==>p3+C83",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "APP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APP [APP]",
+     ""
+    ],
+    [
+     "C83",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C83 [C83]",
+     ""
+    ],
+    [
+     "C99",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C99 [C99]",
+     ""
+    ],
+    [
+     "AB",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AB [AB]",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "X [X]",
+     ""
+    ],
+    [
+     "p3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p3 [p3]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "822.8571429",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "57600",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "822.8571429",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

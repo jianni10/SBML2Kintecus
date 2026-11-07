@@ -1,0 +1,809 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:45:37.662930+00:00",
+ "description": "Liu2010_Hormonal_Crosstalk_Arabidopsis\nBioModels BIOMD0000000269 (curated). SBML file: BIOMD0000000269_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000269_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.59e-06 of species peak (worst: ET)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Ra' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Re' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'CTR1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction_16 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - X: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Liu2010_Hormonal_Crosstalk_Arabidopsis  (BIOMD0000000269, curated BioModels; source file BIOMD0000000269_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX:(1/(1*cX+1))]==>Auxin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 1/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "source==>Auxin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ET+PLSp+S[USER;cCK,cPLSp:(2.8/(1*cCK*cPLSp+0.01*cCK+1*cPLSp+0.01))]==>Auxin+ET+PLSp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 1/2",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Auxin==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 2/2",
+     ""
+    ],
+    [
+     "0.45",
+     "0",
+     "0",
+     "Auxin+X==>X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Auxin==>Ra_star+Auxin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ra_star+Auxin==>Auxin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ra_star==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ra_star+S[USER;cET:(0.3/(5*cET+1))]==>PLSm+Ra_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PLSm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PLSm==>PLSp+PLSm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PLSp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10 term 1/4",
+     ""
+    ],
+    [
+     "8.999999999999999e-5",
+     "0",
+     "0",
+     "source==>Re_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10 term 2/4",
+     ""
+    ],
+    [
+     "0.15",
+     "0",
+     "0",
+     "PLSp==>Re_star+PLSp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10 term 3/4",
+     ""
+    ],
+    [
+     "0.0003",
+     "0",
+     "0",
+     "Re_star==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10 term 4/4",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "Re_star+PLSp==>PLSp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_11",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "Re_star+ET==>ET",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_12 term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "source==>ET",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_12 term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Auxin+CK==>ET+Auxin+CK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ET==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_14 term 1/2",
+     ""
+    ],
+    [
+     "0.8999999999999999",
+     "0",
+     "0",
+     "Re_star==>CTR1_star+Re_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_14 term 2/2",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "CTR1_star+Re_star==>Re_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_15",
+     ""
+    ],
+    [
+     "0.085",
+     "0",
+     "0",
+     "CTR1_star==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 1/2",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "source==>X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 2/2 (consumes X)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCTR1_star:((-1*1*cCTR1_star))]==>X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "X==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_18",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAuxin:(1/(10*cAuxin+1))]==>CK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_19",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CK==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Auxin",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Auxin [Auxin]",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X [X]",
+     ""
+    ],
+    [
+     "PLSp",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PLSp [PLSp]",
+     ""
+    ],
+    [
+     "Ra_star",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ra* [Ra_star]",
+     ""
+    ],
+    [
+     "RaT",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "Ra_total [RaT]",
+     ""
+    ],
+    [
+     "CK",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CK [CK]",
+     ""
+    ],
+    [
+     "ET",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ET [ET]",
+     ""
+    ],
+    [
+     "PLSm",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PLSm [PLSm]",
+     ""
+    ],
+    [
+     "ReT",
+     "0",
+     "0.3",
+     "Y",
+     "0",
+     "No",
+     "0.3",
+     "Re_total [ReT]",
+     ""
+    ],
+    [
+     "Re_star",
+     "0",
+     "0.3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Re* [Re_star]",
+     ""
+    ],
+    [
+     "CTR1T",
+     "0",
+     "0.3",
+     "Y",
+     "0",
+     "No",
+     "0.3",
+     "CTR1_total [CTR1T]",
+     ""
+    ],
+    [
+     "CTR1_star",
+     "0",
+     "0.3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CTR1* [CTR1_star]",
+     ""
+    ],
+    [
+     "IAA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "IAA [IAA]",
+     ""
+    ],
+    [
+     "ACC",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "ACC [ACC]",
+     ""
+    ],
+    [
+     "CK_ex",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Cytokinin_ext [CK_ex]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

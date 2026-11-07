@@ -1,0 +1,893 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:57:23.270895+00:00",
+ "description": "Wolf2000 - Cellular interaction on glycolytic oscillations in yeast\nBioModels BIOMD0000000691 (curated). SBML file: BIOMD0000000691_url.xml.\nSimulation: 0 to 200 time units (SED-ML: MODEL1006230022.sedml), sampling 0.6666666666666666.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.55e-03 of species peak (worst: S1__Cell_2_)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 8.04e-07 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'N1__Cell_1_' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'N1__Cell_2_' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'A2__Cell_1_' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'A2__Cell_2_' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] v1_cell_1: rate order differs from the stoichiometry; consumed on separate line(s) - A3__Cell_1_: first order\n  [info] v1_cell_2: rate order differs from the stoichiometry; consumed on separate line(s) - A3__Cell_2_: first order\n  [info] v2_cell_1 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - S3__Cell_1_: zero order, signed\n  [info] v2_cell_2 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - S3__Cell_2_: zero order, signed\n  [info] v3_cell_1 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - S4__Cell_1_: zero order, signed; A3__Cell_1_: first order\n  [info] v3_cell_2 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - A3__Cell_2_: first order; S4__Cell_2_: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wolf2000 - Cellular interaction on glycolytic oscillations in yeast  (BIOMD0000000691, curated BioModels; source file BIOMD0000000691_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1_cell_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S1__Cell_1_+S[USER;cA3__Cell_1_:(100*cA3__Cell_1_/(13.676867056475611*cA3__Cell_1_^4+1))]==>2S2__Cell_1_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1_cell_1 (consumes A3__Cell_1_)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A3__Cell_1_+S[USER;cA3__Cell_1_,cS1__Cell_1_:(200*cS1__Cell_1_/(13.676867056475611*cA3__Cell_1_^4+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1_cell_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S1__Cell_2_+S[USER;cA3__Cell_2_:(100*cA3__Cell_2_/(13.676867056475611*cA3__Cell_2_^4+1))]==>2S2__Cell_2_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1_cell_2 (consumes A3__Cell_2_)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A3__Cell_2_+S[USER;cA3__Cell_2_,cS1__Cell_2_:(200*cS1__Cell_2_/(13.676867056475611*cA3__Cell_2_^4+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2_cell_1 term 1/2",
+     ""
+    ],
+    [
+     "6",
+     "0",
+     "0",
+     "S2__Cell_1_==>S3__Cell_1_+N2__Cell_1_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2_cell_1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N2__Cell_1_+S[USER;cS2__Cell_1_:(6*cS2__Cell_1_)]==>S2__Cell_1_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2_cell_1 term 2/2 (consumes S3__Cell_1_)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN2__Cell_1_,cS2__Cell_1_:((-1*6*cN2__Cell_1_*cS2__Cell_1_))]==>S3__Cell_1_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2_cell_2 term 1/2",
+     ""
+    ],
+    [
+     "6",
+     "0",
+     "0",
+     "S2__Cell_2_==>N2__Cell_2_+S3__Cell_2_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2_cell_2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N2__Cell_2_+S[USER;cS2__Cell_2_:(6*cS2__Cell_2_)]==>S2__Cell_2_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2_cell_2 term 2/2 (consumes S3__Cell_2_)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN2__Cell_2_,cS2__Cell_2_:((-1*6*cN2__Cell_2_*cS2__Cell_2_))]==>S3__Cell_2_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3_cell_1 term 1/2",
+     ""
+    ],
+    [
+     "64",
+     "0",
+     "0",
+     "S3__Cell_1_==>S4__Cell_1_+2A3__Cell_1_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3_cell_1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cA3__Cell_1_,cS3__Cell_1_:(16*cA3__Cell_1_*cS3__Cell_1_)]==>S3__Cell_1_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3_cell_1 term 2/2 (consumes S4__Cell_1_)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cA3__Cell_1_,cS3__Cell_1_:((-1*16*cA3__Cell_1_*cS3__Cell_1_))]==>S4__Cell_1_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3_cell_1 term 2/2 (consumes A3__Cell_1_)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A3__Cell_1_+S[USER;cS3__Cell_1_:(32*cS3__Cell_1_)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3_cell_2 term 1/2",
+     ""
+    ],
+    [
+     "64",
+     "0",
+     "0",
+     "S3__Cell_2_==>2A3__Cell_2_+S4__Cell_2_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3_cell_2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cA3__Cell_2_,cS3__Cell_2_:(16*cA3__Cell_2_*cS3__Cell_2_)]==>S3__Cell_2_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3_cell_2 term 2/2 (consumes A3__Cell_2_)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A3__Cell_2_+S[USER;cS3__Cell_2_:(32*cS3__Cell_2_)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3_cell_2 term 2/2 (consumes S4__Cell_2_)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cA3__Cell_2_,cS3__Cell_2_:((-1*16*cA3__Cell_2_*cS3__Cell_2_))]==>S4__Cell_2_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4_cell_1",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "N2__Cell_1_+S4__Cell_1_==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4_cell_2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "N2__Cell_2_+S4__Cell_2_==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5_cell_1",
+     ""
+    ],
+    [
+     "1.28",
+     "0",
+     "0",
+     "A3__Cell_1_==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5_cell_2",
+     ""
+    ],
+    [
+     "1.28",
+     "0",
+     "0",
+     "A3__Cell_2_==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6_cell_1",
+     ""
+    ],
+    [
+     "12",
+     "0",
+     "0",
+     "N2__Cell_1_+S2__Cell_1_==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6_cell_2",
+     ""
+    ],
+    [
+     "12",
+     "0",
+     "0",
+     "S2__Cell_2_+N2__Cell_2_==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "S4_ex==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "S1_cell_1_glucose_influx",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "source==>S1__Cell_1_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "S1_cell_2_glucose_influx",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "source==>S1__Cell_2_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "S4_cell_1_export term 1/2",
+     ""
+    ],
+    [
+     "13",
+     "0",
+     "0",
+     "S4__Cell_1_==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "S4_cell_1_export term 2/2",
+     ""
+    ],
+    [
+     "13",
+     "0",
+     "0",
+     "S4_ex==>S4__Cell_1_+S4_ex",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "S4_cell_2_export term 1/2",
+     ""
+    ],
+    [
+     "13",
+     "0",
+     "0",
+     "S4__Cell_2_==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "S4_cell_2_export term 2/2",
+     ""
+    ],
+    [
+     "13",
+     "0",
+     "0",
+     "S4_ex==>S4__Cell_2_+S4_ex",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "S4_ex_import term 1/3",
+     ""
+    ],
+    [
+     "0.65",
+     "0",
+     "0",
+     "S4__Cell_1_==>S4_ex+S4__Cell_1_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "S4_ex_import term 2/3",
+     ""
+    ],
+    [
+     "0.65",
+     "0",
+     "0",
+     "S4__Cell_2_==>S4_ex+S4__Cell_2_",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "S4_ex_import term 3/3",
+     ""
+    ],
+    [
+     "1.3",
+     "0",
+     "0",
+     "S4_ex==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "S1__Cell_1_",
+     "0",
+     "5.8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S1 [S1__Cell_1_]",
+     ""
+    ],
+    [
+     "S1__Cell_2_",
+     "0",
+     "2.9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S1 [S1__Cell_2_]",
+     ""
+    ],
+    [
+     "S2__Cell_1_",
+     "0",
+     "0.9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S2 [S2__Cell_1_]",
+     ""
+    ],
+    [
+     "S2__Cell_2_",
+     "0",
+     "0.45",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S2 [S2__Cell_2_]",
+     ""
+    ],
+    [
+     "S3__Cell_1_",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S3 [S3__Cell_1_]",
+     ""
+    ],
+    [
+     "S3__Cell_2_",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S3 [S3__Cell_2_]",
+     ""
+    ],
+    [
+     "S4__Cell_1_",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S4 [S4__Cell_1_]",
+     ""
+    ],
+    [
+     "S4__Cell_2_",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S4 [S4__Cell_2_]",
+     ""
+    ],
+    [
+     "N2__Cell_1_",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N2 [N2__Cell_1_]",
+     ""
+    ],
+    [
+     "N2__Cell_2_",
+     "0",
+     "0.05",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N2 [N2__Cell_2_]",
+     ""
+    ],
+    [
+     "A3__Cell_1_",
+     "0",
+     "3.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A3 [A3__Cell_1_]",
+     ""
+    ],
+    [
+     "A3__Cell_2_",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A3 [A3__Cell_2_]",
+     ""
+    ],
+    [
+     "S4_ex",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S4_ex [S4_ex]",
+     ""
+    ],
+    [
+     "A",
+     "0",
+     "4",
+     "Y",
+     "0",
+     "No",
+     "4",
+     "A [A]",
+     ""
+    ],
+    [
+     "N",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "N [N]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.6666666667",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.6666666667",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

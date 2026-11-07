@@ -1,0 +1,467 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:11:39.738261+00:00",
+ "description": "Trisilowati2018 - Optimal control of tumor-immune system interaction with treatment\nBioModels BIOMD0000000880 (curated). SBML file: Trisilowati2018.xml.\nSimulation: 0 to 30 time units (SED-ML: Trisilowati2018.sedml), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.03e-07 of species peak (worst: H_CD4_T_Cells)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Trisilowati2018 - Optimal control of tumor-immune system interaction with treatment  (BIOMD0000000880, curated BioModels; source file Trisilowati2018.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Growth term 1/2",
+     ""
+    ],
+    [
+     "0.431",
+     "0",
+     "0",
+     "T_Tumor_Cells==>2T_Tumor_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Growth term 2/2",
+     ""
+    ],
+    [
+     "4.3962e-10",
+     "0",
+     "0",
+     "T_Tumor_Cells+T_Tumor_Cells==>T_Tumor_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Death_CD8",
+     ""
+    ],
+    [
+     "4.2e-8",
+     "0",
+     "0",
+     "T_Tumor_Cells+L_CD8_T_Cells==>L_CD8_T_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_Activation term 1/2",
+     ""
+    ],
+    [
+     "2e-5",
+     "0",
+     "0",
+     "D_Dendritic_Cells+L_CD8_T_Cells==>2L_CD8_T_Cells+D_Dendritic_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_Activation term 2/2",
+     ""
+    ],
+    [
+     "2e-5",
+     "0",
+     "0",
+     "H_CD4_T_Cells+L_CD8_T_Cells==>2L_CD8_T_Cells+H_CD4_T_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_Inactivation",
+     ""
+    ],
+    [
+     "8e-10",
+     "0",
+     "0",
+     "L_CD8_T_Cells+T_Tumor_Cells==>T_Tumor_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_Death",
+     ""
+    ],
+    [
+     "1.04e-8",
+     "0",
+     "0",
+     "L_CD8_T_Cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "DC_Growth term 1/2",
+     ""
+    ],
+    [
+     "0.234",
+     "0",
+     "0",
+     "D_Dendritic_Cells==>2D_Dendritic_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "DC_Growth term 2/2",
+     ""
+    ],
+    [
+     "2.9250000000000004e-6",
+     "0",
+     "0",
+     "D_Dendritic_Cells+D_Dendritic_Cells==>D_Dendritic_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "DC_Inactivation",
+     ""
+    ],
+    [
+     "2e-5",
+     "0",
+     "0",
+     "D_Dendritic_Cells+L_CD8_T_Cells==>L_CD8_T_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4_Growth term 1/2",
+     ""
+    ],
+    [
+     "0.017",
+     "0",
+     "0",
+     "H_CD4_T_Cells==>2H_CD4_T_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4_Growth term 2/2",
+     ""
+    ],
+    [
+     "8.500000000000002e-6",
+     "0",
+     "0",
+     "H_CD4_T_Cells+H_CD4_T_Cells==>H_CD4_T_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4_Inactivation",
+     ""
+    ],
+    [
+     "2e-5",
+     "0",
+     "0",
+     "H_CD4_T_Cells+L_CD8_T_Cells==>L_CD8_T_Cells",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "T_Tumor_Cells",
+     "0",
+     "1000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T_Tumor_Cells [T_Tumor_Cells]",
+     ""
+    ],
+    [
+     "L_CD8_T_Cells",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L_CD8_T_Cells [L_CD8_T_Cells]",
+     ""
+    ],
+    [
+     "D_Dendritic_Cells",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "D_Dendritic_Cells [D_Dendritic_Cells]",
+     ""
+    ],
+    [
+     "H_CD4_T_Cells",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "H_CD4_T_Cells [H_CD4_T_Cells]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.03",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.03",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

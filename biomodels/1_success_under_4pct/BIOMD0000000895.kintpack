@@ -1,0 +1,869 @@
+{
+ "version": 3,
+ "created": "2026-11-01T23:01:58.479690+00:00",
+ "description": "Schokker2013 - A mathematical model representing cellular immune development and response to Salmonella of chicken intestinal tissue\nBioModels BIOMD0000000895 (curated). SBML file: Schokker2013.xml.\nSimulation: 0 to 40 time units (SED-ML: Schokker2013.sedml), sampling 0.04.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.66e-06 of species peak (worst: Mi)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Mr_Infection: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CD4_Growth_Boost term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CD8_Growth_Boost term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mi_Bursting: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mi_Lysis term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mi_Lysis term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - Mi: zero order, signed\n  [info] Si_Proliferation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mi_Lysis_Si: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for Si",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Schokker2013 - A mathematical model representing cellular immune development and response to Salmonella of chicken intestinal tissue  (BIOMD0000000895, curated BioModels; source file Schokker2013.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mr_Source",
+     ""
+    ],
+    [
+     "300000",
+     "0",
+     "0",
+     "source==>Mr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mr_Growth_Boost term 1/2",
+     ""
+    ],
+    [
+     "1.2",
+     "0",
+     "0",
+     "Mr==>2Mr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mr_Growth_Boost term 2/2",
+     ""
+    ],
+    [
+     "1.3714285714285715e-7",
+     "0",
+     "0",
+     "Mr+Mr==>Mr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mr_Recruitment",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mrrec+Se+S[USER;cSe:(1/(cSe+1000))]==>Mr+Se",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ma_Deactivation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ma+CD4+S[USER;cCD4:(40/(cCD4+30000000))]==>Mr+CD4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mr_Infection",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Se+Mr+S[USER;cSe:(0.1/(1*cSe+600000))]==>Mi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mr_Activation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mr+Se+S[USER;cSe:(100/(cSe+1))]==>Ma+Se",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Se_Killing_Mr",
+     ""
+    ],
+    [
+     "5e-8",
+     "0",
+     "0",
+     "Se+Mr==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mr_Death",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "Mr==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4_Source",
+     ""
+    ],
+    [
+     "490000",
+     "0",
+     "0",
+     "source==>CD4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4_Growth_Boost term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCD4:(0.19*cCD4^3/(cCD4^2+75690000000000))]==>CD4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4_Growth_Boost term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD4+S[USER;cCD4:(2.3170731707317074e-9*cCD4^3/(1*(cCD4+1e-30)^2+75690000000000))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4_Recruitment",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD4rec+Se+S[USER;cSe:(100/(cSe+1))]==>CD4+Se",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Se_Killing_CD4",
+     ""
+    ],
+    [
+     "1e-9",
+     "0",
+     "0",
+     "CD4+Se==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4_Interaction_Naive_Se",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD4+S[USER;cSe:(0.4*cSe^8/(cSe^8+9.682651996416e28))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4_Death",
+     ""
+    ],
+    [
+     "0.016",
+     "0",
+     "0",
+     "CD4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_Source",
+     ""
+    ],
+    [
+     "430000",
+     "0",
+     "0",
+     "source==>CD8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_Growth_Boost term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD8+CD8+S[USER;cCD8:(1.44/(cCD8+47000000))]==>3CD8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_Growth_Boost term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD8+CD8+CD8+S[USER;cCD8:(1.1076923076923077e-7/(1*cCD8+47000000))]==>2CD8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_Competition",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD8+Se+S[USER;cCD4,cSe:(0.85*cCD4^0.5/(cCD4^0.5*cSe+1e-25*cCD4^0.5+5830.951894845301*cSe+5.8309518948453e-22))]==>Se",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_Death",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "CD8==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ma_Death",
+     ""
+    ],
+    [
+     "0.08",
+     "0",
+     "0",
+     "Ma==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Se_Killing_Ma",
+     ""
+    ],
+    [
+     "2.6e-7",
+     "0",
+     "0",
+     "Se+Ma==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mi_Bursting",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mi+Si+S[USER;cMi,cSi:(0.4*cSi/(900*(cMi+1e-30)^2+1*(cSi+1e-30)^2))]==>Se",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mi_Lysis term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mi+CD4+S[USER;cCD4,cCD8,cMi:(0.8/(1*cCD4*(cMi+1e-30)+1*cCD8+10*cMi+1.0000000000000001e-29))]==>CD4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mi_Lysis term 2/4 (consumes Mi)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCD4,cCD8,cMi:((-1*0.8*cCD8/(cCD4*cMi+cCD8+10*cMi)))]==>Mi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mi_Lysis term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD4+Si+S[USER;cCD4,cCD8,cMi,cSi:(0.5599999999999999/(cCD4*cMi+cCD4*cSi+30*cCD4+cCD8+cCD8*cSi/cMi+30*cCD8/cMi+10*cMi+10*cSi+300))]==>Mi+CD4+Si",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mi_Lysis term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD8+Si+S[USER;cCD4,cCD8,cMi,cSi:(0.5599999999999999/(cCD4*cMi^2+cCD4*cMi*cSi+30*cCD4*cMi+cCD8*cMi+cCD8*cSi+30*cCD8+10*cMi^2+10*cMi*cSi+300*cMi))]==>Mi+CD8+Si",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mi_Death",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "Mi==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Se_Proliferation term 1/2",
+     ""
+    ],
+    [
+     "35",
+     "0",
+     "0",
+     "Se==>2Se",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Se_Proliferation term 2/2",
+     ""
+    ],
+    [
+     "7e-5",
+     "0",
+     "0",
+     "Se+Se==>Se",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Se_Death",
+     ""
+    ],
+    [
+     "27.8",
+     "0",
+     "0",
+     "Se==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Si_Death",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "Si==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Si_Proliferation term 1/2",
+     ""
+    ],
+    [
+     "4.1",
+     "0",
+     "0",
+     "Si==>2Si",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Si_Proliferation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Si+Si+S[USER;cMi,cSi:(4.1/(30*cMi+1*cSi+1e-30))]==>Si",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mr_Infection_Si",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mr+Si+S[USER;cSi:(0.1/(cSi+1))]==>2Si+Mr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mi_Lysis_Si (consumes Si)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCD4,cCD8,cMi:((-1*1*(0.8*cCD4+0.8*cCD8/cMi)/(cCD4+cCD8/cMi+10)))]==>Si",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "CD4",
+     "0",
+     "9000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CD4 [CD4]",
+     ""
+    ],
+    [
+     "CD8",
+     "0",
+     "7000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CD8 [CD8]",
+     ""
+    ],
+    [
+     "Mr",
+     "0",
+     "9000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mr [Mr]",
+     ""
+    ],
+    [
+     "Ma",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ma [Ma]",
+     ""
+    ],
+    [
+     "Mi",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mi [Mi]",
+     ""
+    ],
+    [
+     "Se",
+     "0",
+     "200",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Se [Se]",
+     ""
+    ],
+    [
+     "Si",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Si [Si]",
+     ""
+    ],
+    [
+     "CD4rec",
+     "0",
+     "27000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CD4rec [CD4rec]",
+     ""
+    ],
+    [
+     "Mrrec",
+     "0",
+     "20000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mrrec [Mrrec]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.04",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "40",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.04",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

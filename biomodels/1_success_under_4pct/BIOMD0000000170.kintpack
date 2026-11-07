@@ -1,0 +1,581 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:54:52.157836+00:00",
+ "description": "Weimann2004_CircadianOscillator\nBioModels BIOMD0000000170 (curated). SBML file: BIOMD0000000170_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000170_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.06e-06 of species peak (worst: y5)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Weimann2004_CircadianOscillator  (BIOMD0000000170, curated BioModels; source file BIOMD0000000170_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "per2_cry_transcription term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cy3,cy7:(0.09/(103.39410636271847*cy3^8+cy7+1.01))]==>y1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "per2_cry_transcription term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "y7+S[USER;cy3,cy7:(9/(103.39410636271847*cy3^8+cy7+1.01))]==>y1+y7",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "per2_cry_mRNA_degradation",
+     ""
+    ],
+    [
+     "0.12",
+     "0",
+     "0",
+     "y1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "per2_cry_complex_formation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cy1:(0.3*cy1^2)]==>y2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cytoplasmic_per2_cry_complex_degradation",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "y2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "per2_cry_nuclear_import",
+     ""
+    ],
+    [
+     "0.24",
+     "0",
+     "0",
+     "y2==>y3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "per2_cry_nuclear_export",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "y3==>y2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "nuclear_per2_cry_complex_degradation",
+     ""
+    ],
+    [
+     "0.12",
+     "0",
+     "0",
+     "y3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bmal1_transcription",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cy3:(3.6*cy3^3/(cy3^3+10.077696000000001))]==>y4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bmal1_mRNA_degradation",
+     ""
+    ],
+    [
+     "0.75",
+     "0",
+     "0",
+     "y4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "BMAL1_translation",
+     ""
+    ],
+    [
+     "0.24",
+     "0",
+     "0",
+     "y4==>y5+y4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cytoplasmic_BMAL1_degradation",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "y5==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "BMAL1_nuclear_import",
+     ""
+    ],
+    [
+     "0.45",
+     "0",
+     "0",
+     "y5==>y6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "BMAL1_nuclear_export",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "y6==>y5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "nuclear_BMAL1_degradation",
+     ""
+    ],
+    [
+     "0.12",
+     "0",
+     "0",
+     "y6==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "BMAL1_activation",
+     ""
+    ],
+    [
+     "0.09",
+     "0",
+     "0",
+     "y6==>y7",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "BMAL1_deactivation",
+     ""
+    ],
+    [
+     "0.003",
+     "0",
+     "0",
+     "y7==>y6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Active_BMAL1_degradation",
+     ""
+    ],
+    [
+     "0.09",
+     "0",
+     "0",
+     "y7==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "y1",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Per2 or Cry mRNA [y1]",
+     ""
+    ],
+    [
+     "y2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PER2_CRY_complex_cytoplasm [y2]",
+     ""
+    ],
+    [
+     "y3",
+     "0",
+     "1.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PER2_CRY_complex_nucleus [y3]",
+     ""
+    ],
+    [
+     "y4",
+     "0",
+     "0.8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Bmal1 mRNA [y4]",
+     ""
+    ],
+    [
+     "y5",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "BMAL1_cytoplasm [y5]",
+     ""
+    ],
+    [
+     "y6",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "BMAL1_nucleus [y6]",
+     ""
+    ],
+    [
+     "y7",
+     "0",
+     "1.05",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Active BMAL1 [y7]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

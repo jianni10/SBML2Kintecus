@@ -1,0 +1,1206 @@
+{
+ "version": 3,
+ "created": "2026-10-26T21:21:56.001225+00:00",
+ "description": "Hockin2002_BloodCoagulation\nBioModels BIOMD0000000335 (curated). SBML file: BIOMD0000000335_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000335_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.74e-06 of species peak (worst: IXa_ATIII)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hockin2002_BloodCoagulation  (BIOMD0000000335, curated BioModels; source file BIOMD0000000335_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1 term 1/2",
+     ""
+    ],
+    [
+     "0.0031",
+     "0",
+     "0",
+     "TF_VII==>VII+TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1 term 2/2",
+     ""
+    ],
+    [
+     "3200000",
+     "0",
+     "0",
+     "VII+TF==>TF_VII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2 term 1/2",
+     ""
+    ],
+    [
+     "0.0031",
+     "0",
+     "0",
+     "TF_VIIa==>TF+VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2 term 2/2",
+     ""
+    ],
+    [
+     "23000000",
+     "0",
+     "0",
+     "TF+VIIa==>TF_VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3",
+     ""
+    ],
+    [
+     "440000",
+     "0",
+     "0",
+     "VII+TF_VIIa==>VIIa+TF_VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4",
+     ""
+    ],
+    [
+     "13000000",
+     "0",
+     "0",
+     "VII+Xa==>Xa+VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5",
+     ""
+    ],
+    [
+     "23000",
+     "0",
+     "0",
+     "IIa+VII==>IIa+VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6 term 1/2",
+     ""
+    ],
+    [
+     "1.05",
+     "0",
+     "0",
+     "TF_VIIa_X==>X+TF_VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6 term 2/2",
+     ""
+    ],
+    [
+     "25000000",
+     "0",
+     "0",
+     "X+TF_VIIa==>TF_VIIa_X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7 term 1/2",
+     ""
+    ],
+    [
+     "19",
+     "0",
+     "0",
+     "TF_VIIa_Xa==>Xa+TF_VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7 term 2/2",
+     ""
+    ],
+    [
+     "22000000",
+     "0",
+     "0",
+     "Xa+TF_VIIa==>TF_VIIa_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8 term 1/2",
+     ""
+    ],
+    [
+     "2.4",
+     "0",
+     "0",
+     "TF_VIIa_IX==>IX+TF_VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8 term 2/2",
+     ""
+    ],
+    [
+     "10000000",
+     "0",
+     "0",
+     "IX+TF_VIIa==>TF_VIIa_IX",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9",
+     ""
+    ],
+    [
+     "7500",
+     "0",
+     "0",
+     "Xa+II==>IIa+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10",
+     ""
+    ],
+    [
+     "20000000",
+     "0",
+     "0",
+     "IIa+VIII==>IIa+VIIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 1/2",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "IXa_VIIIa==>VIIIa+IXa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 2/2",
+     ""
+    ],
+    [
+     "10000000",
+     "0",
+     "0",
+     "VIIIa+IXa==>IXa_VIIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "IXa_VIIIa_X==>IXa_VIIIa+X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "IXa_VIIIa+X==>IXa_VIIIa_X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13 term 1/2",
+     ""
+    ],
+    [
+     "0.006",
+     "0",
+     "0",
+     "VIIIa==>VIIIa1_L+VIIIa2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13 term 2/2",
+     ""
+    ],
+    [
+     "22000",
+     "0",
+     "0",
+     "VIIIa1_L+VIIIa2==>VIIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "IXa_VIIIa_X==>VIIIa1_L+VIIIa2+IXa+X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "IXa_VIIIa==>VIIIa1_L+VIIIa2+IXa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16",
+     ""
+    ],
+    [
+     "20000000",
+     "0",
+     "0",
+     "IIa+V==>IIa+Va",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 1/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Xa_Va==>Va+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 2/2",
+     ""
+    ],
+    [
+     "400000000",
+     "0",
+     "0",
+     "Va+Xa==>Xa_Va",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R18 term 1/2",
+     ""
+    ],
+    [
+     "103",
+     "0",
+     "0",
+     "Xa_Va_II==>Xa_Va+II",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R18 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "Xa_Va+II==>Xa_Va_II",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R19",
+     ""
+    ],
+    [
+     "15000000",
+     "0",
+     "0",
+     "mIIa+Xa_Va==>IIa+Xa_Va",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R20 term 1/2",
+     ""
+    ],
+    [
+     "0.00036",
+     "0",
+     "0",
+     "Xa_TFPI==>Xa+TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R20 term 2/2",
+     ""
+    ],
+    [
+     "900000",
+     "0",
+     "0",
+     "Xa+TFPI==>Xa_TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R21 term 1/2",
+     ""
+    ],
+    [
+     "0.00011",
+     "0",
+     "0",
+     "TF_VIIa_Xa_TFPI==>TF_VIIa_Xa+TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R21 term 2/2",
+     ""
+    ],
+    [
+     "320000000",
+     "0",
+     "0",
+     "TF_VIIa_Xa+TFPI==>TF_VIIa_Xa_TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R22",
+     ""
+    ],
+    [
+     "50000000",
+     "0",
+     "0",
+     "Xa_TFPI+TF_VIIa==>TF_VIIa_Xa_TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R23",
+     ""
+    ],
+    [
+     "1500",
+     "0",
+     "0",
+     "Xa+ATIII==>Xa_ATIII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R24",
+     ""
+    ],
+    [
+     "7100",
+     "0",
+     "0",
+     "mIIa+ATIII==>mIIa_ATIII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R25",
+     ""
+    ],
+    [
+     "490",
+     "0",
+     "0",
+     "ATIII+IXa==>IXa_ATIII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R26",
+     ""
+    ],
+    [
+     "7100",
+     "0",
+     "0",
+     "IIa+ATIII==>IIa_ATIII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R27",
+     ""
+    ],
+    [
+     "230",
+     "0",
+     "0",
+     "ATIII+TF_VIIa==>TF_VIIa_ATIII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6b",
+     ""
+    ],
+    [
+     "6",
+     "0",
+     "0",
+     "TF_VIIa_X==>TF_VIIa_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8b",
+     ""
+    ],
+    [
+     "1.8",
+     "0",
+     "0",
+     "TF_VIIa_IX==>IXa+TF_VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12b",
+     ""
+    ],
+    [
+     "8.2",
+     "0",
+     "0",
+     "IXa_VIIIa_X==>IXa_VIIIa+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R18b",
+     ""
+    ],
+    [
+     "63.5",
+     "0",
+     "0",
+     "Xa_Va_II==>mIIa+Xa_Va",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "TF",
+     "0",
+     "2.5e-11",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF [TF]",
+     ""
+    ],
+    [
+     "TF_VII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF_VII [TF_VII]",
+     ""
+    ],
+    [
+     "VII",
+     "0",
+     "1e-8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VII [VII]",
+     ""
+    ],
+    [
+     "TF_VIIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF_VIIa [TF_VIIa]",
+     ""
+    ],
+    [
+     "VIIa",
+     "0",
+     "1e-10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIa [VIIa]",
+     ""
+    ],
+    [
+     "Xa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa [Xa]",
+     ""
+    ],
+    [
+     "IIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IIa [IIa]",
+     ""
+    ],
+    [
+     "TF_VIIa_X",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF_VIIa_X [TF_VIIa_X]",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "1.6e-7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X [X]",
+     ""
+    ],
+    [
+     "TF_VIIa_Xa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF_VIIa_Xa [TF_VIIa_Xa]",
+     ""
+    ],
+    [
+     "IX",
+     "0",
+     "9e-8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IX [IX]",
+     ""
+    ],
+    [
+     "TF_VIIa_IX",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF_VIIa_IX [TF_VIIa_IX]",
+     ""
+    ],
+    [
+     "IXa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IXa [IXa]",
+     ""
+    ],
+    [
+     "II",
+     "0",
+     "1.4e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "II [II]",
+     ""
+    ],
+    [
+     "VIII",
+     "0",
+     "7e-10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIII [VIII]",
+     ""
+    ],
+    [
+     "VIIIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIIa [VIIIa]",
+     ""
+    ],
+    [
+     "IXa_VIIIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IXa_VIIIa [IXa_VIIIa]",
+     ""
+    ],
+    [
+     "IXa_VIIIa_X",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IXa_VIIIa_X [IXa_VIIIa_X]",
+     ""
+    ],
+    [
+     "VIIIa1_L",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIIa1_L [VIIIa1_L]",
+     ""
+    ],
+    [
+     "VIIIa2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIIa2 [VIIIa2]",
+     ""
+    ],
+    [
+     "V",
+     "0",
+     "2e-8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V [V]",
+     ""
+    ],
+    [
+     "Va",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va [Va]",
+     ""
+    ],
+    [
+     "Xa_Va",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa_Va [Xa_Va]",
+     ""
+    ],
+    [
+     "Xa_Va_II",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa_Va_II [Xa_Va_II]",
+     ""
+    ],
+    [
+     "mIIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mIIa [mIIa]",
+     ""
+    ],
+    [
+     "TFPI",
+     "0",
+     "2.5e-9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TFPI [TFPI]",
+     ""
+    ],
+    [
+     "Xa_TFPI",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa_TFPI [Xa_TFPI]",
+     ""
+    ],
+    [
+     "TF_VIIa_Xa_TFPI",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF_VIIa_Xa_TFPI [TF_VIIa_Xa_TFPI]",
+     ""
+    ],
+    [
+     "ATIII",
+     "0",
+     "3.4e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATIII [ATIII]",
+     ""
+    ],
+    [
+     "Xa_ATIII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa_ATIII [Xa_ATIII]",
+     ""
+    ],
+    [
+     "mIIa_ATIII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mIIa_ATIII [mIIa_ATIII]",
+     ""
+    ],
+    [
+     "IXa_ATIII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IXa_ATIII [IXa_ATIII]",
+     ""
+    ],
+    [
+     "IIa_ATIII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IIa_ATIII [IIa_ATIII]",
+     ""
+    ],
+    [
+     "TF_VIIa_ATIII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF_VIIa_ATIII [TF_VIIa_ATIII]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

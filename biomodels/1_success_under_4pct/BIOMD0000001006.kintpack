@@ -1,0 +1,717 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:35:34.611245+00:00",
+ "description": "Ciliberto2005 - Steady states and oscillations in the p53/Mdm2 network\nBioModels BIOMD0000001006 (curated). SBML file: Ciliberto2005.xml.\nSimulation: 0 to 1200 time units (SED-ML: Ciliberto2005.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.74e-06 of species peak (worst: Mdm2_p_nuc)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'IR' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'p53' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'MDM2_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] DNA_Repair: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] p53_ubiquitination_1 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - p53_ub: zero order, signed\n  [info] p53_total_degradation_2: rate order differs from the stoichiometry; consumed on separate line(s) - p53_total: zero order, signed\n  [info] time event(s) on 'step' encoded as time/value pairs in EV_P_STEP.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_step = step",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ciliberto2005 - Steady states and oscillations in the p53/Mdm2 network  (BIOMD0000001006, curated BioModels; source file Ciliberto2005.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "DNA_Damage",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_step:(0.18*cp_step)]==>DNA_damage",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "DNA_Repair",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DNA_damage+p53_total+S[USER;cDNA_damage:(0.017/(1*cDNA_damage+1))]==>p53_total",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_total_production",
+     ""
+    ],
+    [
+     "0.055",
+     "0",
+     "0",
+     "source==>p53_total",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_total_degradation",
+     ""
+    ],
+    [
+     "0.0055",
+     "0",
+     "0",
+     "p53_total==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_ubiquitination_1 term 1/3",
+     ""
+    ],
+    [
+     "8.8",
+     "0",
+     "0",
+     "Mdm2_p_nuc+p53_total==>p53_ub+Mdm2_p_nuc+p53_total",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_ubiquitination_1 term 2/3",
+     ""
+    ],
+    [
+     "8.8",
+     "0",
+     "0",
+     "p53_ub+Mdm2_p_nuc==>Mdm2_p_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_ubiquitination_1 term 3/3 (consumes p53_ub)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cMdm2_p_nuc,cp53_ub_ub:((-1*8.8*cMdm2_p_nuc*cp53_ub_ub))]==>p53_ub",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_ubiquitination_2",
+     ""
+    ],
+    [
+     "8.8",
+     "0",
+     "0",
+     "p53_ub+Mdm2_p_nuc==>p53_ub_ub+Mdm2_p_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_ub_degradation",
+     ""
+    ],
+    [
+     "0.0055",
+     "0",
+     "0",
+     "p53_ub==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_ub_ub_degradation",
+     ""
+    ],
+    [
+     "8.0055",
+     "0",
+     "0",
+     "p53_ub_ub==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_deubiquitination_1",
+     ""
+    ],
+    [
+     "2.5",
+     "0",
+     "0",
+     "p53_ub==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_deubiquitination_2",
+     ""
+    ],
+    [
+     "2.5",
+     "0",
+     "0",
+     "p53_ub_ub==>p53_ub",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mdm2_cyt_production term 1/2",
+     ""
+    ],
+    [
+     "0.0015",
+     "0",
+     "0",
+     "source==>Mdm2_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mdm2_cyt_production term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp53_total:(0.006*cp53_total^3/(cp53_total^3+1.7279999999999998))]==>Mdm2_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mdm2_cyt_phosphorylation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mdm2_cyt+S[USER;cp53_total:(0.05/(cp53_total+0.01))]==>Mdm2_p_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mdm2_cyt_degradation",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Mdm2_cyt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mdm2_p_cyt_degradation",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Mdm2_p_cyt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mdm2_p_nuc_translocation_out",
+     ""
+    ],
+    [
+     "7.5",
+     "0",
+     "0",
+     "Mdm2_p_nuc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mdm2_p_cyt_dephosphorylation",
+     ""
+    ],
+    [
+     "6",
+     "0",
+     "0",
+     "Mdm2_p_cyt==>Mdm2_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mdm2_p_cyt_translocation_out",
+     ""
+    ],
+    [
+     "14",
+     "0",
+     "0",
+     "Mdm2_p_cyt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mdm2_p_nuc_degradation term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Mdm2_p_nuc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mdm2_p_nuc_degradation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mdm2_p_nuc+DNA_damage+S[USER;cDNA_damage:(0.01/(cDNA_damage+0.2))]==>DNA_damage",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_total_degradation_2 (consumes p53_total)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp53_ub_ub:((-1*8*cp53_ub_ub))]==>p53_total",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mdm2_p_cyt_translocation_in",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "Mdm2_p_nuc==>Mdm2_p_cyt+Mdm2_p_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mdm2_p_nuc_translocation_in",
+     ""
+    ],
+    [
+     "210",
+     "0",
+     "0",
+     "Mdm2_p_cyt==>Mdm2_p_nuc+Mdm2_p_cyt",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "DNA_damage",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DNA_damage [DNA_damage]",
+     ""
+    ],
+    [
+     "p53_total",
+     "0",
+     "0.07118",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p53_total [p53_total]",
+     ""
+    ],
+    [
+     "p53_ub",
+     "0",
+     "0.02456",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p53_ub [p53_ub]",
+     ""
+    ],
+    [
+     "p53_ub_ub",
+     "0",
+     "0.006826",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p53_ub_ub [p53_ub_ub]",
+     ""
+    ],
+    [
+     "Mdm2_cyt",
+     "0",
+     "0.1161",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mdm2_cyt [Mdm2_cyt]",
+     ""
+    ],
+    [
+     "Mdm2_p_cyt",
+     "0",
+     "0.01187",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mdm2_p_cyt [Mdm2_p_cyt]",
+     ""
+    ],
+    [
+     "Mdm2_p_nuc",
+     "0",
+     "0.331800000000002",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mdm2_p_nuc [Mdm2_p_nuc]",
+     ""
+    ],
+    [
+     "p_step",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "EV_P_STEP.TXT-SET",
+     "parameter step [step]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1.000000001",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1.000000001",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_STEP.TXT",
+   "key": "O_EV_P_STEP.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "12",
+     "1"
+    ],
+    [
+     "20",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

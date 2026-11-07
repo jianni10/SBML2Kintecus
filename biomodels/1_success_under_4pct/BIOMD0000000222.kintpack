@@ -1,0 +1,692 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:45:10.478346+00:00",
+ "description": "Singh2006_TCA_Ecoli_glucose\nBioModels BIOMD0000000222 (curated). SBML file: BIOMD0000000222_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000222_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.22e-06 of species peak (worst: fa)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] CS term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ACN term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ACN term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ICD term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ICD term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] KDH term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] KDH term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ScAS term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ScAS term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SDH term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SDH term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] FUM term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] FUM term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MDH term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ICL term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ICL term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MS term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MS term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SYN term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - akg: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Singh2006_TCA_Ecoli_glucose  (BIOMD0000000222, curated BioModels; source file BIOMD0000000222_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CS term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ccit:(86.85714285714286/(25.23857142857143*ccit+18.67654285714286))]==>cit",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CS term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cit+S[USER;ccit:(0.00043428571428571436/(25.23857142857143*ccit+18.67654285714286))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ACN term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cit+S[USER;ccit,cicit:(53.64705882352941/(0.5882352941176471*ccit+0.3003003003003003*cicit+1))]==>icit",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ACN term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "icit+S[USER;ccit,cicit:(0.27387387387387385/(0.5882352941176471*ccit+0.3003003003003003*cicit+1))]==>cit",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ICD term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "icit+S[USER;cakg,cicit:(1840/(7.692307692307692*cakg+125*cicit+1))]==>akg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ICD term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "akg+S[USER;cakg,cicit:(1.1323076923076922/(7.692307692307692*cakg+125*cicit+1))]==>icit",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "KDH term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "akg+S[USER;cakg,csca:(358.40000000000003/(10*cakg+1*csca+1))]==>sca",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "KDH term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "sca+S[USER;cakg,csca:(0.3584/(10*cakg+1*csca+1))]==>akg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ScAS term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "sca+S[USER;csca,csuc:(175/(50*csca+0.2*csuc+1))]==>suc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ScAS term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "suc+S[USER;csca,csuc:(0.007000000000000001/(50*csca+0.2*csuc+1))]==>sca",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SDH term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "suc+S[USER;cfa,csuc:(369/(2.5*cfa+50*csuc+1))]==>fa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SDH term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "fa+S[USER;cfa,csuc:(18.275/(2.5*cfa+50*csuc+1))]==>suc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FUM term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "fa+S[USER;cfa,cmal:(297.6/(6.666666666666667*cfa+25*cmal+1))]==>mal",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FUM term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mal+S[USER;cfa,cmal:(930/(6.666666666666667*cfa+25*cmal+1))]==>fa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDH term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmal:(35.311/(0.3846153846153846*cmal+1.1))]==>mal",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDH term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mal+S[USER;cmal:(137.16923076923075/(0.3846153846153846*cmal+1.1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ICL term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "icit+S[USER;cgly,cicit,csuc:(3.1456953642384105/(13.03780964797914*cgly*csuc+7.692307692307692*cgly+1.6556291390728477*cicit+2.8061510831743184*csuc*(cicit+1e-30)+1.6949152542372883*csuc+1))]==>gly+suc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ICL term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "gly+suc+S[USER;cgly,cicit,csuc:(0.24771838331160365/(7.692307692307692*cgly+2.8061510831743184*cicit*(csuc+1e-30)+1.6556291390728477*cicit+1.6949152542372883*csuc+13.03780964797914*(cgly+1e-30)*(csuc+1e-30)+1))]==>icit",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MS term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "gly+S[USER;cgly,cmal:(47.5/(25.5005*cgly+51.001*cmal+51.001))]==>mal",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MS term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mal+S[USER;cgly,cmal:(1.9e-5/(25.5005*cgly+51.001*cmal+51.001))]==>gly",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SYN term 1/2 (consumes akg)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cakg,cicit:((-1*345.92*cicit/(7.692307692307692*cakg+125*cicit+1)))]==>akg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SYN term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "akg+S[USER;cakg,cicit:(0.21287384615384614/(7.692307692307692*cakg+125*cicit+1))]==>2akg",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "aca",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "0.5",
+     "aca [aca]",
+     ""
+    ],
+    [
+     "oaa",
+     "0",
+     "0.004",
+     "Y",
+     "0",
+     "No",
+     "0.004",
+     "oaa [oaa]",
+     ""
+    ],
+    [
+     "coa",
+     "0",
+     "0.0001",
+     "Y",
+     "0",
+     "No",
+     "0.0001",
+     "coa [coa]",
+     ""
+    ],
+    [
+     "cit",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cit [cit]",
+     ""
+    ],
+    [
+     "icit",
+     "0",
+     "0.018",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "icit [icit]",
+     ""
+    ],
+    [
+     "akg",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "akg [akg]",
+     ""
+    ],
+    [
+     "sca",
+     "0",
+     "0.04",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "sca [sca]",
+     ""
+    ],
+    [
+     "suc",
+     "0",
+     "0.6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "suc [suc]",
+     ""
+    ],
+    [
+     "fa",
+     "0",
+     "0.3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "fa [fa]",
+     ""
+    ],
+    [
+     "mal",
+     "0",
+     "1.8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mal [mal]",
+     ""
+    ],
+    [
+     "gly",
+     "0",
+     "4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "gly [gly]",
+     ""
+    ],
+    [
+     "biosyn",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "0.1",
+     "biosyn [biosyn]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

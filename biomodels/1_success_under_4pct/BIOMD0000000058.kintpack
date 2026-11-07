@@ -1,0 +1,520 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:51:52.925096+00:00",
+ "description": "Bindschadler2001_coupled_Ca_oscillators\nBioModels BIOMD0000000058 (curated). SBML file: BIOMD0000000058_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000058_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.79e-06 of species peak (worst: c2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Jpump_Cell1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Jpump_Cell2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bindschadler2001_coupled_Ca_oscillators  (BIOMD0000000058, curated BioModels; source file BIOMD0000000058_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jreceptor_Cell1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cc1,ch1:(16675812.254263679*cc1^4*ch1^4/((cc1+6)^4*(27.779999999999998*cc1/(cc1+6)+44/(cc1+50))^4))]==>c1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jpump_Cell1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "c1+c1+S[USER;cc1:(1.2/(1*(cc1+1e-30)^2+0.0324))]==>c1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jleak_Cell1",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "source==>c1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inactivated_to_S_Cell1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cc1:(1.6/(cc1+1.6))]==>h1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inactivated_to_S_Cell1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "h1+S[USER;cc1:(1.6/(cc1+1.6))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Open_to_Inactivated_Cell1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "h1+c1+S[USER;cc1:(736.17/(27.779999999999998*cc1^3/(cc1+6)+44*cc1^2/(cc1+50)+1555.68*cc1^2/(cc1+6)+2464*cc1/(cc1+50)+8334*cc1/(cc1+6)+13200/(cc1+50)))]==>c1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Open_to_Inactivated_Cell1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "h1+c1+c1+S[USER;cc1:(555.6/(27.779999999999998*cc1^3/(cc1+6)+44*cc1^2/(cc1+50)+1555.68*cc1^2/(cc1+6)+2464*cc1/(cc1+50)+8334*cc1/(cc1+6)+13200/(cc1+50)))]==>2c1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jreceptor_Cell2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cc2,ch2:(16675812.254263679*cc2^4*ch2^4/((cc2+6)^4*(27.779999999999998*cc2/(cc2+6)+44/(cc2+50))^4))]==>c2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jpump_Cell2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "c2+c2+S[USER;cc2:(1.2/(1*(cc2+1e-30)^2+0.0324))]==>c2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jleak_Cell2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "source==>c2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inactivated_to_S_Cell2 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cc2:(1.6/(cc2+1.6))]==>h2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inactivated_to_S_Cell2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "h2+S[USER;cc2:(1.6/(cc2+1.6))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Open_to_Inactivated_Cell2 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "h2+c2+S[USER;cc2:(736.17/(27.779999999999998*cc2^3/(cc2+6)+44*cc2^2/(cc2+50)+1555.68*cc2^2/(cc2+6)+2464*cc2/(cc2+50)+8334*cc2/(cc2+6)+13200/(cc2+50)))]==>c2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Open_to_Inactivated_Cell2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "h2+c2+c2+S[USER;cc2:(555.6/(27.779999999999998*cc2^3/(cc2+6)+44*cc2^2/(cc2+50)+1555.68*cc2^2/(cc2+6)+2464*cc2/(cc2+50)+8334*cc2/(cc2+6)+13200/(cc2+50)))]==>2c2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "diffusion term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "c2==>c1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "diffusion term 2/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "c1==>c2",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "c1",
+     "0",
+     "0.3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Calcium ion Cell1 [c1]",
+     ""
+    ],
+    [
+     "h1",
+     "0",
+     "0.8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Receptor fraction Cell1 [h1]",
+     ""
+    ],
+    [
+     "c2",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Calcium ion Cell2 [c2]",
+     ""
+    ],
+    [
+     "h2",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Receptor fraction Cell2 [h2]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.03",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.03",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

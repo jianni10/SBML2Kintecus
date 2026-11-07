@@ -1,0 +1,595 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:06:07.155379+00:00",
+ "description": "Webb2002 - Fas/FasL mediated tumor T-cell interaction\nBioModels BIOMD0000000661 (curated). SBML file: BIOMD0000000661_url.xml.\nSimulation: 0 to 24 time units (SED-ML: MODEL1006230046.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.56e-06 of species peak (worst: Rm)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): T1 = T; m1 = m",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Webb2002 - Fas/FasL mediated tumor T-cell interaction  (BIOMD0000000661, curated BioModels; source file BIOMD0000000661_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T_cell_degradation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T1+Lm+RT+S[USER;cm1:(8.38e-10*cm1)]==>Lm+RT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumour_cell_degradation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "m1+LT+Rm+S[USER;cT1:(8.38e-10*cT1)]==>LT+Rm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SL_degradation",
+     ""
+    ],
+    [
+     "13.9",
+     "0",
+     "0",
+     "SL==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lm_synthesis",
+     ""
+    ],
+    [
+     "3110",
+     "0",
+     "0",
+     "source==>Lm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RT_synthesis",
+     ""
+    ],
+    [
+     "2244",
+     "0",
+     "0",
+     "source==>RT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rm_synthesis",
+     ""
+    ],
+    [
+     "2244",
+     "0",
+     "0",
+     "source==>Rm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RT_degradation",
+     ""
+    ],
+    [
+     "0.35",
+     "0",
+     "0",
+     "RT==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rm_degradation",
+     ""
+    ],
+    [
+     "0.35",
+     "0",
+     "0",
+     "Rm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "LT_synthesis",
+     ""
+    ],
+    [
+     "0.006",
+     "0",
+     "0",
+     "T1+m1==>LT+T1+m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RT_degradation__SL_modifier",
+     ""
+    ],
+    [
+     "19200000000",
+     "0",
+     "0",
+     "RT+SL==>SL",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rm_degradation__SL_modifier",
+     ""
+    ],
+    [
+     "19200000000",
+     "0",
+     "0",
+     "Rm+SL==>SL",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "LT_degradation",
+     ""
+    ],
+    [
+     "6.2913",
+     "0",
+     "0",
+     "LT==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lm_degradation",
+     ""
+    ],
+    [
+     "6.2913",
+     "0",
+     "0",
+     "Lm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "LT_degradation__m__T_and_Rm_modifiers",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "LT+Rm+T1+S[USER;cm1:(2.52e-9*cm1)]==>Rm+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lm_degradation__m__T_and_RT_modifiers",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Lm+RT+T1+S[USER;cm1:(2.52e-9*cm1)]==>RT+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SL_synthesis term 1/2",
+     ""
+    ],
+    [
+     "5.9413",
+     "0",
+     "0",
+     "LT+T1==>SL+LT+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SL_synthesis term 2/2",
+     ""
+    ],
+    [
+     "5.9413",
+     "0",
+     "0",
+     "Lm+m1==>SL+Lm+m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SL_degradation__Rm__m__RT__T_and_SL_modifiers term 1/2",
+     ""
+    ],
+    [
+     "8730000000",
+     "0",
+     "0",
+     "SL+RT+T1==>RT+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SL_degradation__Rm__m__RT__T_and_SL_modifiers term 2/2",
+     ""
+    ],
+    [
+     "8730000000",
+     "0",
+     "0",
+     "SL+Rm+m1==>Rm+m1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "500.000000000001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T-cells (T) [T]",
+     ""
+    ],
+    [
+     "LT",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mFasL (LT) [LT]",
+     ""
+    ],
+    [
+     "RT",
+     "0",
+     "10000.0000000001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FasR (RT) [RT]",
+     ""
+    ],
+    [
+     "m1",
+     "0",
+     "500.000000000001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumour cells (m) [m]",
+     ""
+    ],
+    [
+     "Lm",
+     "0",
+     "1000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mFasL (Lm) [Lm]",
+     ""
+    ],
+    [
+     "Rm",
+     "0",
+     "1000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FasR (Rm) [Rm]",
+     ""
+    ],
+    [
+     "SL",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "sFasL (SL) [SL]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "24",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

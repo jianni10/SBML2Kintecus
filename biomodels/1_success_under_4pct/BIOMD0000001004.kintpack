@@ -1,0 +1,600 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:15:20.058518+00:00",
+ "description": "Intosalmi2015 - Th17 core network model\nBioModels BIOMD0000001004 (curated). SBML file: Intosalmi2015.xml.\nSimulation: 0 to 70 time units (SED-ML: Intosalmi2015.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.72e-06 of species peak (worst: STAT3mRNA)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Intosalmi2015 - Th17 core network model  (BIOMD0000001004, curated BioModels; source file Intosalmi2015.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL6_conversion",
+     ""
+    ],
+    [
+     "0.0627",
+     "0",
+     "0",
+     "IL6ext==>IL6int",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT3_basal_expression",
+     ""
+    ],
+    [
+     "1.0222",
+     "0",
+     "0",
+     "source==>STAT3mRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT3_autoactivation",
+     ""
+    ],
+    [
+     "14.8148",
+     "0",
+     "0",
+     "STAT3prot_star==>STAT3mRNA+STAT3prot_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT3_mRNA_degradation",
+     ""
+    ],
+    [
+     "2.2047",
+     "0",
+     "0",
+     "STAT3mRNA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT3_translation",
+     ""
+    ],
+    [
+     "0.0846",
+     "0",
+     "0",
+     "STAT3mRNA==>STAT3mRNA+STAT3prot",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT3_activation",
+     ""
+    ],
+    [
+     "16.3647",
+     "0",
+     "0",
+     "IL6int+STAT3prot==>IL6int+STAT3prot_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT3_protein_degradation",
+     ""
+    ],
+    [
+     "0.0221",
+     "0",
+     "0",
+     "STAT3prot==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT3_phosphoprotein_degradation",
+     ""
+    ],
+    [
+     "2.7893",
+     "0",
+     "0",
+     "STAT3prot_star==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TGFb_conversion",
+     ""
+    ],
+    [
+     "19.3743",
+     "0",
+     "0",
+     "TGFbext==>TGFbint",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RORgt_inhibition_by_FOXP3",
+     ""
+    ],
+    [
+     "773.782",
+     "0",
+     "0",
+     "RORgtmRNA+FOXP3prot_star==>FOXP3prot_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RORgt_degradation",
+     ""
+    ],
+    [
+     "0.0479",
+     "0",
+     "0",
+     "RORgtmRNA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FOXP3_activation_by_TGFb",
+     ""
+    ],
+    [
+     "0.0734",
+     "0",
+     "0",
+     "TGFbint==>TGFbint+FOXP3mRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FOXP3_inhibition_by_STAT3",
+     ""
+    ],
+    [
+     "7.4237",
+     "0",
+     "0",
+     "FOXP3mRNA+STAT3prot_star==>STAT3prot_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FOXP3_mRNA_degradation",
+     ""
+    ],
+    [
+     "0.8092",
+     "0",
+     "0",
+     "FOXP3mRNA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FOXP3_translation_activation",
+     ""
+    ],
+    [
+     "0.0053",
+     "0",
+     "0",
+     "FOXP3mRNA==>FOXP3mRNA+FOXP3prot_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FOXP3_protein_degradation",
+     ""
+    ],
+    [
+     "1.3205",
+     "0",
+     "0",
+     "FOXP3prot_star==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RORgt_activation_by_TGFb_and_STAT3",
+     ""
+    ],
+    [
+     "4.967",
+     "0",
+     "0",
+     "TGFbint+STAT3prot_star==>RORgtmRNA+TGFbint+STAT3prot_star",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "IL6ext",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IL6_ext [IL6ext]",
+     ""
+    ],
+    [
+     "IL6int",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IL6_int [IL6int]",
+     ""
+    ],
+    [
+     "STAT3mRNA",
+     "0",
+     "0.4576",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STAT3_mRNA [STAT3mRNA]",
+     ""
+    ],
+    [
+     "STAT3prot_star",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STAT3_act [STAT3prot_star]",
+     ""
+    ],
+    [
+     "STAT3prot",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STAT3 [STAT3prot]",
+     ""
+    ],
+    [
+     "TGFbext",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TGFb_ext [TGFbext]",
+     ""
+    ],
+    [
+     "TGFbint",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TGFb_int [TGFbint]",
+     ""
+    ],
+    [
+     "RORgtmRNA",
+     "0",
+     "0.0026",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RORgt_mRNA [RORgtmRNA]",
+     ""
+    ],
+    [
+     "FOXP3prot_star",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FOXP3_act [FOXP3prot_star]",
+     ""
+    ],
+    [
+     "FOXP3mRNA",
+     "0",
+     "0.145",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FOXP3_mRNA [FOXP3mRNA]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "70",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

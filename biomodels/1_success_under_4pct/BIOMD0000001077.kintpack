@@ -1,0 +1,865 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:16:46.547232+00:00",
+ "description": "Adlung2021 - Cell-to-cell variability in JAK2/STAT5 pathway\nBioModels BIOMD0000001077 (curated). SBML file: Adlung2021 _model_jakstat_pa.xml.\nSimulation: 0 to 300 time units (SED-ML: Adlung2021 _model_jakstat_pa.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.16e-06 of species peak (worst: SOCS3)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Adlung2021 - Cell-to-cell variability in JAK2/STAT5 pathway  (BIOMD0000001077, curated BioModels; source file Adlung2021 _model_jakstat_pa.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1_v_0",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "EpoRJAK2+S[USER;cSOCS3:(1.041539584795146/(0.06364151234677405*cSOCS3+1))]==>EpoRpJAK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2_v_1",
+     ""
+    ],
+    [
+     "0.000885910280224449",
+     "0",
+     "0",
+     "EpoRpJAK2+SHP1Act==>EpoRJAK2+SHP1Act",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3_v_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "EpoRpJAK2+S[USER;cSOCS3:(0.326237934674659/(0.06364151234677405*cSOCS3+1))]==>p1EpoRpJAK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4_v_3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "EpoRpJAK2+S[USER;cSOCS3:(0.978713804023977/(0.06364151234677405*cSOCS3+1))]==>p2EpoRpJAK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5_v_4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p1EpoRpJAK2+S[USER;cSOCS3:(0.978713804023977/(0.06364151234677405*cSOCS3+1))]==>p12EpoRpJAK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6_v_5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p2EpoRpJAK2+S[USER;cSOCS3:(0.326237934674659/(0.06364151234677405*cSOCS3+1))]==>p12EpoRpJAK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7_v_6",
+     ""
+    ],
+    [
+     "0.000885910280224449",
+     "0",
+     "0",
+     "p1EpoRpJAK2+SHP1Act==>EpoRJAK2+SHP1Act",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8_v_7",
+     ""
+    ],
+    [
+     "0.000885910280224449",
+     "0",
+     "0",
+     "p2EpoRpJAK2+SHP1Act==>EpoRJAK2+SHP1Act",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9_v_8",
+     ""
+    ],
+    [
+     "0.000885910280224449",
+     "0",
+     "0",
+     "p12EpoRpJAK2+SHP1Act==>EpoRJAK2+SHP1Act",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12_v_11 term 1/4",
+     ""
+    ],
+    [
+     "26.7236153222782",
+     "0",
+     "0",
+     "EpoRpJAK2==>SHP1Act+EpoRpJAK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12_v_11 term 2/4",
+     ""
+    ],
+    [
+     "26.7236153222782",
+     "0",
+     "0",
+     "p12EpoRpJAK2==>SHP1Act+p12EpoRpJAK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12_v_11 term 3/4",
+     ""
+    ],
+    [
+     "26.7236153222782",
+     "0",
+     "0",
+     "p1EpoRpJAK2==>SHP1Act+p1EpoRpJAK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12_v_11 term 4/4",
+     ""
+    ],
+    [
+     "26.7236153222782",
+     "0",
+     "0",
+     "p2EpoRpJAK2==>SHP1Act+p2EpoRpJAK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v13_v_12",
+     ""
+    ],
+    [
+     "0.00557392820000894",
+     "0",
+     "0",
+     "SHP1Act==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v14_v_13 term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STAT5+EpoRpJAK2+S[USER;cSOCS3:(0.0513253755320527/(0.06364151234677405*cSOCS3+1))]==>pSTAT5+EpoRpJAK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v14_v_13 term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STAT5+p12EpoRpJAK2+S[USER;cSOCS3:(0.0513253755320527/(0.06364151234677405*cSOCS3+1))]==>pSTAT5+p12EpoRpJAK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v14_v_13 term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STAT5+p1EpoRpJAK2+S[USER;cSOCS3:(0.0513253755320527/(0.06364151234677405*cSOCS3+1))]==>pSTAT5+p1EpoRpJAK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v14_v_13 term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STAT5+p2EpoRpJAK2+S[USER;cSOCS3:(0.0513253755320527/(0.06364151234677405*cSOCS3+1))]==>pSTAT5+p2EpoRpJAK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v15_v_14",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STAT5+S[USER;cCIS,cSOCS3,cp12EpoRpJAK2,cp1EpoRpJAK2:(0.299136651563824*(cp12EpoRpJAK2+cp1EpoRpJAK2)^2/(36345584.28359423*cCIS*cSOCS3+571098689.2572888*cCIS+0.06364151234677405*cSOCS3+1))]==>pSTAT5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v16_v_15 (volume 0.4)",
+     ""
+    ],
+    [
+     "0.0404763494591488",
+     "0",
+     "0",
+     "pSTAT5==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v16_v_15 (volume 0.275)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpSTAT5:(0.05887469012239825*cpSTAT5)]==>npSTAT5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v17_v_16 (volume 0.4)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cnpSTAT5:(0.007710800981660288*cnpSTAT5)]==>STAT5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v17_v_16 (volume 0.275)",
+     ""
+    ],
+    [
+     "0.0112157105187786",
+     "0",
+     "0",
+     "npSTAT5==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v18_v_17",
+     ""
+    ],
+    [
+     "0.119809412320528",
+     "0",
+     "0",
+     "npSTAT5==>CISnRNA1+npSTAT5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v19_v_18",
+     ""
+    ],
+    [
+     "0.119845304696486",
+     "0",
+     "0",
+     "CISnRNA1==>CISnRNA2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v20_v_19 (volume 0.4)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCISnRNA2:(0.08239364697883413*cCISnRNA2)]==>CISRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v20_v_19 (volume 0.275)",
+     ""
+    ],
+    [
+     "0.119845304696486",
+     "0",
+     "0",
+     "CISnRNA2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v21_v_20",
+     ""
+    ],
+    [
+     "0.119809412320528",
+     "0",
+     "0",
+     "CISRNA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v22_v_21",
+     ""
+    ],
+    [
+     "0.013680064559882323",
+     "0",
+     "0",
+     "CISRNA==>CIS+CISRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v23_v_22",
+     ""
+    ],
+    [
+     "0.0178232876161209",
+     "0",
+     "0",
+     "CIS==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v24_v_23",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cnpSTAT5:(0.013097087768488062*cnpSTAT5)]==>SOCS3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v25_v_24",
+     ""
+    ],
+    [
+     "0.0806005449025786",
+     "0",
+     "0",
+     "SOCS3==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "EpoRJAK2",
+     "0",
+     "3.9750483209966703",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "EpoRJAK2 [EpoRJAK2]",
+     ""
+    ],
+    [
+     "EpoRpJAK2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "EpoRpJAK2 [EpoRpJAK2]",
+     ""
+    ],
+    [
+     "p1EpoRpJAK2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p1EpoRpJAK2 [p1EpoRpJAK2]",
+     ""
+    ],
+    [
+     "p2EpoRpJAK2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p2EpoRpJAK2 [p2EpoRpJAK2]",
+     ""
+    ],
+    [
+     "p12EpoRpJAK2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p12EpoRpJAK2 [p12EpoRpJAK2]",
+     ""
+    ],
+    [
+     "SHP1",
+     "0",
+     "26.7236153222782",
+     "Y",
+     "0",
+     "No",
+     "26.7236153222782",
+     "SHP1 [SHP1]",
+     ""
+    ],
+    [
+     "SHP1Act",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SHP1Act [SHP1Act]",
+     ""
+    ],
+    [
+     "STAT5",
+     "0",
+     "79.7242077843376",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STAT5 [STAT5]",
+     ""
+    ],
+    [
+     "pSTAT5",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pSTAT5 [pSTAT5]",
+     ""
+    ],
+    [
+     "npSTAT5",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "npSTAT5 [npSTAT5]",
+     ""
+    ],
+    [
+     "CISnRNA1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CISnRNA1 [CISnRNA1]",
+     ""
+    ],
+    [
+     "CISnRNA2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CISnRNA2 [CISnRNA2]",
+     ""
+    ],
+    [
+     "CISRNA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CISRNA [CISRNA]",
+     ""
+    ],
+    [
+     "CIS",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CIS [CIS]",
+     ""
+    ],
+    [
+     "SOCS3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SOCS3 [SOCS3]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

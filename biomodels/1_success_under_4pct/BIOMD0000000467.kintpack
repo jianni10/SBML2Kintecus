@@ -1,0 +1,937 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:51:51.157107+00:00",
+ "description": "Koo2013 - Shear stress induced NO production - Model 4\nBioModels BIOMD0000000467 (curated). SBML file: BIOMD0000000467_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000467_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.52e-06 of species peak (worst: s118)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] re55 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re55 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re56 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re56 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re69: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for s63\n  [info] re70: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Koo2013 - Shear stress induced NO production - Model 4  (BIOMD0000000467, curated BioModels; source file BIOMD0000000467_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re37",
+     ""
+    ],
+    [
+     "0.015",
+     "0",
+     "0",
+     "s47+s51==>s45",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re38 term 1/2",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "s50==>s51+s48",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re38 term 2/2",
+     ""
+    ],
+    [
+     "0.00015",
+     "0",
+     "0",
+     "s51+s48==>s50",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re41 term 1/2",
+     ""
+    ],
+    [
+     "0.4688",
+     "0",
+     "0",
+     "s52==>s48",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re41 term 2/2",
+     ""
+    ],
+    [
+     "10.3",
+     "0",
+     "0",
+     "s48==>s52",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re42 term 1/2",
+     ""
+    ],
+    [
+     "9.376000000000001",
+     "0",
+     "0",
+     "s48==>s47",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re42 term 2/2",
+     ""
+    ],
+    [
+     "1152",
+     "0",
+     "0",
+     "s47==>s48",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re50 term 1/2",
+     ""
+    ],
+    [
+     "115.2",
+     "0",
+     "0",
+     "s45==>s50",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re50 term 2/2",
+     ""
+    ],
+    [
+     "9.376000000000001",
+     "0",
+     "0",
+     "s50==>s45",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re51",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "s45+s57==>s58",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re52 term 1/2",
+     ""
+    ],
+    [
+     "115.2",
+     "0",
+     "0",
+     "s58==>s61",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re52 term 2/2",
+     ""
+    ],
+    [
+     "9.376000000000001",
+     "0",
+     "0",
+     "s61==>s58",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re53",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "s61==>s57+s50",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re54 term 1/2",
+     ""
+    ],
+    [
+     "115.2",
+     "0",
+     "0",
+     "s60==>s62",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re54 term 2/2",
+     ""
+    ],
+    [
+     "9.376000000000001",
+     "0",
+     "0",
+     "s62==>s60",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re55 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s58+S[USER;cs58:(0.1723/(1*cs58+5))]==>s60",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re55 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s60+S[USER;cs60:(4/(1*cs60+20))]==>s58",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re56 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s61+S[USER;cs61:(0.1723/(1*cs61+5))]==>s62",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re56 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s62+S[USER;cs62:(4/(1*cs62+20))]==>s61",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re69",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cs45,cs58,cs60,cs62,cs65:(17*cs45+17*cs58+17*cs60+5*cs62+5*cs65)]==>s64",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re69 (consumes s63)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cs45,cs58,cs60,cs62,cs65:(-17*cs45-17*cs58-17*cs60-5*cs62-5*cs65)]==>s63",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re70",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s65+S[USER;cs65:(4/(1*cs65+20))]==>s66",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re71",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "s66==>s51+s57",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re72 term 1/2",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "s62==>s65+s48",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re72 term 2/2",
+     ""
+    ],
+    [
+     "0.00015",
+     "0",
+     "0",
+     "s65+s48==>s62",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re131",
+     ""
+    ],
+    [
+     "9.45e-5",
+     "0",
+     "0",
+     "s51==>s116",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re132",
+     ""
+    ],
+    [
+     "9.45e-5",
+     "0",
+     "0",
+     "s45==>s47+s117",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re133",
+     ""
+    ],
+    [
+     "9.45e-5",
+     "0",
+     "0",
+     "s50==>s48+s117",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re134",
+     ""
+    ],
+    [
+     "9.45e-5",
+     "0",
+     "0",
+     "s66==>s57+s118",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re135",
+     ""
+    ],
+    [
+     "9.45e-5",
+     "0",
+     "0",
+     "s65==>s118+s57",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re136",
+     ""
+    ],
+    [
+     "9.45e-5",
+     "0",
+     "0",
+     "s61==>s57+s48",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re137",
+     ""
+    ],
+    [
+     "9.45e-5",
+     "0",
+     "0",
+     "s62==>s57+s48",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re138",
+     ""
+    ],
+    [
+     "9.45e-5",
+     "0",
+     "0",
+     "s58==>s57+s47",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re139",
+     ""
+    ],
+    [
+     "9.45e-5",
+     "0",
+     "0",
+     "s60==>s47+s57",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "s3",
+     "0",
+     "117.2",
+     "Y",
+     "0",
+     "No",
+     "117.2",
+     "Ca_c [s3]",
+     ""
+    ],
+    [
+     "s27",
+     "0",
+     "1.723",
+     "Y",
+     "0",
+     "No",
+     "1.723",
+     "pp-AKT:PI3P [s27]",
+     ""
+    ],
+    [
+     "s45",
+     "0",
+     "0.0415",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "eNOS-CaM-Ca4 [s45]",
+     ""
+    ],
+    [
+     "s47",
+     "0",
+     "2.827",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CaM-Ca4 [s47]",
+     ""
+    ],
+    [
+     "s48",
+     "0",
+     "347.52",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CaM-Ca2 [s48]",
+     ""
+    ],
+    [
+     "s50",
+     "0",
+     "2.12",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "eNOS-CaM-Ca2 [s50]",
+     ""
+    ],
+    [
+     "s51",
+     "0",
+     "34.98",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "eNOS-Cav-1 [s51]",
+     ""
+    ],
+    [
+     "s52",
+     "0",
+     "7635.36",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Calmodulin [s52]",
+     ""
+    ],
+    [
+     "s57",
+     "0",
+     "199987",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hsp90 [s57]",
+     ""
+    ],
+    [
+     "s58",
+     "0",
+     "1.037",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hsp90-eNOS-CaM-Ca4 [s58]",
+     ""
+    ],
+    [
+     "s60",
+     "0",
+     "0.0089",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hsp90-p-eNOS-CaM-Ca4 [s60]",
+     ""
+    ],
+    [
+     "s61",
+     "0",
+     "10.98",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hsp90-eNOS-CaM-Ca2 [s61]",
+     ""
+    ],
+    [
+     "s62",
+     "0",
+     "0.106",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hsp90-p-eNOS-CaM-Ca2 [s62]",
+     ""
+    ],
+    [
+     "s63",
+     "0",
+     "500000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L-Arg [s63]",
+     ""
+    ],
+    [
+     "s64",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NO [s64]",
+     ""
+    ],
+    [
+     "s65",
+     "0",
+     "0.643",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hsp90-p-eNOS [s65]",
+     ""
+    ],
+    [
+     "s66",
+     "0",
+     "0.083",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hsp90-eNOS [s66]",
+     ""
+    ],
+    [
+     "s116",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "sa49_degraded [s116]",
+     ""
+    ],
+    [
+     "s117",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "s117 [s117]",
+     ""
+    ],
+    [
+     "s118",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "s118 [s118]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

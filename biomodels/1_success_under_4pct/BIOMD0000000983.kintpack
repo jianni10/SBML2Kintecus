@@ -1,0 +1,815 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:34:57.731052+00:00",
+ "description": "Zongo2020 - model of COVID-19 transmission dynamics under containment measures in France\nBioModels BIOMD0000000983 (curated). SBML file: Zongo2020.xml.\nSimulation: 0 to 125 time units (SED-ML: Zongo2020.sedml), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.24e-05 of species peak (worst: I_u)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction term 2/6: rate order differs from the stoichiometry; consumed on separate line(s) - S_u: zero order, signed\n  [info] reaction term 3/6: rate order differs from the stoichiometry; consumed on separate line(s) - S_u: zero order, signed\n  [info] reaction term 4/6: rate order differs from the stoichiometry; consumed on separate line(s) - S_u: zero order, signed\n  [info] reaction_1 term 4/5: rate order differs from the stoichiometry; consumed on separate line(s) - S_c: zero order, signed\n  [info] reaction_1 term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - S_c: zero order, signed\n  [info] time event(s) on 'm_t_phase_1' encoded as time/value pairs in EV_P_M_T_PHASE_1.TXT (SET)\n  [info] time event(s) on 'm_t_phase_2' encoded as time/value pairs in EV_P_M_T_PHASE_2.TXT (SET)\n  [info] time event(s) on 'm_t_phase_3' encoded as time/value pairs in EV_P_M_T_PHASE_3.TXT (SET)\nRenamed species (Kintecus name = SBML id): E1 = E; R1 = R; p_m_t_phase_1 = m_t_phase_1; p_m_t_phase_2 = m_t_phase_2; p_m_t_phase_3 = m_t_phase_3",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Zongo2020 - model of COVID-19 transmission dynamics under containment measures in France  (BIOMD0000000983, curated BioModels; source file Zongo2020.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 1/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_c==>S_u",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 2/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS_c,cp_m_t_phase_1:(1*cS_c*cp_m_t_phase_1)]==>S_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 2/6 (consumes S_u)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS_c,cp_m_t_phase_1:((-1*1*cS_c*cp_m_t_phase_1))]==>S_u",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 3/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS_c,cp_m_t_phase_2:(0.93*cS_c*cp_m_t_phase_2)]==>S_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 3/6 (consumes S_u)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS_c,cp_m_t_phase_2:((-1*0.93*cS_c*cp_m_t_phase_2))]==>S_u",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 4/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS_c,cp_m_t_phase_3:(1.5554867256637168*cS_c*cp_m_t_phase_3)]==>S_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 4/6 (consumes S_u)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS_c,cp_m_t_phase_3:((-1*1.5554867256637168*cS_c*cp_m_t_phase_3))]==>S_u",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 5/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_c+S[USER;cTIME_,cp_m_t_phase_3:(0.008230088495575221*cTIME_*cp_m_t_phase_3)]==>S_u",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction term 6/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_c+S[USER;cTIME_,cp_m_t_phase_1:(8.566539647509458*cp_m_t_phase_1*exp((-1*0.10227923218972226*cTIME_)))]==>S_u",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 1/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_u+S[USER;cp_m_t_phase_1:(1*cp_m_t_phase_1)]==>S_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 2/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_u+S[USER;cp_m_t_phase_2:(0.93*cp_m_t_phase_2)]==>S_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 3/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S_u+S[USER;cp_m_t_phase_3:(1.5554867256637168*cp_m_t_phase_3)]==>S_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 4/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS_u,cTIME_,cp_m_t_phase_3:(0.008230088495575221*cS_u*cTIME_*cp_m_t_phase_3)]==>S_u",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 4/5 (consumes S_c)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS_u,cTIME_,cp_m_t_phase_3:((-1*0.008230088495575221*cS_u*cTIME_*cp_m_t_phase_3))]==>S_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 5/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS_u,cTIME_,cp_m_t_phase_1:(8.566539647509458*cS_u*cp_m_t_phase_1*exp((-1*0.10227923218972226*cTIME_)))]==>S_u",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 5/5 (consumes S_c)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS_u,cTIME_,cp_m_t_phase_1:((-1*8.566539647509458*cS_u*cp_m_t_phase_1*exp((-1*0.10227923218972226*cTIME_))))]==>S_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 1/2",
+     ""
+    ],
+    [
+     "8.460000000000001e-9",
+     "0",
+     "0",
+     "S_u+I_r==>E1+I_r",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 2/2",
+     ""
+    ],
+    [
+     "1.6920000000000002e-8",
+     "0",
+     "0",
+     "S_u+I_u==>E1+I_u",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 1/2",
+     ""
+    ],
+    [
+     "2.1150000000000002e-9",
+     "0",
+     "0",
+     "S_u+I_r==>Q+I_r",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 2/2",
+     ""
+    ],
+    [
+     "4.2300000000000005e-9",
+     "0",
+     "0",
+     "S_u+I_u==>Q+I_u",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "0.021428570999999997",
+     "0",
+     "0",
+     "Q==>I_r",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "0.04000000000000001",
+     "0",
+     "0",
+     "E1==>I_r",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6",
+     ""
+    ],
+    [
+     "0.16",
+     "0",
+     "0",
+     "E1==>I_u",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "I_r==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8",
+     ""
+    ],
+    [
+     "0.25",
+     "0",
+     "0",
+     "I_u==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9",
+     ""
+    ],
+    [
+     "0.049999998999999996",
+     "0",
+     "0",
+     "Q==>S_u",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "S_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible_confined [S_c]",
+     ""
+    ],
+    [
+     "S_u",
+     "0",
+     "66990000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible_unconfined [S_u]",
+     ""
+    ],
+    [
+     "E1",
+     "0",
+     "112",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Exposed [E]",
+     ""
+    ],
+    [
+     "I_r",
+     "0",
+     "12",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected_reported [I_r]",
+     ""
+    ],
+    [
+     "I_u",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected_unreported [I_u]",
+     ""
+    ],
+    [
+     "R1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Recovered [R]",
+     ""
+    ],
+    [
+     "Q",
+     "0",
+     "36",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Quarantined [Q]",
+     ""
+    ],
+    [
+     "p_m_t_phase_1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "EV_P_M_T_PHASE_1.TXT-SET",
+     "parameter m_t_phase_1 [m_t_phase_1]",
+     ""
+    ],
+    [
+     "p_m_t_phase_2",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "EV_P_M_T_PHASE_2.TXT-SET",
+     "parameter m_t_phase_2 [m_t_phase_2]",
+     ""
+    ],
+    [
+     "p_m_t_phase_3",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "EV_P_M_T_PHASE_3.TXT-SET",
+     "parameter m_t_phase_3 [m_t_phase_3]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1.000000001",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "125",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1.000000001",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_M_T_PHASE_1.TXT",
+   "key": "O_EV_P_M_T_PHASE_1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "21",
+     "1"
+    ],
+    [
+     "47",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_M_T_PHASE_2.TXT",
+   "key": "O_EV_P_M_T_PHASE_2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "47",
+     "1"
+    ],
+    [
+     "76",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_M_T_PHASE_3.TXT",
+   "key": "O_EV_P_M_T_PHASE_3.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "76",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

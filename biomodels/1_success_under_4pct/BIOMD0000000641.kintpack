@@ -1,0 +1,578 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:05:50.580234+00:00",
+ "description": "Jaiswal2017 - Cell cycle arrest\nBioModels BIOMD0000000641 (curated). SBML file: BIOMD0000000641_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000641_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.66e-06 of species peak (worst: HR)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Timerinact' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'CellCina' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Effectorina' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Damage' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dTimeract/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dTimeract/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dTimeract/dt term 5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dCellCact/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dCellCact/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dCellCact/dt term 5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dEffectoract/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dEffectoract/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dEffectoract/dt term 5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jaiswal2017 - Cell cycle arrest  (BIOMD0000000641, curated BioModels; source file BIOMD0000000641_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTimeract/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "HR+S[USER;cTimeract:(20/(11-cTimeract))]==>Timeract+HR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTimeract/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NHEJ+S[USER;cTimeract:(20/(11-cTimeract))]==>Timeract+NHEJ",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTimeract/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Timeract+S[USER;cTimeract:(10/(1*cTimeract+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTimeract/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Timeract+HR+S[USER;cTimeract:((-1*2/(1*cTimeract-11)))]==>HR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTimeract/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Timeract+NHEJ+S[USER;cTimeract:((-1*2/(1*cTimeract-11)))]==>NHEJ",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCellCact/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCellCact:(10/(20-cCellCact))]==>CellCact",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCellCact/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CellCact+CellCact+S[USER;cCellCact:((-1*1/(1*cCellCact-20)))]==>CellCact",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCellCact/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CellCact+S[USER;cCellCact:(9/(20-cCellCact))]==>2CellCact",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCellCact/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CellCact+Effectoract+S[USER;cCellCact:(1/(1*cCellCact+10))]==>Effectoract",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCellCact/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CellCact+Timeract+S[USER;cCellCact:(10/(1*cCellCact+10))]==>Timeract",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dEffectoract/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "HR+S[USER;cEffectoract:(10/(20-cEffectoract))]==>Effectoract+HR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dEffectoract/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NHEJ+S[USER;cEffectoract:(10/(20-cEffectoract))]==>Effectoract+NHEJ",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dEffectoract/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Effectoract+CellCact+S[USER;cEffectoract:(1/(1*cEffectoract+10))]==>CellCact",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dEffectoract/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Effectoract+HR+S[USER;cEffectoract:((-1*1/(1*cEffectoract-20)))]==>HR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dEffectoract/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Effectoract+NHEJ+S[USER;cEffectoract:((-1*1/(1*cEffectoract-20)))]==>NHEJ",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dHR/dt term 1",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "HR==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNHEJ/dt term 1",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "NHEJ==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Timeract",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Timeract [Timeract]",
+     ""
+    ],
+    [
+     "CellCact",
+     "0",
+     "0.999999999999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CellCact [CellCact]",
+     ""
+    ],
+    [
+     "Effectoract",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Effectoract [Effectoract]",
+     ""
+    ],
+    [
+     "HR",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HR [HR]",
+     ""
+    ],
+    [
+     "NHEJ",
+     "0",
+     "7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NHEJ [NHEJ]",
+     ""
+    ],
+    [
+     "CellCycletot",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "CellCycletot [CellCycletot]",
+     ""
+    ],
+    [
+     "Effectortot",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "Effectortot [Effectortot]",
+     ""
+    ],
+    [
+     "Timertot",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "Timertot [Timertot]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.03",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.03",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

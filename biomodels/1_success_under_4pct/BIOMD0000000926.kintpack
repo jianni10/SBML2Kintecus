@@ -1,0 +1,1082 @@
+{
+ "version": 3,
+ "created": "2026-11-01T23:02:38.819099+00:00",
+ "description": "Rhodes2019 - Immune-Mediated theory of Metastasis\nBioModels BIOMD0000000926 (curated). SBML file: Rhodes2019-Immune-Mediated theory of Metastasis_V1.xml.\nSimulation: 0 to 100 time units (SED-ML: Rhodes2019-Immune-Mediated theory of Metastasis.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.95e-06 of species peak (worst: CT_immune_Cell_x_2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Necrotic_Cell_v1__rise term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - Necrotic_Cell_v_1: zero order, signed\n  [info] Necrotic_Cell_v1__rise term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - Necrotic_Cell_v_1: zero order, signed\n  [info] Necrotic_Cell_v2__rise term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - Necrotic_Cell_v_2: zero order, signed\n  [info] Necrotic_Cell_v2__rise term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - Necrotic_Cell_v_2: zero order, signed\n  [info] Tumor_Cell_u2__Metastatic term 4/8: rate order differs from the stoichiometry; consumed on separate line(s) - Tumor_Cell_u_2: zero order, signed\n  [info] Tumor_Cell_u2__Metastatic term 6/8: rate order differs from the stoichiometry; consumed on separate line(s) - Tumor_Cell_u_2: zero order, signed\n  [info] Tumor_Cell_u2__Metastatic term 7/8: rate order differs from the stoichiometry; consumed on separate line(s) - Tumor_Cell_u_2: zero order, signed\n  [info] Tumor_Cell_u2__Metastatic term 8/8: rate order differs from the stoichiometry; consumed on separate line(s) - Tumor_Cell_u_2: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rhodes2019 - Immune-Mediated theory of Metastasis  (BIOMD0000000926, curated BioModels; source file Rhodes2019-Immune-Mediated theory of Metastasis_V1.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u1__growth term 1/4",
+     ""
+    ],
+    [
+     "0.47498713332251175",
+     "0",
+     "0",
+     "Tumor_Cell_u_1==>2Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u1__growth term 2/4",
+     ""
+    ],
+    [
+     "8.929000927184596e-10",
+     "0",
+     "0",
+     "Tumor_Cell_u_1+Tumor_Cell_u_1==>Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u1__growth term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_1+S[USER;cTE_immune_Cell_y_1:(0.095*tanh(7.080063720573485e-5*cTE_immune_Cell_y_1-4.8000354003186025))]==>2Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u1__growth term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_1+Tumor_Cell_u_1+S[USER;cTE_immune_Cell_y_1:(1.7858485600421084e-10*tanh(7.080063720573485e-5*cTE_immune_Cell_y_1-4.8000354003186025))]==>Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__growth term 1/4",
+     ""
+    ],
+    [
+     "0.47498713332251175",
+     "0",
+     "0",
+     "Tumor_Cell_u_2==>2Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__growth term 2/4",
+     ""
+    ],
+    [
+     "8.929000927184596e-10",
+     "0",
+     "0",
+     "Tumor_Cell_u_2+Tumor_Cell_u_2==>Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__growth term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_2+S[USER;cTE_immune_Cell_y_2:(0.095*tanh(7.080063720573485e-5*cTE_immune_Cell_y_2-4.8000354003186025))]==>2Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__growth term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_2+Tumor_Cell_u_2+S[USER;cTE_immune_Cell_y_2:(1.7858485600421084e-10*tanh(7.080063720573485e-5*cTE_immune_Cell_y_2-4.8000354003186025))]==>Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u1__death term 1/4",
+     ""
+    ],
+    [
+     "0.12500507903669003",
+     "0",
+     "0",
+     "Tumor_Cell_u_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u1__death term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_1+S[USER;cCT_immune_Cell_x_1:(0.025001693098535574*tanh(7.07999688480137e-6*cCT_immune_Cell_x_1-4.799997168001246))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u1__death term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_1+S[USER;cTE_immune_Cell_y_1:(0.12500507903669003*tanh(7.080063720573485e-5*cTE_immune_Cell_y_1-4.8000354003186025))]==>2Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u1__death term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_1+S[USER;cCT_immune_Cell_x_1,cTE_immune_Cell_y_1:(0.025001693098535574*tanh(7.07999688480137e-6*cCT_immune_Cell_x_1-4.799997168001246)*tanh(7.080063720573485e-5*cTE_immune_Cell_y_1-4.8000354003186025))]==>2Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__death term 1/4",
+     ""
+    ],
+    [
+     "0.12500507903669003",
+     "0",
+     "0",
+     "Tumor_Cell_u_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__death term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_2+S[USER;cCT_immune_Cell_x_2:(0.025001693098535574*tanh(7.07999688480137e-6*cCT_immune_Cell_x_2-4.799997168001246))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__death term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_2+S[USER;cTE_immune_Cell_y_2:(0.12500507903669003*tanh(7.080063720573485e-5*cTE_immune_Cell_y_2-4.8000354003186025))]==>2Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__death term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_2+S[USER;cCT_immune_Cell_x_2,cTE_immune_Cell_y_2:(0.025001693098535574*tanh(7.07999688480137e-6*cCT_immune_Cell_x_2-4.799997168001246)*tanh(7.080063720573485e-5*cTE_immune_Cell_y_2-4.8000354003186025))]==>2Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Necrotic_Cell_v1__rise term 1/4",
+     ""
+    ],
+    [
+     "8.209083540339435",
+     "0",
+     "0",
+     "Tumor_Cell_u_1==>Necrotic_Cell_v_1+Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Necrotic_Cell_v1__rise term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_1+S[USER;cCT_immune_Cell_x_1:(1.6418611857808312*tanh(7.07999688480137e-6*cCT_immune_Cell_x_1-4.799997168001246))]==>Necrotic_Cell_v_1+Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Necrotic_Cell_v1__rise term 3/4 (consumes Necrotic_Cell_v_1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTE_immune_Cell_y_1,cTumor_Cell_u_1:((-1*8.209083540339435*cTumor_Cell_u_1*tanh(7.080063720573485e-5*cTE_immune_Cell_y_1-4.8000354003186025)))]==>Necrotic_Cell_v_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Necrotic_Cell_v1__rise term 4/4 (consumes Necrotic_Cell_v_1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCT_immune_Cell_x_1,cTE_immune_Cell_y_1,cTumor_Cell_u_1:((-1*1.6418611857808312*cTumor_Cell_u_1*tanh(7.07999688480137e-6*cCT_immune_Cell_x_1-4.799997168001246)*tanh(7.080063720573485e-5*cTE_immune_Cell_y_1-4.8000354003186025)))]==>Necrotic_Cell_v_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Necrotic_Cell_v2__rise term 1/4",
+     ""
+    ],
+    [
+     "8.209083540339435",
+     "0",
+     "0",
+     "Tumor_Cell_u_2==>Necrotic_Cell_v_2+Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Necrotic_Cell_v2__rise term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_2+S[USER;cCT_immune_Cell_x_2:(1.6418611857808312*tanh(7.07999688480137e-6*cCT_immune_Cell_x_2-4.799997168001246))]==>Necrotic_Cell_v_2+Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Necrotic_Cell_v2__rise term 3/4 (consumes Necrotic_Cell_v_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTE_immune_Cell_y_2,cTumor_Cell_u_2:((-1*8.209083540339435*cTumor_Cell_u_2*tanh(7.080063720573485e-5*cTE_immune_Cell_y_2-4.8000354003186025)))]==>Necrotic_Cell_v_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Necrotic_Cell_v2__rise term 4/4 (consumes Necrotic_Cell_v_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCT_immune_Cell_x_2,cTE_immune_Cell_y_2,cTumor_Cell_u_2:((-1*1.6418611857808312*cTumor_Cell_u_2*tanh(7.07999688480137e-6*cCT_immune_Cell_x_2-4.799997168001246)*tanh(7.080063720573485e-5*cTE_immune_Cell_y_2-4.8000354003186025)))]==>Necrotic_Cell_v_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u1__Shedding",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Tumor_Cell_u_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__Metastatic term 1/8",
+     ""
+    ],
+    [
+     "0.0004997533767249989",
+     "0",
+     "0",
+     "Tumor_Cell_u_1==>Tumor_Cell_u_2+Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__Metastatic term 2/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_1+S[USER;cNecrotic_Cell_v_2:(0.0004995000025865777*tanh(2.252252252252252e-8*cNecrotic_Cell_v_2-3.599099099099099))]==>Tumor_Cell_u_2+Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__Metastatic term 3/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_1+S[USER;cTE_immune_Cell_y_2:(0.00024989361099670505*tanh(7.080063720573485e-5*cTE_immune_Cell_y_2-4.8000354003186025))]==>Tumor_Cell_u_2+Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__Metastatic term 4/8 (consumes Tumor_Cell_u_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCT_immune_Cell_x_2,cTumor_Cell_u_1:((-1*0.0004997533767249989*cTumor_Cell_u_1*tanh(7.07999688480137e-6*cCT_immune_Cell_x_2-4.799997168001246)))]==>Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__Metastatic term 5/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumor_Cell_u_1+S[USER;cNecrotic_Cell_v_2,cTE_immune_Cell_y_2:(0.0002497669153477468*tanh(2.252252252252252e-8*cNecrotic_Cell_v_2-3.599099099099099)*tanh(7.080063720573485e-5*cTE_immune_Cell_y_2-4.8000354003186025))]==>Tumor_Cell_u_2+Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__Metastatic term 6/8 (consumes Tumor_Cell_u_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCT_immune_Cell_x_2,cNecrotic_Cell_v_2,cTumor_Cell_u_1:((-1*0.0004995000025865777*cTumor_Cell_u_1*tanh(7.07999688480137e-6*cCT_immune_Cell_x_2-4.799997168001246)*tanh(2.252252252252252e-8*cNecrotic_Cell_v_2-3.599099099099099)))]==>Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__Metastatic term 7/8 (consumes Tumor_Cell_u_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCT_immune_Cell_x_2,cTE_immune_Cell_y_2,cTumor_Cell_u_1:((-1*0.00024989361099670505*cTumor_Cell_u_1*tanh(7.07999688480137e-6*cCT_immune_Cell_x_2-4.799997168001246)*tanh(7.080063720573485e-5*cTE_immune_Cell_y_2-4.8000354003186025)))]==>Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_u2__Metastatic term 8/8 (consumes Tumor_Cell_u_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCT_immune_Cell_x_2,cNecrotic_Cell_v_2,cTE_immune_Cell_y_2,cTumor_Cell_u_1:((-1*0.0002497669153477468*cTumor_Cell_u_1*tanh(7.07999688480137e-6*cCT_immune_Cell_x_2-4.799997168001246)*tanh(2.252252252252252e-8*cNecrotic_Cell_v_2-3.599099099099099)*tanh(7.080063720573485e-5*cTE_immune_Cell_y_2-4.8000354003186025)))]==>Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Necrotic_Cell_v1__lysis",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Necrotic_Cell_v_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Necrotic_Cell_v2__lysis",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "Necrotic_Cell_v_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CT_immune_Cell_x1__natural_influx",
+     ""
+    ],
+    [
+     "1000000",
+     "0",
+     "0",
+     "source==>CT_immune_Cell_x_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CT_immune_Cell_x2__natural_influx",
+     ""
+    ],
+    [
+     "1000000",
+     "0",
+     "0",
+     "source==>CT_immune_Cell_x_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CT_immune_Cell_x1__response term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CT_immune_Cell_x_1+Tumor_Cell_u_1+S[USER;cTumor_Cell_u_1:(0.524/(cTumor_Cell_u_1+161000))]==>2CT_immune_Cell_x_1+Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CT_immune_Cell_x1__response term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CT_immune_Cell_x_1+Necrotic_Cell_v_1+S[USER;cNecrotic_Cell_v_1:(0.786/(cNecrotic_Cell_v_1+161000))]==>2CT_immune_Cell_x_1+Necrotic_Cell_v_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CT_immune_Cell_x2__response term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CT_immune_Cell_x_2+Tumor_Cell_u_2+S[USER;cTumor_Cell_u_2:(0.524/(cTumor_Cell_u_2+161000))]==>2CT_immune_Cell_x_2+Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CT_immune_Cell_x2__response term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CT_immune_Cell_x_2+Necrotic_Cell_v_2+S[USER;cNecrotic_Cell_v_2:(0.786/(cNecrotic_Cell_v_2+161000))]==>2CT_immune_Cell_x_2+Necrotic_Cell_v_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CT_immune_Cell_x1__death",
+     ""
+    ],
+    [
+     "0.59",
+     "0",
+     "0",
+     "CT_immune_Cell_x_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CT_immune_Cell_x2__death",
+     ""
+    ],
+    [
+     "0.59",
+     "0",
+     "0",
+     "CT_immune_Cell_x_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CT_immune_Cell_x1__killed",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "CT_immune_Cell_x_1+Tumor_Cell_u_1==>Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CT_immune_Cell_x2__killed",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "CT_immune_Cell_x_2+Tumor_Cell_u_2==>Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CT_immune_Cell_x1__transition",
+     ""
+    ],
+    [
+     "5e-5",
+     "0",
+     "0",
+     "CT_immune_Cell_x_1+Tumor_Cell_u_1==>TE_immune_Cell_y_1+Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CT_immune_Cell_x2__transition",
+     ""
+    ],
+    [
+     "5e-5",
+     "0",
+     "0",
+     "CT_immune_Cell_x_2+Tumor_Cell_u_2==>TE_immune_Cell_y_2+Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TE_immune_Cell_y1__natural_death",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "TE_immune_Cell_y_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TE_immune_Cell_y2__natural_death",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "TE_immune_Cell_y_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TE_immune_Cell_y1__loss_in_circulatory",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "TE_immune_Cell_y_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TE_immune_Cell_y2__supplement",
+     ""
+    ],
+    [
+     "5e-6",
+     "0",
+     "0",
+     "TE_immune_Cell_y_1==>TE_immune_Cell_y_2+TE_immune_Cell_y_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TE_immune_Cell_y1__recruitment",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TE_immune_Cell_y_1+Tumor_Cell_u_1+S[USER;cTumor_Cell_u_1:(0.04/(cTumor_Cell_u_1+160000))]==>2TE_immune_Cell_y_1+Tumor_Cell_u_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TE_immune_Cell_y2__recruitment",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TE_immune_Cell_y_2+Tumor_Cell_u_2+S[USER;cTumor_Cell_u_2:(0.04/(cTumor_Cell_u_2+160000))]==>2TE_immune_Cell_y_2+Tumor_Cell_u_2",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Tumor_Cell_u_1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumor Cell(u_1) [Tumor_Cell_u_1]",
+     ""
+    ],
+    [
+     "TE_immune_Cell_y_1",
+     "0",
+     "0.001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TE immune Cell(y_1) [TE_immune_Cell_y_1]",
+     ""
+    ],
+    [
+     "CT_immune_Cell_x_1",
+     "0",
+     "1694915.2542372881",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CT immune Cell(x_1) [CT_immune_Cell_x_1]",
+     ""
+    ],
+    [
+     "Tumor_Cell_u_2",
+     "0",
+     "1e-12",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumor Cell(u_2) [Tumor_Cell_u_2]",
+     ""
+    ],
+    [
+     "CT_immune_Cell_x_2",
+     "0",
+     "1694915.2542372881",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CT immune Cell(x_2) [CT_immune_Cell_x_2]",
+     ""
+    ],
+    [
+     "TE_immune_Cell_y_2",
+     "0",
+     "1e-10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TE immune Cell(y_2) [TE_immune_Cell_y_2]",
+     ""
+    ],
+    [
+     "Necrotic_Cell_v_1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Necrotic Cell(v_1) [Necrotic_Cell_v_1]",
+     ""
+    ],
+    [
+     "Necrotic_Cell_v_2",
+     "0",
+     "1e-16",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Necrotic Cell(v_2) [Necrotic_Cell_v_2]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

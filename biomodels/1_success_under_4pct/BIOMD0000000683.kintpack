@@ -1,0 +1,531 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:28:39.716563+00:00",
+ "description": "Wodarz1999 CTL memory response HIV\nBioModels BIOMD0000000683 (curated). SBML file: BIOMD0000000683.xml.\nSimulation: 0 to 200 time units (SED-ML: BIOMD0000000683.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.58e-07 of species peak (worst: w)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wodarz1999 CTL memory response HIV  (BIOMD0000000683, curated BioModels; source file BIOMD0000000683.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_w",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "w==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_x",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "x==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_y",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "y==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_z",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "z==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Differentiate_into_effectors",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "w+y==>z+y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infection_of_x term 1/4",
+     ""
+    ],
+    [
+     "0.0063",
+     "0",
+     "0",
+     "x+y==>2y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infection_of_x term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x+y+S[USER;cSW1:(1.4937*cSW1)]==>2y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infection_of_x term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x+y+S[USER;cSW2:(1.4937*cSW2)]==>2y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infection_of_x term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "y+x+S[USER;cSW1,cSW2:(1.4937*cSW1*cSW2)]==>2x",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Killed_by_CTL_effectors",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "y+z==>z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_x",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>x",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_CTLp",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "w+x+y==>2w+x+y",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "w",
+     "0",
+     "0.001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "w [w]",
+     ""
+    ],
+    [
+     "x",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x [x]",
+     ""
+    ],
+    [
+     "y",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "y [y]",
+     ""
+    ],
+    [
+     "z",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "z [z]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 15 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time switch at 1 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.5000000005",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.5000000005",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "15",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "1",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

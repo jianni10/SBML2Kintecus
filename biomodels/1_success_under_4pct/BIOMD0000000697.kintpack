@@ -1,0 +1,966 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:58:15.711730+00:00",
+ "description": "Ciliberto2003 - CyclinE / Cdk2 timer in the cell cycle of Xenopus laevis embryo\nBioModels BIOMD0000000697 (curated). SBML file: BIOMD0000000697_url.xml.\nSimulation: 0 to 960 time units (SED-ML: MODEL0913242281_fig5.sedml), sampling 0.96.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.20e-05 of species peak (worst: Deg_a)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Cyc_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Xic_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Degradation_increase term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - Deg_a: zero order, signed\n  [info] Kinase__regulation term 1/3: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] Kinase__regulation term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] Kinase__regulation term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Wee1_regulation term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Wee1_regulation term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ciliberto2003 - CyclinE / Cdk2 timer in the cell cycle of Xenopus laevis embryo  (BIOMD0000000697, curated BioModels; source file BIOMD0000000697_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xic_Cdk2_CycE_association",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Xic+Cdk2_CycE==>Xic_Cdk2_CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xic_Cdk2_CycErem_association",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Xic+Cdk2_CycErem==>Xic_Cdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xic_Cdk2_CycE_dissociation",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Xic_Cdk2_CycE==>Cdk2_CycE+Xic",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xic_Cdk2_CycErem_dissociation",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Xic_Cdk2_CycErem==>Xic+Cdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdk2_CycErem_to_not_rem",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "Cdk2_CycErem==>Cdk2_CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PCdk2_CycE_to_not_rem",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "PCdk2_CycErem==>PCdk2_CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdk2_CycE_to_rem term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdk2_CycE+S[USER;cCdk2_CycErem,cPCdk2_CycErem,cXic_Cdk2_CycErem,cXic_PCdk2_CycErem:(2e-5/((cCdk2_CycErem+cPCdk2_CycErem+cXic_Cdk2_CycErem+cXic_PCdk2_CycErem)^4+0.025600000000000005))]==>Cdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdk2_CycE_to_rem term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdk2_CycE+S[USER;cCdk2_CycErem,cPCdk2_CycErem,cXic_Cdk2_CycErem,cXic_PCdk2_CycErem:(0.02*(cCdk2_CycErem+cPCdk2_CycErem+cXic_Cdk2_CycErem+cXic_PCdk2_CycErem)^4/((cCdk2_CycErem+cPCdk2_CycErem+cXic_Cdk2_CycErem+cXic_PCdk2_CycErem)^4+0.025600000000000005))]==>Cdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PCdk2_CycE_to_rem term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PCdk2_CycE+S[USER;cCdk2_CycErem,cPCdk2_CycErem,cXic_Cdk2_CycErem,cXic_PCdk2_CycErem:(2e-5/((cCdk2_CycErem+cPCdk2_CycErem+cXic_Cdk2_CycErem+cXic_PCdk2_CycErem)^4+0.025600000000000005))]==>PCdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PCdk2_CycE_to_rem term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PCdk2_CycE+S[USER;cCdk2_CycErem,cPCdk2_CycErem,cXic_Cdk2_CycErem,cXic_PCdk2_CycErem:(0.02*(cCdk2_CycErem+cPCdk2_CycErem+cXic_Cdk2_CycErem+cXic_PCdk2_CycErem)^4/((cCdk2_CycErem+cPCdk2_CycErem+cXic_Cdk2_CycErem+cXic_PCdk2_CycErem)^4+0.025600000000000005))]==>PCdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "X_degadation",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Xic_Cdk2_CycErem==>Cdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "X_degradation_phosphorylated_complex",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Xic_PCdk2_CycErem==>PCdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_XicPCdk2_CycErem",
+     ""
+    ],
+    [
+     "0.017",
+     "0",
+     "0",
+     "Xic_PCdk2_CycErem+Deg_a==>Xicrem+Deg_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_XicCdk2_CycErem",
+     ""
+    ],
+    [
+     "0.017",
+     "0",
+     "0",
+     "Xic_Cdk2_CycErem+Deg_a==>Xicrem+Deg_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Dephos_Xic_PCdk2_CycE",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Xic_PCdk2_CycE==>Xic_Cdk2_CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Dephos_PCdk2_CycE",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "PCdk2_CycE==>Cdk2_CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_increase term 1/3",
+     ""
+    ],
+    [
+     "0.0115",
+     "0",
+     "0",
+     "source==>Deg_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_increase term 2/3 (consumes Deg_a)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCdk2_CycErem:((-1*0.00345/(abs(cCdk2_CycErem-0.3)+1e-300)))]==>Deg_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_increase term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdk2_CycErem+S[USER;cCdk2_CycErem:(0.0115/(abs(cCdk2_CycErem-0.3)+1e-300))]==>Deg_a+Cdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Phos_Xic_PCdk2_CycE",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "Xic_Cdk2_CycE+Wee1_a==>Xic_PCdk2_CycE+Wee1_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Phos_PCdk2_CycE",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "Cdk2_CycE+Wee1_a==>PCdk2_CycE+Wee1_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Kinase__regulation term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cKin_a:(0.15/(1.01-cKin_a))]==>Kin_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Kinase__regulation term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Kin_a+S[USER;cKin_a:((-1*0.15/(1*cKin_a-1.01)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Kinase__regulation term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdk2_CycE+Kin_a+S[USER;cKin_a:(0.6/(1*cKin_a+0.01))]==>Cdk2_CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xic_PCdk2_CycE_association",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Xic+PCdk2_CycE==>Xic_PCdk2_CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xic_PCdk2_CycErem_association",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Xic+PCdk2_CycErem==>Xic_PCdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xic_PCdk2_CycE_dissociation",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Xic_PCdk2_CycE==>Xic+PCdk2_CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xic_PCdk2_CycErem_dissociation",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Xic_PCdk2_CycErem==>Xic+PCdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_Cdk2_CycErem",
+     ""
+    ],
+    [
+     "0.017",
+     "0",
+     "0",
+     "Cdk2_CycErem+Deg_a==>Deg_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_PCdk2_CycErem",
+     ""
+    ],
+    [
+     "0.017",
+     "0",
+     "0",
+     "PCdk2_CycErem+Deg_a==>Deg_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xicrem_degradation",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Xicrem==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xic_PCdk2_CycErem_to_not_rem",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "Xic_PCdk2_CycErem==>Xic_PCdk2_CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xic_Cdk2_CycErem_to_not_rem",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "Xic_Cdk2_CycErem==>Xic_Cdk2_CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xic_PCdk2_CycE_to_rem term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Xic_PCdk2_CycE+S[USER;cCdk2_CycErem,cPCdk2_CycErem,cXic_Cdk2_CycErem,cXic_PCdk2_CycErem:(2e-5/((cCdk2_CycErem+cPCdk2_CycErem+cXic_Cdk2_CycErem+cXic_PCdk2_CycErem)^4+0.025600000000000005))]==>Xic_PCdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xic_PCdk2_CycE_to_rem term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Xic_PCdk2_CycE+S[USER;cCdk2_CycErem,cPCdk2_CycErem,cXic_Cdk2_CycErem,cXic_PCdk2_CycErem:(0.02*(cCdk2_CycErem+cPCdk2_CycErem+cXic_Cdk2_CycErem+cXic_PCdk2_CycErem)^4/((cCdk2_CycErem+cPCdk2_CycErem+cXic_Cdk2_CycErem+cXic_PCdk2_CycErem)^4+0.025600000000000005))]==>Xic_PCdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xic_Cdk2_CycE_to_rem term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Xic_Cdk2_CycE+S[USER;cCdk2_CycErem,cPCdk2_CycErem,cXic_Cdk2_CycErem,cXic_PCdk2_CycErem:(2e-5/((cCdk2_CycErem+cPCdk2_CycErem+cXic_Cdk2_CycErem+cXic_PCdk2_CycErem)^4+0.025600000000000005))]==>Xic_Cdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xic_Cdk2_CycE_to_rem term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Xic_Cdk2_CycE+S[USER;cCdk2_CycErem,cPCdk2_CycErem,cXic_Cdk2_CycErem,cXic_PCdk2_CycErem:(0.02*(cCdk2_CycErem+cPCdk2_CycErem+cXic_Cdk2_CycErem+cXic_PCdk2_CycErem)^4/((cCdk2_CycErem+cPCdk2_CycErem+cXic_Cdk2_CycErem+cXic_PCdk2_CycErem)^4+0.025600000000000005))]==>Xic_Cdk2_CycErem",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wee1_regulation term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cWee1_a:(5.999999999999985/(8.00999999999998-cWee1_a))]==>Wee1_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wee1_regulation term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Wee1_a+S[USER;cWee1_a:((-1*0.75/(1*cWee1_a-8.00999999999998)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wee1_regulation term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Wee1_a+Kin_a+S[USER;cWee1_a:(1.5/(1*cWee1_a+0.01))]==>Kin_a",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "PCdk2_CycE",
+     "0",
+     "0.94",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PCdk2_CycE [PCdk2_CycE]",
+     ""
+    ],
+    [
+     "Cdk2_CycE",
+     "0",
+     "0.0599999999999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdk2_CycE [Cdk2_CycE]",
+     ""
+    ],
+    [
+     "Wee1_a",
+     "0",
+     "1.02",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Wee1_a [Wee1_a]",
+     ""
+    ],
+    [
+     "Wee1_total",
+     "0",
+     "7.99999999999998",
+     "Y",
+     "0",
+     "No",
+     "7.99999999999998",
+     "Wee1_total [Wee1_total]",
+     ""
+    ],
+    [
+     "Cdk2_CycErem",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdk2_CycErem [Cdk2_CycErem]",
+     ""
+    ],
+    [
+     "PCdk2_CycErem",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PCdk2_CycErem [PCdk2_CycErem]",
+     ""
+    ],
+    [
+     "Deg_a",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Deg_CycE [Deg_a]",
+     ""
+    ],
+    [
+     "Xic",
+     "0",
+     "2.99999999999998",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xic [Xic]",
+     ""
+    ],
+    [
+     "Xic_Cdk2_CycE",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xic_Cdk2_CycE [Xic_Cdk2_CycE]",
+     ""
+    ],
+    [
+     "Xic_PCdk2_CycE",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xic_PCdk2_CycE [Xic_PCdk2_CycE]",
+     ""
+    ],
+    [
+     "Xic_Cdk2_CycErem",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xic_Cdk2_CycErem [Xic_Cdk2_CycErem]",
+     ""
+    ],
+    [
+     "Xic_PCdk2_CycErem",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xic_PCdk2_CycErem [Xic_PCdk2_CycErem]",
+     ""
+    ],
+    [
+     "Xicrem",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xicrem [Xicrem]",
+     ""
+    ],
+    [
+     "Kin_a",
+     "0",
+     "0.6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Kin_a [Kin_a]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.96",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "960",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.96",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,631 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:05:07.984106+00:00",
+ "description": "Hermansen2015 - denovo biosynthesis of pyrimidines in yeast\nBioModels BIOMD0000000590 (curated). SBML file: BIOMD0000000590_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000590_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.85e-06 of species peak (worst: cp)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] utp_degradation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ctp_degradation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hermansen2015 - denovo biosynthesis of pyrimidines in yeast  (BIOMD0000000590, curated BioModels; source file BIOMD0000000590_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cutp:(0.4530615272097636/(2.3959795171467437*cutp+3.3875682381290426))]==>cp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cp+S[USER;ccp,cutp:(0.8957387789612464/(1*ccp+0.7072859788265241*cutp*(ccp+1e-30)+1.418033088164903*cutp+2.00489353757245))]==>ca",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ca+S[USER;cca:(28.6613123782585/(1*cca+1.27179181717468))]==>dho",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "dho+S[USER;cdho:(91.7802875108298/(1*cdho+0.0160033122150611))]==>oro",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "oro+S[USER;coro:(949.5481174983869/(0.181644900226225*coro+0.0195216150005324))]==>omp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "omp+S[USER;comp:(34.9720846528477/(1*comp+20.3406449182435))]==>ump",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ump+S[USER;cump:(6.55543523218919/(1*cump+0.0267841313759584))]==>udp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "udp+S[USER;cudp:(5.83104141997666/(1*cudp+0.166382738667754))]==>utp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "utp_degradation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "utp+S[USER;cutp:(0.198306450999093/(1*cutp+5.48714446027226))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "utp+S[USER;cutp:(0.162943604164789/(1*cutp+0.00435621076587497))]==>ctp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ctp_degradation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ctp+S[USER;cctp:(0.198306450999093/(1*cctp+5.48714446027226))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cp_dilution",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "cp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ca_dilution",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "ca==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "dho_dilution",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "dho==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "oro_dilution",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "oro==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "omp_dilution",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "omp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ump_dilution",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "ump==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "udp_dilution",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "udp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "utp_dilution",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "utp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ctp_dilution",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "ctp==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "cp",
+     "0",
+     "0.00037",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cp [cp]",
+     ""
+    ],
+    [
+     "ca",
+     "0",
+     "0.00037",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ca [ca]",
+     ""
+    ],
+    [
+     "dho",
+     "0",
+     "0.00037",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "dho [dho]",
+     ""
+    ],
+    [
+     "oro",
+     "0",
+     "0.00037",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "oro [oro]",
+     ""
+    ],
+    [
+     "omp",
+     "0",
+     "0.00037",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "omp [omp]",
+     ""
+    ],
+    [
+     "ump",
+     "0",
+     "0.00037",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ump [ump]",
+     ""
+    ],
+    [
+     "udp",
+     "0",
+     "0.002886",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "udp [udp]",
+     ""
+    ],
+    [
+     "utp",
+     "0",
+     "0.00666",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "utp [utp]",
+     ""
+    ],
+    [
+     "ctp",
+     "0",
+     "0.00037",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ctp [ctp]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

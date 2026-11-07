@@ -1,0 +1,517 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:12:59.119219+00:00",
+ "description": "Khajanchi2017 - Uniform Persistence and Global Stability for a Brain Tumor and Immune System Interaction\nBioModels BIOMD0000000921 (curated). SBML file: khajanchi2017.xml.\nSimulation: 0 to 60 time units (SED-ML: khajanchi2017.sedml), sampling 0.06.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.99e-06 of species peak (worst: G)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Elimination_of_glioma_due_to_interaction_with_CTL_and_macrophage term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Elimination_of_glioma_due_to_interaction_with_CTL_and_macrophage term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): M1 = M",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Khajanchi2017 - Uniform Persistence and Global Stability for a Brain Tumor and Immune System Interaction  (BIOMD0000000921, curated BioModels; source file khajanchi2017.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "The_rate_of_change_of_glioma_whose_growth_follows_the_logistic_fashion_without_any_immune_intervention term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "G==>2G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "The_rate_of_change_of_glioma_whose_growth_follows_the_logistic_fashion_without_any_immune_intervention term 2/2",
+     ""
+    ],
+    [
+     "1.1329519061915822e-8",
+     "0",
+     "0",
+     "G+G==>G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Elimination_of_glioma_due_to_interaction_with_CTL_and_macrophage term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G+M1+S[USER;cG,cT_beta:(1.5/(10000*cG+1*cT_beta*(cG+1e-30)+27000*cT_beta+270000000))]==>M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Elimination_of_glioma_due_to_interaction_with_CTL_and_macrophage term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G+C_T+S[USER;cG,cT_beta:(0.12/(10000*cG+1*cT_beta*(cG+1e-30)+27000*cT_beta+270000000))]==>C_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Logistic_growth_term_for_macrophage term 1/2",
+     ""
+    ],
+    [
+     "0.3307",
+     "0",
+     "0",
+     "M1==>2M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Logistic_growth_term_for_macrophage term 2/2",
+     ""
+    ],
+    [
+     "0.3307",
+     "0",
+     "0",
+     "M1+M1==>M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "The_proliferative_enhancement_effect_of_macrophagesby_IFN_gama_and_negative_effect_of_TGF_beta",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I_gamma+S[USER;cI_gamma,cT_beta:(0.1163/(cI_gamma*cT_beta+10000*cI_gamma+10500*cT_beta+105000000))]==>M1+I_gamma",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "The_limited_interaction_between_glioma_and_macrophage",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1+G+S[USER;cG:(0.0194/(cG+27000))]==>G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "The_natural_death_of_CTL",
+     ""
+    ],
+    [
+     "0.007",
+     "0",
+     "0",
+     "C_T==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Clearance_of_CTL_due_to_their_interaction_with_glioma_cells",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_T+G+S[USER;cG:(0.1694/(cG+334450))]==>G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Natural_production_of_bioactive_TGF__beta_in_the_central_nervous_system",
+     ""
+    ],
+    [
+     "63305",
+     "0",
+     "0",
+     "source==>T_beta",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Glioma_secrete_the_cytokine_TGF_beta_to_suppress_the_immune_activity",
+     ""
+    ],
+    [
+     "5.75e-6",
+     "0",
+     "0",
+     "G==>T_beta+G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "The_degradation_of_TGF_beta",
+     ""
+    ],
+    [
+     "6.93",
+     "0",
+     "0",
+     "T_beta==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Linear_production_of_interferon_gamma_by_CTL",
+     ""
+    ],
+    [
+     "0.000102",
+     "0",
+     "0",
+     "C_T==>I_gamma+C_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Decay_term_of_IFN_gamma",
+     ""
+    ],
+    [
+     "0.102",
+     "0",
+     "0",
+     "I_gamma==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "G",
+     "0",
+     "100000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G [G]",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "100000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M [M]",
+     ""
+    ],
+    [
+     "C_T",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_T [C_T]",
+     ""
+    ],
+    [
+     "T_beta",
+     "0",
+     "5000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T_beta [T_beta]",
+     ""
+    ],
+    [
+     "I_gamma",
+     "0",
+     "9000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I_gamma [I_gamma]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.06",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "60",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.06",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

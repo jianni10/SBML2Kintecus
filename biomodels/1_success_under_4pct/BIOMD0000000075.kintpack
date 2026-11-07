@@ -1,0 +1,874 @@
+{
+ "version": 3,
+ "created": "2026-11-05T15:36:03.127593+00:00",
+ "description": "Xu2003 - Phosphoinositide turnover\nBioModels BIOMD0000000075 (curated). SBML file: BIOMD0000000075_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000075_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.05.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.92e-06 of species peak (worst: IP3_Cyt)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] PIPSyn term 1/7: rate order differs from the stoichiometry; consumed on separate line(s) - PIP_PM: zero order, signed\n  [info] PIPSyn term 4/7: rate order differs from the stoichiometry; consumed on separate line(s) - PIP_PM: zero order, signed\n  [info] PIPSyn term 7/7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PIP2Syn term 1/7: rate order differs from the stoichiometry; consumed on separate line(s) - PIP2_PM: zero order, signed\n  [info] PIP2Syn term 4/7: rate order differs from the stoichiometry; consumed on separate line(s) - PIP2_PM: zero order, signed\n  [info] PIP2Syn term 7/7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Xu2003 - Phosphoinositide turnover  (BIOMD0000000075, curated BioModels; source file BIOMD0000000075_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIPSyn term 1/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPI_PM:(0.0015977499999999998*cPI_PM)]==>PI_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIPSyn term 1/7 (consumes PIP_PM)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPI_PM:((-1*0.0015977499999999998*cPI_PM))]==>PIP_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIPSyn term 2/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PI_PM+S[USER;cPIP_PM:(24.816672198176388/(2*exp(0.00035001750087504374*cPIP_PM)*abs(cPIP_PM-2857)+2e-300*exp(0.00035001750087504374*cPIP_PM)))]==>PIP_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIPSyn term 3/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PI_PM+S[USER;cPIP_PM:(0.004343134791420439*exp((-1*0.00035001750087504374*cPIP_PM)))]==>PIP_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIPSyn term 4/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPIP_PM,cPI_PM:(9.129543499999999*cPI_PM/(2*abs(cPIP_PM-2857)+2e-300))]==>PI_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIPSyn term 4/7 (consumes PIP_PM)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPIP_PM,cPI_PM:((-1*9.129543499999999*cPI_PM/(2*abs(cPIP_PM-2857)+2e-300)))]==>PIP_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIPSyn term 5/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PI_PM+S[USER;cSW1,cTIME_:(0.019974150831144455*cSW1*exp((-1*1*cTIME_)))]==>PIP_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIPSyn term 6/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PI_PM+PIP_PM+S[USER;cPIP_PM:(0.0031954999999999996/(2*abs(cPIP_PM-2857)+2e-300))]==>2PIP_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIPSyn term 7/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PIP_PM+PI_PM+S[USER;cPIP_PM:(0.008686269582840878/(2*exp(0.00035001750087504374*cPIP_PM)*abs(cPIP_PM-2857)+2e-300*exp(0.00035001750087504374*cPIP_PM)))]==>2PI_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2_hyd (volume 0.5555555555556)",
+     ""
+    ],
+    [
+     "2.4",
+     "0",
+     "0",
+     "PIP2_PM+PLC_act_PM==>DAG_PM+PLC_act_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2_hyd (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPIP2_PM,cPLC_act_PM:(1.3333333333334398*cPIP2_PM*cPLC_act_PM)]==>IP3_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PLCact term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "PLC_act_PM==>PLC_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PLCact term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PLC_PM+S[USER;cSW1,cTIME_:(0.000525635548188012*cSW1*exp((-1*1*cTIME_)))]==>PLC_act_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2_PH term 1/2 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPIP2_PHGFP_PM:(0.133333333333344*cPIP2_PHGFP_PM)]==>PH_GFP_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2_PH term 2/2 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PH_GFP_Cyt+S[USER;cPIP2_PM:(0.00011074197120709618*cPIP2_PM)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2_PH term 1/2 (volume 0.5555555555556)",
+     ""
+    ],
+    [
+     "0.24",
+     "0",
+     "0",
+     "PIP2_PHGFP_PM==>PIP2_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2_PH term 2/2 (volume 0.5555555555556)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PIP2_PM+S[USER;cPH_GFP_Cyt:(0.0001993355481727572*cPH_GFP_Cyt)]==>PIP2_PHGFP_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3deg term 1/2",
+     ""
+    ],
+    [
+     "7.705600000000011",
+     "0",
+     "0",
+     "source==>IP3_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3deg term 2/2",
+     ""
+    ],
+    [
+     "0.08",
+     "0",
+     "0",
+     "IP3_Cyt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2Syn term 1/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPIP_PM:(0.013944*cPIP_PM)]==>PIP_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2Syn term 1/7 (consumes PIP2_PM)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPIP_PM:((-1*0.013944*cPIP_PM))]==>PIP2_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2Syn term 2/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PIP_PM+S[USER;cPIP2_PM:(303.2297745282634/(2*exp(0.00025*cPIP2_PM)*abs(cPIP2_PM-4000)+2e-300*exp(0.00025*cPIP2_PM)))]==>PIP2_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2Syn term 3/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PIP_PM+S[USER;cPIP2_PM:(0.03790372181603292*exp((-1*0.00025*cPIP2_PM)))]==>PIP2_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2Syn term 4/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPIP2_PM,cPIP_PM:(111.55199999999999*cPIP_PM/(2*abs(cPIP2_PM-4000)+2e-300))]==>PIP_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2Syn term 4/7 (consumes PIP2_PM)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPIP2_PM,cPIP_PM:((-1*111.55199999999999*cPIP_PM/(2*abs(cPIP2_PM-4000)+2e-300)))]==>PIP2_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2Syn term 5/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PIP_PM+PIP2_PM+S[USER;cPIP2_PM:(0.027888/(2*abs(cPIP2_PM-4000)+2e-300))]==>2PIP2_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2Syn term 6/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PIP_PM+S[USER;cSW1,cTIME_:(0.9671694086659421*cSW1*exp((-1*1*cTIME_)))]==>PIP2_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2Syn term 7/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PIP2_PM+PIP_PM+S[USER;cPIP2_PM:(0.07580744363206585/(2*exp(0.00025*cPIP2_PM)*abs(cPIP2_PM-4000)+2e-300*exp(0.00025*cPIP2_PM)))]==>2PIP_PM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3_PHGFP term 1/2",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "IP3_PHGFP_Cyt==>IP3_Cyt+PH_GFP_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3_PHGFP term 2/2",
+     ""
+    ],
+    [
+     "0.0166112956810631",
+     "0",
+     "0",
+     "IP3_Cyt+PH_GFP_Cyt==>IP3_PHGFP_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "PIP2_PHGFP_PM",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PIP2_PHGFP_PM [PIP2_PHGFP_PM]",
+     ""
+    ],
+    [
+     "PH_GFP_Cyt",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PH_GFP_Cyt [PH_GFP_Cyt]",
+     ""
+    ],
+    [
+     "PI_PM",
+     "0",
+     "142857",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI_PM [PI_PM]",
+     ""
+    ],
+    [
+     "stim_PM",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "stim_PM [stim_PM]",
+     ""
+    ],
+    [
+     "IP3_PHGFP_Cyt",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IP3_PHGFP_Cyt [IP3_PHGFP_Cyt]",
+     ""
+    ],
+    [
+     "PIP2_PM",
+     "0",
+     "4000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PIP2_PM [PIP2_PM]",
+     ""
+    ],
+    [
+     "PIP_PM",
+     "0",
+     "2857",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PIP_PM [PIP_PM]",
+     ""
+    ],
+    [
+     "DAG_PM",
+     "0",
+     "2000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DAG_PM [DAG_PM]",
+     ""
+    ],
+    [
+     "hv_Cytosol",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "hv_Cytosol [hv_Cytosol]",
+     ""
+    ],
+    [
+     "IP3X_Cytosol",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "IP3X_Cytosol [IP3X_Cytosol]",
+     ""
+    ],
+    [
+     "PLC_PM",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PLC_PM [PLC_PM]",
+     ""
+    ],
+    [
+     "PLC_act_PM",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PLC_act_PM [PLC_act_PM]",
+     ""
+    ],
+    [
+     "IP3_Cyt",
+     "0",
+     "96.32",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IP3_Cyt [IP3_Cyt]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 0.05 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.05000000006",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.05000000006",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.05",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

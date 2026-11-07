@@ -1,0 +1,1099 @@
+{
+ "version": 3,
+ "created": "2026-11-04T00:03:32.551486+00:00",
+ "description": "Chitnis2008 - Mathematical model of malaria transmission\nBioModels BIOMD0000000949 (curated). SBML file: Chitnis2008.xml.\nSimulation: 0 to 10000 time units (SED-ML: Chitnis2008.sedml), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.08e-06 of species peak (worst: Susceptible_Mosquito)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Human_Infection term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Human_Infection term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Human_Infection term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mosquito_infection term 1/7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mosquito_infection term 2/7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mosquito_infection term 3/7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mosquito_infection term 4/7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mosquito_infection term 5/7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mosquito_infection term 6/7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mosquito_infection term 7/7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chitnis2008 - Mathematical model of malaria transmission  (BIOMD0000000949, curated BioModels; source file Chitnis2008.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Immigration",
+     ""
+    ],
+    [
+     "0.041",
+     "0",
+     "0",
+     "source==>Susceptible_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Birth term 1/4",
+     ""
+    ],
+    [
+     "5.5e-5",
+     "0",
+     "0",
+     "Exposed_Human==>Susceptible_Human+Exposed_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Birth term 2/4",
+     ""
+    ],
+    [
+     "5.5e-5",
+     "0",
+     "0",
+     "Infected_Human==>Susceptible_Human+Infected_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Birth term 3/4",
+     ""
+    ],
+    [
+     "5.5e-5",
+     "0",
+     "0",
+     "Recovered==>Susceptible_Human+Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Birth term 4/4",
+     ""
+    ],
+    [
+     "5.5e-5",
+     "0",
+     "0",
+     "Susceptible_Human==>2Susceptible_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Loss_of_Immunity",
+     ""
+    ],
+    [
+     "0.0027",
+     "0",
+     "0",
+     "Recovered==>Susceptible_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Infection term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible_Human+Infected_Mosquito+Infected_Mosquito+S[USER;cExposed_Human,cExposed_Mosquito,cInfected_Human,cInfected_Mosquito,cRecovered,cSusceptible_Human,cSusceptible_Mosquito:(0.031218/(4.3*cExposed_Human*cExposed_Mosquito+4.3*cExposed_Human*cInfected_Mosquito+4.3*cExposed_Human*cSusceptible_Mosquito+0.33*cExposed_Mosquito^2+4.3*cExposed_Mosquito*cInfected_Human+0.66*cExposed_Mosquito*cInfected_Mosquito+4.3*cExposed_Mosquito*cRecovered+0.66*cExposed_Mosquito*cSusceptible_Mosquito+4.3*cExposed_Mosquito*(cSusceptible_Human+1e-30)+4.3*cInfected_Human*cInfected_Mosquito+4.3*cInfected_Human*cSusceptible_Mosquito+0.33*cInfected_Mosquito^2+4.3*cInfected_Mosquito*cRecovered+0.66*cInfected_Mosquito*cSusceptible_Mosquito+4.3*cInfected_Mosquito*(cSusceptible_Human+1e-30)+4.3*cRecovered*cSusceptible_Mosquito+0.33*cSusceptible_Mosquito^2+4.3*cSusceptible_Mosquito*(cSusceptible_Human+1e-30)))]==>Exposed_Human+2Infected_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Infection term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible_Human+Exposed_Mosquito+Infected_Mosquito+S[USER;cExposed_Human,cExposed_Mosquito,cInfected_Human,cInfected_Mosquito,cRecovered,cSusceptible_Human,cSusceptible_Mosquito:(0.031218/(4.3*cExposed_Human*cExposed_Mosquito+4.3*cExposed_Human*cInfected_Mosquito+4.3*cExposed_Human*cSusceptible_Mosquito+0.33*cExposed_Mosquito^2+4.3*cExposed_Mosquito*cInfected_Human+0.66*cExposed_Mosquito*cInfected_Mosquito+4.3*cExposed_Mosquito*cRecovered+0.66*cExposed_Mosquito*cSusceptible_Mosquito+4.3*cExposed_Mosquito*(cSusceptible_Human+1e-30)+4.3*cInfected_Human*cInfected_Mosquito+4.3*cInfected_Human*cSusceptible_Mosquito+0.33*cInfected_Mosquito^2+4.3*cInfected_Mosquito*cRecovered+0.66*cInfected_Mosquito*cSusceptible_Mosquito+4.3*cInfected_Mosquito*(cSusceptible_Human+1e-30)+4.3*cRecovered*cSusceptible_Mosquito+0.33*cSusceptible_Mosquito^2+4.3*cSusceptible_Mosquito*(cSusceptible_Human+1e-30)))]==>Exposed_Human+Exposed_Mosquito+Infected_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Infection term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible_Human+Infected_Mosquito+Susceptible_Mosquito+S[USER;cExposed_Human,cExposed_Mosquito,cInfected_Human,cInfected_Mosquito,cRecovered,cSusceptible_Human,cSusceptible_Mosquito:(0.031218/(4.3*cExposed_Human*cExposed_Mosquito+4.3*cExposed_Human*cInfected_Mosquito+4.3*cExposed_Human*cSusceptible_Mosquito+0.33*cExposed_Mosquito^2+4.3*cExposed_Mosquito*cInfected_Human+0.66*cExposed_Mosquito*cInfected_Mosquito+4.3*cExposed_Mosquito*cRecovered+0.66*cExposed_Mosquito*cSusceptible_Mosquito+4.3*cExposed_Mosquito*(cSusceptible_Human+1e-30)+4.3*cInfected_Human*cInfected_Mosquito+4.3*cInfected_Human*cSusceptible_Mosquito+0.33*cInfected_Mosquito^2+4.3*cInfected_Mosquito*cRecovered+0.66*cInfected_Mosquito*cSusceptible_Mosquito+4.3*cInfected_Mosquito*(cSusceptible_Human+1e-30)+4.3*cRecovered*cSusceptible_Mosquito+0.33*cSusceptible_Mosquito^2+4.3*cSusceptible_Mosquito*(cSusceptible_Human+1e-30)))]==>Exposed_Human+Infected_Mosquito+Susceptible_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Susceptible_natural_death term 1/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Susceptible_Human+Susceptible_Human==>Susceptible_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Susceptible_natural_death term 2/5",
+     ""
+    ],
+    [
+     "8.8e-6",
+     "0",
+     "0",
+     "Susceptible_Human==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Susceptible_natural_death term 3/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Susceptible_Human+Exposed_Human==>Exposed_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Susceptible_natural_death term 4/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Susceptible_Human+Infected_Human==>Infected_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Susceptible_natural_death term 5/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Susceptible_Human+Recovered==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_disease_progression",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Exposed_Human==>Infected_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Exposed_natural_death term 1/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Exposed_Human+Exposed_Human==>Exposed_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Exposed_natural_death term 2/5",
+     ""
+    ],
+    [
+     "8.8e-6",
+     "0",
+     "0",
+     "Exposed_Human==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Exposed_natural_death term 3/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Exposed_Human+Infected_Human==>Infected_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Exposed_natural_death term 4/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Exposed_Human+Recovered==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Exposed_natural_death term 5/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Exposed_Human+Susceptible_Human==>Susceptible_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Recovery",
+     ""
+    ],
+    [
+     "0.0035",
+     "0",
+     "0",
+     "Infected_Human==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_disease_induced_death",
+     ""
+    ],
+    [
+     "1.8e-5",
+     "0",
+     "0",
+     "Infected_Human==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Infectious_natural_death term 1/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Infected_Human+Infected_Human==>Infected_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Infectious_natural_death term 2/5",
+     ""
+    ],
+    [
+     "8.8e-6",
+     "0",
+     "0",
+     "Infected_Human==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Infectious_natural_death term 3/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Infected_Human+Exposed_Human==>Exposed_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Infectious_natural_death term 4/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Infected_Human+Recovered==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Infectious_natural_death term 5/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Infected_Human+Susceptible_Human==>Susceptible_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Recovered_natural_death term 1/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Recovered+Recovered==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Recovered_natural_death term 2/5",
+     ""
+    ],
+    [
+     "8.8e-6",
+     "0",
+     "0",
+     "Recovered==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Recovered_natural_death term 3/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Recovered+Exposed_Human==>Exposed_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Recovered_natural_death term 4/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Recovered+Infected_Human==>Infected_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Human_Recovered_natural_death term 5/5",
+     ""
+    ],
+    [
+     "2e-7",
+     "0",
+     "0",
+     "Recovered+Susceptible_Human==>Susceptible_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_birth term 1/3",
+     ""
+    ],
+    [
+     "0.13",
+     "0",
+     "0",
+     "Exposed_Mosquito==>Susceptible_Mosquito+Exposed_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_birth term 2/3",
+     ""
+    ],
+    [
+     "0.13",
+     "0",
+     "0",
+     "Infected_Mosquito==>Susceptible_Mosquito+Infected_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_birth term 3/3",
+     ""
+    ],
+    [
+     "0.13",
+     "0",
+     "0",
+     "Susceptible_Mosquito==>2Susceptible_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_infection term 1/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible_Mosquito+Infected_Human+Infected_Human+S[USER;cExposed_Human,cExposed_Mosquito,cInfected_Human,cInfected_Mosquito,cRecovered,cSusceptible_Human,cSusceptible_Mosquito:(0.34056/(4.3*cExposed_Human^2+0.33*cExposed_Human*cExposed_Mosquito+8.6*cExposed_Human*cInfected_Human+0.33*cExposed_Human*cInfected_Mosquito+8.6*cExposed_Human*cRecovered+8.6*cExposed_Human*cSusceptible_Human+0.33*cExposed_Human*(cSusceptible_Mosquito+1e-30)+0.33*cExposed_Mosquito*cInfected_Human+0.33*cExposed_Mosquito*cRecovered+0.33*cExposed_Mosquito*cSusceptible_Human+4.3*cInfected_Human^2+0.33*cInfected_Human*cInfected_Mosquito+8.6*cInfected_Human*cRecovered+8.6*cInfected_Human*cSusceptible_Human+0.33*cInfected_Human*(cSusceptible_Mosquito+1e-30)+0.33*cInfected_Mosquito*cRecovered+0.33*cInfected_Mosquito*cSusceptible_Human+4.3*cRecovered^2+8.6*cRecovered*cSusceptible_Human+0.33*cRecovered*(cSusceptible_Mosquito+1e-30)+4.3*cSusceptible_Human^2+0.33*cSusceptible_Human*(cSusceptible_Mosquito+1e-30)))]==>Exposed_Mosquito+2Infected_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_infection term 2/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible_Mosquito+Recovered+Recovered+S[USER;cExposed_Human,cExposed_Mosquito,cInfected_Human,cInfected_Mosquito,cRecovered,cSusceptible_Human,cSusceptible_Mosquito:(0.034056/(4.3*cExposed_Human^2+0.33*cExposed_Human*cExposed_Mosquito+8.6*cExposed_Human*cInfected_Human+0.33*cExposed_Human*cInfected_Mosquito+8.6*cExposed_Human*cRecovered+8.6*cExposed_Human*cSusceptible_Human+0.33*cExposed_Human*(cSusceptible_Mosquito+1e-30)+0.33*cExposed_Mosquito*cInfected_Human+0.33*cExposed_Mosquito*cRecovered+0.33*cExposed_Mosquito*cSusceptible_Human+4.3*cInfected_Human^2+0.33*cInfected_Human*cInfected_Mosquito+8.6*cInfected_Human*cRecovered+8.6*cInfected_Human*cSusceptible_Human+0.33*cInfected_Human*(cSusceptible_Mosquito+1e-30)+0.33*cInfected_Mosquito*cRecovered+0.33*cInfected_Mosquito*cSusceptible_Human+4.3*cRecovered^2+8.6*cRecovered*cSusceptible_Human+0.33*cRecovered*(cSusceptible_Mosquito+1e-30)+4.3*cSusceptible_Human^2+0.33*cSusceptible_Human*(cSusceptible_Mosquito+1e-30)))]==>Exposed_Mosquito+2Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_infection term 3/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible_Mosquito+Exposed_Human+Infected_Human+S[USER;cExposed_Human,cExposed_Mosquito,cInfected_Human,cInfected_Mosquito,cRecovered,cSusceptible_Human,cSusceptible_Mosquito:(0.34056/(4.3*cExposed_Human^2+0.33*cExposed_Human*cExposed_Mosquito+8.6*cExposed_Human*cInfected_Human+0.33*cExposed_Human*cInfected_Mosquito+8.6*cExposed_Human*cRecovered+8.6*cExposed_Human*cSusceptible_Human+0.33*cExposed_Human*(cSusceptible_Mosquito+1e-30)+0.33*cExposed_Mosquito*cInfected_Human+0.33*cExposed_Mosquito*cRecovered+0.33*cExposed_Mosquito*cSusceptible_Human+4.3*cInfected_Human^2+0.33*cInfected_Human*cInfected_Mosquito+8.6*cInfected_Human*cRecovered+8.6*cInfected_Human*cSusceptible_Human+0.33*cInfected_Human*(cSusceptible_Mosquito+1e-30)+0.33*cInfected_Mosquito*cRecovered+0.33*cInfected_Mosquito*cSusceptible_Human+4.3*cRecovered^2+8.6*cRecovered*cSusceptible_Human+0.33*cRecovered*(cSusceptible_Mosquito+1e-30)+4.3*cSusceptible_Human^2+0.33*cSusceptible_Human*(cSusceptible_Mosquito+1e-30)))]==>Exposed_Mosquito+Exposed_Human+Infected_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_infection term 4/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible_Mosquito+Infected_Human+Susceptible_Human+S[USER;cExposed_Human,cExposed_Mosquito,cInfected_Human,cInfected_Mosquito,cRecovered,cSusceptible_Human,cSusceptible_Mosquito:(0.34056/(4.3*cExposed_Human^2+0.33*cExposed_Human*cExposed_Mosquito+8.6*cExposed_Human*cInfected_Human+0.33*cExposed_Human*cInfected_Mosquito+8.6*cExposed_Human*cRecovered+8.6*cExposed_Human*cSusceptible_Human+0.33*cExposed_Human*(cSusceptible_Mosquito+1e-30)+0.33*cExposed_Mosquito*cInfected_Human+0.33*cExposed_Mosquito*cRecovered+0.33*cExposed_Mosquito*cSusceptible_Human+4.3*cInfected_Human^2+0.33*cInfected_Human*cInfected_Mosquito+8.6*cInfected_Human*cRecovered+8.6*cInfected_Human*cSusceptible_Human+0.33*cInfected_Human*(cSusceptible_Mosquito+1e-30)+0.33*cInfected_Mosquito*cRecovered+0.33*cInfected_Mosquito*cSusceptible_Human+4.3*cRecovered^2+8.6*cRecovered*cSusceptible_Human+0.33*cRecovered*(cSusceptible_Mosquito+1e-30)+4.3*cSusceptible_Human^2+0.33*cSusceptible_Human*(cSusceptible_Mosquito+1e-30)))]==>Exposed_Mosquito+Infected_Human+Susceptible_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_infection term 5/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible_Mosquito+Exposed_Human+Recovered+S[USER;cExposed_Human,cExposed_Mosquito,cInfected_Human,cInfected_Mosquito,cRecovered,cSusceptible_Human,cSusceptible_Mosquito:(0.034056/(4.3*cExposed_Human^2+0.33*cExposed_Human*cExposed_Mosquito+8.6*cExposed_Human*cInfected_Human+0.33*cExposed_Human*cInfected_Mosquito+8.6*cExposed_Human*cRecovered+8.6*cExposed_Human*cSusceptible_Human+0.33*cExposed_Human*(cSusceptible_Mosquito+1e-30)+0.33*cExposed_Mosquito*cInfected_Human+0.33*cExposed_Mosquito*cRecovered+0.33*cExposed_Mosquito*cSusceptible_Human+4.3*cInfected_Human^2+0.33*cInfected_Human*cInfected_Mosquito+8.6*cInfected_Human*cRecovered+8.6*cInfected_Human*cSusceptible_Human+0.33*cInfected_Human*(cSusceptible_Mosquito+1e-30)+0.33*cInfected_Mosquito*cRecovered+0.33*cInfected_Mosquito*cSusceptible_Human+4.3*cRecovered^2+8.6*cRecovered*cSusceptible_Human+0.33*cRecovered*(cSusceptible_Mosquito+1e-30)+4.3*cSusceptible_Human^2+0.33*cSusceptible_Human*(cSusceptible_Mosquito+1e-30)))]==>Exposed_Mosquito+Exposed_Human+Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_infection term 6/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible_Mosquito+Recovered+Susceptible_Human+S[USER;cExposed_Human,cExposed_Mosquito,cInfected_Human,cInfected_Mosquito,cRecovered,cSusceptible_Human,cSusceptible_Mosquito:(0.034056/(4.3*cExposed_Human^2+0.33*cExposed_Human*cExposed_Mosquito+8.6*cExposed_Human*cInfected_Human+0.33*cExposed_Human*cInfected_Mosquito+8.6*cExposed_Human*cRecovered+8.6*cExposed_Human*cSusceptible_Human+0.33*cExposed_Human*(cSusceptible_Mosquito+1e-30)+0.33*cExposed_Mosquito*cInfected_Human+0.33*cExposed_Mosquito*cRecovered+0.33*cExposed_Mosquito*cSusceptible_Human+4.3*cInfected_Human^2+0.33*cInfected_Human*cInfected_Mosquito+8.6*cInfected_Human*cRecovered+8.6*cInfected_Human*cSusceptible_Human+0.33*cInfected_Human*(cSusceptible_Mosquito+1e-30)+0.33*cInfected_Mosquito*cRecovered+0.33*cInfected_Mosquito*cSusceptible_Human+4.3*cRecovered^2+8.6*cRecovered*cSusceptible_Human+0.33*cRecovered*(cSusceptible_Mosquito+1e-30)+4.3*cSusceptible_Human^2+0.33*cSusceptible_Human*(cSusceptible_Mosquito+1e-30)))]==>Exposed_Mosquito+Recovered+Susceptible_Human",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_infection term 7/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible_Mosquito+Infected_Human+Recovered+S[USER;cExposed_Human,cExposed_Mosquito,cInfected_Human,cInfected_Mosquito,cRecovered,cSusceptible_Human,cSusceptible_Mosquito:(0.374616/(4.3*cExposed_Human^2+0.33*cExposed_Human*cExposed_Mosquito+8.6*cExposed_Human*cInfected_Human+0.33*cExposed_Human*cInfected_Mosquito+8.6*cExposed_Human*cRecovered+8.6*cExposed_Human*cSusceptible_Human+0.33*cExposed_Human*(cSusceptible_Mosquito+1e-30)+0.33*cExposed_Mosquito*cInfected_Human+0.33*cExposed_Mosquito*cRecovered+0.33*cExposed_Mosquito*cSusceptible_Human+4.3*cInfected_Human^2+0.33*cInfected_Human*cInfected_Mosquito+8.6*cInfected_Human*cRecovered+8.6*cInfected_Human*cSusceptible_Human+0.33*cInfected_Human*(cSusceptible_Mosquito+1e-30)+0.33*cInfected_Mosquito*cRecovered+0.33*cInfected_Mosquito*cSusceptible_Human+4.3*cRecovered^2+8.6*cRecovered*cSusceptible_Human+0.33*cRecovered*(cSusceptible_Mosquito+1e-30)+4.3*cSusceptible_Human^2+0.33*cSusceptible_Human*(cSusceptible_Mosquito+1e-30)))]==>Exposed_Mosquito+Infected_Human+Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_Susceptible_death term 1/4",
+     ""
+    ],
+    [
+     "0.033",
+     "0",
+     "0",
+     "Susceptible_Mosquito==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_Susceptible_death term 2/4",
+     ""
+    ],
+    [
+     "4e-5",
+     "0",
+     "0",
+     "Susceptible_Mosquito+Susceptible_Mosquito==>Susceptible_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_Susceptible_death term 3/4",
+     ""
+    ],
+    [
+     "4e-5",
+     "0",
+     "0",
+     "Susceptible_Mosquito+Exposed_Mosquito==>Exposed_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_Susceptible_death term 4/4",
+     ""
+    ],
+    [
+     "4e-5",
+     "0",
+     "0",
+     "Susceptible_Mosquito+Infected_Mosquito==>Infected_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_disease_progression",
+     ""
+    ],
+    [
+     "0.083",
+     "0",
+     "0",
+     "Exposed_Mosquito==>Infected_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_Exposed_death term 1/4",
+     ""
+    ],
+    [
+     "0.033",
+     "0",
+     "0",
+     "Exposed_Mosquito==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_Exposed_death term 2/4",
+     ""
+    ],
+    [
+     "4e-5",
+     "0",
+     "0",
+     "Exposed_Mosquito+Exposed_Mosquito==>Exposed_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_Exposed_death term 3/4",
+     ""
+    ],
+    [
+     "4e-5",
+     "0",
+     "0",
+     "Exposed_Mosquito+Infected_Mosquito==>Infected_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_Exposed_death term 4/4",
+     ""
+    ],
+    [
+     "4e-5",
+     "0",
+     "0",
+     "Exposed_Mosquito+Susceptible_Mosquito==>Susceptible_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_Infected_death term 1/4",
+     ""
+    ],
+    [
+     "0.033",
+     "0",
+     "0",
+     "Infected_Mosquito==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_Infected_death term 2/4",
+     ""
+    ],
+    [
+     "4e-5",
+     "0",
+     "0",
+     "Infected_Mosquito+Infected_Mosquito==>Infected_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_Infected_death term 3/4",
+     ""
+    ],
+    [
+     "4e-5",
+     "0",
+     "0",
+     "Infected_Mosquito+Exposed_Mosquito==>Exposed_Mosquito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosquito_Infected_death term 4/4",
+     ""
+    ],
+    [
+     "4e-5",
+     "0",
+     "0",
+     "Infected_Mosquito+Susceptible_Mosquito==>Susceptible_Mosquito",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Susceptible_Human",
+     "0",
+     "600",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible [Susceptible_Human]",
+     ""
+    ],
+    [
+     "Exposed_Human",
+     "0",
+     "20",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Exposed [Exposed_Human]",
+     ""
+    ],
+    [
+     "Infected_Human",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected [Infected_Human]",
+     ""
+    ],
+    [
+     "Recovered",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Recovered [Recovered]",
+     ""
+    ],
+    [
+     "Susceptible_Mosquito",
+     "0",
+     "2400",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible [Susceptible_Mosquito]",
+     ""
+    ],
+    [
+     "Exposed_Mosquito",
+     "0",
+     "30",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Exposed [Exposed_Mosquito]",
+     ""
+    ],
+    [
+     "Infected_Mosquito",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected [Infected_Mosquito]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

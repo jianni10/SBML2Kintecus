@@ -1,0 +1,1049 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:57:32.471839+00:00",
+ "description": "Montagne2011_Oligator_optimised\nBioModels BIOMD0000000315 (curated). SBML file: BIOMD0000000315_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000315_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 7.60e-06 of species peak (worst: alpha_alpha_T1)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Montagne2011_Oligator_optimised  (BIOMD0000000315, curated BioModels; source file BIOMD0000000315_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ass_aa_l term 1/2",
+     ""
+    ],
+    [
+     "3.43457943925",
+     "0",
+     "0",
+     "alpha_T1==>T1+alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ass_aa_l term 2/2",
+     ""
+    ],
+    [
+     "0.0294",
+     "0",
+     "0",
+     "T1+alpha==>alpha_T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_ass_aa_lr term 1/2",
+     ""
+    ],
+    [
+     "3.43457943925",
+     "0",
+     "0",
+     "alpha_T1_alpha==>alpha+alpha_T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_ass_aa_lr term 2/2",
+     ""
+    ],
+    [
+     "0.0294",
+     "0",
+     "0",
+     "alpha+alpha_T1==>alpha_T1_alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_ass_aa_r term 1/2",
+     ""
+    ],
+    [
+     "3.43457943925",
+     "0",
+     "0",
+     "T1_alpha==>T1+alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_ass_aa_r term 2/2",
+     ""
+    ],
+    [
+     "0.0294",
+     "0",
+     "0",
+     "T1+alpha==>T1_alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_ass_aa_rl term 1/2",
+     ""
+    ],
+    [
+     "3.43457943925",
+     "0",
+     "0",
+     "alpha_T1_alpha==>T1_alpha+alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_ass_aa_rl term 2/2",
+     ""
+    ],
+    [
+     "0.0294",
+     "0",
+     "0",
+     "T1_alpha+alpha==>alpha_T1_alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pol_aa",
+     ""
+    ],
+    [
+     "15.2",
+     "0",
+     "0",
+     "alpha_T1==>alpha_alpha_T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "dis_aa",
+     ""
+    ],
+    [
+     "11.8408",
+     "0",
+     "0",
+     "alpha_T1_alpha==>alpha_alpha_T1+alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "nick_aa",
+     ""
+    ],
+    [
+     "3.34",
+     "0",
+     "0",
+     "alpha_alpha_T1==>alpha_T1_alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ass_ab_l term 1/2",
+     ""
+    ],
+    [
+     "3.43457943925",
+     "0",
+     "0",
+     "alpha_T2==>alpha+T2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ass_ab_l term 2/2",
+     ""
+    ],
+    [
+     "0.0294",
+     "0",
+     "0",
+     "alpha+T2==>alpha_T2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_ass_ab_lr term 1/2",
+     ""
+    ],
+    [
+     "0.610714285714",
+     "0",
+     "0",
+     "alpha_T2_beta==>beta+alpha_T2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_ass_ab_lr term 2/2",
+     ""
+    ],
+    [
+     "0.0171",
+     "0",
+     "0",
+     "beta+alpha_T2==>alpha_T2_beta",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_ass_ab_r term 1/2",
+     ""
+    ],
+    [
+     "0.610714285714",
+     "0",
+     "0",
+     "T2_beta==>beta+T2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_ass_ab_r term 2/2",
+     ""
+    ],
+    [
+     "0.0171",
+     "0",
+     "0",
+     "beta+T2==>T2_beta",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_ass_ab_rl term 1/2",
+     ""
+    ],
+    [
+     "3.43457943925",
+     "0",
+     "0",
+     "alpha_T2_beta==>T2_beta+alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_ass_ab_rl term 2/2",
+     ""
+    ],
+    [
+     "0.0294",
+     "0",
+     "0",
+     "T2_beta+alpha==>alpha_T2_beta",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pol_ab",
+     ""
+    ],
+    [
+     "11.8408",
+     "0",
+     "0",
+     "alpha_T2==>alpha_beta_T2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "dis_ab",
+     ""
+    ],
+    [
+     "9.2239832",
+     "0",
+     "0",
+     "alpha_T2_beta==>beta+alpha_beta_T2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "nick_ab",
+     ""
+    ],
+    [
+     "2.60186",
+     "0",
+     "0",
+     "alpha_beta_T2==>alpha_T2_beta",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ass_bc_l term 1/2",
+     ""
+    ],
+    [
+     "0.610714285714",
+     "0",
+     "0",
+     "beta_T3==>beta+T3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ass_bc_l term 2/2",
+     ""
+    ],
+    [
+     "0.0171",
+     "0",
+     "0",
+     "beta+T3==>beta_T3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_ass_bc_lr term 1/2",
+     ""
+    ],
+    [
+     "0.00186296832954",
+     "0",
+     "0",
+     "beta_T3_Inh==>beta_T3+Inh",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_ass_bc_lr term 2/2",
+     ""
+    ],
+    [
+     "0.027",
+     "0",
+     "0",
+     "beta_T3+Inh==>beta_T3_Inh",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ass_bc_r term 1/2",
+     ""
+    ],
+    [
+     "0.00186296832954",
+     "0",
+     "0",
+     "T3_Inh==>T3+Inh",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ass_bc_r term 2/2",
+     ""
+    ],
+    [
+     "0.027",
+     "0",
+     "0",
+     "T3+Inh==>T3_Inh",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ass_bc_rl term 1/2",
+     ""
+    ],
+    [
+     "0.610714285714",
+     "0",
+     "0",
+     "beta_T3_Inh==>beta+T3_Inh",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ass_bc_rl term 2/2",
+     ""
+    ],
+    [
+     "0.0171",
+     "0",
+     "0",
+     "beta+T3_Inh==>beta_T3_Inh",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pol_bc",
+     ""
+    ],
+    [
+     "17.024",
+     "0",
+     "0",
+     "beta_T3==>beta_Inh_T3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "dis_bc",
+     ""
+    ],
+    [
+     "5.566848",
+     "0",
+     "0",
+     "beta_T3_Inh==>Inh+beta_Inh_T3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "nick_bc",
+     ""
+    ],
+    [
+     "3.2064",
+     "0",
+     "0",
+     "beta_Inh_T3==>beta_T3_Inh",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inh_ac term 1/2",
+     ""
+    ],
+    [
+     "0.00608108108108",
+     "0",
+     "0",
+     "Inh_T1==>T1+Inh",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inh_ac term 2/2",
+     ""
+    ],
+    [
+     "0.027",
+     "0",
+     "0",
+     "T1+Inh==>Inh_T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inh_displ_ac term 1/2",
+     ""
+    ],
+    [
+     "0.021546",
+     "0",
+     "0",
+     "T1_alpha+Inh==>Inh_T1+alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inh_displ_ac term 2/2",
+     ""
+    ],
+    [
+     "4.15391351351e-5",
+     "0",
+     "0",
+     "Inh_T1+alpha==>T1_alpha+Inh",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_inh_displ_ca term 1/2",
+     ""
+    ],
+    [
+     "4.15391351351e-5",
+     "0",
+     "0",
+     "Inh_T1+alpha==>Inh+alpha_T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "m_inh_displ_ca term 2/2",
+     ""
+    ],
+    [
+     "0.021546",
+     "0",
+     "0",
+     "Inh+alpha_T1==>Inh_T1+alpha",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "exo_a",
+     ""
+    ],
+    [
+     "0.411",
+     "0",
+     "0",
+     "alpha==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "exo_b",
+     ""
+    ],
+    [
+     "0.485802",
+     "0",
+     "0",
+     "beta==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "exo_c",
+     ""
+    ],
+    [
+     "1.7262",
+     "0",
+     "0",
+     "Inh==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "38.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T1 [T1]",
+     ""
+    ],
+    [
+     "alpha",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "alpha [alpha]",
+     ""
+    ],
+    [
+     "alpha_T1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "alpha_T1 [alpha_T1]",
+     ""
+    ],
+    [
+     "alpha_T1_alpha",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "alpha_T1_alpha [alpha_T1_alpha]",
+     ""
+    ],
+    [
+     "T1_alpha",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T1_alpha [T1_alpha]",
+     ""
+    ],
+    [
+     "alpha_alpha_T1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "alpha_alpha_T1 [alpha_alpha_T1]",
+     ""
+    ],
+    [
+     "T2",
+     "0",
+     "3.89",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T2 [T2]",
+     ""
+    ],
+    [
+     "alpha_T2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "alpha_T2 [alpha_T2]",
+     ""
+    ],
+    [
+     "alpha_T2_beta",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "alpha_T2_beta [alpha_T2_beta]",
+     ""
+    ],
+    [
+     "beta",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "beta [beta]",
+     ""
+    ],
+    [
+     "T2_beta",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T2_beta [T2_beta]",
+     ""
+    ],
+    [
+     "alpha_beta_T2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "alpha_beta_T2 [alpha_beta_T2]",
+     ""
+    ],
+    [
+     "T3",
+     "0",
+     "38.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T3 [T3]",
+     ""
+    ],
+    [
+     "beta_T3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "beta_T3 [beta_T3]",
+     ""
+    ],
+    [
+     "beta_T3_Inh",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "beta_T3_Inh [beta_T3_Inh]",
+     ""
+    ],
+    [
+     "Inh",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Inh [Inh]",
+     ""
+    ],
+    [
+     "T3_Inh",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T3_Inh [T3_Inh]",
+     ""
+    ],
+    [
+     "beta_Inh_T3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "beta_Inh_T3 [beta_Inh_T3]",
+     ""
+    ],
+    [
+     "Inh_T1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Inh_T1 [Inh_T1]",
+     ""
+    ],
+    [
+     "empty",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "empty [empty]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

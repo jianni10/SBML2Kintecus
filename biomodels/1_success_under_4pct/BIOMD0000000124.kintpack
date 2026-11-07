@@ -1,0 +1,766 @@
+{
+ "version": 3,
+ "created": "2026-11-05T15:39:34.929386+00:00",
+ "description": "Wu2006_K+Channel\nBioModels BIOMD0000000124 (curated). SBML file: BIOMD0000000124_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000124_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating; extended past the last time event (30000)), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 9.52e-06 of species peak (worst: n)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V' goes below zero in the SBML: integrated as p_V_o = value + 200, output as p_V = OUTC[p_V_o;-200*source]\n  [info] reaction_0000005 term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - c: zero order, signed\n  [info] time event(s) on 'gkatp' encoded as time/value pairs in EV_P_GKATP.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_gkatp = gkatp; p_n = n; p_a = a; p_nIR = nIR; p_rIR = rIR; p_V = V",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wu2006_K+Channel  (BIOMD0000000124, curated BioModels; source file BIOMD0000000124_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000005 term 1/4",
+     ""
+    ],
+    [
+     "5e-6",
+     "0",
+     "0",
+     "cer==>c+cer",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000005 term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(0.0022500000000000003/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200)))))]==>c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000005 term 3/4",
+     ""
+    ],
+    [
+     "0.006005000000000001",
+     "0",
+     "0",
+     "c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000005 term 4/4 (consumes c)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:((-1*4.5e-5*(cp_V_o-200)/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200))))))]==>c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000006 term 1/2",
+     ""
+    ],
+    [
+     "0.020025",
+     "0",
+     "0",
+     "c==>cer+c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000006 term 2/2",
+     ""
+    ],
+    [
+     "2.5e-5",
+     "0",
+     "0",
+     "cer==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dnIR/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(0.09/(0.022379010406688955*exp(0.07*(cp_V_o-200))+59874.141715197824*exp(0.11*(cp_V_o-200))+2679.848081071963*exp(0.18*(cp_V_o-200))+80226801.89065182*exp(0.29000000000000004*(cp_V_o-200))+1))]==>p_nIR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dnIR/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(0.002014110936602006*exp(0.07*(cp_V_o-200))/(0.022379010406688955*exp(0.07*(cp_V_o-200))+1339.9240405359815*exp(0.18*(cp_V_o-200))+1))]==>p_nIR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dnIR/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_nIR+S[USER;cp_V_o:(0.09/(59874.141715197824*exp(0.11*(cp_V_o-200))+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dnIR/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_nIR+S[USER;cp_V_o:(0.002014110936602006*exp(0.07*(cp_V_o-200)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule drIR/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(30/(9897.129058743918*exp(0.04*(cp_V_o-200))+1+98.97129058743917*exp(0.04*(cp_V_o-200))/(1+0.0024787521766663576*exp((-1*0.05*(cp_V_o-200))))+489765.8180271663*exp(0.08*(cp_V_o-200))/(1+0.0024787521766663576*exp((-1*0.05*(cp_V_o-200))))+0.005/(1+0.0024787521766663576*exp((-1*0.05*(cp_V_o-200))))))]==>p_rIR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule drIR/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(0.15/(1+0.0024787521766663576*exp((-1*0.05*(cp_V_o-200)))+1.2393760883331787e-5/(exp(0.05*(cp_V_o-200))+0.0024787521766663576)+0.12266265098554673/(exp(0.010000000000000002*(cp_V_o-200))+0.0024787521766663576*exp((-1*0.04*(cp_V_o-200))))+49.485645293719585*exp(0.04*(cp_V_o-200))/(1+0.0024787521766663576*exp((-1*0.05*(cp_V_o-200))))+0.005/(1+0.0024787521766663576*exp((-1*0.05*(cp_V_o-200))))))]==>p_rIR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule drIR/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_rIR+S[USER;cp_V_o:(30/(9897.129058743918*exp(0.04*(cp_V_o-200))+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule drIR/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_rIR+S[USER;cp_V_o:(0.15/(1+0.0024787521766663576*exp((-1*0.05*(cp_V_o-200)))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(0.0625/(1+0.04076220397836622*exp((-1*0.2*(cp_V_o-200)))))]==>p_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 2",
+     ""
+    ],
+    [
+     "0.0625",
+     "0",
+     "0",
+     "p_n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule da/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cc:(3.3333333333333333e-6/(1+4.0551999668446745*exp((-1*10*cc))))]==>p_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule da/dt term 2",
+     ""
+    ],
+    [
+     "3.3333333333333333e-6",
+     "0",
+     "0",
+     "p_a==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 1 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(9.433962264150944/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200)))))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 2 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_n:((-1*19.81132075471698*cp_n))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 3 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_a,cp_gkatp:((-1*0.014150943396226415*cp_a*cp_gkatp))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 4 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cc:((-1*12.735849056603774*cc^5/(cc^5+0.0024299999999999994)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 5 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o,cp_n:((-1*0.2641509433962264*cp_n*(cp_V_o-200)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 6 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_nIR,cp_rIR:((-1*0.07075471698113207*cp_nIR*cp_rIR))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 7 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:((-1*0.18867924528301888*(cp_V_o-200)/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200))))))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 8 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o,cp_a,cp_gkatp:((-1*0.00018867924528301886*cp_a*cp_gkatp*(cp_V_o-200)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 9 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cc,cp_V_o:((-1*0.16981132075471697*cc^5*(cp_V_o-200)/(cc^5+0.0024299999999999994)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 10 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o,cp_nIR,cp_rIR:((-1*0.0009433962264150943*cp_nIR*cp_rIR*(cp_V_o-200)))]==>p_V_o",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "c",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cytosolic free ca concentration [c]",
+     ""
+    ],
+    [
+     "cer",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ER ca concentration [cer]",
+     ""
+    ],
+    [
+     "p_gkatp",
+     "0",
+     "500",
+     "N",
+     "0",
+     "No",
+     "EV_P_GKATP.TXT-SET",
+     "parameter gkatp [gkatp]",
+     ""
+    ],
+    [
+     "p_V_o",
+     "0",
+     "140",
+     "N",
+     "0",
+     "No",
+     "No",
+     "parameter V + 200 (shifted state) [__shifted__V]",
+     ""
+    ],
+    [
+     "p_n",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter n [n]",
+     ""
+    ],
+    [
+     "p_a",
+     "0",
+     "0.46",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter a [a]",
+     ""
+    ],
+    [
+     "p_nIR",
+     "0",
+     "0.008",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter nIR [nIR]",
+     ""
+    ],
+    [
+     "p_rIR",
+     "0",
+     "0.282",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter rIR [rIR]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "p_V",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[p_V_o;-200*source]",
+     "No",
+     "parameter V (= p_V_o - 200) [V]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100.0000002",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100.0000002",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_GKATP.TXT",
+   "key": "O_EV_P_GKATP.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "30000",
+     "530"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

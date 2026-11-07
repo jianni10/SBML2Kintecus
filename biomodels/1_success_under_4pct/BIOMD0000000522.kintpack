@@ -1,0 +1,764 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:02:43.592074+00:00",
+ "description": "Muraro2014 - Vascular patterning in Arabidopsis roots\nBioModels BIOMD0000000522 (curated). SBML file: BIOMD0000000522_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000522_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.50e-06 of species peak (worst: Cytokinin)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Muraro2014 - Vascular patterning in Arabidopsis roots  (BIOMD0000000522, curated BioModels; source file BIOMD0000000522_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAuxin/dt term 1",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "source==>Auxin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAuxin/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Auxin==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCytokinin/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCKX3p:(2/(3199999.999999999*cCKX3p^5+1))]==>Cytokinin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCytokinin/dt term 2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "Cytokinin==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPHBm/dt term 1",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "source==>PHBm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPHBm/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PHBm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPHBm/dt term 3",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "PHBm+miRNA==>miRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAHP6m/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AHP6m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAHP6m/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAuxin,cPHBp:(32*cAuxin^2/(16*cAuxin^2+15.624999999999998*cPHBp^3+1))]==>AHP6m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIAA2m/dt term 1",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "IAA2m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIAA2m/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAuxin:(160*cAuxin^2/(16*cAuxin^2+1))]==>IAA2m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dARR5m/dt term 1",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "ARR5m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dARR5m/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAHP6p,cCytokinin:(80*cCytokinin^2/(15624.999999999998*cAHP6p^3+4*cCytokinin^2+1))]==>ARR5m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPIN7m/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PIN7m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPIN7m/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cARR5p:(999.9999999999999*cARR5p^3/(999.9999999999999*cARR5p^3+1))]==>PIN7m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAHP6p/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AHP6m==>AHP6p+AHP6m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAHP6p/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AHP6p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIAA2p/dt term 1",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "IAA2m==>IAA2p+IAA2m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIAA2p/dt term 2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "IAA2p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dARR5p/dt term 1",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "ARR5m==>ARR5p+ARR5m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dARR5p/dt term 2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "ARR5p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPHBp/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PHBm==>PHBp+PHBm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPHBp/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PHBp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCKX3p/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CKX3p==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Auxin",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Auxin [Auxin]",
+     ""
+    ],
+    [
+     "Cytokinin",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cytokinin [Cytokinin]",
+     ""
+    ],
+    [
+     "AHP6m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AHP6m [AHP6m]",
+     ""
+    ],
+    [
+     "AHP6p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AHP6p [AHP6p]",
+     ""
+    ],
+    [
+     "IAA2m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IAA2m [IAA2m]",
+     ""
+    ],
+    [
+     "IAA2p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IAA2p [IAA2p]",
+     ""
+    ],
+    [
+     "ARR5m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ARR5m [ARR5m]",
+     ""
+    ],
+    [
+     "ARR5p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ARR5p [ARR5p]",
+     ""
+    ],
+    [
+     "PHBm",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PHBm [PHBm]",
+     ""
+    ],
+    [
+     "PHBp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PHBp [PHBp]",
+     ""
+    ],
+    [
+     "CKX3m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "CKX3m [CKX3m]",
+     ""
+    ],
+    [
+     "CKX3p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CKX3p [CKX3p]",
+     ""
+    ],
+    [
+     "PIN3m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PIN3m [PIN3m]",
+     ""
+    ],
+    [
+     "PIN1m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PIN1m [PIN1m]",
+     ""
+    ],
+    [
+     "PIN7m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PIN7m [PIN7m]",
+     ""
+    ],
+    [
+     "miRNA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "miRNA [miRNA]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.03",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.03",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

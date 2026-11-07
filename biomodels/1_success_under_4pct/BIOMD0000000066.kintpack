@@ -1,0 +1,653 @@
+{
+ "version": 3,
+ "created": "2026-11-02T03:15:11.918218+00:00",
+ "description": "Chassagnole2001_Threonine Synthesis\nBioModels BIOMD0000000066 (curated). SBML file: BIOMD0000000066_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000066_url.sedml (auto-generated placeholder); duration chosen from the dynamics: default), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.39e-06 of species peak (worst: phos)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'atp' goes below zero in the SBML: integrated as atp_o = value + 0.1, output as atp = OUTC[atp_o;-0.1*source]\n  [info] vak term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vak term 2/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vak term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vak term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vasd term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vasd term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vhdh term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vhdh term 2/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vhdh term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vhdh term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vtsy: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vhk: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chassagnole2001_Threonine Synthesis  (BIOMD0000000066, curated BioModels; source file BIOMD0000000066_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vak term 1/4 (shifted atp_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cadp,casp,caspp,catp_o:((-1*0.0722*casp*(catp_o-0.1)/(2.267106095342452*cadp*casp+42.67493826526969*cadp*caspp+0.7254739505095847*cadp+2.576256926525514*casp*(catp_o-0.1)+0.566776523835613*casp+48.49424802871556*caspp*(catp_o-0.1)+10.668734566317422*caspp+0.8244022164881646*(catp_o-0.1)+0.18136848762739619)))]==>atp_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vak term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "asp+S[USER;cadp,casp,caspp,catp_o:(0.0722*(catp_o-0.1)/(42.67493826526969*cadp*caspp+2.267106095342452*cadp*(casp+1e-30)+0.7254739505095847*cadp+0.566776523835613*casp+48.49424802871556*caspp*(catp_o-0.1)+10.668734566317422*caspp+2.576256926525514*(casp+1e-30)*(catp_o-0.1)+0.8244022164881646*(catp_o-0.1)+0.18136848762739619))]==>adp+aspp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vak term 2/4 (shifted atp_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cadp,casp,caspp,catp_o,cthr:((-1*0.15*casp*(catp_o-0.1)/(3.92*cadp*casp+223.6705882352941*cadp*caspp+5743.113963533007*cadp*cthr^4.09/(37.407535277527636*cthr^4.09+1)+3.8024*cadp/(37.407535277527636*cthr^4.09+1)+casp*(catp_o-0.1)+0.98*casp+57.05882352941176*caspp*(catp_o-0.1)+55.917647058823526*caspp+1465.0800927380121*cthr^4.09*(catp_o-0.1)/(37.407535277527636*cthr^4.09+1)+1435.7784908832518*cthr^4.09/(37.407535277527636*cthr^4.09+1)+0.97*(catp_o-0.1)/(37.407535277527636*cthr^4.09+1)+0.9506/(37.407535277527636*cthr^4.09+1))))]==>atp_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vak term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "asp+S[USER;cadp,casp,caspp,catp_o,cthr:(0.15*(37.407535277527636*cthr^4.09+1)*(catp_o-0.1)/(5743.113963533007*cadp*cthr^4.09+3.8024*cadp+1465.0800927380121*cthr^4.09*(catp_o-0.1)+1435.7784908832518*cthr^4.09+(37.407535277527636*cthr^4.09+1)*(223.6705882352941*cadp*caspp+3.92*cadp*(casp+1e-30)+0.98*casp+57.05882352941176*caspp*(catp_o-0.1)+55.917647058823526*caspp+(casp+1e-30)*(catp_o-0.1)+9.8e-31)+0.97*(catp_o-0.1)+0.9506))]==>adp+aspp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vak term 3/4 (shifted atp_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cadp,casp,caspp,catp_o:(112.81249999999999*cadp*caspp/(2.267106095342452*cadp*casp+42.67493826526969*cadp*caspp+0.7254739505095847*cadp+2.576256926525514*casp*(catp_o-0.1)+0.566776523835613*casp+48.49424802871556*caspp*(catp_o-0.1)+10.668734566317422*caspp+0.8244022164881646*(catp_o-0.1)+0.18136848762739619))]==>atp_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vak term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "adp+aspp+S[USER;cadp,casp,caspp,catp_o:(112.81249999999999/(0.7254739505095847*cadp+2.267106095342452*casp*(cadp+1e-30)+2.576256926525514*casp*(catp_o-0.1)+0.566776523835613*casp+10.668734566317422*caspp+42.67493826526969*(cadp+1e-30)*(caspp+1e-30)+48.49424802871556*(caspp+1e-30)*(catp_o-0.1)+0.8244022164881646*(catp_o-0.1)+0.18136848762739619))]==>asp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vak term 4/4 (shifted atp_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cadp,casp,caspp,catp_o,cthr:(234.37499999999997*cadp*caspp/(3.92*cadp*casp+223.6705882352941*cadp*caspp+5743.113963533007*cadp*cthr^4.09/(37.407535277527636*cthr^4.09+1)+3.8024*cadp/(37.407535277527636*cthr^4.09+1)+casp*(catp_o-0.1)+0.98*casp+57.05882352941176*caspp*(catp_o-0.1)+55.917647058823526*caspp+1465.0800927380121*cthr^4.09*(catp_o-0.1)/(37.407535277527636*cthr^4.09+1)+1435.7784908832518*cthr^4.09/(37.407535277527636*cthr^4.09+1)+0.97*(catp_o-0.1)/(37.407535277527636*cthr^4.09+1)+0.9506/(37.407535277527636*cthr^4.09+1)))]==>atp_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vak term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "adp+aspp+S[USER;cadp,casp,caspp,catp_o,cthr:((8767.391080670539*cthr^4.09+234.37499999999997)/(3.8024*cadp+5743.113963533007*cthr^4.09*(cadp+1e-30)+1465.0800927380121*cthr^4.09*(catp_o-0.1)+1435.7784908832518*cthr^4.09+(37.407535277527636*cthr^4.09+1)*(3.92*casp*(cadp+1e-30)+casp*(catp_o-0.1)+0.98*casp+55.917647058823526*caspp+223.6705882352941*(cadp+1e-30)*(caspp+1e-30)+57.05882352941176*(caspp+1e-30)*(catp_o-0.1)+5.591764705882353e-29)+0.97*(catp_o-0.1)+0.9506))]==>asp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vasd term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "aspp+nadph+S[USER;casa,caspp,cnadp,cnadph,cphos:(0.1812/(0.004027777777777778*casa*cnadp*cphos+0.04027777777777778*casa*cnadp+0.02*casa*cphos*(cnadph+1e-30)+0.00058*casa*cphos+0.19999999999999998*casa*(cnadph+1e-30)+0.0058*casa+0.029*caspp+0.0004430555555555556*cnadp*cphos+0.20138888888888892*cnadp*(caspp+1e-30)+0.004430555555555556*cnadp+0.022*cnadph+0.0021999999999999997*cphos*(cnadph+1e-30)+6.38e-5*cphos+1*(caspp+1e-30)*(cnadph+1e-30)+0.000638))]==>asa+nadp+phos",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vasd term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "asa+nadp+phos+S[USER;casa,caspp,cnadp,cnadph,cphos:(0.003211909820753981/(0.0058*casa+1*caspp*cnadph+0.20138888888888892*caspp*(cnadp+1e-30)+0.029*caspp+0.004430555555555556*cnadp+0.02*cnadph*(casa+1e-30)*(cphos+1e-30)+0.19999999999999998*cnadph*(casa+1e-30)+0.0021999999999999997*cnadph*(cphos+1e-30)+0.022*cnadph+6.38e-5*cphos+0.004027777777777778*(casa+1e-30)*(cnadp+1e-30)*(cphos+1e-30)+0.04027777777777778*(casa+1e-30)*(cnadp+1e-30)+0.00058*(casa+1e-30)*(cphos+1e-30)+0.0004430555555555556*(cnadp+1e-30)*(cphos+1e-30)+0.000638))]==>aspp+nadph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vhdh term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "asa+nadph+S[USER;casa,chs,cnadp,cnadph,cthr:(1.001/(0.037*casa+1.0490358244669449*chs*cnadp*cthr^1.41+0.03909655263505481*chs*cnadp+1.8996054118725758*chs*cthr^1.41*(cnadph+1e-30)+0.07028540023928531*chs*cthr^1.41+0.07079646017699115*chs*(cnadph+1e-30)+0.0026194690265486723*chs+14.817631020595597*cnadp*cthr^1.41*(casa+1e-30)+3.556231444942943*cnadp*cthr^1.41+0.5522388059701492*cnadp*(casa+1e-30)+0.1325373134328358*cnadp+0.24*cnadph+26.831926442700137*cthr^1.41*(casa+1e-30)*(cnadph+1e-30)+0.992781278379905*cthr^1.41*(casa+1e-30)+6.439662346248032*cthr^1.41*(cnadph+1e-30)+0.2382675068111772*cthr^1.41+(casa+1e-30)*(cnadph+1e-30)+0.008879999999999999))]==>hs+nadp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vhdh term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "hs+nadp+S[USER;casa,chs,cnadp,cnadph,cthr:(0.0003165439937828547/(26.831926442700137*casa*cnadph*cthr^1.41+casa*cnadph+14.817631020595597*casa*cthr^1.41*(cnadp+1e-30)+0.992781278379905*casa*cthr^1.41+0.5522388059701492*casa*(cnadp+1e-30)+0.037*casa+0.0026194690265486723*chs+0.1325373134328358*cnadp+1.8996054118725758*cnadph*cthr^1.41*(chs+1e-30)+6.439662346248032*cnadph*cthr^1.41+0.07079646017699115*cnadph*(chs+1e-30)+0.24*cnadph+1.0490358244669449*cthr^1.41*(chs+1e-30)*(cnadp+1e-30)+0.07028540023928531*cthr^1.41*(chs+1e-30)+3.556231444942943*cthr^1.41*(cnadp+1e-30)+0.2382675068111772*cthr^1.41+0.03909655263505481*(chs+1e-30)*(cnadp+1e-30)+0.008879999999999999))]==>asa+nadph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vhdh term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "asa+nadph+S[USER;casa,chs,cnadp,cnadph,cthr:(3.899351953329864*cthr^1.41/(0.037*casa+1.0490358244669449*chs*cnadp*cthr^1.41+0.03909655263505481*chs*cnadp+1.8996054118725758*chs*cthr^1.41*(cnadph+1e-30)+0.07028540023928531*chs*cthr^1.41+0.07079646017699115*chs*(cnadph+1e-30)+0.0026194690265486723*chs+14.817631020595597*cnadp*cthr^1.41*(casa+1e-30)+3.556231444942943*cnadp*cthr^1.41+0.5522388059701492*cnadp*(casa+1e-30)+0.1325373134328358*cnadp+0.24*cnadph+26.831926442700137*cthr^1.41*(casa+1e-30)*(cnadph+1e-30)+0.992781278379905*cthr^1.41*(casa+1e-30)+6.439662346248032*cthr^1.41*(cnadph+1e-30)+0.2382675068111772*cthr^1.41+(casa+1e-30)*(cnadph+1e-30)+0.008879999999999999))]==>hs+nadp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vhdh term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "hs+nadp+S[USER;casa,chs,cnadp,cnadph,cthr:(0.001233083357114896*cthr^1.41/(26.831926442700137*casa*cnadph*cthr^1.41+casa*cnadph+14.817631020595597*casa*cthr^1.41*(cnadp+1e-30)+0.992781278379905*casa*cthr^1.41+0.5522388059701492*casa*(cnadp+1e-30)+0.037*casa+0.0026194690265486723*chs+0.1325373134328358*cnadp+1.8996054118725758*cnadph*cthr^1.41*(chs+1e-30)+6.439662346248032*cnadph*cthr^1.41+0.07079646017699115*cnadph*(chs+1e-30)+0.24*cnadph+1.0490358244669449*cthr^1.41*(chs+1e-30)*(cnadp+1e-30)+0.07028540023928531*cthr^1.41*(chs+1e-30)+3.556231444942943*cthr^1.41*(cnadp+1e-30)+0.2382675068111772*cthr^1.41+0.03909655263505481*(chs+1e-30)*(cnadp+1e-30)+0.008879999999999999))]==>asa+nadph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vtsy",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "hsp+S[USER;chsp:(0.0434/(1*chsp+0.31))]==>phos+thr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vhk (shifted atp_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;catp_o,chs,cthr:((-1*0.1*chs*(catp_o-0.1)/(0.016064842958459977*chs^2+0.000372694869857766*chs*cthr*(catp_o-0.1)+0.001621222683881282*chs*cthr+1.0490834860853937*chs*(catp_o-0.1)+0.0772718946301925*chs+0.024328692893493063*cthr*(catp_o-0.1)^2+0.10758147997502632*cthr*(catp_o-0.1)+0.007619746614242026*cthr+0.02651827525390744*(catp_o-0.1)^2+0.11726381317277869*(catp_o-0.1)+0.00830552380952381)))]==>atp_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vhk",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "hs+S[USER;catp_o,chs,cthr:(0.1*(catp_o-0.1)/(0.0772718946301925*chs+0.000372694869857766*cthr*(chs+1e-30)*(catp_o-0.1)+0.001621222683881282*cthr*(chs+1e-30)+0.024328692893493063*cthr*(catp_o-0.1)^2+0.10758147997502632*cthr*(catp_o-0.1)+0.007619746614242026*cthr+0.016064842958459977*(chs+1e-30)^2+1.0490834860853937*(chs+1e-30)*(catp_o-0.1)+0.02651827525390744*(catp_o-0.1)^2+0.11726381317277869*(catp_o-0.1)+0.00830552380952381))]==>adp+hsp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vnadph_endo",
+     ""
+    ],
+    [
+     "0.0010908",
+     "0",
+     "0",
+     "nadph==>nadp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vatpase (shifted atp_o)",
+     ""
+    ],
+    [
+     "-0.008282",
+     "0",
+     "0",
+     "source==>atp_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vatpase",
+     ""
+    ],
+    [
+     "0.008282",
+     "0",
+     "0",
+     "source==>adp+phos",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "aspp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Aspartyl phosphate [aspp]",
+     ""
+    ],
+    [
+     "asa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Aspartate beta-semialdehyde [asa]",
+     ""
+    ],
+    [
+     "hs",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Homoserine [hs]",
+     ""
+    ],
+    [
+     "hsp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "O-Phospho-homoserine [hsp]",
+     ""
+    ],
+    [
+     "phos",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phos [phos]",
+     ""
+    ],
+    [
+     "thr",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Threonine [thr]",
+     ""
+    ],
+    [
+     "asp",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Aspartate [asp]",
+     ""
+    ],
+    [
+     "nadp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADP [nadp]",
+     ""
+    ],
+    [
+     "nadph",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADPH [nadph]",
+     ""
+    ],
+    [
+     "adp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ADP [adp]",
+     ""
+    ],
+    [
+     "atp_o",
+     "0",
+     "10.1",
+     "N",
+     "0",
+     "No",
+     "No",
+     "ATP + 0.1 (shifted state) [__shifted__atp]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "atp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[atp_o;-0.1*source]",
+     "No",
+     "ATP (= atp_o - 0.1) [atp]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

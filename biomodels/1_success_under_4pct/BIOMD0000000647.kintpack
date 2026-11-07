@@ -1,0 +1,505 @@
+{
+ "version": 3,
+ "created": "2026-10-26T22:30:54.538626+00:00",
+ "description": "Kwang2003 - The influence of RKIP on the ERK signaling pathway\nBioModels BIOMD0000000647 (curated). SBML file: BIOMD0000000647_url.xml.\nSimulation: 0 to 50 time units (SED-ML: BIOMD0000000647.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.02e-06 of species peak (worst: Raf1_RKIP_ERKPP)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Kwang2003 - The influence of RKIP on the ERK signaling pathway  (BIOMD0000000647, curated BioModels; source file BIOMD0000000647_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf1_RKIP_complex_formation",
+     ""
+    ],
+    [
+     "0.53",
+     "0",
+     "0",
+     "Raf1+RKIP==>Raf1_RKIP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf1_RKIP_complex_disassembly",
+     ""
+    ],
+    [
+     "0.0072",
+     "0",
+     "0",
+     "Raf1_RKIP==>Raf1+RKIP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf1_RKIP_ERKPP_complex_formation",
+     ""
+    ],
+    [
+     "0.625",
+     "0",
+     "0",
+     "ERKPP+Raf1_RKIP==>Raf1_RKIP_ERKPP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf1_RKIP_ERKPP_complex_disassembly__ERK_phosphorylation",
+     ""
+    ],
+    [
+     "0.00245",
+     "0",
+     "0",
+     "Raf1_RKIP_ERKPP==>ERKPP+Raf1_RKIP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf1_RKIP_ERKPP_complex_disassembly__RKIP_phosphorylation",
+     ""
+    ],
+    [
+     "0.0315",
+     "0",
+     "0",
+     "Raf1_RKIP_ERKPP==>ERK+Raf1+RKIPP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MEKPP_ERK_complex_formation",
+     ""
+    ],
+    [
+     "0.8",
+     "0",
+     "0",
+     "ERK+MEKPP==>MEKPP_ERK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MEKPP_ERK_complex_disassembly__ERK_unphosphorylated",
+     ""
+    ],
+    [
+     "0.0075",
+     "0",
+     "0",
+     "MEKPP_ERK==>ERK+MEKPP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MEKPP_ERK_complex_disassembly__ERK_phosphorylated",
+     ""
+    ],
+    [
+     "0.071",
+     "0",
+     "0",
+     "MEKPP_ERK==>MEKPP+ERKPP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RKIPP_RP_comlex_formation",
+     ""
+    ],
+    [
+     "0.92",
+     "0",
+     "0",
+     "RP+RKIPP==>RKIPP_RP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RKIPP_RP_complex_disassembly__phosphorylated_RKIP",
+     ""
+    ],
+    [
+     "0.00122",
+     "0",
+     "0",
+     "RKIPP_RP==>RP+RKIPP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RKIPP_RP_complex_disassembly__unphosphorylated_RKIP",
+     ""
+    ],
+    [
+     "0.87",
+     "0",
+     "0",
+     "RKIPP_RP==>RP+RKIP",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Raf1",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Raf1 [Raf1]",
+     ""
+    ],
+    [
+     "RKIP",
+     "0",
+     "2.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RKIP [RKIP]",
+     ""
+    ],
+    [
+     "Raf1_RKIP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Raf1_RKIP [Raf1_RKIP]",
+     ""
+    ],
+    [
+     "Raf1_RKIP_ERKPP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Raf1_RKIP_ERKPP [Raf1_RKIP_ERKPP]",
+     ""
+    ],
+    [
+     "ERK",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERK [ERK]",
+     ""
+    ],
+    [
+     "RKIPP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RKIPP [RKIPP]",
+     ""
+    ],
+    [
+     "MEKPP",
+     "0",
+     "2.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MEKPP [MEKPP]",
+     ""
+    ],
+    [
+     "MEKPP_ERK",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MEKPP_ERK [MEKPP_ERK]",
+     ""
+    ],
+    [
+     "ERKPP",
+     "0",
+     "2.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERKPP [ERKPP]",
+     ""
+    ],
+    [
+     "RP",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RP [RP]",
+     ""
+    ],
+    [
+     "RKIPP_RP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RKIPP_RP [RKIPP_RP]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.5",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "50",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.5",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

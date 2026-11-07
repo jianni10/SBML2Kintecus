@@ -1,0 +1,397 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:13:30.776545+00:00",
+ "description": "Ferrel2011 - Autonomous biochemical oscillator in regulation of CDK1, Plk1, and APC in Xenopus Laevis cell cycle\nBioModels BIOMD0000000937 (curated). SBML file: Ferrel2011_V3.xml.\nSimulation: 0 to 25 time units (SED-ML: Ferrel2011_V3.sedml), sampling 0.25.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 9.81e-07 of species peak (worst: CDK1_active)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ferrel2011 - Autonomous biochemical oscillator in regulation of CDK1, Plk1, and APC in Xenopus Laevis cell cycle  (BIOMD0000000937, curated BioModels; source file Ferrel2011_V3.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1_Cdk1_activation_by_cyclin_synthesis",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "source==>CDK1_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2_Cdk1_inactivation_by_APC_active",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CDK1_active+S[USER;cAPC_active:(3*cAPC_active^8/(cAPC_active^8+0.00390625))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3_APC_activation_by_Cdk1_active term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPlk1_active:(3*cPlk1_active^8/(cPlk1_active^8+0.00390625))]==>APC_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3_APC_activation_by_Cdk1_active term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC_active+S[USER;cPlk1_active:(3*cPlk1_active^8/(cPlk1_active^8+0.00390625))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4_APC_Inactivation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC_active==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5_Plk1_activation_by term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCDK1_active:(3*cCDK1_active^8/(cCDK1_active^8+0.00390625))]==>Plk1_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5_Plk1_activation_by term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Plk1_active+S[USER;cCDK1_active:(3*cCDK1_active^8/(cCDK1_active^8+0.00390625))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6_Plk1_inactivation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Plk1_active==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "CDK1_active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CDK1_active [CDK1_active]",
+     ""
+    ],
+    [
+     "APC_active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC_active [APC_active]",
+     ""
+    ],
+    [
+     "Plk1_active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Plk1_active [Plk1_active]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.25",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "25",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.25",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

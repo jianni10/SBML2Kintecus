@@ -1,0 +1,766 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:31:38.651184+00:00",
+ "description": "Lee2017 - Paracetamol first-pass metabolism PK model\nBioModels BIOMD0000000947 (curated). SBML file: Lee2017_Paracetamol_Metabolism.xml.\nSimulation: 0 to 25 time units (SED-ML: Evans2005.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.51e-06 of species peak (worst: C_para_Caco_2)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): CparaBasolateralHepG2 = C_para__Basolateral___HepG2_; CsulfBasolateralHepG2 = C_sulf__Basolateral___HepG2_; CgluBasolateralHepG2 = C_glu__Basolateral___HepG2_",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lee2017 - Paracetamol first-pass metabolism PK model  (BIOMD0000000947, curated BioModels; source file Lee2017_Paracetamol_Metabolism.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_para_Apical/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_para_Caco_2+S[USER;cSW1:(34.254/(100*cSW1+400))]==>C_para_Apical+C_para_Caco_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_para_Apical/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_para_Apical+S[USER;cSW1:(34.254/(100*cSW1+400))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_para_Caco_2/dt term 1",
+     ""
+    ],
+    [
+     "103.8",
+     "0",
+     "0",
+     "C_para_Apical==>C_para_Caco_2+C_para_Apical",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_para_Caco_2/dt term 2",
+     ""
+    ],
+    [
+     "103.8",
+     "0",
+     "0",
+     "CparaBasolateralHepG2==>C_para_Caco_2+CparaBasolateralHepG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_para_Caco_2/dt term 3",
+     ""
+    ],
+    [
+     "240.1",
+     "0",
+     "0",
+     "C_para_Caco_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_para__Basolateral___HepG2_/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_para_Caco_2+S[USER;cSW1:(34.254/(100*cSW1+280))]==>CparaBasolateralHepG2+C_para_Caco_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_para__Basolateral___HepG2_/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CparaBasolateralHepG2+S[USER;cSW1:(297.454/(100*cSW1+280))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_para__Basolateral___HepG2_/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CparaBasolateralHepG2+S[USER;cSW1:(94*cSW1/(100*cSW1+280))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_sulf_Apical/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_sulf_Caco_2+S[USER;cSW1:(16.467/(100*cSW1+400))]==>C_sulf_Apical+C_sulf_Caco_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_sulf_Apical/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_sulf_Apical+S[USER;cSW1:(16.467/(100*cSW1+400))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_sulf_Caco_2/dt term 1",
+     ""
+    ],
+    [
+     "49.9",
+     "0",
+     "0",
+     "C_sulf_Apical==>C_sulf_Caco_2+C_sulf_Apical",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_sulf_Caco_2/dt term 2",
+     ""
+    ],
+    [
+     "49.9",
+     "0",
+     "0",
+     "CsulfBasolateralHepG2==>C_sulf_Caco_2+CsulfBasolateralHepG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_sulf_Caco_2/dt term 3",
+     ""
+    ],
+    [
+     "14.9",
+     "0",
+     "0",
+     "C_para_Caco_2==>C_sulf_Caco_2+C_para_Caco_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_sulf_Caco_2/dt term 4",
+     ""
+    ],
+    [
+     "99.8",
+     "0",
+     "0",
+     "C_sulf_Caco_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_sulf__Basolateral___HepG2_/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_sulf_Caco_2+S[USER;cSW1:(16.467/(100*cSW1+280))]==>CsulfBasolateralHepG2+C_sulf_Caco_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_sulf__Basolateral___HepG2_/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CparaBasolateralHepG2+S[USER;cSW1:(98/(100*cSW1+280))]==>CsulfBasolateralHepG2+CparaBasolateralHepG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_sulf__Basolateral___HepG2_/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CsulfBasolateralHepG2+S[USER;cSW1:(16.467/(100*cSW1+280))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_sulf__Basolateral___HepG2_/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CparaBasolateralHepG2+S[USER;cSW1:(35*cSW1/(100*cSW1+280))]==>CsulfBasolateralHepG2+CparaBasolateralHepG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_glu_Apical/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_glu_Caco_2+S[USER;cSW1:(19.437/(100*cSW1+400))]==>C_glu_Apical+C_glu_Caco_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_glu_Apical/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_glu_Apical+S[USER;cSW1:(19.437/(100*cSW1+400))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_glu_Caco_2/dt term 1",
+     ""
+    ],
+    [
+     "58.9",
+     "0",
+     "0",
+     "C_glu_Apical==>C_glu_Caco_2+C_glu_Apical",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_glu_Caco_2/dt term 2",
+     ""
+    ],
+    [
+     "58.9",
+     "0",
+     "0",
+     "CgluBasolateralHepG2==>C_glu_Caco_2+CgluBasolateralHepG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_glu_Caco_2/dt term 3",
+     ""
+    ],
+    [
+     "17.6",
+     "0",
+     "0",
+     "C_para_Caco_2==>C_glu_Caco_2+C_para_Caco_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_glu_Caco_2/dt term 4",
+     ""
+    ],
+    [
+     "117.8",
+     "0",
+     "0",
+     "C_glu_Caco_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_glu__Basolateral___HepG2_/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CparaBasolateralHepG2+S[USER;cSW1:(165.2/(100*cSW1+280))]==>CgluBasolateralHepG2+CparaBasolateralHepG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_glu__Basolateral___HepG2_/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_glu_Caco_2+S[USER;cSW1:(19.437/(100*cSW1+280))]==>CgluBasolateralHepG2+C_glu_Caco_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_glu__Basolateral___HepG2_/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CgluBasolateralHepG2+S[USER;cSW1:(19.437/(100*cSW1+280))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_glu__Basolateral___HepG2_/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CparaBasolateralHepG2+S[USER;cSW1:(59*cSW1/(100*cSW1+280))]==>CgluBasolateralHepG2+CparaBasolateralHepG2",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "C_para_Apical",
+     "0",
+     "2500",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_para [C_para_Apical]",
+     ""
+    ],
+    [
+     "C_para_Caco_2",
+     "0",
+     "1e-15",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_para [C_para_Caco_2]",
+     ""
+    ],
+    [
+     "CparaBasolateralHepG2",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_para [C_para__Basolateral___HepG2_]",
+     ""
+    ],
+    [
+     "C_sulf_Apical",
+     "0",
+     "1e-15",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_sulf [C_sulf_Apical]",
+     ""
+    ],
+    [
+     "C_sulf_Caco_2",
+     "0",
+     "1e-15",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_sulf [C_sulf_Caco_2]",
+     ""
+    ],
+    [
+     "CsulfBasolateralHepG2",
+     "0",
+     "1e-15",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_sulf [C_sulf__Basolateral___HepG2_]",
+     ""
+    ],
+    [
+     "C_glu_Apical",
+     "0",
+     "1e-15",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_glu [C_glu_Apical]",
+     ""
+    ],
+    [
+     "C_glu_Caco_2",
+     "0",
+     "1e-15",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_glu [C_glu_Caco_2]",
+     ""
+    ],
+    [
+     "CgluBasolateralHepG2",
+     "0",
+     "1e-15",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_glu [C_glu__Basolateral___HepG2_]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 6 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1000000002",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "25",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1000000002",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "6",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,915 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:55:28.742132+00:00",
+ "description": "Curien2009_Aspartate_Metabolism\nBioModels BIOMD0000000212 (curated). SBML file: BIOMD0000000212_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000212_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.53e-06 of species peak (worst: ASA)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Vhsk: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Vts1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Vcgs: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] VlysTRNA: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] VthrTRNA: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] VileTRNA: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Curien2009_Aspartate_Metabolism  (BIOMD0000000212, curated BioModels; source file BIOMD0000000212_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vak1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cLys:(1.4125/(0.00014903019058863214*cLys^2+1))]==>AspP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vak1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AspP+S[USER;cLys:(0.4/(0.00014903019058863214*cLys^2+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vak2 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cLys:(0.7875/(0.03336837450429074*cLys^1.1+1))]==>AspP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vak2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AspP+S[USER;cLys:(0.215/(0.03336837450429074*cLys^1.1+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "VakI term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cThr:(0.2268/(6.503642039542144e-5*cThr^2+1))]==>AspP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "VakI term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AspP+S[USER;cThr:(0.0945/(6.503642039542144e-5*cThr^2+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "VakII term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cThr:(0.8505/(8.416799932665601e-5*cThr^2+1))]==>AspP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "VakII term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AspP+S[USER;cThr:(0.1386/(8.416799932665601e-5*cThr^2+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vasadh term 1/2",
+     ""
+    ],
+    [
+     "10.44",
+     "0",
+     "0",
+     "AspP==>ASA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vasadh term 2/2",
+     ""
+    ],
+    [
+     "2.668",
+     "0",
+     "0",
+     "ASA==>AspP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vdhdps1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ASA+S[USER;cLys:(1.6/(0.01*cLys^2+1))]==>Lys",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vdhdps2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ASA+S[USER;cLys:(1.6/(0.0009182736455463728*cLys^2+1))]==>Lys",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vhsdh1 term 1/2",
+     ""
+    ],
+    [
+     "0.074088",
+     "0",
+     "0",
+     "ASA==>Hser",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vhsdh1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ASA+S[USER;cThr:(0.45511199999999996/(0.0025*cThr+1))]==>Hser",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vhsdh2 term 1/2",
+     ""
+    ],
+    [
+     "0.1008",
+     "0",
+     "0",
+     "ASA==>Hser",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vhsdh2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ASA+S[USER;cThr:(0.3024/(0.00011764705882352942*cThr+1))]==>Hser",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vhsk",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Hser+S[USER;cHser:(11.2/(1*cHser+14))]==>PHser",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vts1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PHser+S[USER;cPHser:(22.382418604651164/(1*cPHser+1510.778322181831))]==>Thr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vcgs",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PHser+S[USER;cPHser:(0.6631578947368421/(1*cPHser+473.6842105263158))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vtd",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Thr+S[USER;cIle:(0.004464/(1.5381708555929974e-5*cIle^3+1))]==>Ile",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "VlysTRNA",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Lys+S[USER;cLys:(0.43/(1*cLys+25))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "VthrTRNA",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Thr+S[USER;cThr:(0.43/(1*cThr+100))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "VileTRNA",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ile+S[USER;cIle:(0.43/(1*cIle+20))]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Asp",
+     "0",
+     "1500",
+     "Y",
+     "0",
+     "No",
+     "1500",
+     "Aspartate [Asp]",
+     ""
+    ],
+    [
+     "AK1",
+     "0",
+     "0.25",
+     "Y",
+     "0",
+     "No",
+     "0.25",
+     "AK1 [AK1]",
+     ""
+    ],
+    [
+     "Lys",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Lysine [Lys]",
+     ""
+    ],
+    [
+     "AdoMet",
+     "0",
+     "20",
+     "Y",
+     "0",
+     "No",
+     "20",
+     "S-adenosyl-methionine [AdoMet]",
+     ""
+    ],
+    [
+     "AspP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Aspartyl_P [AspP]",
+     ""
+    ],
+    [
+     "AK2",
+     "0",
+     "0.25",
+     "Y",
+     "0",
+     "No",
+     "0.25",
+     "AK2 [AK2]",
+     ""
+    ],
+    [
+     "AKHSDHI",
+     "0",
+     "0.63",
+     "Y",
+     "0",
+     "No",
+     "0.63",
+     "AKI-HSDHI [AKHSDHI]",
+     ""
+    ],
+    [
+     "AKHSDHII",
+     "0",
+     "0.63",
+     "Y",
+     "0",
+     "No",
+     "0.63",
+     "AKII-HSDHII [AKHSDHII]",
+     ""
+    ],
+    [
+     "Thr",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Threonine [Thr]",
+     ""
+    ],
+    [
+     "ASADH",
+     "0",
+     "11.6",
+     "Y",
+     "0",
+     "No",
+     "11.6",
+     "ASADH [ASADH]",
+     ""
+    ],
+    [
+     "ASA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Aspartate semialdehyde [ASA]",
+     ""
+    ],
+    [
+     "DHDPS1",
+     "0",
+     "1.6",
+     "Y",
+     "0",
+     "No",
+     "1.6",
+     "DHDPS1 [DHDPS1]",
+     ""
+    ],
+    [
+     "DHDPS2",
+     "0",
+     "1.6",
+     "Y",
+     "0",
+     "No",
+     "1.6",
+     "DHDPS2 [DHDPS2]",
+     ""
+    ],
+    [
+     "Hser",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Homoserine [Hser]",
+     ""
+    ],
+    [
+     "PHser",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphohomoserine [PHser]",
+     ""
+    ],
+    [
+     "HSK",
+     "0",
+     "4",
+     "Y",
+     "0",
+     "No",
+     "4",
+     "HSK [HSK]",
+     ""
+    ],
+    [
+     "TS1",
+     "0",
+     "7.4",
+     "Y",
+     "0",
+     "No",
+     "7.4",
+     "TS1 [TS1]",
+     ""
+    ],
+    [
+     "Phosphate",
+     "0",
+     "10000",
+     "Y",
+     "0",
+     "No",
+     "10000",
+     "Phosphate [Phosphate]",
+     ""
+    ],
+    [
+     "Cys",
+     "0",
+     "15",
+     "Y",
+     "0",
+     "No",
+     "15",
+     "Cysteine [Cys]",
+     ""
+    ],
+    [
+     "CGS",
+     "0",
+     "0.7",
+     "Y",
+     "0",
+     "No",
+     "0.7",
+     "CGS [CGS]",
+     ""
+    ],
+    [
+     "Cysta",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Cystathione [Cysta]",
+     ""
+    ],
+    [
+     "TD",
+     "0",
+     "0.36",
+     "Y",
+     "0",
+     "No",
+     "0.36",
+     "TD [TD]",
+     ""
+    ],
+    [
+     "Ile",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Isoleucine [Ile]",
+     ""
+    ],
+    [
+     "Val",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "100",
+     "Valine [Val]",
+     ""
+    ],
+    [
+     "LysTRNA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Lys-tRNA [LysTRNA]",
+     ""
+    ],
+    [
+     "ThrTRNA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Thr-tRNA [ThrTRNA]",
+     ""
+    ],
+    [
+     "IleTRNA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Ile-tRNA [IleTRNA]",
+     ""
+    ],
+    [
+     "LKR",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "LKR [LKR]",
+     ""
+    ],
+    [
+     "Sacc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Saccharopine [Sacc]",
+     ""
+    ],
+    [
+     "THA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "THA [THA]",
+     ""
+    ],
+    [
+     "Gly",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Glycine [Gly]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

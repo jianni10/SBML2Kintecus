@@ -1,0 +1,892 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:30:04.428590+00:00",
+ "description": "Eftimie2019-Macrophages Plasticity\nBioModels BIOMD0000000806 (curated). SBML file: model.xml.\nSimulation: 0 to 22 time units (SED-ML: Macrophages Plasticity a.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.57e-06 of species peak (worst: M2_Macrophage_Xm2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Uninfected_tumour_cell_infection: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] time event(s) on 'H' encoded as time/value pairs in EV_P_H.TXT (SET)\n  [info] time event(s) on 'd_m1' encoded as time/value pairs in EV_P_D_M1.TXT (SET)\n  [info] time event(s) on 'd_u' encoded as time/value pairs in EV_P_D_U.TXT (SET)\nRenamed species (Kintecus name = SBML id): EffectorCytotoxicCD8TCell1 = Effector_Cytotoxic_CD8_TCells__Xe; p_d_u = d_u; p_d_m1 = d_m1; p_H = H",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Eftimie2019-Macrophages Plasticity  (BIOMD0000000806, curated BioModels; source file model.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_tumour_cell_logistic_growth term 1/2",
+     ""
+    ],
+    [
+     "0.924",
+     "0",
+     "0",
+     "UnInfected_Tumour_Cells_Xu==>2UnInfected_Tumour_Cells_Xu",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_tumour_cell_logistic_growth term 2/2",
+     ""
+    ],
+    [
+     "2.8e-10",
+     "0",
+     "0",
+     "UnInfected_Tumour_Cells_Xu+UnInfected_Tumour_Cells_Xu==>UnInfected_Tumour_Cells_Xu",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_tumour_cell_infection",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "UnInfected_Tumour_Cells_Xu+Virus_Xv+S[USER;cUnInfected_Tumour_Cells_Xu:(0.011/(1*cUnInfected_Tumour_Cells_Xu+100000))]==>Infected_Tumour_Cells_Xi+Virus_Xv",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_tumour_cell_elimination_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "UnInfected_Tumour_Cells_Xu+EffectorCytotoxicCD8TCell1+S[USER;cEffectorCytotoxicCD8TCell1,cp_d_u:(1*cp_d_u/(cEffectorCytotoxicCD8TCell1+1))]==>EffectorCytotoxicCD8TCell1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_tumour_cell_elimination_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "UnInfected_Tumour_Cells_Xu+M1_Macrophage_Xm1+S[USER;cM2_Macrophage_Xm2,cp_d_m1:(1*cp_d_m1/(cM2_Macrophage_Xm2+1000))]==>M1_Macrophage_Xm1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_tumour_cell_growth_M2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M2_Macrophage_Xm2+UnInfected_Tumour_Cells_Xu+S[USER;cM2_Macrophage_Xm2:(0.4/(cM2_Macrophage_Xm2+1000))]==>2UnInfected_Tumour_Cells_Xu+M2_Macrophage_Xm2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_tumour_cell_death",
+     ""
+    ],
+    [
+     "0.475",
+     "0",
+     "0",
+     "Infected_Tumour_Cells_Xi==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "virus_growth",
+     ""
+    ],
+    [
+     "1187.5",
+     "0",
+     "0",
+     "Infected_Tumour_Cells_Xi==>Virus_Xv+Infected_Tumour_Cells_Xi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_tumour_cell_elimination_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Infected_Tumour_Cells_Xi+EffectorCytotoxicCD8TCell1+S[USER;cEffectorCytotoxicCD8TCell1:(4.4/(cEffectorCytotoxicCD8TCell1+1))]==>EffectorCytotoxicCD8TCell1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_tumour_cell_elimination_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Infected_Tumour_Cells_Xi+M1_Macrophage_Xm1+S[USER;cM2_Macrophage_Xm2:(1.5/(cM2_Macrophage_Xm2+1000))]==>M1_Macrophage_Xm1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "virus_injection",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_H:(1*cp_H)]==>Virus_Xv",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "virus_death",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Virus_Xv==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "virus_clearance_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Virus_Xv+M1_Macrophage_Xm1+S[USER;cM2_Macrophage_Xm2:(1.5/(cM2_Macrophage_Xm2+1000))]==>M1_Macrophage_Xm1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "virus_clearance_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Virus_Xv+EffectorCytotoxicCD8TCell1+S[USER;cEffectorCytotoxicCD8TCell1:(4.4/(cEffectorCytotoxicCD8TCell1+1))]==>EffectorCytotoxicCD8TCell1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_activation_1 term 1/2",
+     ""
+    ],
+    [
+     "1e-6",
+     "0",
+     "0",
+     "Infected_Tumour_Cells_Xi==>M1_Macrophage_Xm1+Infected_Tumour_Cells_Xi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_activation_1 term 2/2",
+     ""
+    ],
+    [
+     "1e-6",
+     "0",
+     "0",
+     "Virus_Xv==>M1_Macrophage_Xm1+Virus_Xv",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_activation_2",
+     ""
+    ],
+    [
+     "3e-6",
+     "0",
+     "0",
+     "UnInfected_Tumour_Cells_Xu==>M1_Macrophage_Xm1+UnInfected_Tumour_Cells_Xu",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_recruitment term 1/3",
+     ""
+    ],
+    [
+     "0.22",
+     "0",
+     "0",
+     "M1_Macrophage_Xm1==>2M1_Macrophage_Xm1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_recruitment term 2/3",
+     ""
+    ],
+    [
+     "2.2e-9",
+     "0",
+     "0",
+     "M1_Macrophage_Xm1+M1_Macrophage_Xm1==>M1_Macrophage_Xm1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_recruitment term 3/3",
+     ""
+    ],
+    [
+     "2.2e-9",
+     "0",
+     "0",
+     "M1_Macrophage_Xm1+M2_Macrophage_Xm2==>M2_Macrophage_Xm2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_to_M2_repolarisation term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "M1_Macrophage_Xm1==>M2_Macrophage_Xm2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_to_M2_repolarisation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1_Macrophage_Xm1+UnInfected_Tumour_Cells_Xu+S[USER;cUnInfected_Tumour_Cells_Xu:(4/(cUnInfected_Tumour_Cells_Xu+5000000000))]==>M2_Macrophage_Xm2+UnInfected_Tumour_Cells_Xu",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_to_M1_repolarisation term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "M2_Macrophage_Xm2==>M1_Macrophage_Xm1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_to_M1_repolarisation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M2_Macrophage_Xm2+Virus_Xv+S[USER;cVirus_Xv:(0.5/(cVirus_Xv+0.105636))]==>M1_Macrophage_Xm1+Virus_Xv",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_death",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "M1_Macrophage_Xm1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_activation",
+     ""
+    ],
+    [
+     "4e-8",
+     "0",
+     "0",
+     "UnInfected_Tumour_Cells_Xu==>M2_Macrophage_Xm2+UnInfected_Tumour_Cells_Xu",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_growth term 1/3",
+     ""
+    ],
+    [
+     "0.22",
+     "0",
+     "0",
+     "M2_Macrophage_Xm2==>2M2_Macrophage_Xm2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_growth term 2/3",
+     ""
+    ],
+    [
+     "2.2e-9",
+     "0",
+     "0",
+     "M2_Macrophage_Xm2+M2_Macrophage_Xm2==>M2_Macrophage_Xm2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_growth term 3/3",
+     ""
+    ],
+    [
+     "2.2e-9",
+     "0",
+     "0",
+     "M2_Macrophage_Xm2+M1_Macrophage_Xm1==>M1_Macrophage_Xm1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_death",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "M2_Macrophage_Xm2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T_cells_activation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1_Macrophage_Xm1+S[USER;cM2_Macrophage_Xm2:(2070/(cM2_Macrophage_Xm2+1000))]==>EffectorCytotoxicCD8TCell1+M1_Macrophage_Xm1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T_cells_death",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "EffectorCytotoxicCD8TCell1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T_cells_inactivation",
+     ""
+    ],
+    [
+     "1e-10",
+     "0",
+     "0",
+     "EffectorCytotoxicCD8TCell1+UnInfected_Tumour_Cells_Xu==>UnInfected_Tumour_Cells_Xu",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "UnInfected_Tumour_Cells_Xu",
+     "0",
+     "500000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "UnInfected_Tumour_Cells(Xu) [UnInfected_Tumour_Cells_Xu]",
+     ""
+    ],
+    [
+     "Infected_Tumour_Cells_Xi",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected_Tumour_Cells(Xi) [Infected_Tumour_Cells_Xi]",
+     ""
+    ],
+    [
+     "Virus_Xv",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Virus(Xv) [Virus_Xv]",
+     ""
+    ],
+    [
+     "EffectorCytotoxicCD8TCell1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Effector_Cytotoxic_CD8_TCells (Xe) [Effector_Cytotoxic_CD8_TCells__Xe]",
+     ""
+    ],
+    [
+     "M1_Macrophage_Xm1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M1_Macrophage(Xm1) [M1_Macrophage_Xm1]",
+     ""
+    ],
+    [
+     "M2_Macrophage_Xm2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M2_Macrophage(Xm2) [M2_Macrophage_Xm2]",
+     ""
+    ],
+    [
+     "p_d_u",
+     "0",
+     "0.44",
+     "N",
+     "0",
+     "No",
+     "EV_P_D_U.TXT-SET",
+     "parameter d_u [d_u]",
+     ""
+    ],
+    [
+     "p_d_m1",
+     "0",
+     "0.01",
+     "N",
+     "0",
+     "No",
+     "EV_P_D_M1.TXT-SET",
+     "parameter d_m1 [d_m1]",
+     ""
+    ],
+    [
+     "p_H",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "EV_P_H.TXT-SET",
+     "parameter H [H]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1000000002",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "22",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1000000002",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_H.TXT",
+   "key": "O_EV_P_H.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "10",
+     "20000000"
+    ],
+    [
+     "11",
+     "0"
+    ],
+    [
+     "13",
+     "20000000"
+    ],
+    [
+     "14",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_D_M1.TXT",
+   "key": "O_EV_P_D_M1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "11",
+     "0.29000000000000004"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_D_U.TXT",
+   "key": "O_EV_P_D_U.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "15",
+     "0.85"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

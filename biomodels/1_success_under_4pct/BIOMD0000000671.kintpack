@@ -1,0 +1,455 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:06:18.898296+00:00",
+ "description": "Murphy2016 - Differences in predictions of ODE models of tumor growth\nBioModels BIOMD0000000671 (curated). SBML file: BIOMD0000000671_url.xml.\nSimulation: 0 to 120 time units (SED-ML: MODEL1708250001.sedml), sampling 0.12.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.50e-06 of species peak (worst: V_gomp)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Murphy2016 - Differences in predictions of ODE models of tumor growth  (BIOMD0000000671, curated BioModels; source file BIOMD0000000671_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_exp/dt term 1",
+     ""
+    ],
+    [
+     "0.0246",
+     "0",
+     "0",
+     "V_exp==>2V_exp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_mend/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_mend:(0.105*cV_mend^0.785)]==>V_mend",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_log/dt term 1",
+     ""
+    ],
+    [
+     "0.0295",
+     "0",
+     "0",
+     "V_log==>2V_log",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_log/dt term 2",
+     ""
+    ],
+    [
+     "4.263005780346821e-6",
+     "0",
+     "0",
+     "V_log+V_log==>V_log",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_lin/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "V_lin+S[USER;cV_lin:(132/(cV_lin+4300))]==>2V_lin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_surf/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "V_surf+S[USER;cV_surf:(0.291/(cV_surf+708)^0.3333333333333333)]==>2V_surf",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_gomp/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "V_gomp+S[USER;cV_gomp:(0.0919*log(15500/(cV_gomp+10700)))]==>2V_gomp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_bert/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_bert:(0.2344*cV_bert^0.6666666666666666)]==>V_bert",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV_bert/dt term 2",
+     ""
+    ],
+    [
+     "3.46e-19",
+     "0",
+     "0",
+     "V_bert==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "V_exp",
+     "0",
+     "220",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V_exp [V_exp]",
+     ""
+    ],
+    [
+     "V_mend",
+     "0",
+     "220",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V_mend [V_mend]",
+     ""
+    ],
+    [
+     "V_log",
+     "0",
+     "220",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V_log [V_log]",
+     ""
+    ],
+    [
+     "V_lin",
+     "0",
+     "220",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V_lin [V_lin]",
+     ""
+    ],
+    [
+     "V_surf",
+     "0",
+     "220",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V_surf [V_surf]",
+     ""
+    ],
+    [
+     "V_gomp",
+     "0",
+     "220",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V_gomp [V_gomp]",
+     ""
+    ],
+    [
+     "V_bert",
+     "0",
+     "220",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V_bert [V_bert]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.12",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "120",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.12",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

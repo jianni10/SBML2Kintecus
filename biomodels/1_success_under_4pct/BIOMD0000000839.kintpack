@@ -1,0 +1,609 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:10:48.163268+00:00",
+ "description": "Almeida2019 - Transcription-based circadian mechanism controls the duration of molecular clock states in response to signaling inputs\nBioModels BIOMD0000000839 (curated). SBML file: Almeida2019.xml.\nSimulation: 0 to 250 time units (SED-ML: Almeida2019.sedml), sampling 0.25.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.78e-06 of species peak (worst: PERCRY)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Almeida2019 - Transcription-based circadian mechanism controls the duration of molecular clock states in response to signaling inputs  (BIOMD0000000839, curated BioModels; source file Almeida2019.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ROR+S[USER;cREV,cROR:(284870.8439999999/(cREV^2*cROR+3.54*cREV^2+6416.009999999999*cROR+22712.675399999996))]==>BMAL1+ROR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4_2",
+     ""
+    ],
+    [
+     "2.58",
+     "0",
+     "0",
+     "BMAL1+PERCRY==>PERCRY",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "BMAL1+S[USER;cBMAL1,cCRY:(30.3/(1.24*cBMAL1*cCRY+cBMAL1+214))]==>ROR+BMAL1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ROR+S[USER;cREV,cROR:(284870.8439999999/(cREV^2*cROR+3.54*cREV^2+6416.009999999999*cROR+22712.675399999996))]==>2ROR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5_3",
+     ""
+    ],
+    [
+     "2.55",
+     "0",
+     "0",
+     "ROR==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ROR+S[USER;cREV,cROR:(569741.6879999998/(cREV^2*cROR+3.54*cREV^2+6416.009999999999*cROR+22712.675399999996))]==>CRY+E4BP4+ROR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "BMAL1+S[USER;cBMAL1,cCRY:(60.6/(1.24*cBMAL1*cCRY+cBMAL1+214))]==>REV+BMAL1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DBP+S[USER;cDBP,cE4BP4:(19129.4/(cDBP*cE4BP4+94.7*cDBP+5.32*cE4BP4+503.80400000000003))]==>REV+DBP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6_3",
+     ""
+    ],
+    [
+     "0.241",
+     "0",
+     "0",
+     "REV==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "BMAL1+S[USER;cBMAL1,cCRY:(30.3/(1.24*cBMAL1*cCRY+cBMAL1+214))]==>DBP+BMAL1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7_2",
+     ""
+    ],
+    [
+     "0.156",
+     "0",
+     "0",
+     "DBP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8_2",
+     ""
+    ],
+    [
+     "0.295",
+     "0",
+     "0",
+     "E4BP4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "BMAL1+S[USER;cBMAL1,cCRY:(30.3/(1.24*cBMAL1*cCRY+cBMAL1+214))]==>CRY+BMAL1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9_3",
+     ""
+    ],
+    [
+     "0.191",
+     "0",
+     "0",
+     "CRY+PER==>PERCRY",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9_4",
+     ""
+    ],
+    [
+     "0.141",
+     "0",
+     "0",
+     "PERCRY==>PER+CRY",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9_5",
+     ""
+    ],
+    [
+     "2.34",
+     "0",
+     "0",
+     "CRY==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "BMAL1+S[USER;cBMAL1,cCRY:(30.3/(1.24*cBMAL1*cCRY+cBMAL1+214))]==>PER+BMAL1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DBP+S[USER;cDBP,cE4BP4:(19129.4/(cDBP*cE4BP4+94.7*cDBP+5.32*cE4BP4+503.80400000000003))]==>PER+DBP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10_5",
+     ""
+    ],
+    [
+     "0.844",
+     "0",
+     "0",
+     "PER==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11_3",
+     ""
+    ],
+    [
+     "2.58",
+     "0",
+     "0",
+     "PERCRY+BMAL1==>BMAL1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "BMAL1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "BMAL1 [BMAL1]",
+     ""
+    ],
+    [
+     "ROR",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ROR [ROR]",
+     ""
+    ],
+    [
+     "REV",
+     "0",
+     "110",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "REV [REV]",
+     ""
+    ],
+    [
+     "DBP",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DBP [DBP]",
+     ""
+    ],
+    [
+     "E4BP4",
+     "0",
+     "80",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E4BP4 [E4BP4]",
+     ""
+    ],
+    [
+     "CRY",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CRY [CRY]",
+     ""
+    ],
+    [
+     "PER",
+     "0",
+     "25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PER [PER]",
+     ""
+    ],
+    [
+     "PERCRY",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PERCRY [PERCRY]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.25",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "250",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.25",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

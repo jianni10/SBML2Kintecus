@@ -1,0 +1,425 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:56:39.850547+00:00",
+ "description": "Lemaire2004 - Role of RANK/RANKL/OPG pathway in bone remodelling process\nBioModels BIOMD0000000278 (curated). SBML file: BIOMD0000000278_url.xml.\nSimulation: 0 to 140 time units (SED-ML: lemaire04_addB.sedml), sampling 0.14.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.86e-07 of species peak (worst: B)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dC/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dC/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): R1 = R",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lemaire2004 - Role of RANK/RANKL/OPG pathway in bone remodelling process  (BIOMD0000000278, curated BioModels; source file BIOMD0000000278_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cC:(1.7500000000000002e-7/(cC+0.005))]==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C+S[USER;cC:(0.0007/(cC+0.005))]==>R1+C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "R1+S[USER;cC:(0.000175/(cC+0.00025))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "R1+C+S[USER;cC:(0.034999999999999996/(cC+0.00025))]==>C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dB/dt term 1",
+     ""
+    ],
+    [
+     "0.189",
+     "0",
+     "0",
+     "B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dB/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "R1+S[USER;cC:(0.000175/(cC+0.00025))]==>B+R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dB/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C+R1+S[USER;cC:(0.034999999999999996/(cC+0.00025))]==>B+C+R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "B+S[USER;cR1:(4.165526675786594/(29485.714285714286*cR1+1.3411764705882352))]==>C+B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C+C+S[USER;cC:(0.7/(1*cC+0.005))]==>C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C+S[USER;cC:(0.000175/(1*cC+0.005))]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "R1",
+     "0",
+     "0.0007734",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Responding_Osteoblasts [R]",
+     ""
+    ],
+    [
+     "B",
+     "0",
+     "0.0007282",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Active_Osteoblasts [B]",
+     ""
+    ],
+    [
+     "C",
+     "0",
+     "0.0009127",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Active_Osteoclasts [C]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.14",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "140",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.14",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,383 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:12:59.743407+00:00",
+ "description": "Turner2015-Human/Mosquito ELP Model\nBioModels BIOMD0000000922 (curated). SBML file: Turner2015_ELP.xml.\nSimulation: 0 to 30 time units (SED-ML: Turner2015_ELP.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.66e-06 of species peak (worst: Population_of_Pupae)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Turner2015-Human/Mosquito ELP Model  (BIOMD0000000922, curated BioModels; source file Turner2015_ELP.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_E term 1/2",
+     ""
+    ],
+    [
+     "600",
+     "0",
+     "0",
+     "source==>Population_of_Eggs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_E term 2/2",
+     ""
+    ],
+    [
+     "0.411",
+     "0",
+     "0",
+     "Population_of_Eggs==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_L term 1/3",
+     ""
+    ],
+    [
+     "0.361",
+     "0",
+     "0",
+     "Population_of_Eggs==>Population_of_Larvae+Population_of_Eggs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_L term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Population_of_Larvae+S[USER;cPopulation_of_Larvae:(0.0002*cPopulation_of_Larvae)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_L term 3/3",
+     ""
+    ],
+    [
+     "0.1841",
+     "0",
+     "0",
+     "Population_of_Larvae==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_P term 1/2",
+     ""
+    ],
+    [
+     "0.134",
+     "0",
+     "0",
+     "Population_of_Larvae==>Population_of_Pupae+Population_of_Larvae",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_P term 2/2",
+     ""
+    ],
+    [
+     "0.34450000000000003",
+     "0",
+     "0",
+     "Population_of_Pupae==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Population_of_Eggs",
+     "0",
+     "10000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Population of Eggs [Population_of_Eggs]",
+     ""
+    ],
+    [
+     "Population_of_Larvae",
+     "0",
+     "5000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Population of Larvae [Population_of_Larvae]",
+     ""
+    ],
+    [
+     "Population_of_Pupae",
+     "0",
+     "3000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Population of Pupae [Population_of_Pupae]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.03",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.03",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

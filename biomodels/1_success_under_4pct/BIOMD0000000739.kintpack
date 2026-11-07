@@ -1,0 +1,998 @@
+{
+ "version": 3,
+ "created": "2026-10-26T22:45:22.913127+00:00",
+ "description": "Bravo2012 - Modelling blood coagulation factor Va inactivation by APC\nBioModels BIOMD0000000739 (curated). SBML file: Bravo2012.xml.\nSimulation: 0 to 1200 time units (SED-ML: Bravo2012.sedml), sampling 12.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.14e-06 of species peak (worst: Va_307_679_709)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bravo2012 - Modelling blood coagulation factor Va inactivation by APC  (BIOMD0000000739, curated BioModels; source file Bravo2012.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R01 term 1/2",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "APC_Va==>Va+APC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R01 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "Va+APC==>APC_Va",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R02",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC_Va==>Va_i_506+APC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R03",
+     ""
+    ],
+    [
+     "0.192",
+     "0",
+     "0",
+     "APC_Va==>Va_i_306+APC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R04 term 1/2",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "APC_Va_i_506==>Va_i_506+APC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R04 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "Va_i_506+APC==>APC_Va_i_506",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R05 term 1/2",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "APC_Va_i_306==>Va_i_306+APC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R05 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "Va_i_306+APC==>APC_Va_i_306",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R06",
+     ""
+    ],
+    [
+     "0.192",
+     "0",
+     "0",
+     "APC_Va_i_506==>Va_i_306_506+APC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R07",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC_Va_i_306==>Va_i_306_506+APC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R08",
+     ""
+    ],
+    [
+     "0.028",
+     "0",
+     "0",
+     "Va_i_306==>Va_307_679_709+Va_1_306_Va_LC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R09",
+     ""
+    ],
+    [
+     "0.028",
+     "0",
+     "0",
+     "Va_i_306_506==>Va_307_506+Va_1_306_Va_LC+Va_507_679_709",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10 term 1/2",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "APC_Va_1_306_Va_LC==>APC+Va_1_306_Va_LC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "APC+Va_1_306_Va_LC==>APC_Va_1_306_Va_LC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 1/2",
+     ""
+    ],
+    [
+     "0.075",
+     "0",
+     "0",
+     "Xa_Va==>Va+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 2/2",
+     ""
+    ],
+    [
+     "150000000",
+     "0",
+     "0",
+     "Va+Xa==>Xa_Va",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 1/2",
+     ""
+    ],
+    [
+     "0.15",
+     "0",
+     "0",
+     "Xa_Va_i_506==>Va_i_506+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 2/2",
+     ""
+    ],
+    [
+     "150000000",
+     "0",
+     "0",
+     "Va_i_506+Xa==>Xa_Va_i_506",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13 term 1/2",
+     ""
+    ],
+    [
+     "0.15",
+     "0",
+     "0",
+     "Xa_Va_i_306==>Va_i_306+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13 term 2/2",
+     ""
+    ],
+    [
+     "150000000",
+     "0",
+     "0",
+     "Va_i_306+Xa==>Xa_Va_i_306",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14 term 1/2",
+     ""
+    ],
+    [
+     "0.15",
+     "0",
+     "0",
+     "Xa_Va_i_306_506==>Va_i_306_506+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14 term 2/2",
+     ""
+    ],
+    [
+     "150000000",
+     "0",
+     "0",
+     "Va_i_306_506+Xa==>Xa_Va_i_306_506",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15",
+     ""
+    ],
+    [
+     "0.0035",
+     "0",
+     "0",
+     "Xa_Va_i_306==>Va_307_679_709+Va_1_306_Va_LC+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16",
+     ""
+    ],
+    [
+     "0.0035",
+     "0",
+     "0",
+     "Xa_Va_i_306_506==>Xa+Va_307_506+Va_1_306_Va_LC+Va_507_679_709",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 1/2",
+     ""
+    ],
+    [
+     "70",
+     "0",
+     "0",
+     "Va_PT==>PT+Va",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "PT+Va==>Va_PT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R19 term 1/2",
+     ""
+    ],
+    [
+     "103",
+     "0",
+     "0",
+     "Xa_Va_PT==>PT+Xa_Va",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R19 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "PT+Xa_Va==>Xa_Va_PT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R20 term 1/2",
+     ""
+    ],
+    [
+     "103",
+     "0",
+     "0",
+     "Xa_Va_i_506_PT==>PT+Xa_Va_i_506",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R20 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "PT+Xa_Va_i_506==>Xa_Va_i_506_PT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R21 term 1/2",
+     ""
+    ],
+    [
+     "103",
+     "0",
+     "0",
+     "Xa_Va_i_306_PT==>PT+Xa_Va_i_306",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R21 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "PT+Xa_Va_i_306==>Xa_Va_i_306_PT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R22 term 1/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "Xa_Va_i_306_506_PT==>Xa_Va_i_306_506+PT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R22 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "Xa_Va_i_306_506+PT==>Xa_Va_i_306_506_PT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R23",
+     ""
+    ],
+    [
+     "0.0035",
+     "0",
+     "0",
+     "Xa_Va_i_306_PT==>Xa+Va_307_679_709+Va_1_306_Va_LC+PT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R24",
+     ""
+    ],
+    [
+     "0.0035",
+     "0",
+     "0",
+     "Xa_Va_i_306_506_PT==>Xa+Va_307_506+Va_1_306_Va_LC+Va_507_679_709+PT",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "APC",
+     "0",
+     "2e-9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC [APC]",
+     ""
+    ],
+    [
+     "APC_Va",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC:Va [APC_Va]",
+     ""
+    ],
+    [
+     "Va",
+     "0",
+     "2e-8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va [Va]",
+     ""
+    ],
+    [
+     "Va_i_506",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va_i_506 [Va_i_506]",
+     ""
+    ],
+    [
+     "Va_i_306",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va_i_306 [Va_i_306]",
+     ""
+    ],
+    [
+     "APC_Va_i_506",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC:Va_i_506 [APC_Va_i_506]",
+     ""
+    ],
+    [
+     "APC_Va_i_306",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC:Va_i_306 [APC_Va_i_306]",
+     ""
+    ],
+    [
+     "Va_i_306_506",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va_i_306/506 [Va_i_306_506]",
+     ""
+    ],
+    [
+     "Va_1_306_Va_LC",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va_1-306:Va_LC [Va_1_306_Va_LC]",
+     ""
+    ],
+    [
+     "Va_307_506",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va_307-506 [Va_307_506]",
+     ""
+    ],
+    [
+     "Va_507_679_709",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va_507-679/709 [Va_507_679_709]",
+     ""
+    ],
+    [
+     "APC_Va_1_306_Va_LC",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC:Va_1-306:Va_LC [APC_Va_1_306_Va_LC]",
+     ""
+    ],
+    [
+     "Xa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa [Xa]",
+     ""
+    ],
+    [
+     "Xa_Va",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa:Va [Xa_Va]",
+     ""
+    ],
+    [
+     "Xa_Va_i_506",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa:Va_i_506 [Xa_Va_i_506]",
+     ""
+    ],
+    [
+     "Xa_Va_i_306_506",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa:Va_i_306/506 [Xa_Va_i_306_506]",
+     ""
+    ],
+    [
+     "Xa_Va_i_306",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa:Va_i_306 [Xa_Va_i_306]",
+     ""
+    ],
+    [
+     "Va_307_679_709",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va_307-679/709 [Va_307_679_709]",
+     ""
+    ],
+    [
+     "PT",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PT [PT]",
+     ""
+    ],
+    [
+     "Va_PT",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va:PT [Va_PT]",
+     ""
+    ],
+    [
+     "Xa_Va_PT",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa:Va:PT [Xa_Va_PT]",
+     ""
+    ],
+    [
+     "Xa_Va_i_506_PT",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa:Va_i_506:PT [Xa_Va_i_506_PT]",
+     ""
+    ],
+    [
+     "Xa_Va_i_306_PT",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa:Va_i_306:PT [Xa_Va_i_306_PT]",
+     ""
+    ],
+    [
+     "Xa_Va_i_306_506_PT",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa:Va_i_306/506:PT [Xa_Va_i_306_506_PT]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "12",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "12",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,600 @@
+{
+ "version": 3,
+ "created": "2026-11-05T15:47:16.909849+00:00",
+ "description": "Ibrahim2008 - Mitotic Spindle Assembly Checkpoint - Convey variant\nBioModels BIOMD0000000187 (curated). SBML file: BIOMD0000000187_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000187_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled; extended past the last time event (2000)), sampling 10.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.09e-02 of species peak (worst: APC_Cdc20)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 1.98e-08 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time event(s) on 'u' encoded as time/value pairs in EV_P_U.TXT (SET)\n  [info] time event(s) on 'u_prime' encoded as time/value pairs in EV_P_U_PRIME.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_u = u; p_u_prime = u_prime",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ibrahim2008 - Mitotic Spindle Assembly Checkpoint - Convey variant  (BIOMD0000000187, curated BioModels; source file BIOMD0000000187_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1 term 1/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Mad1_CMad2_OMad2==>Mad1_CMad2+OMad2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mad1_CMad2+OMad2+S[USER;cp_u:(200000*cp_u)]==>Mad1_CMad2_OMad2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20+Mad1_CMad2_OMad2+S[USER;cp_u:(100000000*cp_u)]==>Cdc20_CMad2+Mad1_CMad2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Cdc20_CMad2==>Cdc20+OMad2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4 term 1/2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "MCC==>Bub3_BubR1+Cdc20_CMad2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Bub3_BubR1+Cdc20_CMad2+S[USER;cp_u:(10000000*cp_u)]==>MCC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5 term 1/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Bub3_BubR1_Cdc20==>Bub3_BubR1+Cdc20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Bub3_BubR1+Cdc20+S[USER;cp_u:(10000*cp_u)]==>Bub3_BubR1_Cdc20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "Cdc20+OMad2==>Cdc20_CMad2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC+MCC+S[USER;cp_u:(100000000*cp_u)]==>MCC_APC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7b",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MCC_APC+S[USER;cp_u_prime:(0.08*cp_u_prime)]==>APC_Cdc20+Bub3_BubR1+OMad2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8 term 1/2",
+     ""
+    ],
+    [
+     "0.08",
+     "0",
+     "0",
+     "APC_Cdc20==>APC+Cdc20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8 term 2/2",
+     ""
+    ],
+    [
+     "5000000",
+     "0",
+     "0",
+     "APC+Cdc20==>APC_Cdc20",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Mad1_CMad2",
+     "0",
+     "5e-8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mad1:C-Mad2 [Mad1_CMad2]",
+     ""
+    ],
+    [
+     "OMad2",
+     "0",
+     "1.3e-7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "O-Mad2 [OMad2]",
+     ""
+    ],
+    [
+     "Mad1_CMad2_OMad2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mad1:C-Mad2:O-Mad2* [Mad1_CMad2_OMad2]",
+     ""
+    ],
+    [
+     "Cdc20",
+     "0",
+     "2.2e-7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdc20 [Cdc20]",
+     ""
+    ],
+    [
+     "Cdc20_CMad2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdc20:C-Mad2 [Cdc20_CMad2]",
+     ""
+    ],
+    [
+     "Bub3_BubR1",
+     "0",
+     "1.27e-7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Bub3:BubR1 [Bub3_BubR1]",
+     ""
+    ],
+    [
+     "MCC",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MCC [MCC]",
+     ""
+    ],
+    [
+     "Bub3_BubR1_Cdc20",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Bub3:BubR1:Cdc20 [Bub3_BubR1_Cdc20]",
+     ""
+    ],
+    [
+     "APC",
+     "0",
+     "9e-8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC [APC]",
+     ""
+    ],
+    [
+     "MCC_APC",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MCC:APC [MCC_APC]",
+     ""
+    ],
+    [
+     "APC_Cdc20",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC:Cdc20 [APC_Cdc20]",
+     ""
+    ],
+    [
+     "p_u",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "EV_P_U.TXT-SET",
+     "parameter u [u]",
+     ""
+    ],
+    [
+     "p_u_prime",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "EV_P_U_PRIME.TXT-SET",
+     "parameter u_prime [u_prime]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10.00000001",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10.00000001",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_U.TXT",
+   "key": "O_EV_P_U.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2000",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_U_PRIME.TXT",
+   "key": "O_EV_P_U_PRIME.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2000",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

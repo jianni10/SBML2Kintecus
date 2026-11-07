@@ -1,0 +1,1177 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:52:26.120949+00:00",
+ "description": "Noguchi2013 - Insulin dependent glucose metabolism\nBioModels BIOMD0000000482 (curated). SBML file: BIOMD0000000482_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000482_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.67e-06 of species peak (worst: p1p2IRS)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] v1 term 2/2 (volume 2.64e-5): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v1 term 1/2 (volume 0.004): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v2 term 1/3 (volume 2.64e-5): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v2 term 2/3 (volume 2.64e-5): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v2 term 3/3 (volume 2.64e-5): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v4 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v4 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v5 term 1/2 (volume 0.004): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v5 term 2/2 (volume 2.64e-5): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v7 term 1/2 (volume 2.64e-5): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v7 term 2/2 (volume 2.64e-5): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v8 term 1/3 (volume 2.64e-5): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v8 term 2/3 (volume 2.64e-5): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v8 term 3/3 (volume 2.64e-5): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v9 term 1/3 (volume 2.64e-5): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v9 term 2/3 (volume 2.64e-5): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v9 term 3/3 (volume 2.64e-5): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reactionPEP1 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] reactionPEP2 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - ",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Noguchi2013 - Insulin dependent glucose metabolism  (BIOMD0000000482, curated BioModels; source file BIOMD0000000482_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1 term 1/2 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG6P,cGLCex:(7533763.354162468*cGLCex/(22.172949002217294*cG6P+22.172949002217294*cGLCex+1))]==>G6P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1 term 2/2 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G6P+S[USER;cG6P,cGLCex:(7533763.354162468/(22.172949002217294*cG6P+22.172949002217294*cGLCex+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1 term 1/2 (volume 0.004)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GLCex+S[USER;cG6P,cGLCex:(49722.83813747229/(22.172949002217294*cG6P+22.172949002217294*cGLCex+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1 term 2/2 (volume 0.004)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG6P,cGLCex:(49722.83813747229*cG6P/(22.172949002217294*cG6P+22.172949002217294*cGLCex+1))]==>GLCex",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2 term 1/3 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G6P+S[USER;cF16P,cG6P:(315.7248157248157/(1.6750418760469012*cF16P+0.001081081081081081*cG6P+1))]==>F16P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2 term 2/3 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "F16P+S[USER;cF16P,cG6P:(5323.33384092178/(1.6750418760469012*cF16P+0.001081081081081081*cG6P+1))]==>G6P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2 term 3/3 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G6P+S[USER;cF16P,cG6P,cpAkt:(543.6781326781327*cpAkt/(1.6750418760469012*cF16P+0.001081081081081081*cG6P+1))]==>F16P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "F16P+S[USER;cF16P:(86.74242424242424/(1*cF16P+2.92))]==>PYRin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PYRin+S[USER;cLAC,cPYRin:(15849.989254244574/(64.93506493506493*cLAC+0.01773049645390071*cPYRin+1))]==>LAC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "LAC+S[USER;cLAC,cPYRin:(2.9515938606847696/(64.93506493506493*cLAC+0.01773049645390071*cPYRin+1))]==>PYRin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5 term 1/2 (volume 0.004)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PYRout+S[USER;cPYRin,cPYRout:(1.2280701754385963/(4.385964912280701*cPYRin+4.385964912280701*cPYRout+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5 term 2/2 (volume 0.004)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPYRin,cPYRout:(1.2280701754385963*cPYRin/(4.385964912280701*cPYRin+4.385964912280701*cPYRout+1))]==>PYRout",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5 term 1/2 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPYRin,cPYRout:(186.07123870281762*cPYRout/(4.385964912280701*cPYRin+4.385964912280701*cPYRout+1))]==>PYRin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5 term 2/2 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PYRin+S[USER;cPYRin,cPYRout:(186.07123870281762/(4.385964912280701*cPYRin+4.385964912280701*cPYRout+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PYRin+S[USER;cPYRin:(93.56060606060605/(1*cPYRin+0.996))]==>OAA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7 term 1/2 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "OAA+S[USER;cOAA:(1.0757575757575757/(1*cOAA+8.43))]==>F16P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7 term 2/2 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "OAA+S[USER;cOAA,cPEPCK:(50.06575757575757*cPEPCK/(1*cOAA+8.43))]==>F16P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8 term 1/3 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G6P+S[USER;cG1P,cG6P:(0.9673217637819407/(0.014326647564469915*cG1P+1.2642225031605563*cG6P+1))]==>G1P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8 term 2/3 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G1P+S[USER;cG1P,cG6P:(21.707041764348354/(0.014326647564469915*cG1P+1.2642225031605563*cG6P+1))]==>G6P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8 term 3/3 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G6P+S[USER;cG1P,cG6P,cpAkt:(1.1511128989005093*cpAkt/(0.014326647564469915*cG1P+1.2642225031605563*cG6P+1))]==>G1P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9 term 1/3 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G1P+S[USER;cG1P,cGLY:(6871.690886560775/(0.3717472118959108*cG1P+1605.1364365971108*cGLY+1))]==>GLY",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9 term 2/3 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GLY+S[USER;cG1P,cGLY:(62.01663505034291/(0.3717472118959108*cG1P+1605.1364365971108*cGLY+1))]==>G1P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9 term 3/3 (volume 2.64e-5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GLY+S[USER;cG1P,cGLY,cpGP:(13314.971545308623*cpGP/(0.3717472118959108*cG1P+1605.1364365971108*cGLY+1))]==>G1P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "metabolicENZ (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pGP+S[USER;cG6P:(1.9448*cG6P)]==>GP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction1 term 1/2",
+     ""
+    ],
+    [
+     "4950.626654",
+     "0",
+     "0",
+     "source==>IRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction1 term 2/2",
+     ""
+    ],
+    [
+     "5.5702",
+     "0",
+     "0",
+     "IRS==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction2 term 1/2",
+     ""
+    ],
+    [
+     "239.69",
+     "0",
+     "0",
+     "IRS==>p1IRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction2 term 2/2",
+     ""
+    ],
+    [
+     "0.020934",
+     "0",
+     "0",
+     "p1IRS==>IRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction3",
+     ""
+    ],
+    [
+     "1.214e-5",
+     "0",
+     "0",
+     "p1IRS==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction4",
+     ""
+    ],
+    [
+     "0.2751",
+     "0",
+     "0",
+     "p1IRS+pmTOR==>p1p2IRS+pmTOR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction5",
+     ""
+    ],
+    [
+     "0.0072509",
+     "0",
+     "0",
+     "p1p2IRS==>p1IRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction6",
+     ""
+    ],
+    [
+     "758.12",
+     "0",
+     "0",
+     "IRS+pmTOR==>p2IRS+pmTOR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction7",
+     ""
+    ],
+    [
+     "0.91758",
+     "0",
+     "0",
+     "p2IRS==>IRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction8",
+     ""
+    ],
+    [
+     "0.041292",
+     "0",
+     "0",
+     "p2IRS==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction9 term 1/2",
+     ""
+    ],
+    [
+     "0.013032000000000002",
+     "0",
+     "0",
+     "p2IRS==>p1p2IRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction9 term 2/2",
+     ""
+    ],
+    [
+     "0.000192",
+     "0",
+     "0",
+     "p1p2IRS==>p2IRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction10",
+     ""
+    ],
+    [
+     "0.029311",
+     "0",
+     "0",
+     "p1p2IRS==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction11",
+     ""
+    ],
+    [
+     "4.4307e-5",
+     "0",
+     "0",
+     "Akt+p1IRS==>pAkt+p1IRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction12",
+     ""
+    ],
+    [
+     "0.35211",
+     "0",
+     "0",
+     "pAkt==>Akt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction13",
+     ""
+    ],
+    [
+     "3.1385e-5",
+     "0",
+     "0",
+     "mTOR+pAkt==>pAkt+pmTOR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction14",
+     ""
+    ],
+    [
+     "0.0095934",
+     "0",
+     "0",
+     "pmTOR==>mTOR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction15",
+     ""
+    ],
+    [
+     "0.12225",
+     "0",
+     "0",
+     "Foxo+pAkt==>pFoxo+pAkt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reactionPEP1 term 1/2",
+     ""
+    ],
+    [
+     "486.28",
+     "0",
+     "0",
+     "Foxo==>mRNA+Foxo",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reactionPEP1 term 2/2",
+     ""
+    ],
+    [
+     "0.0046101",
+     "0",
+     "0",
+     "mRNA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reactionPEP2 term 1/2",
+     ""
+    ],
+    [
+     "0.00010958",
+     "0",
+     "0",
+     "mRNA==>PEPCK+mRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reactionPEP2 term 2/2",
+     ""
+    ],
+    [
+     "0.0018592",
+     "0",
+     "0",
+     "PEPCK==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw7c079c91_51e3_4732_8dca_23fb3cd716a7",
+     ""
+    ],
+    [
+     "0.0045985",
+     "0",
+     "0",
+     "pFoxo==>Foxo",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mwfc720c89_b1b3_416a_8958_e9d0aff9f4a6",
+     ""
+    ],
+    [
+     "112.76",
+     "0",
+     "0",
+     "GP==>pGP",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "GP",
+     "0",
+     "0.4726",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GP [GP]",
+     ""
+    ],
+    [
+     "pGP",
+     "0",
+     "0.1723",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pGP [pGP]",
+     ""
+    ],
+    [
+     "mRNA",
+     "0",
+     "2.905",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mRNA [mRNA]",
+     ""
+    ],
+    [
+     "PEPCK",
+     "0",
+     "0.7686",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PEPCK [PEPCK]",
+     ""
+    ],
+    [
+     "IRS",
+     "0",
+     "888.77",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRS [IRS]",
+     ""
+    ],
+    [
+     "p1IRS",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p1IRS [p1IRS]",
+     ""
+    ],
+    [
+     "p2IRS",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p2IRS [p2IRS]",
+     ""
+    ],
+    [
+     "p1p2IRS",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p1p2IRS [p1p2IRS]",
+     ""
+    ],
+    [
+     "Akt",
+     "0",
+     "1.1182",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Akt [Akt]",
+     ""
+    ],
+    [
+     "pAkt",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pAkt [pAkt]",
+     ""
+    ],
+    [
+     "mTOR",
+     "0",
+     "880.25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mTOR [mTOR]",
+     ""
+    ],
+    [
+     "pmTOR",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pmTOR [pmTOR]",
+     ""
+    ],
+    [
+     "Foxo",
+     "0",
+     "1.069e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Foxo [Foxo]",
+     ""
+    ],
+    [
+     "pFoxo",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pFoxo [pFoxo]",
+     ""
+    ],
+    [
+     "PYRout",
+     "0",
+     "34375",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PYRout [PYRout]",
+     ""
+    ],
+    [
+     "GLCex",
+     "0",
+     "28725",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GLCex [GLCex]",
+     ""
+    ],
+    [
+     "F16P",
+     "0",
+     "362537.8787878788",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "F16P [F16P]",
+     ""
+    ],
+    [
+     "PYRin",
+     "0",
+     "37393.93939393939",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PYRin [PYRin]",
+     ""
+    ],
+    [
+     "LAC",
+     "0",
+     "37916666.666666664",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LAC [LAC]",
+     ""
+    ],
+    [
+     "OAA",
+     "0",
+     "83.33333333333333",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "OAA [OAA]",
+     ""
+    ],
+    [
+     "GLY",
+     "0",
+     "182757.57575757575",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GLY [GLY]",
+     ""
+    ],
+    [
+     "G1P",
+     "0",
+     "200871.2121212121",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G1P [G1P]",
+     ""
+    ],
+    [
+     "G6P",
+     "0",
+     "19651.515151515152",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G6P [G6P]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,675 @@
+{
+ "version": 3,
+ "created": "2026-10-26T22:43:19.981266+00:00",
+ "description": "Chen2006 - Nitric Oxide Release from Endothelial Cells\nBioModels BIOMD0000000676 (curated). SBML file: BIOMD0000000676_url.xml.\nSimulation: 0 to 15 time units (SED-ML: MODEL1006230005.sedml), sampling 0.15.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.73e-06 of species peak (worst: Fe3__NO)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chen2006 - Nitric Oxide Release from Endothelial Cells  (BIOMD0000000676, curated BioModels; source file BIOMD0000000676_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe3__Arg_synthesis term 1/2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "Fe3__enos==>Fe3__Arg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe3__Arg_synthesis term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Fe3__Arg==>Fe3__enos",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe2__Arg_synthesis_dissociation term 1/2",
+     ""
+    ],
+    [
+     "189",
+     "0",
+     "0",
+     "Fe2==>Fe2__Arg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe2__Arg_synthesis_dissociation term 2/2",
+     ""
+    ],
+    [
+     "11.4",
+     "0",
+     "0",
+     "Fe2__Arg==>Fe2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe2__formation",
+     ""
+    ],
+    [
+     "0.91",
+     "0",
+     "0",
+     "Fe3__enos==>Fe2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe3__and_NO_formation",
+     ""
+    ],
+    [
+     "53.9",
+     "0",
+     "0",
+     "Fe3__NO==>Fe3__enos+NO",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe3__formation",
+     ""
+    ],
+    [
+     "4.95",
+     "0",
+     "0",
+     "Fe2__NO==>Fe3__enos",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe3__NOHA_formation_degradation term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Fe3__NOHA==>Fe3__enos+NOHA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe3__NOHA_formation_degradation term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Fe3__enos+NOHA==>Fe3__NOHA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe2__Arg_formation",
+     ""
+    ],
+    [
+     "0.91",
+     "0",
+     "0",
+     "Fe3__Arg==>Fe2__Arg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe2__NOHA_formation term 1/2",
+     ""
+    ],
+    [
+     "11.4",
+     "0",
+     "0",
+     "Fe2__NOHA==>Fe2+NOHA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe2__NOHA_formation term 2/2",
+     ""
+    ],
+    [
+     "1.89",
+     "0",
+     "0",
+     "Fe2+NOHA==>Fe2__NOHA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe3__O2_Arg_formation_with_Oxygen_activation",
+     ""
+    ],
+    [
+     "387",
+     "0",
+     "0",
+     "Fe2__Arg==>Fe3__O2__Arg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe3__O2_Arg_degradation",
+     ""
+    ],
+    [
+     "98",
+     "0",
+     "0",
+     "Fe3__O2__Arg==>Fe2__Arg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe3__NOHA_synthesis",
+     ""
+    ],
+    [
+     "12.6",
+     "0",
+     "0",
+     "Fe3__O2__Arg==>Fe3__NOHA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe2__NOHA_synthesis",
+     ""
+    ],
+    [
+     "0.91",
+     "0",
+     "0",
+     "Fe3__NOHA==>Fe2__NOHA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe3__O2__NOHA_synthesis_with_Oxygen_activation",
+     ""
+    ],
+    [
+     "499.5",
+     "0",
+     "0",
+     "Fe2__NOHA==>Fe3__O2__NOHA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe3__NO_and_Citrulline_synthesis",
+     ""
+    ],
+    [
+     "29.4",
+     "0",
+     "0",
+     "Fe3__O2__NOHA==>Fe3__NO+Citrulline",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe2__NO_synthesis",
+     ""
+    ],
+    [
+     "0.91",
+     "0",
+     "0",
+     "Fe3__NO==>Fe2__NO",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fe3__O2__NOHA_degradation",
+     ""
+    ],
+    [
+     "89.9",
+     "0",
+     "0",
+     "Fe3__O2__NOHA==>Fe2__NOHA",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Arg",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "100",
+     "Arg [Arg]",
+     ""
+    ],
+    [
+     "Fe3__enos",
+     "0",
+     "0.015",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fe3+(enos) [Fe3__enos]",
+     ""
+    ],
+    [
+     "Fe3__Arg",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fe3+_Arg [Fe3__Arg]",
+     ""
+    ],
+    [
+     "Fe2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fe2+ [Fe2]",
+     ""
+    ],
+    [
+     "Fe2__Arg",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fe2+_Arg [Fe2__Arg]",
+     ""
+    ],
+    [
+     "Fe3__NO",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fe3+_NO [Fe3__NO]",
+     ""
+    ],
+    [
+     "NO",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NO [NO]",
+     ""
+    ],
+    [
+     "Fe2__NO",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fe2+_NO [Fe2__NO]",
+     ""
+    ],
+    [
+     "Fe3__NOHA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fe3+_NOHA [Fe3__NOHA]",
+     ""
+    ],
+    [
+     "NOHA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NOHA [NOHA]",
+     ""
+    ],
+    [
+     "Fe2__NOHA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fe2+_NOHA [Fe2__NOHA]",
+     ""
+    ],
+    [
+     "O2",
+     "0",
+     "150",
+     "Y",
+     "0",
+     "No",
+     "150",
+     "O2 [O2]",
+     ""
+    ],
+    [
+     "Fe3__O2__Arg",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fe3+_O2-_Arg [Fe3__O2__Arg]",
+     ""
+    ],
+    [
+     "Fe3__O2__NOHA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fe3+_O2-_NOHA [Fe3__O2__NOHA]",
+     ""
+    ],
+    [
+     "Citrulline",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Citrulline [Citrulline]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.15",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "15",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.15",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

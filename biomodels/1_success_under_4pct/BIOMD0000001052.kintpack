@@ -1,0 +1,481 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:16:22.812072+00:00",
+ "description": "Alharbi2020 - Tumor and immune system competition\nBioModels BIOMD0000001052 (curated). SBML file: Tumor_cells_immune_system_competition.xml.\nSimulation: 0 to 30 time units (SED-ML: Tumor_cells_immune_system_competition.sedml), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.49e-06 of species peak (worst: I)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): T1 = T",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Alharbi2020 - Tumor and immune system competition  (BIOMD0000001052, curated BioModels; source file Tumor_cells_immune_system_competition.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Normal_cell_proliferation",
+     ""
+    ],
+    [
+     "0.4312",
+     "0",
+     "0",
+     "N==>2N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "division_of_normal_cells_into_abnormal_cells",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N+S[USER;cN:(1.2892880000000002e-6*cN)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Normal_cells_eradication_by_immune_cells",
+     ""
+    ],
+    [
+     "0.4312",
+     "0",
+     "0",
+     "N+I==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Normal_cells_eradication_or_inhibition_by_tumor_cells",
+     ""
+    ],
+    [
+     "0.9314",
+     "0",
+     "0",
+     "N+T1==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_cells_proliferation",
+     ""
+    ],
+    [
+     "0.4426",
+     "0",
+     "0",
+     "T1==>2T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "decline_of_tumor_cells",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T1+S[USER;cT1:(0.17704*cT1)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "conversion_of_abnormal_cells_into_tumor_cells",
+     ""
+    ],
+    [
+     "1.189",
+     "0",
+     "0",
+     "N+T1==>2T1+N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_cell_eradication_or_inhibition_by_immune_cells",
+     ""
+    ],
+    [
+     "0.1469",
+     "0",
+     "0",
+     "T1+I==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "constant_source_of_immune_system_response",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "source==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "immune_cells_death",
+     ""
+    ],
+    [
+     "0.57",
+     "0",
+     "0",
+     "I==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "elimination_of_tumor_cells_due_to_the_detection_of_their_appearance",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I+N+S[USER;cN:(0.271/(cN+0.813))]==>2I+N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "elimination_of_tumor_cells_due_to_the_detection_of_their_activity",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I+T1+S[USER;cT1:(0.7829/(cT1+0.862))]==>2I+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "death_of_immune_cells_after_interaction_with_tumor",
+     ""
+    ],
+    [
+     "0.813",
+     "0",
+     "0",
+     "I+N==>N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "suppression_of_immune_activity_by_tumor_cells",
+     ""
+    ],
+    [
+     "0.3634",
+     "0",
+     "0",
+     "I+T1==>T1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "I",
+     "0",
+     "0.999999999999994",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I [I]",
+     ""
+    ],
+    [
+     "N",
+     "0",
+     "0.999999999999993",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N [N]",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "1.22",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T [T]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

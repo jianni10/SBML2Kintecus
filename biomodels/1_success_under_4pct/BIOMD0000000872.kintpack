@@ -1,0 +1,581 @@
+{
+ "version": 3,
+ "created": "2026-11-01T23:01:49.421799+00:00",
+ "description": "Verma2016 - HIV and HPV co-infection, T-cell response\nBioModels BIOMD0000000872 (curated). SBML file: verma2017.xml.\nSimulation: 0 to 500 time units (SED-ML: verma2017.sedml), sampling 5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.70e-06 of species peak (worst: s12)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] re25: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for ",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Verma2016 - HIV and HPV co-infection, T-cell response  (BIOMD0000000872, curated BioModels; source file verma2017.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1",
+     ""
+    ],
+    [
+     "467",
+     "0",
+     "0",
+     "s3==>s2+s3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3",
+     ""
+    ],
+    [
+     "23",
+     "0",
+     "0",
+     "s2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re4",
+     ""
+    ],
+    [
+     "1.9700214132762312e-7",
+     "0",
+     "0",
+     "s4+s2==>s3+s2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re5",
+     ""
+    ],
+    [
+     "4864.0256959314775",
+     "0",
+     "0",
+     "source==>s4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re7",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "s4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re9",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "s12==>s13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11",
+     ""
+    ],
+    [
+     "48",
+     "0",
+     "0",
+     "s12==>s14+s12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re12",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "s12+s16==>s16",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re14",
+     ""
+    ],
+    [
+     "0.048",
+     "0",
+     "0",
+     "s13==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re15",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s16+s16+s13+S[USER;cs4:(28.571428571428573/cs4)]==>s13+s16",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re17",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "s13+s16==>s16",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re18",
+     ""
+    ],
+    [
+     "0.048",
+     "0",
+     "0",
+     "s12==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re20",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "s14==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re24",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "s13==>2s13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re25",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cs12,cs14,cs2:(0.0067*cs14*(-cs12+0.20833*cs2+10000)/(-cs12+0.20833*cs2+1010000))]==>s12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re26",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "s16+s13==>2s16+s13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_HPV_due_to_HPV_self_proliferating",
+     ""
+    ],
+    [
+     "48",
+     "0",
+     "0",
+     "s13==>s14+s13",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "s2",
+     "0",
+     "48000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V [s2]",
+     ""
+    ],
+    [
+     "s3",
+     "0",
+     "2364.0256959314775",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I [s3]",
+     ""
+    ],
+    [
+     "s4",
+     "0",
+     "250000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T [s4]",
+     ""
+    ],
+    [
+     "s14",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "W [s14]",
+     ""
+    ],
+    [
+     "s16",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E [s16]",
+     ""
+    ],
+    [
+     "s13",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Y2 [s13]",
+     ""
+    ],
+    [
+     "s12",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Y1 [s12]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "5",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "500",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "5",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

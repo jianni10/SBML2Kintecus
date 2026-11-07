@@ -1,0 +1,784 @@
+{
+ "version": 3,
+ "created": "2026-11-01T20:47:18.231661+00:00",
+ "description": "Gupta2009 - Eicosanoid Metabolism\nBioModels BIOMD0000000436 (curated). SBML file: BIOMD0000000436_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000436_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 9.44e-01 of species peak (worst: HETE)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 9.44e-01 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'event' not converted (state-triggered (not a time >= t0 trigger))\n  [info] r3: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for DG\n  [info] r7 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - AA: zero order, signed\n  [info] r5 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - AA: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Gupta2009 - Eicosanoid Metabolism  (BIOMD0000000436, curated BioModels; source file BIOMD0000000436_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r2",
+     ""
+    ],
+    [
+     "1e-15",
+     "0",
+     "0",
+     "source==>AA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(1e-15*cTIME_+1e-15)]==>AA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3 (consumes DG)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(-1e-15*cTIME_-1e-15)]==>DG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r7 term 1/2",
+     ""
+    ],
+    [
+     "1e-15",
+     "0",
+     "0",
+     "GPCho==>AA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r7 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cGPCho,cTIME_:(5.024520025612589e-16*cGPCho*cTIME_)]==>GPCho",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r7 term 2/2 (consumes AA)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cGPCho,cTIME_:((-1*5.024520025612589e-16*cGPCho*cTIME_))]==>AA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r5 term 1/3",
+     ""
+    ],
+    [
+     "1e-15",
+     "0",
+     "0",
+     "GPCho==>AA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r5 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GPCho+S[USER;cTIME_:(4.975479974387411e-16*cTIME_)]==>AA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r5 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cGPCho,cTIME_:(5.024520025612589e-16*cGPCho*cTIME_^2)]==>GPCho",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r5 term 3/3 (consumes AA)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cGPCho,cTIME_:((-1*5.024520025612589e-16*cGPCho*cTIME_^2))]==>AA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r11",
+     ""
+    ],
+    [
+     "0.111",
+     "0",
+     "0",
+     "AA==>PGH2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r10 term 1/2",
+     ""
+    ],
+    [
+     "0.024",
+     "0",
+     "0",
+     "AA==>PGH2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r10 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AA+S[USER;cTIME_:(0.024*cTIME_)]==>PGH2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8",
+     ""
+    ],
+    [
+     "0.007",
+     "0",
+     "0",
+     "AA==>HETE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r4",
+     ""
+    ],
+    [
+     "1e-15",
+     "0",
+     "0",
+     "AA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9",
+     ""
+    ],
+    [
+     "0.187",
+     "0",
+     "0",
+     "HETE==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r13",
+     ""
+    ],
+    [
+     "0.204",
+     "0",
+     "0",
+     "PGH2==>PGE2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r14",
+     ""
+    ],
+    [
+     "1e-15",
+     "0",
+     "0",
+     "PGE2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r15",
+     ""
+    ],
+    [
+     "0.061",
+     "0",
+     "0",
+     "PGH2==>PGF2a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r16",
+     ""
+    ],
+    [
+     "1e-15",
+     "0",
+     "0",
+     "PGF2a==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r17",
+     ""
+    ],
+    [
+     "3.116",
+     "0",
+     "0",
+     "PGH2==>PGD2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r18",
+     ""
+    ],
+    [
+     "0.054",
+     "0",
+     "0",
+     "PGD2==>PGJ2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r19",
+     ""
+    ],
+    [
+     "0.029",
+     "0",
+     "0",
+     "PGD2==>dPGD2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r20",
+     ""
+    ],
+    [
+     "0.014",
+     "0",
+     "0",
+     "dPGD2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r21",
+     ""
+    ],
+    [
+     "0.034",
+     "0",
+     "0",
+     "PGJ2==>dPGJ2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r22",
+     ""
+    ],
+    [
+     "0.116",
+     "0",
+     "0",
+     "dPGJ2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "FA",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "FA [FA]",
+     ""
+    ],
+    [
+     "HETE",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HETE [HETE]",
+     ""
+    ],
+    [
+     "PGH2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PGH2 [PGH2]",
+     ""
+    ],
+    [
+     "PGE2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PGE2 [PGE2]",
+     ""
+    ],
+    [
+     "PGF2a",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PGF2a [PGF2a]",
+     ""
+    ],
+    [
+     "PGD2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PGD2 [PGD2]",
+     ""
+    ],
+    [
+     "PGJ2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PGJ2 [PGJ2]",
+     ""
+    ],
+    [
+     "dPGJ2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "dPGJ2 [dPGJ2]",
+     ""
+    ],
+    [
+     "AA",
+     "0",
+     "25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Arachidonic acid [AA]",
+     ""
+    ],
+    [
+     "LPS",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "0.5",
+     "LPS [LPS]",
+     ""
+    ],
+    [
+     "DG",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DG [DG]",
+     ""
+    ],
+    [
+     "GPCho",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GPCho [GPCho]",
+     ""
+    ],
+    [
+     "dPGD2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "dPGD2 [dPGD2]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

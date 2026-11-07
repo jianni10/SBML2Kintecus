@@ -1,0 +1,542 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:59:09.157754+00:00",
+ "description": "Tolic2000_InsulinGlucoseFeedback\nBioModels BIOMD0000000372 (curated). SBML file: BIOMD0000000372_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000372_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.63e-06 of species peak (worst: x3)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tolic2000_InsulinGlucoseFeedback  (BIOMD0000000372, curated BioModels; source file BIOMD0000000372_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIp/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG:(210/(1+785.7719942274173*exp((-1*0.0003333333333333333*cG))))]==>Ip",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIp/dt term 2",
+     ""
+    ],
+    [
+     "0.018181818181818184",
+     "0",
+     "0",
+     "Ii==>Ip+Ii",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIp/dt term 3",
+     ""
+    ],
+    [
+     "0.23333333333333334",
+     "0",
+     "0",
+     "Ip==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIi/dt term 1",
+     ""
+    ],
+    [
+     "0.06666666666666667",
+     "0",
+     "0",
+     "Ip==>Ii+Ip",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIi/dt term 2",
+     ""
+    ],
+    [
+     "0.028181818181818183",
+     "0",
+     "0",
+     "Ii==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG/dt term 1",
+     ""
+    ],
+    [
+     "144",
+     "0",
+     "0",
+     "source==>G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG:(72*exp((-1*0.0006944444444444445*cG)))]==>G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx3:(180/(0.0005313976217982533*exp(0.09666666666666666*cx3)+1))]==>G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG/dt term 4",
+     ""
+    ],
+    [
+     "0.004",
+     "0",
+     "0",
+     "G==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G+S[USER;cIi:(0.09/(74963.0458040227/cIi^1.77+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx3/dt term 1",
+     ""
+    ],
+    [
+     "0.08333333333333333",
+     "0",
+     "0",
+     "x2==>x3+x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx3/dt term 2",
+     ""
+    ],
+    [
+     "0.08333333333333333",
+     "0",
+     "0",
+     "x3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 1",
+     ""
+    ],
+    [
+     "0.08333333333333333",
+     "0",
+     "0",
+     "Ip==>x1+Ip",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx1/dt term 2",
+     ""
+    ],
+    [
+     "0.08333333333333333",
+     "0",
+     "0",
+     "x1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 1",
+     ""
+    ],
+    [
+     "0.08333333333333333",
+     "0",
+     "0",
+     "x1==>x2+x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dx2/dt term 2",
+     ""
+    ],
+    [
+     "0.08333333333333333",
+     "0",
+     "0",
+     "x2==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x1",
+     "0",
+     "110.420253",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x1 [x1]",
+     ""
+    ],
+    [
+     "x2",
+     "0",
+     "112.7601171",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x2 [x2]",
+     ""
+    ],
+    [
+     "x3",
+     "0",
+     "104.5878705",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x3 [x3]",
+     ""
+    ],
+    [
+     "G",
+     "0",
+     "12342.61665",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G [G]",
+     ""
+    ],
+    [
+     "Ii",
+     "0",
+     "243.2865183",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ii [Ii]",
+     ""
+    ],
+    [
+     "Ip",
+     "0",
+     "93.36441699",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ip [Ip]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

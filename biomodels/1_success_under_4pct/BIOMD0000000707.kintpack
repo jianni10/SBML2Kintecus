@@ -1,0 +1,447 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:07:02.527176+00:00",
+ "description": "Revilla2003 - Controlling HIV infection using recombinant viruses\nBioModels BIOMD0000000707 (curated). SBML file: MODEL1006230047.xml.\nSimulation: 0 to 90 time units (SED-ML: MODEL1006230047_curated_annotated.sedml), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.18e-06 of species peak (worst: Pathogen_Virus)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Revilla2003 - Controlling HIV infection using recombinant viruses  (BIOMD0000000707, curated BioModels; source file MODEL1006230047.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_Normal_cells",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "source==>Normal_Th_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Normal_cells",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Normal_Th_cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infection_of_Normal_cells_with_Pathogen",
+     ""
+    ],
+    [
+     "0.004",
+     "0",
+     "0",
+     "Normal_Th_cells+Pathogen_Virus==>Single_Infected_Th_Cells+Pathogen_Virus",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Single_Infected_Cells",
+     ""
+    ],
+    [
+     "0.33",
+     "0",
+     "0",
+     "Single_Infected_Th_Cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infection_of_Single_Infeced_Cells_with_Recombinant_Virus",
+     ""
+    ],
+    [
+     "0.004",
+     "0",
+     "0",
+     "Single_Infected_Th_Cells+Recombinant_Virus==>Double_Infected_Th_Cells+Recombinant_Virus",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Release_of_Pathogen",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "Single_Infected_Th_Cells==>Pathogen_Virus+Single_Infected_Th_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Double_Infected_Cells",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Double_Infected_Th_Cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Release_of_Recombinant_Virus",
+     ""
+    ],
+    [
+     "2000",
+     "0",
+     "0",
+     "Double_Infected_Th_Cells==>Recombinant_Virus+Double_Infected_Th_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Pathogen_Virus",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Pathogen_Virus==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Recombinant_Virus",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Recombinant_Virus==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Normal_Th_cells",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Normal Th cells [Normal_Th_cells]",
+     ""
+    ],
+    [
+     "Pathogen_Virus",
+     "0",
+     "149",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pathogen Virus [Pathogen_Virus]",
+     ""
+    ],
+    [
+     "Single_Infected_Th_Cells",
+     "0",
+     "6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Single Infected Th Cells [Single_Infected_Th_Cells]",
+     ""
+    ],
+    [
+     "Recombinant_Virus",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Recombinant Virus [Recombinant_Virus]",
+     ""
+    ],
+    [
+     "Double_Infected_Th_Cells",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Double Infected Th Cells [Double_Infected_Th_Cells]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "90",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

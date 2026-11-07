@@ -1,0 +1,611 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:52:36.366107+00:00",
+ "description": "Sen2013 - Phospholipid Synthesis in P.knowlesi\nBioModels BIOMD0000000495 (curated). SBML file: BIOMD0000000495_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000495_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.52e-06 of species peak (worst: mwf166ad55_4ff0_49fb_95d2_b657ad7653d5)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] mw155447fb_ce5b_4ba2_bd74_434951481a78: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mw4c9aa283_577e_4b6c_ae5a_c96f62dbbb08: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mw55fba323_0865_4254_a6e9_09acd2b4a10f: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mwb8420f59_69c3_4707_918c_2e06bedff243: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mwc9170c21_608b_4bd7_b2d0_f359d045da17: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mwb47b4c45_fac9_49e6_a6a4_87b9050ddfbb: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mw4f62d07e_217b_4602_b6fe_548af112eec8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mw307551ca_91cc_4634_bba5_0e3ecd38cfdd: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mw15bb92b6_4cff_4a41_b815_c1d904618e57: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mw106407fc_e33f_45aa_b5ae_258bd4790633: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mwfb854977_51ea_4daa_b84e_3bcb2fcccd39: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mwd71cb6c2_6420_46b9_ab17_eedc7b0fd8dc: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mwdd7079dc_8d70_41b7_a369_3334522cdd13: rate order differs from the stoichiometry; consumed on separate line(s) - mwf166ad554ff049fb95d2b655: zero order, signed\n  [info] mw185e644d_6f10_499f_a3a6_5a47d7ba2eef: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): mw73259e20240e4f3248658898 = mw73259e20_240e_4f3a_b2e0_9ca248658898; mw15abaa48d7d04845ae04c495 = mw15abaa48_d7d0_4845_ae04_c573d289d495; mwfcfaf60414d447a6b0212261 = mwfcfaf604_14d4_47a6_b021_226d1fb5497c; mw8796c919925149708f870bc1 = mw8796c919_9251_4970_8f87_0bca9ecfeb5c; mw849ed3fd87d944d29f3e4d41 = mw849ed3fd_87d9_44d2_9f3e_4d631b900d41; mwcb834e43dc5745ae9452f4c1 = mwcb834e43_dc57_45ae_9452_f4c10955caf1; mwf166ad554ff049fb95d2b655 = mwf166ad55_4ff0_49fb_95d2_b657ad7653d5; mwee54b5b4b8c041df8dda5b15 = mwee54b5b4_b8c0_41df_8dda_5b160c5e10a5; mw919f8a86e7024b249cd7ada1 = mw919f8a86_e702_4b24_9cd7_adad694fcf9b; mw812f63db4cb040adb92b9871 = mw812f63db_4cb0_40ad_b92b_9874be969dfe; mw08818dfefb1245cc8c1dd961 = mw08818dfe_fb12_45cc_8c1d_d965f142d0ce",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sen2013 - Phospholipid Synthesis in P.knowlesi  (BIOMD0000000495, curated BioModels; source file BIOMD0000000495_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw79830677_2d7e_4f49_9d0b_f05fe026749f",
+     ""
+    ],
+    [
+     "7.36532122169548e-7",
+     "0",
+     "0",
+     "source==>mw15abaa48d7d04845ae04c495",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw155447fb_ce5b_4ba2_bd74_434951481a78",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mw15abaa48d7d04845ae04c495+S[USER;cmw15abaa48d7d04845ae04c495:(1.30568052867489e-6/(1*cmw15abaa48d7d04845ae04c495+0.000796722533770371))]==>mwfcfaf60414d447a6b0212261",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw4c9aa283_577e_4b6c_ae5a_c96f62dbbb08",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mw15abaa48d7d04845ae04c495+S[USER;cmw15abaa48d7d04845ae04c495:(2.620389955953e-6/(1*cmw15abaa48d7d04845ae04c495+2.39591245105385e-5))]==>mw8796c919925149708f870bc1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw55fba323_0865_4254_a6e9_09acd2b4a10f",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mw8796c919925149708f870bc1+S[USER;cmw8796c919925149708f870bc1:(8.62083015294042e-6/(1*cmw8796c919925149708f870bc1+0.000108608492867695))]==>mw849ed3fd87d944d29f3e4d41",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mwb8420f59_69c3_4707_918c_2e06bedff243",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mw849ed3fd87d944d29f3e4d41+S[USER;cmw849ed3fd87d944d29f3e4d41:(1.0780611108133e-6/(1*cmw849ed3fd87d944d29f3e4d41+0.000122223738254533))]==>mwcb834e43dc5745ae9452f4c1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mwc9170c21_608b_4bd7_b2d0_f359d045da17",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mwfcfaf60414d447a6b0212261+S[USER;cmwfcfaf60414d447a6b0212261:(2.24518521682572e-6/(1*cmwfcfaf60414d447a6b0212261+0.000203868171233541))]==>mwf166ad554ff049fb95d2b655",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mwb47b4c45_fac9_49e6_a6a4_87b9050ddfbb",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mw849ed3fd87d944d29f3e4d41+S[USER;cmw849ed3fd87d944d29f3e4d41:(5.61352652271706e-6/(1*cmw849ed3fd87d944d29f3e4d41+0.000227368268903121))]==>mwf166ad554ff049fb95d2b655",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw4f62d07e_217b_4602_b6fe_548af112eec8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mwcb834e43dc5745ae9452f4c1+S[USER;cmwcb834e43dc5745ae9452f4c1:(4.12788404046025e-7/(1*cmwcb834e43dc5745ae9452f4c1+3.10498877738431e-5))]==>mwee54b5b4b8c041df8dda5b15",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw307551ca_91cc_4634_bba5_0e3ecd38cfdd",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mwf166ad554ff049fb95d2b655+S[USER;cmwf166ad554ff049fb95d2b655:(0.00141678261342411/(1*cmwf166ad554ff049fb95d2b655+0.321125432799976))]==>mwee54b5b4b8c041df8dda5b15",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw15bb92b6_4cff_4a41_b815_c1d904618e57",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mwee54b5b4b8c041df8dda5b15+S[USER;cmwee54b5b4b8c041df8dda5b15:(6.97333029651601e-7/(1*cmwee54b5b4b8c041df8dda5b15+3.76085190209901e-6))]==>mwfcfaf60414d447a6b0212261",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw106407fc_e33f_45aa_b5ae_258bd4790633",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mwf166ad554ff049fb95d2b655+S[USER;cmwf166ad554ff049fb95d2b655:(8.99054709659885e-5/(1*cmwf166ad554ff049fb95d2b655+0.171122974053956))]==>mwfcfaf60414d447a6b0212261",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mwfb854977_51ea_4daa_b84e_3bcb2fcccd39",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mwee54b5b4b8c041df8dda5b15+S[USER;cmwee54b5b4b8c041df8dda5b15:(1.5662833197895e-6/(1*cmwee54b5b4b8c041df8dda5b15+2.41308392167819e-5))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mwd71cb6c2_6420_46b9_ab17_eedc7b0fd8dc",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mwfcfaf60414d447a6b0212261+S[USER;cmwfcfaf60414d447a6b0212261:(1.53754224136353e-6/(1*cmwfcfaf60414d447a6b0212261+0.000203777063277265))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mwdd7079dc_8d70_41b7_a369_3334522cdd13 (consumes mwf166ad554ff049fb95d2b655)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmwfcfaf60414d447a6b0212261:((-1*0.00077375270429582*cmwfcfaf60414d447a6b0212261/(cmwfcfaf60414d447a6b0212261+0.155164586398126)))]==>mwf166ad554ff049fb95d2b655",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mwa25d1a3d_bbd9_41b8_8274_236f9d67bb60",
+     ""
+    ],
+    [
+     "7.629407500822281e-8",
+     "0",
+     "0",
+     "source==>mw812f63db4cb040adb92b9871",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw185e644d_6f10_499f_a3a6_5a47d7ba2eef",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mw812f63db4cb040adb92b9871+S[USER;cmw812f63db4cb040adb92b9871:(5.55658410000431e-7/(1*cmw812f63db4cb040adb92b9871+3.04072645117622e-5))]==>mwcb834e43dc5745ae9452f4c1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw5194cffd_f75a_4c61_b60e_23d5b0fea120",
+     ""
+    ],
+    [
+     "0.000132810241970949",
+     "0",
+     "0",
+     "mw8796c919925149708f870bc1==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "mw73259e20240e4f3248658898",
+     "0",
+     "0.0001",
+     "Y",
+     "0",
+     "No",
+     "0.0001",
+     "SerE [mw73259e20_240e_4f3a_b2e0_9ca248658898]",
+     ""
+    ],
+    [
+     "mw15abaa48d7d04845ae04c495",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ser [mw15abaa48_d7d0_4845_ae04_c573d289d495]",
+     ""
+    ],
+    [
+     "mwfcfaf60414d447a6b0212261",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PS [mwfcfaf604_14d4_47a6_b021_226d1fb5497c]",
+     ""
+    ],
+    [
+     "mw8796c919925149708f870bc1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Etn [mw8796c919_9251_4970_8f87_0bca9ecfeb5c]",
+     ""
+    ],
+    [
+     "mw849ed3fd87d944d29f3e4d41",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PEtn [mw849ed3fd_87d9_44d2_9f3e_4d631b900d41]",
+     ""
+    ],
+    [
+     "mwcb834e43dc5745ae9452f4c1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PCho [mwcb834e43_dc57_45ae_9452_f4c10955caf1]",
+     ""
+    ],
+    [
+     "mwf166ad554ff049fb95d2b655",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PE [mwf166ad55_4ff0_49fb_95d2_b657ad7653d5]",
+     ""
+    ],
+    [
+     "mwee54b5b4b8c041df8dda5b15",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PC [mwee54b5b4_b8c0_41df_8dda_5b160c5e10a5]",
+     ""
+    ],
+    [
+     "mw919f8a86e7024b249cd7ada1",
+     "0",
+     "5e-5",
+     "Y",
+     "0",
+     "No",
+     "5e-5",
+     "ChoE [mw919f8a86_e702_4b24_9cd7_adad694fcf9b]",
+     ""
+    ],
+    [
+     "mw812f63db4cb040adb92b9871",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cho [mw812f63db_4cb0_40ad_b92b_9874be969dfe]",
+     ""
+    ],
+    [
+     "mw08818dfefb1245cc8c1dd961",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "EtnE [mw08818dfe_fb12_45cc_8c1d_d965f142d0ce]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

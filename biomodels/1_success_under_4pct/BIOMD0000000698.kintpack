@@ -1,0 +1,926 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:29:10.681340+00:00",
+ "description": "Reed2004 - Methionine Cycle\nBioModels BIOMD0000000698 (curated). SBML file: BIOMD0000000698_url.xml.\nSimulation: 0 to 10 time units (SED-ML: MODEL1006230091.sedml), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.38e-06 of species peak (worst: Homocysteine)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Metin' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] V_MAT_I: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_MAT_III: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] V_METH: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_GNMT: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_MS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_BHMT term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_BHMT term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] V_BHMT term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] V_CBS term 1/3: rate order differs from the stoichiometry; consumed on separate line(s) - Cystathionine: zero order, signed\n  [info] METIN term 3/13: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] METIN term 6/13: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] METIN term 7/13: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] METIN term 10/13: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] METIN term 11/13: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] METIN term 12/13: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\nRenamed species (Kintecus name = SBML id): X5mTHF1 = _5mTHF",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reed2004 - Methionine Cycle  (BIOMD0000000698, curated BioModels; source file BIOMD0000000698_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_MAT_I",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Methionine+S[USER;cAdoMet,cMethionine:(561/(0.82*cAdoMet+1*cMethionine+41))]==>AdoMet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_MAT_III",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAdoMet,cMethionine:(22870/(1+422000/(120.27000000000001*cMethionine*(cAdoMet/(cAdoMet+600))^2+21.1*cMethionine+5.7*cMethionine^2*(cAdoMet/(cAdoMet+600))^2+1*cMethionine^2)))]==>AdoMet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_MAT_III (consumes Methionine)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAdoMet,cMethionine:((-1*22870/(1+422000/(120.27000000000001*cMethionine*(cAdoMet/(cAdoMet+600))^2+21.1*cMethionine+5.7*cMethionine^2*(cAdoMet/(cAdoMet+600))^2+1*cMethionine^2))))]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_METH",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AdoMet+S[USER;cAdoHcy,cAdoMet:(4521/(2.75*cAdoHcy+11*cAdoMet+11))]==>AdoHcy",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_GNMT",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AdoMet+S[USER;cAdoHcy,cAdoMet:(10600/(12628704.056265155*cAdoHcy*(cAdoMet+1e-30)*(1/(cAdoMet+1e-30))^2.3+0.05*cAdoHcy*(cAdoMet+1e-30)+1*cAdoMet+252574081.12530312*(cAdoMet+1e-30)*(1/(cAdoMet+1e-30))^2.3+1e-30))]==>AdoHcy",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_AH term 1/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "AdoHcy==>Homocysteine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_AH term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "Homocysteine==>AdoHcy",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_MS",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Homocysteine+S[USER;cHomocysteine:(2600/(30.2*cHomocysteine+0.6200000000000001))]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_BHMT term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Homocysteine+S[USER;cHomocysteine:(11125/(1*cHomocysteine+12))]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_BHMT term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAdoHcy,cHomocysteine:(62.5*cAdoHcy*cHomocysteine/(cHomocysteine+12))]==>Homocysteine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_BHMT term 2/3 (consumes Methionine)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAdoHcy,cHomocysteine:((-1*62.5*cAdoHcy*cHomocysteine/(cHomocysteine+12)))]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_BHMT term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAdoMet,cHomocysteine:(62.5*cAdoMet*cHomocysteine/(cHomocysteine+12))]==>Homocysteine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_BHMT term 3/3 (consumes Methionine)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAdoMet,cHomocysteine:((-1*62.5*cAdoMet*cHomocysteine/(cHomocysteine+12)))]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_CBS term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cHomocysteine:(30*cHomocysteine)]==>Homocysteine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_CBS term 1/3 (consumes Cystathionine)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cHomocysteine:((-1*30*cHomocysteine))]==>Cystathionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_CBS term 2/3",
+     ""
+    ],
+    [
+     "1.7",
+     "0",
+     "0",
+     "Homocysteine+AdoHcy==>Cystathionine+AdoHcy",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_CBS term 3/3",
+     ""
+    ],
+    [
+     "1.7",
+     "0",
+     "0",
+     "Homocysteine+AdoMet==>Cystathionine+AdoMet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "METIN term 1/13",
+     ""
+    ],
+    [
+     "200",
+     "0",
+     "0",
+     "source==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "METIN term 2/13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW3,cSW4:(100*cSW3*cSW4)]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "METIN term 3/13 (consumes Methionine)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2:((-1*100*cSW1*cSW2))]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "METIN term 4/13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2,cSW5:(100*cSW1*cSW2*cSW5)]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "METIN term 5/13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2,cSW6:(100*cSW1*cSW2*cSW6)]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "METIN term 6/13 (consumes Methionine)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW3,cSW4,cSW5:((-1*100*cSW3*cSW4*cSW5))]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "METIN term 7/13 (consumes Methionine)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW3,cSW4,cSW6:((-1*100*cSW3*cSW4*cSW6))]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "METIN term 8/13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2,cSW3,cSW4:(100*cSW1*cSW2*cSW3*cSW4)]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "METIN term 9/13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW3,cSW4,cSW5,cSW6:(100*cSW3*cSW4*cSW5*cSW6)]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "METIN term 10/13 (consumes Methionine)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2,cSW5,cSW6:((-1*100*cSW1*cSW2*cSW5*cSW6))]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "METIN term 11/13 (consumes Methionine)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2,cSW3,cSW4,cSW5:((-1*100*cSW1*cSW2*cSW3*cSW4*cSW5))]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "METIN term 12/13 (consumes Methionine)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2,cSW3,cSW4,cSW6:((-1*100*cSW1*cSW2*cSW3*cSW4*cSW6))]==>Methionine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "METIN term 13/13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2,cSW3,cSW4,cSW5,cSW6:(100*cSW1*cSW2*cSW3*cSW4*cSW5*cSW6)]==>Methionine",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Methionine",
+     "0",
+     "53.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Methionine [Methionine]",
+     ""
+    ],
+    [
+     "AdoMet",
+     "0",
+     "137.6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AdoMet [AdoMet]",
+     ""
+    ],
+    [
+     "AdoHcy",
+     "0",
+     "13.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AdoHcy [AdoHcy]",
+     ""
+    ],
+    [
+     "Homocysteine",
+     "0",
+     "0.88",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Homocysteine [Homocysteine]",
+     ""
+    ],
+    [
+     "X5mTHF1",
+     "0",
+     "5.2",
+     "Y",
+     "0",
+     "No",
+     "5.2",
+     "5mTHF [_5mTHF]",
+     ""
+    ],
+    [
+     "Cystathionine",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cystathionine [Cystathionine]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 5 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time switch at 8 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW3.TXT-SET",
+     "time switch at 2 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW4",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW4.TXT-SET",
+     "time switch at 5 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW5",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW5.TXT-SET",
+     "time switch at 2 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW6",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW6.TXT-SET",
+     "time switch at 8 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01000000002",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01000000002",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "5",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "8",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW3.TXT",
+   "key": "O_SW3.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW4.TXT",
+   "key": "O_SW4.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "5",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW5.TXT",
+   "key": "O_SW5.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW6.TXT",
+   "key": "O_SW6.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "8",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

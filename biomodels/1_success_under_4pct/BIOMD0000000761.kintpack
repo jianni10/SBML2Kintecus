@@ -1,0 +1,528 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:08:22.506572+00:00",
+ "description": "Cappuccio2006 - Cancer immunotherapy by interleukin-21\nBioModels BIOMD0000000761 (curated). SBML file: Cappuccio2006 v2.0.xml.\nSimulation: 0 to 40 time units (SED-ML: Cappuccio2006 v9.0.sedml), sampling 0.4.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.13e-06 of species peak (worst: P)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): M1 = M; P1 = P",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cappuccio2006 - Cancer immunotherapy by interleukin-21  (BIOMD0000000761, curated BioModels; source file Cappuccio2006 v2.0.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL_21_Clearance_Rate",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "U==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL_21_Production_by_Tumor",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cZ:(634*cZ^1.5)]==>U",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_Cell_Population_Growth",
+     ""
+    ],
+    [
+     "0.095",
+     "0",
+     "0",
+     "X==>2X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_Cell_Population_Growth_IL_21_Inhibition term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X+S[USER;cU,cX:(0.051300000000000005*cX/(0.01*cU+1.054))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_Cell_Population_Growth_IL_21_Inhibition term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X+U+S[USER;cU,cX:(0.095*cX/(0.01*cU+1.054))]==>U",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_Population_Growth",
+     ""
+    ],
+    [
+     "0.26",
+     "0",
+     "0",
+     "Y==>2Y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_Population_Growth_Inhibition",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Y+S[USER;cM1,cY:(0.26*cY/(0.003*cM1/(0.0007050197405527354*cM1+1)+0.066))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_Memory_Formation",
+     ""
+    ],
+    [
+     "0.58",
+     "0",
+     "0",
+     "U==>M1+U",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_Memory_Loss",
+     ""
+    ],
+    [
+     "0.014",
+     "0",
+     "0",
+     "M1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cytotoxic_Protein_Secretion",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "U+S[USER;cU:(1/(cU+0.1))]==>P1+U",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cytotoxic_Protein_Degradation",
+     ""
+    ],
+    [
+     "0.08",
+     "0",
+     "0",
+     "P1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Killing_By_NK_Cells",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "Z+P1+X==>P1+X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Killing_By_CD8_Cells",
+     ""
+    ],
+    [
+     "0.0485",
+     "0",
+     "0",
+     "Z+P1+Y==>P1+Y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Growth",
+     ""
+    ],
+    [
+     "5.1",
+     "0",
+     "0",
+     "source==>Z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Growth_Exponential",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cZ:(1e-6*cZ)]==>Z",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "U",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "U_IL-21 [U]",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "1.95185",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X_NK_T_Cells [X]",
+     ""
+    ],
+    [
+     "Y",
+     "0",
+     "0.066",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Y_CD8_T_Cells [Y]",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M_CD8_Memory_Factor [M]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P_Cytotoxic_Protein [P]",
+     ""
+    ],
+    [
+     "Z",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Z_Tumor_SA [Z]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.4",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "40",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.4",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

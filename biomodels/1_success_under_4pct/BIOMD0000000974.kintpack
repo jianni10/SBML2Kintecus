@@ -1,0 +1,352 @@
+{
+ "version": 3,
+ "created": "2026-10-26T22:53:15.022043+00:00",
+ "description": "Carcione2020 - Deterministic SEIR simulation of a COVID-19 outbreak\nBioModels BIOMD0000000974 (curated). SBML file: Carcione2020.xml.\nSimulation: 0 to 80 time units (SED-ML: Carcione2020.sedml), sampling 0.08.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.29e-06 of species peak (worst: Exposed)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Carcione2020 - Deterministic SEIR simulation of a COVID-19 outbreak  (BIOMD0000000974, curated BioModels; source file Carcione2020.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Exposed",
+     ""
+    ],
+    [
+     "8.33e-8",
+     "0",
+     "0",
+     "Susceptible+Infected==>Exposed+Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Exposed_to_Infected",
+     ""
+    ],
+    [
+     "0.33333",
+     "0",
+     "0",
+     "Exposed==>Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_to_Recovered",
+     ""
+    ],
+    [
+     "0.125",
+     "0",
+     "0",
+     "Infected==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_to_Deceased",
+     ""
+    ],
+    [
+     "0.006",
+     "0",
+     "0",
+     "Infected==>Deceased",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Susceptible",
+     "0",
+     "9979999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible [Susceptible]",
+     ""
+    ],
+    [
+     "Exposed",
+     "0",
+     "20000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Exposed [Exposed]",
+     ""
+    ],
+    [
+     "Infected",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected [Infected]",
+     ""
+    ],
+    [
+     "Recovered",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Recovered [Recovered]",
+     ""
+    ],
+    [
+     "Deceased",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Deceased [Deceased]",
+     ""
+    ],
+    [
+     "Total_population",
+     "0",
+     "10000000",
+     "Y",
+     "0",
+     "No",
+     "10000000",
+     "Total_population [Total_population]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.08",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "80",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.08",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

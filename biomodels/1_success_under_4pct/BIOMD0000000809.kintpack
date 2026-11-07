@@ -1,0 +1,492 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:09:54.424017+00:00",
+ "description": "Malinzi2018 - tumour-immune interaction model\nBioModels BIOMD0000000809 (curated). SBML file: Malinzi2018 - tumour-immune interaction model.xml.\nSimulation: 0 to 10 time units (SED-ML: Malinzi2018 - tumour-immune interaction model.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.05e-06 of species peak (worst: ystar)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): p_R = R",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Malinzi2018 - tumour-immune interaction model  (BIOMD0000000809, curated BioModels; source file Malinzi2018 - tumour-immune interaction model.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "x_logistic_growth term 1/2",
+     ""
+    ],
+    [
+     "1.3398",
+     "0",
+     "0",
+     "x==>2x",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "x_logistic_growth term 2/2",
+     ""
+    ],
+    [
+     "0.33495",
+     "0",
+     "0",
+     "x+x==>x",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "x_proliferation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x+y+S[USER;cx:(3.0218/(cx+2.02))]==>2x+y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "x_immune_inactivation",
+     ""
+    ],
+    [
+     "0.00218",
+     "0",
+     "0",
+     "x+y==>y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "y_logistic_growth term 1/2",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "y==>2y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "y_logistic_growth term 2/2",
+     ""
+    ],
+    [
+     "0.15",
+     "0",
+     "0",
+     "y+y==>y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "y_tumour_lysis",
+     ""
+    ],
+    [
+     "0.7279",
+     "0",
+     "0",
+     "y+x==>x",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "u_production",
+     ""
+    ],
+    [
+     "300",
+     "0",
+     "0",
+     "x+y==>u+x+y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "u_decay",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "u==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ystar_formation",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "x+y==>ystar+x+y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ystar_decay",
+     ""
+    ],
+    [
+     "0.24",
+     "0",
+     "0",
+     "ystar==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "y+S[USER;cp_R,cy,cystar:(0.09999999999999999*cp_R/(cy+cystar-1))]==>p_R+y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_R+ystar+S[USER;cy,cystar:(0.08/(cy+cystar-1))]==>ystar",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_R+y+y+S[USER;cy,cystar:(0.049999999999999996/(cy+cystar-1))]==>2y",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x",
+     "0",
+     "0.3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Immune cell x [x]",
+     ""
+    ],
+    [
+     "y",
+     "0",
+     "0.8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumour cell y [y]",
+     ""
+    ],
+    [
+     "u",
+     "0",
+     "1e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Chemokine concentration u [u]",
+     ""
+    ],
+    [
+     "ystar",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Dead tumour cell ystar [ystar]",
+     ""
+    ],
+    [
+     "p_R",
+     "0",
+     "0.8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter R [R]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

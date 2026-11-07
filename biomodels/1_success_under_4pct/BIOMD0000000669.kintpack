@@ -1,0 +1,899 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:28:02.523086+00:00",
+ "description": "Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - mechanistic PD model\nBioModels BIOMD0000000669 (curated). SBML file: BIOMD0000000669_url.xml.\nSimulation: 0 to 100 time units (SED-ML: MODEL1604270001_mechanistic.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.44e-06 of species peak (worst: G1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'R_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'R_live' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dG1/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - G1: zero order, signed\n  [info] rate rule dG1/dt term 7: rate order differs from the stoichiometry; consumed on separate line(s) - G1: zero order, signed\n  [info] rate rule dS/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - S1: zero order, signed\n  [info] rate rule dS/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - S1: zero order, signed\n  [info] rate rule dS/dt term 7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dG2/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - G2: zero order, signed\n  [info] rate rule dG2/dt term 7: rate order differs from the stoichiometry; consumed on separate line(s) - G2: zero order, signed\n  [partial] event times do not fit a practical sampling grid; events fire up to one sampling interval (1) late\nRenamed species (Kintecus name = SBML id): S1 = S",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - mechanistic PD model  (BIOMD0000000669, curated BioModels; source file BIOMD0000000669_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG1/dt term 1",
+     ""
+    ],
+    [
+     "0.3839174311926606",
+     "0",
+     "0",
+     "G2==>G1+G2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG1/dt term 2",
+     ""
+    ],
+    [
+     "0.31374413200011475",
+     "0",
+     "0",
+     "G1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG1/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G1+G1+S[USER;cG1,cG2,cS1:(0.30869036697247704/(cG1+cG2+cS1+123000))]==>3G1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG1/dt term 4 (consumes G1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG1,cG2,cS1:((-1*0.2890898256880734*cG2^2/(cG1+cG2+cS1+123000)))]==>G1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG1/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G1+G2+S[USER;cG1,cG2,cS1:(0.019600541284403653/(cG1+cG2+cS1+123000))]==>2G1+G2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG1/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G1+S1+S[USER;cG1,cG2,cS1:(0.30869036697247704/(cG1+cG2+cS1+123000))]==>2G1+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG1/dt term 7 (consumes G1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG1,cG2,cS1:((-1*0.2890898256880734*cG2*cS1/(cG1+cG2+cS1+123000)))]==>G1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 1",
+     ""
+    ],
+    [
+     "0.30869036697247704",
+     "0",
+     "0",
+     "G1==>S1+G1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 2",
+     ""
+    ],
+    [
+     "0.11905376502763772",
+     "0",
+     "0",
+     "S1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S1+S[USER;cSW2:(0.0996648468521739*cSW2)]==>2S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 4 (consumes S1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG1,cG2,cS1:((-1*0.30869036697247704*cG1^2/(cG1+cG2+cS1+123000)))]==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S1+S[USER;cSW1,cTIME_:(1.1731673279514285*cSW1*exp((-1*0.030318750000000002*cTIME_)))]==>2S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 6 (consumes S1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG1,cG2,cS1:((-1*0.30869036697247704*cG1*cG2/(cG1+cG2+cS1+123000)))]==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S1+G1+S[USER;cG1,cG2,cS1:(0.30869036697247704/(1*cG1+1*cG2+1*cS1+123000))]==>G1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dS/dt term 8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S1+S[USER;cSW1,cSW2,cTIME_:(1.1731673279514285*cSW1*cSW2*exp((-1*0.030318750000000002*cTIME_)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG2/dt term 1",
+     ""
+    ],
+    [
+     "0.114",
+     "0",
+     "0",
+     "S1==>G2+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG2/dt term 2",
+     ""
+    ],
+    [
+     "0.197012480623968",
+     "0",
+     "0",
+     "G2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG2/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G2+G2+S[USER;cG1,cG2,cS1:(0.1445449128440367/(cG1+cG2+cS1+123000))]==>3G2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG2/dt term 4 (consumes G2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS1,cSW2:((-1*0.0996648468521739*cS1*cSW2))]==>G2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG2/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G1+G2+S[USER;cG1,cG2,cS1:(0.1445449128440367/(cG1+cG2+cS1+123000))]==>2G2+G1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG2/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G2+S1+S[USER;cG1,cG2,cS1:(0.1445449128440367/(cG1+cG2+cS1+123000))]==>2G2+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG2/dt term 7 (consumes G2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS1,cSW1,cTIME_:((-1*1.1731673279514285*cS1*cSW1*exp((-1*0.030318750000000002*cTIME_))))]==>G2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG2/dt term 8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S1+S[USER;cSW1,cSW2,cTIME_:(1.1731673279514285*cSW1*cSW2*exp((-1*0.030318750000000002*cTIME_)))]==>G2+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_apo/dt term 1",
+     ""
+    ],
+    [
+     "0.00394",
+     "0",
+     "0",
+     "G1==>R_apo+G1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_apo/dt term 2",
+     ""
+    ],
+    [
+     "0.00394",
+     "0",
+     "0",
+     "G2==>R_apo+G2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_apo/dt term 3",
+     ""
+    ],
+    [
+     "0.00394",
+     "0",
+     "0",
+     "S1==>R_apo+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_apo/dt term 4",
+     ""
+    ],
+    [
+     "0.0018399800000000002",
+     "0",
+     "0",
+     "R_apo==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_other/dt term 1",
+     ""
+    ],
+    [
+     "0.001113765027637716",
+     "0",
+     "0",
+     "G1==>R_other+G1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_other/dt term 2",
+     ""
+    ],
+    [
+     "0.001113765027637716",
+     "0",
+     "0",
+     "G2==>R_other+G2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_other/dt term 3",
+     ""
+    ],
+    [
+     "0.001113765027637716",
+     "0",
+     "0",
+     "S1==>R_other+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR_other/dt term 4",
+     ""
+    ],
+    [
+     "0.000297",
+     "0",
+     "0",
+     "R_other==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "G1",
+     "0",
+     "113516",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G1 [G1]",
+     ""
+    ],
+    [
+     "S1",
+     "0",
+     "25488",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S [S]",
+     ""
+    ],
+    [
+     "G2",
+     "0",
+     "81655.99999999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G2 [G2]",
+     ""
+    ],
+    [
+     "R_apo",
+     "0",
+     "11800",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R_apo [R_apo]",
+     ""
+    ],
+    [
+     "R_other",
+     "0",
+     "3540",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R_other [R_other]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 81.324245310488 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time switch at 81.324245310488 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW3.TXT-SET",
+     "time switch at 55.720620288104 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW4",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW4.TXT-SET",
+     "time switch at 55.720620288104 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1.000000001",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1.000000001",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "81.324245310488",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "81.324245310488",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW3.TXT",
+   "key": "O_SW3.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "55.720620288104",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW4.TXT",
+   "key": "O_SW4.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "55.720620288104",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

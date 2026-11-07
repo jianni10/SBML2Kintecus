@@ -1,0 +1,743 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:47:51.417015+00:00",
+ "description": "Abell2011_CalciumSignaling_WithAdaptation\nBioModels BIOMD0000000355 (curated). SBML file: BIOMD0000000355_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000355_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.84e-06 of species peak (worst: mwaf195932_a72c_4552_8cf2_b349b15d39c4)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] JPump: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] JChannel term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mw530793e3_76b2_4483_be11_e94364306712: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mwa61047ec_49c1_47b2_b78e_4d84a33d432a: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ERtoMito term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - mw013a7c64a9ec483cb3b8ed95: zero order, signed\n  [info] mw1c50c3d1_dab9_423a_8373_6a4c75479b54: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): mwaf195932a72c45528cf2b344 = mwaf195932_a72c_4552_8cf2_b349b15d39c4; mw0ebc76ad49d748458f8804d3 = mw0ebc76ad_49d7_4845_8f88_04d443fbe7f3; mw7cb2644a384a4bbb93fdfd61 = mw7cb2644a_384a_4bbb_93fd_fd686e01d7cb; mwd6b792d8c98342c1b3bc2491 = mwd6b792d8_c983_42c1_b3bc_2494d6a3363e; mw013a7c64a9ec483cb3b8ed95 = mw013a7c64_a9ec_483c_b3b8_ed658337ee95",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Abell2011_CalciumSignaling_WithAdaptation  (BIOMD0000000355, curated BioModels; source file BIOMD0000000355_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "kPLC",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CaI==>IP3+CaI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "JPump",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CaI+CaI+mw0ebc76ad49d748458f8804d3+S[USER;cCaI:(1/(1*(cCaI+1e-30)^2+0.030624999999999996))]==>CaS+CaI+mw0ebc76ad49d748458f8804d3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "JChannel term 1/3",
+     ""
+    ],
+    [
+     "0.0097",
+     "0",
+     "0",
+     "CaS==>CaI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "JChannel term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CaS+CaI+CaI+S[USER;cCaI,cIP3:(2.91*cIP3^2/(cCaI^2*cIP3^2+0.030624999999999996*cCaI^2+0.016900000000000002*cIP3^2+0.0005175625))]==>3CaI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "JChannel term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CaI+CaI+CaS+S[USER;cCaI,cIP3,cg:(2.91*cIP3^2*cg/(1*cIP3^2*(cCaI+1e-30)^2+0.016900000000000002*cIP3^2+0.030624999999999996*(cCaI+1e-30)^2+0.0005175625))]==>2CaS+CaI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "kPhosphatase",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "IP3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inhibition_parameter1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaI:(5*cCaI^4/(cCaI^4+1))]==>g",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inhibition_parameter1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "g+S[USER;cCaI:(5*cCaI^4/(cCaI^4+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inhibition_parameter2",
+     ""
+    ],
+    [
+     "0.018",
+     "0",
+     "0",
+     "g==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mwbdcd6a40_1ae7_4c86_a99f_1fba0b8beaf7 term 1/2",
+     ""
+    ],
+    [
+     "0.0346",
+     "0",
+     "0",
+     "mw7cb2644a384a4bbb93fdfd61==>CaI+mw7cb2644a384a4bbb93fdfd61",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mwbdcd6a40_1ae7_4c86_a99f_1fba0b8beaf7 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mw7cb2644a384a4bbb93fdfd61+S[USER;cCaS:(1/(cCaS^8+1))]==>CaI+mw7cb2644a384a4bbb93fdfd61",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw530793e3_76b2_4483_be11_e94364306712",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CaI+CaI+mwaf195932a72c45528cf2b344+S[USER;cCaI:(1/(1*(cCaI+1e-30)^2+0.04000000000000001))]==>CaI+mwaf195932a72c45528cf2b344",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw5658298a_d96a_4b97_9a4f_6f06dad35824",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaI:(1.0399999999999999e-7*cCaI^4/(cCaI^4+4.3750000000000006e-5))]==>mwaf195932a72c45528cf2b344",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw700bd02b_9fc4_47e7_864a_967c03874dd6",
+     ""
+    ],
+    [
+     "1e-6",
+     "0",
+     "0",
+     "mwaf195932a72c45528cf2b344==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw06f8fde4_d97b_4d5f_b71e_d93aa53e9932 term 1/2",
+     ""
+    ],
+    [
+     "3.325e-8",
+     "0",
+     "0",
+     "source==>mw0ebc76ad49d748458f8804d3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw06f8fde4_d97b_4d5f_b71e_d93aa53e9932 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaS:(3.724e-6/cCaS^4)]==>mw0ebc76ad49d748458f8804d3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw8021d532_dd9b_4e34_a865_c2bb1689b0b5 term 1/4",
+     ""
+    ],
+    [
+     "3.125e-10",
+     "0",
+     "0",
+     "source==>mw7cb2644a384a4bbb93fdfd61",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw8021d532_dd9b_4e34_a865_c2bb1689b0b5 term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaS:(8.75e-9/cCaS^2)]==>mw7cb2644a384a4bbb93fdfd61",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw8021d532_dd9b_4e34_a865_c2bb1689b0b5 term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaI:(5.4687500000000005e-12/cCaI^2)]==>mw7cb2644a384a4bbb93fdfd61",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw8021d532_dd9b_4e34_a865_c2bb1689b0b5 term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaI,cCaS:(1.53125e-10/(cCaI^2*cCaS^2))]==>mw7cb2644a384a4bbb93fdfd61",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw1f122e51_99cb_4a32_a12e_4c2921920a17",
+     ""
+    ],
+    [
+     "1e-6",
+     "0",
+     "0",
+     "mw7cb2644a384a4bbb93fdfd61==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw89d547e1_8d48_4cd2_ba3d_e4390294089d",
+     ""
+    ],
+    [
+     "1e-6",
+     "0",
+     "0",
+     "mw0ebc76ad49d748458f8804d3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mwa61047ec_49c1_47b2_b78e_4d84a33d432a",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CaI+S[USER;cCaI:(0.03*cCaI^3/(1*(cCaI+1e-30)^4+0.1296))]==>mw013a7c64a9ec483cb3b8ed95",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ERtoMito term 1/3",
+     ""
+    ],
+    [
+     "0.0003",
+     "0",
+     "0",
+     "CaS==>mw013a7c64a9ec483cb3b8ed95",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ERtoMito term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CaS+CaI+CaI+S[USER;cCaI,cIP3:(0.09*cIP3^2/(cCaI^2*cIP3^2+0.030624999999999996*cCaI^2+0.016900000000000002*cIP3^2+0.0005175625))]==>mw013a7c64a9ec483cb3b8ed95+2CaI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ERtoMito term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaI,cCaS,cIP3,cg:(0.09*cCaI^2*cCaS*cIP3^2*cg/(cCaI^2*cIP3^2+0.030624999999999996*cCaI^2+0.016900000000000002*cIP3^2+0.0005175625))]==>CaS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ERtoMito term 3/3 (consumes mw013a7c64a9ec483cb3b8ed95)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaI,cCaS,cIP3,cg:((-1*0.09*cCaI^2*cCaS*cIP3^2*cg/(cCaI^2*cIP3^2+0.030624999999999996*cCaI^2+0.016900000000000002*cIP3^2+0.0005175625)))]==>mw013a7c64a9ec483cb3b8ed95",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mw1c50c3d1_dab9_423a_8373_6a4c75479b54",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mw013a7c64a9ec483cb3b8ed95+S[USER;cmw013a7c64a9ec483cb3b8ed95:(0.005/(1*cmw013a7c64a9ec483cb3b8ed95+0.01))]==>CaI",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "CaI",
+     "0",
+     "0.05",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CaI [CaI]",
+     ""
+    ],
+    [
+     "IP3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IP3 [IP3]",
+     ""
+    ],
+    [
+     "g",
+     "0",
+     "0.002",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "g [g]",
+     ""
+    ],
+    [
+     "mwaf195932a72c45528cf2b344",
+     "0",
+     "0.013",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PMCA [mwaf195932_a72c_4552_8cf2_b349b15d39c4]",
+     ""
+    ],
+    [
+     "mw0ebc76ad49d748458f8804d3",
+     "0",
+     "0.266",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SERCA [mw0ebc76ad_49d7_4845_8f88_04d443fbe7f3]",
+     ""
+    ],
+    [
+     "mw7cb2644a384a4bbb93fdfd61",
+     "0",
+     "0.02",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STIM [mw7cb2644a_384a_4bbb_93fd_fd686e01d7cb]",
+     ""
+    ],
+    [
+     "mwd6b792d8c98342c1b3bc2491",
+     "0",
+     "1000",
+     "Y",
+     "0",
+     "No",
+     "1000",
+     "CaO [mwd6b792d8_c983_42c1_b3bc_2494d6a3363e]",
+     ""
+    ],
+    [
+     "mw013a7c64a9ec483cb3b8ed95",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CaM [mw013a7c64_a9ec_483c_b3b8_ed658337ee95]",
+     ""
+    ],
+    [
+     "CaS",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CaS [CaS]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

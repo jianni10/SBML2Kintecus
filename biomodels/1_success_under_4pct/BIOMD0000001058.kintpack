@@ -1,0 +1,978 @@
+{
+ "version": 3,
+ "created": "2026-11-06T06:29:03.171110+00:00",
+ "description": "Novak2022 - Mitotic kinase oscillation\nBioModels BIOMD0000001058 (curated). SBML file: Novak2022.xml.\nSimulation: 0 to 200 time units (SED-ML: Novak2022.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.91e-06 of species peak (worst: ClbMt)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Autocatalytic_synthesis_of_ClbMt term 2/2: USER expression is 1354 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] Cdk1_dependent_synthesis_of_Polo_kinase term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - Polo: zero order, signed\n  [info] Cdk1_dependent_synthesis_of_Polo_kinase term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - Polo: zero order, signed\n  [info] Sic1_phosphorylation_catalyzed_by_Clb_and_Cln_kinases_followed_by_Sic1_degradation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Sic1_phosphorylation_catalyzed_by_Clb_and_Cln_kinases_followed_by_Sic1_degradation: USER expression is 1133 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] Activation_of_SBF_by_Cln term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Activation_of_SBF_by_Cln term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Inhibition_of_SBF_by_Cdk1 term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Inhibition_of_SBF_by_Cdk1 term 2/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Activation_of_Cdh1_by_Cln term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Activation_of_Cdh1_by_Cln term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Inhibition_of_Cdh1_Cdk1 term 1/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Inhibition_of_Cdh1_Cdk1 term 2/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Inhibition_of_Cdh1_Cdk1 term 3/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Activation_of_Cdc14_by_Cln term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Inhibition_of_Cdc14_by_Cdk1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Novak2022 - Mitotic kinase oscillation  (BIOMD0000001058, curated BioModels; source file Novak2022.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transcription_of_Cln",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "SBF==>Cln+SBF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Autoregulation_of_Cln_synthesis",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Cln==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_by_MBF_of_ClbS_transcription",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cln+MBF+S[USER;cCln:(0.15/(cCln+0.01))]==>ClbSt+Cln+MBF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_ClbS term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "ClbSt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_ClbS term 2/2",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "ClbSt+Cdh1==>Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_MBF term 1/2",
+     ""
+    ],
+    [
+     "0.0005",
+     "0",
+     "0",
+     "source==>MBF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_MBF term 2/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "MBF==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transcriptional_repression_of_MBF_by_Nrm1t term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MBF+MBF==>MBF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transcriptional_repression_of_MBF_by_Nrm1t term 2/3",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "MBF==>2MBF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transcriptional_repression_of_MBF_by_Nrm1t term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MBF+Nrm1t==>Nrm1t",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_Nrm1_transcription_by_MBF",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cln+MBF+S[USER;cCln:(0.05/(cCln+0.01))]==>Nrm1t+Cln+MBF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Nrm1_by_APC_C_Cdh1_complex",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Nrm1t+Cdh1==>Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Autocatalytic_synthesis_of_ClbMt term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "source==>ClbMt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Autocatalytic_synthesis_of_ClbMt term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cClbMt,cClbSt,cSic1t:(0.01*exp(2*log(-2*(cClbMt*cClbMt)*cSic1t/((cClbMt*cClbMt)+2*cClbMt*cClbSt+cClbMt*cSic1t+cClbMt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05*cClbMt+(cClbSt*cClbSt)+cClbSt*cSic1t+cClbSt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05*cClbSt)+(cClbMt*cClbMt)/(cClbMt+cClbSt)-2*cClbMt*cClbSt*cSic1t/((cClbMt*cClbMt)+2*cClbMt*cClbSt+cClbMt*cSic1t+cClbMt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05*cClbMt+(cClbSt*cClbSt)+cClbSt*cSic1t+cClbSt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05*cClbSt)+cClbMt*cClbSt/(cClbMt+cClbSt)))/(exp(2*log(-2*(cClbMt*cClbMt)*cSic1t/((cClbMt*cClbMt)+2*cClbMt*cClbSt+cClbMt*cSic1t+cClbMt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05*cClbMt+(cClbSt*cClbSt)+cClbSt*cSic1t+cClbSt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05*cClbSt)+(cClbMt*cClbMt)/(cClbMt+cClbSt)-2*cClbMt*cClbSt*cSic1t/((cClbMt*cClbMt)+2*cClbMt*cClbSt+cClbMt*cSic1t+cClbMt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05*cClbMt+(cClbSt*cClbSt)+cClbSt*cSic1t+cClbSt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05*cClbSt)+cClbMt*cClbSt/(cClbMt+cClbSt)))+0.0025000000000000005))]==>ClbMt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "APC_C_Cdh1_dependent_degradation_of_M_phase_cyclins term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "ClbMt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "APC_C_Cdh1_dependent_degradation_of_M_phase_cyclins term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ClbMt+Cdh1==>Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdk1_dependent_synthesis_of_Polo_kinase term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ClbMt+ClbMt+S[USER;cClbMt,cClbSt:(0.01/(cClbMt+cClbSt))]==>Polo+2ClbMt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdk1_dependent_synthesis_of_Polo_kinase term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ClbMt+ClbSt+S[USER;cClbMt,cClbSt:(0.01/(cClbMt+cClbSt))]==>Polo+ClbMt+ClbSt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdk1_dependent_synthesis_of_Polo_kinase term 3/4 (consumes Polo)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cClbMt,cClbSt,cSic1t:((-1*0.02*cClbMt^2*cSic1t/(cClbMt^2+2*cClbMt*cClbSt+cClbMt*cSic1t+cClbMt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.05*cClbMt+cClbSt^2+cClbSt*cSic1t+cClbSt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.05*cClbSt)))]==>Polo",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdk1_dependent_synthesis_of_Polo_kinase term 4/4 (consumes Polo)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cClbMt,cClbSt,cSic1t:((-1*0.02*cClbMt*cClbSt*cSic1t/(cClbMt^2+2*cClbMt*cClbSt+cClbMt*cSic1t+cClbMt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.05*cClbMt+cClbSt^2+cClbSt*cSic1t+cClbSt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.05*cClbSt)))]==>Polo",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1_dependent_degradation_of_Polo term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Polo==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1_dependent_degradation_of_Polo term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Polo+Cdh1==>Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Constant_synthesis_of_Sic1",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "source==>Sic1t",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sic1_phosphorylation_catalyzed_by_Clb_and_Cln_kinases_followed_by_Sic1_degradation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Sic1t+S[USER;cClbMt,cClbSt,cCln,cSic1t:((1*(-4*cSic1t*(cClbMt+cClbSt)+(2*cClbMt+2*cClbSt)*(cClbMt+cClbSt+cSic1t+sqrt(-4*cSic1t*(cClbMt+cClbSt)+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05))*(-2*cSic1t*(cClbMt+cClbSt)+(cClbMt+cClbSt+cCln)*(cClbMt+cClbSt+cSic1t+sqrt(-4*cSic1t*(cClbMt+cClbSt)+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05))*(cClbMt+cClbSt+cSic1t+sqrt(-4*cSic1t*(cClbMt+cClbSt)+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05)+0.01*(-2*cSic1t*(cClbMt+cClbSt)+(cClbMt+cClbSt+cCln+0.01)*(cClbMt+cClbSt+cSic1t+sqrt(-4*cSic1t*(cClbMt+cClbSt)+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05))*((cClbMt+cClbSt+cSic1t+sqrt(-4*cSic1t*(cClbMt+cClbSt)+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05)*(cClbMt+cClbSt+cSic1t+sqrt(-4*cSic1t*(cClbMt+cClbSt)+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05)))/((-2*(cClbMt+cClbSt)*(cSic1t+1e-30)+(cClbMt+cClbSt+cCln+0.01)*(cClbMt+cClbSt+cSic1t+sqrt(-4*(cClbMt+cClbSt)*(cSic1t+1e-30)+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05))*((cClbMt+cClbSt+cSic1t+sqrt(-4*(cClbMt+cClbSt)*(cSic1t+1e-30)+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05)*(cClbMt+cClbSt+cSic1t+sqrt(-4*(cClbMt+cClbSt)*(cSic1t+1e-30)+exp(2*log(cClbMt+cClbSt+cSic1t+0.05)))+0.05))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_SBF_by_Cln term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSBF:(1/(2-cSBF))]==>SBF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_SBF_by_Cln term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cln+S[USER;cSBF:(10/(2-cSBF))]==>SBF+Cln",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_SBF_by_Cln term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "SBF+S[USER;cSBF:((-1*1/(1*cSBF-2)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_SBF_by_Cln term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "SBF+Cln+S[USER;cSBF:((-1*10/(1*cSBF-2)))]==>Cln",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inhibition_of_SBF_by_Cdk1 term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "SBF+ClbMt+ClbMt+S[USER;cClbMt,cClbSt,cSBF:(25/(1*cClbMt*(cSBF+1e-30)+1*cClbMt+1*cClbSt*(cSBF+1e-30)+1*cClbSt))]==>2ClbMt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inhibition_of_SBF_by_Cdk1 term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "SBF+ClbMt+ClbSt+S[USER;cClbMt,cClbSt,cSBF:(25/(1*cClbMt*(cSBF+1e-30)+1*cClbMt+1*cClbSt*(cSBF+1e-30)+1*cClbSt))]==>ClbMt+ClbSt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inhibition_of_SBF_by_Cdk1 term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "SBF+Sic1t+S[USER;cClbMt,cClbSt,cSBF,cSic1t:(50*cClbMt^2/(cClbMt^2*cSBF+1*cClbMt^2+2*cClbMt*cClbSt*cSBF+2*cClbMt*cClbSt+cClbMt*cSBF*cSic1t+cClbMt*cSBF*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.05*cClbMt*cSBF+1*cClbMt*cSic1t+1*cClbMt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.05*cClbMt+cClbSt^2*cSBF+1*cClbSt^2+cClbSt*cSBF*cSic1t+cClbSt*cSBF*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.05*cClbSt*cSBF+1*cClbSt*cSic1t+1*cClbSt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.05*cClbSt))]==>2SBF+Sic1t",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inhibition_of_SBF_by_Cdk1 term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ClbMt+ClbSt+SBF+S[USER;cClbMt,cClbSt,cSBF,cSic1t:(50*cSic1t/(cClbMt^2*cSBF+1*cClbMt^2+2*cClbMt*cClbSt*cSBF+2*cClbMt*cClbSt+cClbMt*cSBF*cSic1t+cClbMt*cSBF*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.05*cClbMt*cSBF+1*cClbMt*cSic1t+1*cClbMt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.05*cClbMt+cClbSt^2*cSBF+1*cClbSt^2+cClbSt*cSBF*cSic1t+cClbSt*cSBF*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.05*cClbSt*cSBF+1*cClbSt*cSic1t+1*cClbSt*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.05*cClbSt))]==>2SBF+ClbMt+ClbSt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_Cdh1_by_Cln term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCdh1:(1/(1.01-cCdh1))]==>Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_Cdh1_by_Cln term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc14+S[USER;cCdh1:(10/(1.01-cCdh1))]==>Cdh1+Cdc14",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_Cdh1_by_Cln term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdh1+S[USER;cCdh1:((-1*1/(1*cCdh1-1.01)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_Cdh1_by_Cln term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdh1+Cdc14+S[USER;cCdh1:((-1*10/(1*cCdh1-1.01)))]==>Cdc14",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inhibition_of_Cdh1_Cdk1 term 1/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdh1+ClbMt+S[USER;cCdh1:(10/(1*cCdh1+0.01))]==>ClbMt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inhibition_of_Cdh1_Cdk1 term 2/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdh1+ClbSt+S[USER;cCdh1:(10/(1*cCdh1+0.01))]==>ClbSt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inhibition_of_Cdh1_Cdk1 term 3/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdh1+Cln+S[USER;cCdh1:(0.2/(1*cCdh1+0.01))]==>Cln",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inhibition_of_Cdh1_Cdk1 term 4/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdh1+ClbMt+Sic1t+S[USER;cCdh1,cClbMt,cClbSt,cSic1t:(20/(cCdh1*cClbMt+cCdh1*cClbSt+cCdh1*cSic1t+cCdh1*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.05*cCdh1+0.01*cClbMt+0.01*cClbSt+0.01*cSic1t+0.01*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.0005))]==>2Cdh1+ClbMt+Sic1t",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inhibition_of_Cdh1_Cdk1 term 5/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdh1+ClbSt+Sic1t+S[USER;cCdh1,cClbMt,cClbSt,cSic1t:(20/(cCdh1*cClbMt+cCdh1*cClbSt+cCdh1*cSic1t+cCdh1*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.05*cCdh1+0.01*cClbMt+0.01*cClbSt+0.01*cSic1t+0.01*sqrt(-4*cClbMt*cSic1t-4*cClbSt*cSic1t+(cClbMt+cClbSt+cSic1t+0.05)^2)+0.0005))]==>2Cdh1+ClbSt+Sic1t",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_Cdc14_by_Cln term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Polo+S[USER;cCdc14:(1/(1.01-cCdc14))]==>Cdc14+Polo",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_Cdc14_by_Cln term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc14+Polo+S[USER;cCdc14:((-1*1/(1*cCdc14-1.01)))]==>Polo",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inhibition_of_Cdc14_by_Cdk1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc14+S[USER;cCdc14:(0.25/(1*cCdc14+0.01))]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Cln",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cln [Cln]",
+     ""
+    ],
+    [
+     "ClbSt",
+     "0",
+     "0.999999999999997",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ClbSt [ClbSt]",
+     ""
+    ],
+    [
+     "MBF",
+     "0",
+     "0.05",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MBF [MBF]",
+     ""
+    ],
+    [
+     "Nrm1t",
+     "0",
+     "0.509",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Nrm1t [Nrm1t]",
+     ""
+    ],
+    [
+     "ClbMt",
+     "0",
+     "0.999999999999997",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ClbMt [ClbMt]",
+     ""
+    ],
+    [
+     "Polo",
+     "0",
+     "0.249999999999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Polo [Polo]",
+     ""
+    ],
+    [
+     "Sic1t",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Sic1t [Sic1t]",
+     ""
+    ],
+    [
+     "SBF",
+     "0",
+     "0.999999999999985",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SBF [SBF]",
+     ""
+    ],
+    [
+     "Cdh1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdh1 [Cdh1]",
+     ""
+    ],
+    [
+     "Cdc14",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdc14 [Cdc14]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "2",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "2",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

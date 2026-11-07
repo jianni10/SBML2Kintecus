@@ -1,0 +1,575 @@
+{
+ "version": 3,
+ "created": "2026-10-26T20:57:01.696846+00:00",
+ "description": "Markevich2004_MAPK_orderedElementary\nBioModels BIOMD0000000026 (curated). SBML file: BIOMD0000000026_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000026_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.91e-06 of species peak (worst: Mp_MAPKK)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): M1 = M",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Markevich2004_MAPK_orderedElementary  (BIOMD0000000026, curated BioModels; source file BIOMD0000000026_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1a term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M_MAPKK==>MAPKK+M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1a term 2/2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "MAPKK+M1==>M_MAPKK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1b",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "M_MAPKK==>Mp+MAPKK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2a term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mp_MAPKK==>Mp+MAPKK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2a term 2/2",
+     ""
+    ],
+    [
+     "0.032",
+     "0",
+     "0",
+     "Mp+MAPKK==>Mp_MAPKK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2b",
+     ""
+    ],
+    [
+     "15",
+     "0",
+     "0",
+     "Mp_MAPKK==>Mpp+MAPKK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3a term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mpp_MKP3==>Mpp+MKP3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3a term 2/2",
+     ""
+    ],
+    [
+     "0.045",
+     "0",
+     "0",
+     "Mpp+MKP3==>Mpp_MKP3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3b",
+     ""
+    ],
+    [
+     "0.092",
+     "0",
+     "0",
+     "Mpp_MKP3==>Mp_MKP3_dep",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3c term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mp_MKP3_dep==>Mp+MKP3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3c term 2/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Mp+MKP3==>Mp_MKP3_dep",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4a term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mp_MKP3==>Mp+MKP3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4a term 2/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Mp+MKP3==>Mp_MKP3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4b",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "Mp_MKP3==>M_MKP3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4c term 1/2",
+     ""
+    ],
+    [
+     "0.086",
+     "0",
+     "0",
+     "M_MKP3==>MKP3+M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4c term 2/2",
+     ""
+    ],
+    [
+     "0.0011",
+     "0",
+     "0",
+     "MKP3+M1==>M_MKP3",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "500",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M [M]",
+     ""
+    ],
+    [
+     "Mp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mp [Mp]",
+     ""
+    ],
+    [
+     "Mpp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mpp [Mpp]",
+     ""
+    ],
+    [
+     "MAPKK",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPKK [MAPKK]",
+     ""
+    ],
+    [
+     "MKP3",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MKP [MKP3]",
+     ""
+    ],
+    [
+     "M_MAPKK",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M_MAPKK [M_MAPKK]",
+     ""
+    ],
+    [
+     "Mp_MAPKK",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mp_MAPKK [Mp_MAPKK]",
+     ""
+    ],
+    [
+     "Mpp_MKP3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mpp_MKP [Mpp_MKP3]",
+     ""
+    ],
+    [
+     "Mp_MKP3_dep",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mp_MKP [Mp_MKP3_dep]",
+     ""
+    ],
+    [
+     "Mp_MKP3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mp_MKP* [Mp_MKP3]",
+     ""
+    ],
+    [
+     "M_MKP3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M_MKP [M_MKP3]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

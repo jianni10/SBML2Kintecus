@@ -1,0 +1,699 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:15:52.616279+00:00",
+ "description": "Almuallem2020 - Virus-macrophage-tumour interactions in oncolytic viral therapies\nBioModels BIOMD0000001033 (curated). SBML file: Almuallem2020.xml.\nSimulation: 0 to 100 time units (SED-ML: Almuallem2020 - Fig6.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.71e-06 of species peak (worst: Uninfected_M2_macrophages)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Almuallem2020 - Virus-macrophage-tumour interactions in oncolytic viral therapies  (BIOMD0000001033, curated BioModels; source file Almuallem2020.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumour_growth_production term 1/3",
+     ""
+    ],
+    [
+     "0.62",
+     "0",
+     "0",
+     "Uninfected_tumour_cells==>2Uninfected_tumour_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumour_growth_production term 2/3",
+     ""
+    ],
+    [
+     "0.62",
+     "0",
+     "0",
+     "Uninfected_tumour_cells+Uninfected_tumour_cells==>Uninfected_tumour_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumour_growth_production term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Uninfected_M2_macrophages+Uninfected_tumour_cells+S[USER;cUninfected_M2_macrophages:(0.2/(cUninfected_M2_macrophages+0.00025))]==>2Uninfected_tumour_cells+Uninfected_M2_macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumour_infection",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "Uninfected_tumour_cells+Oncolytic_viruses==>Infected_tumour_cells+Oncolytic_viruses",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumour_elimination",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Uninfected_tumour_cells+M1_macrophages+S[USER;cUninfected_M2_macrophages:(1/(cUninfected_M2_macrophages+0.00025))]==>M1_macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "infected_tumour_lysis_elimination term 1/2",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "Infected_tumour_cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "infected_tumour_lysis_elimination term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Infected_tumour_cells+M1_macrophages+S[USER;cUninfected_M2_macrophages:(2/(cUninfected_M2_macrophages+0.00025))]==>M1_macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_activation_growth term 1/6",
+     ""
+    ],
+    [
+     "0.00025",
+     "0",
+     "0",
+     "Infected_tumour_cells==>M1_macrophages+Infected_tumour_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_activation_growth term 2/6",
+     ""
+    ],
+    [
+     "0.025",
+     "0",
+     "0",
+     "Oncolytic_viruses==>M1_macrophages+Oncolytic_viruses",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_activation_growth term 3/6",
+     ""
+    ],
+    [
+     "1.25e-7",
+     "0",
+     "0",
+     "Uninfected_tumour_cells==>M1_macrophages+Uninfected_tumour_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_activation_growth term 4/6",
+     ""
+    ],
+    [
+     "0.57",
+     "0",
+     "0",
+     "M1_macrophages==>2M1_macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_activation_growth term 5/6",
+     ""
+    ],
+    [
+     "0.57",
+     "0",
+     "0",
+     "M1_macrophages+M1_macrophages==>M1_macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_activation_growth term 6/6",
+     ""
+    ],
+    [
+     "0.57",
+     "0",
+     "0",
+     "M1_macrophages+Uninfected_M2_macrophages==>Uninfected_M2_macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_polarisation term 1/3",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "M1_macrophages==>Uninfected_M2_macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_polarisation term 2/3",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Uninfected_M2_macrophages==>M1_macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_polarisation term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1_macrophages+Uninfected_tumour_cells+S[USER;cUninfected_tumour_cells:(1/(cUninfected_tumour_cells+0.0001))]==>Uninfected_M2_macrophages+Uninfected_tumour_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_death",
+     ""
+    ],
+    [
+     "0.88",
+     "0",
+     "0",
+     "M1_macrophages==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_activation_growth term 1/4",
+     ""
+    ],
+    [
+     "2.5e-7",
+     "0",
+     "0",
+     "Uninfected_tumour_cells==>Uninfected_M2_macrophages+Uninfected_tumour_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_activation_growth term 2/4",
+     ""
+    ],
+    [
+     "0.57",
+     "0",
+     "0",
+     "Uninfected_M2_macrophages==>2Uninfected_M2_macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_activation_growth term 3/4",
+     ""
+    ],
+    [
+     "0.57",
+     "0",
+     "0",
+     "Uninfected_M2_macrophages+Uninfected_M2_macrophages==>Uninfected_M2_macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_activation_growth term 4/4",
+     ""
+    ],
+    [
+     "0.57",
+     "0",
+     "0",
+     "Uninfected_M2_macrophages+M1_macrophages==>M1_macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_infection",
+     ""
+    ],
+    [
+     "500",
+     "0",
+     "0",
+     "Uninfected_M2_macrophages+Oncolytic_viruses==>Infected_M2_macrophages+Oncolytic_viruses",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_death",
+     ""
+    ],
+    [
+     "0.12",
+     "0",
+     "0",
+     "Uninfected_M2_macrophages==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "infected_M2_lysis",
+     ""
+    ],
+    [
+     "0.52",
+     "0",
+     "0",
+     "Infected_M2_macrophages==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "virus_production term 1/2",
+     ""
+    ],
+    [
+     "4.16",
+     "0",
+     "0",
+     "Infected_M2_macrophages==>Oncolytic_viruses+Infected_M2_macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "virus_production term 2/2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "Infected_tumour_cells==>Oncolytic_viruses+Infected_tumour_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "virus_death_elimination term 1/2",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Oncolytic_viruses==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "virus_death_elimination term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Oncolytic_viruses+M1_macrophages+S[USER;cUninfected_M2_macrophages:(5e-5/(cUninfected_M2_macrophages+0.00025))]==>M1_macrophages",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Uninfected_tumour_cells",
+     "0",
+     "0.0005",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Uninfected_tumour_cells [Uninfected_tumour_cells]",
+     ""
+    ],
+    [
+     "Infected_tumour_cells",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected tumour_cells [Infected_tumour_cells]",
+     ""
+    ],
+    [
+     "M1_macrophages",
+     "0",
+     "2.5e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M1_macrophages [M1_macrophages]",
+     ""
+    ],
+    [
+     "Uninfected_M2_macrophages",
+     "0",
+     "2.5e-7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Uninfected_M2_macrophages [Uninfected_M2_macrophages]",
+     ""
+    ],
+    [
+     "Infected_M2_macrophages",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected_M2_macrophages [Infected_M2_macrophages]",
+     ""
+    ],
+    [
+     "Oncolytic_viruses",
+     "0",
+     "1e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Oncolytic_viruses [Oncolytic_viruses]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

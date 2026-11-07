@@ -1,0 +1,481 @@
+{
+ "version": 3,
+ "created": "2026-11-02T03:52:24.189254+00:00",
+ "description": "Cao2013 - Application of ABSIS method in the bistable Schl\u00f6gl model\nBioModels BIOMD0000000485 (curated). SBML file: BIOMD0000000485_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000485_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.64e-06 of species peak (worst: ES)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'ES' goes below zero in the SBML: integrated as ES_o = value + 10, output as ES = OUTC[ES_o;-10*source]",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cao2013 - Application of ABSIS method in the bistable Schl\u00f6gl model  (BIOMD0000000485, curated BioModels; source file BIOMD0000000485_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction1 term 1/2 (shifted ES_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX:((-1*0.12*cX^2))]==>ES_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX:(0.12*cX^2)]==>X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction1 term 2/2 (shifted ES_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX:(0.12*cX)]==>ES_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction1 term 2/2",
+     ""
+    ],
+    [
+     "0.12",
+     "0",
+     "0",
+     "X==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction2 term 1/3 (shifted ES_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX:(0.0009599999999999999*cX^3)]==>ES_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction2 term 1/3",
+     ""
+    ],
+    [
+     "0.0009599999999999999",
+     "0",
+     "0",
+     "X+X+X==>2X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction2 term 2/3 (shifted ES_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX:(0.0019199999999999998*cX)]==>ES_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction2 term 2/3",
+     ""
+    ],
+    [
+     "0.0019199999999999998",
+     "0",
+     "0",
+     "X==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction2 term 3/3 (shifted ES_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX:((-1*0.0028799999999999997*cX^2))]==>ES_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction2 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX:(0.0028799999999999997*cX^2)]==>X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction6 (shifted ES_o)",
+     ""
+    ],
+    [
+     "-12.5",
+     "0",
+     "0",
+     "source==>ES_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction6",
+     ""
+    ],
+    [
+     "12.5",
+     "0",
+     "0",
+     "source==>X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction7 (shifted ES_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX:(2.95*cX)]==>ES_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction7",
+     ""
+    ],
+    [
+     "2.95",
+     "0",
+     "0",
+     "X==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X [X]",
+     ""
+    ],
+    [
+     "ES_o",
+     "0",
+     "11",
+     "N",
+     "0",
+     "No",
+     "No",
+     "ES + 10 (shifted state) [__shifted__ES]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "ES",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[ES_o;-10*source]",
+     "No",
+     "ES (= ES_o - 10) [ES]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

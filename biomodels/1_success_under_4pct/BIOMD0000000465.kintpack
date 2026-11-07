@@ -1,0 +1,638 @@
+{
+ "version": 3,
+ "created": "2026-11-02T03:48:19.764320+00:00",
+ "description": "Koo2013 - Shear stress induced AKT and eNOS phosphorylation - Model 2\nBioModels BIOMD0000000465 (curated). SBML file: BIOMD0000000465_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000465_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.38e-06 of species peak (worst: s28)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 's21' goes below zero in the SBML: integrated as s21_o = value + 200000, output as s21 = OUTC[s21_o;-200000*source]\n  [info] re57: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for s22\n  [info] re58: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re59: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re61: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re62: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re63: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re64: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re65: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Koo2013 - Shear stress induced AKT and eNOS phosphorylation - Model 2  (BIOMD0000000465, curated BioModels; source file BIOMD0000000465_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re57",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cs23:(2.4654816184123542*cs23^0.8*(1-0.007638986344833238*cs23^1.8)*exp((-1*0.007638986344833238*cs23^1.8)))]==>s20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re57 (consumes s22)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cs23:((-1*2.4654816184123542*cs23^0.8*(1-0.007638986344833238*cs23^1.8)*exp((-1*0.007638986344833238*cs23^1.8))))]==>s22",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re58",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s19+s20+S[USER;cs19:(0.2/(1*cs19+6170))]==>s17+s20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re59",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s17+S[USER;cs17:(0.75/(1*cs17+80.9))]==>s19",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re60 term 1/2",
+     ""
+    ],
+    [
+     "0.089",
+     "0",
+     "0",
+     "s28==>s16+s17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re60 term 2/2",
+     ""
+    ],
+    [
+     "0.045",
+     "0",
+     "0",
+     "s16+s17==>s28",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re61",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s28+s14+S[USER;cs28:(20/(1*cs28+80000))]==>s26+s14",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re62",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s26+S[USER;cs26:(60/(1*cs26+80000))]==>s27",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re63",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s26+S[USER;cs26:(5.55/(1*cs26+8800))]==>s28",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re64",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s27+S[USER;cs27:(6/(1*cs27+48000))]==>s26",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re65",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s27+S[USER;cs27:(24.45/(1*cs27+48000))]==>s16+s17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re66",
+     ""
+    ],
+    [
+     "0.0007",
+     "0",
+     "0",
+     "s25+s17==>s14+s17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re67",
+     ""
+    ],
+    [
+     "0.98",
+     "0",
+     "0",
+     "s14==>s25",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re68 (shifted s21_o)",
+     ""
+    ],
+    [
+     "-1",
+     "0",
+     "0",
+     "source==>s21_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re68",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>s23",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "s14",
+     "0",
+     "0.246",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PDK1 [s14]",
+     ""
+    ],
+    [
+     "s15",
+     "0",
+     "150",
+     "Y",
+     "0",
+     "No",
+     "150",
+     "PP2A [s15]",
+     ""
+    ],
+    [
+     "s16",
+     "0",
+     "167.616",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AKT [s16]",
+     ""
+    ],
+    [
+     "s17",
+     "0",
+     "0.345",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI3P [s17]",
+     ""
+    ],
+    [
+     "s18",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "0.1",
+     "PTEN [s18]",
+     ""
+    ],
+    [
+     "s19",
+     "0",
+     "6967.271",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PIP2 [s19]",
+     ""
+    ],
+    [
+     "s20",
+     "0",
+     "0.03",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p-PI3K [s20]",
+     ""
+    ],
+    [
+     "s21_o",
+     "0",
+     "200000",
+     "N",
+     "0",
+     "No",
+     "No",
+     "s3 + 200000 (shifted state) [__shifted__s21]",
+     ""
+    ],
+    [
+     "s22",
+     "0",
+     "99.97",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI3K [s22]",
+     ""
+    ],
+    [
+     "s23",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Time [s23]",
+     ""
+    ],
+    [
+     "s24",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "3",
+     "PDK2 [s24]",
+     ""
+    ],
+    [
+     "s25",
+     "0",
+     "999.754",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PDK1_cyto [s25]",
+     ""
+    ],
+    [
+     "s26",
+     "0",
+     "1.457",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p-AKT:PI3P [s26]",
+     ""
+    ],
+    [
+     "s27",
+     "0",
+     "1.723",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pp-AKT:PI3P [s27]",
+     ""
+    ],
+    [
+     "s28",
+     "0",
+     "29.203",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AKT:PI3P [s28]",
+     ""
+    ],
+    [
+     "s119",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Shear Stress [s119]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "s21",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s21_o;-200000*source]",
+     "No",
+     "s3 (= s21_o - 200000) [s21]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

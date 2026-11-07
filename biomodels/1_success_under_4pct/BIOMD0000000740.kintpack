@@ -1,0 +1,1682 @@
+{
+ "version": 3,
+ "created": "2026-11-04T00:01:03.534136+00:00",
+ "description": "Panteleev2010 - Blood Coagulation: Full Model\nBioModels BIOMD0000000740 (curated). SBML file: Panteleev2010_full_model.xml.\nSimulation: 0 to 300 time units (SED-ML: Panteleev2010_full_model.sedml), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.90e-06 of species peak (worst: VIIa)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'VIIa_TF_F' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Xa_VIIa_TF' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IXa_B_F' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'VIIIa_B_F' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Xa_Va_b' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Xa_F' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'X_B' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IIa_F' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'II_B' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Va_B' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Va_B_F' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dVIIa_TF/dt term 7: rate order differs from the stoichiometry; consumed on separate line(s) - VIIa_TF: zero order, signed\n  [info] rate rule dIX/dt term 1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dIX/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dXa/dt term 10: USER expression is 983 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] rate rule dX/dt term 1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dX/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dX/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dIIa/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - IIa: zero order, signed\n  [info] rate rule dII/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dfibrinogen/dt term 1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dVa/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dXa_TFPI/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - Xa_TFPI: zero order, signed\n  [info] 1 species/parameters given short names (Q1...) so USER expressions fit Kintecus's expression length limit; original ids are in the SPECIES comments column\nRenamed species (Kintecus name = SBML id): Q1 = VIIIa",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Panteleev2010 - Blood Coagulation: Full Model  (BIOMD0000000740, curated BioModels; source file Panteleev2010_full_model.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVIIa_TF/dt term 1",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "VII_TF+Xa==>VIIa_TF+VII_TF+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVIIa_TF/dt term 2",
+     ""
+    ],
+    [
+     "4.2",
+     "0",
+     "0",
+     "TF+VIIa==>VIIa_TF+TF+VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVIIa_TF/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "VIIa_TF+S[USER;cIX,cX:(1.1/(0.004761904761904762*cIX+0.004201680672268907*cX+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVIIa_TF/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IIa+VII_TF+S[USER;cfibrin,cfibrinogen:(0.0014/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1))]==>VIIa_TF+IIa+VII_TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVIIa_TF/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "VIIa_TF+Xa_TFPI+S[USER;cIX,cX:(0.44/(0.004761904761904762*cIX+0.004201680672268907*cX+1))]==>Xa_TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVIIa_TF/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "VIIa_TF+TFPI+X+S[USER;cIX,cX:(0.014242060460547856/(0.004761904761904762*cIX+0.004201680672268907*cX+1))]==>TFPI+X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVIIa_TF/dt term 7 (consumes VIIa_TF)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cVII_TF,cVa,cXa:((-1*0.081*cVII_TF*cVa*cXa/(0.20249999999999999*cVa^2/(cVa+2.9)+1*cVa*cXa+0.32214*cVa+0.5872499999999999*cVa/(cVa+2.9)+2.9*cXa+0.9342059999999999)))]==>VIIa_TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVII_TF/dt term 1",
+     ""
+    ],
+    [
+     "1.1",
+     "0",
+     "0",
+     "VII_TF==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVII_TF/dt term 2",
+     ""
+    ],
+    [
+     "4.2",
+     "0",
+     "0",
+     "TF+VII==>VII_TF+TF+VII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVII_TF/dt term 3",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "VII_TF+Xa==>Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVII_TF/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "VII_TF+IIa+S[USER;cfibrin,cfibrinogen:(0.0014/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1))]==>IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVII_TF/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "VII_TF+Va+Xa+S[USER;cVa,cXa:(0.081/(0.20249999999999999*cVa^2/(cVa+2.9)+1*cVa*cXa+0.32214*cVa+0.5872499999999999*cVa/(cVa+2.9)+2.9*cXa+0.9342059999999999))]==>2VII_TF+Va+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTF/dt term 1",
+     ""
+    ],
+    [
+     "1.1",
+     "0",
+     "0",
+     "VII_TF==>TF+VII_TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTF/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "VIIa_TF+S[USER;cIX,cX:(1.1/(0.004761904761904762*cIX+0.004201680672268907*cX+1))]==>TF+VIIa_TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTF/dt term 3",
+     ""
+    ],
+    [
+     "4.2",
+     "0",
+     "0",
+     "TF+VII==>VII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTF/dt term 4",
+     ""
+    ],
+    [
+     "4.2",
+     "0",
+     "0",
+     "TF+VIIa==>VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVIIa/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "VIIa_TF+S[USER;cIX,cX:(1.1/(0.004761904761904762*cIX+0.004201680672268907*cX+1))]==>VIIa+VIIa_TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVIIa/dt term 2",
+     ""
+    ],
+    [
+     "4.2",
+     "0",
+     "0",
+     "VIIa+TF==>TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVIIa/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IIa+VII+S[USER;cfibrin,cfibrinogen:(0.0014/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1))]==>VIIa+IIa+VII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVII/dt term 1",
+     ""
+    ],
+    [
+     "1.1",
+     "0",
+     "0",
+     "VII_TF==>VII+VII_TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVII/dt term 2",
+     ""
+    ],
+    [
+     "4.2",
+     "0",
+     "0",
+     "VII+TF==>TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVII/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "VII+IIa+S[USER;cfibrin,cfibrinogen:(0.0014/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1))]==>IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIXa/dt term 1",
+     ""
+    ],
+    [
+     "8.2e-6",
+     "0",
+     "0",
+     "IXa+Xa_TFPI==>Xa_TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIXa/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IX+XIa+S[USER;cIX:(5.8/(cIX+200))]==>IXa+IX+XIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIXa/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IX+VIIa_TF+S[USER;cIX,cX:(0.07142857142857142/(0.004761904761904762*cIX+0.004201680672268907*cX+1))]==>IXa+IX+VIIa_TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIX/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IX+XIa+S[USER;cIX:(5.8/(1*cIX+200))]==>XIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIX/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IX+VIIa_TF+S[USER;cIX,cX:(0.07142857142857142/(0.004761904761904762*cIX+0.004201680672268907*cX+1))]==>VIIa_TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXa/dt term 1",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Xa_TFPI==>Xa+Xa_TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXa/dt term 2",
+     ""
+    ],
+    [
+     "0.7696000000000001",
+     "0",
+     "0",
+     "Xa==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXa/dt term 3",
+     ""
+    ],
+    [
+     "0.00015",
+     "0",
+     "0",
+     "Xa+AT_III==>AT_III",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXa/dt term 4",
+     ""
+    ],
+    [
+     "0.052",
+     "0",
+     "0",
+     "Xa+TFPI==>TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXa/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IXa+X+S[USER;cII,cIXa,cX:(0.08139130434782607/(0.6808510638297872*cII*cIXa+1.749787234042553*cII+1*cIXa*cX+320*cIXa+2.57*cX+822.4))]==>Xa+IXa+X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXa/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Va+Xa+S[USER;cVa,cXa:(0.15584399999999998/(0.20249999999999999*cVa^2/(cVa+2.9)+1*cVa*cXa+0.32214*cVa+0.5872499999999999*cVa/(cVa+2.9)+2.9*cXa+0.9342059999999999))]==>2Xa+Va",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXa/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "VIIa_TF+X+S[USER;cIX,cX:(1.8277310924369747/(0.004761904761904762*cIX+0.004201680672268907*cX+1))]==>Xa+VIIa_TF+X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXa/dt term 8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AT_III+Va+Xa+S[USER;cVa,cXa:(2.5919999999999996e-5/(0.20249999999999999*cVa^2/(cVa+2.9)+1*cVa*cXa+0.32214*cVa+0.5872499999999999*cVa/(cVa+2.9)+2.9*cXa+0.9342059999999999))]==>2Xa+AT_III+Va",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXa/dt term 9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TFPI+Va+Xa+S[USER;cVa,cXa:(0.01053/(0.20249999999999999*cVa^2/(cVa+2.9)+1*cVa*cXa+0.32214*cVa+0.5872499999999999*cVa/(cVa+2.9)+2.9*cXa+0.9342059999999999))]==>2Xa+TFPI+Va",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXa/dt term 10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IXa+Q1+X+S[USER;cII,cIXa,cQ1,cX:(841.7266187050359/(21.765293222772172*cII*cIXa*cQ1*cX/(0.6808510638297872*cII+1*cX+320)+0.6808510638297872*cII*cIXa*cQ1+32.64793983415826*cII*cIXa*cX/(0.6808510638297872*cII+1*cX+320)+1.0212765957446808*cII*cIXa+55.936803582524476*cII*cQ1*cX/(0.6808510638297872*cII+1*cX+320)+1.749787234042553*cII*cQ1+83.90520537378671*cII*cX/(0.6808510638297872*cII+1*cX+320)+2.6246808510638298*cII+31.967774420946625*cIXa*cQ1*(cX*cX)/(0.6808510638297872*cII+1*cX+320)+1*cIXa*cQ1*cX+10229.68781470292*cIXa*cQ1*cX/(0.6808510638297872*cII+1*cX+320)+320*cIXa*cQ1+47.95166163141994*cIXa*(cX*cX)/(0.6808510638297872*cII+1*cX+320)+1.5*cIXa*cX+15344.53172205438*cIXa*cX/(0.6808510638297872*cII+1*cX+320)+480*cIXa+82.15718026183282*cQ1*(cX*cX)/(0.6808510638297872*cII+1*cX+320)+2.57*cQ1*cX+26290.297683786503*cQ1*cX/(0.6808510638297872*cII+1*cX+320)+822.4*cQ1+123.23577039274923*(cX*cX)/(0.6808510638297872*cII+1*cX+320)+3.8549999999999995*cX+39435.446525679756*cX/(0.6808510638297872*cII+1*cX+320)+1233.6))]==>Xa+IXa+Q1+X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dX/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X+IXa+S[USER;cII,cIXa,cX:(0.08139130434782607/(0.6808510638297872*cII*cIXa+1.749787234042553*cII+1*cIXa*(cX+1e-30)+320*cIXa+2.57*cX+822.4))]==>IXa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dX/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X+VIIa_TF+S[USER;cIX,cX:(1.8277310924369747/(0.004761904761904762*cIX+0.004201680672268907*cX+1))]==>VIIa_TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dX/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X+IXa+Q1+S[USER;cII,cIXa,cQ1,cX:(841.7266187050359*(0.6808510638297872*cII+1*cX+320)/(21.765293222772172*cII*cIXa*cQ1*(cX+1e-30)+32.64793983415826*cII*cIXa*(cX+1e-30)+55.936803582524476*cII*cQ1*(cX+1e-30)+83.90520537378671*cII*(cX+1e-30)+31.967774420946625*cIXa*cQ1*(cX+1e-30)^2+10229.68781470292*cIXa*cQ1*(cX+1e-30)+47.95166163141994*cIXa*(cX+1e-30)^2+15344.53172205438*cIXa*(cX+1e-30)+82.15718026183282*cQ1*(cX+1e-30)^2+26290.297683786503*cQ1*(cX+1e-30)+39435.446525679756*cX+123.23577039274923*(cX+1e-30)^2+(0.6808510638297872*cII+1*cX+320)*(0.6808510638297872*cII*cIXa*cQ1+1.0212765957446808*cII*cIXa+1.749787234042553*cII*cQ1+2.6246808510638298*cII+1*cIXa*cQ1*(cX+1e-30)+320*cIXa*cQ1+1.5*cIXa*(cX+1e-30)+480*cIXa+2.57*cQ1*(cX+1e-30)+822.4*cQ1+3.8549999999999995*cX+1233.6)+3.943544652567976e-26))]==>IXa+Q1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIIa/dt term 1",
+     ""
+    ],
+    [
+     "0.0033749999999999995",
+     "0",
+     "0",
+     "II+Xa==>IIa+II+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIIa/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IIa+S[USER;cfibrin,cfibrinogen:(0.54076/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIIa/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IIa+AT_III+S[USER;cfibrin,cfibrinogen:(0.00041/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1))]==>AT_III",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIIa/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "II+Va+Xa+S[USER;cII,cVa,cX,cXa:(4665.599999999999/(0.20249999999999999*cII*cVa^2/(cVa+2.9)+1*cII*cVa*cXa+0.32214*cII*cVa+0.5872499999999999*cII*cVa/(cVa+2.9)+2.9*cII*cXa+0.9342059999999999*cII+0.29742187499999995*cVa^2*cX/(cVa+2.9)+95.175*cVa^2/(cVa+2.9)+1.46875*cVa*cX*cXa+0.473143125*cVa*cX+0.8625234374999999*cVa*cX/(cVa+2.9)+470*cVa*cXa+151.4058*cVa+276.0075*cVa/(cVa+2.9)+4.2593749999999995*cX*cXa+1.3721150624999998*cX+1363*cXa+439.07681999999994))]==>IIa+II+Va+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIIa/dt term 5 (consumes IIa)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cII,cVa,cXa:((-1*0.0006834374999999999*cII*cVa*cXa/(0.20249999999999999*cVa^2/(cVa+2.9)+1*cVa*cXa+0.32214*cVa+0.5872499999999999*cVa/(cVa+2.9)+2.9*cXa+0.9342059999999999)))]==>IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dII/dt term 1",
+     ""
+    ],
+    [
+     "0.0033749999999999995",
+     "0",
+     "0",
+     "II+Xa==>Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dII/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "II+Va+Xa+S[USER;cVa,cXa:(0.0006834374999999999/(0.20249999999999999*cVa^2/(cVa+2.9)+1*cVa*cXa+0.32214*cVa+0.5872499999999999*cVa/(cVa+2.9)+2.9*cXa+0.9342059999999999))]==>2II+Va+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dII/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "II+Va+Xa+S[USER;cII,cVa,cX,cXa:(4665.599999999999*(cVa+2.9)/(0.29742187499999995*cVa^2*cX+0.20249999999999999*cVa^2*(cII+1e-30)+95.175*cVa^2+0.8625234374999999*cVa*cX+0.5872499999999999*cVa*(cII+1e-30)+276.0075*cVa+(cVa+2.9)*(0.9342059999999999*cII+1.46875*cVa*cX*cXa+0.473143125*cVa*cX+1*cVa*cXa*(cII+1e-30)+470*cVa*cXa+0.32214*cVa*(cII+1e-30)+151.4058*cVa+4.2593749999999995*cX*cXa+1.3721150624999998*cX+2.9*cXa*(cII+1e-30)+1363*cXa+439.07681999999994)))]==>Va+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dfibrin/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IIa+fibrinogen+S[USER;cfibrin,cfibrinogen:(0.7/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1))]==>fibrin+IIa+fibrinogen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dfibrinogen/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "fibrinogen+IIa+S[USER;cfibrin,cfibrinogen:(0.7/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1))]==>IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVIIIa/dt term 1",
+     ""
+    ],
+    [
+     "0.35",
+     "0",
+     "0",
+     "Q1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVIIIa/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IIa+VIII+S[USER;cIIa,cfibrin,cfibrinogen:(54/(0.0001388888888888889*cIIa*cfibrin/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1)+0.0001388888888888889*cIIa*cfibrinogen/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1)+1*cIIa/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1)+0.020416666666666666*cfibrin+0.020416666666666666*cfibrinogen+147))]==>Q1+IIa+VIII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVIII/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "VIII+IIa+S[USER;cIIa,cfibrin,cfibrinogen:(54/(0.0001388888888888889*cIIa*cfibrin/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1)+0.0001388888888888889*cIIa*cfibrinogen/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1)+1*cIIa/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1)+0.020416666666666666*cfibrin+0.020416666666666666*cfibrinogen+147))]==>IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVa/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IIa+V+S[USER;cIIa,cfibrin,cfibrinogen:(14/(0.0001388888888888889*cIIa*cfibrin/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1)+0.0001388888888888889*cIIa*cfibrinogen/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1)+1*cIIa/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1)+0.009958333333333333*cfibrin+0.009958333333333333*cfibrinogen+71.7))]==>Va+IIa+V",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVa/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Va+APC+S[USER;cVa:(1.5592499999999998/(1*cVa+2.9))]==>APC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVa/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC+Va+Xa+S[USER;cVa,cXa:(1.5592499999999998/(0.20249999999999999*cVa^2/(cVa+2.9)+1*cVa*cXa+0.32214*cVa+0.5872499999999999*cVa/(cVa+2.9)+2.9*cXa+0.9342059999999999))]==>2Va+APC+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "V+IIa+S[USER;cIIa,cfibrin,cfibrinogen:(14/(0.0001388888888888889*cIIa*cfibrin/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1)+0.0001388888888888889*cIIa*cfibrinogen/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1)+1*cIIa/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1)+0.009958333333333333*cfibrin+0.009958333333333333*cfibrinogen+71.7))]==>IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXIa/dt term 1",
+     ""
+    ],
+    [
+     "0.9818",
+     "0",
+     "0",
+     "XIa==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXIa/dt term 2",
+     ""
+    ],
+    [
+     "1.9e-5",
+     "0",
+     "0",
+     "XIa+AT_III==>AT_III",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXIa/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IIa+XI+S[USER;cfibrin,cfibrinogen:(2.2499999999999996e-6/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1))]==>XIa+IIa+XI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXI/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "XI+IIa+S[USER;cfibrin,cfibrinogen:(2.2499999999999996e-6/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1))]==>IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAT_III/dt term 1",
+     ""
+    ],
+    [
+     "1.9e-5",
+     "0",
+     "0",
+     "AT_III+XIa==>XIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAT_III/dt term 2",
+     ""
+    ],
+    [
+     "8.2e-6",
+     "0",
+     "0",
+     "AT_III+IXa==>IXa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAT_III/dt term 3",
+     ""
+    ],
+    [
+     "0.00015",
+     "0",
+     "0",
+     "AT_III+Xa==>Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAT_III/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AT_III+IIa+S[USER;cfibrin,cfibrinogen:(0.00041/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1))]==>IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAT_III/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AT_III+Va+Xa+S[USER;cVa,cXa:(2.5919999999999996e-5/(0.20249999999999999*cVa^2/(cVa+2.9)+1*cVa*cXa+0.32214*cVa+0.5872499999999999*cVa/(cVa+2.9)+2.9*cXa+0.9342059999999999))]==>2AT_III+Va+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTFPI/dt term 1",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Xa_TFPI==>TFPI+Xa_TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTFPI/dt term 2",
+     ""
+    ],
+    [
+     "0.052",
+     "0",
+     "0",
+     "TFPI+Xa==>Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTFPI/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TFPI+Va+Xa+S[USER;cVa,cXa:(0.01053/(0.20249999999999999*cVa^2/(cVa+2.9)+1*cVa*cXa+0.32214*cVa+0.5872499999999999*cVa/(cVa+2.9)+2.9*cXa+0.9342059999999999))]==>2TFPI+Va+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dTFPI/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TFPI+VIIa_TF+X+S[USER;cIX,cX:(0.014242060460547856/(0.004761904761904762*cIX+0.004201680672268907*cX+1))]==>VIIa_TF+X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXa_TFPI/dt term 1",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Xa_TFPI==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXa_TFPI/dt term 2",
+     ""
+    ],
+    [
+     "0.052",
+     "0",
+     "0",
+     "TFPI+Xa==>Xa_TFPI+TFPI+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXa_TFPI/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Xa_TFPI+VIIa_TF+S[USER;cIX,cX:(0.44/(0.004761904761904762*cIX+0.004201680672268907*cX+1))]==>VIIa_TF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXa_TFPI/dt term 4 (consumes Xa_TFPI)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTFPI,cVa,cXa:((-1*0.01053*cTFPI*cVa*cXa/(0.20249999999999999*cVa^2/(cVa+2.9)+1*cVa*cXa+0.32214*cVa+0.5872499999999999*cVa/(cVa+2.9)+2.9*cXa+0.9342059999999999)))]==>Xa_TFPI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAPC/dt term 1",
+     ""
+    ],
+    [
+     "0.08692",
+     "0",
+     "0",
+     "APC==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAPC/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IIa+PC+S[USER;cfibrin,cfibrinogen:(2e-5/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1))]==>APC+IIa+PC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPC/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PC+IIa+S[USER;cfibrin,cfibrinogen:(2e-5/(0.0001388888888888889*cfibrin+0.0001388888888888889*cfibrinogen+1))]==>IIa",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "VIIa_TF",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIa-TF [VIIa_TF]",
+     ""
+    ],
+    [
+     "VII_TF",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VII-TF [VII_TF]",
+     ""
+    ],
+    [
+     "TF",
+     "0",
+     "0.005",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF [TF]",
+     ""
+    ],
+    [
+     "VIIa",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIa [VIIa]",
+     ""
+    ],
+    [
+     "VII",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VII [VII]",
+     ""
+    ],
+    [
+     "IXa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IXa [IXa]",
+     ""
+    ],
+    [
+     "IX",
+     "0",
+     "90",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IX [IX]",
+     ""
+    ],
+    [
+     "Xa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa [Xa]",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "170",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X [X]",
+     ""
+    ],
+    [
+     "IIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IIa [IIa]",
+     ""
+    ],
+    [
+     "II",
+     "0",
+     "1400",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "II [II]",
+     ""
+    ],
+    [
+     "fibrin",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "fibrin [fibrin]",
+     ""
+    ],
+    [
+     "fibrinogen",
+     "0",
+     "7600",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "fibrinogen [fibrinogen]",
+     ""
+    ],
+    [
+     "Q1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIIa [VIIIa]",
+     ""
+    ],
+    [
+     "VIII",
+     "0",
+     "0.7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIII [VIII]",
+     ""
+    ],
+    [
+     "Va",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va [Va]",
+     ""
+    ],
+    [
+     "V",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V [V]",
+     ""
+    ],
+    [
+     "XIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "XIa [XIa]",
+     ""
+    ],
+    [
+     "XI",
+     "0",
+     "30",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "XI [XI]",
+     ""
+    ],
+    [
+     "AT_III",
+     "0",
+     "3400",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AT-III [AT_III]",
+     ""
+    ],
+    [
+     "TFPI",
+     "0",
+     "2.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TFPI [TFPI]",
+     ""
+    ],
+    [
+     "Xa_TFPI",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa-TFPI [Xa_TFPI]",
+     ""
+    ],
+    [
+     "APC",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC [APC]",
+     ""
+    ],
+    [
+     "PC",
+     "0",
+     "60",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PC [PC]",
+     ""
+    ],
+    [
+     "alpha2_macroglobulin",
+     "0",
+     "3000",
+     "Y",
+     "0",
+     "No",
+     "3000",
+     "alpha2-macroglobulin [alpha2_macroglobulin]",
+     ""
+    ],
+    [
+     "alpha1_antitrypsin",
+     "0",
+     "40000",
+     "Y",
+     "0",
+     "No",
+     "40000",
+     "alpha1-antitrypsin [alpha1_antitrypsin]",
+     ""
+    ],
+    [
+     "alpha2_antiplasmin",
+     "0",
+     "1100",
+     "Y",
+     "0",
+     "No",
+     "1100",
+     "alpha2-antiplasmin [alpha2_antiplasmin]",
+     ""
+    ],
+    [
+     "heparin_cofactor2",
+     "0",
+     "1400",
+     "Y",
+     "0",
+     "No",
+     "1400",
+     "heparin-cofactor2 [heparin_cofactor2]",
+     ""
+    ],
+    [
+     "ProteinC_Inhibitor",
+     "0",
+     "88",
+     "Y",
+     "0",
+     "No",
+     "88",
+     "ProteinC-Inhibitor [ProteinC_Inhibitor]",
+     ""
+    ],
+    [
+     "C1_inhibitor",
+     "0",
+     "1700",
+     "Y",
+     "0",
+     "No",
+     "1700",
+     "C1-inhibitor [C1_inhibitor]",
+     ""
+    ],
+    [
+     "ProteinS_inhibitor",
+     "0",
+     "346",
+     "Y",
+     "0",
+     "No",
+     "346",
+     "ProteinS-inhibitor [ProteinS_inhibitor]",
+     ""
+    ],
+    [
+     "Phospholipid",
+     "0",
+     "7.5e-5",
+     "Y",
+     "0",
+     "No",
+     "7.5e-5",
+     "Phospholipid [Phospholipid]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

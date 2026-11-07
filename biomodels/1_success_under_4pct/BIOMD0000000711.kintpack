@@ -1,0 +1,978 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:58:23.281226+00:00",
+ "description": "Hancioglu2007 - Human Immune Response to Influenza A virus Infection\nBioModels BIOMD0000000711 (curated). SBML file: Hancioglu2007 - Human Immune Response to Influenza A virus.xml.\nSimulation: 0 to 15 time units (SED-ML: Hancioglu2007 - Human Immune Response to Influenza A virus.sedml), sampling 0.015.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS_PARTIAL, max |difference| = 4.79e-06 of species peak (worst: Plasma_cells__P)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'Event_to_keep_viral_load_non_negative' not converted (state-triggered (not a time >= t0 trigger))\n  [info] species 'Dead_cells__D' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Non_Specific_Removal_of_Virus__V___aV1_aV2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Regeneration_of_Healthy_Epithelial_cells__H term 4/7: rate order differs from the stoichiometry; consumed on separate line(s) - HealthyEpithelialcellsH1: zero order, signed\n  [info] Regeneration_of_Healthy_Epithelial_cells__H term 6/7: rate order differs from the stoichiometry; consumed on separate line(s) - HealthyEpithelialcellsH1: zero order, signed\n  [info] Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 4/10: rate order differs from the stoichiometry; consumed on separate line(s) - APC_cells__M: zero order, signed\n  [info] Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 5/10: rate order differs from the stoichiometry; consumed on separate line(s) - APC_cells__M: zero order, signed\n  [info] Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 6/10: rate order differs from the stoichiometry; consumed on separate line(s) - APC_cells__M: zero order, signed\nRenamed species (Kintecus name = SBML id): HealthyEpithelialcellsH1 = Healthy_Epithelial_cells__H; InfectedEpithelialcellsI1 = Infected_Epithelial_cells__I",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hancioglu2007 - Human Immune Response to Influenza A virus Infection  (BIOMD0000000711, curated BioModels; source file Hancioglu2007 - Human Immune Response to Influenza A virus.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Secretion_of_Virus__V__by_Infected_epithelial_cells__I",
+     ""
+    ],
+    [
+     "510",
+     "0",
+     "0",
+     "InfectedEpithelialcellsI1==>Viral_Load__V+InfectedEpithelialcellsI1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Neutralization_of_Virus__V__by_Antibody__A",
+     ""
+    ],
+    [
+     "619.2",
+     "0",
+     "0",
+     "Viral_Load__V+Antibodies__A+Antigenic_compatibility__S==>Antibodies__A+Antigenic_compatibility__S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Adsorption_of_Virus__V__by_Healthy_epithelial_cells__H",
+     ""
+    ],
+    [
+     "1.02",
+     "0",
+     "0",
+     "Viral_Load__V+HealthyEpithelialcellsH1==>HealthyEpithelialcellsH1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Non_Specific_Removal_of_Virus__V___alphaV",
+     ""
+    ],
+    [
+     "1.7",
+     "0",
+     "0",
+     "Viral_Load__V==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Non_Specific_Removal_of_Virus__V___aV1_aV2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Viral_Load__V+S[USER;cViral_Load__V:(100/(23000*cViral_Load__V+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Regeneration_of_Healthy_Epithelial_cells__H term 1/7",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "HealthyEpithelialcellsH1==>2HealthyEpithelialcellsH1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Regeneration_of_Healthy_Epithelial_cells__H term 2/7",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "Resistant_cells__R==>HealthyEpithelialcellsH1+Resistant_cells__R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Regeneration_of_Healthy_Epithelial_cells__H term 3/7",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "HealthyEpithelialcellsH1+HealthyEpithelialcellsH1==>HealthyEpithelialcellsH1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Regeneration_of_Healthy_Epithelial_cells__H term 4/7 (consumes HealthyEpithelialcellsH1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cResistant_cells__R:((-1*4*cResistant_cells__R^2))]==>HealthyEpithelialcellsH1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Regeneration_of_Healthy_Epithelial_cells__H term 5/7",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "HealthyEpithelialcellsH1+InfectedEpithelialcellsI1==>InfectedEpithelialcellsI1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Regeneration_of_Healthy_Epithelial_cells__H term 6/7 (consumes HealthyEpithelialcellsH1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cInfectedEpithelialcellsI1,cResistant_cells__R:((-1*4*cInfectedEpithelialcellsI1*cResistant_cells__R))]==>HealthyEpithelialcellsH1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Regeneration_of_Healthy_Epithelial_cells__H term 7/7",
+     ""
+    ],
+    [
+     "8",
+     "0",
+     "0",
+     "HealthyEpithelialcellsH1+Resistant_cells__R==>Resistant_cells__R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_virus_resistant_state_decay",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Resistant_cells__R==>HealthyEpithelialcellsH1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infection_of_Healthy_Epithelial_cells_by__V",
+     ""
+    ],
+    [
+     "0.34",
+     "0",
+     "0",
+     "HealthyEpithelialcellsH1+Viral_Load__V==>InfectedEpithelialcellsI1+Viral_Load__V",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "H_virus_resistant_state_induction",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "HealthyEpithelialcellsH1+Interferons__F==>Resistant_cells__R+Interferons__F",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Infected_Epithelial_cells___E",
+     ""
+    ],
+    [
+     "0.066",
+     "0",
+     "0",
+     "InfectedEpithelialcellsI1+Effector_cells__E==>Effector_cells__E",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Infected_Epithelial_cells___Cytopathicity_of_V",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "InfectedEpithelialcellsI1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 1/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>APC_cells__M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 2/10",
+     ""
+    ],
+    [
+     "0.0037",
+     "0",
+     "0",
+     "Viral_Load__V==>APC_cells__M+Viral_Load__V",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 3/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC_cells__M==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 4/10 (consumes APC_cells__M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cHealthyEpithelialcellsH1:((-1*1*cHealthyEpithelialcellsH1))]==>APC_cells__M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 5/10 (consumes APC_cells__M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cInfectedEpithelialcellsI1:((-1*1*cInfectedEpithelialcellsI1))]==>APC_cells__M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 6/10 (consumes APC_cells__M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cResistant_cells__R:((-1*1*cResistant_cells__R))]==>APC_cells__M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 7/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC_cells__M+HealthyEpithelialcellsH1==>2APC_cells__M+HealthyEpithelialcellsH1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 8/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC_cells__M+InfectedEpithelialcellsI1==>2APC_cells__M+InfectedEpithelialcellsI1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 9/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC_cells__M+Resistant_cells__R==>2APC_cells__M+Resistant_cells__R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 10/10",
+     ""
+    ],
+    [
+     "0.0037",
+     "0",
+     "0",
+     "APC_cells__M+Viral_Load__V==>Viral_Load__V",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stimulates_State_loss_of_APC_cells__M",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC_cells__M==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_Interferons__F___M",
+     ""
+    ],
+    [
+     "250000",
+     "0",
+     "0",
+     "APC_cells__M==>Interferons__F+APC_cells__M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_Interferons__F___I",
+     ""
+    ],
+    [
+     "2000",
+     "0",
+     "0",
+     "InfectedEpithelialcellsI1==>Interferons__F+InfectedEpithelialcellsI1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Binding_of_Healthy_epithelial_cells__H__and_Interferons__F",
+     ""
+    ],
+    [
+     "17",
+     "0",
+     "0",
+     "Interferons__F+HealthyEpithelialcellsH1==>HealthyEpithelialcellsH1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Interferons__F",
+     ""
+    ],
+    [
+     "8",
+     "0",
+     "0",
+     "Interferons__F==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stimulation_of_Effector_cells__E___M",
+     ""
+    ],
+    [
+     "8.3",
+     "0",
+     "0",
+     "APC_cells__M+Effector_cells__E==>2Effector_cells__E+APC_cells__M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Effector_cells__E___Mod_I",
+     ""
+    ],
+    [
+     "2.72",
+     "0",
+     "0",
+     "Effector_cells__E+InfectedEpithelialcellsI1==>InfectedEpithelialcellsI1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Effector_cells__E term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "source==>Effector_cells__E",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Effector_cells__E term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Effector_cells__E==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_Plasma_cells__P___Mod_M",
+     ""
+    ],
+    [
+     "11.5",
+     "0",
+     "0",
+     "APC_cells__M+Plasma_cells__P==>2Plasma_cells__P+APC_cells__M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Plasma_cells__P term 1/2",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "source==>Plasma_cells__P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Plasma_cells__P term 2/2",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "Plasma_cells__P==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_Antibody__A___Mod_P",
+     ""
+    ],
+    [
+     "0.043",
+     "0",
+     "0",
+     "Plasma_cells__P==>Antibodies__A+Plasma_cells__P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Binding_of_Antibody__A__and_Virus__V",
+     ""
+    ],
+    [
+     "146.25",
+     "0",
+     "0",
+     "Antibodies__A+Antigenic_compatibility__S+Viral_Load__V==>Antigenic_compatibility__S+Viral_Load__V",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Antibody__A",
+     ""
+    ],
+    [
+     "0.043",
+     "0",
+     "0",
+     "Antibodies__A==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Antigenic_Compatibility_variable term 1/2",
+     ""
+    ],
+    [
+     "3e-5",
+     "0",
+     "0",
+     "Plasma_cells__P==>Antigenic_compatibility__S+Plasma_cells__P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Antigenic_Compatibility_variable term 2/2",
+     ""
+    ],
+    [
+     "3e-5",
+     "0",
+     "0",
+     "Antigenic_compatibility__S+Plasma_cells__P==>Plasma_cells__P",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Viral_Load__V",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Viral Load (V) [Viral_Load__V]",
+     ""
+    ],
+    [
+     "HealthyEpithelialcellsH1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Healthy Epithelial cells (H) [Healthy_Epithelial_cells__H]",
+     ""
+    ],
+    [
+     "InfectedEpithelialcellsI1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected Epithelial cells (I) [Infected_Epithelial_cells__I]",
+     ""
+    ],
+    [
+     "APC_cells__M",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC cells (M) [APC_cells__M]",
+     ""
+    ],
+    [
+     "Interferons__F",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Interferons (F) [Interferons__F]",
+     ""
+    ],
+    [
+     "Resistant_cells__R",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Resistant cells (R) [Resistant_cells__R]",
+     ""
+    ],
+    [
+     "Effector_cells__E",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Effector cells (E) [Effector_cells__E]",
+     ""
+    ],
+    [
+     "Plasma_cells__P",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Plasma cells (P) [Plasma_cells__P]",
+     ""
+    ],
+    [
+     "Antibodies__A",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Antibodies (A) [Antibodies__A]",
+     ""
+    ],
+    [
+     "Antigenic_compatibility__S",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Antigenic compatibility (S) [Antigenic_compatibility__S]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.015",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "15",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.015",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

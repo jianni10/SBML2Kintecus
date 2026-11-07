@@ -1,0 +1,422 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:45:30.743729+00:00",
+ "description": "Teusink1998_Glycolysis_TurboDesign\nBioModels BIOMD0000000253 (curated). SBML file: BIOMD0000000253_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000253_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.52e-06 of species peak (worst: HMP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Tre6P' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ADP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] HK: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PFK term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PFK term 2/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PFK term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PFK term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] lower term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] lower term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - ATP: first order\n  [info] ATPase: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Teusink1998_Glycolysis_TurboDesign  (BIOMD0000000253, curated BioModels; source file BIOMD0000000253_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "HK",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+S[USER;cATP,cHMP:(4533.333333333334/(73.33333333333334*cATP+1.5076134479119556*cHMP^2*(cATP+1e-30)+0.22614201718679333*cHMP^2+11))]==>HMP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PFK term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+HMP+S[USER;cATP,cHMP:((833.3333333333334*cATP^3+16666.666666666668*cATP^2+83333.33333333334*cATP)/(35366.86666666667*cATP+3*cHMP+277.84722222222223*(cATP+1e-30)^4*(cHMP+1e-30)^2+333.33333333333337*(cATP+1e-30)^4*(cHMP+1e-30)+277780.55555555556*(cATP+1e-30)^4+5559.0361111111115*(cATP+1e-30)^3*(cHMP+1e-30)^2+1703.6666666666667*(cATP+1e-30)^3*(cHMP+1e-30)+588944.7777777779*(cATP+1e-30)^3+27844.540805555556*(cATP+1e-30)^2*(cHMP+1e-30)^2+5974.3533333333335*(cATP+1e-30)^2*(cHMP+1e-30)+345728.8988888889*(cATP+1e-30)^2+333.5421666666667*(cATP+1e-30)*(cHMP+1e-30)^2+402.40000000000003*(cATP+1e-30)*(cHMP+1e-30)+1.00025*(cHMP+1e-30)^2+1001))]==>Fru16P2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PFK term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+HMP+S[USER;cATP,cHMP:((50*cATP^2+1000*cATP+5000)/(35366.86666666667*cATP+3*cHMP+277.84722222222223*(cATP+1e-30)^4*(cHMP+1e-30)^2+333.33333333333337*(cATP+1e-30)^4*(cHMP+1e-30)+277780.55555555556*(cATP+1e-30)^4+5559.0361111111115*(cATP+1e-30)^3*(cHMP+1e-30)^2+1703.6666666666667*(cATP+1e-30)^3*(cHMP+1e-30)+588944.7777777779*(cATP+1e-30)^3+27844.540805555556*(cATP+1e-30)^2*(cHMP+1e-30)^2+5974.3533333333335*(cATP+1e-30)^2*(cHMP+1e-30)+345728.8988888889*(cATP+1e-30)^2+333.5421666666667*(cATP+1e-30)*(cHMP+1e-30)^2+402.40000000000003*(cATP+1e-30)*(cHMP+1e-30)+1.00025*(cHMP+1e-30)^2+1001))]==>Fru16P2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PFK term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+HMP+S[USER;cATP,cHMP:((50*cATP^2*cHMP+1000*cATP*cHMP+5000*cHMP)/(35366.86666666667*cATP+3*cHMP+277.84722222222223*(cATP+1e-30)^4*(cHMP+1e-30)^2+333.33333333333337*(cATP+1e-30)^4*(cHMP+1e-30)+277780.55555555556*(cATP+1e-30)^4+5559.0361111111115*(cATP+1e-30)^3*(cHMP+1e-30)^2+1703.6666666666667*(cATP+1e-30)^3*(cHMP+1e-30)+588944.7777777779*(cATP+1e-30)^3+27844.540805555556*(cATP+1e-30)^2*(cHMP+1e-30)^2+5974.3533333333335*(cATP+1e-30)^2*(cHMP+1e-30)+345728.8988888889*(cATP+1e-30)^2+333.5421666666667*(cATP+1e-30)*(cHMP+1e-30)^2+402.40000000000003*(cATP+1e-30)*(cHMP+1e-30)+1.00025*(cHMP+1e-30)^2+1001))]==>Fru16P2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PFK term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+HMP+S[USER;cATP,cHMP:((8333.333333333334*cATP^3*cHMP+166666.6666666667*cATP^2*cHMP+833333.3333333334*cATP*cHMP)/(35366.86666666667*cATP+3*cHMP+277.84722222222223*(cATP+1e-30)^4*(cHMP+1e-30)^2+333.33333333333337*(cATP+1e-30)^4*(cHMP+1e-30)+277780.55555555556*(cATP+1e-30)^4+5559.0361111111115*(cATP+1e-30)^3*(cHMP+1e-30)^2+1703.6666666666667*(cATP+1e-30)^3*(cHMP+1e-30)+588944.7777777779*(cATP+1e-30)^3+27844.540805555556*(cATP+1e-30)^2*(cHMP+1e-30)^2+5974.3533333333335*(cATP+1e-30)^2*(cHMP+1e-30)+345728.8988888889*(cATP+1e-30)^2+333.5421666666667*(cATP+1e-30)*(cHMP+1e-30)^2+402.40000000000003*(cATP+1e-30)*(cHMP+1e-30)+1.00025*(cHMP+1e-30)^2+1001))]==>Fru16P2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "lower term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Fru16P2+S[USER;cATP,cFru16P2:((-1*1000/(10*cATP*(cFru16P2+1e-30)+10*cATP-51*cFru16P2-51)))]==>4ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "lower term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cFru16P2:(200*cATP*cFru16P2/(-10*cATP*cFru16P2-10*cATP+51*cFru16P2+51))]==>Fru16P2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "lower term 2/2 (consumes ATP)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+S[USER;cATP,cFru16P2:((-1*800*cFru16P2/(10*cATP*cFru16P2+10*cATP-51*cFru16P2-51)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ATPase",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+S[USER;cATP:(68/(1*cATP+3))]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "HMP",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "hexose monophosphate [HMP]",
+     ""
+    ],
+    [
+     "Fru16P2",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "fructose 1,6-bisphosphate [Fru16P2]",
+     ""
+    ],
+    [
+     "ATP",
+     "0",
+     "4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP [ATP]",
+     ""
+    ],
+    [
+     "Glc",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "glucose [Glc]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

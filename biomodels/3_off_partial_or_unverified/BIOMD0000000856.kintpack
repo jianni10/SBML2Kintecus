@@ -1,0 +1,1052 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:28:52.624766+00:00",
+ "description": "Budding yeast size control by titration of nuclear sites\nBioModels BIOMD0000000856 (curated). SBML file: Heldt2018.xml.\nSimulation: 0 to 720 time units (SED-ML: Heldt2018.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 1.10e+03 of species peak (worst: TM)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 1.10e+03 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] rate rule on compartment 'mV' (variable volume) not convertible\n  [blocker] rate rule on compartment 'dV' (variable volume) not convertible\n  [partial] compartment 'tV' has an assignment rule; its t=0 size is used\n  [blocker] event 'Start' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Division' not converted (state-triggered (not a time >= t0 trigger))\n  [info] species 'GI' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'GD' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'SBF' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'WHIt' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'SBFt' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'TMt' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'active_SBF' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'CLN3t' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Synthesis_of_Cln1_2 term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - CLN: zero order, signed\n  [info] Synthesis_of_Cln1_2 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - CLN: zero order, signed\n  [info] Synthesis_of_Cln1_2 term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - CLN: zero order, signed\n  [info] Activation_of_APC_Cdc20: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Inactivation_of_APC_C_Cdc20: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Activation_of_APC_C_Cdh1 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Activation_of_APC_C_Cdh1 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Inactivation_of_APC_C_Cdh1 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Inactivation_of_APC_C_Cdh1 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Association_of_Whi5_and_SBF term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - WHISBF: zero order, signed\n  [info] Association_of_Whi5_and_SBF term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - WHISBF: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Budding yeast size control by titration of nuclear sites  (BIOMD0000000856, curated BioModels; source file Heldt2018.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_transcription_machninery",
+     ""
+    ],
+    [
+     "0.004200000000000001",
+     "0",
+     "0",
+     "GDTM==>TM+GDTM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_dissociation_of_TM_and_size_independent_genes term 1/3",
+     ""
+    ],
+    [
+     "4.545454545454546",
+     "0",
+     "0",
+     "TM==>GITM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_dissociation_of_TM_and_size_independent_genes term 2/3",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "GITM==>TM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_dissociation_of_TM_and_size_independent_genes term 3/3",
+     ""
+    ],
+    [
+     "5.454545454545454",
+     "0",
+     "0",
+     "GITM+TM==>2TM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_dissociation_of_TM_and_size_dependent_genes term 1/3",
+     ""
+    ],
+    [
+     "227.27272727272728",
+     "0",
+     "0",
+     "TM==>GDTM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_dissociation_of_TM_and_size_dependent_genes term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GDTM==>TM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_dissociation_of_TM_and_size_dependent_genes term 3/3",
+     ""
+    ],
+    [
+     "0.5454545454545454",
+     "0",
+     "0",
+     "GDTM+TM==>2TM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_Cln3",
+     ""
+    ],
+    [
+     "0.003",
+     "0",
+     "0",
+     "GDTM==>CLN3+GDTM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Cln3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CLN3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Phosphorylation_of_SBF",
+     ""
+    ],
+    [
+     "2.727272727272727",
+     "0",
+     "0",
+     "SBFu+CLB==>SBFp+CLB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Dephosphorylation_of_SBF",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "SBFp==>SBFu",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_Cln1_2 term 1/4",
+     ""
+    ],
+    [
+     "0.019199999999957758",
+     "0",
+     "0",
+     "GDTM+SBFu==>CLN+GDTM+SBFu",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_Cln1_2 term 2/4 (consumes CLN)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCLN3WHISBF,cGDTM,cSBFu:((-1*0.02303999999989862*cCLN3WHISBF*cGDTM*cSBFu))]==>CLN",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_Cln1_2 term 3/4 (consumes CLN)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cGDTM,cSBFu,cWHISBF:((-1*0.02303999999989862*cGDTM*cSBFu*cWHISBF))]==>CLN",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_Cln1_2 term 4/4 (consumes CLN)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cGDTM,cSBFu,cWHIpSBF:((-1*0.02303999999989862*cGDTM*cSBFu*cWHIpSBF))]==>CLN",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Cln1_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CLN==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_Cdh1",
+     ""
+    ],
+    [
+     "8.400000000000001e-5",
+     "0",
+     "0",
+     "GDTM==>CDHi+GDTM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_Cdc20",
+     ""
+    ],
+    [
+     "8.400000000000001e-5",
+     "0",
+     "0",
+     "GDTM==>CDCi+GDTM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_APC_Cdc20",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CDCi+CLB+S[USER;cCDCi:(0.2727272727272727/(0.5454545454545454*cCDCi+0.001))]==>CDCa+CLB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inactivation_of_APC_C_Cdc20",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CDCa+S[USER;cCDCa:(0.25/(0.5454545454545454*cCDCa+0.001))]==>CDCi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_APC_C_Cdh1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CDHi+S[USER;cCDHi:(0.01/(0.5454545454545454*cCDHi+0.001))]==>CDHa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_APC_C_Cdh1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CDHi+CDCa+S[USER;cCDHi:(1.0909090909090908/(0.5454545454545454*cCDHi+0.001))]==>CDHa+CDCa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inactivation_of_APC_C_Cdh1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CDHa+CLN+S[USER;cCDHa:(0.06818181818181818/(0.5454545454545454*cCDHa+0.001))]==>CDHi+CLN",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inactivation_of_APC_C_Cdh1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CDHa+CLB+S[USER;cCDHa:(1.0909090909090908/(0.5454545454545454*cCDHa+0.001))]==>CDHi+CLB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_Clb1_2 term 1/2",
+     ""
+    ],
+    [
+     "2e-5",
+     "0",
+     "0",
+     "GDTM==>CLB+GDTM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_of_Clb1_2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CLB+GDTM+S[USER;cCLB:(0.00032727272727272726/(0.5454545454545454*cCLB+0.3))]==>2CLB+GDTM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Clb1_2 term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "CLB==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Clb1_2 term 2/2",
+     ""
+    ],
+    [
+     "1.0909090909090908",
+     "0",
+     "0",
+     "CLB+CDHa==>CDHa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_dissociation_of_Cln3_and_Whi5_SBF term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "CLN3WHISBF==>WHISBF+CLN3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_dissociation_of_Cln3_and_Whi5_SBF term 2/2",
+     ""
+    ],
+    [
+     "54.54545454545455",
+     "0",
+     "0",
+     "WHISBF+CLN3==>CLN3WHISBF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_of_Whi5_and_SBF term 1/4",
+     ""
+    ],
+    [
+     "0.45454545454645456",
+     "0",
+     "0",
+     "WHI==>WHISBF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_of_Whi5_and_SBF term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCLN3WHISBF,cWHI:(0.5454545454545454*cCLN3WHISBF*cWHI)]==>WHI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_of_Whi5_and_SBF term 2/4 (consumes WHISBF)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCLN3WHISBF,cWHI:((-1*0.5454545454545454*cCLN3WHISBF*cWHI))]==>WHISBF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_of_Whi5_and_SBF term 3/4",
+     ""
+    ],
+    [
+     "0.5454545454545454",
+     "0",
+     "0",
+     "WHISBF+WHI==>2WHI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_of_Whi5_and_SBF term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cWHI,cWHIpSBF:(0.5454545454545454*cWHI*cWHIpSBF)]==>WHI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_of_Whi5_and_SBF term 4/4 (consumes WHISBF)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cWHI,cWHIpSBF:((-1*0.5454545454545454*cWHI*cWHIpSBF))]==>WHISBF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Phosphorylation_of_free_Whi5",
+     ""
+    ],
+    [
+     "54.54545454545455",
+     "0",
+     "0",
+     "WHI+CLN==>WHIp+CLN",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Dephosphorylation_of_free_Whi5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "WHIp==>WHI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Phosphorylation_of_Whi5_in_Cln3_Whi5_SBF_complexes",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CLN3WHISBF==>WHIpSBF+CLN3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_Cln3_in_Cln3_Whi5_SBF_complexes",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CLN3WHISBF==>WHISBF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Dephosphorylation_of_hypo_phosphorylated_Whi5_in_Whi5_SBF_complexes",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "WHIpSBF==>WHISBF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hyper_phosphorylation_of_Whi5_in_hypo_phosphorylated_Whi5_SBF_complexes term 1/2",
+     ""
+    ],
+    [
+     "0.5454545454545454",
+     "0",
+     "0",
+     "WHIpSBF+CLN3==>WHIp+CLN3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hyper_phosphorylation_of_Whi5_in_hypo_phosphorylated_Whi5_SBF_complexes term 2/2",
+     ""
+    ],
+    [
+     "1.6363636363636362",
+     "0",
+     "0",
+     "WHIpSBF+CLN==>WHIp+CLN",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "TM",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TM [TM]",
+     ""
+    ],
+    [
+     "GITM",
+     "0",
+     "0.8333333333333334",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GITM [GITM]",
+     ""
+    ],
+    [
+     "GDTM",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GDTM [GDTM]",
+     ""
+    ],
+    [
+     "CLN3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CLN3 [CLN3]",
+     ""
+    ],
+    [
+     "WHI",
+     "0",
+     "3.3333333333333335",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "WHI [WHI]",
+     ""
+    ],
+    [
+     "WHIp",
+     "0",
+     "0.08333333333333334",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "WHIp [WHIp]",
+     ""
+    ],
+    [
+     "WHISBF",
+     "0",
+     "0.55",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "WHISBF [WHISBF]",
+     ""
+    ],
+    [
+     "WHIn",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "WHIn [WHIn]",
+     ""
+    ],
+    [
+     "SBFu",
+     "0",
+     "0.8333333333343335",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SBFu [SBFu]",
+     ""
+    ],
+    [
+     "SBFp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SBFp [SBFp]",
+     ""
+    ],
+    [
+     "CLN",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CLN [CLN]",
+     ""
+    ],
+    [
+     "CLB",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CLB [CLB]",
+     ""
+    ],
+    [
+     "CDHa",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CDHa [CDHa]",
+     ""
+    ],
+    [
+     "CDHi",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CDHi [CDHi]",
+     ""
+    ],
+    [
+     "CDCa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CDCa [CDCa]",
+     ""
+    ],
+    [
+     "CDCi",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CDCi [CDCi]",
+     ""
+    ],
+    [
+     "CLN3WHISBF",
+     "0",
+     "0.1416666666666667",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CLN3WHISBF [CLN3WHISBF]",
+     ""
+    ],
+    [
+     "WHIpSBF",
+     "0",
+     "0.1416666666666667",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "WHIpSBF [WHIpSBF]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "720",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,745 @@
+{
+ "version": 3,
+ "created": "2026-11-01T23:02:45.957497+00:00",
+ "description": "Sible2007 - Mitotic cell cycle mecanism in Xenopus Laevis\nBioModels BIOMD0000000942 (curated). SBML file: Sible2007.xml.\nSimulation: 0 to 200 time units (SED-ML: Sible2007.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.75e-06 of species peak (worst: Cyclin_Cdk1_preMPF)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Cdc25' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Wee1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Cdk1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IE' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Cyclin_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] R1_Dephosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R2_Phosphorylation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R4_Phosphorylation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Cyclin_Cdk1_preMPF: zero order, signed\n  [info] R5_Dephosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R6_Phosphorylation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R9_Dephosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R10_Phosphorylation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R11_Inactivation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R12_Activation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sible2007 - Mitotic cell cycle mecanism in Xenopus Laevis  (BIOMD0000000942, curated BioModels; source file Sible2007.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1_Dephosphorylation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc25_phosphorylated+S[USER;cCdc25_phosphorylated:(0.1/(1*cCdc25_phosphorylated+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2_Phosphorylation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cyclin_Cdk1_MPF+S[USER;cCdc25_phosphorylated:(0.02/(1.1-cCdc25_phosphorylated))]==>Cdc25_phosphorylated+Cyclin_Cdk1_MPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2_Phosphorylation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc25_phosphorylated+Cyclin_Cdk1_MPF+S[USER;cCdc25_phosphorylated:((-1*0.02/(1*cCdc25_phosphorylated-1.1)))]==>Cyclin_Cdk1_MPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3_Dephosphorylation term 1/2",
+     ""
+    ],
+    [
+     "0.017",
+     "0",
+     "0",
+     "Cyclin_Cdk1_preMPF==>Cyclin_Cdk1_MPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3_Dephosphorylation term 2/2",
+     ""
+    ],
+    [
+     "0.15300000000000002",
+     "0",
+     "0",
+     "Cyclin_Cdk1_preMPF+Cdc25_phosphorylated==>Cyclin_Cdk1_MPF+Cdc25_phosphorylated",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4_Phosphorylation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cyclin_Cdk1_MPF==>Cyclin_Cdk1_preMPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4_Phosphorylation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCyclin_Cdk1_MPF,cWee1_phosphorylated:(0.99*cCyclin_Cdk1_MPF*cWee1_phosphorylated)]==>Cyclin_Cdk1_MPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4_Phosphorylation term 2/2 (consumes Cyclin_Cdk1_preMPF)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCyclin_Cdk1_MPF,cWee1_phosphorylated:((-1*0.99*cCyclin_Cdk1_MPF*cWee1_phosphorylated))]==>Cyclin_Cdk1_preMPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5_Dephosphorylation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Wee1_phosphorylated+S[USER;cWee1_phosphorylated:(0.1/(1*cWee1_phosphorylated+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6_Phosphorylation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cyclin_Cdk1_MPF+S[USER;cWee1_phosphorylated:(0.02/(1.1-cWee1_phosphorylated))]==>Wee1_phosphorylated+Cyclin_Cdk1_MPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6_Phosphorylation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Wee1_phosphorylated+Cyclin_Cdk1_MPF+S[USER;cWee1_phosphorylated:((-1*0.02/(1*cWee1_phosphorylated-1.1)))]==>Cyclin_Cdk1_MPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7_Protein_Complex__Formation_by_binding",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "Cyclin==>Cyclin_Cdk1_MPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8_Synthesis",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>Cyclin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9_Dephosphorylation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IE_phosphorylated+S[USER;cIE_phosphorylated:(0.15/(1*cIE_phosphorylated+0.01))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10_Phosphorylation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cyclin_Cdk1_MPF+S[USER;cIE_phosphorylated:(0.02/(1.01-cIE_phosphorylated))]==>IE_phosphorylated+Cyclin_Cdk1_MPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10_Phosphorylation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IE_phosphorylated+Cyclin_Cdk1_MPF+S[USER;cIE_phosphorylated:((-1*0.02/(1*cIE_phosphorylated-1.01)))]==>Cyclin_Cdk1_MPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11_Inactivation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC_active+S[USER;cAPC_active:(0.13/(1*cAPC_active+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12_Activation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IE_phosphorylated+S[USER;cAPC_active:(0.13/(1.01-cAPC_active))]==>APC_active+IE_phosphorylated",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12_Activation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC_active+IE_phosphorylated+S[USER;cAPC_active:((-1*0.13/(1*cAPC_active-1.01)))]==>IE_phosphorylated",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13_Degradation term 1/2",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "Cyclin_Cdk1_MPF==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13_Degradation term 2/2",
+     ""
+    ],
+    [
+     "0.245",
+     "0",
+     "0",
+     "Cyclin_Cdk1_MPF+APC_active==>APC_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14_Degradation term 1/2",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "Cyclin==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14_Degradation term 2/2",
+     ""
+    ],
+    [
+     "0.245",
+     "0",
+     "0",
+     "Cyclin+APC_active==>APC_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15_Degradation term 1/2",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "Cyclin_Cdk1_preMPF==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15_Degradation term 2/2",
+     ""
+    ],
+    [
+     "0.245",
+     "0",
+     "0",
+     "Cyclin_Cdk1_preMPF+APC_active==>APC_active",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Cdc25_phosphorylated",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdc25_phosphorylated [Cdc25_phosphorylated]",
+     ""
+    ],
+    [
+     "Cyclin_Cdk1_MPF",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cyclin_Cdk1_MPF [Cyclin_Cdk1_MPF]",
+     ""
+    ],
+    [
+     "Cyclin_Cdk1_preMPF",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cyclin_Cdk1_preMPF [Cyclin_Cdk1_preMPF]",
+     ""
+    ],
+    [
+     "Wee1_phosphorylated",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Wee1_phosphorylated [Wee1_phosphorylated]",
+     ""
+    ],
+    [
+     "Cyclin",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cyclin [Cyclin]",
+     ""
+    ],
+    [
+     "IE_phosphorylated",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IE_phosphorylated [IE_phosphorylated]",
+     ""
+    ],
+    [
+     "APC_active",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC_active [APC_active]",
+     ""
+    ],
+    [
+     "Cdk1_total",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "100",
+     "Cdk1_total [Cdk1_total]",
+     ""
+    ],
+    [
+     "Cdc25_total",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "Cdc25_total [Cdc25_total]",
+     ""
+    ],
+    [
+     "Wee1_total",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "Wee1_total [Wee1_total]",
+     ""
+    ],
+    [
+     "IE_total",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "IE_total [IE_total]",
+     ""
+    ],
+    [
+     "APC_total",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "APC_total [APC_total]",
+     ""
+    ],
+    [
+     "ppase",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "ppase [ppase]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "2",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "2",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

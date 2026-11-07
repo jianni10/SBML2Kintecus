@@ -1,0 +1,436 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:11:50.779328+00:00",
+ "description": "Lim2014 - HTLV-I infection A dynamic struggle between viral persistence and host immunity\nBioModels BIOMD0000000887 (curated). SBML file: Lim2014.xml.\nSimulation: 0 to 1000 time units (SED-ML: Lim2014.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.25e-06 of species peak (worst: y)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lim2014 - HTLV-I infection A dynamic struggle between viral persistence and host immunity  (BIOMD0000000887, curated BioModels; source file Lim2014.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4_Production",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "source==>x",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infectious_Transmission",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "x+y==>u+y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4_Natural_Death",
+     ""
+    ],
+    [
+     "0.012",
+     "0",
+     "0",
+     "x==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mitotic_Transmission",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "y==>u+y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4LI_Spontaneous_Activation",
+     ""
+    ],
+    [
+     "0.003",
+     "0",
+     "0",
+     "u==>y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4LI_Natural_Death",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "u==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4AI_Lysis_CTL",
+     ""
+    ],
+    [
+     "0.029",
+     "0",
+     "0",
+     "y+z==>z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4AI_Natural_Death",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "y==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CTL_Proliferation",
+     ""
+    ],
+    [
+     "0.036",
+     "0",
+     "0",
+     "y==>z+y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CTL_Natural_Death",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "z==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x",
+     "0",
+     "850",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x [x]",
+     ""
+    ],
+    [
+     "u",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "u [u]",
+     ""
+    ],
+    [
+     "y",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "y [y]",
+     ""
+    ],
+    [
+     "z",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "z [z]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

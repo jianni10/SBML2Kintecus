@@ -1,0 +1,908 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:57:12.699408+00:00",
+ "description": "Leloup1999_CircadianRhythms_Drosophila\nBioModels BIOMD0000000298 (curated). SBML file: BIOMD0000000298_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000298_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.72e-06 of species peak (worst: CN)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dMP/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dP0/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dP1/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dP2/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dP2/dt term 5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dMT/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dT0/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dT1/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dT2/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dT2/dt term 5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Leloup1999_CircadianRhythms_Drosophila  (BIOMD0000000298, curated BioModels; source file BIOMD0000000298_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dMP/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCN:(1.1/(cCN^4+1))]==>MP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dMP/dt term 2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "MP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dMP/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MP+S[USER;cMP:(1/(1*cMP+0.2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP0/dt term 1",
+     ""
+    ],
+    [
+     "0.9",
+     "0",
+     "0",
+     "MP==>P0+MP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP0/dt term 2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "P0==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP0/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P1+S[USER;cP1:(1/(cP1+2))]==>P0+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP0/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P0+S[USER;cP0:(8/(1*cP0+2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP1/dt term 1",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "P1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP1/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P2+S[USER;cP2:(1/(cP2+2))]==>P1+P2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP1/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P0+S[USER;cP0:(8/(cP0+2))]==>P1+P0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP1/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P1+S[USER;cP1:(9/(1*cP1+2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP2/dt term 1",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "C==>P2+C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP2/dt term 2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "P2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP2/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P1+S[USER;cP1:(8/(cP1+2))]==>P2+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP2/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P2+S[USER;cP2:(1/(1*cP2+2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP2/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P2+S[USER;cP2:(2.2/(1*cP2+0.2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP2/dt term 6",
+     ""
+    ],
+    [
+     "1.2",
+     "0",
+     "0",
+     "P2+T2==>T2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dMT/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCN:(1/(cCN^4+1))]==>MT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dMT/dt term 2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "MT==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dMT/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MT+S[USER;cMT:(0.7/(1*cMT+0.2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT0/dt term 1",
+     ""
+    ],
+    [
+     "0.9",
+     "0",
+     "0",
+     "MT==>T0+MT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT0/dt term 2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "T0==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT0/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T1+S[USER;cT1:(1/(cT1+2))]==>T0+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT0/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T0+S[USER;cT0:(8/(1*cT0+2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT1/dt term 1",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "T1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT1/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T2+S[USER;cT2:(1/(cT2+2))]==>T1+T2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT1/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T0+S[USER;cT0:(8/(cT0+2))]==>T1+T0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT1/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T1+S[USER;cT1:(9/(1*cT1+2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT2/dt term 1",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "C==>T2+C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT2/dt term 2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "T2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT2/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T1+S[USER;cT1:(8/(cT1+2))]==>T2+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT2/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T2+S[USER;cT2:(1/(1*cT2+2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT2/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T2+S[USER;cT2:(3/(1*cT2+0.2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT2/dt term 6",
+     ""
+    ],
+    [
+     "1.2",
+     "0",
+     "0",
+     "T2+P2==>P2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC/dt term 1",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "CN==>C+CN",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC/dt term 2",
+     ""
+    ],
+    [
+     "1.41",
+     "0",
+     "0",
+     "C==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC/dt term 3",
+     ""
+    ],
+    [
+     "1.2",
+     "0",
+     "0",
+     "P2+T2==>C+P2+T2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCN/dt term 1",
+     ""
+    ],
+    [
+     "0.8",
+     "0",
+     "0",
+     "C==>CN+C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCN/dt term 2",
+     ""
+    ],
+    [
+     "0.21000000000000002",
+     "0",
+     "0",
+     "CN==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "MP",
+     "0",
+     "0.0614368",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MP [MP]",
+     ""
+    ],
+    [
+     "CN",
+     "0",
+     "1.34728",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CN [CN]",
+     ""
+    ],
+    [
+     "C",
+     "0",
+     "0.207614",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C [C]",
+     ""
+    ],
+    [
+     "T2",
+     "0",
+     "0.0145428",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T2 [T2]",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "0.0213384",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T1 [T1]",
+     ""
+    ],
+    [
+     "T0",
+     "0",
+     "0.0217261",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T0 [T0]",
+     ""
+    ],
+    [
+     "MT",
+     "0",
+     "0.0860342",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MT [MT]",
+     ""
+    ],
+    [
+     "P0",
+     "0",
+     "0.0169928",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P0 [P0]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "0.0141356",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P1 [P1]",
+     ""
+    ],
+    [
+     "P2",
+     "0",
+     "0.0614368",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P2 [P2]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,1713 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:51:00.097272+00:00",
+ "description": "Mosca2012 - Central Carbon Metabolism Regulated by AKT\nBioModels BIOMD0000000426 (curated). SBML file: BIOMD0000000426_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000426_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.86e-06 of species peak (worst: species_7)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'species_3' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_10' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_18' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction_1 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_2 term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_2 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - species_1: zero order, signed\n  [info] reaction_2 term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_3 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_3 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_4 term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_4 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - species_8: zero order, signed\n  [info] reaction_4 term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_5 term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_5 term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_5 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - species_13: zero order, signed\n  [info] reaction_6 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_6 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_7 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_7 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_8 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_8 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_9 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_9 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_10 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_10 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_11 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_12 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_12 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_13 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_14 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_14 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_15 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_15 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_16 term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_16 term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_16 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - species_16: zero order, signed\n  [info] reaction_17 term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_17 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - species_28: zero order, signed\n  [info] reaction_17 term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_18 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_19 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - species_22: zero order, signed\n  [info] reaction_19 term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_20 term 1/3: rate order differs from the stoichiometry; consumed on separate line(s) - species_5: zero order, signed\n  [info] reaction_20 term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_20 term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_21 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_21 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_22 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_22 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_23 term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_23 term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_23 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - species_31: zero order, signed\n  [info] reaction_24 term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_24 term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_24 term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_25 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_26 term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_28 term 1/4: non-integer reactant coefficient 0.08 on species_31 written as a Kintecus coefficient\n  [info] reaction_28 term 1/4: rate order differs from the stoichiometry; consumed on separate line(s) - species_31: zero order, signed\n  [info] reaction_28 term 2/4: non-integer reactant coefficient 0.08 on species_31 written as a Kintecus coefficient\n  [info] reaction_28 term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - species_31: zero order, signed\n  [info] reaction_28 term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_28 term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mosca2012 - Central Carbon Metabolism Regulated by AKT  (BIOMD0000000426, curated BioModels; source file BIOMD0000000426_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_1:(0.2303/(1.0752688172043012*cspecies_1+0.02))]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_1+S[USER;cspecies_1:(23.03/(1.0752688172043012*cspecies_1+0.02))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_2+S[USER;cspecies_1,cspecies_2,cspecies_4:(13826.141600335146/(6233766.233766233*cspecies_1*cspecies_4+42571.42857142857*cspecies_1+212857.14285714284*cspecies_2+31168831.168831162*cspecies_4*(cspecies_2+1e-30)+623.3766233766233*cspecies_4+4.257142857142857))]==>species_1+species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_4+S[USER;cspecies_1,cspecies_2,cspecies_4:(1212819.43862589*cspecies_2/(6233766.233766233*cspecies_1*cspecies_4+42571.42857142857*cspecies_1+31168831.168831162*cspecies_2*cspecies_4+212857.14285714284*cspecies_2+623.3766233766233*cspecies_4+4.257142857142857))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 2/3 (consumes species_1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_1,cspecies_2,cspecies_4:((-1*1212819.43862589*cspecies_2*cspecies_4/(6233766.233766233*cspecies_1*cspecies_4+42571.42857142857*cspecies_1+31168831.168831162*cspecies_2*cspecies_4+212857.14285714284*cspecies_2+623.3766233766233*cspecies_4+4.257142857142857)))]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_1+species_4+S[USER;cspecies_1,cspecies_2,cspecies_4:(789545454.5454544/(42571.42857142857*cspecies_1+31168831.168831162*cspecies_2*(cspecies_4+1e-30)+212857.14285714284*cspecies_2+623.3766233766233*cspecies_4+6233766.233766233*(cspecies_1+1e-30)*(cspecies_4+1e-30)+4.257142857142857))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_2+S[USER;cspecies_2,cspecies_5,cspecies_6,cspecies_7,cspecies_8:(19445000/(2500*cspecies_2+20000*cspecies_5+16666.666666666668*cspecies_6+1000000*cspecies_7+66666.66666666667*cspecies_8+1))]==>species_5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_5+S[USER;cspecies_2,cspecies_5,cspecies_6,cspecies_7,cspecies_8:(349730215.82733816/(2500*cspecies_2+20000*cspecies_5+16666.666666666668*cspecies_6+1000000*cspecies_7+66666.66666666667*cspecies_8+1))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_2+S[USER;cspecies_11,cspecies_12,cspecies_2,cspecies_4:((-1*79556516019.9192/(4085150885047939.5*cspecies_11*(cspecies_2+1e-30)-48033256.48012296*cspecies_11-436871.996505024*cspecies_12-78925115099.1262*cspecies_2-1335113.4846461948*cspecies_4-5265.305177111717)))]==>species_8+species_11",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_11+S[USER;cspecies_11,cspecies_12,cspecies_2,cspecies_4:((-1*4117832092128323.0*cspecies_2/(4085150885047939.5*cspecies_11*cspecies_2-48033256.48012296*cspecies_11-436871.996505024*cspecies_12-78925115099.1262*cspecies_2-1335113.4846461948*cspecies_4-5265.305177111717)))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4 term 2/3 (consumes species_8)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_11,cspecies_12,cspecies_2,cspecies_4:((-1*4117832092128323.0*cspecies_11*cspecies_2/(-4085150885047939.5*cspecies_11*cspecies_2+48033256.48012296*cspecies_11+436871.996505024*cspecies_12+78925115099.1262*cspecies_2+1335113.4846461948*cspecies_4+5265.305177111717)))]==>species_8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_8+species_11+S[USER;cspecies_11,cspecies_12,cspecies_2,cspecies_4:((-1*2058916046064.1616/(-48033256.48012296*cspecies_11-436871.996505024*cspecies_12+4085150885047939.5*cspecies_2*(cspecies_11+1e-30)-78925115099.1262*cspecies_2-1335113.4846461948*cspecies_4-5265.305177111717)))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_8+S[USER;cspecies_11,cspecies_12,cspecies_4,cspecies_8:(3329480000000.0005/(-462962962962963*cspecies_11*cspecies_12-1724137931034483.0*cspecies_11*(cspecies_8+1e-30)+166666666.6666667*cspecies_11+8952777777.77778*cspecies_12+6493506.493506493*cspecies_4+107433333333.33334*cspecies_8+1074.3333333333335))]==>species_11+species_13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_11+species_13+S[USER;cspecies_11,cspecies_12,cspecies_4,cspecies_8:(1216184427193601.5/(166666666.6666667*cspecies_11-462962962962963*cspecies_12*(cspecies_11+1e-30)+8952777777.77778*cspecies_12+6493506.493506493*cspecies_4-1724137931034483.0*cspecies_8*(cspecies_11+1e-30)+107433333333.33334*cspecies_8+1074.3333333333335))]==>species_8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_11+S[USER;cspecies_11,cspecies_12,cspecies_4,cspecies_8:(1.7233333333333334e17*cspecies_8/(-462962962962963*cspecies_11*cspecies_12-1724137931034483.0*cspecies_11*cspecies_8+166666666.6666667*cspecies_11+8952777777.77778*cspecies_12+6493506.493506493*cspecies_4+107433333333.33334*cspecies_8+1074.3333333333335))]==>species_8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 3/3 (consumes species_13)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_11,cspecies_12,cspecies_4,cspecies_8:((-1*1.7233333333333334e17*cspecies_11*cspecies_8/(-462962962962963*cspecies_11*cspecies_12-1724137931034483.0*cspecies_11*cspecies_8+166666666.6666667*cspecies_11+8952777777.77778*cspecies_12+6493506.493506493*cspecies_4+107433333333.33334*cspecies_8+1074.3333333333335)))]==>species_13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_13+S[USER;cspecies_13,cspecies_14:(1.471/(1*cspecies_13+0.38*cspecies_14+1.9e-7))]==>species_14",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_14+S[USER;cspecies_13,cspecies_14:(0.5448148148148149/(1*cspecies_13+0.38*cspecies_14+1.9e-7))]==>species_13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_13+S[USER;cspecies_13,cspecies_15:(0.7646/(1*cspecies_13+0.35454545454545455*cspecies_15+7.8e-7))]==>species_15",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_15+S[USER;cspecies_13,cspecies_15:(0.25486666666666663/(1*cspecies_13+0.35454545454545455*cspecies_15+7.8e-7))]==>species_13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_15+species_14+S[USER;cspecies_14,cspecies_15,cspecies_16,cspecies_17:(1056/(4.177e-7*cspecies_14+3.055e-7*cspecies_15+0.41139*cspecies_16*cspecies_17+48.8*cspecies_16*(cspecies_14+1e-30)+1.2432e-5*cspecies_16+0.00774*cspecies_17*(cspecies_15+1e-30)+4.96e-9*cspecies_17+1*(cspecies_14+1e-30)*(cspecies_15+1e-30)+7.232e-37))]==>species_16+species_17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_16+species_17+S[USER;cspecies_14,cspecies_15,cspecies_16,cspecies_17:(507.6923076923077/(1*cspecies_14*cspecies_15+48.8*cspecies_14*(cspecies_16+1e-30)+4.177e-7*cspecies_14+0.00774*cspecies_15*(cspecies_17+1e-30)+3.055e-7*cspecies_15+1.2432e-5*cspecies_16+4.96e-9*cspecies_17+0.41139*(cspecies_16+1e-30)*(cspecies_17+1e-30)+1.2436960000000002e-35))]==>species_15+species_14",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_7+species_14+S[USER;cspecies_14,cspecies_16,cspecies_5,cspecies_7:(0.1761/(1.84e-9*cspecies_14+0.0287*cspecies_16*cspecies_5+0.215*cspecies_16*(cspecies_14+1e-30)+5.48e-8*cspecies_16+0.122*cspecies_5*(cspecies_7+1e-30)+3e-10*cspecies_5+3.055e-7*cspecies_7+1*(cspecies_14+1e-30)*(cspecies_7+1e-30)+3.0734e-37))]==>species_16+species_5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_16+species_5+S[USER;cspecies_14,cspecies_16,cspecies_5,cspecies_7:(0.00592929292929293/(1*cspecies_14*cspecies_7+0.215*cspecies_14*(cspecies_16+1e-30)+1.84e-9*cspecies_14+5.48e-8*cspecies_16+3e-10*cspecies_5+0.122*cspecies_7*(cspecies_5+1e-30)+3.055e-7*cspecies_7+0.0287*(cspecies_16+1e-30)*(cspecies_5+1e-30)+5.51e-38))]==>species_7+species_14",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_16+species_17+S[USER;cspecies_16,cspecies_17,cspecies_5,cspecies_7:(58.27/(4.765e-8*cspecies_16+8.23e-9*cspecies_17+0.8683*cspecies_5*cspecies_7+0.4653*cspecies_5*(cspecies_16+1e-30)+6.095e-9*cspecies_5+2.524*cspecies_7*(cspecies_17+1e-30)+1.733e-7*cspecies_7+1*(cspecies_16+1e-30)*(cspecies_17+1e-30)+5.588e-38))]==>species_7+species_5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_7+species_5+S[USER;cspecies_16,cspecies_17,cspecies_5,cspecies_7:(21.5575286718461/(1*cspecies_16*cspecies_17+0.4653*cspecies_16*(cspecies_5+1e-30)+4.765e-8*cspecies_16+2.524*cspecies_17*(cspecies_7+1e-30)+8.23e-9*cspecies_17+6.095e-9*cspecies_5+1.733e-7*cspecies_7+0.8683*(cspecies_5+1e-30)*(cspecies_7+1e-30)+1.7939500000000002e-37))]==>species_16+species_17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_11 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_15,cspecies_4:(1.5873439999999998e-11/(cspecies_15*cspecies_4+3e-8*cspecies_15+5.7e-7*cspecies_4+1.71e-14))]==>species_15+species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_11 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_15+species_4+S[USER;cspecies_15,cspecies_4:(0.5104/(3e-8*cspecies_15+5.7e-7*cspecies_4+1*(cspecies_15+1e-30)*(cspecies_4+1e-30)+1.71e-14))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_12 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_22+S[USER;cspecies_2,cspecies_22:(116888.88888888889/(33333.333333333336*cspecies_2+15873.015873015873*cspecies_22+1))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_12 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_2+S[USER;cspecies_2,cspecies_22:(6795.865633074935/(33333.333333333336*cspecies_2+15873.015873015873*cspecies_22+1))]==>species_22",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_13 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_22:(20.515509887632057/(137659.2379520185*cspecies_22+2038.8655015361012))]==>species_22",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_13 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_22+S[USER;cspecies_22:(2442.322605670483/(137659.2379520185*cspecies_22+2038.8655015361012))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_14 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_6+S[USER;cspecies_16,cspecies_27,cspecies_6:(1625555.5555555555/(78124999.99999999*cspecies_16*cspecies_27+6249.999999999999*cspecies_16+12499.999999999998*cspecies_27+111111.11111111111*cspecies_6+1))]==>species_27+species_16",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_14 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_27+species_16+S[USER;cspecies_16,cspecies_27,cspecies_6:(903086419.7530864/(6249.999999999999*cspecies_16+12499.999999999998*cspecies_27+111111.11111111111*cspecies_6+78124999.99999999*(cspecies_16+1e-30)*(cspecies_27+1e-30)+1))]==>species_6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_15 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_16+S[USER;cspecies_16,cspecies_27:(11717.647058823528/(1960.7843137254902*cspecies_16+625*cspecies_27+1))]==>species_27",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_15 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_27+S[USER;cspecies_16,cspecies_27:(30754.979157017136/(1960.7843137254902*cspecies_16+625*cspecies_27+1))]==>species_16",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_12+S[USER;cspecies_12,cspecies_16,cspecies_19:((-1*827939072.4139397/(-6113636.363636363*cspecies_12-98810244.0008066*cspecies_16*cspecies_19+4545454545.454545*cspecies_19*(cspecies_12+1e-30)+88888.88888888888*cspecies_19-135.5)))]==>species_16+species_19",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_16+species_19+S[USER;cspecies_12,cspecies_16,cspecies_19:((-1*4400080661.423674/(4545454545.454545*cspecies_12*(cspecies_19+1e-30)-6113636.363636363*cspecies_12+88888.88888888888*cspecies_19-98810244.0008066*(cspecies_16+1e-30)*(cspecies_19+1e-30)-135.5)))]==>species_12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_19+S[USER;cspecies_12,cspecies_16,cspecies_19:((-1*615568083579.1373*cspecies_12/(4545454545.454545*cspecies_12*cspecies_19-6113636.363636363*cspecies_12-98810244.0008066*cspecies_16*cspecies_19+88888.88888888888*cspecies_19-135.5)))]==>species_12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 3/3 (consumes species_16)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_12,cspecies_16,cspecies_19:((-1*615568083579.1373*cspecies_12*cspecies_19/(-4545454545.454545*cspecies_12*cspecies_19+6113636.363636363*cspecies_12+98810244.0008066*cspecies_16*cspecies_19-88888.88888888888*cspecies_19+135.5)))]==>species_16",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_12+S[USER;cspecies_12,cspecies_28,cspecies_4:((-1*264833544.30379745/(-3620253.164556962*cspecies_12-28490028.490028493*cspecies_28*cspecies_4-7692.307692307693*cspecies_28+316455696.20253164*cspecies_4*(cspecies_12+1e-30)+21296.296296296296*cspecies_4-286)))]==>species_28+species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_4+S[USER;cspecies_12,cspecies_28,cspecies_4:((-1*23231012658.227848*cspecies_12/(316455696.20253164*cspecies_12*cspecies_4-3620253.164556962*cspecies_12-28490028.490028493*cspecies_28*cspecies_4-7692.307692307693*cspecies_28+21296.296296296296*cspecies_4-286)))]==>species_12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17 term 2/3 (consumes species_28)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_12,cspecies_28,cspecies_4:((-1*23231012658.227848*cspecies_12*cspecies_4/(-316455696.20253164*cspecies_12*cspecies_4+3620253.164556962*cspecies_12+28490028.490028493*cspecies_28*cspecies_4+7692.307692307693*cspecies_28-21296.296296296296*cspecies_4+286)))]==>species_28",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_28+species_4+S[USER;cspecies_12,cspecies_28,cspecies_4:((-1*2043364645.8112276/(316455696.20253164*cspecies_12*(cspecies_4+1e-30)-3620253.164556962*cspecies_12-7692.307692307693*cspecies_28+21296.296296296296*cspecies_4-28490028.490028493*(cspecies_28+1e-30)*(cspecies_4+1e-30)-286)))]==>species_12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_18 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_22:(14.57436792567574/(31711.46021048483*cspecies_22+1455.9642000485217))]==>species_22",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_18 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_22+S[USER;cspecies_22:(1.9063422704017865/(31711.46021048483*cspecies_22+1455.9642000485217))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_19 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_22,cspecies_4:(6.551484739484952/(11977.22675271885*cspecies_22*cspecies_4-527604.4189805266*cspecies_4+6015.690376378004))]==>species_22+species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_19 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_4+S[USER;cspecies_22,cspecies_4:(574.6916438144694/(11977.22675271885*cspecies_22*cspecies_4-527604.4189805266*cspecies_4+6015.690376378004))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_19 term 2/3 (consumes species_22)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_22,cspecies_4:((-1*574.6916438144694*cspecies_4/(11977.22675271885*cspecies_22*cspecies_4-527604.4189805266*cspecies_4+6015.690376378004)))]==>species_22",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_19 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_22+species_4+S[USER;cspecies_22,cspecies_4:(383750345.157112/(-527604.4189805266*cspecies_4+11977.22675271885*(cspecies_22+1e-30)*(cspecies_4+1e-30)+6015.690376378004))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_20 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_4+S[USER;cspecies_4,cspecies_6:((-1*813172605408.3761*cspecies_4*cspecies_6/(1904761904761.9048*cspecies_4^2*cspecies_6+9523809523.809525*cspecies_4^2-31238055238.09524*cspecies_4*cspecies_6-156190276.1904762*cspecies_4-656*cspecies_6-3.2800000000000002)))]==>species_6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_20 term 1/3 (consumes species_5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_4,cspecies_6:((-1*813172605408.3761*cspecies_4^2*cspecies_6/(-1904761904761.9048*cspecies_4^2*cspecies_6-9523809523.809525*cspecies_4^2+31238055238.09524*cspecies_4*cspecies_6+156190276.1904762*cspecies_4+656*cspecies_6+3.2800000000000002)))]==>species_5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_20 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_6+species_4+S[USER;cspecies_4,cspecies_6:((-1*9270167701.655489/(1904761904761.9048*cspecies_4^2*(cspecies_6+1e-30)+9523809523.809525*cspecies_4^2-31238055238.09524*cspecies_4*(cspecies_6+1e-30)-156190276.1904762*cspecies_4-656*cspecies_6-3.2800000000000002)))]==>species_5+2species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_20 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_5+species_4+S[USER;cspecies_4,cspecies_5:(15689248419072.11*(3124.5137352758497*cspecies_5+1)^3/(9.653595641547482e-7*(cspecies_4+1e-30)*(50*cspecies_4+1)^4+47619047.61904762*(cspecies_4+1e-30)*(3124.5137352758497*cspecies_5+1)^4+2.027255084724971e-14*(50*cspecies_4+1)^4+1*(3124.5137352758497*cspecies_5+1)^4))]==>species_6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_21 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_28+S[USER;cspecies_28,cspecies_29:(810526.3157894736/(5263.157894736842*cspecies_28+8333.333333333334*cspecies_29+1))]==>species_29",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_21 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_29+S[USER;cspecies_28,cspecies_29:(491496.1589894328/(5263.157894736842*cspecies_28+8333.333333333334*cspecies_29+1))]==>species_28",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_22 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_29+S[USER;cspecies_29,cspecies_30:(4234210.52631579/(26315.78947368421*cspecies_29+16666.666666666668*cspecies_30+1))]==>species_30",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_22 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_30+S[USER;cspecies_29,cspecies_30:(2997246.7801485024/(26315.78947368421*cspecies_29+16666.666666666668*cspecies_30+1))]==>species_29",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_23 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_30+S[USER;cspecies_30,cspecies_4,cspecies_6:((-1*56613214.28571428*(71428.57142857142*cspecies_30+1)^3*(2500000*cspecies_6+1)^4/(2500*cspecies_4*(71428.57142857142*cspecies_30+1)^4*(2500000*cspecies_6+1)^4+2500*cspecies_4*(400*cspecies_4+1)^4-29.5*(71428.57142857142*cspecies_30+1)^4*(2500000*cspecies_6+1)^4-29.5*(400*cspecies_4+1)^4)))]==>species_4+species_31",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_23 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_4+species_31+S[USER;cspecies_31,cspecies_4:(16.568569929255005/(100*cspecies_31+1162.7906976744187*cspecies_4+116279.06976744186*(cspecies_31+1e-30)*(cspecies_4+1e-30)+1))]==>species_30",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_23 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_4+S[USER;cspecies_30,cspecies_4,cspecies_6:((-1*4966071428.571428*cspecies_30*(71428.57142857142*cspecies_30+1)^3*(2500000*cspecies_6+1)^4/(2500*cspecies_4*(71428.57142857142*cspecies_30+1)^4*(2500000*cspecies_6+1)^4+2500*cspecies_4*(400*cspecies_4+1)^4-29.5*(71428.57142857142*cspecies_30+1)^4*(2500000*cspecies_6+1)^4-29.5*(400*cspecies_4+1)^4)))]==>species_30",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_23 term 3/3 (consumes species_31)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_30,cspecies_4,cspecies_6:((-1*4966071428.571428*cspecies_30*cspecies_4*(71428.57142857142*cspecies_30+1)^3/(-2500*cspecies_4*(71428.57142857142*cspecies_30+1)^4-2500*cspecies_4*(400*cspecies_4+1)^4/(2500000*cspecies_6+1)^4+29.5*(71428.57142857142*cspecies_30+1)^4+29.5*(400*cspecies_4+1)^4/(2500000*cspecies_6+1)^4)))]==>species_31",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_24 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_31+S[USER;cspecies_19,cspecies_31:((-1*762839166.6666669/(1666666666.666667*cspecies_19*(cspecies_31+1e-30)+438601.8237082067*cspecies_19-2245000.0000000005*cspecies_31-676.7978723404256)))]==>species_19",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_24 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_19+S[USER;cspecies_19,cspecies_31:((-1*2546294.955346368/(438601.8237082067*cspecies_19+1666666666.666667*cspecies_31*(cspecies_19+1e-30)-2245000.0000000005*cspecies_31-676.7978723404256)))]==>species_31",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_24 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_19+species_31+S[USER;cspecies_19,cspecies_31:((-1*567166666666.6667/(438601.8237082067*cspecies_19+1666666666.666667*cspecies_31*(cspecies_19+1e-30)-2245000.0000000005*cspecies_31-676.7978723404256)))]==>2species_31",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_25 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_4:(141.2*(0.0114-cspecies_4)^2/(1.00311*cspecies_4+(1.0114-cspecies_4)^2+0.00311))]==>species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_25 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_4+S[USER;cspecies_4:(0.19430619469026547*(0.0114-cspecies_4)^2/(1.00311*cspecies_4+1*(1.0114-cspecies_4)^2+0.00311))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_26 term 1/4",
+     ""
+    ],
+    [
+     "6691.7895430645785",
+     "0",
+     "0",
+     "source==>species_19",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_26 term 2/4",
+     ""
+    ],
+    [
+     "4975308.210456936",
+     "0",
+     "0",
+     "species_19==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_26 term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_19+species_19+S[USER;cspecies_19:(4975308.210456936/(0.4035-300*cspecies_19))]==>3species_19",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_26 term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_19+S[USER;cspecies_19:((-1*6691.7895430645785/(300*cspecies_19-0.4035)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_27 term 1/2",
+     ""
+    ],
+    [
+     "12.345241489934415",
+     "0",
+     "0",
+     "source==>species_11",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_27 term 2/2",
+     ""
+    ],
+    [
+     "766785.1857102121",
+     "0",
+     "0",
+     "species_11==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_28 term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_31,cspecies_4:(324.92857619625187*cspecies_31^0.08/(-1.0200132596552534*cspecies_4*(cspecies_31+1)^0.08+1.0050947507854633*cspecies_4+1.0316414108153233*(cspecies_31+1)^0.08+0.005094750785463318))]==>species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_28 term 1/4 (consumes species_31)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_31,cspecies_4:((-1*25.99428609570015*cspecies_31^0.08/(-1.0200132596552534*cspecies_4*(cspecies_31+1)^0.08+1.0050947507854633*cspecies_4+1.0316414108153233*(cspecies_31+1)^0.08+0.005094750785463318)))]==>species_31",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_28 term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_31,cspecies_4:(3.8955581790617018*cspecies_31^0.08*cspecies_4^2/(1.0200132596552534*cspecies_31^0.08*cspecies_4^2*(cspecies_31+1)^0.08-1.0050947507854633*cspecies_31^0.08*cspecies_4^2-1.0432695619753933*cspecies_31^0.08*cspecies_4*(cspecies_31+1)^0.08+0.006363329373490964*cspecies_31^0.08*cspecies_4+0.011760712083294687*cspecies_31^0.08*(cspecies_31+1)^0.08+5.8080158954281825e-5*cspecies_31^0.08))]==>species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_28 term 2/4 (consumes species_31)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_31,cspecies_4:((-1*0.31164465432493615*cspecies_31^0.08*cspecies_4^2/(1.0200132596552534*cspecies_31^0.08*cspecies_4^2*(cspecies_31+1)^0.08-1.0050947507854633*cspecies_31^0.08*cspecies_4^2-1.0432695619753933*cspecies_31^0.08*cspecies_4*(cspecies_31+1)^0.08+0.006363329373490964*cspecies_31^0.08*cspecies_4+0.011760712083294687*cspecies_31^0.08*(cspecies_31+1)^0.08+5.8080158954281825e-5*cspecies_31^0.08)))]==>species_31",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_28 term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_4+S[USER;cspecies_31,cspecies_4:(0.0444093632413034/(0.006363329373490964*cspecies_4+1.0200132596552534*(cspecies_31+1)^0.08*(cspecies_4+1e-30)^2-1.0432695619753933*(cspecies_31+1)^0.08*(cspecies_4+1e-30)+0.011760712083294687*(cspecies_31+1)^0.08-1.0050947507854633*(cspecies_4+1e-30)^2+5.8080158954281825e-5))]==>0.08species_31",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_28 term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_4+S[USER;cspecies_31,cspecies_4:((-1*28502.506683881744*cspecies_31^0.08/(-1.0050947507854633*cspecies_4+1.0200132596552534*(cspecies_31+1)^0.08*(cspecies_4+1e-30)-1.0316414108153233*(cspecies_31+1)^0.08-0.005094750785463318)))]==>0.08species_31",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_29",
+     ""
+    ],
+    [
+     "6210",
+     "0",
+     "0",
+     "species_4==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "species_1",
+     "0",
+     "0.000897",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GLC [species_1]",
+     ""
+    ],
+    [
+     "species_2",
+     "0",
+     "0.00109",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G6P [species_2]",
+     ""
+    ],
+    [
+     "species_4",
+     "0",
+     "0.0087",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP [species_4]",
+     ""
+    ],
+    [
+     "species_5",
+     "0",
+     "3.62e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "F6P [species_5]",
+     ""
+    ],
+    [
+     "species_6",
+     "0",
+     "0.000367",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "F16P [species_6]",
+     ""
+    ],
+    [
+     "species_7",
+     "0",
+     "0.00093",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E4P [species_7]",
+     ""
+    ],
+    [
+     "species_8",
+     "0",
+     "0.0001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PGN [species_8]",
+     ""
+    ],
+    [
+     "species_9",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "0.01",
+     "GLC_e [species_9]",
+     ""
+    ],
+    [
+     "species_11",
+     "0",
+     "1.87082e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADPH [species_11]",
+     ""
+    ],
+    [
+     "species_12",
+     "0",
+     "6.29e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "BPG [species_12]",
+     ""
+    ],
+    [
+     "species_13",
+     "0",
+     "0.000143",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RU5P [species_13]",
+     ""
+    ],
+    [
+     "species_14",
+     "0",
+     "0.000242",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X5P [species_14]",
+     ""
+    ],
+    [
+     "species_15",
+     "0",
+     "2.74e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R5P [species_15]",
+     ""
+    ],
+    [
+     "species_16",
+     "0",
+     "0.000153",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GAP [species_16]",
+     ""
+    ],
+    [
+     "species_17",
+     "0",
+     "8.58e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S7P [species_17]",
+     ""
+    ],
+    [
+     "species_19",
+     "0",
+     "0.00134",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NAD [species_19]",
+     ""
+    ],
+    [
+     "species_20",
+     "0",
+     "0.00311",
+     "Y",
+     "0",
+     "No",
+     "0.00311",
+     "AMP [species_20]",
+     ""
+    ],
+    [
+     "species_21",
+     "0",
+     "0.001",
+     "Y",
+     "0",
+     "No",
+     "0.001",
+     "PRPP [species_21]",
+     ""
+    ],
+    [
+     "species_22",
+     "0",
+     "3.41e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G1P [species_22]",
+     ""
+    ],
+    [
+     "species_23",
+     "0",
+     "0.02",
+     "Y",
+     "0",
+     "No",
+     "0.02",
+     "Pi [species_23]",
+     ""
+    ],
+    [
+     "species_24",
+     "0",
+     "0.208403745497308",
+     "Y",
+     "0",
+     "No",
+     "0.208403745497308",
+     "GLY [species_24]",
+     ""
+    ],
+    [
+     "species_25",
+     "0",
+     "0.00108",
+     "Y",
+     "0",
+     "No",
+     "0.00108",
+     "CIT [species_25]",
+     ""
+    ],
+    [
+     "species_26",
+     "0",
+     "3.67e-6",
+     "Y",
+     "0",
+     "No",
+     "3.67e-6",
+     "F26P [species_26]",
+     ""
+    ],
+    [
+     "species_27",
+     "0",
+     "0.000553",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DHAP [species_27]",
+     ""
+    ],
+    [
+     "species_28",
+     "0",
+     "3.07e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PG3 [species_28]",
+     ""
+    ],
+    [
+     "species_29",
+     "0",
+     "4.98e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PG2 [species_29]",
+     ""
+    ],
+    [
+     "species_30",
+     "0",
+     "5.79e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PEP [species_30]",
+     ""
+    ],
+    [
+     "species_31",
+     "0",
+     "0.00183",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PYR [species_31]",
+     ""
+    ],
+    [
+     "species_32",
+     "0",
+     "0.0155",
+     "Y",
+     "0",
+     "No",
+     "0.0155",
+     "LAC [species_32]",
+     ""
+    ],
+    [
+     "species_33",
+     "0",
+     "0.0214",
+     "Y",
+     "0",
+     "No",
+     "0.0214",
+     "CO2 [species_33]",
+     ""
+    ],
+    [
+     "species_34",
+     "0",
+     "6.5e-5",
+     "Y",
+     "0",
+     "No",
+     "6.5e-5",
+     "O2 [species_34]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,1634 @@
+{
+ "version": 3,
+ "created": "2026-11-02T00:09:37.356992+00:00",
+ "description": "Muraro2011_Cytokinin-Auxin_CrossRegulation\nBioModels BIOMD0000000416 (curated). SBML file: BIOMD0000000416_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000416_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.02e-05 of species peak (worst: AuxTIR1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'TIR1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ARF' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ARRBp' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'CkAHKph' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'CkAHK' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'F1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'F2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'F3' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'F4' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'F5a' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'F5b' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'F6' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] r1 term 6/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r3 term 4/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r6 term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r9 term 5/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r11 term 5/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r15 term 3/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r15 term 4/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r16 term 3/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r16 term 4/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r16 term 5/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r17 term 3/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r17 term 4/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r18 term 3/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r18 term 5/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Muraro2011_Cytokinin-Auxin_CrossRegulation  (BIOMD0000000416, curated BioModels; source file BIOMD0000000416_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1 term 1/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IAAm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1 term 2/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cARF2,cARFIAA,cARRBph,cIAAp:(100/(-20*cARF2*cIAAp+80*cARF2-10*cARFIAA*cIAAp+10*cARRBph+10*cIAAp+10*(-2*cARF2-cARFIAA+1)^2+11))]==>IAAm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1 term 3/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cARF2,cARFIAA,cARRBph,cIAAp:(1000*(-2*cARF2-cARFIAA+1)^2/(-20*cARF2*cIAAp+80*cARF2-10*cARFIAA*cIAAp+10*cARRBph+10*cIAAp+10*(-2*cARF2-cARFIAA+1)^2+11))]==>IAAm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1 term 4/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARF2+S[USER;cARF2,cARFIAA,cARRBph,cIAAp:(9800/(-20*cARF2*cIAAp+80*cARF2-10*cARFIAA*cIAAp+10*cARRBph+10*cIAAp+10*(-2*cARF2-cARFIAA+1)^2+11))]==>IAAm+ARF2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1 term 5/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARRBph+S[USER;cARF2,cARFIAA,cARRBph,cIAAp:(20/(-20*cARF2*cIAAp+80*cARF2-10*cARFIAA*cIAAp+10*cARRBph+10*cIAAp+10*(-2*cARF2-cARFIAA+1)^2+11))]==>IAAm+ARRBph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1 term 6/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IAAm+ARFIAA+S[USER;cARF2,cARFIAA,cARRBph,cIAAm,cIAAp:(100/(40*cARF2^2*(cIAAm+1e-30)+40*cARF2*cARFIAA*(cIAAm+1e-30)-20*cARF2*cIAAp*(cIAAm+1e-30)+40*cARF2*(cIAAm+1e-30)+10*cARFIAA^2*(cIAAm+1e-30)-10*cARFIAA*cIAAp*(cIAAm+1e-30)-20*cARFIAA*(cIAAm+1e-30)+10*cARRBph*(cIAAm+1e-30)+21*cIAAm+10*cIAAp*(cIAAm+1e-30)+2.1000000000000002e-29))]==>ARFIAA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r2 term 1/7",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "ARFIAA==>IAAp+ARFIAA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r2 term 2/7",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "AuxTIAA==>IAAp+AuxTIAA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r2 term 3/7",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "IAAm==>IAAp+IAAm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r2 term 4/7",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "IAAp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r2 term 5/7",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "ARFIAA+IAAp==>2IAAp+ARFIAA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r2 term 6/7",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "ARF2+IAAp==>2IAAp+ARF2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r2 term 7/7",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "IAAp+AuxTIR1==>AuxTIR1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3 term 1/6",
+     ""
+    ],
+    [
+     "110",
+     "0",
+     "0",
+     "AuxTIAA==>AuxTIR1+AuxTIAA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3 term 2/6",
+     ""
+    ],
+    [
+     "10000",
+     "0",
+     "0",
+     "Aux==>AuxTIR1+Aux",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3 term 3/6",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "AuxTIR1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3 term 4/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AuxTIR1+Aux+AuxTIAA+S[USER;cAuxTIR1:(10000/(cAuxTIR1+1e-30))]==>Aux+AuxTIAA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3 term 5/6",
+     ""
+    ],
+    [
+     "10000",
+     "0",
+     "0",
+     "AuxTIR1+Aux==>Aux",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3 term 6/6",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "AuxTIR1+IAAp==>IAAp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r4 term 1/2",
+     ""
+    ],
+    [
+     "110",
+     "0",
+     "0",
+     "AuxTIAA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r4 term 2/2",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "AuxTIR1+IAAp==>AuxTIAA+AuxTIR1+IAAp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r5 term 1/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "AuxTIAA==>IAAs+AuxTIAA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r5 term 2/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "IAAs==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r6 term 1/4",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "IAAp==>ARFIAA+IAAp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r6 term 2/4",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "ARFIAA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r6 term 3/4",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "ARFIAA+IAAp==>IAAp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r6 term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARFIAA+ARF2+IAAp+S[USER;cARFIAA:(20/(cARFIAA+1e-30))]==>ARF2+IAAp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r7 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cARF2,cARFIAA:(1*(-2*cARF2-cARFIAA+1)^2)]==>ARF2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r7 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARF2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 term 1/5",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "source==>Aux",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 term 2/5",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "AuxTIR1==>Aux+AuxTIR1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 term 3/5",
+     ""
+    ],
+    [
+     "100000.09999999999",
+     "0",
+     "0",
+     "Aux==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 term 4/5",
+     ""
+    ],
+    [
+     "100000",
+     "0",
+     "0",
+     "Aux+AuxTIAA==>2Aux+AuxTIAA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 term 5/5",
+     ""
+    ],
+    [
+     "100000",
+     "0",
+     "0",
+     "Aux+AuxTIR1==>2Aux+AuxTIR1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9 term 1/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PINm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9 term 2/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cARF2,cARFIAA,cIAAp:(100/(-20*cARF2*cIAAp+80*cARF2-10*cARFIAA*cIAAp+10*cIAAp+10*(-2*cARF2-cARFIAA+1)^2+11))]==>PINm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9 term 3/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cARF2,cARFIAA,cIAAp:(1000*(-2*cARF2-cARFIAA+1)^2/(-20*cARF2*cIAAp+80*cARF2-10*cARFIAA*cIAAp+10*cIAAp+10*(-2*cARF2-cARFIAA+1)^2+11))]==>PINm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9 term 4/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARF2+S[USER;cARF2,cARFIAA,cIAAp:(9800/(-20*cARF2*cIAAp+80*cARF2-10*cARFIAA*cIAAp+10*cIAAp+10*(-2*cARF2-cARFIAA+1)^2+11))]==>PINm+ARF2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9 term 5/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PINm+ARFIAA+S[USER;cARF2,cARFIAA,cIAAp,cPINm:(100/(40*cARF2^2*(cPINm+1e-30)+40*cARF2*cARFIAA*(cPINm+1e-30)-20*cARF2*cIAAp*(cPINm+1e-30)+40*cARF2*(cPINm+1e-30)+10*cARFIAA^2*(cPINm+1e-30)-10*cARFIAA*cIAAp*(cPINm+1e-30)-20*cARFIAA*(cPINm+1e-30)+10*cIAAp*(cPINm+1e-30)+21*cPINm+2.1000000000000002e-29))]==>ARFIAA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r10 term 1/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "PINm==>PINp+PINm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r10 term 2/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "PINp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r11 term 1/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r11 term 2/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cARF2,cARFIAA,cIAAp:(2/(-20*cARF2*cIAAp+80*cARF2-10*cARFIAA*cIAAp+10*cIAAp+10*(-2*cARF2-cARFIAA+1)^2+11))]==>ARm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r11 term 3/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cARF2,cARFIAA,cIAAp:(20*(-2*cARF2-cARFIAA+1)^2/(-20*cARF2*cIAAp+80*cARF2-10*cARFIAA*cIAAp+10*cIAAp+10*(-2*cARF2-cARFIAA+1)^2+11))]==>ARm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r11 term 4/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARF2+S[USER;cARF2,cARFIAA,cIAAp:(196/(-20*cARF2*cIAAp+80*cARF2-10*cARFIAA*cIAAp+10*cIAAp+10*(-2*cARF2-cARFIAA+1)^2+11))]==>ARm+ARF2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r11 term 5/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARm+ARFIAA+S[USER;cARF2,cARFIAA,cARm,cIAAp:(2/(40*cARF2^2*(cARm+1e-30)+40*cARF2*cARFIAA*(cARm+1e-30)-20*cARF2*cIAAp*(cARm+1e-30)+40*cARF2*(cARm+1e-30)+10*cARFIAA^2*(cARm+1e-30)-10*cARFIAA*cIAAp*(cARm+1e-30)-20*cARFIAA*(cARm+1e-30)+21*cARm+10*cIAAp*(cARm+1e-30)+2.1000000000000002e-29))]==>ARFIAA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r12 term 1/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "ARm==>ARp+ARm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r12 term 2/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "ARp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r13 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CRm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r13 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARRBph+S[USER;cARRAph,cARRBph:(20/(10*cARRAph+10*cARRBph+1))]==>CRm+ARRBph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r14 term 1/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "CRm==>CRp+CRm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r14 term 2/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "CRp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r15 term 1/5",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "source==>AHKph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r15 term 2/5",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "AHKph==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r15 term 3/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AHKph+ARRAph+S[USER;cAHKph:(100/(cAHKph+1e-30))]==>ARRAph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r15 term 4/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AHKph+ARRBph+S[USER;cAHKph:(100/(cAHKph+1e-30))]==>ARRBph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r15 term 5/5",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "AHKph+Ck==>Ck",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r16 term 1/6",
+     ""
+    ],
+    [
+     "100.1",
+     "0",
+     "0",
+     "source==>Ck",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r16 term 2/6",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Ck==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r16 term 3/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ck+AHKph+S[USER;cCk:(100/(cCk+1e-30))]==>AHKph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r16 term 4/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ck+ARRAph+S[USER;cCk:(100/(cCk+1e-30))]==>ARRAph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r16 term 5/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ck+ARRBph+S[USER;cCk:(100/(cCk+1e-30))]==>ARRBph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r16 term 6/6",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "Ck+AHKph==>AHKph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r17 term 1/5",
+     ""
+    ],
+    [
+     "200",
+     "0",
+     "0",
+     "source==>ARRBph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r17 term 2/5",
+     ""
+    ],
+    [
+     "300",
+     "0",
+     "0",
+     "ARRBph==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r17 term 3/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARRBph+AHKph+S[USER;cARRBph:(200/(cARRBph+1e-30))]==>AHKph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r17 term 4/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARRBph+ARRAph+S[USER;cARRBph:(200/(cARRBph+1e-30))]==>ARRAph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r17 term 5/5",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "AHKph+ARRBph==>2ARRBph+AHKph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r18 term 1/6",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "ARRAp==>ARRAph+ARRAp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r18 term 2/6",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "ARRAph+ARRAph==>ARRAph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r18 term 3/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARRAph+AHKph+ARRAp+S[USER;cARRAph:(100/(cARRAph+1e-30))]==>AHKph+ARRAp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r18 term 4/6",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "ARRAph+ARRAp==>ARRAp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r18 term 5/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARRAph+ARRAp+ARRBph+S[USER;cARRAph:(100/(cARRAph+1e-30))]==>ARRAp+ARRBph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r18 term 6/6",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "ARRAph+ARRBph==>ARRBph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r19 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARRAm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r19 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARp+S[USER;cARp:(1000/(10*cARp+1))]==>ARRAm+ARp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r20 term 1/7",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "ARRAm==>ARRAp+ARRAm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r20 term 2/7",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "ARRAph+ARRAph==>ARRAp+2ARRAph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r20 term 3/7",
+     ""
+    ],
+    [
+     "200",
+     "0",
+     "0",
+     "ARRAp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r20 term 4/7",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "AHKph+ARRAp==>2ARRAp+AHKph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r20 term 5/7",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "ARRAp+ARRAph==>2ARRAp+ARRAph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r20 term 6/7",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "ARRAp+ARRBph==>2ARRAp+ARRBph",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r20 term 7/7",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "ARRAph+ARRBph==>ARRAp+ARRAph+ARRBph",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "IAAm",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IAAm [IAAm]",
+     ""
+    ],
+    [
+     "IAAp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IAAp [IAAp]",
+     ""
+    ],
+    [
+     "AuxTIR1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AuxTIR1 [AuxTIR1]",
+     ""
+    ],
+    [
+     "AuxTIAA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AuxTIAA [AuxTIAA]",
+     ""
+    ],
+    [
+     "IAAs",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IAAs [IAAs]",
+     ""
+    ],
+    [
+     "ARFIAA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ARFIAA [ARFIAA]",
+     ""
+    ],
+    [
+     "ARF2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ARF2 [ARF2]",
+     ""
+    ],
+    [
+     "Aux",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Aux [Aux]",
+     ""
+    ],
+    [
+     "PINm",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PINm [PINm]",
+     ""
+    ],
+    [
+     "PINp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PINp [PINp]",
+     ""
+    ],
+    [
+     "ARm",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ARm [ARm]",
+     ""
+    ],
+    [
+     "ARp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ARp [ARp]",
+     ""
+    ],
+    [
+     "CRm",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CRm [CRm]",
+     ""
+    ],
+    [
+     "CRp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CRp [CRp]",
+     ""
+    ],
+    [
+     "AHKph",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AHKph [AHKph]",
+     ""
+    ],
+    [
+     "Ck",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ck [Ck]",
+     ""
+    ],
+    [
+     "ARRBph",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ARRBph [ARRBph]",
+     ""
+    ],
+    [
+     "ARRAph",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ARRAph [ARRAph]",
+     ""
+    ],
+    [
+     "ARRAm",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ARRAm [ARRAm]",
+     ""
+    ],
+    [
+     "ARRAp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ARRAp [ARRAp]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

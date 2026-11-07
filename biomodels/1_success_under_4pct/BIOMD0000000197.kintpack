@@ -1,0 +1,545 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:55:18.208755+00:00",
+ "description": "Bartholome2007_MDCKII\nBioModels BIOMD0000000197 (curated). SBML file: BIOMD0000000197_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000197_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.23e-06 of species peak (worst: x4)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'BSP_tot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'BSP_cell' is defined by an assignment rule; not a Kintecus state (not output)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bartholome2007_MDCKII  (BIOMD0000000197, curated BioModels; source file BIOMD0000000197_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "OATP1B3",
+     ""
+    ],
+    [
+     "0.0025",
+     "0",
+     "0",
+     "x1==>x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ABCC2 (volume 1)",
+     ""
+    ],
+    [
+     "0.0784",
+     "0",
+     "0",
+     "x3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ABCC2 (volume 1.5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx3:(0.05226666666666666*cx3)]==>x5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "endo_in_bl",
+     ""
+    ],
+    [
+     "0.0013",
+     "0",
+     "0",
+     "x1==>x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "endo_ex_bl",
+     ""
+    ],
+    [
+     "0.0827",
+     "0",
+     "0",
+     "x3==>x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "endo_ex_ap (volume 1)",
+     ""
+    ],
+    [
+     "0.0091",
+     "0",
+     "0",
+     "x3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "endo_ex_ap (volume 1.5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx3:(0.006066666666666667*cx3)]==>x5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bl_BSP_binding term 1/2",
+     ""
+    ],
+    [
+     "0.064",
+     "0",
+     "0",
+     "x1==>x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bl_BSP_binding term 2/2",
+     ""
+    ],
+    [
+     "6.4e-5",
+     "0",
+     "0",
+     "x2+x1==>2x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bl_BSP_dissoc",
+     ""
+    ],
+    [
+     "0.0397",
+     "0",
+     "0",
+     "x2==>x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cellular_BSP_binding term 1/2",
+     ""
+    ],
+    [
+     "9.799999999999999",
+     "0",
+     "0",
+     "x3==>x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cellular_BSP_binding term 2/2",
+     ""
+    ],
+    [
+     "0.0098",
+     "0",
+     "0",
+     "x4+x3==>2x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cellular_BSP_dissoc",
+     ""
+    ],
+    [
+     "1.6",
+     "0",
+     "0",
+     "x4==>x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "paracell_transp term 1/2 (volume 1)",
+     ""
+    ],
+    [
+     "0.0003",
+     "0",
+     "0",
+     "x1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "paracell_transp term 2/2 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx5:(0.0003*cx5)]==>x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "paracell_transp term 1/2 (volume 1.5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx1:(0.00019999999999999998*cx1)]==>x5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "paracell_transp term 2/2 (volume 1.5)",
+     ""
+    ],
+    [
+     "0.00019999999999999998",
+     "0",
+     "0",
+     "x5==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x1",
+     "0",
+     "88",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "free basolateral BSP [x1]",
+     ""
+    ],
+    [
+     "x2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "basolateral bound BSP [x2]",
+     ""
+    ],
+    [
+     "x3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "free intracellular BSP [x3]",
+     ""
+    ],
+    [
+     "x4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "bound intracellular BSP [x4]",
+     ""
+    ],
+    [
+     "x5",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "apical BSP [x5]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,709 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:27:59.183715+00:00",
+ "description": "Muller2008 - Simplified MAPK activation Dynamics (Model B)\nBioModels BIOMD0000000664 (curated). SBML file: BIOMD0000000664_url.xml.\nSimulation: 0 to 100 time units (SED-ML: MODEL8687732743.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.07e-06 of species peak (worst: B_Raf)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'g2_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'g1_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] FGFR_Activation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - FGFR: zero order, signed\n  [info] C_Raf_Activation_1 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - C_Raf: zero order, signed\n  [info] C_Raf_Activation_2 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - C_Raf: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Muller2008 - Simplified MAPK activation Dynamics (Model B)  (BIOMD0000000664, curated BioModels; source file BIOMD0000000664_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FGFR_Activation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2,cSW3,cSW4:(10*cSW1*cSW2/(-1*cSW1*cSW2*cSW3*cSW4+1*cSW1*cSW2+10))]==>FGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FGFR_Activation term 2/2 (consumes FGFR)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2,cSW3,cSW4:((-1*10*cSW1*cSW2*cSW3*cSW4/(-1*cSW1*cSW2*cSW3*cSW4+1*cSW1*cSW2+10)))]==>FGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FGFR_Degradation",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "FGFR==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MSH_Activation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW3,cSW4:(10*cSW3*cSW4/(1*cSW3*cSW4+10))]==>MSH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MSH_Degradation",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "MSH==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C_Raf_Activation_1 term 1/3",
+     ""
+    ],
+    [
+     "6",
+     "0",
+     "0",
+     "FGFR==>C_Raf+FGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C_Raf_Activation_1 term 2/3",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "C_Raf+FGFR==>FGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C_Raf_Activation_1 term 3/3 (consumes C_Raf)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cC_Raf_inactive,cFGFR:((-1*0.6*cC_Raf_inactive*cFGFR))]==>C_Raf",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C_Raf_Activation_2 term 1/3",
+     ""
+    ],
+    [
+     "15",
+     "0",
+     "0",
+     "MAPK==>C_Raf+MAPK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C_Raf_Activation_2 term 2/3",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "C_Raf+MAPK==>MAPK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C_Raf_Activation_2 term 3/3 (consumes C_Raf)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cC_Raf_inactive,cMAPK:((-1*1.5*cC_Raf_inactive*cMAPK))]==>C_Raf",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C_Raf_Degradation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_Raf==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "B_Raf_Activation_1",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "FGFR==>B_Raf+FGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "B_Raf_Activation_2",
+     ""
+    ],
+    [
+     "0.8",
+     "0",
+     "0",
+     "MSH==>B_Raf+MSH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "B_Raf_Degradation",
+     ""
+    ],
+    [
+     "1.1",
+     "0",
+     "0",
+     "B_Raf==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MAPK_Activation_1",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "C_Raf==>MAPK+C_Raf",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MAPK_Activation_2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "B_Raf==>MAPK+B_Raf",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MAPK_Degradation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MAPK==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C_Raf_Inactivation",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "C_Raf+MSH==>C_Raf_inactive+MSH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inactive_C_Raf_degradation",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "C_Raf_inactive==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "FGFR",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FGFR [FGFR]",
+     ""
+    ],
+    [
+     "MSH",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MSH [MSH]",
+     ""
+    ],
+    [
+     "B_Raf",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B-Raf [B_Raf]",
+     ""
+    ],
+    [
+     "MAPK",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK [MAPK]",
+     ""
+    ],
+    [
+     "C_Raf_inactive",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C-Raf inactive [C_Raf_inactive]",
+     ""
+    ],
+    [
+     "C_Raf",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C-Raf [C_Raf]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 5 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time switch at 10 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "time switch at 0 [__switch__]",
+     ""
+    ],
+    [
+     "SW4",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW4.TXT-SET",
+     "time switch at 5 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1.000000001",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1.000000001",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "5",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "10",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW4.TXT",
+   "key": "O_SW4.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "5",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

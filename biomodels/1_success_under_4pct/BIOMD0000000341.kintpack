@@ -1,0 +1,397 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:58:06.312835+00:00",
+ "description": "Topp2000_BetaCellMass_Diabetes\nBioModels BIOMD0000000341 (curated). SBML file: BIOMD0000000341_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000341_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.05e-06 of species peak (worst: G)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Topp2000_BetaCellMass_Diabetes  (BIOMD0000000341, curated BioModels; source file BIOMD0000000341_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG/dt term 1",
+     ""
+    ],
+    [
+     "864",
+     "0",
+     "0",
+     "source==>G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG/dt term 2",
+     ""
+    ],
+    [
+     "1.44",
+     "0",
+     "0",
+     "G==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG/dt term 3",
+     ""
+    ],
+    [
+     "0.72",
+     "0",
+     "0",
+     "G+I==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI/dt term 1",
+     ""
+    ],
+    [
+     "432",
+     "0",
+     "0",
+     "I==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "B+S[USER;cG:(43.2*cG^2/(cG^2+20000))]==>I+B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dB/dt term 1",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dB/dt term 2",
+     ""
+    ],
+    [
+     "0.00084",
+     "0",
+     "0",
+     "B+G==>2B+G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dB/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "B+S[USER;cG:(2.4e-6*cG^2)]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "G",
+     "0",
+     "250",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "glucose [G]",
+     ""
+    ],
+    [
+     "I",
+     "0",
+     "2.8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "insulin [I]",
+     ""
+    ],
+    [
+     "B",
+     "0",
+     "37",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mass [B]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

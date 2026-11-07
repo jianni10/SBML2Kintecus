@@ -1,0 +1,417 @@
+{
+ "version": 3,
+ "created": "2026-11-06T15:21:26.985438+00:00",
+ "description": "Ghanbari2020 - forecasting the second wave of COVID-19 in Iran\nBioModels BIOMD0000000976 (curated). SBML file: Ghanbari2020.xml.\nSimulation: 0 to 93 time units (SED-ML: Ghanbari2020.sedml), sampling 0.09090909090909091.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 7.46e+00 of species peak (worst: Infected_weak_immune_system)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 7.46e+00 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] events not unrolled as time events (event with delay)\n  [blocker] event 'Lockdown' not converted (state-triggered (not a time >= t0 trigger))\n  [info] time event(s) on 'tau' encoded as time/value pairs in EV_P_TAU.TXT (SET)\nRenamed species (Kintecus name = SBML id): Infectedstrongimmunesyste1 = Infected_strong_immune_system; Infectedweakimmunesystem1 = Infected_weak_immune_system; p_tau = tau",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ghanbari2020 - forecasting the second wave of COVID-19 in Iran  (BIOMD0000000976, curated BioModels; source file Ghanbari2020.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Infected_I1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Infectedstrongimmunesyste1+S[USER;cp_tau:(0.55*cp_tau)]==>2Infectedstrongimmunesyste1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Infected_I1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Infectedweakimmunesystem1+S[USER;cp_tau:(0.55*cp_tau)]==>Infectedstrongimmunesyste1+Infectedweakimmunesystem1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Infected_I2 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Infectedstrongimmunesyste1+S[USER;cp_tau:(0.44999999999999996*cp_tau)]==>Infectedweakimmunesystem1+Infectedstrongimmunesyste1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Infected_I2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Infectedweakimmunesystem1+S[USER;cp_tau:(0.44999999999999996*cp_tau)]==>2Infectedweakimmunesystem1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_I1_to_Recovered",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Infectedstrongimmunesyste1==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_I2_to_Recovered",
+     ""
+    ],
+    [
+     "0.061",
+     "0",
+     "0",
+     "Infectedweakimmunesystem1==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_I2_to_Deceased",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Infectedweakimmunesystem1==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Susceptible",
+     "0",
+     "78841214.132441",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible [Susceptible]",
+     ""
+    ],
+    [
+     "Infectedstrongimmunesyste1",
+     "0",
+     "5060.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected_strong_immune_system [Infected_strong_immune_system]",
+     ""
+    ],
+    [
+     "Infectedweakimmunesystem1",
+     "0",
+     "4487.6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected_weak_immune_system [Infected_weak_immune_system]",
+     ""
+    ],
+    [
+     "Recovered",
+     "0",
+     "4590",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Recovered [Recovered]",
+     ""
+    ],
+    [
+     "p_tau",
+     "0",
+     "2e-9",
+     "N",
+     "0",
+     "No",
+     "EV_P_TAU.TXT-SET",
+     "parameter tau [tau]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.09090909101",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "93",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.09090909101",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_TAU.TXT",
+   "key": "O_EV_P_TAU.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "33",
+     "1.47e-9"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

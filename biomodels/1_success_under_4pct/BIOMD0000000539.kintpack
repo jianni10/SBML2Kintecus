@@ -1,0 +1,472 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:03:14.237520+00:00",
+ "description": "Fran\u00e7ois2005 - Mixed Feedback Loop (two-gene network)\nBioModels BIOMD0000000539 (curated). SBML file: BIOMD0000000539_url.xml.\nSimulation: 0 to 700 time units (SED-ML: BIOMD0000000539.sedml), sampling 0.7.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.09e-06 of species peak (worst: B)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fran\u00e7ois2005 - Mixed Feedback Loop (two-gene network)  (BIOMD0000000539, curated BioModels; source file BIOMD0000000539_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "A_binds_gB",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "gB+A==>AgB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "gB_releases_A",
+     ""
+    ],
+    [
+     "0.04",
+     "0",
+     "0",
+     "AgB==>gB+A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "basal_transcription_B",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "gB==>rB+gB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "stim_transcription_B",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "AgB==>rB+AgB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "degradation_mRNA_B",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "rB==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "production_A",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "source==>A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "degradation_A",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "A==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "translation_B",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "rB==>B+rB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "degradation_B",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "formation_dimer",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "B+A==>AB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "degradation_dimer",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "AB==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "A",
+     "0",
+     "40",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A [A]",
+     ""
+    ],
+    [
+     "AgB",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AgB [AgB]",
+     ""
+    ],
+    [
+     "gB",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "gB [gB]",
+     ""
+    ],
+    [
+     "rB",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "rB [rB]",
+     ""
+    ],
+    [
+     "B",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B [B]",
+     ""
+    ],
+    [
+     "AB",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AB [AB]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.7",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "700",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.7",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

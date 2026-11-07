@@ -1,0 +1,333 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:15:27.018229+00:00",
+ "description": "Leon-Triana2021 - Competition between tumour cells and single-target CAR T-cells\nBioModels BIOMD0000001013 (curated). SBML file: Leon-Triana2021 - eqs 1 and 2.xml.\nSimulation: 0 to 60 time units (SED-ML: Leon-Triana2021 - eqs 1 and 2 - fig 1 - a and c.sedml), sampling 0.06.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 7.61e-07 of species peak (worst: CAR_T_cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] CAR_T_cell_depletion term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Leon-Triana2021 - Competition between tumour cells and single-target CAR T-cells  (BIOMD0000001013, curated BioModels; source file Leon-Triana2021 - eqs 1 and 2.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CAR_T_cell_proliferation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CAR_T_cells+Tumour_cells+S[USER;cTumour_cells:(0.9/(cTumour_cells+10000000000))]==>2CAR_T_cells+Tumour_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CAR_T_cell_depletion term 1/2",
+     ""
+    ],
+    [
+     "0.14285714285714285",
+     "0",
+     "0",
+     "CAR_T_cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CAR_T_cell_depletion term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CAR_T_cells+Tumour_cells+S[USER;cCAR_T_cells:(0.04/(1*cCAR_T_cells+2000000000))]==>Tumour_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumour_growth",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Tumour_cells==>2Tumour_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumour_death",
+     ""
+    ],
+    [
+     "2.5e-10",
+     "0",
+     "0",
+     "Tumour_cells+CAR_T_cells==>CAR_T_cells",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "CAR_T_cells",
+     "0",
+     "400000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CAR_T-cells [CAR_T_cells]",
+     ""
+    ],
+    [
+     "Tumour_cells",
+     "0",
+     "6700000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumour_cells [Tumour_cells]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.06",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "60",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.06",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

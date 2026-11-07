@@ -1,0 +1,816 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:56:07.137995+00:00",
+ "description": "Neumann2010_CD95Stimulation_NFkB_Apoptosis\nBioModels BIOMD0000000243 (curated). SBML file: BIOMD0000000243_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000243_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.32e-06 of species peak (worst: p43_FLIP)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Neumann2010_CD95Stimulation_NFkB_Apoptosis  (BIOMD0000000243, curated BioModels; source file BIOMD0000000243_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "RF+L==>L_RF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2",
+     ""
+    ],
+    [
+     "0.0001277248",
+     "0",
+     "0",
+     "L_RF+C8==>L_RF_C8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3",
+     ""
+    ],
+    [
+     "0.6693316",
+     "0",
+     "0",
+     "L_RF+FL==>L_RF_FL",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "1e-5",
+     "0",
+     "0",
+     "L_RF+FS==>L_RF_FS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "0.0005946569",
+     "0",
+     "0",
+     "C8+L_RF_C8==>2p43_p41",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6",
+     ""
+    ],
+    [
+     "0.9999999",
+     "0",
+     "0",
+     "L_RF_C8+FL==>p43_FLIP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7",
+     ""
+    ],
+    [
+     "0.8875063",
+     "0",
+     "0",
+     "FS+L_RF_C8==>L_RF_C8_FS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8",
+     ""
+    ],
+    [
+     "0.0005946569",
+     "0",
+     "0",
+     "L_RF_FL+C8==>p43_FLIP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9",
+     ""
+    ],
+    [
+     "0.9999999",
+     "0",
+     "0",
+     "L_RF_FL+FL==>L_RF_FL_FL",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10",
+     ""
+    ],
+    [
+     "0.8875063",
+     "0",
+     "0",
+     "L_RF_FL+FS==>L_RF_FL_FS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_11",
+     ""
+    ],
+    [
+     "0.0005946569",
+     "0",
+     "0",
+     "C8+L_RF_FS==>L_RF_C8_FS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_12",
+     ""
+    ],
+    [
+     "0.9999999",
+     "0",
+     "0",
+     "L_RF_FS+FL==>L_RF_FL_FS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_13",
+     ""
+    ],
+    [
+     "0.8875063",
+     "0",
+     "0",
+     "FS+L_RF_FS==>L_RF_FS_FS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_14",
+     ""
+    ],
+    [
+     "0.0008044378",
+     "0",
+     "0",
+     "p43_p41+p43_p41==>C8_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_15",
+     ""
+    ],
+    [
+     "0.002249759",
+     "0",
+     "0",
+     "C3+C8_star==>C3_star+C8_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16",
+     ""
+    ],
+    [
+     "0.1205258",
+     "0",
+     "0",
+     "C8+C3_star==>p43_p41+C3_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17",
+     ""
+    ],
+    [
+     "0.02891451",
+     "0",
+     "0",
+     "C8_star==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_18",
+     ""
+    ],
+    [
+     "0.1502914",
+     "0",
+     "0",
+     "C3_star==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_19",
+     ""
+    ],
+    [
+     "0.0007204261",
+     "0",
+     "0",
+     "IKK+p43_FLIP==>p43_FLIP_IKK_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_20",
+     ""
+    ],
+    [
+     "0.3588224",
+     "0",
+     "0",
+     "NF_kB_IkB+p43_FLIP_IKK_star==>NF_kB_IkB_P+p43_FLIP_IKK_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_21",
+     ""
+    ],
+    [
+     "3.684162",
+     "0",
+     "0",
+     "NF_kB_IkB_P==>NF_kB_star",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_22",
+     ""
+    ],
+    [
+     "0.02229912",
+     "0",
+     "0",
+     "p43_FLIP_IKK_star==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_23",
+     ""
+    ],
+    [
+     "0.0064182",
+     "0",
+     "0",
+     "NF_kB_star==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "L",
+     "0",
+     "113.22",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L [L]",
+     ""
+    ],
+    [
+     "L_RF",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L:RF [L_RF]",
+     ""
+    ],
+    [
+     "L_RF_C8",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L:RF:C8 [L_RF_C8]",
+     ""
+    ],
+    [
+     "L_RF_FL",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L:RF:FL [L_RF_FL]",
+     ""
+    ],
+    [
+     "L_RF_FS",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L:RF:FS [L_RF_FS]",
+     ""
+    ],
+    [
+     "p43_p41",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p43/p41 [p43_p41]",
+     ""
+    ],
+    [
+     "C3",
+     "0",
+     "1.443404",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3 [C3]",
+     ""
+    ],
+    [
+     "C8",
+     "0",
+     "64.47652",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C8 [C8]",
+     ""
+    ],
+    [
+     "C8_star",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C8* [C8_star]",
+     ""
+    ],
+    [
+     "C3_star",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3* [C3_star]",
+     ""
+    ],
+    [
+     "p43_FLIP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p43-FLIP [p43_FLIP]",
+     ""
+    ],
+    [
+     "NF_kB_IkB",
+     "0",
+     "4.739546",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NF-kB:IkB [NF_kB_IkB]",
+     ""
+    ],
+    [
+     "NF_kB_IkB_P",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NF-kB:IkB:P [NF_kB_IkB_P]",
+     ""
+    ],
+    [
+     "p43_FLIP_IKK_star",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p43-FLIP:IKK* [p43_FLIP_IKK_star]",
+     ""
+    ],
+    [
+     "NF_kB_star",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NF-kB* [NF_kB_star]",
+     ""
+    ],
+    [
+     "RF",
+     "0",
+     "91.26592",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RF [RF]",
+     ""
+    ],
+    [
+     "FL",
+     "0",
+     "7.398562",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FL [FL]",
+     ""
+    ],
+    [
+     "FS",
+     "0",
+     "5.083923",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FS [FS]",
+     ""
+    ],
+    [
+     "IKK",
+     "0",
+     "5.772825",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IKK [IKK]",
+     ""
+    ],
+    [
+     "L_RF_C8_FS",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L:RF:C8:FS [L_RF_C8_FS]",
+     ""
+    ],
+    [
+     "L_RF_FL_FL",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L:RF:FL:FL [L_RF_FL_FL]",
+     ""
+    ],
+    [
+     "L_RF_FL_FS",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L:RF:FL:FS [L_RF_FL_FS]",
+     ""
+    ],
+    [
+     "L_RF_FS_FS",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L:RF:FS:FS [L_RF_FS_FS]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

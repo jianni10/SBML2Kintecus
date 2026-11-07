@@ -1,0 +1,814 @@
+{
+ "version": 3,
+ "created": "2026-10-26T22:48:32.530878+00:00",
+ "description": "Heitzler2012 - GPCR signalling\nBioModels BIOMD0000000842 (curated). SBML file: MODEL1012080000.xml.\nSimulation: 0 to 90 time units (SED-ML: MODEL1012080000.sedml), sampling 0.9.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.56e-06 of species peak (worst: Hbarr2RP2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'pERK' is defined by an assignment rule; not a Kintecus state (not output)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Heitzler2012 - GPCR signalling  (BIOMD0000000842, curated BioModels; source file MODEL1012080000.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_1",
+     ""
+    ],
+    [
+     "0.000311",
+     "0",
+     "0",
+     "G==>G_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_2",
+     ""
+    ],
+    [
+     "0.0178",
+     "0",
+     "0",
+     "HRP1+G==>HRP1+G_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_3",
+     ""
+    ],
+    [
+     "7.6",
+     "0",
+     "0",
+     "HR+G==>HR+G_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_4",
+     ""
+    ],
+    [
+     "4.63",
+     "0",
+     "0",
+     "PIP2+G_a==>DAG+G_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_5",
+     ""
+    ],
+    [
+     "0.0787",
+     "0",
+     "0",
+     "PKC+DAG==>DAG+PKC_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_6",
+     ""
+    ],
+    [
+     "2.65",
+     "0",
+     "0",
+     "ERK+PKC_a==>GpERK+PKC_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_7",
+     ""
+    ],
+    [
+     "5.0985",
+     "0",
+     "0",
+     "G_a==>G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_8",
+     ""
+    ],
+    [
+     "0.461",
+     "0",
+     "0",
+     "DAG==>PIP2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_9",
+     ""
+    ],
+    [
+     "1.77",
+     "0",
+     "0",
+     "PKC_a==>PKC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_10",
+     ""
+    ],
+    [
+     "3.04",
+     "0",
+     "0",
+     "GpERK==>ERK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_11",
+     ""
+    ],
+    [
+     "2.04174600433",
+     "0",
+     "0",
+     "HR==>HRP1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_12",
+     ""
+    ],
+    [
+     "2.61",
+     "0",
+     "0",
+     "HRP1+barr1==>Hbarr1RP1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_13",
+     ""
+    ],
+    [
+     "0.00619",
+     "0",
+     "0",
+     "Hbarr1RP1==>HRP1+barr1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_14",
+     ""
+    ],
+    [
+     "2.59",
+     "0",
+     "0",
+     "barr2+HRP1==>Hbarr2RP1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_15",
+     ""
+    ],
+    [
+     "0.0311",
+     "0",
+     "0",
+     "Hbarr2RP1==>barr2+HRP1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_16",
+     ""
+    ],
+    [
+     "6.54e-5",
+     "0",
+     "0",
+     "Hbarr1RP1==>HR+barr1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_17",
+     ""
+    ],
+    [
+     "0.0723",
+     "0",
+     "0",
+     "Hbarr2RP1==>HR+barr2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_18",
+     ""
+    ],
+    [
+     "0.8956682619999999",
+     "0",
+     "0",
+     "HR==>HRP2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_19",
+     ""
+    ],
+    [
+     "0.0665",
+     "0",
+     "0",
+     "HRP2==>HR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_20",
+     ""
+    ],
+    [
+     "0.205",
+     "0",
+     "0",
+     "HR+barr2==>HRbarr2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_21",
+     ""
+    ],
+    [
+     "1.05",
+     "0",
+     "0",
+     "HRbarr2==>HR+barr2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_22",
+     ""
+    ],
+    [
+     "1.04",
+     "0",
+     "0",
+     "barr2+HRP2==>Hbarr2RP2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_23",
+     ""
+    ],
+    [
+     "0.347",
+     "0",
+     "0",
+     "Hbarr2RP2==>barr2+HRP2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_24",
+     ""
+    ],
+    [
+     "0.00042",
+     "0",
+     "0",
+     "HRbarr2+ERK==>HRbarr2+bpERK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_25",
+     ""
+    ],
+    [
+     "14.44",
+     "0",
+     "0",
+     "ERK+Hbarr2RP2==>Hbarr2RP2+bpERK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_26",
+     ""
+    ],
+    [
+     "0.762",
+     "0",
+     "0",
+     "bpERK==>ERK",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "HR",
+     "0",
+     "0.08",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HR [HR]",
+     ""
+    ],
+    [
+     "G",
+     "0",
+     "56.99",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gp [G]",
+     ""
+    ],
+    [
+     "ERK",
+     "0",
+     "4.243",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERK [ERK]",
+     ""
+    ],
+    [
+     "PIP2",
+     "0",
+     "0.997",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PIP2 [PIP2]",
+     ""
+    ],
+    [
+     "DAG",
+     "0",
+     "0.009",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DAG [DAG]",
+     ""
+    ],
+    [
+     "PKC",
+     "0",
+     "8.842",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PKC [PKC]",
+     ""
+    ],
+    [
+     "PKC_a",
+     "0",
+     "0.002",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PKC_a [PKC_a]",
+     ""
+    ],
+    [
+     "GpERK",
+     "0",
+     "0.015",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gp_pERK [GpERK]",
+     ""
+    ],
+    [
+     "bpERK",
+     "0",
+     "0.015",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "b_pERK [bpERK]",
+     ""
+    ],
+    [
+     "barr1",
+     "0",
+     "0.858",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "b-arrestin1 [barr1]",
+     ""
+    ],
+    [
+     "barr2",
+     "0",
+     "0.483",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "b-arrestin2 [barr2]",
+     ""
+    ],
+    [
+     "G_a",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gp_a [G_a]",
+     ""
+    ],
+    [
+     "HRP1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HR-P1 [HRP1]",
+     ""
+    ],
+    [
+     "Hbarr1RP1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HR-P1-b-arrestin1 [Hbarr1RP1]",
+     ""
+    ],
+    [
+     "Hbarr2RP1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HR-P1-b-arrestin2 [Hbarr2RP1]",
+     ""
+    ],
+    [
+     "HRP2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HR-P2 [HRP2]",
+     ""
+    ],
+    [
+     "HRbarr2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HR_b-arrestin2 [HRbarr2]",
+     ""
+    ],
+    [
+     "Hbarr2RP2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HR-P2-b-arrestin2 [Hbarr2RP2]",
+     ""
+    ],
+    [
+     "GRK2_3",
+     "0",
+     "0.89944",
+     "Y",
+     "0",
+     "No",
+     "0.89944",
+     "GRK2/3 [GRK2_3]",
+     ""
+    ],
+    [
+     "GRK5_6",
+     "0",
+     "1.518",
+     "Y",
+     "0",
+     "No",
+     "1.518",
+     "GRK5/6 [GRK5_6]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.9",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "90",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.9",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

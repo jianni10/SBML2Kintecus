@@ -1,0 +1,892 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:59:07.120274+00:00",
+ "description": "Bianchi2015 -Model for lymphangiogenesis in normal and diabetic wounds\nBioModels BIOMD0000000722 (curated). SBML file: Wound Healing with Normal health condition.xml.\nSimulation: 0 to 100 time units (SED-ML: Wound Healing with Diabetic health condition.sedml), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.08e-06 of species peak (worst: Capillaries)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Inflow_and_chemotaxis_of_LECs_by_VEGF term 3/10: rate order differs from the stoichiometry; consumed on separate line(s) - LECs: zero order, signed\n  [info] Inflow_and_chemotaxis_of_LECs_by_VEGF term 7/10: rate order differs from the stoichiometry; consumed on separate line(s) - LECs: zero order, signed\n  [info] Inflow_and_chemotaxis_of_LECs_by_VEGF term 9/10: rate order differs from the stoichiometry; consumed on separate line(s) - LECs: zero order, signed\n  [info] Inflow_and_chemotaxis_of_LECs_by_VEGF term 10/10: rate order differs from the stoichiometry; consumed on separate line(s) - LECs: zero order, signed\n  [info] Transdifferentiation_of_LECs_into_the_capillaries term 3/8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Transdifferentiation_of_LECs_into_the_capillaries term 4/8: rate order differs from the stoichiometry; consumed on separate line(s) - Capillaries: zero order, signed\n  [info] Transdifferentiation_of_LECs_into_the_capillaries term 5/8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Transdifferentiation_of_LECs_into_the_capillaries term 6/8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Transdifferentiation_of_LECs_into_the_capillaries term 7/8: rate order differs from the stoichiometry; consumed on separate line(s) - Capillaries: zero order, signed\n  [info] Transdifferentiation_of_LECs_into_the_capillaries term 8/8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bianchi2015 -Model for lymphangiogenesis in normal and diabetic wounds  (BIOMD0000000722, curated BioModels; source file Wound Healing with Normal health condition.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_TGF_beta_by_enzymes_and_Macrophages term 1/4",
+     ""
+    ],
+    [
+     "8.1",
+     "0",
+     "0",
+     "Macrophages==>Active_TGF_beta+Macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_TGF_beta_by_enzymes_and_Macrophages term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(130500*exp((-1*0.522*cTIME_)))]==>Active_TGF_beta",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_TGF_beta_by_enzymes_and_Macrophages term 3/4",
+     ""
+    ],
+    [
+     "1.3500000000000001e-5",
+     "0",
+     "0",
+     "Macrophages+Macrophages==>Active_TGF_beta+2Macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_TGF_beta_by_enzymes_and_Macrophages term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Macrophages+S[USER;cTIME_:(0.21750000000000003*exp((-1*0.522*cTIME_)))]==>Active_TGF_beta+Macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Decay_of_TGF_beta",
+     ""
+    ],
+    [
+     "500",
+     "0",
+     "0",
+     "Active_TGF_beta==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Flux_of_macrophages_from_source",
+     ""
+    ],
+    [
+     "542",
+     "0",
+     "0",
+     "source==>Macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chemotaxis_by_TGF_beta",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cActive_TGF_beta:(400000000*cActive_TGF_beta^2/(cActive_TGF_beta^4+8100000000))]==>Macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Logistic_growth_of_Macrophages term 1/2",
+     ""
+    ],
+    [
+     "0.0061",
+     "0",
+     "0",
+     "Macrophages==>2Macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Logistic_growth_of_Macrophages term 2/2",
+     ""
+    ],
+    [
+     "1.0166666666666667e-8",
+     "0",
+     "0",
+     "Macrophages+Macrophages==>Macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_Macrophages",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Macrophages==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Differentiation_of_Macrophages",
+     ""
+    ],
+    [
+     "1e-5",
+     "0",
+     "0",
+     "Macrophages+Capillaries==>Capillaries",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Flux_of_VEGF_from_source",
+     ""
+    ],
+    [
+     "1.9",
+     "0",
+     "0",
+     "source==>VEGF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_VEGF_by_macrophages",
+     ""
+    ],
+    [
+     "0.0019",
+     "0",
+     "0",
+     "Macrophages==>VEGF+Macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Decay_of_VEGF",
+     ""
+    ],
+    [
+     "11",
+     "0",
+     "0",
+     "VEGF==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "VEGF_used_by_LECs",
+     ""
+    ],
+    [
+     "0.0014",
+     "0",
+     "0",
+     "VEGF+LECs==>LECs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Growth_of_LECs_upregulated_by_VEGF_and_downregulated_by_TGF_beta term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "LECs+S[USER;cActive_TGF_beta:(0.42/(0.24*cActive_TGF_beta+1))]==>2LECs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Growth_of_LECs_upregulated_by_VEGF_and_downregulated_by_TGF_beta term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "LECs+VEGF+S[USER;cActive_TGF_beta,cVEGF:(1/(0.9839999999999999*cActive_TGF_beta*cVEGF+10.08*cActive_TGF_beta+4.1*cVEGF+42))]==>2LECs+VEGF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 1/10",
+     ""
+    ],
+    [
+     "250",
+     "0",
+     "0",
+     "source==>LECs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 2/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCapillaries:(5000000/(2*abs(cCapillaries-10000)+2e-300))]==>LECs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 3/10 (consumes LECs)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCapillaries:((-1*0.025*cCapillaries))]==>LECs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 4/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cVEGF:(5000000*cVEGF^2/(cVEGF^4+8100000000))]==>LECs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 5/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCapillaries,cVEGF:(100000000000*cVEGF^2/(2*cVEGF^4*abs(cCapillaries-10000)+2e-300*cVEGF^4+16200000000*abs(cCapillaries-10000)+1.6200000000000002e-290))]==>LECs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 6/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Capillaries+Capillaries+S[USER;cCapillaries:(0.05/(2*abs(cCapillaries-10000)+2e-300))]==>LECs+2Capillaries",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 7/10 (consumes LECs)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCapillaries:((-1*1000*cCapillaries/(2*abs(cCapillaries-10000)+2e-300)))]==>LECs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 8/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Capillaries+Capillaries+S[USER;cCapillaries,cVEGF:(1000*cVEGF^2/(2*cVEGF^4*abs(cCapillaries-10000)+2e-300*cVEGF^4+16200000000*abs(cCapillaries-10000)+1.6200000000000002e-290))]==>LECs+2Capillaries",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 9/10 (consumes LECs)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCapillaries,cVEGF:((-1*500*cCapillaries*cVEGF^2/(cVEGF^4+8100000000)))]==>LECs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 10/10 (consumes LECs)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCapillaries,cVEGF:((-1*20000000*cCapillaries*cVEGF^2/(2*cVEGF^4*abs(cCapillaries-10000)+2e-300*cVEGF^4+16200000000*abs(cCapillaries-10000)+1.6200000000000002e-290)))]==>LECs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Crowding_effect_and_apoptosis_of_LECs term 1/3",
+     ""
+    ],
+    [
+     "2.1231422505307854e-6",
+     "0",
+     "0",
+     "LECs+LECs==>LECs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Crowding_effect_and_apoptosis_of_LECs term 2/3",
+     ""
+    ],
+    [
+     "2.1231422505307854e-6",
+     "0",
+     "0",
+     "LECs+Capillaries==>Capillaries",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Crowding_effect_and_apoptosis_of_LECs term 3/3",
+     ""
+    ],
+    [
+     "2.1231422505307854e-6",
+     "0",
+     "0",
+     "LECs+Macrophages==>Macrophages",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transdifferentiation_of_LECs_into_the_capillaries term 1/8",
+     ""
+    ],
+    [
+     "0.025",
+     "0",
+     "0",
+     "LECs==>Capillaries",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transdifferentiation_of_LECs_into_the_capillaries term 2/8",
+     ""
+    ],
+    [
+     "0.0005",
+     "0",
+     "0",
+     "LECs+VEGF==>Capillaries+VEGF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transdifferentiation_of_LECs_into_the_capillaries term 3/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "LECs+LECs+S[USER;cCapillaries,cLECs:(0.025/(1*abs(cCapillaries+cLECs-10000)+1e-300))]==>Capillaries+LECs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transdifferentiation_of_LECs_into_the_capillaries term 4/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCapillaries,cLECs:(250*cLECs/(abs(cCapillaries+cLECs-10000)+1e-300))]==>LECs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transdifferentiation_of_LECs_into_the_capillaries term 4/8 (consumes Capillaries)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCapillaries,cLECs:((-1*250*cLECs/(abs(cCapillaries+cLECs-10000)+1e-300)))]==>Capillaries",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transdifferentiation_of_LECs_into_the_capillaries term 5/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "LECs+LECs+VEGF+S[USER;cCapillaries,cLECs:(0.0005/(1*abs(cCapillaries+cLECs-10000)+1e-300))]==>Capillaries+LECs+VEGF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transdifferentiation_of_LECs_into_the_capillaries term 6/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "LECs+Capillaries+S[USER;cCapillaries,cLECs:(0.025/(1*abs(cCapillaries+cLECs-10000)+1e-300))]==>2Capillaries",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transdifferentiation_of_LECs_into_the_capillaries term 7/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCapillaries,cLECs,cVEGF:(5*cLECs*cVEGF/(abs(cCapillaries+cLECs-10000)+1e-300))]==>LECs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transdifferentiation_of_LECs_into_the_capillaries term 7/8 (consumes Capillaries)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCapillaries,cLECs,cVEGF:((-1*5*cLECs*cVEGF/(abs(cCapillaries+cLECs-10000)+1e-300)))]==>Capillaries",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transdifferentiation_of_LECs_into_the_capillaries term 8/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "LECs+Capillaries+VEGF+S[USER;cCapillaries,cLECs:(0.0005/(1*abs(cCapillaries+cLECs-10000)+1e-300))]==>2Capillaries+VEGF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Active_TGF_beta",
+     "0",
+     "30",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Active TGF-beta [Active_TGF_beta]",
+     ""
+    ],
+    [
+     "Macrophages",
+     "0",
+     "1875",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Macrophages [Macrophages]",
+     ""
+    ],
+    [
+     "VEGF",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VEGF [VEGF]",
+     ""
+    ],
+    [
+     "LECs",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LECs [LECs]",
+     ""
+    ],
+    [
+     "Capillaries",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Capillaries [Capillaries]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

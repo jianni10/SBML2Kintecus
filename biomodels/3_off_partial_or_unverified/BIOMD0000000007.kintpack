@@ -1,0 +1,1165 @@
+{
+ "version": 3,
+ "created": "2026-10-31T04:41:02.121366+00:00",
+ "description": "Novak1997 - Cell Cycle\nBioModels BIOMD0000000007 (curated). SBML file: BIOMD0000000007_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000007_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 3.70e+00 of species peak (worst: Mass)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 3.70e+00 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'Start' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Division' not converted (state-triggered (not a time >= t0 trigger))\n  [info] species 'SPF' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'MPF' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IEB' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'UbEB' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'UbE2B' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Wee1B' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Cdc25B' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Rum1Total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Cdc13Total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Cig2Total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Rum1_Deg_SPF term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Rum1_Deg_SPF term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Rum1_Deg_SPF term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] IE_Reaction term 3/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] IE_Reaction term 4/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] IE_Reaction term 5/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] UbE_Reaction term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] UbE_Reaction term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] UbE2_Reaction term 3/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] UbE2_Reaction term 4/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] UbE2_Reaction term 5/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Wee1_Reaction term 2/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Wee1_Reaction term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Wee1_Reaction term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Cdc25_Reaction term 3/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Cdc25_Reaction term 4/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Cdc25_Reaction term 5/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): R1 = R; p_Mass = Mass",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Novak1997 - Cell Cycle  (BIOMD0000000007, curated BioModels; source file BIOMD0000000007_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "G2K_Creation",
+     ""
+    ],
+    [
+     "0.015",
+     "0",
+     "0",
+     "source==>G2K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "G1K_Creation",
+     ""
+    ],
+    [
+     "0.00175",
+     "0",
+     "0",
+     "source==>G1K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc2Phos term 1/4",
+     ""
+    ],
+    [
+     "0.035",
+     "0",
+     "0",
+     "G2K==>PG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc2Phos term 2/4",
+     ""
+    ],
+    [
+     "0.025",
+     "0",
+     "0",
+     "PG2==>G2K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc2Phos term 3/4",
+     ""
+    ],
+    [
+     "0.31499999999999995",
+     "0",
+     "0",
+     "G2K+Wee1==>PG2+Wee1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc2Phos term 4/4",
+     ""
+    ],
+    [
+     "0.475",
+     "0",
+     "0",
+     "PG2+Cdc25==>G2K+Cdc25",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "G2R_Creation term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "G2R==>G2K+R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "G2R_Creation term 2/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "G2K+R1==>G2R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PG2R_Creation term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "PG2R==>R1+PG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PG2R_Creation term 2/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "R1+PG2==>PG2R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rum1DegInG2R",
+     ""
+    ],
+    [
+     "0.1875",
+     "0",
+     "0",
+     "G2R==>G2K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rum1Deg",
+     ""
+    ],
+    [
+     "0.1875",
+     "0",
+     "0",
+     "R1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rum1DegInPG2R",
+     ""
+    ],
+    [
+     "0.1875",
+     "0",
+     "0",
+     "PG2R==>PG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RumDegInG1R",
+     ""
+    ],
+    [
+     "0.1875",
+     "0",
+     "0",
+     "G1R==>G1K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "G2K_dissoc term 1/2",
+     ""
+    ],
+    [
+     "0.0075",
+     "0",
+     "0",
+     "G2K==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "G2K_dissoc term 2/2",
+     ""
+    ],
+    [
+     "0.2425",
+     "0",
+     "0",
+     "G2K+UbE==>UbE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PG2_dissoc term 1/2",
+     ""
+    ],
+    [
+     "0.0075",
+     "0",
+     "0",
+     "PG2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PG2_dissoc term 2/2",
+     ""
+    ],
+    [
+     "0.2425",
+     "0",
+     "0",
+     "PG2+UbE==>UbE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "G1K_Dissociation term 1/2",
+     ""
+    ],
+    [
+     "0.0375",
+     "0",
+     "0",
+     "G1K==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "G1K_Dissociation term 2/2",
+     ""
+    ],
+    [
+     "7.4625",
+     "0",
+     "0",
+     "G1K+UbE2==>UbE2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PG2R_Dissociation",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "PG2R==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "G2R_Dissociation",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "G2R==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "G1R_Binding term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "G1R==>R1+G1K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "G1R_Binding term 2/2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "R1+G1K==>G1R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "G2R_Dissociation_UbE term 1/2",
+     ""
+    ],
+    [
+     "0.0075",
+     "0",
+     "0",
+     "G2R==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "G2R_Dissociation_UbE term 2/2",
+     ""
+    ],
+    [
+     "0.2425",
+     "0",
+     "0",
+     "G2R+UbE==>R1+UbE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PG2R_Dissociation_UbE term 1/2",
+     ""
+    ],
+    [
+     "0.0075",
+     "0",
+     "0",
+     "PG2R==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PG2R_Dissociation_UbE term 2/2",
+     ""
+    ],
+    [
+     "0.2425",
+     "0",
+     "0",
+     "PG2R+UbE==>R1+UbE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rum1_Production",
+     ""
+    ],
+    [
+     "0.09375",
+     "0",
+     "0",
+     "source==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rum1_Deg_SPF term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "R1+G1K+S[USER;cR1,cp_Mass:(0.8125*cp_Mass/(1*cR1+0.001))]==>G1K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rum1_Deg_SPF term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "R1+G2K+S[USER;cR1,cp_Mass:(3.25*cp_Mass/(1*cR1+0.001))]==>G2K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rum1_Deg_SPF term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "R1+PG2+S[USER;cR1,cp_Mass:(0.1625*cp_Mass/(1*cR1+0.001))]==>PG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IE_Reaction term 1/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G2K+S[USER;cIE:(0.4/(1.01-1*cIE))]==>IE+G2K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IE_Reaction term 2/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PG2+S[USER;cIE:(0.020000000000000004/(1.01-1*cIE))]==>IE+PG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IE_Reaction term 3/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IE+S[USER;cIE:(0.1/(1*cIE+0.01))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IE_Reaction term 4/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IE+G2K+S[USER;cIE:((-1*0.4/(1*cIE-1.01)))]==>G2K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IE_Reaction term 5/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IE+PG2+S[USER;cIE:((-1*0.020000000000000004/(1*cIE-1.01)))]==>PG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "UbE_Reaction term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IE+S[USER;cUbE:(0.2/(1.01-1*cUbE))]==>UbE+IE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "UbE_Reaction term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "UbE+S[USER;cUbE:(0.1/(1*cUbE+0.01))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "UbE_Reaction term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "UbE+IE+S[USER;cUbE:((-1*0.2/(1*cUbE-1.01)))]==>IE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "UbE2_Reaction term 1/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G2K+S[USER;cUbE2:(1/(1.05-1*cUbE2))]==>UbE2+G2K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "UbE2_Reaction term 2/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PG2+S[USER;cUbE2:(0.05/(1.05-1*cUbE2))]==>UbE2+PG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "UbE2_Reaction term 3/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "UbE2+S[USER;cUbE2:(0.3/(1*cUbE2+0.05))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "UbE2_Reaction term 4/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "UbE2+G2K+S[USER;cUbE2:((-1*1/(1*cUbE2-1.05)))]==>G2K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "UbE2_Reaction term 5/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "UbE2+PG2+S[USER;cUbE2:((-1*0.05/(1*cUbE2-1.05)))]==>PG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wee1_Reaction term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cWee1:(0.25/(1.1-1*cWee1))]==>Wee1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wee1_Reaction term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Wee1+S[USER;cWee1:((-1*0.25/(1*cWee1-1.1)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wee1_Reaction term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Wee1+G2K+S[USER;cWee1:(1/(1*cWee1+0.1))]==>G2K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wee1_Reaction term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Wee1+PG2+S[USER;cWee1:(0.05/(1*cWee1+0.1))]==>PG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc25_Reaction term 1/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G2K+S[USER;cCdc25:(1/(1.1-1*cCdc25))]==>Cdc25+G2K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc25_Reaction term 2/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PG2+S[USER;cCdc25:(0.05/(1.1-1*cCdc25))]==>Cdc25+PG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc25_Reaction term 3/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc25+S[USER;cCdc25:(0.25/(1*cCdc25+0.1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc25_Reaction term 4/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc25+G2K+S[USER;cCdc25:((-1*1/(1*cCdc25-1.1)))]==>G2K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc25_Reaction term 5/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc25+PG2+S[USER;cCdc25:((-1*0.05/(1*cCdc25-1.1)))]==>PG2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dMass/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_Mass:(0.00495*cp_Mass)]==>p_Mass",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "UbE",
+     "0",
+     "0.11",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ubiquitinProtease1 [UbE]",
+     ""
+    ],
+    [
+     "UbE2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ubiquitinProtease2 [UbE2]",
+     ""
+    ],
+    [
+     "Wee1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Wee1 [Wee1]",
+     ""
+    ],
+    [
+     "Cdc25",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdc25 [Cdc25]",
+     ""
+    ],
+    [
+     "G2K",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdc13_Cdc2 [G2K]",
+     ""
+    ],
+    [
+     "R1",
+     "0",
+     "0.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FreeRum1 [R]",
+     ""
+    ],
+    [
+     "G1K",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cig2_Cdc2 [G1K]",
+     ""
+    ],
+    [
+     "IE",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IntermediaryEnzyme [IE]",
+     ""
+    ],
+    [
+     "PG2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdc13_P-Cdc2 [PG2]",
+     ""
+    ],
+    [
+     "G1R",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cig2_Cdc2_Rum1 [G1R]",
+     ""
+    ],
+    [
+     "G2R",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdc13_Cdc2_Rum1 [G2R]",
+     ""
+    ],
+    [
+     "PG2R",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdc13_P-Cdc2_Rum1 [PG2R]",
+     ""
+    ],
+    [
+     "p_Mass",
+     "0",
+     "0.49",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter Mass [Mass]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

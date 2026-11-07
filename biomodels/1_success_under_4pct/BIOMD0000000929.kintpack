@@ -1,0 +1,783 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:13:11.182633+00:00",
+ "description": "Li2016 - Model for pancreatic cancer patients receiving immunotherapy\nBioModels BIOMD0000000929 (curated). SBML file: Li2016.xml.\nSimulation: 0 to 1000 time units (SED-ML: Li2016.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.14e-06 of species peak (worst: helper_T_cells__H)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Lysis_of_cancer_cells_by_CD8__T_cells: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): PancreaticstellatecellsP1 = Pancreatic_stellate_cells__P",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Li2016 - Model for pancreatic cancer patients receiving immunotherapy  (BIOMD0000000929, curated BioModels; source file Li2016.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Logistic_growth_of_cancer_cells term 1/2",
+     ""
+    ],
+    [
+     "0.0195",
+     "0",
+     "0",
+     "Pancreatic_cancer_cells__C==>2Pancreatic_cancer_cells__C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Logistic_growth_of_cancer_cells term 2/2",
+     ""
+    ],
+    [
+     "1.989e-13",
+     "0",
+     "0",
+     "Pancreatic_cancer_cells__C+Pancreatic_cancer_cells__C==>Pancreatic_cancer_cells__C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Interaction_between_cancer_cells_and_NK_cells",
+     ""
+    ],
+    [
+     "1.5e-11",
+     "0",
+     "0",
+     "Pancreatic_cancer_cells__C+NK_cells__N==>NK_cells__N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lysis_of_cancer_cells_by_CD8__T_cells",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pancreatic_cancer_cells__C+S[USER;cCD8__T_cells__T,cPancreatic_cancer_cells__C:(0.005*(cCD8__T_cells__T/cPancreatic_cancer_cells__C)^0.6666666666666666/(1*(cCD8__T_cells__T/(cPancreatic_cancer_cells__C+1e-30))^0.6666666666666666+0.3))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Basal_growth_of_stellate_cells term 1/2",
+     ""
+    ],
+    [
+     "0.0019500000000000001",
+     "0",
+     "0",
+     "PancreaticstellatecellsP1==>2PancreaticstellatecellsP1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Basal_growth_of_stellate_cells term 2/2",
+     ""
+    ],
+    [
+     "3.482115e-12",
+     "0",
+     "0",
+     "PancreaticstellatecellsP1+PancreaticstellatecellsP1==>PancreaticstellatecellsP1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Death_of_stellate_cells",
+     ""
+    ],
+    [
+     "0.015",
+     "0",
+     "0",
+     "PancreaticstellatecellsP1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_CD8__T_cells",
+     ""
+    ],
+    [
+     "3500",
+     "0",
+     "0",
+     "source==>CD8__T_cells__T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Death_of_CD8__T_cells",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "CD8__T_cells__T==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inactivation_of_CD8__T_cells_by_cancer_cells",
+     ""
+    ],
+    [
+     "3.42e-12",
+     "0",
+     "0",
+     "CD8__T_cells__T+Pancreatic_cancer_cells__C==>Pancreatic_cancer_cells__C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Self__regulation_of_CD8__T_cells",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD8__T_cells__T+S[USER;cCD8__T_cells__T:(3e-10*cCD8__T_cells__T)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Recruitment_of_CD8__cells_by_debris_from_cancer_cells_lysed",
+     ""
+    ],
+    [
+     "5e-12",
+     "0",
+     "0",
+     "NK_cells__N+Pancreatic_cancer_cells__C==>CD8__T_cells__T+NK_cells__N+Pancreatic_cancer_cells__C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_CD8__T_cells_by_IL_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD8__T_cells__T+helper_T_cells__H+S[USER;chelper_T_cells__H:(0.125/(chelper_T_cells__H+67449000000))]==>2CD8__T_cells__T+helper_T_cells__H",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_CD8__T_cells_by_IFN_gamma term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD8__T_cells__T+CD8__T_cells__T+S[USER;cCD8__T_cells__T,cNK_cells__N,chelper_T_cells__H:(5.586375e-14/(4.4691e-13*cCD8__T_cells__T+4.4691e-13*cNK_cells__N+4.4691e-13*chelper_T_cells__H+0.3))]==>3CD8__T_cells__T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_CD8__T_cells_by_IFN_gamma term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD8__T_cells__T+NK_cells__N+S[USER;cCD8__T_cells__T,cNK_cells__N,chelper_T_cells__H:(5.586375e-14/(4.4691e-13*cCD8__T_cells__T+4.4691e-13*cNK_cells__N+4.4691e-13*chelper_T_cells__H+0.3))]==>2CD8__T_cells__T+NK_cells__N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_CD8__T_cells_by_IFN_gamma term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD8__T_cells__T+helper_T_cells__H+S[USER;cCD8__T_cells__T,cNK_cells__N,chelper_T_cells__H:(5.586375e-14/(4.4691e-13*cCD8__T_cells__T+4.4691e-13*cNK_cells__N+4.4691e-13*chelper_T_cells__H+0.3))]==>2CD8__T_cells__T+helper_T_cells__H",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_NK_cells",
+     ""
+    ],
+    [
+     "130000",
+     "0",
+     "0",
+     "source==>NK_cells__N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Death_of_NK_cells",
+     ""
+    ],
+    [
+     "0.015",
+     "0",
+     "0",
+     "NK_cells__N==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inactivation_of_NK_cells_after_interaction_with_cancer_cells",
+     ""
+    ],
+    [
+     "1e-13",
+     "0",
+     "0",
+     "NK_cells__N+Pancreatic_cancer_cells__C==>Pancreatic_cancer_cells__C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_NK_cells_by_IL_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NK_cells__N+helper_T_cells__H+S[USER;chelper_T_cells__H:(0.125/(chelper_T_cells__H+67449000000))]==>2NK_cells__N+helper_T_cells__H",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_NK_cells_by_IFN_gamma term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NK_cells__N+NK_cells__N+S[USER;cCD8__T_cells__T,cNK_cells__N,chelper_T_cells__H:(5.586375e-14/(4.4691e-13*cCD8__T_cells__T+4.4691e-13*cNK_cells__N+4.4691e-13*chelper_T_cells__H+0.3))]==>3NK_cells__N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_NK_cells_by_IFN_gamma term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD8__T_cells__T+NK_cells__N+S[USER;cCD8__T_cells__T,cNK_cells__N,chelper_T_cells__H:(5.586375e-14/(4.4691e-13*cCD8__T_cells__T+4.4691e-13*cNK_cells__N+4.4691e-13*chelper_T_cells__H+0.3))]==>2NK_cells__N+CD8__T_cells__T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_NK_cells_by_IFN_gamma term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NK_cells__N+helper_T_cells__H+S[USER;cCD8__T_cells__T,cNK_cells__N,chelper_T_cells__H:(5.586375e-14/(4.4691e-13*cCD8__T_cells__T+4.4691e-13*cNK_cells__N+4.4691e-13*chelper_T_cells__H+0.3))]==>2NK_cells__N+helper_T_cells__H",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_helper_T_cells",
+     ""
+    ],
+    [
+     "9600",
+     "0",
+     "0",
+     "source==>helper_T_cells__H",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Death_of_helper_T_cells",
+     ""
+    ],
+    [
+     "0.0012",
+     "0",
+     "0",
+     "helper_T_cells__H==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Inactivation_of_helper_T_cells",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "helper_T_cells__H+S[USER;chelper_T_cells__H:(5e-11*chelper_T_cells__H)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_helper_T_cells_by_IL_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "helper_T_cells__H+helper_T_cells__H+S[USER;chelper_T_cells__H:(0.125/(chelper_T_cells__H+67449000000))]==>3helper_T_cells__H",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_helper_T_cells_by_IFN_gamma term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "helper_T_cells__H+helper_T_cells__H+S[USER;cCD8__T_cells__T,cNK_cells__N,chelper_T_cells__H:(5.586375e-14/(4.4691e-13*cCD8__T_cells__T+4.4691e-13*cNK_cells__N+4.4691e-13*chelper_T_cells__H+0.3))]==>3helper_T_cells__H",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_helper_T_cells_by_IFN_gamma term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD8__T_cells__T+helper_T_cells__H+S[USER;cCD8__T_cells__T,cNK_cells__N,chelper_T_cells__H:(5.586375e-14/(4.4691e-13*cCD8__T_cells__T+4.4691e-13*cNK_cells__N+4.4691e-13*chelper_T_cells__H+0.3))]==>2helper_T_cells__H+CD8__T_cells__T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_helper_T_cells_by_IFN_gamma term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NK_cells__N+helper_T_cells__H+S[USER;cCD8__T_cells__T,cNK_cells__N,chelper_T_cells__H:(5.586375e-14/(4.4691e-13*cCD8__T_cells__T+4.4691e-13*cNK_cells__N+4.4691e-13*chelper_T_cells__H+0.3))]==>2helper_T_cells__H+NK_cells__N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stellate_cells_promotes_cancer_growth_through_cytokines term 1/2",
+     ""
+    ],
+    [
+     "3.482115e-12",
+     "0",
+     "0",
+     "Pancreatic_cancer_cells__C+PancreaticstellatecellsP1==>2Pancreatic_cancer_cells__C+PancreaticstellatecellsP1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stellate_cells_promotes_cancer_growth_through_cytokines term 2/2",
+     ""
+    ],
+    [
+     "3.5517572999999997e-23",
+     "0",
+     "0",
+     "Pancreatic_cancer_cells__C+Pancreatic_cancer_cells__C+PancreaticstellatecellsP1==>Pancreatic_cancer_cells__C+PancreaticstellatecellsP1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TGF_beta__induced_growth_of_stellate_cells term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pancreatic_cancer_cells__C+PancreaticstellatecellsP1+S[USER;cPancreatic_cancer_cells__C:(0.125/(cPancreatic_cancer_cells__C+56000000))]==>2PancreaticstellatecellsP1+Pancreatic_cancer_cells__C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TGF_beta__induced_growth_of_stellate_cells term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PancreaticstellatecellsP1+PancreaticstellatecellsP1+Pancreatic_cancer_cells__C+S[USER;cPancreatic_cancer_cells__C:(2.232125e-10/(cPancreatic_cancer_cells__C+56000000))]==>Pancreatic_cancer_cells__C+PancreaticstellatecellsP1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Pancreatic_cancer_cells__C",
+     "0",
+     "1000000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pancreatic cancer cells (C) [Pancreatic_cancer_cells__C]",
+     ""
+    ],
+    [
+     "PancreaticstellatecellsP1",
+     "0",
+     "5600000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pancreatic stellate cells (P) [Pancreatic_stellate_cells__P]",
+     ""
+    ],
+    [
+     "CD8__T_cells__T",
+     "0",
+     "700000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CD8+ T cells (T) [CD8__T_cells__T]",
+     ""
+    ],
+    [
+     "NK_cells__N",
+     "0",
+     "352800000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NK cells (N) [NK_cells__N]",
+     ""
+    ],
+    [
+     "helper_T_cells__H",
+     "0",
+     "1881600000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "helper T cells (H) [helper_T_cells__H]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

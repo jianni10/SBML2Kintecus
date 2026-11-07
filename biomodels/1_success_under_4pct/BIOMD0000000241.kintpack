@@ -1,0 +1,604 @@
+{
+ "version": 3,
+ "created": "2026-11-06T06:00:40.692268+00:00",
+ "description": "Shi1993_Caffeine_pressor_tolerance\nBioModels BIOMD0000000241 (curated). SBML file: BIOMD0000000241_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000241_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.025.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 9.70e-07 of species peak (worst: C_t)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 1 event(s) depend only on time (and on variables only they change): unrolled into 15 firing(s) up to t = 30\n  [info] time event(s) on 'cups' encoded as time/value pairs in EV_P_CUPS.TXT (SET)\n  [info] time event(s) on 'X_gut' encoded as time/value pairs in EV_X_GUT.TXT (ADD)\nRenamed species (Kintecus name = SBML id): p_cups = cups",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Shi1993_Caffeine_pressor_tolerance  (BIOMD0000000241, curated BioModels; source file BIOMD0000000241_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dX_gut/dt term 1",
+     ""
+    ],
+    [
+     "12",
+     "0",
+     "0",
+     "X_gut==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_p/dt term 1",
+     ""
+    ],
+    [
+     "1.19",
+     "0",
+     "0",
+     "C_per==>C_p+C_per",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_p/dt term 2",
+     ""
+    ],
+    [
+     "36.9",
+     "0",
+     "0",
+     "X_gut==>C_p+X_gut",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_p/dt term 3",
+     ""
+    ],
+    [
+     "1.98",
+     "0",
+     "0",
+     "C_p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_per/dt term 1",
+     ""
+    ],
+    [
+     "1.64",
+     "0",
+     "0",
+     "C_p==>C_per+C_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_per/dt term 2",
+     ""
+    ],
+    [
+     "1.19",
+     "0",
+     "0",
+     "C_per==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_e/dt term 1",
+     ""
+    ],
+    [
+     "2.03",
+     "0",
+     "0",
+     "C_p==>C_e+C_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_e/dt term 2",
+     ""
+    ],
+    [
+     "2.03",
+     "0",
+     "0",
+     "C_e==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_t/dt term 1",
+     ""
+    ],
+    [
+     "0.75",
+     "0",
+     "0",
+     "C_p==>C_t+C_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC_t/dt term 2",
+     ""
+    ],
+    [
+     "0.75",
+     "0",
+     "0",
+     "C_t==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "X_gut",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "EV_X_GUT.TXT-ADD",
+     "X_gut [X_gut]",
+     ""
+    ],
+    [
+     "C_p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_p [C_p]",
+     ""
+    ],
+    [
+     "C_per",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_per [C_per]",
+     ""
+    ],
+    [
+     "C_e",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_e [C_e]",
+     ""
+    ],
+    [
+     "C_t",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_t [C_t]",
+     ""
+    ],
+    [
+     "p_cups",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "EV_P_CUPS.TXT-SET",
+     "parameter cups [cups]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.02500000003",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.02500000003",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_CUPS.TXT",
+   "key": "O_EV_P_CUPS.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.15000000000000124",
+     "1"
+    ],
+    [
+     "2.1500000000000012",
+     "2"
+    ],
+    [
+     "4.15",
+     "3"
+    ],
+    [
+     "6.150000000000001",
+     "4"
+    ],
+    [
+     "8.15",
+     "5"
+    ],
+    [
+     "10.15",
+     "6"
+    ],
+    [
+     "12.15",
+     "7"
+    ],
+    [
+     "14.15",
+     "8"
+    ],
+    [
+     "16.15",
+     "9"
+    ],
+    [
+     "18.15",
+     "10"
+    ],
+    [
+     "20.15",
+     "11"
+    ],
+    [
+     "22.15",
+     "12"
+    ],
+    [
+     "24.15",
+     "13"
+    ],
+    [
+     "26.15",
+     "14"
+    ],
+    [
+     "28.15",
+     "15"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_X_GUT.TXT",
+   "key": "O_EV_X_GUT.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.15000000000000124",
+     "1.125"
+    ],
+    [
+     "2.1500000000000012",
+     "1.125"
+    ],
+    [
+     "4.15",
+     "1.125"
+    ],
+    [
+     "6.150000000000001",
+     "1.125"
+    ],
+    [
+     "8.15",
+     "1.125"
+    ],
+    [
+     "10.15",
+     "1.125"
+    ],
+    [
+     "12.15",
+     "1.125"
+    ],
+    [
+     "14.15",
+     "1.125"
+    ],
+    [
+     "16.15",
+     "1.125"
+    ],
+    [
+     "18.15",
+     "1.125"
+    ],
+    [
+     "20.15",
+     "1.125"
+    ],
+    [
+     "22.15",
+     "1.125"
+    ],
+    [
+     "24.15",
+     "1.125"
+    ],
+    [
+     "26.15",
+     "1.125"
+    ],
+    [
+     "28.15",
+     "1.125"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

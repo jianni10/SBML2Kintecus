@@ -1,0 +1,537 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:11:04.288178+00:00",
+ "description": "Cooper2015 - Modeling the effects of systemic mediators on the inflammatory phase of wound healing\nBioModels BIOMD0000000855 (curated). SBML file: Cooper2015.xml.\nSimulation: 0 to 20 time units (SED-ML: Cooper2015.sedml), sampling 0.02.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.36e-06 of species peak (worst: N)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Pathogen_Destruction_Background_Response: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Neutrophil_Destruction_Macrophage: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): P1 = P; M1 = M",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cooper2015 - Modeling the effects of systemic mediators on the inflammatory phase of wound healing  (BIOMD0000000855, curated BioModels; source file Cooper2015.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Pathogen_Growth term 1/2",
+     ""
+    ],
+    [
+     "14.4",
+     "0",
+     "0",
+     "P1==>2P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Pathogen_Growth term 2/2",
+     ""
+    ],
+    [
+     "0.72",
+     "0",
+     "0",
+     "P1+P1==>P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Pathogen_Destruction_Background_Response",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P1+S[USER;cP1:(1.728/(0.2*cP1+0.048))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Pathogen_Destruction_Neutrophils",
+     ""
+    ],
+    [
+     "35.03",
+     "0",
+     "0",
+     "P1+N==>N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Pathogen_Destruction_Macrophages",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P1+M1+S[USER;cN:(34.8/(82.64462809917356*cN^2+1))]==>M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Debris_Destruction_Neutrophils term 1/2",
+     ""
+    ],
+    [
+     "2.03",
+     "0",
+     "0",
+     "Pt+N==>N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Debris_Destruction_Neutrophils term 2/2",
+     ""
+    ],
+    [
+     "10.9011",
+     "0",
+     "0",
+     "Pt+N+N==>2N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Debris_Destruction_Macrophages",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pt+M1+S[USER;cN:(3.16/(82.64462809917356*cN^2+1))]==>M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Debris_Neutrophil_Decay",
+     ""
+    ],
+    [
+     "1.02",
+     "0",
+     "0",
+     "N==>Pt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Debris_Decay_Intrinsic",
+     ""
+    ],
+    [
+     "0.37",
+     "0",
+     "0",
+     "Pt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Macrophage_Recruitment term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1+S[USER;cM1,cN,cP1,cPt:(0.0102/(0.06*cM1+10.58*cN+18.52*cP1+41.5*cPt+0.54))]==>2M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Macrophage_Recruitment term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pt+S[USER;cM1,cN,cP1,cPt:(7.055000000000001/(0.06*cM1+10.58*cN+18.52*cP1+41.5*cPt+0.54))]==>M1+Pt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Macrophage_Recruitment term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P1+S[USER;cM1,cN,cP1,cPt:(3.1484/(0.06*cM1+10.58*cN+18.52*cP1+41.5*cPt+0.54))]==>M1+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Macrophage_Recruitment term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N+S[USER;cM1,cN,cP1,cPt:(1.7986000000000002/(0.06*cM1+10.58*cN+18.52*cP1+41.5*cPt+0.54))]==>M1+N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Macrophage_Activation",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "M1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Neutrophil_Activation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pt+S[USER;cP1,cPt:(1.1286/(17.58*cP1+2.97*cPt+3.3))]==>N+Pt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Neutrophil_Activation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P1+S[USER;cP1,cPt:(6.6804/(17.58*cP1+2.97*cPt+3.3))]==>N+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Neutrophil_Destruction_Macrophage",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N+M1+S[USER;cN:(6.42/(82.64462809917356*(cN+1e-30)^2+1))]==>M1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P [P]",
+     ""
+    ],
+    [
+     "Pt",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pt [Pt]",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M [M]",
+     ""
+    ],
+    [
+     "N",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N [N]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.02",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "20",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.02",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

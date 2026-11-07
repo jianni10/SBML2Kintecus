@@ -1,0 +1,489 @@
+{
+ "version": 3,
+ "created": "2026-11-02T03:28:06.515124+00:00",
+ "description": "Meyer1991_CalciumSpike_ICC\nBioModels BIOMD0000000224 (curated). SBML file: BIOMD0000000224_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000224_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.54e-06 of species peak (worst: CaS)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'g' goes below zero in the SBML: integrated as g_o = value + 0.2, output as g = OUTC[g_o;-0.2*source]\n  [info] JChannel term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - CaI: zero order, signed\n  [info] JChannel term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - CaI: zero order, signed\n  [info] JPump: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] kPLC term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - IP3: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Meyer1991_CalciumSpike_ICC  (BIOMD0000000224, curated BioModels; source file BIOMD0000000224_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "JChannel term 1/4",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "CaS==>CaI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "JChannel term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaS,cg_o:(0.01*cCaS*(cg_o-0.2))]==>CaS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "JChannel term 2/4 (consumes CaI)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaS,cg_o:((-1*0.01*cCaS*(cg_o-0.2)))]==>CaI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "JChannel term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CaS+S[USER;cIP3:(1.25*cIP3^4/(0.5*cIP3+0.5)^4)]==>CaI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "JChannel term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaS,cIP3,cg_o:(1.25*cCaS*cIP3^4*(cg_o-0.2)/(0.5*cIP3+0.5)^4)]==>CaS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "JChannel term 4/4 (consumes CaI)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaS,cIP3,cg_o:((-1*1.25*cCaS*cIP3^4*(cg_o-0.2)/(0.5*cIP3+0.5)^4))]==>CaI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "JPump",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CaI+S[USER;cCaI:(0.004*cCaI/(0.0001*(cCaI+1e-30)^2+0.0225))]==>CaS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "kPLC term 1/2",
+     ""
+    ],
+    [
+     "1.1",
+     "0",
+     "0",
+     "source==>IP3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "kPLC term 2/2 (consumes IP3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaI:((-1*1.0091743119266057/(0.01*cCaI+1)))]==>IP3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "kPhosphatase",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IP3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inhibition_parameter1 term 1/2 (shifted g_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaI:(1e-8*cCaI^4)]==>g_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inhibition_parameter1 term 2/2 (shifted g_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCaI,cg_o:((-1*1e-8*cCaI^4*(cg_o-0.2)))]==>g_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inhibition_parameter2 (shifted g_o)",
+     ""
+    ],
+    [
+     "-0.02",
+     "0",
+     "0",
+     "source==>g_o",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "CaI",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CaI [CaI]",
+     ""
+    ],
+    [
+     "IP3",
+     "0",
+     "0.05",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IP3 [IP3]",
+     ""
+    ],
+    [
+     "CaS",
+     "0",
+     "1100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CaS [CaS]",
+     ""
+    ],
+    [
+     "g_o",
+     "0",
+     "0.2",
+     "N",
+     "0",
+     "No",
+     "No",
+     "g + 0.2 (shifted state) [__shifted__g]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "g",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[g_o;-0.2*source]",
+     "No",
+     "g (= g_o - 0.2) [g]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}
