@@ -1,0 +1,400 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:02:36.815876+00:00",
+ "description": "Smallbone2013 - Colon Crypt cycle - Version 0\nBioModels BIOMD0000000520 (curated). SBML file: BIOMD0000000520_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000520_url.sedml (auto-generated placeholder); duration chosen from the dynamics: no dynamics), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 9.61e-07 of species peak (worst: N0)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R01 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R12 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Smallbone2013 - Colon Crypt cycle - Version 0  (BIOMD0000000520, curated BioModels; source file BIOMD0000000520_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R0X",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "N0==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R01 term 1/2",
+     ""
+    ],
+    [
+     "0.218",
+     "0",
+     "0",
+     "N0==>N1+N0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R01 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N0+N0+S[USER;cN0:(1/(1*cN0+2.92408052354609))]==>N1+2N0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R00",
+     ""
+    ],
+    [
+     "0.0999999999999998",
+     "0",
+     "0",
+     "N0==>2N0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1X",
+     ""
+    ],
+    [
+     "0.263",
+     "0",
+     "0",
+     "N1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 1/2",
+     ""
+    ],
+    [
+     "0.547",
+     "0",
+     "0",
+     "N1==>N2+N1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N1+N1+S[USER;cN1:(1/(1*cN1+29.2408052354609))]==>N2+2N1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11",
+     ""
+    ],
+    [
+     "0.239254806051979",
+     "0",
+     "0",
+     "N1==>2N1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2X",
+     ""
+    ],
+    [
+     "1.83",
+     "0",
+     "0",
+     "N2==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "N0",
+     "0",
+     "1.75444831412765",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N0 [N0]",
+     ""
+    ],
+    [
+     "N1",
+     "0",
+     "43.8146704098797",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N1 [N1]",
+     ""
+    ],
+    [
+     "N2",
+     "0",
+     "27.4558812768926",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N2 [N2]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

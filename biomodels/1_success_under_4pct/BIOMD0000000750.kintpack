@@ -1,0 +1,942 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:08:04.110012+00:00",
+ "description": "Lolas2016 - tumour-induced neoneurogenesis and perineural tumour growth\nBioModels BIOMD0000000750 (curated). SBML file: Lolas2016.xml.\nSimulation: 0 to 15 time units (SED-ML: Lolas2016.sedml), sampling 0.15.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.17e-06 of species peak (worst: S)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): S1 = S; P1 = P",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lolas2016 - tumour-induced neoneurogenesis and perineural tumour growth  (BIOMD0000000750, curated BioModels; source file Lolas2016.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth_NGF__logistic term 1/10",
+     ""
+    ],
+    [
+     "4.2508374999999996e-8",
+     "0",
+     "0",
+     "Tp+Tp==>3Tp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth_NGF__logistic term 2/10",
+     ""
+    ],
+    [
+     "0.00042087499999999997",
+     "0",
+     "0",
+     "Tp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth_NGF__logistic term 3/10",
+     ""
+    ],
+    [
+     "4.2087499999999996e-14",
+     "0",
+     "0",
+     "Tp+Tp+Tp==>2Tp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth_NGF__logistic term 4/10",
+     ""
+    ],
+    [
+     "4.20875e-8",
+     "0",
+     "0",
+     "Nn+Tp+Tp==>3Tp+Nn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth_NGF__logistic term 5/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tp+Nn+S[USER;cTp:(4.2087499999999996e-14*cTp^2)]==>Nn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth_NGF__logistic term 6/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G+Tp+Tp+S[USER;cG:(8.8375e-5/(2.39*cG+134.27))]==>3Tp+G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth_NGF__logistic term 7/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tp+G+S[USER;cG:(0.875/(2.39*cG+134.27))]==>G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth_NGF__logistic term 8/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tp+G+S[USER;cG,cTp:(8.75e-11*cTp^2/(2.39*cG+134.27))]==>G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth_NGF__logistic term 9/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G+Nn+S[USER;cG,cTp:(8.75e-5*cTp^2/(2.39*cG+134.27))]==>Tp+G+Nn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth_NGF__logistic term 10/10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tp+G+Nn+S[USER;cG,cTp:(8.75e-11*cTp^2/(2.39*cG+134.27))]==>G+Nn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_death_AGM term 1/2",
+     ""
+    ],
+    [
+     "0.0127",
+     "0",
+     "0",
+     "Tp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_death_AGM term 2/2",
+     ""
+    ],
+    [
+     "0.00016382999999999998",
+     "0",
+     "0",
+     "Tp+A==>A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_migration term 1/3",
+     ""
+    ],
+    [
+     "0.22",
+     "0",
+     "0",
+     "Tp==>Tm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_migration term 2/3",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "Tp+Na==>Tm+Na",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_migration term 3/3",
+     ""
+    ],
+    [
+     "9.8e-6",
+     "0",
+     "0",
+     "Tp+A==>Tm+A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "migrating_tumor_cell_growth",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "Tm==>2Tm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "migrating_cell_death",
+     ""
+    ],
+    [
+     "0.0127",
+     "0",
+     "0",
+     "Tm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NGF_production",
+     ""
+    ],
+    [
+     "0.00222",
+     "0",
+     "0",
+     "Tp==>G+Tp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NGF_decay",
+     ""
+    ],
+    [
+     "22.18",
+     "0",
+     "0",
+     "G==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NGF_internalisation term 1/3",
+     ""
+    ],
+    [
+     "5.57e-5",
+     "0",
+     "0",
+     "G+Tp==>Tp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NGF_internalisation term 2/3",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "G+P1==>P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NGF_internalisation term 3/3",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "G+S1==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AGM_production",
+     ""
+    ],
+    [
+     "0.00542",
+     "0",
+     "0",
+     "Tp==>A+Tp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AGM_decay",
+     ""
+    ],
+    [
+     "2.4",
+     "0",
+     "0",
+     "A==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AGM_internalisation term 1/3",
+     ""
+    ],
+    [
+     "1e-5",
+     "0",
+     "0",
+     "A+Tp==>Tp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AGM_internalisation term 2/3",
+     ""
+    ],
+    [
+     "1.47e-5",
+     "0",
+     "0",
+     "A+P1==>P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AGM_internalisation term 3/3",
+     ""
+    ],
+    [
+     "1.47e-5",
+     "0",
+     "0",
+     "A+S1==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "sympathetic_neuron_growth term 1/2",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "S1==>2S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "sympathetic_neuron_growth term 2/2",
+     ""
+    ],
+    [
+     "0.23076923076923075",
+     "0",
+     "0",
+     "S1+S1==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "sympathetic_neuron_growth_NGF",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G+S1+S[USER;cG:(1/(50*cG+129))]==>2S1+G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "sympathetic_neuron_growth_AGM",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A+S1+S[USER;cA:(1/(0.01*cA+7.79))]==>2S1+A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "parasym_neuron_growth term 1/2",
+     ""
+    ],
+    [
+     "7",
+     "0",
+     "0",
+     "P1==>2P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "parasym_neuron_growth term 2/2",
+     ""
+    ],
+    [
+     "233.33333333333334",
+     "0",
+     "0",
+     "P1+P1==>P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "parasym_neuron_growth_NGF",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G+P1+S[USER;cG:(1/(0.1*cG+0.33))]==>2P1+G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "parasym_neuron_growth_AGM",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A+P1+S[USER;cA:(1/(0.01*cA+1))]==>2P1+A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "norepinephrine_source",
+     ""
+    ],
+    [
+     "0.41",
+     "0",
+     "0",
+     "source==>Nn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "norepinephrine_by_SNC",
+     ""
+    ],
+    [
+     "1.6",
+     "0",
+     "0",
+     "S1==>Nn+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "norepinephrine_decay",
+     ""
+    ],
+    [
+     "1.66",
+     "0",
+     "0",
+     "Nn==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "norepinephrine_uptake_tumor",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "Nn+Tp==>Tp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ACh_source",
+     ""
+    ],
+    [
+     "3990",
+     "0",
+     "0",
+     "source==>Na",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ACh_by_PNC",
+     ""
+    ],
+    [
+     "0.73",
+     "0",
+     "0",
+     "P1==>Na+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ACh_decay",
+     ""
+    ],
+    [
+     "49.91",
+     "0",
+     "0",
+     "Na==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ACh_uptake_tumor",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Na+Tp==>Tp",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Tp",
+     "0",
+     "100000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tp [Tp]",
+     ""
+    ],
+    [
+     "Tm",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tm [Tm]",
+     ""
+    ],
+    [
+     "G",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G [G]",
+     ""
+    ],
+    [
+     "A",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A [A]",
+     ""
+    ],
+    [
+     "S1",
+     "0",
+     "0.26",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S [S]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "0.03",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P [P]",
+     ""
+    ],
+    [
+     "Nn",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Nn [Nn]",
+     ""
+    ],
+    [
+     "Na",
+     "0",
+     "80",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Na [Na]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.15",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "15",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.15",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,344 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:16:32.829051+00:00",
+ "description": "Chulian2021 - feedback signalling in B lymphopoeisis\nBioModels BIOMD0000001056 (curated). SBML file: chulian2021.xml.\nSimulation: 0 to 10000 time units (SED-ML: chulian2021.sedml), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.27e-06 of species peak (worst: C2)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chulian2021 - feedback signalling in B lymphopoeisis  (BIOMD0000001056, curated BioModels; source file chulian2021.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_early_B_cells",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C1+S[USER;cC1,cC2,cC3:(0.0289/(1e-10*cC1+1e-10*cC2+1e-10*cC3+1))]==>2C1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "transition_from_early_B_cells_to_intermediate_B_cells",
+     ""
+    ],
+    [
+     "0.008",
+     "0",
+     "0",
+     "C1==>C2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_intermediate_B_cells",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C2+S[USER;cC1,cC2,cC3:(0.0193/(1e-10*cC1+1e-10*cC2+1e-10*cC3+1))]==>2C2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Transition_of_intermediate_B_cells_to_late_B_cells",
+     ""
+    ],
+    [
+     "0.006",
+     "0",
+     "0",
+     "C2==>C3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Blood_transition_of_late_B_cells",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "C3==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "C1",
+     "0",
+     "1000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C1 [C1]",
+     ""
+    ],
+    [
+     "C2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C2 [C2]",
+     ""
+    ],
+    [
+     "C3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3 [C3]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

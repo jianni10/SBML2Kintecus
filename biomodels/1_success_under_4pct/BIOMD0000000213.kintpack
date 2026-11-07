@@ -1,0 +1,608 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:55:30.615414+00:00",
+ "description": "Nijhout2004_Folate_Cycle\nBioModels BIOMD0000000213 (curated). SBML file: BIOMD0000000213_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000213_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.17e-06 of species peak (worst: _5_10_CHTHF)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] V_MS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_MTHFR: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_FTD: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_FTS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_AICART: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_PGT: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_TS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_DHFR: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_MTCH term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_MTCH term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_SHMT term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_SHMT term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_MTD term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_MTD term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): X5mTHF1 = _5mTHF; X510CH2THF1 = _5_10_CH2THF; X510CHTHF1 = _5_10_CHTHF; X10fTHF1 = _10fTHF",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Nijhout2004_Folate_Cycle  (BIOMD0000000213, curated BioModels; source file BIOMD0000000213_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_NE term 1/2",
+     ""
+    ],
+    [
+     "135",
+     "0",
+     "0",
+     "THF==>X510CH2THF1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_NE term 2/2",
+     ""
+    ],
+    [
+     "12",
+     "0",
+     "0",
+     "X510CH2THF1==>THF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_MS",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X5mTHF1+S[USER;cX5mTHF1:(200/(0.44*cX5mTHF1+10.04))]==>THF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_MTHFR",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X510CH2THF1+S[USER;cX510CH2THF1:(4545.454545454545/(1*cX510CH2THF1+50))]==>X5mTHF1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_FTD",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X10fTHF1+S[USER;cX10fTHF1:(14000/(1*cX10fTHF1+20))]==>THF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_FTS",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "THF+S[USER;cTHF:(1908.8016967126193/(1*cTHF+3))]==>X10fTHF1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_AICART",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X10fTHF1+S[USER;cX10fTHF1:(925.5631733594515/(1*cX10fTHF1+5.9))]==>THF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_PGT",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X10fTHF1+S[USER;cX10fTHF1:(305.66037735849056/(1*cX10fTHF1+4.9))]==>THF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_TS",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X510CH2THF1+S[USER;cX510CH2THF1:(38.02281368821293/(1*cX510CH2THF1+14))]==>DHF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_DHFR",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DHF+S[USER;cDHF:(46.2962962962963/(1*cDHF+0.5))]==>THF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_MTCH term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X510CHTHF1+S[USER;cX510CHTHF1:(800000/(1*cX510CHTHF1+250))]==>X10fTHF1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_MTCH term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X10fTHF1+S[USER;cX10fTHF1:(20000/(1*cX10fTHF1+100))]==>X510CHTHF1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_SHMT term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "THF+S[USER;cTHF:(17528.08988764045/(1*cTHF+50))]==>X510CH2THF1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_SHMT term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X510CH2THF1+S[USER;cX510CH2THF1:(18877.551020408162/(1*cX510CH2THF1+50))]==>THF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_MTD term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X510CH2THF1+S[USER;cX510CH2THF1:(200000/(1*cX510CH2THF1+2))]==>X510CHTHF1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "V_MTD term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X510CHTHF1+S[USER;cX510CHTHF1:(594000/(1*cX510CHTHF1+10))]==>X510CH2THF1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "X5mTHF1",
+     "0",
+     "5.16",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "_5mTHF [_5mTHF]",
+     ""
+    ],
+    [
+     "THF",
+     "0",
+     "6.73",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "THF [THF]",
+     ""
+    ],
+    [
+     "DHF",
+     "0",
+     "0.027",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DHF [DHF]",
+     ""
+    ],
+    [
+     "X510CH2THF1",
+     "0",
+     "0.94",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "_5_10_CH2THF [_5_10_CH2THF]",
+     ""
+    ],
+    [
+     "X510CHTHF1",
+     "0",
+     "1.153",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "_5_10_CHTHF [_5_10_CHTHF]",
+     ""
+    ],
+    [
+     "X10fTHF1",
+     "0",
+     "5.99",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "_10fTHF [_10fTHF]",
+     ""
+    ],
+    [
+     "Ser",
+     "0",
+     "468",
+     "Y",
+     "0",
+     "No",
+     "468",
+     "Ser [Ser]",
+     ""
+    ],
+    [
+     "Gly",
+     "0",
+     "1850",
+     "Y",
+     "0",
+     "No",
+     "1850",
+     "Gly [Gly]",
+     ""
+    ],
+    [
+     "dUMP",
+     "0",
+     "20",
+     "Y",
+     "0",
+     "No",
+     "20",
+     "dUMP [dUMP]",
+     ""
+    ],
+    [
+     "GAR",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "GAR [GAR]",
+     ""
+    ],
+    [
+     "AICAR",
+     "0",
+     "2.1",
+     "Y",
+     "0",
+     "No",
+     "2.1",
+     "AICAR [AICAR]",
+     ""
+    ],
+    [
+     "HCOOH",
+     "0",
+     "900",
+     "Y",
+     "0",
+     "No",
+     "900",
+     "HCOOH [HCOOH]",
+     ""
+    ],
+    [
+     "NADPH",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "50",
+     "NADPH [NADPH]",
+     ""
+    ],
+    [
+     "Hcy",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "Hcy [Hcy]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

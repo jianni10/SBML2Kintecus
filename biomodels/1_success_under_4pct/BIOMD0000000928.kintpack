@@ -1,0 +1,464 @@
+{
+ "version": 3,
+ "created": "2026-11-01T23:02:42.144897+00:00",
+ "description": "Baker2017 - The role of cytokines, MMPs and fibronectin fragments osteoarthritis\nBioModels BIOMD0000000928 (curated). SBML file: Baker2017_Fig14.xml.\nSimulation: 0 to 39 time units (SED-ML: Baker2017_Fig14.a_1.sedml), sampling 0.1012987012987013.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS_PARTIAL, max |difference| = 1.63e-05 of species peak (worst: solution2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'event' not converted (state-triggered (not a time >= t0 trigger))\n  [info] R_5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R_7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R_8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R_10: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] R_11: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] R_12: rate order differs from the stoichiometry; consumed on separate line(s) - ",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Baker2017 - The role of cytokines, MMPs and fibronectin fragments osteoarthritis  (BIOMD0000000928, curated BioModels; source file Baker2017_Fig14.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "solution2==>solution2+solution3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "solution3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_4",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "source==>solution2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "solution0+S[USER;csolution0:(10*csolution0/(1*(csolution0+1e-30)^2+1))]==>solution0+solution2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "solution2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "solution0+S[USER;csolution0:(10*csolution0/(1*(csolution0+1e-30)^2+1))]==>solution0+solution1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "solution3+S[USER;csolution3:(10*csolution3/(1*(csolution3+1e-30)^2+1))]==>solution1+solution3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "solution1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;csolution1:(0.01/(csolution1^2+1))]==>solution0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_11",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;csolution0,csolution1:(10*csolution0^2/(csolution0^2*csolution1^2+1*csolution0^2+1*csolution1^2+1))]==>solution0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_12",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;csolution1,csolution3:(10*csolution3^2/(csolution1^2*csolution3^2+1*csolution1^2+1*csolution3^2+1))]==>solution0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "solution0==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "solution0",
+     "0",
+     "0.18",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p-Cytokines [solution0]",
+     ""
+    ],
+    [
+     "solution1",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "a-Cytokines [solution1]",
+     ""
+    ],
+    [
+     "solution2",
+     "0",
+     "0.55",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MMP [solution2]",
+     ""
+    ],
+    [
+     "solution3",
+     "0",
+     "0.75",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fragments [solution3]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1012987013",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "39",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1012987013",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,617 @@
+{
+ "version": 3,
+ "created": "2026-11-05T15:49:22.926124+00:00",
+ "description": "Fujita2010_Akt_Signalling_NGF\nBioModels BIOMD0000000263 (curated). SBML file: BIOMD0000000263_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000263_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.65e-06 of species peak (worst: Akt)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'NGF' is defined by an assignment rule; not a Kintecus state (not output)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fujita2010_Akt_Signalling_NGF  (BIOMD0000000263, curated BioModels; source file BIOMD0000000263_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 1/2",
+     ""
+    ],
+    [
+     "0.0133747",
+     "0",
+     "0",
+     "NGF_TrkA==>TrkA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TrkA+S[USER;cTIME_:(2.245066666666667e-5*cTIME_)]==>NGF_TrkA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 1/2",
+     ""
+    ],
+    [
+     "1.47518e-10",
+     "0",
+     "0",
+     "pTrkA_Akt==>Akt+pTrkA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 2/2",
+     ""
+    ],
+    [
+     "0.0882701",
+     "0",
+     "0",
+     "Akt+pTrkA==>pTrkA_Akt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3",
+     ""
+    ],
+    [
+     "0.0202517",
+     "0",
+     "0",
+     "pTrkA_Akt==>pAkt+pTrkA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "0.0684084",
+     "0",
+     "0",
+     "pTrkA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 1/2",
+     ""
+    ],
+    [
+     "5.23519",
+     "0",
+     "0",
+     "pAkt_S6==>S6+pAkt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 2/2",
+     ""
+    ],
+    [
+     "68.3666",
+     "0",
+     "0",
+     "S6+pAkt==>pAkt_S6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6",
+     ""
+    ],
+    [
+     "0.0056515",
+     "0",
+     "0",
+     "pAkt_S6==>pAkt+pS6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7",
+     ""
+    ],
+    [
+     "1.28135",
+     "0",
+     "0",
+     "pAkt==>Akt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8",
+     ""
+    ],
+    [
+     "0.000293167",
+     "0",
+     "0",
+     "pS6==>S6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9",
+     ""
+    ],
+    [
+     "0.009400357643153747",
+     "0",
+     "0",
+     "source==>TrkA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10",
+     ""
+    ],
+    [
+     "0.00833178",
+     "0",
+     "0",
+     "NGF_TrkA==>pTrkA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_11",
+     ""
+    ],
+    [
+     "0.0011032440769796",
+     "0",
+     "0",
+     "TrkA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "TrkA",
+     "0",
+     "8.52065090518276",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TrkA [TrkA]",
+     ""
+    ],
+    [
+     "pTrkA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pTrkA [pTrkA]",
+     ""
+    ],
+    [
+     "pTrkA_Akt",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pTrkA_Akt [pTrkA_Akt]",
+     ""
+    ],
+    [
+     "Akt",
+     "0",
+     "1.15594897919397",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Akt [Akt]",
+     ""
+    ],
+    [
+     "pAkt",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pAkt [pAkt]",
+     ""
+    ],
+    [
+     "S6",
+     "0",
+     "3.552336039555",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S6 [S6]",
+     ""
+    ],
+    [
+     "pAkt_S6",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pAkt_S6 [pAkt_S6]",
+     ""
+    ],
+    [
+     "pS6",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pS6 [pS6]",
+     ""
+    ],
+    [
+     "pro_TrkA",
+     "0",
+     "8.52065090518276",
+     "Y",
+     "0",
+     "No",
+     "8.52065090518276",
+     "pro_TrkA [pro_TrkA]",
+     ""
+    ],
+    [
+     "NGF_TrkA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NGF_TrkA [NGF_TrkA]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 60 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10.00000001",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10.00000001",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "60",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

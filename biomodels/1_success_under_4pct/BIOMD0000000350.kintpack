@@ -1,0 +1,935 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:47:37.114050+00:00",
+ "description": "Troein2011_ClockCircuit_OstreococcusTauri\nBioModels BIOMD0000000350 (curated). SBML file: BIOMD0000000350_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000350_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.58e-06 of species peak (worst: cca1_c)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_6 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - toc1_2: zero order, signed\n  [info] reaction_21 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - toc1luc_2: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Troein2011_ClockCircuit_OstreococcusTauri  (BIOMD0000000350, curated BioModels; source file BIOMD0000000350_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.0820132250303287*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>acc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2",
+     ""
+    ],
+    [
+     "0.0820132250303287",
+     "0",
+     "0",
+     "acc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cacc,ccca1_n:(0.0001/(0.231107032949407*cacc+1.1894293861303886*ccca1_n^2.07807738692343+1.0001))]==>toc1_mrna",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "acc+S[USER;cacc,ccca1_n:(0.231107032949407/(0.231107032949407*cacc+1.1894293861303886*ccca1_n^2.07807738692343+1.0001))]==>toc1_mrna+acc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4 term 1/2",
+     ""
+    ],
+    [
+     "0.356613920551118",
+     "0",
+     "0",
+     "toc1_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "toc1_2+S[USER;cTIME_:(0.104936638629684*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "0.769970172977886",
+     "0",
+     "0",
+     "toc1_mrna==>toc1_1+toc1_mrna",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 1/2",
+     ""
+    ],
+    [
+     "0.326619492089715",
+     "0",
+     "0",
+     "toc1_1==>toc1_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_,ctoc1_1:(0.19012890872106702*ctoc1_1*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>toc1_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 2/2 (consumes toc1_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_,ctoc1_1:((-1*0.19012890872106702*ctoc1_1*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_)))))]==>toc1_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7",
+     ""
+    ],
+    [
+     "0.29213049778373",
+     "0",
+     "0",
+     "toc1_mrna==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_,ctoc1_2:(1*(1.88956390421566*ctoc1_2*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_)))+1.38563901682266*ctoc1_2)^2.5007062880634/(1*(1.88956390421566*ctoc1_2*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_)))+1.38563901682266*ctoc1_2)^2.5007062880634+1))]==>cca1_mrna",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9",
+     ""
+    ],
+    [
+     "1.33082080954527",
+     "0",
+     "0",
+     "cca1_mrna==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10",
+     ""
+    ],
+    [
+     "4.90486610428652",
+     "0",
+     "0",
+     "cca1_mrna==>cca1_c+cca1_mrna",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_11",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "cca1_c==>cca1_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_12 term 1/2",
+     ""
+    ],
+    [
+     "0.269380178154091",
+     "0",
+     "0",
+     "cca1_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_12 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cca1_c+S[USER;cTIME_:(0.15479769929534704*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_13 term 1/2",
+     ""
+    ],
+    [
+     "0.269380178154091",
+     "0",
+     "0",
+     "cca1_n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_13 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cca1_n+S[USER;cTIME_:(0.15479769929534704*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_15",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "luc_mrna==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "luc_mrna==>luc+luc_mrna",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17",
+     ""
+    ],
+    [
+     "0.182881217463259",
+     "0",
+     "0",
+     "luc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_19",
+     ""
+    ],
+    [
+     "0.29213049778373",
+     "0",
+     "0",
+     "toc1luc_mrna==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_20",
+     ""
+    ],
+    [
+     "0.769970172977886",
+     "0",
+     "0",
+     "toc1luc_mrna==>toc1luc_1+toc1luc_mrna",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_21 term 1/2",
+     ""
+    ],
+    [
+     "0.326619492089715",
+     "0",
+     "0",
+     "toc1luc_1==>toc1luc_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_21 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_,ctoc1luc_1:(0.19012890872106702*ctoc1luc_1*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>toc1luc_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_21 term 2/2 (consumes toc1luc_2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_,ctoc1luc_1:((-1*0.19012890872106702*ctoc1luc_1*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_)))))]==>toc1luc_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_22 term 1/2",
+     ""
+    ],
+    [
+     "0.356613920551118",
+     "0",
+     "0",
+     "toc1luc_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_22 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "toc1luc_2+S[USER;cTIME_:(0.104936638629684*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_23",
+     ""
+    ],
+    [
+     "0.182881217463259",
+     "0",
+     "0",
+     "toc1luc_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_24",
+     ""
+    ],
+    [
+     "0.182881217463259",
+     "0",
+     "0",
+     "toc1luc_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_27",
+     ""
+    ],
+    [
+     "1.33082080954527",
+     "0",
+     "0",
+     "cca1luc_mrna==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_28",
+     ""
+    ],
+    [
+     "4.90486610428652",
+     "0",
+     "0",
+     "cca1luc_mrna==>cca1luc+cca1luc_mrna",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_30 term 1/2",
+     ""
+    ],
+    [
+     "0.269380178154091",
+     "0",
+     "0",
+     "cca1luc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_30 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cca1luc+S[USER;cTIME_:(0.15479769929534704*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_32",
+     ""
+    ],
+    [
+     "0.182881217463259",
+     "0",
+     "0",
+     "cca1luc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "acc",
+     "0",
+     "0.272067372878265",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "acc [acc]",
+     ""
+    ],
+    [
+     "toc1_mrna",
+     "0",
+     "0.0385665277682963",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "toc1_mrna [toc1_mrna]",
+     ""
+    ],
+    [
+     "toc1_1",
+     "0",
+     "0.206521274112594",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "toc1_1 [toc1_1]",
+     ""
+    ],
+    [
+     "toc1_2",
+     "0",
+     "0.312711901675853",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "toc1_2 [toc1_2]",
+     ""
+    ],
+    [
+     "cca1_mrna",
+     "0",
+     "0.104555645465821",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cca1_mrna [cca1_mrna]",
+     ""
+    ],
+    [
+     "cca1_c",
+     "0",
+     "0.051315426489096",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cca1_c [cca1_c]",
+     ""
+    ],
+    [
+     "cca1_n",
+     "0",
+     "3.07283764226433",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cca1_n [cca1_n]",
+     ""
+    ],
+    [
+     "toc1luc_mrna",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "toc1luc_mrna [toc1luc_mrna]",
+     ""
+    ],
+    [
+     "toc1luc_1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "toc1luc_1 [toc1luc_1]",
+     ""
+    ],
+    [
+     "toc1luc_2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "toc1luc_2 [toc1luc_2]",
+     ""
+    ],
+    [
+     "cca1luc_mrna",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cca1luc_mrna [cca1luc_mrna]",
+     ""
+    ],
+    [
+     "cca1luc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cca1luc [cca1luc]",
+     ""
+    ],
+    [
+     "luc_mrna",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "luc_mrna [luc_mrna]",
+     ""
+    ],
+    [
+     "luc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "luc [luc]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

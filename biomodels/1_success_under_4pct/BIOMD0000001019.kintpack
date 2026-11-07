@@ -1,0 +1,445 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:35:37.774205+00:00",
+ "description": "Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in HDLM-2 cell line\nBioModels BIOMD0000001019 (curated). SBML file: Barros2021_HDLM2.xml.\nSimulation: 0 to 500 time units (SED-ML: Barros2021_HDLM2.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.81e-06 of species peak (worst: Ct)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time event(s) on 'Ct' encoded as time/value pairs in EV_CT.TXT (SET)\n  [info] time event(s) on 'T' encoded as time/value pairs in EV_T1.TXT (SET)\nRenamed species (Kintecus name = SBML id): T1 = T",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in HDLM-2 cell line  (BIOMD0000001019, curated BioModels; source file Barros2021_HDLM2.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3_Cm_activation_into_Ct",
+     ""
+    ],
+    [
+     "6e-6",
+     "0",
+     "0",
+     "Cm+T1==>Ct+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6_Ct_expansion",
+     ""
+    ],
+    [
+     "0.265",
+     "0",
+     "0",
+     "Ct==>2Ct",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4_Ct_natural_death",
+     ""
+    ],
+    [
+     "0.35",
+     "0",
+     "0",
+     "Ct==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5_Ct_inhibiton_by_Tumor",
+     ""
+    ],
+    [
+     "4.5e-8",
+     "0",
+     "0",
+     "Ct+T1==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1_Cm_formation",
+     ""
+    ],
+    [
+     "0.15",
+     "0",
+     "0",
+     "Ct==>Cm+Ct",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2_Cm_death",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "Cm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7_Tumor_proliferation term 1/2",
+     ""
+    ],
+    [
+     "0.05650026",
+     "0",
+     "0",
+     "T1==>2T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7_Tumor_proliferation term 2/2",
+     ""
+    ],
+    [
+     "7.932800354754e-14",
+     "0",
+     "0",
+     "T1+T1==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8_Tumor_death_by_Ct",
+     ""
+    ],
+    [
+     "3.715843e-6",
+     "0",
+     "0",
+     "T1+Ct==>Ct",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Cm",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cm [Cm]",
+     ""
+    ],
+    [
+     "Ct",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "EV_CT.TXT-SET",
+     "Ct [Ct]",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "2000000",
+     "Y",
+     "0",
+     "No",
+     "EV_T1.TXT-SET",
+     "T [T]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.5000000005",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "500",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.5000000005",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_CT.TXT",
+   "key": "O_EV_CT.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "45",
+     "2000000"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_T1.TXT",
+   "key": "O_EV_T1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "250",
+     "1000000"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

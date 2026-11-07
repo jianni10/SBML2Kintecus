@@ -1,0 +1,946 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:51:30.973721+00:00",
+ "description": "Brown2004 - NGF and EGF signaling\nBioModels BIOMD0000000033 (curated). SBML file: BIOMD0000000033_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000033_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.17e-06 of species peak (worst: RasInactive)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] SosActivationByEGFReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SosActivationByNGFReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SosDeactivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] RasActivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] RasDeactivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Raf1ByRasActivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MekbyRaf1ActivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MekbyBRafActivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ErkActivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MekDeactivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ErkDeactivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Raf1byPPtaseDeactivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] P90RskActivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PI3KbyEGFRActivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PI3KbyRasActivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] AktActivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Raf1ByAktDeactivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] C3GActivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Rap1ActivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Rap1DeactivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] BRafByRap1ActivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] BRafbyPPtaseDeactivationReaction: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Brown2004 - NGF and EGF signaling  (BIOMD0000000033, curated BioModels; source file BIOMD0000000033_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "EGFBindingReaction",
+     ""
+    ],
+    [
+     "2.18503e-5",
+     "0",
+     "0",
+     "EGF+freeEGFReceptor==>boundEGFReceptor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "EGFUnbindingReaction",
+     ""
+    ],
+    [
+     "0.0121008",
+     "0",
+     "0",
+     "boundEGFReceptor==>EGF+freeEGFReceptor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NGFBindingReaction",
+     ""
+    ],
+    [
+     "1.38209e-7",
+     "0",
+     "0",
+     "freeNGFReceptor+NGF==>boundNGFReceptor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NGFUnbindingReaction",
+     ""
+    ],
+    [
+     "0.00723811",
+     "0",
+     "0",
+     "boundNGFReceptor==>NGF+freeNGFReceptor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SosActivationByEGFReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "SosInactive+boundEGFReceptor+S[USER;cSosInactive:(694.731/(1*cSosInactive+6086070))]==>SosActive+boundEGFReceptor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SosActivationByNGFReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "SosInactive+boundNGFReceptor+S[USER;cSosInactive:(389.428/(1*cSosInactive+2112.66))]==>SosActive+boundNGFReceptor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SosDeactivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "SosActive+P90RskActive+S[USER;cSosActive:(1611.97/(1*cSosActive+896896))]==>SosInactive+P90RskActive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RasActivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "RasInactive+SosActive+S[USER;cRasInactive:(32.344/(1*cRasInactive+35954.3))]==>RasActive+SosActive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RasDeactivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "RasActive+S[USER;cRasActive:(181123200/(1*cRasActive+1432410))]==>RasInactive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf1ByRasActivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Raf1Inactive+RasActive+S[USER;cRaf1Inactive:(0.884096/(1*cRaf1Inactive+62464.6))]==>Raf1Active+RasActive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MekbyRaf1ActivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MekInactive+Raf1Active+S[USER;cMekInactive:(185.759/(1*cMekInactive+4768350))]==>MekActive+Raf1Active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MekbyBRafActivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MekInactive+BRafActive+S[USER;cMekInactive:(125.089/(1*cMekInactive+157948))]==>MekActive+BRafActive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ErkActivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ErkInactive+MekActive+S[USER;cErkInactive:(9.85367/(1*cErkInactive+1007340))]==>ErkActive+MekActive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MekDeactivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MekActive+S[USER;cMekActive:(339891.6/(1*cMekActive+518753))]==>MekInactive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ErkDeactivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ErkActive+S[USER;cErkActive:(1066944/(1*cErkActive+3496490))]==>ErkInactive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf1byPPtaseDeactivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Raf1Active+S[USER;cRaf1Active:(15159.48/(1*cRaf1Active+1061.71))]==>Raf1Inactive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P90RskActivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P90RskInactive+ErkActive+S[USER;cP90RskInactive:(0.0213697/(1*cP90RskInactive+763523))]==>P90RskActive+ErkActive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PI3KbyEGFRActivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PI3KInactive+boundEGFReceptor+S[USER;cPI3KInactive:(10.6737/(1*cPI3KInactive+184912))]==>PI3KActive+boundEGFReceptor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PI3KbyRasActivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PI3KInactive+RasActive+S[USER;cPI3KInactive:(0.0771067/(1*cPI3KInactive+272056))]==>PI3KActive+RasActive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AktActivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AktInactive+PI3KActive+S[USER;cAktInactive:(0.0566279/(1*cAktInactive+653951))]==>AktActive+PI3KActive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf1ByAktDeactivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Raf1Active+AktActive+S[USER;cRaf1Active:(15.1212/(1*cRaf1Active+119355))]==>Raf1Inactive+AktActive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3GActivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C3GInactive+boundNGFReceptor+S[USER;cC3GInactive:(146.912/(1*cC3GInactive+12876.2))]==>C3GActive+boundNGFReceptor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rap1ActivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Rap1Inactive+C3GActive+S[USER;cRap1Inactive:(1.40145/(1*cRap1Inactive+10965.6))]==>Rap1Active+C3GActive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rap1DeactivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Rap1Active+S[USER;cRap1Active:(3271800/(1*cRap1Active+295990))]==>Rap1Inactive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "BRafByRap1ActivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "BRafInactive+Rap1Active+S[USER;cBRafInactive:(2.20995/(1*cBRafInactive+1025460))]==>BRafActive+Rap1Active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "BRafbyPPtaseDeactivationReaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "BRafActive+S[USER;cBRafActive:(52954440/(1*cBRafActive+10879500))]==>BRafInactive",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "EGF",
+     "0",
+     "10002000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "EGF [EGF]",
+     ""
+    ],
+    [
+     "NGF",
+     "0",
+     "456000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NGF [NGF]",
+     ""
+    ],
+    [
+     "freeEGFReceptor",
+     "0",
+     "80000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "freeEGFReceptor [freeEGFReceptor]",
+     ""
+    ],
+    [
+     "boundEGFReceptor",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "boundEGFReceptor [boundEGFReceptor]",
+     ""
+    ],
+    [
+     "freeNGFReceptor",
+     "0",
+     "10000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "freeNGFReceptor [freeNGFReceptor]",
+     ""
+    ],
+    [
+     "boundNGFReceptor",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "boundNGFReceptor [boundNGFReceptor]",
+     ""
+    ],
+    [
+     "SosInactive",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SosInactive [SosInactive]",
+     ""
+    ],
+    [
+     "SosActive",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SosActive [SosActive]",
+     ""
+    ],
+    [
+     "P90RskInactive",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P90RskInactive [P90RskInactive]",
+     ""
+    ],
+    [
+     "P90RskActive",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P90RskActive [P90RskActive]",
+     ""
+    ],
+    [
+     "RasInactive",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RasInactive [RasInactive]",
+     ""
+    ],
+    [
+     "RasActive",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RasActive [RasActive]",
+     ""
+    ],
+    [
+     "RasGapActive",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "120000",
+     "RasGapActive [RasGapActive]",
+     ""
+    ],
+    [
+     "Raf1Inactive",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Raf1Inactive [Raf1Inactive]",
+     ""
+    ],
+    [
+     "Raf1Active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Raf1Active [Raf1Active]",
+     ""
+    ],
+    [
+     "BRafInactive",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "BRafInactive [BRafInactive]",
+     ""
+    ],
+    [
+     "BRafActive",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "BRafActive [BRafActive]",
+     ""
+    ],
+    [
+     "MekInactive",
+     "0",
+     "600000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MekInactive [MekInactive]",
+     ""
+    ],
+    [
+     "MekActive",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MekActive [MekActive]",
+     ""
+    ],
+    [
+     "ErkInactive",
+     "0",
+     "600000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ErkInactive [ErkInactive]",
+     ""
+    ],
+    [
+     "ErkActive",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ErkActive [ErkActive]",
+     ""
+    ],
+    [
+     "PI3KInactive",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI3KInactive [PI3KInactive]",
+     ""
+    ],
+    [
+     "PI3KActive",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI3KActive [PI3KActive]",
+     ""
+    ],
+    [
+     "AktInactive",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AktInactive [AktInactive]",
+     ""
+    ],
+    [
+     "AktActive",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AktActive [AktActive]",
+     ""
+    ],
+    [
+     "C3GInactive",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3GInactive [C3GInactive]",
+     ""
+    ],
+    [
+     "C3GActive",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3GActive [C3GActive]",
+     ""
+    ],
+    [
+     "Rap1Inactive",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rap1Inactive [Rap1Inactive]",
+     ""
+    ],
+    [
+     "Rap1Active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rap1Active [Rap1Active]",
+     ""
+    ],
+    [
+     "RapGapActive",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "120000",
+     "RapGapActive [RapGapActive]",
+     ""
+    ],
+    [
+     "PP2AActive",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "120000",
+     "PP2AActive [PP2AActive]",
+     ""
+    ],
+    [
+     "Raf1PPtase",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "120000",
+     "Raf1PPtase [Raf1PPtase]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,534 @@
+{
+ "version": 3,
+ "created": "2026-11-05T15:37:17.453730+00:00",
+ "description": "Vilar2006_TGFbeta\nBioModels BIOMD0000000101 (curated). SBML file: BIOMD0000000101_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000101_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.93e-06 of species peak (worst: RII)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time event(s) on 'ligand' encoded as time/value pairs in EV_P_LIGAND.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_ligand = ligand",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vilar2006_TGFbeta  (BIOMD0000000101, curated BioModels; source file BIOMD0000000101_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "RI+RII+S[USER;cp_ligand:(1*cp_ligand)]==>lRIRII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2",
+     ""
+    ],
+    [
+     "0.0277777778",
+     "0",
+     "0",
+     "lRIRII==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3",
+     ""
+    ],
+    [
+     "0.25",
+     "0",
+     "0",
+     "lRIRII==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4",
+     ""
+    ],
+    [
+     "0.3333333333333",
+     "0",
+     "0",
+     "lRIRII==>lRIRII_endo",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5",
+     ""
+    ],
+    [
+     "8",
+     "0",
+     "0",
+     "source==>RI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6",
+     ""
+    ],
+    [
+     "0.0277777778",
+     "0",
+     "0",
+     "RI==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7",
+     ""
+    ],
+    [
+     "0.3333333333333",
+     "0",
+     "0",
+     "RI==>RI_endo",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8",
+     ""
+    ],
+    [
+     "0.0333333333333333",
+     "0",
+     "0",
+     "RI_endo==>RI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9",
+     ""
+    ],
+    [
+     "0.0333333333333333",
+     "0",
+     "0",
+     "lRIRII_endo==>RI+RII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "source==>RII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11",
+     ""
+    ],
+    [
+     "0.0277777778",
+     "0",
+     "0",
+     "RII==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12",
+     ""
+    ],
+    [
+     "0.3333333333333",
+     "0",
+     "0",
+     "RII==>RII_endo",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v13",
+     ""
+    ],
+    [
+     "0.0333333333333333",
+     "0",
+     "0",
+     "RII_endo==>RII",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "RI",
+     "0",
+     "20",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Receptor 1 [RI]",
+     ""
+    ],
+    [
+     "RII",
+     "0",
+     "20",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Receptor 2 [RII]",
+     ""
+    ],
+    [
+     "lRIRII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ligand receptor complex-plasma membrane [lRIRII]",
+     ""
+    ],
+    [
+     "lRIRII_endo",
+     "0",
+     "40",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ligand receptor complex-endosome [lRIRII_endo]",
+     ""
+    ],
+    [
+     "RI_endo",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Receptor 1-endosome [RI_endo]",
+     ""
+    ],
+    [
+     "RII_endo",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Receptor 2 endosome [RII_endo]",
+     ""
+    ],
+    [
+     "p_ligand",
+     "0",
+     "3e-5",
+     "N",
+     "0",
+     "No",
+     "EV_P_LIGAND.TXT-SET",
+     "parameter ligand [ligand]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10.00000001",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10.00000001",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_LIGAND.TXT",
+   "key": "O_EV_P_LIGAND.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2500",
+     "0.01"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

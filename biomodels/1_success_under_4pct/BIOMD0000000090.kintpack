@@ -1,0 +1,900 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:38:47.715938+00:00",
+ "description": "Wolf2001_Respiratory_Oscillations\nBioModels BIOMD0000000090 (curated). SBML file: BIOMD0000000090_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000090_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.94e-06 of species peak (worst: aco)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'A2c' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'N1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'S2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'A2m' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] v4: rate order differs from the stoichiometry; consumed on separate line(s) - N2: first order\n  [info] v7 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - aco: zero order, signed; N2: first order\n  [info] v9 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - N2: first order\n  [info] v11a: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v11a2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v11b term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wolf2001_Respiratory_Oscillations  (BIOMD0000000090, curated BioModels; source file BIOMD0000000090_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ccys:(1.6/(9999.999999999998*ccys^4+1))]==>sul",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v13",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "source==>eth",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "sul+A3c==>aps",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10",
+     ""
+    ],
+    [
+     "80",
+     "0",
+     "0",
+     "source==>oxy",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v14",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "oxy==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "aps+A3c==>pap",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pap+S[USER;cN2:(0.2*cN2)]==>hyd",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4 (consumes N2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N2+S[USER;cpap:(0.6000000000000001*cpap)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "oah+hyd==>cys",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6",
+     ""
+    ],
+    [
+     "0.12",
+     "0",
+     "0",
+     "cys==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7 term 1/2",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "eth==>aco+2N2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN2,ceth:(10*cN2*ceth)]==>eth",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7 term 2/2 (consumes aco)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN2,ceth:((-1*10*cN2*ceth))]==>aco",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7 term 2/2 (consumes N2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N2+S[USER;ceth:(20*ceth)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v15",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "aco==>oah",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v17",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "hyd==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v18",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "oah==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8 term 1/2",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "aco==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8 term 2/2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "S1+aco==>2aco",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9 term 1/2",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "S1==>4N2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN2,cS1:(10*cN2*cS1)]==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9 term 2/2 (consumes N2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N2+S[USER;cS1:(40*cS1)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11a",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N2+oxy+S[USER;cN2,chyd,coxy:(10/(0.1*cN2+16*chyd^4*coxy+1.6*chyd^4*(cN2+1e-30)+1*coxy+1e-31))]==>oxy",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11a2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "oxy+N2+S[USER;cN2,chyd,coxy:(10/(1.6*cN2*chyd^4+0.1*cN2+16*chyd^4*(coxy+1e-30)+1*coxy+1e-30))]==>N2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v16 term 1/2",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "A3m==>A3c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v16 term 2/2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "A3c+A3m==>2A3m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11b term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N2+oxy+S[USER;cA3m,cN2,chyd,coxy:(60/(-1.6*cA3m*cN2*chyd^4-0.1*cA3m*cN2-16*cA3m*chyd^4*coxy-cA3m*coxy+4.800000000000001*cN2*chyd^4+0.30000000000000004*cN2+48*chyd^4*coxy+3*coxy))]==>A3m+N2+oxy",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11b term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A3m+N2+oxy+S[USER;cA3m,cN2,chyd,coxy:((-1*30/(1.6*cN2*chyd^4*(cA3m+1e-30)-4.800000000000001*cN2*chyd^4+0.1*cN2*(cA3m+1e-30)-0.30000000000000004*cN2+16*chyd^4*coxy*(cA3m+1e-30)-48*chyd^4*coxy+1*coxy*(cA3m+1e-30)-3*coxy)))]==>N2+oxy",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "A3c==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "sul_ex",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "SO4_ex [sul_ex]",
+     ""
+    ],
+    [
+     "eth_ex",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "EtOH_ex [eth_ex]",
+     ""
+    ],
+    [
+     "oxy_ex",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "O2_ex [oxy_ex]",
+     ""
+    ],
+    [
+     "oxy",
+     "0",
+     "7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "O2 [oxy]",
+     ""
+    ],
+    [
+     "H2O",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "H2O [H2O]",
+     ""
+    ],
+    [
+     "A3c",
+     "0",
+     "1.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP [A3c]",
+     ""
+    ],
+    [
+     "aps",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APS [aps]",
+     ""
+    ],
+    [
+     "PPi",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "PPi [PPi]",
+     ""
+    ],
+    [
+     "pap",
+     "0",
+     "0.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PAPS [pap]",
+     ""
+    ],
+    [
+     "sul",
+     "0",
+     "0.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SO4 [sul]",
+     ""
+    ],
+    [
+     "eth",
+     "0",
+     "4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "EtOH [eth]",
+     ""
+    ],
+    [
+     "hyd",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "H2S [hyd]",
+     ""
+    ],
+    [
+     "cys",
+     "0",
+     "0.3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CYS [cys]",
+     ""
+    ],
+    [
+     "N2",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADH [N2]",
+     ""
+    ],
+    [
+     "aco",
+     "0",
+     "0.3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AcCoA [aco]",
+     ""
+    ],
+    [
+     "oah",
+     "0",
+     "1.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "OAH [oah]",
+     ""
+    ],
+    [
+     "S1",
+     "0",
+     "1.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S1 [S1]",
+     ""
+    ],
+    [
+     "C1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "C1 [C1]",
+     ""
+    ],
+    [
+     "C2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "C2 [C2]",
+     ""
+    ],
+    [
+     "A3m",
+     "0",
+     "1.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP_mit [A3m]",
+     ""
+    ],
+    [
+     "Ho",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Ho [Ho]",
+     ""
+    ],
+    [
+     "Hm",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Hm [Hm]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

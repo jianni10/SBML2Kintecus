@@ -1,0 +1,411 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:13:51.089038+00:00",
+ "description": "Goldbeter2013-Oscillatory activity of cyclin-dependent kinases in the cell cycle\nBioModels BIOMD0000000944 (curated). SBML file: Goldbeter2013.xml.\nSimulation: 0 to 100 time units (SED-ML: Goldbeter2013.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 7.85e-07 of species peak (worst: Cyclin)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_for_C_decay term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_M_production term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_M_decay: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_X_production term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_X_decay: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Goldbeter2013-Oscillatory activity of cyclin-dependent kinases in the cell cycle  (BIOMD0000000944, curated BioModels; source file Goldbeter2013.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_C_production",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "source==>Cyclin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_C_decay term 1/2",
+     ""
+    ],
+    [
+     "0.046",
+     "0",
+     "0",
+     "Cyclin==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_C_decay term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cyclin+Active_APC+S[USER;cCyclin:(0.25/(1*cCyclin+0.001))]==>Active_APC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_M_production term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cyclin+S[USER;cActive_Cdc2_kinase,cCyclin:(4/(-cActive_Cdc2_kinase*cCyclin-0.5*cActive_Cdc2_kinase+1.002*cCyclin+0.501))]==>Active_Cdc2_kinase+Cyclin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_M_production term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Active_Cdc2_kinase+Cyclin+S[USER;cActive_Cdc2_kinase,cCyclin:((-1*4/(0.5*cActive_Cdc2_kinase+1*cCyclin*(cActive_Cdc2_kinase+1e-30)-1.002*cCyclin-0.501)))]==>Cyclin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_M_decay",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Active_Cdc2_kinase+S[USER;cActive_Cdc2_kinase:(2/(1*cActive_Cdc2_kinase+0.002))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_X_production term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Active_Cdc2_kinase+S[USER;cActive_APC:(1/(1.01-cActive_APC))]==>Active_APC+Active_Cdc2_kinase",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_X_production term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Active_APC+Active_Cdc2_kinase+S[USER;cActive_APC:((-1*1/(1*cActive_APC-1.01)))]==>Active_Cdc2_kinase",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_X_decay",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Active_APC+S[USER;cActive_APC:(0.7/(1*cActive_APC+0.01))]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Cyclin",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cyclin [Cyclin]",
+     ""
+    ],
+    [
+     "Active_Cdc2_kinase",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Active Cdc2 kinase [Active_Cdc2_kinase]",
+     ""
+    ],
+    [
+     "Active_APC",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Active APC [Active_APC]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

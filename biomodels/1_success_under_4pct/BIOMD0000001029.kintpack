@@ -1,0 +1,1526 @@
+{
+ "version": 3,
+ "created": "2026-11-06T15:26:44.240463+00:00",
+ "description": "Zake2021 - PBPK model of metformin in humans, eight PO administrations with 12h interval\nBioModels BIOMD0000001029 (curated). SBML file: Zake2021_Metformin_Human_multiple_PO_dose.xml.\nSimulation: 0 to 100 time units (SED-ML: Zake2021 - PBPK Metformin Human multiple PO dose.sedml), sampling 0.001.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.77e-06 of species peak (worst: mKidneyPlasma)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [partial] compartment 'Liver' has an assignment rule; its t=0 size is used\n  [partial] compartment 'KidneyPlasma' has an assignment rule; its t=0 size is used\n  [partial] compartment 'Remainder' has an assignment rule; its t=0 size is used\n  [partial] compartment 'PlasmaVenous' has an assignment rule; its t=0 size is used\n  [partial] compartment 'Heart' has an assignment rule; its t=0 size is used\n  [partial] compartment 'Muscle' has an assignment rule; its t=0 size is used\n  [partial] compartment 'Brain' has an assignment rule; its t=0 size is used\n  [partial] compartment 'Adipose' has an assignment rule; its t=0 size is used\n  [partial] compartment 'PlasmaArterial' has an assignment rule; its t=0 size is used\n  [partial] compartment 'Lung' has an assignment rule; its t=0 size is used\n  [partial] compartment 'PortalVein' has an assignment rule; its t=0 size is used\n  [partial] compartment 'Stomach' has an assignment rule; its t=0 size is used\n  [partial] compartment 'Enterocytes' has an assignment rule; its t=0 size is used\n  [partial] compartment 'KidneyTissue' has an assignment rule; its t=0 size is used\n  [partial] compartment 'IntestineVascular' has an assignment rule; its t=0 size is used\n  [partial] compartment 'RBC' has an assignment rule; its t=0 size is used\n  [partial] compartment 'KidneyTubular' has an assignment rule; its t=0 size is used\n  [info] _13_3__PlasmaArterial____KidneyTubular: rate order differs from the stoichiometry; consumed on separate line(s) - mKidneyPlasma: zero order, signed\n  [info] _03_2__IntestineLumen____Enterocytes__PMAT_OCT3 (volume 500): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] _03_4__IntestineLumen____IntestineVascular__Saturable_0 (volume 500): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] _03_3__Enterocytes____IntestineVascular__OCT1 (volume 83.99999999999999): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] _13_4__KidneyPlasma____KidneyTissue_0: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] _13_5__KidneyTissue____KidneyTubular_0: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] time event(s) on 'mStomachLumen' encoded as time/value pairs in EV_MSTOMACHLUMEN.TXT (ADD)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Zake2021 - PBPK model of metformin in humans, eight PO administrations with 12h interval  (BIOMD0000001029, curated BioModels; source file Zake2021_Metformin_Human_multiple_PO_dose.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_5__IntestineVascular____PortalVein (volume 630)",
+     ""
+    ],
+    [
+     "11.4120082815735",
+     "0",
+     "0",
+     "mIntestineVascular==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_5__IntestineVascular____PortalVein (volume 196)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmIntestineVascular:(36.68145519077196*cmIntestineVascular)]==>mPortalVein",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_06_3__Liver____PlasmaVenous (volume 1799)",
+     ""
+    ],
+    [
+     "7.157916013947142",
+     "0",
+     "0",
+     "mLiver==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_06_3__Liver____PlasmaVenous (volume 2246.9999999999995)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmLiver:(5.730792571914068*cmLiver)]==>mPlasmaVenous",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_13_2__KidneyPlasma____PlasmaVenous (volume 102.19999999999999)",
+     ""
+    ],
+    [
+     "118.72146118721462",
+     "0",
+     "0",
+     "mKidneyPlasma==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_13_2__KidneyPlasma____PlasmaVenous (volume 2246.9999999999995)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmKidneyPlasma:(5.399792315680166*cmKidneyPlasma)]==>mPlasmaVenous",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_09_2__Muscle____PlasmaVenous (volume 28000)",
+     ""
+    ],
+    [
+     "0.5190940766550523",
+     "0",
+     "0",
+     "mMuscle==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_09_2__Muscle____PlasmaVenous (volume 2246.9999999999995)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmMuscle:(6.468462014393176*cmMuscle)]==>mPlasmaVenous",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_12_2__Remainder____PlasmaVenous (volume 2246.9999999999995)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmRemainder:(34.88651535380508*cmRemainder)]==>mPlasmaVenous",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_12_2__Remainder____PlasmaVenous (volume 16310)",
+     ""
+    ],
+    [
+     "4.806253832004905",
+     "0",
+     "0",
+     "mRemainder==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_02__IntestineLumen____Feces (volume 1000)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmIntestineLumen:(0.65*cmIntestineLumen)]==>mFeces",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_02__IntestineLumen____Feces (volume 500)",
+     ""
+    ],
+    [
+     "1.3",
+     "0",
+     "0",
+     "mIntestineLumen==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_13_1__PlasmaArterial____KidneyPlasma (volume 102.19999999999999)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPlasmaArterial:(534.2465753424658*cmPlasmaArterial)]==>mKidneyPlasma",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_13_1__PlasmaArterial____KidneyPlasma (volume 749)",
+     ""
+    ],
+    [
+     "72.89719626168224",
+     "0",
+     "0",
+     "mPlasmaArterial==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_09_1__PlasmaArterial____Muscle (volume 28000)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPlasmaArterial:(2.1282857142857146*cmPlasmaArterial)]==>mMuscle",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_09_1__PlasmaArterial____Muscle (volume 749)",
+     ""
+    ],
+    [
+     "79.56208277703605",
+     "0",
+     "0",
+     "mPlasmaArterial==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_12_1__PlasmaArterial____Remainder (volume 749)",
+     ""
+    ],
+    [
+     "83.72763684913218",
+     "0",
+     "0",
+     "mPlasmaArterial==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_12_1__PlasmaArterial____Remainder (volume 16310)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPlasmaArterial:(3.8450030656039242*cmPlasmaArterial)]==>mRemainder",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_13_3__PlasmaArterial____KidneyTubular",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPlasmaArterial:(54.79452054794521*cmPlasmaArterial)]==>mKidneyTubular",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_13_3__PlasmaArterial____KidneyTubular (consumes mKidneyPlasma)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPlasmaArterial:((-1*54.79452054794521*cmPlasmaArterial))]==>mKidneyPlasma",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_06_2__PortalVein____Liver (volume 1799)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPortalVein:(31.39077265147304*cmPortalVein)]==>mLiver",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_06_2__PortalVein____Liver (volume 196)",
+     ""
+    ],
+    [
+     "288.12244897959187",
+     "0",
+     "0",
+     "mPortalVein==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_05_1__PlasmaArterial____Stomach (volume 749)",
+     ""
+    ],
+    [
+     "4.582109479305741",
+     "0",
+     "0",
+     "mPlasmaArterial==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_05_1__PlasmaArterial____Stomach (volume 147)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPlasmaArterial:(23.346938775510203*cmPlasmaArterial)]==>mStomach",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_05_2__Stomach____PortalVein (volume 196)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmStomach:(5.471938775510203*cmStomach)]==>mPortalVein",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_05_2__Stomach____PortalVein (volume 147)",
+     ""
+    ],
+    [
+     "7.295918367346938",
+     "0",
+     "0",
+     "mStomach==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_04__PlasmaArterial____PortalVein (volume 749)",
+     ""
+    ],
+    [
+     "26.659546061415224",
+     "0",
+     "0",
+     "mPlasmaArterial==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_04__PlasmaArterial____PortalVein (volume 196)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPlasmaArterial:(101.87755102040818*cmPlasmaArterial)]==>mPortalVein",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_1__PlasmaArterial____IntestineVascular (volume 630)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPlasmaArterial:(52.49523809523809*cmPlasmaArterial)]==>mIntestineVascular",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_1__PlasmaArterial____IntestineVascular (volume 749)",
+     ""
+    ],
+    [
+     "44.15487316421896",
+     "0",
+     "0",
+     "mPlasmaArterial==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_06_1__PlasmaArterial____Liver (volume 1799)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPlasmaArterial:(7.977765425236242*cmPlasmaArterial)]==>mLiver",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_06_1__PlasmaArterial____Liver (volume 749)",
+     ""
+    ],
+    [
+     "19.161548731642192",
+     "0",
+     "0",
+     "mPlasmaArterial==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_2__IntestineLumen____Enterocytes__PMAT_OCT3 (volume 83.99999999999999)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmIntestineLumen:(23169.270833333336*cmIntestineLumen/(1*cmIntestineLumen+900))]==>mEnterocytes",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_2__IntestineLumen____Enterocytes__PMAT_OCT3 (volume 500)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mIntestineLumen+S[USER;cmIntestineLumen:(3892.4374999999995/(1*cmIntestineLumen+900))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_4__IntestineLumen____IntestineVascular__Saturable_0 (volume 500)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mIntestineLumen+S[USER;cmIntestineLumen:(58.8/(1*cmIntestineLumen+60))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_4__IntestineLumen____IntestineVascular__Saturable_0 (volume 630)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmIntestineLumen:(46.666666666666664*cmIntestineLumen/(1*cmIntestineLumen+60))]==>mIntestineVascular",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_3__Enterocytes____IntestineVascular__OCT1 (volume 83.99999999999999)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mEnterocytes+S[USER;cmEnterocytes:(9023.4375/(0.9999999999999999*cmEnterocytes+12300))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_3__Enterocytes____IntestineVascular__OCT1 (volume 630)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmEnterocytes:(1203.1249999999998*cmEnterocytes/(0.9999999999999999*cmEnterocytes+12300))]==>mIntestineVascular",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_13_4__KidneyPlasma____KidneyTissue_0",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mKidneyPlasma+S[USER;cmKidneyPlasma:(273468.4931506849/(0.9999999999999999*cmKidneyPlasma+1380))]==>mKidneyTissue",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_13_5__KidneyTissue____KidneyTubular_0",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mKidneyTissue+S[USER;cmKidneyTissue:(9393.34637964775/(0.9999999999999999*cmKidneyTissue+230))]==>mKidneyTubular",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_01__StomachLumen_____IntestineLumen (volume 500)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmStomachLumen:(0.7*cmStomachLumen)]==>mIntestineLumen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_01__StomachLumen_____IntestineLumen (volume 350)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mStomachLumen==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_07_2__Lung____PlasmaArterial (volume 532)",
+     ""
+    ],
+    [
+     "195.48872180451127",
+     "0",
+     "0",
+     "mLung==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_07_2__Lung____PlasmaArterial (volume 749)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmLung:(138.85180240320426*cmLung)]==>mPlasmaArterial",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_07_1__PlasmaVenous____Lung (volume 532)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPlasmaVenous:(586.4661654135338*cmPlasmaVenous)]==>mLung",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_07_1__PlasmaVenous____Lung (volume 2246.9999999999995)",
+     ""
+    ],
+    [
+     "138.8518024032043",
+     "0",
+     "0",
+     "mPlasmaVenous==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_08_2__Brain____PlasmaVenous (volume 1400)",
+     ""
+    ],
+    [
+     "31.757142857142856",
+     "0",
+     "0",
+     "mBrain==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_08_2__Brain____PlasmaVenous (volume 2246.9999999999995)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmBrain:(19.786381842456613*cmBrain)]==>mPlasmaVenous",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_08_1__PlasmaArterial____Brain (volume 1400)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPlasmaArterial:(25.40571428571429*cmPlasmaArterial)]==>mBrain",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_08_1__PlasmaArterial____Brain (volume 749)",
+     ""
+    ],
+    [
+     "47.48731642189586",
+     "0",
+     "0",
+     "mPlasmaArterial==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_11_2__Heart____PlasmaVenous (volume 350)",
+     ""
+    ],
+    [
+     "14.262857142857143",
+     "0",
+     "0",
+     "mHeart==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_11_2__Heart____PlasmaVenous (volume 2246.9999999999995)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmHeart:(2.221628838451269*cmHeart)]==>mPlasmaVenous",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_11_1__PlasmaArterial____Heart (volume 350)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPlasmaArterial:(35.65714285714286*cmPlasmaArterial)]==>mHeart",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_11_1__PlasmaArterial____Heart (volume 749)",
+     ""
+    ],
+    [
+     "16.662216288384514",
+     "0",
+     "0",
+     "mPlasmaArterial==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_10_2__Adipose____PlasmaVenous (volume 15050)",
+     ""
+    ],
+    [
+     "1.4767214308469485",
+     "0",
+     "0",
+     "mAdipose==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_10_2__Adipose____PlasmaVenous (volume 2246.9999999999995)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmAdipose:(9.890813321872088*cmAdipose)]==>mPlasmaVenous",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_10_1__PlasmaArterial____Adipose (volume 15050)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPlasmaArterial:(1.0780066445182723*cmPlasmaArterial)]==>mAdipose",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_10_1__PlasmaArterial____Adipose (volume 749)",
+     ""
+    ],
+    [
+     "21.660881174899867",
+     "0",
+     "0",
+     "mPlasmaArterial==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_14_1__PlasmaVenous____RBC (volume 2246.9999999999995)",
+     ""
+    ],
+    [
+     "0.03738317757009346",
+     "0",
+     "0",
+     "mPlasmaVenous==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_14_1__PlasmaVenous____RBC (volume 2198)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmPlasmaVenous:(0.03821656050955414*cmPlasmaVenous)]==>mRBC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_14_2__RBC____PlasmaVenous (volume 2246.9999999999995)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmRBC:(0.04272363150867825*cmRBC)]==>mPlasmaVenous",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_14_2__RBC____PlasmaVenous (volume 2198)",
+     ""
+    ],
+    [
+     "0.04367606915377616",
+     "0",
+     "0",
+     "mRBC==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_13_6__KidneyTubular____UrineExternal (volume 102.19999999999999)",
+     ""
+    ],
+    [
+     "0.6849315068493151",
+     "0",
+     "0",
+     "mKidneyTubular==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_13_6__KidneyTubular____UrineExternal (volume 1000)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmKidneyTubular:(0.06999999999999999*cmKidneyTubular)]==>mUrineExternal",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_6__IntestineLumen____Enterocytes__Diffusion term 1/2 (volume 83.99999999999999)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmIntestineLumen:(2.552083333333334*cmIntestineLumen)]==>mEnterocytes",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_6__IntestineLumen____Enterocytes__Diffusion term 2/2 (volume 83.99999999999999)",
+     ""
+    ],
+    [
+     "2.5520833333333335",
+     "0",
+     "0",
+     "mEnterocytes==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_6__IntestineLumen____Enterocytes__Diffusion term 1/2 (volume 500)",
+     ""
+    ],
+    [
+     "0.42875",
+     "0",
+     "0",
+     "mIntestineLumen==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_6__IntestineLumen____Enterocytes__Diffusion term 2/2 (volume 500)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmEnterocytes:(0.42874999999999996*cmEnterocytes)]==>mIntestineLumen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_7__IntestineLumen____IntestineVascular__Diffusion term 1/2 (volume 500)",
+     ""
+    ],
+    [
+     "0.79625",
+     "0",
+     "0",
+     "mIntestineLumen==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_7__IntestineLumen____IntestineVascular__Diffusion term 2/2 (volume 500)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmIntestineVascular:(0.79625*cmIntestineVascular)]==>mIntestineLumen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_7__IntestineLumen____IntestineVascular__Diffusion term 1/2 (volume 630)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmIntestineLumen:(0.6319444444444444*cmIntestineLumen)]==>mIntestineVascular",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_03_7__IntestineLumen____IntestineVascular__Diffusion term 2/2 (volume 630)",
+     ""
+    ],
+    [
+     "0.6319444444444444",
+     "0",
+     "0",
+     "mIntestineVascular==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "mLiver",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mLiver [mLiver]",
+     ""
+    ],
+    [
+     "mKidneyPlasma",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mKidneyPlasma [mKidneyPlasma]",
+     ""
+    ],
+    [
+     "mRemainder",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mRemainder [mRemainder]",
+     ""
+    ],
+    [
+     "mPlasmaVenous",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mPlasmaVenous [mPlasmaVenous]",
+     ""
+    ],
+    [
+     "mHeart",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mHeart [mHeart]",
+     ""
+    ],
+    [
+     "mMuscle",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mMuscle [mMuscle]",
+     ""
+    ],
+    [
+     "mAdipose",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mAdipose [mAdipose]",
+     ""
+    ],
+    [
+     "mBrain",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mBrain [mBrain]",
+     ""
+    ],
+    [
+     "mFeces",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mFeces [mFeces]",
+     ""
+    ],
+    [
+     "mUrineExternal",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mUrineExternal [mUrineExternal]",
+     ""
+    ],
+    [
+     "mIntestineLumen",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mIntestineLumen [mIntestineLumen]",
+     ""
+    ],
+    [
+     "mPlasmaArterial",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mPlasmaArterial [mPlasmaArterial]",
+     ""
+    ],
+    [
+     "mLung",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mLung [mLung]",
+     ""
+    ],
+    [
+     "mPortalVein",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mPortalVein [mPortalVein]",
+     ""
+    ],
+    [
+     "mStomach",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mStomach [mStomach]",
+     ""
+    ],
+    [
+     "mEnterocytes",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mEnterocytes [mEnterocytes]",
+     ""
+    ],
+    [
+     "mKidneyTissue",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mKidneyTissue [mKidneyTissue]",
+     ""
+    ],
+    [
+     "mIntestineVascular",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mIntestineVascular [mIntestineVascular]",
+     ""
+    ],
+    [
+     "mStomachLumen",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "EV_MSTOMACHLUMEN.TXT-ADD",
+     "mStomachLumen [mStomachLumen]",
+     ""
+    ],
+    [
+     "mRBC",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mRBC [mRBC]",
+     ""
+    ],
+    [
+     "mKidneyTubular",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mKidneyTubular [mKidneyTubular]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.001000000001",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.001000000001",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_MSTOMACHLUMEN.TXT",
+   "key": "O_EV_MSTOMACHLUMEN.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.001",
+     "8625.40370747246"
+    ],
+    [
+     "12",
+     "8625.40370747246"
+    ],
+    [
+     "24",
+     "8625.40370747246"
+    ],
+    [
+     "36",
+     "8625.40370747246"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

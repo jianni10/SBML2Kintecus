@@ -1,0 +1,453 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:09:40.355177+00:00",
+ "description": "Hu2018 - Dynamics of tumor-CD4+-cytokine-host cells interactions with treatments\nBioModels BIOMD0000000797 (curated). SBML file: Hu2018.xml.\nSimulation: 0 to 100 time units (SED-ML: Hu2018.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.55e-06 of species peak (worst: y_CD4_T_Cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_Killing_Cytokine: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hu2018 - Dynamics of tumor-CD4+-cytokine-host cells interactions with treatments  (BIOMD0000000797, curated BioModels; source file Hu2018.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Growth term 1/2",
+     ""
+    ],
+    [
+     "0.514",
+     "0",
+     "0",
+     "x_Tumor_Cells==>2x_Tumor_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Growth term 2/2",
+     ""
+    ],
+    [
+     "5.2428e-10",
+     "0",
+     "0",
+     "x_Tumor_Cells+x_Tumor_Cells==>x_Tumor_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Killing_Cytokine",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x_Tumor_Cells+z_Cytokine+S[USER;cx_Tumor_Cells:(0.2/(1*cx_Tumor_Cells+100000))]==>z_Cytokine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Competition_Normal_Cells",
+     ""
+    ],
+    [
+     "1.1e-10",
+     "0",
+     "0",
+     "x_Tumor_Cells+w_Healthy_Tissue==>w_Healthy_Tissue",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4T_Production",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x_Tumor_Cells+z_Cytokine+S[USER;cx_Tumor_Cells:(0.835/(cx_Tumor_Cells+1000))]==>y_CD4_T_Cells+x_Tumor_Cells+z_Cytokine",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4T_Natural_Death",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "y_CD4_T_Cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD4T_Depletion",
+     ""
+    ],
+    [
+     "1e-7",
+     "0",
+     "0",
+     "y_CD4_T_Cells+x_Tumor_Cells==>x_Tumor_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cytokine_Production",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x_Tumor_Cells+y_CD4_T_Cells+S[USER;cx_Tumor_Cells:(5.4/(cx_Tumor_Cells+1000))]==>z_Cytokine+x_Tumor_Cells+y_CD4_T_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cytokine_Decay",
+     ""
+    ],
+    [
+     "34",
+     "0",
+     "0",
+     "z_Cytokine==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Normal_Tissue_Growth term 1/2",
+     ""
+    ],
+    [
+     "0.2822",
+     "0",
+     "0",
+     "w_Healthy_Tissue==>2w_Healthy_Tissue",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Normal_Tissue_Growth term 2/2",
+     ""
+    ],
+    [
+     "2.822e-10",
+     "0",
+     "0",
+     "w_Healthy_Tissue+w_Healthy_Tissue==>w_Healthy_Tissue",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Normal_Tissue_Competition_Tumor_Cells",
+     ""
+    ],
+    [
+     "5.8e-11",
+     "0",
+     "0",
+     "w_Healthy_Tissue+x_Tumor_Cells==>x_Tumor_Cells",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x_Tumor_Cells",
+     "0",
+     "67700",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x_Tumor_Cells [x_Tumor_Cells]",
+     ""
+    ],
+    [
+     "y_CD4_T_Cells",
+     "0",
+     "1000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "y_CD4_T_Cells [y_CD4_T_Cells]",
+     ""
+    ],
+    [
+     "z_Cytokine",
+     "0",
+     "100000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "z_Cytokine [z_Cytokine]",
+     ""
+    ],
+    [
+     "w_Healthy_Tissue",
+     "0",
+     "1000000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "w_Healthy_Tissue [w_Healthy_Tissue]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

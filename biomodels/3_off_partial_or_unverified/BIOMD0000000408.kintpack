@@ -1,0 +1,812 @@
+{
+ "version": 3,
+ "created": "2026-11-01T20:42:39.689940+00:00",
+ "description": "Hettling2011_CreatineKinase\nBioModels BIOMD0000000408 (curated). SBML file: BIOMD0000000408_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000408_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 3.66e-01 of species peak (worst: ADP)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 3.66e-01 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'event' not converted (state-triggered (not a time >= t0 trigger))\n  [info] Jsyn: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] J_CK_Mi term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] J_CK_Mi term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] J_CK_MM term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] J_CK_MM term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Jhyd_reaction: rate order differs from the stoichiometry; consumed on separate line(s) - ATP: zero order, signed\n  [info] rate rule dtmito/dt term 2: rate order differs from the stoichiometry; consumed on separate line(s) - p_tmito: zero order, signed\nRenamed species (Kintecus name = SBML id): p_tmito = tmito; p_heartrate_bpm = heartrate_bpm; p_Jhyd = Jhyd; p_tmito_factor = tmito_factor",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hettling2011_CreatineKinase  (BIOMD0000000408, curated BioModels; source file BIOMD0000000408_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jsyn",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P_ii+ADPi+S[USER;cADPi,cP_ii:(24059.84/(800*cADPi+25*cP_ii+1*(cADPi+1e-30)*(cP_ii+1e-30)+20000))]==>ATPi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_CK_Mi term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cri+ATPi+S[USER;cADPi,cATPi,cCri,cPCri:(0.0036187716923076923/(9.765625e-6*cADPi*cPCri+1.6954210069444442e-7*cADPi*(cCri+1e-30)+0.0048828125*cADPi+0.0013333333333333333*cATPi+3.472222222222222e-5*cCri+0.000625*cPCri+2.564102564102564e-7*(cATPi+1e-30)*(cCri+1e-30)+1))]==>ADPi+PCri",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_CK_Mi term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ADPi+PCri+S[USER;cADPi,cATPi,cCri,cPCri:(0.5500532972307692/(0.0048828125*cADPi+2.564102564102564e-7*cATPi*cCri+0.0013333333333333333*cATPi+1.6954210069444442e-7*cCri*(cADPi+1e-30)+3.472222222222222e-5*cCri+0.000625*cPCri+9.765625e-6*(cADPi+1e-30)*(cPCri+1e-30)+1))]==>Cri+ATPi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_CK_MM term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+Cr+S[USER;cADP,cATP,cCr,cPCr:(0.0010935990442054958/(2.6924568129927193e-6*cADP*cPCr+1.2883675867329058e-7*cADP*(cCr+1e-30)+0.0044964028776978415*cADP+0.0011111111111111111*cATP+2.865329512893983e-5*cCr+0.00021141649048625792*cPCr+7.168458781362007e-8*(cATP+1e-30)*(cCr+1e-30)+1))]==>ADP+PCr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_CK_MM term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ADP+PCr+S[USER;cADP,cATP,cCr,cPCr:(0.16622705471923538/(0.0044964028776978415*cADP+7.168458781362007e-8*cATP*cCr+0.0011111111111111111*cATP+1.2883675867329058e-7*cCr*(cADP+1e-30)+2.865329512893983e-5*cCr+0.00021141649048625792*cPCr+2.6924568129927193e-6*(cADP+1e-30)*(cPCr+1e-30)+1))]==>ATP+Cr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jhyd_reaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_Jhyd:(1.3333333333333333*cp_Jhyd)]==>P_i+ADP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jhyd_reaction (consumes ATP)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_Jhyd:((-1*1.3333333333333333*cp_Jhyd))]==>ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_Pi term 1/2 (volume 0.75)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cP_ii:(258.6666666666667*cP_ii)]==>P_i",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_Pi term 2/2 (volume 0.75)",
+     ""
+    ],
+    [
+     "258.6666666666667",
+     "0",
+     "0",
+     "P_i==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_Pi term 1/2 (volume 0.0625)",
+     ""
+    ],
+    [
+     "3104",
+     "0",
+     "0",
+     "P_ii==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_Pi term 2/2 (volume 0.0625)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cP_i:(3104*cP_i)]==>P_ii",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_Cr term 1/2 (volume 0.0625)",
+     ""
+    ],
+    [
+     "2480",
+     "0",
+     "0",
+     "Cri==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_Cr term 2/2 (volume 0.0625)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCr:(2480*cCr)]==>Cri",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_Cr term 1/2 (volume 0.75)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCri:(206.66666666666666*cCri)]==>Cr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_Cr term 2/2 (volume 0.75)",
+     ""
+    ],
+    [
+     "206.66666666666666",
+     "0",
+     "0",
+     "Cr==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_ADP term 1/2 (volume 0.75)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cADPi:(17.72636*cADPi)]==>ADP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_ADP term 2/2 (volume 0.75)",
+     ""
+    ],
+    [
+     "17.72636",
+     "0",
+     "0",
+     "ADP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_ADP term 1/2 (volume 0.0625)",
+     ""
+    ],
+    [
+     "212.71632",
+     "0",
+     "0",
+     "ADPi==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_ADP term 2/2 (volume 0.0625)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cADP:(212.71632*cADP)]==>ADPi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_PCr term 1/2 (volume 0.75)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPCri:(206.66666666666666*cPCri)]==>PCr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_PCr term 2/2 (volume 0.75)",
+     ""
+    ],
+    [
+     "206.66666666666666",
+     "0",
+     "0",
+     "PCr==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_PCr term 1/2 (volume 0.0625)",
+     ""
+    ],
+    [
+     "2480",
+     "0",
+     "0",
+     "PCri==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_PCr term 2/2 (volume 0.0625)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPCr:(2480*cPCr)]==>PCri",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_ATP term 1/2 (volume 0.75)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATPi:(17.72636*cATPi)]==>ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_ATP term 2/2 (volume 0.75)",
+     ""
+    ],
+    [
+     "17.72636",
+     "0",
+     "0",
+     "ATP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_ATP term 1/2 (volume 0.0625)",
+     ""
+    ],
+    [
+     "212.71632",
+     "0",
+     "0",
+     "ATPi==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J_diff_ATP term 2/2 (volume 0.0625)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP:(212.71632*cATP)]==>ATPi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dtmito/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_tmito_factor:(4.447909284195606*cp_tmito_factor)]==>p_tmito",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dtmito/dt term 2 (consumes p_tmito)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cADPi,cP_ii,cp_tmito_factor:((-1*10.65726435152374*cADPi*cP_ii*cp_tmito_factor/(1*cADPi*cP_ii+800*cADPi+25*cP_ii+20000)))]==>p_tmito",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "ADPi",
+     "0",
+     "39",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ADPi [ADPi]",
+     ""
+    ],
+    [
+     "ATPi",
+     "0",
+     "5626",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATPi [ATPi]",
+     ""
+    ],
+    [
+     "Cri",
+     "0",
+     "9789",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cri [Cri]",
+     ""
+    ],
+    [
+     "PCri",
+     "0",
+     "5711",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PCri [PCri]",
+     ""
+    ],
+    [
+     "PCr",
+     "0",
+     "5710",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PCr [PCr]",
+     ""
+    ],
+    [
+     "ADP",
+     "0",
+     "64",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ADP [ADP]",
+     ""
+    ],
+    [
+     "ATP",
+     "0",
+     "5601",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP [ATP]",
+     ""
+    ],
+    [
+     "Cr",
+     "0",
+     "9789",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cr [Cr]",
+     ""
+    ],
+    [
+     "P_ii",
+     "0",
+     "910",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P_ii [P_ii]",
+     ""
+    ],
+    [
+     "P_i",
+     "0",
+     "912",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P_i [P_i]",
+     ""
+    ],
+    [
+     "p_tmito",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter tmito [tmito]",
+     ""
+    ],
+    [
+     "p_heartrate_bpm",
+     "0",
+     "135",
+     "N",
+     "0",
+     "No",
+     "135",
+     "parameter heartrate_bpm [heartrate_bpm]",
+     ""
+    ],
+    [
+     "p_Jhyd",
+     "0",
+     "486.5",
+     "N",
+     "0",
+     "No",
+     "486.5",
+     "parameter Jhyd [Jhyd]",
+     ""
+    ],
+    [
+     "p_tmito_factor",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "0",
+     "parameter tmito_factor [tmito_factor]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

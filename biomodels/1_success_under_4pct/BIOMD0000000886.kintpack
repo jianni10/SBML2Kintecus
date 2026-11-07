@@ -1,0 +1,548 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:11:49.455489+00:00",
+ "description": "Dubey2008 - Modeling the interaction between avascular cancerous cells and acquired immune response\nBioModels BIOMD0000000886 (curated). SBML file: Dubey2008.xml.\nSimulation: 0 to 30 time units (SED-ML: Dubey2008.sedml), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.96e-06 of species peak (worst: A)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): T1 = T",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Dubey2008 - Modeling the interaction between avascular cancerous cells and acquired immune response  (BIOMD0000000886, curated BioModels; source file Dubey2008.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_tumor_cell",
+     ""
+    ],
+    [
+     "0.18",
+     "0",
+     "0",
+     "T1==>2T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_tumor_cell_from_the_system term 1/3",
+     ""
+    ],
+    [
+     "4.6",
+     "0",
+     "0",
+     "T1+T1==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_tumor_cell_from_the_system term 2/3",
+     ""
+    ],
+    [
+     "0.008",
+     "0",
+     "0",
+     "T1+A==>A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_tumor_cell_from_the_system term 3/3",
+     ""
+    ],
+    [
+     "0.101",
+     "0",
+     "0",
+     "T1+Tc==>Tc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_T_helper_cell term 1/2",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "T1==>Th+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_T_helper_cell term 2/2",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "T1+Th==>2Th+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_T_helper_cell_from_the_system",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Th==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "formation_of_cytotoxic_T_cell term 1/3",
+     ""
+    ],
+    [
+     "1.4",
+     "0",
+     "0",
+     "T1==>Tc+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "formation_of_cytotoxic_T_cell term 2/3",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "Tc+Th==>2Tc+Th",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "formation_of_cytotoxic_T_cell term 3/3",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "T1+Tc==>2Tc+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_cytotoxic_T_cell",
+     ""
+    ],
+    [
+     "0.0412",
+     "0",
+     "0",
+     "Tc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_B_cell term 1/3",
+     ""
+    ],
+    [
+     "0.45",
+     "0",
+     "0",
+     "T1==>B+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_B_cell term 2/3",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "B+T1==>2B+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_B_cell term 3/3",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "B+Th==>2B+Th",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_B_cell_from_the_system",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "introduction_of_antibody_against_cancer",
+     ""
+    ],
+    [
+     "0.35",
+     "0",
+     "0",
+     "B==>A+B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_antibody_from_the_system term 1/2",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "A==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_antibody_from_the_system term 2/2",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "A+T1==>T1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T [T]",
+     ""
+    ],
+    [
+     "Th",
+     "0",
+     "7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Th [Th]",
+     ""
+    ],
+    [
+     "Tc",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tc [Tc]",
+     ""
+    ],
+    [
+     "B",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B [B]",
+     ""
+    ],
+    [
+     "A",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A [A]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.03",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.03",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

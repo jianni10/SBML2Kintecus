@@ -1,0 +1,752 @@
+{
+ "version": 3,
+ "created": "2026-11-05T15:53:51.938053+00:00",
+ "description": "Friedland2009_Ara_RTC3_counter\nBioModels BIOMD0000000301 (curated). SBML file: BIOMD0000000301_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000301_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 1.00e+00 of species peak (worst: ara)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 1.00e+00 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'pulse_start1' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'pulse_start2' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'pulse_start3' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'pulse_end1' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'pulse_end2' not converted (state-triggered (not a time >= t0 trigger))\n  [info] r0: piecewise/conditional rate encoded with abs()-based step functions\n  [info] r0 term 1/8: rate order differs from the stoichiometry; consumed on separate line(s) - ara: zero order, signed\n  [info] r0 term 3/8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r0 term 7/8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] time event(s) on 'pulse_flag' encoded as time/value pairs in EV_P_PULSE_FLAG.TXT (SET)\n  [partial] event times do not fit a practical sampling grid; events fire up to one sampling interval (3) late\nRenamed species (Kintecus name = SBML id): p_pulse_flag = pulse_flag",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Friedland2009_Ara_RTC3_counter  (BIOMD0000000301, curated BioModels; source file BIOMD0000000301_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r0 term 1/8 (consumes ara)",
+     ""
+    ],
+    [
+     "-7.5e-5",
+     "0",
+     "0",
+     "source==>ara",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r0 term 2/8",
+     ""
+    ],
+    [
+     "0.090075",
+     "0",
+     "0",
+     "ara==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r0 term 3/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ara+S[USER;cara:(0.00015/(2*abs(cara+1e-30)+2e-300))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r0 term 4/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_pulse_flag:(0.00015*abs(cp_pulse_flag-1)/(2*abs(cp_pulse_flag-1)+2e-300))]==>ara",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r0 term 5/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ara+ara+S[USER;cara:(0.06005/(2*abs(cara)+2e-300))]==>3ara",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r0 term 6/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ara+S[USER;cp_pulse_flag:(0.06005*abs(cp_pulse_flag-1)/(2*abs(cp_pulse_flag-1)+2e-300))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r0 term 7/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ara+ara+S[USER;cara,cp_pulse_flag:(0.1201*abs(cp_pulse_flag-1)/(4*abs(cara+1e-30)*abs(cp_pulse_flag-1)+4e-300*abs(cara+1e-30)+4e-300*abs(cp_pulse_flag-1)+0))]==>ara",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r0 term 8/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ara+S[USER;cara,cp_pulse_flag:(0.0003*abs(cp_pulse_flag-1)/(4*abs(cara)*abs(cp_pulse_flag-1)+4e-300*abs(cara)+4e-300*abs(cp_pulse_flag-1)+0))]==>2ara",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1a term 1/2",
+     ""
+    ],
+    [
+     "0.0008",
+     "0",
+     "0",
+     "source==>taRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1a term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ara+S[USER;cara:(0.8467/(cara+0.0571))]==>taRNA+ara",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1b",
+     ""
+    ],
+    [
+     "0.1177",
+     "0",
+     "0",
+     "taRNA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r2a",
+     ""
+    ],
+    [
+     "0.0252",
+     "0",
+     "0",
+     "source==>mT7cr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r2b",
+     ""
+    ],
+    [
+     "0.0706",
+     "0",
+     "0",
+     "mT7cr==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3a term 1/2",
+     ""
+    ],
+    [
+     "0.0123",
+     "0",
+     "0",
+     "source==>mGFPcr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3a term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpT3:(3.006*cpT3^0.8892/(cpT3^0.8892+6.288346398785608))]==>mGFPcr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r3b",
+     ""
+    ],
+    [
+     "0.07",
+     "0",
+     "0",
+     "mGFPcr==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r6 term 1/2",
+     ""
+    ],
+    [
+     "0.0003",
+     "0",
+     "0",
+     "mT7cr==>pT7+mT7cr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r6 term 2/2",
+     ""
+    ],
+    [
+     "0.0766",
+     "0",
+     "0",
+     "mT7cr+taRNA==>pT7+mT7cr+taRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r7 term 1/2",
+     ""
+    ],
+    [
+     "0.1007",
+     "0",
+     "0",
+     "mGFPcr==>pGFP+mGFPcr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r7 term 2/2",
+     ""
+    ],
+    [
+     "0.9923",
+     "0",
+     "0",
+     "mGFPcr+taRNA==>pGFP+mGFPcr+taRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8",
+     ""
+    ],
+    [
+     "0.0056",
+     "0",
+     "0",
+     "pT7==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9",
+     ""
+    ],
+    [
+     "0.003",
+     "0",
+     "0",
+     "pGFP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r10a term 1/2",
+     ""
+    ],
+    [
+     "0.0003",
+     "0",
+     "0",
+     "source==>mT3cr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r10a term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpT7:(3.8009*cpT7^2.602/(cpT7^2.602+18.133418602890835))]==>mT3cr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r10b",
+     ""
+    ],
+    [
+     "0.0701",
+     "0",
+     "0",
+     "mT3cr==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r11",
+     ""
+    ],
+    [
+     "0.0115",
+     "0",
+     "0",
+     "mT3cr+taRNA==>pT3+mT3cr+taRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r12",
+     ""
+    ],
+    [
+     "0.0069",
+     "0",
+     "0",
+     "pT3==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "taRNA",
+     "0",
+     "0.006796941377",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "taRNA [taRNA]",
+     ""
+    ],
+    [
+     "mT7cr",
+     "0",
+     "0.3569405099",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mT7cr [mT7cr]",
+     ""
+    ],
+    [
+     "mGFPcr",
+     "0",
+     "0.176991329",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mGFPcr [mGFPcr]",
+     ""
+    ],
+    [
+     "pT7",
+     "0",
+     "0.05230744612",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pT7 [pT7]",
+     ""
+    ],
+    [
+     "pGFP",
+     "0",
+     "6.338921181",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pGFP [pGFP]",
+     ""
+    ],
+    [
+     "ara",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ara [ara]",
+     ""
+    ],
+    [
+     "pT3",
+     "0",
+     "6.41674e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pT3 [pT3]",
+     ""
+    ],
+    [
+     "mT3cr",
+     "0",
+     "0.00566438",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mT3cr [mT3cr]",
+     ""
+    ],
+    [
+     "p_pulse_flag",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "EV_P_PULSE_FLAG.TXT-SET",
+     "parameter pulse_flag [pulse_flag]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3.000000003",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3.000000003",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_PULSE_FLAG.TXT",
+   "key": "O_EV_P_PULSE_FLAG.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "84.01",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

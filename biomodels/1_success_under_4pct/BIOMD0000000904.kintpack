@@ -1,0 +1,450 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:12:18.552845+00:00",
+ "description": "Admon2017 - Modelling tumor growth with immune response and drug using ordinary differential equations\nBioModels BIOMD0000000904 (curated). SBML file: Admon2017.xml.\nSimulation: 0 to 60 time units (SED-ML: Admon2017.sedml), sampling 0.06.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.77e-06 of species peak (worst: Tm)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Admon2017 - Modelling tumor growth with immune response and drug using ordinary differential equations  (BIOMD0000000904, curated BioModels; source file Admon2017.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Increase_in_the_population_of_tumor_cell_during_interphase",
+     ""
+    ],
+    [
+     "1.6",
+     "0",
+     "0",
+     "Tm==>Ti+Tm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Decrease_in_the_population_of_tumor_cell_during_interphase term 1/2",
+     ""
+    ],
+    [
+     "1.11",
+     "0",
+     "0",
+     "Ti==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Decrease_in_the_population_of_tumor_cell_during_interphase term 2/2",
+     ""
+    ],
+    [
+     "0.9",
+     "0",
+     "0",
+     "Ti+I==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Increase_in_population_of_tumor_cell_during_mitosis",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ti==>Tm+Ti",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Decrease_in_the_population_of_tumor_cell_during_mitosis term 1/2",
+     ""
+    ],
+    [
+     "1.2000000000000002",
+     "0",
+     "0",
+     "Tm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Decrease_in_the_population_of_tumor_cell_during_mitosis term 2/2",
+     ""
+    ],
+    [
+     "0.9",
+     "0",
+     "0",
+     "Tm+I==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "induction_of_immune_response_due_to_tumor_cell_formation term 1/2",
+     ""
+    ],
+    [
+     "0.029",
+     "0",
+     "0",
+     "source==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "induction_of_immune_response_due_to_tumor_cell_formation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I+S[USER;cTi,cTm:(0.1*(cTi+cTm)^3/((cTi+cTm)^3+0.2))]==>2I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Decrease_in_the_popoulation_of_immune_response term 1/3",
+     ""
+    ],
+    [
+     "0.29",
+     "0",
+     "0",
+     "I==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Decrease_in_the_popoulation_of_immune_response term 2/3",
+     ""
+    ],
+    [
+     "0.085",
+     "0",
+     "0",
+     "I+Ti==>Ti",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Decrease_in_the_popoulation_of_immune_response term 3/3",
+     ""
+    ],
+    [
+     "0.085",
+     "0",
+     "0",
+     "I+Tm==>Tm",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Ti",
+     "0",
+     "1.3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ti [Ti]",
+     ""
+    ],
+    [
+     "Tm",
+     "0",
+     "1.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tm [Tm]",
+     ""
+    ],
+    [
+     "I",
+     "0",
+     "0.9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I [I]",
+     ""
+    ],
+    [
+     "u",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "u [u]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.06",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "60",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.06",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

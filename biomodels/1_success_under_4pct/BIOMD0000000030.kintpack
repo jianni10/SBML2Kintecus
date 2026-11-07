@@ -1,0 +1,876 @@
+{
+ "version": 3,
+ "created": "2026-10-25T08:25:22.366001+00:00",
+ "description": "Markevich2004_MAPK_AllRandomElementary\nBioModels BIOMD0000000030 (curated). SBML file: BIOMD0000000030_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000030_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.78e-06 of species peak (worst: MAPKK)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): M1 = M",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Markevich2004_MAPK_AllRandomElementary  (BIOMD0000000030, curated BioModels; source file BIOMD0000000030_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000001 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M_MAPKK_Y==>M1+MAPKK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000001 term 2/2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "M1+MAPKK==>M_MAPKK_Y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000002",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "M_MAPKK_Y==>MAPKK+MpY",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000003 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MpY_MAPKK==>MAPKK+MpY",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000003 term 2/2",
+     ""
+    ],
+    [
+     "0.032",
+     "0",
+     "0",
+     "MAPKK+MpY==>MpY_MAPKK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000004",
+     ""
+    ],
+    [
+     "15",
+     "0",
+     "0",
+     "MpY_MAPKK==>MAPKK+Mpp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000005 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M_MAPKK_T==>M1+MAPKK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000005 term 2/2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "M1+MAPKK==>M_MAPKK_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000006",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "M_MAPKK_T==>MAPKK+MpT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000007 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MpT_MAPKK==>MAPKK+MpT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000007 term 2/2",
+     ""
+    ],
+    [
+     "0.032",
+     "0",
+     "0",
+     "MAPKK+MpT==>MpT_MAPKK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000008",
+     ""
+    ],
+    [
+     "15",
+     "0",
+     "0",
+     "MpT_MAPKK==>MAPKK+Mpp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000009 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mpp_MKP_Y==>MKP+Mpp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000009 term 2/2",
+     ""
+    ],
+    [
+     "0.045",
+     "0",
+     "0",
+     "MKP+Mpp==>Mpp_MKP_Y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000010",
+     ""
+    ],
+    [
+     "0.092",
+     "0",
+     "0",
+     "Mpp_MKP_Y==>MpT_MKP_Y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000011 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MpT_MKP_Y==>MKP+MpT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000011 term 2/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "MKP+MpT==>MpT_MKP_Y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000013 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MpT_MKP_T==>MKP+MpT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000013 term 2/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "MKP+MpT==>MpT_MKP_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000012",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "MpT_MKP_T==>M_MKP_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000015 term 1/2",
+     ""
+    ],
+    [
+     "0.086",
+     "0",
+     "0",
+     "M_MKP_T==>M1+MKP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000015 term 2/2",
+     ""
+    ],
+    [
+     "0.0011",
+     "0",
+     "0",
+     "M1+MKP==>M_MKP_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000017 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MpY_MKP_Y==>MKP+MpY",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000017 term 2/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "MKP+MpY==>MpY_MKP_Y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000014",
+     ""
+    ],
+    [
+     "0.47",
+     "0",
+     "0",
+     "MpY_MKP_Y==>M_MKP_Y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000019 term 1/2",
+     ""
+    ],
+    [
+     "0.14",
+     "0",
+     "0",
+     "M_MKP_Y==>M1+MKP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000019 term 2/2",
+     ""
+    ],
+    [
+     "0.0018",
+     "0",
+     "0",
+     "M1+MKP==>M_MKP_Y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000020 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mpp_MKP_T==>MKP+Mpp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000020 term 2/2",
+     ""
+    ],
+    [
+     "0.045",
+     "0",
+     "0",
+     "MKP+Mpp==>Mpp_MKP_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000021",
+     ""
+    ],
+    [
+     "0.092",
+     "0",
+     "0",
+     "Mpp_MKP_T==>MpY_MKP_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000022 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MpY_MKP_T==>MKP+MpY",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000022 term 2/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "MKP+MpY==>MpY_MKP_T",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "800",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK [M]",
+     ""
+    ],
+    [
+     "MpY",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK-PY [MpY]",
+     ""
+    ],
+    [
+     "MpT",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK-PT [MpT]",
+     ""
+    ],
+    [
+     "Mpp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK-PP [Mpp]",
+     ""
+    ],
+    [
+     "MAPKK",
+     "0",
+     "180",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPKK [MAPKK]",
+     ""
+    ],
+    [
+     "MKP",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MKP [MKP]",
+     ""
+    ],
+    [
+     "MpY_MAPKK",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK-PY_MAPKK [MpY_MAPKK]",
+     ""
+    ],
+    [
+     "MpT_MAPKK",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK-PT_MAPKK [MpT_MAPKK]",
+     ""
+    ],
+    [
+     "M_MAPKK_Y",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK_MAPKK_Y [M_MAPKK_Y]",
+     ""
+    ],
+    [
+     "M_MAPKK_T",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK_MAPKK_T [M_MAPKK_T]",
+     ""
+    ],
+    [
+     "Mpp_MKP_Y",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK-PP_MKP_T [Mpp_MKP_Y]",
+     ""
+    ],
+    [
+     "Mpp_MKP_T",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK-PP_MKP_Y [Mpp_MKP_T]",
+     ""
+    ],
+    [
+     "MpY_MKP_Y",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK-PY_MKP_Y [MpY_MKP_Y]",
+     ""
+    ],
+    [
+     "MpY_MKP_T",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK-PY_MKP_T [MpY_MKP_T]",
+     ""
+    ],
+    [
+     "MpT_MKP_Y",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK-PT_MKP_Y [MpT_MKP_Y]",
+     ""
+    ],
+    [
+     "MpT_MKP_T",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK-PT_MKP_T [MpT_MKP_T]",
+     ""
+    ],
+    [
+     "M_MKP_T",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK_MKP_T [M_MKP_T]",
+     ""
+    ],
+    [
+     "M_MKP_Y",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MAPK_MKP_Y [M_MKP_Y]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-06",
+     "3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3",
+     "0",
+     "1e-08",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

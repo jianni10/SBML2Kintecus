@@ -1,0 +1,556 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:56:03.345967+00:00",
+ "description": "Veening2008_DegU_Regulation\nBioModels BIOMD0000000240 (curated). SBML file: BIOMD0000000240_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000240_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.07e-06 of species peak (worst: Dim)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Veening2008_DegU_Regulation  (BIOMD0000000240, curated BioModels; source file BIOMD0000000240_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AprEdeg",
+     ""
+    ],
+    [
+     "0.0004",
+     "0",
+     "0",
+     "AprE==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AprEsyn",
+     ""
+    ],
+    [
+     "0.04",
+     "0",
+     "0",
+     "mAprE==>AprE+mAprE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "DimerAss",
+     ""
+    ],
+    [
+     "0.025",
+     "0",
+     "0",
+     "DegUP+DegUP==>Dim",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "DimerDis",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Dim==>2DegUP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "degradation1",
+     ""
+    ],
+    [
+     "0.0004",
+     "0",
+     "0",
+     "DegU==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "degradation2",
+     ""
+    ],
+    [
+     "0.0004",
+     "0",
+     "0",
+     "DegUP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "degradation3",
+     ""
+    ],
+    [
+     "0.0004",
+     "0",
+     "0",
+     "Dim==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "degradationmRNA",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "mDegU==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "dephosphorylation",
+     ""
+    ],
+    [
+     "0.149999998125",
+     "0",
+     "0",
+     "DegUP==>DegU",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mRNAAprEdeg",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "mAprE==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mRNAAprEsyn term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cDim:(0.01/(0.08333333333333333*cDim+0.006944444444444444*cDim^2+2))]==>mAprE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mRNAAprEsyn term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cDim:(0.2*cDim^2/(12*cDim+1*cDim^2+288))]==>mAprE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mRNAAprEsyn term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Dim+S[USER;cDim:(0.0008333333333333334/(0.08333333333333333*cDim+0.006944444444444444*cDim^2+2))]==>mAprE+Dim",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "phosphorylation",
+     ""
+    ],
+    [
+     "0.00400000005",
+     "0",
+     "0",
+     "DegU==>DegUP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "synthesisDegU",
+     ""
+    ],
+    [
+     "0.04",
+     "0",
+     "0",
+     "mDegU==>DegU+mDegU",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "synthesismRNA term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cDim:(0.028/(1*cDim+7))]==>mDegU",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "synthesismRNA term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Dim+S[USER;cDim:(0.048/(1*cDim+7))]==>mDegU+Dim",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "AprE",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AprE [AprE]",
+     ""
+    ],
+    [
+     "DegU",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DegU [DegU]",
+     ""
+    ],
+    [
+     "DegUP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DegUP [DegUP]",
+     ""
+    ],
+    [
+     "Dim",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Dim [Dim]",
+     ""
+    ],
+    [
+     "mAprE",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mAprE [mAprE]",
+     ""
+    ],
+    [
+     "mDegU",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mDegU [mDegU]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

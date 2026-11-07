@@ -1,0 +1,344 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:16:07.941262+00:00",
+ "description": "Kimmel2021 - T cell competition and stochastic extinction events in CAR T cell therapy\nBioModels BIOMD0000001041 (curated). SBML file: Kimmel2021.xml.\nSimulation: 0 to 200 time units (SED-ML: Kimmel2021 - Fig2(a) and (b).sedml), sampling 0.2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.65e-06 of species peak (worst: CAR_T_cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Total_lymphocyte_count' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] CAR_T_cell_population_growth term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): Antigenpresentingtumource1 = Antigen_presenting_tumour_cells",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Kimmel2021 - T cell competition and stochastic extinction events in CAR T cell therapy  (BIOMD0000001041, curated BioModels; source file Kimmel2021.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Normal_T_cell_population_growth",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Normal_T_cells+S[USER;cCAR_T_cells,cNormal_T_cells:(0.17*log(0.002*cCAR_T_cells+0.002*cNormal_T_cells))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CAR_T_cell_population_growth term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CAR_T_cells+S[USER;cCAR_T_cells,cNormal_T_cells:(0.0251*log(0.007194244604316547*cCAR_T_cells+0.007194244604316547*cNormal_T_cells))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CAR_T_cell_population_growth term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CAR_T_cells+S[USER;cCAR_T_cells,cNormal_T_cells:((0.525*(cCAR_T_cells+cNormal_T_cells-500)^2*log(cCAR_T_cells+cNormal_T_cells)-2.5905988148936134*(cCAR_T_cells+cNormal_T_cells-500)^2)/(1*(cCAR_T_cells+cNormal_T_cells-500)^2+0.423*(cCAR_T_cells+cNormal_T_cells+1e-30)^2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumour_growth",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Antigenpresentingtumource1==>2Antigenpresentingtumource1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumour_killing",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Antigenpresentingtumource1+CAR_T_cells+S[USER;cCAR_T_cells:(1.15/(cCAR_T_cells+4.05))]==>CAR_T_cells",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Normal_T_cells",
+     "0",
+     "6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Normal_T_cells [Normal_T_cells]",
+     ""
+    ],
+    [
+     "CAR_T_cells",
+     "0",
+     "0.36",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CAR_T_cells [CAR_T_cells]",
+     ""
+    ],
+    [
+     "Antigenpresentingtumource1",
+     "0",
+     "94.86",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Antigen-presenting_tumour_cells [Antigen_presenting_tumour_cells]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.2",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.2",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

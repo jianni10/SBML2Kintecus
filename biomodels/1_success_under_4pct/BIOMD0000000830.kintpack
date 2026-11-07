@@ -1,0 +1,416 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:10:24.202843+00:00",
+ "description": "GiantsosAdams2013 - Growth of glycocalyx under static conditions\nBioModels BIOMD0000000830 (curated). SBML file: Giantsos-Adams2013.xml.\nSimulation: 0 to 70 time units (SED-ML: Giantsos-Adams2013.sedml), sampling 0.7.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.03e-06 of species peak (worst: s4)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GiantsosAdams2013 - Growth of glycocalyx under static conditions  (BIOMD0000000830, curated BioModels; source file Giantsos-Adams2013.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "k_golgi",
+     ""
+    ],
+    [
+     "0.048",
+     "0",
+     "0",
+     "source==>s1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "k_endo",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "s1==>s2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "k_exo",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "s2==>s1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "k_le",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "s2==>s3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "k_lys",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "s3==>s4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "k_deg",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "s4==>release",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "k_shed",
+     ""
+    ],
+    [
+     "0.033",
+     "0",
+     "0",
+     "s1==>shedding",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "s1",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "HS surface [s1]",
+     ""
+    ],
+    [
+     "s2",
+     "0",
+     "0.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "early endosome [s2]",
+     ""
+    ],
+    [
+     "s3",
+     "0",
+     "0.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "late endosome [s3]",
+     ""
+    ],
+    [
+     "s6",
+     "0",
+     "0.05",
+     "Y",
+     "0",
+     "No",
+     "0.05",
+     "golgi [s6]",
+     ""
+    ],
+    [
+     "s4",
+     "0",
+     "1.23",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "lysosome [s4]",
+     ""
+    ],
+    [
+     "release",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "release [release]",
+     ""
+    ],
+    [
+     "shedding",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "shedding [shedding]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.7",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "70",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.7",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

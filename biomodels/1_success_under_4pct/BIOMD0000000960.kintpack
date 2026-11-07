@@ -1,0 +1,1081 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:32:32.980110+00:00",
+ "description": "Paiva2020 - SEIAHRD model of transmission dynamics of COVID-19\nBioModels BIOMD0000000960 (curated). SBML file: Paiva2020.xml.\nSimulation: 0 to 80 time units (SED-ML: Paiva2020.sedml), sampling 0.08.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.06e-05 of species peak (worst: Asymptomatic)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time event(s) on 'beta_1_China' encoded as time/value pairs in EV_P_BETA_1_CHINA.TXT (SET)\n  [info] time event(s) on 'beta_1_France' encoded as time/value pairs in EV_P_BETA_1_FRANCE.TXT (SET)\n  [info] time event(s) on 'beta_1_Germany' encoded as time/value pairs in EV_P_BETA_1_GERMANY.TXT (SET)\n  [info] time event(s) on 'beta_1_Italy' encoded as time/value pairs in EV_P_BETA_1_ITALY.TXT (SET)\n  [info] time event(s) on 'beta_1_Spain' encoded as time/value pairs in EV_P_BETA_1_SPAIN.TXT (SET)\n  [info] time event(s) on 'beta_1_USA' encoded as time/value pairs in EV_P_BETA_1_USA.TXT (SET)\n  [info] time event(s) on 'l_1_China' encoded as time/value pairs in EV_P_L_1_CHINA.TXT (SET)\n  [info] time event(s) on 'l_1_France' encoded as time/value pairs in EV_P_L_1_FRANCE.TXT (SET)\n  [info] time event(s) on 'l_1_Germany' encoded as time/value pairs in EV_P_L_1_GERMANY.TXT (SET)\n  [info] time event(s) on 'l_1_Italy' encoded as time/value pairs in EV_P_L_1_ITALY.TXT (SET)\n  [info] time event(s) on 'l_1_Spain' encoded as time/value pairs in EV_P_L_1_SPAIN.TXT (SET)\n  [info] time event(s) on 'l_1_USA' encoded as time/value pairs in EV_P_L_1_USA.TXT (SET)\n  [info] time event(s) on 'l_a_1_China' encoded as time/value pairs in EV_P_L_A_1_CHINA.TXT (SET)\n  [info] time event(s) on 'l_a_1_France' encoded as time/value pairs in EV_P_L_A_1_FRANCE.TXT (SET)\n  [info] time event(s) on 'l_a_1_Germany' encoded as time/value pairs in EV_P_L_A_1_GERMANY.TXT (SET)\n  [info] time event(s) on 'l_a_1_Italy' encoded as time/value pairs in EV_P_L_A_1_ITALY.TXT (SET)\n  [info] time event(s) on 'l_a_1_Spain' encoded as time/value pairs in EV_P_L_A_1_SPAIN.TXT (SET)\n  [info] time event(s) on 'l_a_1_USA' encoded as time/value pairs in EV_P_L_A_1_USA.TXT (SET)\n  [partial] 18 profile files exceed the GUI's 10 O_ file limit\nRenamed species (Kintecus name = SBML id): p_beta_1_China = beta_1_China; p_l_1_China = l_1_China; p_l_a_1_China = l_a_1_China; p_beta_1_Italy = beta_1_Italy; p_l_1_Italy = l_1_Italy; p_l_a_1_Italy = l_a_1_Italy; p_beta_1_Spain = beta_1_Spain; p_l_1_Spain = l_1_Spain; p_l_a_1_Spain = l_a_1_Spain; p_beta_1_France = beta_1_France; p_l_1_France = l_1_France; p_l_a_1_France = l_a_1_France; p_beta_1_Germany = beta_1_Germany; p_l_1_Germany = l_1_Germany; p_l_a_1_Germany = l_a_1_Germany; p_beta_1_USA = beta_1_USA; p_l_1_USA = l_1_USA; p_l_a_1_USA = l_a_1_USA",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Paiva2020 - SEIAHRD model of transmission dynamics of COVID-19  (BIOMD0000000960, curated BioModels; source file Paiva2020.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Exposed term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Infectious+S[USER;cp_beta_1_China:(9.090909090909091e-8*cp_beta_1_China)]==>Exposed+Infectious",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Exposed term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Asymptomatic+S[USER;cp_beta_1_China,cp_l_a_1_China:(9.090909090909091e-8*cp_beta_1_China*cp_l_a_1_China)]==>Exposed+Asymptomatic",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Exposed term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Hospitalized+S[USER;cp_beta_1_China,cp_l_1_China:(9.090909090909091e-8*cp_beta_1_China*cp_l_1_China)]==>Exposed+Hospitalized",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Exposed_to_Infectious",
+     ""
+    ],
+    [
+     "0.02332",
+     "0",
+     "0",
+     "Exposed==>Infectious",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Exposed_to_Asymptomatic",
+     ""
+    ],
+    [
+     "0.41668",
+     "0",
+     "0",
+     "Exposed==>Asymptomatic",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infectious_to_Hospitalized",
+     ""
+    ],
+    [
+     "0.503",
+     "0",
+     "0",
+     "Infectious==>Hospitalized",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infectious_to_Recovered",
+     ""
+    ],
+    [
+     "0.263",
+     "0",
+     "0",
+     "Infectious==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infectious_to_Deceased",
+     ""
+    ],
+    [
+     "0.003",
+     "0",
+     "0",
+     "Infectious==>Deceased",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Asymptomatic_to_Recovered",
+     ""
+    ],
+    [
+     "1.64",
+     "0",
+     "0",
+     "Asymptomatic==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hospitalized_to_Deceased",
+     ""
+    ],
+    [
+     "0.008",
+     "0",
+     "0",
+     "Hospitalized==>Deceased",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hospitalized_to_Recovered",
+     ""
+    ],
+    [
+     "0.141",
+     "0",
+     "0",
+     "Hospitalized==>Recovered",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cumulative_cases",
+     ""
+    ],
+    [
+     "0.02332",
+     "0",
+     "0",
+     "Exposed==>Cumulative_Cases+Exposed",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Susceptible",
+     "0",
+     "9900000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible [Susceptible]",
+     ""
+    ],
+    [
+     "Exposed",
+     "0",
+     "36600",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Exposed [Exposed]",
+     ""
+    ],
+    [
+     "Infectious",
+     "0",
+     "732",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infectious [Infectious]",
+     ""
+    ],
+    [
+     "Asymptomatic",
+     "0",
+     "2196",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Asymptomatic [Asymptomatic]",
+     ""
+    ],
+    [
+     "Hospitalized",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hospitalized [Hospitalized]",
+     ""
+    ],
+    [
+     "Recovered",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Recovered [Recovered]",
+     ""
+    ],
+    [
+     "Deceased",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Deceased [Deceased]",
+     ""
+    ],
+    [
+     "Cumulative_Cases",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cumulative_Cases [Cumulative_Cases]",
+     ""
+    ],
+    [
+     "p_beta_1_China",
+     "0",
+     "0.334",
+     "N",
+     "0",
+     "No",
+     "EV_P_BETA_1_CHINA.TXT-SET",
+     "parameter beta_1_China [beta_1_China]",
+     ""
+    ],
+    [
+     "p_l_1_China",
+     "0",
+     "0.673",
+     "N",
+     "0",
+     "No",
+     "EV_P_L_1_CHINA.TXT-SET",
+     "parameter l_1_China [l_1_China]",
+     ""
+    ],
+    [
+     "p_l_a_1_China",
+     "0",
+     "8",
+     "N",
+     "0",
+     "No",
+     "EV_P_L_A_1_CHINA.TXT-SET",
+     "parameter l_a_1_China [l_a_1_China]",
+     ""
+    ],
+    [
+     "p_beta_1_Italy",
+     "0",
+     "0.189",
+     "N",
+     "0",
+     "No",
+     "EV_P_BETA_1_ITALY.TXT-SET",
+     "parameter beta_1_Italy [beta_1_Italy]",
+     ""
+    ],
+    [
+     "p_l_1_Italy",
+     "0",
+     "8",
+     "N",
+     "0",
+     "No",
+     "EV_P_L_1_ITALY.TXT-SET",
+     "parameter l_1_Italy [l_1_Italy]",
+     ""
+    ],
+    [
+     "p_l_a_1_Italy",
+     "0",
+     "0.649",
+     "N",
+     "0",
+     "No",
+     "EV_P_L_A_1_ITALY.TXT-SET",
+     "parameter l_a_1_Italy [l_a_1_Italy]",
+     ""
+    ],
+    [
+     "p_beta_1_Spain",
+     "0",
+     "0.382",
+     "N",
+     "0",
+     "No",
+     "EV_P_BETA_1_SPAIN.TXT-SET",
+     "parameter beta_1_Spain [beta_1_Spain]",
+     ""
+    ],
+    [
+     "p_l_1_Spain",
+     "0",
+     "7.69",
+     "N",
+     "0",
+     "No",
+     "EV_P_L_1_SPAIN.TXT-SET",
+     "parameter l_1_Spain [l_1_Spain]",
+     ""
+    ],
+    [
+     "p_l_a_1_Spain",
+     "0",
+     "3.9",
+     "N",
+     "0",
+     "No",
+     "EV_P_L_A_1_SPAIN.TXT-SET",
+     "parameter l_a_1_Spain [l_a_1_Spain]",
+     ""
+    ],
+    [
+     "p_beta_1_France",
+     "0",
+     "0.298",
+     "N",
+     "0",
+     "No",
+     "EV_P_BETA_1_FRANCE.TXT-SET",
+     "parameter beta_1_France [beta_1_France]",
+     ""
+    ],
+    [
+     "p_l_1_France",
+     "0",
+     "8",
+     "N",
+     "0",
+     "No",
+     "EV_P_L_1_FRANCE.TXT-SET",
+     "parameter l_1_France [l_1_France]",
+     ""
+    ],
+    [
+     "p_l_a_1_France",
+     "0",
+     "8",
+     "N",
+     "0",
+     "No",
+     "EV_P_L_A_1_FRANCE.TXT-SET",
+     "parameter l_a_1_France [l_a_1_France]",
+     ""
+    ],
+    [
+     "p_beta_1_Germany",
+     "0",
+     "0.135",
+     "N",
+     "0",
+     "No",
+     "EV_P_BETA_1_GERMANY.TXT-SET",
+     "parameter beta_1_Germany [beta_1_Germany]",
+     ""
+    ],
+    [
+     "p_l_1_Germany",
+     "0",
+     "4.8",
+     "N",
+     "0",
+     "No",
+     "EV_P_L_1_GERMANY.TXT-SET",
+     "parameter l_1_Germany [l_1_Germany]",
+     ""
+    ],
+    [
+     "p_l_a_1_Germany",
+     "0",
+     "4.9",
+     "N",
+     "0",
+     "No",
+     "EV_P_L_A_1_GERMANY.TXT-SET",
+     "parameter l_a_1_Germany [l_a_1_Germany]",
+     ""
+    ],
+    [
+     "p_beta_1_USA",
+     "0",
+     "0.303",
+     "N",
+     "0",
+     "No",
+     "EV_P_BETA_1_USA.TXT-SET",
+     "parameter beta_1_USA [beta_1_USA]",
+     ""
+    ],
+    [
+     "p_l_1_USA",
+     "0",
+     "0.851",
+     "N",
+     "0",
+     "No",
+     "EV_P_L_1_USA.TXT-SET",
+     "parameter l_1_USA [l_1_USA]",
+     ""
+    ],
+    [
+     "p_l_a_1_USA",
+     "0",
+     "4.09",
+     "N",
+     "0",
+     "No",
+     "EV_P_L_A_1_USA.TXT-SET",
+     "parameter l_a_1_USA [l_a_1_USA]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.08000000009",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "80",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.08000000009",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_BETA_1_CHINA.TXT",
+   "key": "O_EV_P_BETA_1_CHINA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "0.14"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_BETA_1_FRANCE.TXT",
+   "key": "O_EV_P_BETA_1_FRANCE.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "0.129"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_BETA_1_GERMANY.TXT",
+   "key": "O_EV_P_BETA_1_GERMANY.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "0.055"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_BETA_1_ITALY.TXT",
+   "key": "O_EV_P_BETA_1_ITALY.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "0.081"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_BETA_1_SPAIN.TXT",
+   "key": "O_EV_P_BETA_1_SPAIN.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "0.16"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_BETA_1_USA.TXT",
+   "key": "O_EV_P_BETA_1_USA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "0.13"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_L_1_CHINA.TXT",
+   "key": "O_EV_P_L_1_CHINA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "0.135"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_L_1_FRANCE.TXT",
+   "key": "O_EV_P_L_1_FRANCE.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "8"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_L_1_GERMANY.TXT",
+   "key": "O_EV_P_L_1_GERMANY.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "1.13"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_L_1_ITALY.TXT",
+   "key": "O_EV_P_L_1_ITALY.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "8"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_L_1_SPAIN.TXT",
+   "key": "O_EV_P_L_1_SPAIN.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "6.49"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_L_1_USA.TXT",
+   "key": "O_EV_P_L_1_USA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "0.851"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_L_A_1_CHINA.TXT",
+   "key": "O_EV_P_L_A_1_CHINA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "8"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_L_A_1_FRANCE.TXT",
+   "key": "O_EV_P_L_A_1_FRANCE.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "8"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_L_A_1_GERMANY.TXT",
+   "key": "O_EV_P_L_A_1_GERMANY.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "4.9"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_L_A_1_ITALY.TXT",
+   "key": "O_EV_P_L_A_1_ITALY.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "0.649"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_L_A_1_SPAIN.TXT",
+   "key": "O_EV_P_L_A_1_SPAIN.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "3.9"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_L_A_1_USA.TXT",
+   "key": "O_EV_P_L_A_1_USA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "18",
+     "0.82"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,561 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:51:08.901847+00:00",
+ "description": "Saeidi2012 - Quorum sensing device that produces GFP\nBioModels BIOMD0000000438 (curated). SBML file: BIOMD0000000438_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000438_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.98e-06 of species peak (worst: s5)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] re14 term 1/6: rate order differs from the stoichiometry; consumed on separate line(s) - s17: zero order, signed\n  [info] re14 term 3/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re14 term 4/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re14 term 5/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Saeidi2012 - Quorum sensing device that produces GFP  (BIOMD0000000438, curated BioModels; source file BIOMD0000000438_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3",
+     ""
+    ],
+    [
+     "0.0696",
+     "0",
+     "0",
+     "s19==>s3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re2",
+     ""
+    ],
+    [
+     "35.7",
+     "0",
+     "0",
+     "s2==>s19",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re4",
+     ""
+    ],
+    [
+     "9600000",
+     "0",
+     "0",
+     "s19+s4==>s42",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re5 term 1/2",
+     ""
+    ],
+    [
+     "10.2",
+     "0",
+     "0",
+     "s17==>s42+s16",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re5 term 2/2",
+     ""
+    ],
+    [
+     "1960000",
+     "0",
+     "0",
+     "s42+s16==>s17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re8",
+     ""
+    ],
+    [
+     "0.0002832",
+     "0",
+     "0",
+     "s4==>s5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1 term 1/2",
+     ""
+    ],
+    [
+     "3.734",
+     "0",
+     "0",
+     "s1==>s2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1 term 2/2",
+     ""
+    ],
+    [
+     "0.348",
+     "0",
+     "0",
+     "s2==>s1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re14 term 1/6",
+     ""
+    ],
+    [
+     "2.63315e-18",
+     "0",
+     "0",
+     "source==>s45",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re14 term 1/6 (consumes s17)",
+     ""
+    ],
+    [
+     "-2.63315e-18",
+     "0",
+     "0",
+     "source==>s17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re14 term 2/6",
+     ""
+    ],
+    [
+     "0.004051",
+     "0",
+     "0",
+     "s45==>s17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re14 term 3/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s17+S[USER;cs17:(4.051e-17*cs17/(1*(cs17+1e-30)^2+5.759999999999999e-14))]==>s45",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re14 term 4/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s17+S[USER;cs17:(9.567000000000001e-17*cs17^3/(6.709065639999999e-14*(cs17+1e-30)^2+1*(cs17+1e-30)^4+5.466618086399998e-28))]==>s45",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re14 term 5/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s17+S[USER;cs17:(6.218550000000001e-18*cs17/(1*(cs17+1e-30)^2+9.4906564e-15))]==>s45",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re14 term 6/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s45+S[USER;cs17:(0.009567*cs17^2/(cs17^2+9.4906564e-15))]==>s17",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "s1",
+     "0",
+     "1e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ptet-LasR [s1]",
+     ""
+    ],
+    [
+     "s19",
+     "0",
+     "1e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LasR [s19]",
+     ""
+    ],
+    [
+     "s3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "sa3_degraded [s3]",
+     ""
+    ],
+    [
+     "s4",
+     "0",
+     "5e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "3OC12HSL [s4]",
+     ""
+    ],
+    [
+     "s16",
+     "0",
+     "1e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pLuxR [s16]",
+     ""
+    ],
+    [
+     "s17",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A pLux [s17]",
+     ""
+    ],
+    [
+     "s5",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "sa6_degraded [s5]",
+     ""
+    ],
+    [
+     "s42",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LasR/AHL [s42]",
+     ""
+    ],
+    [
+     "s2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mRNA(LasR) [s2]",
+     ""
+    ],
+    [
+     "s45",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GFP [s45]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

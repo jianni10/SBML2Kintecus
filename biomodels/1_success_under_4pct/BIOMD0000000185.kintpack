@@ -1,0 +1,620 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:55:03.452696+00:00",
+ "description": "Locke2008_Circadian_Clock\nBioModels BIOMD0000000185 (curated). SBML file: BIOMD0000000185_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000185_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.14e-06 of species peak (worst: V1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R12: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R16: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R18: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R20: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Locke2008_Circadian_Clock  (BIOMD0000000185, curated BioModels; source file BIOMD0000000185_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cZ1:(2006.078299396274/(cZ1^5.6645+293.4793796205506))]==>X1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X1+S[USER;cX1:(8.4297/(1*cX1+0.291))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "V1+S[USER;cV1,cV2:(3.3962/(0.5*cV1+0.5*cV2+4.8283))]==>X1+V1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "V2+S[USER;cV1,cV2:(3.3962/(0.5*cV1+0.5*cV2+4.8283))]==>X1+V2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5",
+     ""
+    ],
+    [
+     "0.1177",
+     "0",
+     "0",
+     "X1==>Y1+X1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Y1+S[USER;cY1:(1.0841/(1*cY1+8.1343))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7",
+     ""
+    ],
+    [
+     "0.3352",
+     "0",
+     "0",
+     "Y1==>Z1+Y1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Z1+S[USER;cZ1:(4.6645/(1*cZ1+9.9849))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9",
+     ""
+    ],
+    [
+     "0.2282",
+     "0",
+     "0",
+     "X1==>V1+X1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "V1+S[USER;cV1:(3.5216/(1*cV1+7.4519))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cZ2:(2006.078299396274/(cZ2^5.6645+293.4793796205506))]==>X2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X2+S[USER;cX2:(8.4297/(1*cX2+0.291))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "V1+S[USER;cV1,cV2:(3.3962/(0.5*cV1+0.5*cV2+4.8283))]==>X2+V1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "V2+S[USER;cV1,cV2:(3.3962/(0.5*cV1+0.5*cV2+4.8283))]==>X2+V2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15",
+     ""
+    ],
+    [
+     "0.1177",
+     "0",
+     "0",
+     "X2==>Y2+X2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Y2+S[USER;cY2:(1.0841/(1*cY2+8.1343))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17",
+     ""
+    ],
+    [
+     "0.3352",
+     "0",
+     "0",
+     "Y2==>Z2+Y2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R18",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Z2+S[USER;cZ2:(4.6645/(1*cZ2+9.9849))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R19",
+     ""
+    ],
+    [
+     "0.2282",
+     "0",
+     "0",
+     "X2==>V2+X2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R20",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "V2+S[USER;cV2:(3.5216/(1*cV2+7.4519))]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "X1",
+     "0",
+     "4.25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "clock gene mRNA [X1]",
+     ""
+    ],
+    [
+     "Y1",
+     "0",
+     "3.25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "clock protein [Y1]",
+     ""
+    ],
+    [
+     "Z1",
+     "0",
+     "2.25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Transcriptional repressor [Z1]",
+     ""
+    ],
+    [
+     "V1",
+     "0",
+     "2.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Neuropeptide [V1]",
+     ""
+    ],
+    [
+     "X2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "clock gene mRNA [X2]",
+     ""
+    ],
+    [
+     "Y2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "clock protein [Y2]",
+     ""
+    ],
+    [
+     "Z2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Transcriptional repressor [Z2]",
+     ""
+    ],
+    [
+     "V2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Neuropeptide [V2]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,693 @@
+{
+ "version": 3,
+ "created": "2026-11-02T00:02:57.412735+00:00",
+ "description": "Srividhya2006_CellCycle\nBioModels BIOMD0000000196 (curated). SBML file: BIOMD0000000196_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000196_url.sedml (auto-generated placeholder)), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): RAN_UNVERIFIED_PARTIAL\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'event' not converted (state-triggered (not a time >= t0 trigger))\n  [info] species 'x2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'x4' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'y5' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'y6' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] cyclincdkcomplexformation term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - Pre_MPF: zero order, signed\n  [info] PreMPFMPFtransition term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PreMPFMPFtransition term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PreMPFMPFtransition term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - x3: zero order, signed\n  [info] MPFPreMPFtransition term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MPFPreMPFtransition term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cdc25phosphorylation term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cdc25phosphorylation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cdc25dephosphorylation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] wee1dephosphorylation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] wee1phosphorylation term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] wee1phosphorylation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [blocker] reaction '_2' not converted (delay)\n  [info] APCdephosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): m1 = m",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Srividhya2006_CellCycle  (BIOMD0000000196, curated BioModels; source file BIOMD0000000196_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cyclinsythesis",
+     ""
+    ],
+    [
+     "0.215",
+     "0",
+     "0",
+     "source==>x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cyclincdkcomplexformation term 1/3",
+     ""
+    ],
+    [
+     "1.1",
+     "0",
+     "0",
+     "x1==>Pre_MPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cyclincdkcomplexformation term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pre_MPF+x1==>2x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cyclincdkcomplexformation term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx1,cx3:(1*cx1*cx3)]==>x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cyclincdkcomplexformation term 3/3 (consumes Pre_MPF)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx1,cx3:((-1*1*cx1*cx3))]==>Pre_MPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cyclindegradation term 1/2",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "x1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cyclindegradation term 2/2",
+     ""
+    ],
+    [
+     "3.5",
+     "0",
+     "0",
+     "x1+x6==>x6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MPFdissociation term 1/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "x3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MPFdissociation term 2/2",
+     ""
+    ],
+    [
+     "0.66",
+     "0",
+     "0",
+     "x3+x6==>x6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PreMPFMPFtransition term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pre_MPF+S[USER;cPre_MPF:(0.7/(1*cPre_MPF+0.01))]==>x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PreMPFMPFtransition term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pre_MPF+S[USER;cPre_MPF,cy4:((-1*0.84/(-1.5*cPre_MPF+1*cy4*(cPre_MPF+1e-30)+0.01*cy4-0.015)))]==>x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PreMPFMPFtransition term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPre_MPF,cy4:(0.84*cPre_MPF*cy4/(-cPre_MPF*cy4+1.5*cPre_MPF-0.01*cy4+0.015))]==>Pre_MPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PreMPFMPFtransition term 3/3 (consumes x3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPre_MPF,cy4:((-1*0.84*cPre_MPF*cy4/(-cPre_MPF*cy4+1.5*cPre_MPF-0.01*cy4+0.015)))]==>x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MPFPreMPFtransition term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x3+S[USER;cx3:(0.55/(1*cx3+0.01))]==>Pre_MPF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MPFPreMPFtransition term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x3+x5+S[USER;cx3,cx5:(2.75/(0.5*cx3+1*cx5*(cx3+1e-30)+0.01*cx5+0.005))]==>Pre_MPF+x5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cdc25phosphorylation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "y4+S[USER;cy4:(0.41/(1*cy4+0.01))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cdc25phosphorylation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "y4+m1+x3+S[USER;cm1,cx3,cy4:(0.41/(1*cm1*cx3*(cy4+1e-30)+0.01*cm1*cx3+0.5*cy4+0.005))]==>m1+x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cdc25dephosphorylation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cy4:(1/(1.01-cy4))]==>y4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cdc25dephosphorylation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "y4+S[USER;cy4:((-1*1/(1*cy4-1.01)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "wee1dephosphorylation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx5:(1/(1.01-cx5))]==>x5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "wee1dephosphorylation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x5+S[USER;cx5:((-1*1/(1*cx5-1.01)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "wee1phosphorylation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x5+S[USER;cx5:(1/(1*cx5+0.01))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "wee1phosphorylation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x5+m1+x3+S[USER;cm1,cx3,cx5:(1/(1*cm1*cx3*(cx5+1e-30)+0.01*cm1*cx3+0.5*cx5+0.005))]==>m1+x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "APCdephosphorylation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x6+S[USER;cx6:(1/(1*cx6+0.01))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cellmass term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "m1==>2m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cellmass term 2/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "m1+m1==>m1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x1",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cyclin [x1]",
+     ""
+    ],
+    [
+     "x3",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MPF [x3]",
+     ""
+    ],
+    [
+     "x5",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Wee1 [x5]",
+     ""
+    ],
+    [
+     "x6",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC_P [x6]",
+     ""
+    ],
+    [
+     "m1",
+     "0",
+     "0.473",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cell_mass [m]",
+     ""
+    ],
+    [
+     "y4",
+     "0",
+     "0.9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cdc25 [y4]",
+     ""
+    ],
+    [
+     "Pre_MPF",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pre_MPF [Pre_MPF]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

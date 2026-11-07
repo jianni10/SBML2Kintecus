@@ -1,0 +1,492 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:11:32.256237+00:00",
+ "description": "Perelson1993 - HIVinfection_CD4Tcells_ModelA\nBioModels BIOMD0000000874 (curated). SBML file: Perelson1993.xml.\nSimulation: 0 to 3750 time units (SED-ML: Perelson1993.sedml), sampling 25.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.93e-06 of species peak (worst: T_1)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): T1 = T",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Perelson1993 - HIVinfection_CD4Tcells_ModelA  (BIOMD0000000874, curated BioModels; source file Perelson1993.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_CD4__T_cell term 1/2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "source==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_CD4__T_cell term 2/2",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "T1==>2T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Death_of_CD4__T_cell term 1/5",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "T1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Death_of_CD4__T_cell term 2/5",
+     ""
+    ],
+    [
+     "1.9999999999999998e-5",
+     "0",
+     "0",
+     "T1+T1==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Death_of_CD4__T_cell term 3/5",
+     ""
+    ],
+    [
+     "2.4e-5",
+     "0",
+     "0",
+     "T1+V==>V",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Death_of_CD4__T_cell term 4/5",
+     ""
+    ],
+    [
+     "1.9999999999999998e-5",
+     "0",
+     "0",
+     "T1+T_1==>T_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Death_of_CD4__T_cell term 5/5",
+     ""
+    ],
+    [
+     "1.9999999999999998e-5",
+     "0",
+     "0",
+     "T1+T_2==>T_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_Latently_infected_T_cell",
+     ""
+    ],
+    [
+     "2.4e-5",
+     "0",
+     "0",
+     "T1+V==>T_1+T1+V",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Death_of_Latently_infected_T_cell",
+     ""
+    ],
+    [
+     "0.023",
+     "0",
+     "0",
+     "T_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_Actively_infected_T_cell",
+     ""
+    ],
+    [
+     "0.003",
+     "0",
+     "0",
+     "T_1==>T_2+T_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Death_of_Actively_infected_T_cell",
+     ""
+    ],
+    [
+     "0.24",
+     "0",
+     "0",
+     "T_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_infectious_virus_particle",
+     ""
+    ],
+    [
+     "240",
+     "0",
+     "0",
+     "T_2==>V+T_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Death_of_infectious_virus_particle term 1/2",
+     ""
+    ],
+    [
+     "2.4",
+     "0",
+     "0",
+     "V==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Death_of_infectious_virus_particle term 2/2",
+     ""
+    ],
+    [
+     "2.4e-5",
+     "0",
+     "0",
+     "V+T1==>T1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "1000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T [T]",
+     ""
+    ],
+    [
+     "T_1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T_1 [T_1]",
+     ""
+    ],
+    [
+     "T_2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T_2 [T_2]",
+     ""
+    ],
+    [
+     "V",
+     "0",
+     "0.001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V [V]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "25",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3750",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "25",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

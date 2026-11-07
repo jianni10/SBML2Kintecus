@@ -1,0 +1,659 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:44:44.451000+00:00",
+ "description": "Wolf2000_Glycolytic_Oscillations\nBioModels BIOMD0000000206 (curated). SBML file: BIOMD0000000206_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000206_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.17e-05 of species peak (worst: at)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] v1: rate order differs from the stoichiometry; consumed on separate line(s) - at: first order\n  [info] v3 term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v3 term 2/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v3 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - s3: zero order, signed\n  [info] v3 term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - s4: zero order, signed\n  [info] v4 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - s5: zero order, signed\n  [info] v10 term 2/2: non-integer reactant coefficient 0.1 on s6o written as a Kintecus coefficient",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wolf2000_Glycolytic_Oscillations  (BIOMD0000000206, curated BioModels; source file BIOMD0000000206_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s1+S[USER;cat:(550*cat/(1*cat^4+1))]==>s2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1 (consumes at)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "at+S[USER;cat,cs1:(1100*cs1/(1*cat^4+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2",
+     ""
+    ],
+    [
+     "9.8",
+     "0",
+     "0",
+     "s2==>2s3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3 term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "na+s3+S[USER;cat,cna:((-1*98967656.72000001/(76411.1*cat+57823.1*cna-363467.5)))]==>s4+at",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3 term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s4+at+S[USER;cat,cna:((-1*1370407.47/(76411.1*cat+57823.1*cna-363467.5)))]==>na+s3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3 term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "na+S[USER;cat,cna,cs4:((-1*1370407.47*cat*cs4/(76411.1*cat+57823.1*cna-363467.5)))]==>s4+at",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3 term 3/4 (consumes s3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cat,cna,cs4:((-1*1370407.47*cat*cna*cs4/(-76411.1*cat-57823.1*cna+363467.5)))]==>s3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3 term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "at+S[USER;cat,cna,cs3:((-1*24741914.180000003*cna*cs3/(76411.1*cat+57823.1*cna-363467.5)))]==>na+s3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3 term 4/4 (consumes s4)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cat,cna,cs3:((-1*24741914.180000003*cat*cna*cs3/(-76411.1*cat-57823.1*cna+363467.5)))]==>s4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4 term 1/2",
+     ""
+    ],
+    [
+     "320",
+     "0",
+     "0",
+     "s4==>at+s5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "at+S[USER;cs4:(80*cs4)]==>s4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4 term 2/2 (consumes s5)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cat,cs4:((-1*80*cat*cs4))]==>s5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5",
+     ""
+    ],
+    [
+     "9.7",
+     "0",
+     "0",
+     "s5==>s6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7",
+     ""
+    ],
+    [
+     "28",
+     "0",
+     "0",
+     "at==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8 term 1/2",
+     ""
+    ],
+    [
+     "85.7",
+     "0",
+     "0",
+     "s3==>na",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8 term 2/2",
+     ""
+    ],
+    [
+     "85.7",
+     "0",
+     "0",
+     "na+s3==>2s3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9",
+     ""
+    ],
+    [
+     "80",
+     "0",
+     "0",
+     "s6o==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10 term 1/2",
+     ""
+    ],
+    [
+     "375",
+     "0",
+     "0",
+     "s6==>0.1s6o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "0.1s6o+S[USER;cs6o:(375*cs6o^0.9)]==>s6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6 term 1/2",
+     ""
+    ],
+    [
+     "2000",
+     "0",
+     "0",
+     "s6==>na",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6 term 2/2",
+     ""
+    ],
+    [
+     "2000",
+     "0",
+     "0",
+     "na+s6==>2s6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v0",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "source==>s1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "s1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Glucose [s1]",
+     ""
+    ],
+    [
+     "at",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP [at]",
+     ""
+    ],
+    [
+     "s2",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "F16P [s2]",
+     ""
+    ],
+    [
+     "s3",
+     "0",
+     "0.6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Triose_Gly3Phos_DHAP [s3]",
+     ""
+    ],
+    [
+     "na",
+     "0",
+     "0.6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NAD [na]",
+     ""
+    ],
+    [
+     "s4",
+     "0",
+     "0.7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "3PG [s4]",
+     ""
+    ],
+    [
+     "s5",
+     "0",
+     "8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pyruvate [s5]",
+     ""
+    ],
+    [
+     "s6",
+     "0",
+     "0.08",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Acetaldehyde [s6]",
+     ""
+    ],
+    [
+     "s6o",
+     "0",
+     "0.02",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "extracellular acetaldehyde [s6o]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

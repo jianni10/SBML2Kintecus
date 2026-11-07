@@ -1,0 +1,369 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:37:15.640272+00:00",
+ "description": "Tyson1991 - Cell Cycle 2 var\nBioModels BIOMD0000000006 (curated). SBML file: BIOMD0000000006_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000006_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.31e-06 of species peak (worst: u)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'z' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dv/dt term 2: rate order differs from the stoichiometry; consumed on separate line(s) - v: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tyson1991 - Cell Cycle 2 var  (BIOMD0000000006, curated BioModels; source file BIOMD0000000006_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule du/dt term 1",
+     ""
+    ],
+    [
+     "0.018",
+     "0",
+     "0",
+     "v==>u+v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule du/dt term 2",
+     ""
+    ],
+    [
+     "180",
+     "0",
+     "0",
+     "u+u+u==>2u",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule du/dt term 3",
+     ""
+    ],
+    [
+     "1.018",
+     "0",
+     "0",
+     "u==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule du/dt term 4",
+     ""
+    ],
+    [
+     "180",
+     "0",
+     "0",
+     "v+u+u==>3u+v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dv/dt term 1",
+     ""
+    ],
+    [
+     "0.015",
+     "0",
+     "0",
+     "source==>v",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dv/dt term 2 (consumes v)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cu:((-1*1*cu))]==>v",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "EmptySet",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "EmptySet [EmptySet]",
+     ""
+    ],
+    [
+     "u",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "u [u]",
+     ""
+    ],
+    [
+     "v",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "v [v]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

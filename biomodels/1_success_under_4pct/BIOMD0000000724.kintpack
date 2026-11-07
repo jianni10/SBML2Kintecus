@@ -1,0 +1,1151 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:58:44.126962+00:00",
+ "description": "Theinmozhi2018 - Mechanism of PD1 inhibiting TCR signaling in Tumor immune regulation\nBioModels BIOMD0000000724 (curated). SBML file: Theinmozhi_2018.xml.\nSimulation: 0 to 1800 time units (SED-ML: Theinmozhi_2018.sedml), sampling 18.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.71e-06 of species peak (worst: PI3Kb)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'LCKt' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'LCKactive' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'CPactive' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'CD28t' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'PI3Kt' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ZAP70t' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'LATt' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'GADSt' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'SLP76t' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'CD3t' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'LCKinactive' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] PD1_P_PD1p1_act term 1/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PD1_P_PD1p1_act term 2/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PD1_P_PD1p1_act term 4/6: rate order differs from the stoichiometry; consumed on separate line(s) - PD1p1: zero order, signed\n  [info] PD1_P_PD1p1_act term 6/6: rate order differs from the stoichiometry; consumed on separate line(s) - PD1p1: zero order, signed\n  [info] PD1p1_P_PD1p2_act term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PD1p1_P_PD1p2_act term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CD28i_P_CD28a term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CD28i_P_CD28a term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CD28a_DP_CD28i term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CD28a_DP_CD28i term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CD3i_P_CD3a term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CD3i_P_CD3a term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CD3a_DP_CD3i term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CD3a_DP_CD3i term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Theinmozhi2018 - Mechanism of PD1 inhibiting TCR signaling in Tumor immune regulation  (BIOMD0000000724, curated BioModels; source file Theinmozhi_2018.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "LCK_P_LCKyi_inh",
+     ""
+    ],
+    [
+     "6e-7",
+     "0",
+     "0",
+     "LCKi==>LCKyi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "LCK_P_LCKya_act",
+     ""
+    ],
+    [
+     "1e-6",
+     "0",
+     "0",
+     "LCKi==>LCKya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "LCKya_P_LCKyiya_act",
+     ""
+    ],
+    [
+     "6e-5",
+     "0",
+     "0",
+     "LCKya==>LCKyiya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "LCKyi_P_LCKpi_inh",
+     ""
+    ],
+    [
+     "0.00075",
+     "0",
+     "0",
+     "LCKyi==>LCKpi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PD1_P_PD1p1_act term 1/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PD1+LCKya+S[USER;cPD1:(7.5/(1*cPD1+1000))]==>PD1p1+LCKya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PD1_P_PD1p1_act term 2/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PD1+LCKyiya+S[USER;cPD1:(7.5/(1*cPD1+1000))]==>PD1p1+LCKyiya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PD1_P_PD1p1_act term 3/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PD1p1+LCKya+PD1+S[USER;cLCKi,cLCKpi,cLCKya,cLCKyi,cLCKyiya,cPD1:(7.5/(41*cLCKi*cPD1+41000*cLCKi+41*cLCKpi*cPD1+41000*cLCKpi+41*cLCKya*cPD1+41000*cLCKya+41*cLCKyi*cPD1+41000*cLCKyi+41*cLCKyiya*cPD1+41000*cLCKyiya))]==>2PD1+LCKya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PD1_P_PD1p1_act term 4/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cLCKi,cLCKpi,cLCKya,cLCKyi,cLCKyiya,cPD1,cPD1p2:(7.5*cLCKya*cPD1*cPD1p2/(41*cLCKi*cPD1+41000*cLCKi+41*cLCKpi*cPD1+41000*cLCKpi+41*cLCKya*cPD1+41000*cLCKya+41*cLCKyi*cPD1+41000*cLCKyi+41*cLCKyiya*cPD1+41000*cLCKyiya))]==>PD1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PD1_P_PD1p1_act term 4/6 (consumes PD1p1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cLCKi,cLCKpi,cLCKya,cLCKyi,cLCKyiya,cPD1,cPD1p2:((-1*7.5*cLCKya*cPD1*cPD1p2/(41*cLCKi*cPD1+41000*cLCKi+41*cLCKpi*cPD1+41000*cLCKpi+41*cLCKya*cPD1+41000*cLCKya+41*cLCKyi*cPD1+41000*cLCKyi+41*cLCKyiya*cPD1+41000*cLCKyiya)))]==>PD1p1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PD1_P_PD1p1_act term 5/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PD1p1+LCKyiya+PD1+S[USER;cLCKi,cLCKpi,cLCKya,cLCKyi,cLCKyiya,cPD1:(7.5/(41*cLCKi*cPD1+41000*cLCKi+41*cLCKpi*cPD1+41000*cLCKpi+41*cLCKya*cPD1+41000*cLCKya+41*cLCKyi*cPD1+41000*cLCKyi+41*cLCKyiya*cPD1+41000*cLCKyiya))]==>2PD1+LCKyiya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PD1_P_PD1p1_act term 6/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cLCKi,cLCKpi,cLCKya,cLCKyi,cLCKyiya,cPD1,cPD1p2:(7.5*cLCKyiya*cPD1*cPD1p2/(41*cLCKi*cPD1+41000*cLCKi+41*cLCKpi*cPD1+41000*cLCKpi+41*cLCKya*cPD1+41000*cLCKya+41*cLCKyi*cPD1+41000*cLCKyi+41*cLCKyiya*cPD1+41000*cLCKyiya))]==>PD1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PD1_P_PD1p1_act term 6/6 (consumes PD1p1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cLCKi,cLCKpi,cLCKya,cLCKyi,cLCKyiya,cPD1,cPD1p2:((-1*7.5*cLCKyiya*cPD1*cPD1p2/(41*cLCKi*cPD1+41000*cLCKi+41*cLCKpi*cPD1+41000*cLCKpi+41*cLCKya*cPD1+41000*cLCKya+41*cLCKyi*cPD1+41000*cLCKyi+41*cLCKyiya*cPD1+41000*cLCKyiya)))]==>PD1p1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PD1p1_P_PD1p2_act term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PD1p1+LCKya+S[USER;cPD1p1:(7.5/(1*cPD1p1+1000))]==>PD1p2+LCKya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PD1p1_P_PD1p2_act term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PD1p1+LCKyiya+S[USER;cPD1p1:(7.5/(1*cPD1p1+1000))]==>PD1p2+LCKyiya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PD1p1_Bd_SHP2 term 1/2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "CP1==>PD1p1+SHP2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PD1p1_Bd_SHP2 term 2/2",
+     ""
+    ],
+    [
+     "0.0065",
+     "0",
+     "0",
+     "PD1p1+SHP2==>CP1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PD1p2_Bd_SHP2 term 1/2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "CP2==>SHP2+PD1p2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PD1p2_Bd_SHP2 term 2/2",
+     ""
+    ],
+    [
+     "0.0065",
+     "0",
+     "0",
+     "SHP2+PD1p2==>CP2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CP2_Diss_SHP2_PD1p1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CP2==>SHP2+PD1p1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CP2_DP_CP1",
+     ""
+    ],
+    [
+     "5e-8",
+     "0",
+     "0",
+     "CP2==>CP1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CP1_Diss_PD1_SHP2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CP1==>SHP2+PD1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD28i_P_CD28a term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD28i+LCKya+S[USER;cCD28i:(1/(1*cCD28i+1000))]==>CD28a+LCKya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD28i_P_CD28a term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD28i+LCKyiya+S[USER;cCD28i:(1/(1*cCD28i+1000))]==>CD28a+LCKyiya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD28a_DP_CD28i term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD28a+CP1+S[USER;cCD28a:(5/(1*cCD28a+500))]==>CD28i+CP1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD28a_DP_CD28i term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD28a+CP2+S[USER;cCD28a:(5/(1*cCD28a+500))]==>CD28i+CP2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD28a_Bd_PI3K term 1/2",
+     ""
+    ],
+    [
+     "0.0009",
+     "0",
+     "0",
+     "PI3Kb==>CD28a+PI3K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD28a_Bd_PI3K term 2/2",
+     ""
+    ],
+    [
+     "1.4e-6",
+     "0",
+     "0",
+     "CD28a+PI3K==>PI3Kb",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD3i_P_CD3a term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD3i+LCKya+S[USER;cCD3i:(3.29/(1*cCD3i+80))]==>CD3a+LCKya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD3i_P_CD3a term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD3i+LCKyiya+S[USER;cCD3i:(3.29/(1*cCD3i+80))]==>CD3a+LCKyiya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD3a_DP_CD3i term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD3a+CP1+S[USER;cCD3a:(5/(1*cCD3a+150))]==>CD3i+CP1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD3a_DP_CD3i term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CD3a+CP2+S[USER;cCD3a:(5/(1*cCD3a+150))]==>CD3i+CP2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD3a_Bd_ZAP70 term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "ZAP70i==>CD3a+ZAP70",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD3a_Bd_ZAP70 term 2/2",
+     ""
+    ],
+    [
+     "7e-5",
+     "0",
+     "0",
+     "CD3a+ZAP70==>ZAP70i",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ZAP70i_P_ZAP70a1 term 1/2",
+     ""
+    ],
+    [
+     "2e-6",
+     "0",
+     "0",
+     "ZAP70i+LCKya==>ZAP70a1+LCKya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ZAP70i_P_ZAP70a1 term 2/2",
+     ""
+    ],
+    [
+     "2e-6",
+     "0",
+     "0",
+     "ZAP70i+LCKyiya==>ZAP70a1+LCKyiya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ZAP70a1_P_ZAP70a2 term 1/2",
+     ""
+    ],
+    [
+     "3e-5",
+     "0",
+     "0",
+     "ZAP70a1+LCKya==>ZAP70a2+LCKya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ZAP70a1_P_ZAP70a2 term 2/2",
+     ""
+    ],
+    [
+     "3e-5",
+     "0",
+     "0",
+     "ZAP70a1+LCKyiya==>ZAP70a2+LCKyiya",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "LATi_P_LATa",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "LATi+ZAP70a2==>LATa+ZAP70a2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "LATa_Bd_GADS term 1/2",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "GADSa==>LATa+GADS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "LATa_Bd_GADS term 2/2",
+     ""
+    ],
+    [
+     "0.0005",
+     "0",
+     "0",
+     "LATa+GADS==>GADSa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GADSa_Bd_SLP76 term 1/2",
+     ""
+    ],
+    [
+     "0.12",
+     "0",
+     "0",
+     "SLP76i==>SLP76+GADSa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GADSa_Bd_SLP76 term 2/2",
+     ""
+    ],
+    [
+     "0.015",
+     "0",
+     "0",
+     "SLP76+GADSa==>SLP76i",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SLP76i_P_SLC76a",
+     ""
+    ],
+    [
+     "0.003",
+     "0",
+     "0",
+     "SLP76i+ZAP70a2==>SLP76a+ZAP70a2",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "LCKi",
+     "0",
+     "25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LCKi [LCKi]",
+     ""
+    ],
+    [
+     "LCKyi",
+     "0",
+     "25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LCKyi [LCKyi]",
+     ""
+    ],
+    [
+     "LCKya",
+     "0",
+     "25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LCKya [LCKya]",
+     ""
+    ],
+    [
+     "LCKyiya",
+     "0",
+     "25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LCKyiya [LCKyiya]",
+     ""
+    ],
+    [
+     "LCKpi",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LCKpi [LCKpi]",
+     ""
+    ],
+    [
+     "PD1",
+     "0",
+     "500",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PD1 [PD1]",
+     ""
+    ],
+    [
+     "PD1p1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PD1p1 [PD1p1]",
+     ""
+    ],
+    [
+     "PD1p2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PD1p2 [PD1p2]",
+     ""
+    ],
+    [
+     "CP1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CP1 [CP1]",
+     ""
+    ],
+    [
+     "SHP2",
+     "0",
+     "300",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SHP2 [SHP2]",
+     ""
+    ],
+    [
+     "CP2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CP2 [CP2]",
+     ""
+    ],
+    [
+     "CD28a",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CD28a [CD28a]",
+     ""
+    ],
+    [
+     "CD28i",
+     "0",
+     "250",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CD28i [CD28i]",
+     ""
+    ],
+    [
+     "PI3K",
+     "0",
+     "500",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI3K [PI3K]",
+     ""
+    ],
+    [
+     "PI3Kb",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI3Kb [PI3Kb]",
+     ""
+    ],
+    [
+     "CD3a",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CD3a [CD3a]",
+     ""
+    ],
+    [
+     "CD3i",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CD3i [CD3i]",
+     ""
+    ],
+    [
+     "ZAP70a1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ZAP70a1 [ZAP70a1]",
+     ""
+    ],
+    [
+     "ZAP70i",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ZAP70i [ZAP70i]",
+     ""
+    ],
+    [
+     "ZAP70",
+     "0",
+     "300",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ZAP70 [ZAP70]",
+     ""
+    ],
+    [
+     "ZAP70a2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ZAP70a2 [ZAP70a2]",
+     ""
+    ],
+    [
+     "LATa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LATa [LATa]",
+     ""
+    ],
+    [
+     "LATi",
+     "0",
+     "300",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LATi [LATi]",
+     ""
+    ],
+    [
+     "GADS",
+     "0",
+     "300",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GADS [GADS]",
+     ""
+    ],
+    [
+     "SLP76",
+     "0",
+     "300",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SLP76 [SLP76]",
+     ""
+    ],
+    [
+     "SLP76i",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SLP76i [SLP76i]",
+     ""
+    ],
+    [
+     "SLP76a",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SLP76a [SLP76a]",
+     ""
+    ],
+    [
+     "GADSa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GADSa [GADSa]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "18",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1800",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "18",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

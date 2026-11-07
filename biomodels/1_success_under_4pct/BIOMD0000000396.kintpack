@@ -1,0 +1,1085 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:59:58.235645+00:00",
+ "description": "Sivakumar2011 - Notch Signaling Pathway\nBioModels BIOMD0000000396 (curated). SBML file: BIOMD0000000396_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000396_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.46e-06 of species peak (worst: s67)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r8 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r8 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r9 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r9 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r11 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r11 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r13 term 2/2: 4 reactants split over 2 lines (Kintecus allows 3 per line)\n  [info] r16 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r16 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r18 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r18 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r25 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r25 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r26 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r26 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r28 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r28 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r29 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r29 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sivakumar2011 - Notch Signaling Pathway  (BIOMD0000000396, curated BioModels; source file BIOMD0000000396_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r30",
+     ""
+    ],
+    [
+     "1.95",
+     "0",
+     "0",
+     "s32==>s75",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r31 term 1/2",
+     ""
+    ],
+    [
+     "0.055",
+     "0",
+     "0",
+     "s35==>s75",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r31 term 2/2",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "s75==>s35",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s15+s82+S[USER;cs15,cs19,cs63:(0.5/(1*cs15+0.3333333333333333*cs19*cs63+0.5*cs19+0.6666666666666666*cs63+1))]==>s19+s63+s82",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s19+s63+s82+S[USER;cs15,cs19,cs63:(0.5/(1*cs15+0.5*cs19+0.6666666666666666*cs63+0.3333333333333333*(cs19+1e-30)*(cs63+1e-30)+1))]==>s15+s82",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s7+S[USER;cs22,cs7:(0.75/(20*cs22+1*cs7+1))]==>s22",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s22+S[USER;cs22,cs7:(0.39999999999999997/(20*cs22+1*cs7+1))]==>s7",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r10 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s63+S[USER;cs25:(2/(cs25+1))]==>s24",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r10 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s24+S[USER;cs25:(0.01/(cs25+1))]==>s63",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r11 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s32+s24+S[USER;cs26,cs28,cs32:(0.5/(0.6666666666666666*cs26*cs28+0.6666666666666666*cs26+1*cs28+1*cs32+1))]==>s28+s26+s24",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r11 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s28+s26+s24+S[USER;cs26,cs28,cs32:(0.3333333333333333/(0.6666666666666666*cs26+1*cs28+1*cs32+0.6666666666666666*(cs26+1e-30)*(cs28+1e-30)+1))]==>s32+s24",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r13 term 1/2",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "s35==>s27+s26+s29+s24",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r13 term 2/2 part 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s27+s26+s29+S[USER;cs24:(0.5*cs24)]==>s35",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r13 term 2/2 part 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s24+S[USER;cs26,cs27,cs29:(0.5*cs26*cs27*cs29)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r16 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s37+S[USER;cs24,cs37,cs39:(0.6/(1*cs24*cs39+1*cs24+1*cs37+1*cs39+1))]==>s24+s39",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r16 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s24+s39+S[USER;cs24,cs37,cs39:(0.6/(1*cs24+1*cs37+1*cs39+1*(cs24+1e-30)*(cs39+1e-30)+1))]==>s37",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r17 term 1/2",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "s37==>s40",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r17 term 2/2",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "s40==>s37",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r18 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s41+S[USER;cs1,cs4,cs41:(7.5/(0.6666666666666666*cs1*cs4+0.6666666666666666*cs1+0.6666666666666666*cs4+1*cs41+1))]==>s4+s1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r18 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s4+s1+S[USER;cs1,cs4,cs41:(3.3333333333333335/(0.6666666666666666*cs1+0.6666666666666666*cs4+1*cs41+0.6666666666666666*(cs1+1e-30)*(cs4+1e-30)+1))]==>s41",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r21 term 1/2",
+     ""
+    ],
+    [
+     "0.34615384615384615",
+     "0",
+     "0",
+     "s53==>s41+s48",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r21 term 2/2",
+     ""
+    ],
+    [
+     "0.34615384615384615",
+     "0",
+     "0",
+     "s41+s48==>s53",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r25 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s53+S[USER;cs15,cs53,cs60:(0.3333333333333333/(0.5333333333333333*cs15*cs60+0.6666666666666666*cs15+0.6666666666666666*cs53+0.8*cs60+1))]==>s15+s60",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r25 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s15+s60+S[USER;cs15,cs53,cs60:(0.4/(0.6666666666666666*cs15+0.6666666666666666*cs53+0.8*cs60+0.5333333333333333*(cs15+1e-30)*(cs60+1e-30)+1))]==>s53",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r26 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s25+S[USER;cs25,cs64:(0.09705882352941177/(0.5882352941176471*cs25+0.6211180124223602*cs64+1))]==>s64",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r26 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s64+S[USER;cs25,cs64:(0.20496894409937888/(0.5882352941176471*cs25+0.6211180124223602*cs64+1))]==>s25",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r28 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s67+S[USER;cs41,cs67,cs7:(4.51219512195122/(0.4763719512195122*cs41*cs7+0.78125*cs41+0.6097560975609756*cs67+0.78125*cs7+1))]==>s7+s41",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r28 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s7+s41+S[USER;cs41,cs67,cs7:(4.0729801829268295/(0.78125*cs41+0.6097560975609756*cs67+0.78125*cs7+0.4763719512195122*(cs41+1e-30)*(cs7+1e-30)+1))]==>s67",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r29 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s67+S[USER;cs15,cs18,cs67:(0.577639751552795/(3.5650623885918002*cs15*cs18+0.53475935828877*cs15+6.666666666666667*cs18+0.6211180124223602*cs67+1))]==>s15+s18",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r29 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s15+s18+S[USER;cs15,cs18,cs67:(3.1729055258467023/(0.53475935828877*cs15+6.666666666666667*cs18+0.6211180124223602*cs67+3.5650623885918002*(cs15+1e-30)*(cs18+1e-30)+1))]==>s67",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re16 term 1/2",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "s82==>s77+s76",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re16 term 2/2",
+     ""
+    ],
+    [
+     "0.004",
+     "0",
+     "0",
+     "s77+s76==>s82",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "s2",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "5",
+     "Fringe [s2]",
+     ""
+    ],
+    [
+     "s4",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "fucose [s4]",
+     ""
+    ],
+    [
+     "s7",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Delta [s7]",
+     ""
+    ],
+    [
+     "s15",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NI_sub_c_sub_t [s15]",
+     ""
+    ],
+    [
+     "s19",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N_sub_tm [s19]",
+     ""
+    ],
+    [
+     "s21",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "0.5",
+     "TACE [s21]",
+     ""
+    ],
+    [
+     "s22",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "a7_degraded [s22]",
+     ""
+    ],
+    [
+     "s23",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "0.5",
+     "Neuralized [s23]",
+     ""
+    ],
+    [
+     "s25",
+     "0",
+     "0.64",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Numb [s25]",
+     ""
+    ],
+    [
+     "s27",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mastermind [s27]",
+     ""
+    ],
+    [
+     "s26",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Su(H) [s26]",
+     ""
+    ],
+    [
+     "s28",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CoR [s28]",
+     ""
+    ],
+    [
+     "s32",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Su(H)/CoR) [s32]",
+     ""
+    ],
+    [
+     "s29",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CoA [s29]",
+     ""
+    ],
+    [
+     "s24",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NI_sub_c_sub_s [s24]",
+     ""
+    ],
+    [
+     "s35",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Mastermind/Su(H)/_br_CoA/NI_sub_c_sub_s) [s35]",
+     ""
+    ],
+    [
+     "s37",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NI_sub_c_sub_s [s37]",
+     ""
+    ],
+    [
+     "s38",
+     "0",
+     "0.6",
+     "Y",
+     "0",
+     "No",
+     "0.6",
+     "Sel 10 [s38]",
+     ""
+    ],
+    [
+     "s39",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ub [s39]",
+     ""
+    ],
+    [
+     "s40",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "a46_degraded [s40]",
+     ""
+    ],
+    [
+     "s1",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Notch [s1]",
+     ""
+    ],
+    [
+     "s18",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Delta/N_sub_ext) [s18]",
+     ""
+    ],
+    [
+     "s41",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Notch [s41]",
+     ""
+    ],
+    [
+     "s42",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "5",
+     "Neurotic [s42]",
+     ""
+    ],
+    [
+     "s48",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Serrate [s48]",
+     ""
+    ],
+    [
+     "s53",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Serrate/Notch) [s53]",
+     ""
+    ],
+    [
+     "s60",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Serrate/N_sub_ext) [s60]",
+     ""
+    ],
+    [
+     "s63",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NI_sub_c_sub_s [s63]",
+     ""
+    ],
+    [
+     "s64",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "a25_degraded [s64]",
+     ""
+    ],
+    [
+     "s65",
+     "0",
+     "0.33",
+     "Y",
+     "0",
+     "No",
+     "0.33",
+     "LNXp80 [s65]",
+     ""
+    ],
+    [
+     "s67",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Notch/Delta) [s67]",
+     ""
+    ],
+    [
+     "s75",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E(spl)-C genes [s75]",
+     ""
+    ],
+    [
+     "s76",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "s76 [s76]",
+     ""
+    ],
+    [
+     "s77",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "s77 [s77]",
+     ""
+    ],
+    [
+     "s81",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "dapt [s81]",
+     ""
+    ],
+    [
+     "s82",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "gama secretase [s82]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,400 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:59:00.773663+00:00",
+ "description": "Reppas2015 - tumor control via alternating immunostimulating and immunosuppressive phases\nBioModels BIOMD0000000749 (curated). SBML file: Reppas2015.xml.\nSimulation: 0 to 14 time units (SED-ML: Reppas2015.sedml), sampling 0.14.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.76e-06 of species peak (worst: E)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'f' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'E_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] tumor_killing: rate order differs from the stoichiometry; consumed on separate line(s) - R1: zero order, signed\n  [info] tumor_nutrient_missuply: rate order differs from the stoichiometry; consumed on separate line(s) - R1: zero order, signed\nRenamed species (Kintecus name = SBML id): E1 = E; R1 = R",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reppas2015 - tumor control via alternating immunostimulating and immunosuppressive phases  (BIOMD0000000749, curated BioModels; source file Reppas2015.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth",
+     ""
+    ],
+    [
+     "0.22333333333333336",
+     "0",
+     "0",
+     "R1==>2R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_death",
+     ""
+    ],
+    [
+     "0.04666666666666667",
+     "0",
+     "0",
+     "R1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_killing (consumes R1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cE1,cR1:((-1*3e-7*cE1*cR1^0.5/(1/(cR1^0.5)+1)))]==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_nutrient_supply",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cR1:(0.201/tanh(3.3333333333333335*cR1))]==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "effector_stimulation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E1+S[USER;cR1:(0.57*cR1^3/(cR1^3+2.72))]==>2E1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "effector_exhaustion",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E1+S[USER;cR1:(0.01*cR1^2.5/(1/(cR1^0.5)+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "effector_death",
+     ""
+    ],
+    [
+     "0.37",
+     "0",
+     "0",
+     "E1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "effector_source",
+     ""
+    ],
+    [
+     "13000",
+     "0",
+     "0",
+     "source==>E1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_nutrient_missuply (consumes R1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cR1:((-1*0.0603/cR1))]==>R1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "E1",
+     "0",
+     "1000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E [E]",
+     ""
+    ],
+    [
+     "R1",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R [R]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.14",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "14",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.14",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

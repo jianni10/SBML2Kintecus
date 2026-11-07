@@ -1,0 +1,596 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:59:26.372653+00:00",
+ "description": "Smallbone2011_TrehaloseBiosynthesis\nBioModels BIOMD0000000380 (curated). SBML file: BIOMD0000000380_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000380_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.97e-06 of species peak (worst: g1p)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] pgi term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] hxt term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] hxk term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] hxk term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] pgm term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] pgm term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] tpp: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] tps: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] nth: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ugp: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Smallbone2011_TrehaloseBiosynthesis  (BIOMD0000000380, curated BioModels; source file BIOMD0000000380_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pgi term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cg6p:(1593.7500000000002/(0.7142857142857143*cg6p+3.1551724137931036))]==>g6p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pgi term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "g6p+S[USER;cg6p:(765/(0.7142857142857143*cg6p+3.1551724137931036))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "hxt term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cglc:(8159.087095150193/(64.90610264845805*cglc+84.90669575432119))]==>glc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "hxt term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "glc+S[USER;cglc:(81.59087095150193/(64.90610264845805*cglc+84.90669575432119))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "hxk term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "glc+S[USER;cg6p,cglc,ct6p:(60936.66666666667/(0.7802415458937199*cg6p+292.59057971014494*cglc+585.1811594202899*ct6p+23.407246376811592))]==>g6p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "hxk term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "g6p+S[USER;cg6p,cglc,ct6p:(15.46946666666667/(0.7802415458937199*cg6p+292.59057971014494*cglc+585.1811594202899*ct6p+23.407246376811592))]==>glc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pgm term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "g6p+S[USER;cg1p,cg6p:(7.089999999999999/(43.47826086956522*cg1p+20*cg6p+1))]==>g1p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pgm term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "g1p+S[USER;cg1p,cg6p:(42.53149370125975/(43.47826086956522*cg1p+20*cg6p+1))]==>g6p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tpp",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "t6p+S[USER;ct6p:(13/(2*ct6p+1))]==>trh",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tps",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "g6p+udg+S[USER;cg6p,cudg:(0.40721159558037306/(0.2631578947368421*cg6p+1.1286681715575622*cudg+0.297017939883569*(cg6p+1e-30)*(cudg+1e-30)+1))]==>t6p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "nth",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "trh+S[USER;ctrh:(5.0836120401337785/(0.33444816053511706*ctrh+1))]==>2glc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ugp",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "g1p+S[USER;cg1p,cudg:(678.9733522727273/(21.56534090909091*cg1p+892.8571428571428*cudg*(cg1p+1e-30)+285.7142857142857*cudg+6.900909090909091))]==>udg",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "glc",
+     "0",
+     "0.09765",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "glucose [glc]",
+     ""
+    ],
+    [
+     "g1p",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "glucose 1-phosphate [g1p]",
+     ""
+    ],
+    [
+     "g6p",
+     "0",
+     "2.675",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "glucose 6-phosphate [g6p]",
+     ""
+    ],
+    [
+     "trh",
+     "0",
+     "0.05",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "trehalose [trh]",
+     ""
+    ],
+    [
+     "t6p",
+     "0",
+     "0.02",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "trehalose 6-phosphate [t6p]",
+     ""
+    ],
+    [
+     "udg",
+     "0",
+     "0.7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "UDP glucose [udg]",
+     ""
+    ],
+    [
+     "adp",
+     "0",
+     "1.282",
+     "Y",
+     "0",
+     "No",
+     "1.282",
+     "ADP [adp]",
+     ""
+    ],
+    [
+     "atp",
+     "0",
+     "2.525",
+     "Y",
+     "0",
+     "No",
+     "2.525",
+     "ATP [atp]",
+     ""
+    ],
+    [
+     "ppi",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "diphosphate [ppi]",
+     ""
+    ],
+    [
+     "f6p",
+     "0",
+     "0.625",
+     "Y",
+     "0",
+     "No",
+     "0.625",
+     "fructose 6-phosphate [f6p]",
+     ""
+    ],
+    [
+     "h",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "H+ [h]",
+     ""
+    ],
+    [
+     "pho",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "phosphate [pho]",
+     ""
+    ],
+    [
+     "udp",
+     "0",
+     "0.2815",
+     "Y",
+     "0",
+     "No",
+     "0.2815",
+     "UDP [udp]",
+     ""
+    ],
+    [
+     "utp",
+     "0",
+     "0.6491",
+     "Y",
+     "0",
+     "No",
+     "0.6491",
+     "UTP [utp]",
+     ""
+    ],
+    [
+     "h2o",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "water [h2o]",
+     ""
+    ],
+    [
+     "glx",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "100",
+     "glucose [glx]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,594 @@
+{
+ "version": 3,
+ "created": "2026-10-25T08:36:21.709733+00:00",
+ "description": "Martins2003_AmadoriDegradation\nBioModels BIOMD0000000050 (curated). SBML file: BIOMD0000000050_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000050_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.28e-06 of species peak (worst: MG)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): X3DG1 = _3DG; X1DG1 = _1DG",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Martins2003_AmadoriDegradation  (BIOMD0000000050, curated BioModels; source file BIOMD0000000050_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1",
+     ""
+    ],
+    [
+     "0.0057",
+     "0",
+     "0",
+     "DFG==>E1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2",
+     ""
+    ],
+    [
+     "0.0156",
+     "0",
+     "0",
+     "DFG==>E2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3",
+     ""
+    ],
+    [
+     "0.0155",
+     "0",
+     "0",
+     "DFG==>Cn+Gly",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4",
+     ""
+    ],
+    [
+     "0.0794",
+     "0",
+     "0",
+     "E1==>Gly+X3DG1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5",
+     ""
+    ],
+    [
+     "0.0907",
+     "0",
+     "0",
+     "X3DG1==>Cn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6",
+     ""
+    ],
+    [
+     "0.0274",
+     "0",
+     "0",
+     "X3DG1==>FA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7",
+     ""
+    ],
+    [
+     "0.2125",
+     "0",
+     "0",
+     "E2==>Gly+X1DG1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9",
+     ""
+    ],
+    [
+     "1.9085",
+     "0",
+     "0",
+     "X1DG1==>AA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10",
+     ""
+    ],
+    [
+     "0.0707",
+     "0",
+     "0",
+     "E1==>Gly+Man",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11",
+     ""
+    ],
+    [
+     "0.1131",
+     "0",
+     "0",
+     "E1==>Glu+Gly",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12",
+     ""
+    ],
+    [
+     "0.0008",
+     "0",
+     "0",
+     "Man==>Glu",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v13",
+     ""
+    ],
+    [
+     "0.0022",
+     "0",
+     "0",
+     "Glu==>X3DG1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v14",
+     ""
+    ],
+    [
+     "0.0034",
+     "0",
+     "0",
+     "Cn+Gly==>Mel",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v15",
+     ""
+    ],
+    [
+     "0.0159",
+     "0",
+     "0",
+     "Cn==>AA+FA+MG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v16",
+     ""
+    ],
+    [
+     "0.0134",
+     "0",
+     "0",
+     "E2==>Fru+Gly",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "DFG",
+     "0",
+     "9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DFG [DFG]",
+     ""
+    ],
+    [
+     "E1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E1 [E1]",
+     ""
+    ],
+    [
+     "E2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E2 [E2]",
+     ""
+    ],
+    [
+     "Cn",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cn [Cn]",
+     ""
+    ],
+    [
+     "Gly",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gly [Gly]",
+     ""
+    ],
+    [
+     "X3DG1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "_3DG [_3DG]",
+     ""
+    ],
+    [
+     "FA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FA [FA]",
+     ""
+    ],
+    [
+     "X1DG1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "_1DG [_1DG]",
+     ""
+    ],
+    [
+     "AA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AA [AA]",
+     ""
+    ],
+    [
+     "Man",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Man [Man]",
+     ""
+    ],
+    [
+     "Glu",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Glu [Glu]",
+     ""
+    ],
+    [
+     "MG",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MG [MG]",
+     ""
+    ],
+    [
+     "Mel",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mel [Mel]",
+     ""
+    ],
+    [
+     "Fru",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fru [Fru]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-06",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-08",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

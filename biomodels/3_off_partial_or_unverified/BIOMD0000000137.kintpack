@@ -1,0 +1,1052 @@
+{
+ "version": 3,
+ "created": "2026-11-06T16:26:34.809870+00:00",
+ "description": "Sedaghat2002_InsulinSignalling_noFeedback\nBioModels BIOMD0000000137 (curated). SBML file: BIOMD0000000137_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000137_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 5.\nRun switches: -ig:mass -INT:5:10:0 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 6.32e-01 of species peak (worst: x6)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 6.32e-01 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] fast reaction 'R12' integrated as normal kinetics\n  [info] events not unrolled as time events (trigger uses 'x6', which changes continuously)\n  [blocker] event 'event_0000002' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'event_0000003' not converted (state-triggered (not a time >= t0 trigger))\n  [info] R16 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - x17: zero order, signed\n  [info] R17 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - x19: zero order, signed\n  [info] time event(s) on 'x1' encoded as time/value pairs in EV_X1.TXT (SET)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5:10:0 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sedaghat2002_InsulinSignalling_noFeedback  (BIOMD0000000137, curated BioModels; source file BIOMD0000000137_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1 term 1/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "x3==>x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x2+S[USER;cx1:(6e-8*cx1)]==>x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2",
+     ""
+    ],
+    [
+     "2500",
+     "0",
+     "0",
+     "x3==>x5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3 term 1/2",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "x4==>x5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x5+S[USER;cx1:(6e-8*cx1)]==>x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "x5==>x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5 term 1/2",
+     ""
+    ],
+    [
+     "0.00033333334",
+     "0",
+     "0",
+     "x2==>x6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5 term 2/2",
+     ""
+    ],
+    [
+     "0.003",
+     "0",
+     "0",
+     "x6==>x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6 term 1/2",
+     ""
+    ],
+    [
+     "0.0021",
+     "0",
+     "0",
+     "x4==>x7",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6 term 2/2",
+     ""
+    ],
+    [
+     "0.00021",
+     "0",
+     "0",
+     "x7==>x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7 term 1/2",
+     ""
+    ],
+    [
+     "0.0021",
+     "0",
+     "0",
+     "x5==>x8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7 term 2/2",
+     ""
+    ],
+    [
+     "0.00021",
+     "0",
+     "0",
+     "x8==>x5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9",
+     ""
+    ],
+    [
+     "1.67e-18",
+     "0",
+     "0",
+     "x6==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10",
+     ""
+    ],
+    [
+     "0.461",
+     "0",
+     "0",
+     "x7==>x6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11",
+     ""
+    ],
+    [
+     "0.461",
+     "0",
+     "0",
+     "x8==>x6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 1/3",
+     ""
+    ],
+    [
+     "1.396",
+     "0",
+     "0",
+     "x10==>x9",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 2/3",
+     ""
+    ],
+    [
+     "0.00463768115942029",
+     "0",
+     "0",
+     "x9+x4==>x10+x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 3/3",
+     ""
+    ],
+    [
+     "0.00463768115942029",
+     "0",
+     "0",
+     "x9+x5==>x10+x5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13 term 1/2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "x12==>x10+x11",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13 term 2/2",
+     ""
+    ],
+    [
+     "0.000706",
+     "0",
+     "0",
+     "x10+x11==>x12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14 term 1/3",
+     ""
+    ],
+    [
+     "0.13145",
+     "0",
+     "0",
+     "x14==>x13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14 term 2/3",
+     ""
+    ],
+    [
+     "42.15",
+     "0",
+     "0",
+     "x13==>x14",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14 term 3/3",
+     ""
+    ],
+    [
+     "0.30429",
+     "0",
+     "0",
+     "x14+x12==>x13+x12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15 term 1/2",
+     ""
+    ],
+    [
+     "2.961",
+     "0",
+     "0",
+     "x15==>x13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15 term 2/2",
+     ""
+    ],
+    [
+     "2.77",
+     "0",
+     "0",
+     "x13==>x15",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16 term 1/3",
+     ""
+    ],
+    [
+     "6.9315",
+     "0",
+     "0",
+     "x17==>x16",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx16:(0.07701666666666666*cx16)]==>x16",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16 term 2/3 (consumes x17)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx16:((-1*0.07701666666666666*cx16))]==>x17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16 term 3/3",
+     ""
+    ],
+    [
+     "0.24844086021505377",
+     "0",
+     "0",
+     "x16+x13==>x17+x13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 1/3",
+     ""
+    ],
+    [
+     "6.9315",
+     "0",
+     "0",
+     "x19==>x18",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx18:(0.07701666666666666*cx18)]==>x18",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 2/3 (consumes x19)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx18:((-1*0.07701666666666666*cx18))]==>x19",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 3/3",
+     ""
+    ],
+    [
+     "0.24844086021505377",
+     "0",
+     "0",
+     "x18+x13==>x19+x13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R18",
+     ""
+    ],
+    [
+     "0.11088",
+     "0",
+     "0",
+     "source==>x20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R19",
+     ""
+    ],
+    [
+     "0.001155",
+     "0",
+     "0",
+     "x20==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R20 term 1/4",
+     ""
+    ],
+    [
+     "0.00696",
+     "0",
+     "0",
+     "x20==>x21",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R20 term 2/4",
+     ""
+    ],
+    [
+     "0.167",
+     "0",
+     "0",
+     "x21==>x20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R20 term 3/4",
+     ""
+    ],
+    [
+     "0.0022962497703750235",
+     "0",
+     "0",
+     "x20+x17==>x21+x17",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R20 term 4/4",
+     ""
+    ],
+    [
+     "0.009184999081500094",
+     "0",
+     "0",
+     "x20+x19==>x21+x19",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x1",
+     "0",
+     "100000000",
+     "Y",
+     "0",
+     "No",
+     "EV_X1.TXT-SET",
+     "Insulin [x1]",
+     ""
+    ],
+    [
+     "x2",
+     "0",
+     "900",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Unbound Insulin Receptor [x2]",
+     ""
+    ],
+    [
+     "x3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Unphosphorylated once bound receptor [x3]",
+     ""
+    ],
+    [
+     "x5",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphorylated once bound receptor [x5]",
+     ""
+    ],
+    [
+     "x4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphorylated twice bound receptor [x4]",
+     ""
+    ],
+    [
+     "x6",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Unbound unphosphorylated intracellular receptor [x6]",
+     ""
+    ],
+    [
+     "x7",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphorylated twice bound intracellular receptor [x7]",
+     ""
+    ],
+    [
+     "x8",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphorylated once bound intracellular receptor [x8]",
+     ""
+    ],
+    [
+     "x9",
+     "0",
+     "1000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Unphosphorylated IRS1 [x9]",
+     ""
+    ],
+    [
+     "x10",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphorylated IRS1 [x10]",
+     ""
+    ],
+    [
+     "x11",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI3 Kinase [x11]",
+     ""
+    ],
+    [
+     "x12",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRS1- PI3 Kinase Complex [x12]",
+     ""
+    ],
+    [
+     "x13",
+     "0",
+     "0.31",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI3,4,5P3 [x13]",
+     ""
+    ],
+    [
+     "x14",
+     "0",
+     "99.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI4,5P2 [x14]",
+     ""
+    ],
+    [
+     "x15",
+     "0",
+     "0.29",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI3,4P2 [x15]",
+     ""
+    ],
+    [
+     "x16",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Unactivated Akt [x16]",
+     ""
+    ],
+    [
+     "x17",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Activated Akt [x17]",
+     ""
+    ],
+    [
+     "x18",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Unactivated PKC [x18]",
+     ""
+    ],
+    [
+     "x19",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Activated PKC [x19]",
+     ""
+    ],
+    [
+     "x20",
+     "0",
+     "96",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Intracellular GLUT4 [x20]",
+     ""
+    ],
+    [
+     "x21",
+     "0",
+     "4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cell surface GLUT4 [x21]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "5.000000005",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "5.000000005",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_X1.TXT",
+   "key": "O_EV_X1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "15",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

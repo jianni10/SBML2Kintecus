@@ -1,0 +1,1330 @@
+{
+ "version": 3,
+ "created": "2026-11-06T06:11:20.638106+00:00",
+ "description": "Yugi2014 - Insulin induced signalling (PFKL phosphorylation) - model 1\nBioModels BIOMD0000000540 (curated). SBML file: BIOMD0000000540_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000540_url.sedml (auto-generated placeholder); duration chosen from the dynamics: default), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.02e-02 of species peak (worst: s11)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 1.02e-02 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 's22' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] 's4' goes below zero in the SBML: integrated as s4_o = value + 2, output as s4 = OUTC[s4_o;-2*source]\n  [info] 's5' goes below zero in the SBML: integrated as s5_o = value + 500, output as s5 = OUTC[s5_o;-500*source]\n  [info] 's9' goes below zero in the SBML: integrated as s9_o = value + 5, output as s9 = OUTC[s9_o;-5*source]\n  [info] 's14' goes below zero in the SBML: integrated as s14_o = value + 2000, output as s14 = OUTC[s14_o;-2000*source]\n  [info] 's15' goes below zero in the SBML: integrated as s15_o = value + 1000, output as s15 = OUTC[s15_o;-1000*source]\n  [info] 's16' goes below zero in the SBML: integrated as s16_o = value + 500, output as s16 = OUTC[s16_o;-500*source]\n  [info] 's17' goes below zero in the SBML: integrated as s17_o = value + 100, output as s17 = OUTC[s17_o;-100*source]\n  [info] 's18' goes below zero in the SBML: integrated as s18_o = value + 2, output as s18 = OUTC[s18_o;-2*source]\n  [info] 's20' goes below zero in the SBML: integrated as s20_o = value + 20, output as s20 = OUTC[s20_o;-20*source]\n  [info] 's21' goes below zero in the SBML: integrated as s21_o = value + 200, output as s21 = OUTC[s21_o;-200*source]\n  [info] 's19' goes below zero in the SBML: integrated as s19_o = value + 1000, output as s19 = OUTC[s19_o;-1000*source]\n  [info] time event(s) on 'k_akg' encoded as time/value pairs in EV_P_K_AKG.TXT (SET)\n  [info] time event(s) on 'k_cit' encoded as time/value pairs in EV_P_K_CIT.TXT (SET)\n  [info] time event(s) on 'k_f6p' encoded as time/value pairs in EV_P_K_F6P.TXT (SET)\n  [info] time event(s) on 'k_icit' encoded as time/value pairs in EV_P_K_ICIT.TXT (SET)\n  [info] time event(s) on 'k_f26bp' encoded as time/value pairs in EV_P_K_F26BP.TXT (SET)\n  [info] time event(s) on 'k_mal' encoded as time/value pairs in EV_P_K_MAL.TXT (SET)\n  [info] time event(s) on 'k_pep' encoded as time/value pairs in EV_P_K_PEP.TXT (SET)\n  [info] time event(s) on 'k_pfkl_s775' encoded as time/value pairs in EV_P_K_PFKL_S775.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_k_mal = k_mal; p_k_akg = k_akg; p_k_pep = k_pep; p_k_icit = k_icit; p_k_f26bp = k_f26bp; p_k_cit = k_cit; p_k_pfkl_s775 = k_pfkl_s775; p_k_f6p = k_f6p",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Yugi2014 - Insulin induced signalling (PFKL phosphorylation) - model 1  (BIOMD0000000540, curated BioModels; source file BIOMD0000000540_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1 (shifted s4_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cs10,cs13,cs3,cs5_o,cs6,cs7,cs8,cs9_o:(7639619404816908.0*cs13*cs3*(cs9_o-5)/((1*cs10+41.30426029)*(1*cs13+6.283705757)*(1*cs3+0.014114844)*(1*cs6+1784.508205)*(1*cs7+24661.01154)*(1*cs8+9.544729149)*(1*(cs5_o-500)+0.633518366)*(1*(cs9_o-5)+1.282443082)))]==>s4_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re2 (shifted s4_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cs10,cs4_o,cs9_o:((-1*173.9983358564925*cs10*(cs4_o-2)/(1*cs10*(cs4_o-2)*(cs9_o-5)+17.51744342*cs10*(cs4_o-2)+0.104089638*cs10*(cs9_o-5)+1.8233843442732818*cs10+0.0211646*(cs4_o-2)*(cs9_o-5)+0.37074968300693195*(cs4_o-2)+0.0022030155524147997*(cs9_o-5)+0.0385912002928063)))]==>s4_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 (shifted s4_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cs4_o:((-1*0.008187906*(cs4_o-2)))]==>s4_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cs4_o:(0.008187906*(cs4_o-2))]==>s11",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re4 (shifted s14_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_mal:((-1*1*cp_k_mal))]==>s14_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_mal:(1*cp_k_mal)]==>s8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re5 (shifted s15_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_akg:((-1*1*cp_k_akg))]==>s15_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_akg:(1*cp_k_akg)]==>s7",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re6 (shifted s16_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_pep:((-1*1*cp_k_pep))]==>s16_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re6 (shifted s5_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_pep:(1*cp_k_pep)]==>s5_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re7 (shifted s17_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_icit:((-1*1*cp_k_icit))]==>s17_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_icit:(1*cp_k_icit)]==>s6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re8 (shifted s18_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_f26bp:((-1*1*cp_k_f26bp))]==>s18_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re8 (shifted s9_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_f26bp:(1*cp_k_f26bp)]==>s9_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re9 (shifted s19_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_cit:((-1*1*cp_k_cit))]==>s19_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_cit:(1*cp_k_cit)]==>s10",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re10 (shifted s20_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_pfkl_s775:((-1*1*cp_k_pfkl_s775))]==>s20_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_pfkl_s775:(1*cp_k_pfkl_s775)]==>s13",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 (shifted s21_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_f6p:((-1*1*cp_k_f6p))]==>s21_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_k_f6p:(1*cp_k_f6p)]==>s3",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "s1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "PFKL [s1]",
+     ""
+    ],
+    [
+     "s2",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "FBPase [s2]",
+     ""
+    ],
+    [
+     "s3",
+     "0",
+     "14.0774258421",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "F6P [s3]",
+     ""
+    ],
+    [
+     "s4_o",
+     "0",
+     "106.07239819",
+     "N",
+     "0",
+     "No",
+     "No",
+     "F1,6BP + 2 (shifted state) [__shifted__s4]",
+     ""
+    ],
+    [
+     "s5_o",
+     "0",
+     "608.094519859",
+     "N",
+     "0",
+     "No",
+     "No",
+     "PEP + 500 (shifted state) [__shifted__s5]",
+     ""
+    ],
+    [
+     "s6",
+     "0",
+     "1.79487179487",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Isocitrate [s6]",
+     ""
+    ],
+    [
+     "s7",
+     "0",
+     "25.1885369533",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "2-oxoglutarate [s7]",
+     ""
+    ],
+    [
+     "s8",
+     "0",
+     "68.8788335846",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Malate [s8]",
+     ""
+    ],
+    [
+     "s9_o",
+     "0",
+     "6",
+     "N",
+     "0",
+     "No",
+     "No",
+     "F2,6BP + 5 (shifted state) [__shifted__s9]",
+     ""
+    ],
+    [
+     "s10",
+     "0",
+     "17.7476118652",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Citrate [s10]",
+     ""
+    ],
+    [
+     "s11",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "sa4_degraded [s11]",
+     ""
+    ],
+    [
+     "s12",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "ALDO [s12]",
+     ""
+    ],
+    [
+     "s13",
+     "0",
+     "0.768939345",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pPFKL [s13]",
+     ""
+    ],
+    [
+     "s14_o",
+     "0",
+     "2000",
+     "N",
+     "0",
+     "No",
+     "No",
+     "sa8_degraded + 2000 (shifted state) [__shifted__s14]",
+     ""
+    ],
+    [
+     "s15_o",
+     "0",
+     "1000",
+     "N",
+     "0",
+     "No",
+     "No",
+     "sa7_degraded + 1000 (shifted state) [__shifted__s15]",
+     ""
+    ],
+    [
+     "s16_o",
+     "0",
+     "500",
+     "N",
+     "0",
+     "No",
+     "No",
+     "sa5_degraded + 500 (shifted state) [__shifted__s16]",
+     ""
+    ],
+    [
+     "s17_o",
+     "0",
+     "100",
+     "N",
+     "0",
+     "No",
+     "No",
+     "sa6_degraded + 100 (shifted state) [__shifted__s17]",
+     ""
+    ],
+    [
+     "s18_o",
+     "0",
+     "2",
+     "N",
+     "0",
+     "No",
+     "No",
+     "sa9_degraded + 2 (shifted state) [__shifted__s18]",
+     ""
+    ],
+    [
+     "s20_o",
+     "0",
+     "20",
+     "N",
+     "0",
+     "No",
+     "No",
+     "sa13_degraded + 20 (shifted state) [__shifted__s20]",
+     ""
+    ],
+    [
+     "s21_o",
+     "0",
+     "200",
+     "N",
+     "0",
+     "No",
+     "No",
+     "sa3_degraded + 200 (shifted state) [__shifted__s21]",
+     ""
+    ],
+    [
+     "s19_o",
+     "0",
+     "1000",
+     "N",
+     "0",
+     "No",
+     "No",
+     "sa10_degraded + 1000 (shifted state) [__shifted__s19]",
+     ""
+    ],
+    [
+     "p_k_mal",
+     "0",
+     "1.005530417",
+     "N",
+     "0",
+     "No",
+     "EV_P_K_MAL.TXT-SET",
+     "parameter k_mal [k_mal]",
+     ""
+    ],
+    [
+     "p_k_akg",
+     "0",
+     "-3.544494721",
+     "N",
+     "0",
+     "No",
+     "EV_P_K_AKG.TXT-SET",
+     "parameter k_akg [k_akg]",
+     ""
+    ],
+    [
+     "p_k_pep",
+     "0",
+     "43.99195576",
+     "N",
+     "0",
+     "No",
+     "EV_P_K_PEP.TXT-SET",
+     "parameter k_pep [k_pep]",
+     ""
+    ],
+    [
+     "p_k_icit",
+     "0",
+     "-0.038210156",
+     "N",
+     "0",
+     "No",
+     "EV_P_K_ICIT.TXT-SET",
+     "parameter k_icit [k_icit]",
+     ""
+    ],
+    [
+     "p_k_f26bp",
+     "0",
+     "-0.083430336",
+     "N",
+     "0",
+     "No",
+     "EV_P_K_F26BP.TXT-SET",
+     "parameter k_f26bp [k_f26bp]",
+     ""
+    ],
+    [
+     "p_k_cit",
+     "0",
+     "-0.351935646",
+     "N",
+     "0",
+     "No",
+     "EV_P_K_CIT.TXT-SET",
+     "parameter k_cit [k_cit]",
+     ""
+    ],
+    [
+     "p_k_pfkl_s775",
+     "0",
+     "-0.011384308",
+     "N",
+     "0",
+     "No",
+     "EV_P_K_PFKL_S775.TXT-SET",
+     "parameter k_pfkl_s775 [k_pfkl_s775]",
+     ""
+    ],
+    [
+     "p_k_f6p",
+     "0",
+     "-0.930115636",
+     "N",
+     "0",
+     "No",
+     "EV_P_K_F6P.TXT-SET",
+     "parameter k_f6p [k_f6p]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "s4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s4_o;-2*source]",
+     "No",
+     "F1,6BP (= s4_o - 2) [s4]",
+     ""
+    ],
+    [
+     "s5",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s5_o;-500*source]",
+     "No",
+     "PEP (= s5_o - 500) [s5]",
+     ""
+    ],
+    [
+     "s9",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s9_o;-5*source]",
+     "No",
+     "F2,6BP (= s9_o - 5) [s9]",
+     ""
+    ],
+    [
+     "s14",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s14_o;-2000*source]",
+     "No",
+     "sa8_degraded (= s14_o - 2000) [s14]",
+     ""
+    ],
+    [
+     "s15",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s15_o;-1000*source]",
+     "No",
+     "sa7_degraded (= s15_o - 1000) [s15]",
+     ""
+    ],
+    [
+     "s16",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s16_o;-500*source]",
+     "No",
+     "sa5_degraded (= s16_o - 500) [s16]",
+     ""
+    ],
+    [
+     "s17",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s17_o;-100*source]",
+     "No",
+     "sa6_degraded (= s17_o - 100) [s17]",
+     ""
+    ],
+    [
+     "s18",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s18_o;-2*source]",
+     "No",
+     "sa9_degraded (= s18_o - 2) [s18]",
+     ""
+    ],
+    [
+     "s20",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s20_o;-20*source]",
+     "No",
+     "sa13_degraded (= s20_o - 20) [s20]",
+     ""
+    ],
+    [
+     "s21",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s21_o;-200*source]",
+     "No",
+     "sa3_degraded (= s21_o - 200) [s21]",
+     ""
+    ],
+    [
+     "s19",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s19_o;-1000*source]",
+     "No",
+     "sa10_degraded (= s19_o - 1000) [s19]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1.000000001",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1.000000001",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_K_AKG.TXT",
+   "key": "O_EV_P_K_AKG.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2",
+     "-1.357466063"
+    ],
+    [
+     "5",
+     "0"
+    ],
+    [
+     "10",
+     "0.36199095"
+    ],
+    [
+     "15",
+     "1.085972851"
+    ],
+    [
+     "20",
+     "0.226244344"
+    ],
+    [
+     "30",
+     "0.369532428"
+    ],
+    [
+     "45",
+     "0.369532428"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_K_CIT.TXT",
+   "key": "O_EV_P_K_CIT.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2",
+     "0.351935646"
+    ],
+    [
+     "5",
+     "-0.211161388"
+    ],
+    [
+     "10",
+     "1.085972851"
+    ],
+    [
+     "15",
+     "0.452488688"
+    ],
+    [
+     "20",
+     "0.377073906"
+    ],
+    [
+     "30",
+     "0.306686777"
+    ],
+    [
+     "45",
+     "0.306686777"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_K_F6P.TXT",
+   "key": "O_EV_P_K_F6P.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2",
+     "1.357466063"
+    ],
+    [
+     "5",
+     "0.271493213"
+    ],
+    [
+     "10",
+     "-1.055806938"
+    ],
+    [
+     "15",
+     "-0.12066365"
+    ],
+    [
+     "20",
+     "-0.165912519"
+    ],
+    [
+     "30",
+     "0.070387129"
+    ],
+    [
+     "45",
+     "0.070387129"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_K_ICIT.TXT",
+   "key": "O_EV_P_K_ICIT.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2",
+     "-0.038210156"
+    ],
+    [
+     "5",
+     "-0.038210156"
+    ],
+    [
+     "10",
+     "-0.038210156"
+    ],
+    [
+     "15",
+     "-0.018099548"
+    ],
+    [
+     "20",
+     "0.031674208"
+    ],
+    [
+     "30",
+     "0.031674208"
+    ],
+    [
+     "45",
+     "0.031674208"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_K_F26BP.TXT",
+   "key": "O_EV_P_K_F26BP.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2",
+     "0.028924455"
+    ],
+    [
+     "5",
+     "0.119075279"
+    ],
+    [
+     "10",
+     "-0.050207413"
+    ],
+    [
+     "15",
+     "0.100115778"
+    ],
+    [
+     "20",
+     "-0.032601514"
+    ],
+    [
+     "30",
+     "-0.003055632"
+    ],
+    [
+     "45",
+     "-0.003055632"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_K_MAL.TXT",
+   "key": "O_EV_P_K_MAL.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2",
+     "-1.508295626"
+    ],
+    [
+     "5",
+     "-0.904977376"
+    ],
+    [
+     "10",
+     "3.921568627"
+    ],
+    [
+     "15",
+     "1.809954751"
+    ],
+    [
+     "20",
+     "1.206636501"
+    ],
+    [
+     "30",
+     "0.502765209"
+    ],
+    [
+     "45",
+     "0.502765209"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_K_PEP.TXT",
+   "key": "O_EV_P_K_PEP.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2",
+     "7.54147813"
+    ],
+    [
+     "5",
+     "-6.334841629"
+    ],
+    [
+     "10",
+     "9.049773756"
+    ],
+    [
+     "15",
+     "-4.826546003"
+    ],
+    [
+     "20",
+     "-3.619909502"
+    ],
+    [
+     "30",
+     "-0.301659125"
+    ],
+    [
+     "45",
+     "-0.301659125"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_K_PFKL_S775.TXT",
+   "key": "O_EV_P_K_PFKL_S775.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2",
+     "-0.011384308"
+    ],
+    [
+     "5",
+     "0.057596439"
+    ],
+    [
+     "10",
+     "0.006730598"
+    ],
+    [
+     "15",
+     "0.006730598"
+    ],
+    [
+     "20",
+     "0.006730598"
+    ],
+    [
+     "30",
+     "0.006730598"
+    ],
+    [
+     "45",
+     "0.00673059831429"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

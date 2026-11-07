@@ -1,0 +1,544 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:43:08.548221+00:00",
+ "description": "Clarke2006_Smad_signalling\nBioModels BIOMD0000000112 (curated). SBML file: BIOMD0000000112_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000112_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.31e-06 of species peak (worst: Pi)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_0: rate order differs from the stoichiometry; consumed on separate line(s) - receptor: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Clarke2006_Smad_signalling  (BIOMD0000000112, curated BioModels; source file BIOMD0000000112_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "R_smad_cyt+receptor+S[USER;cR_smad_cyt:(3.51/(1*cR_smad_cyt+289000))]==>R_smad_P_cyt+receptor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 1/2",
+     ""
+    ],
+    [
+     "5.63",
+     "0",
+     "0",
+     "R_smad_nuc==>R_smad_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 2/2",
+     ""
+    ],
+    [
+     "0.563",
+     "0",
+     "0",
+     "R_smad_cyt==>R_smad_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4 term 1/2",
+     ""
+    ],
+    [
+     "0.783",
+     "0",
+     "0",
+     "smad4_nuc==>smad4_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4 term 2/2",
+     ""
+    ],
+    [
+     "0.00497",
+     "0",
+     "0",
+     "smad4_cyt==>smad4_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 1/2",
+     ""
+    ],
+    [
+     "0.0399",
+     "0",
+     "0",
+     "R_smad_P_smad4_cyt==>smad4_cyt+R_smad_P_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 2/2",
+     ""
+    ],
+    [
+     "6.5e-5",
+     "0",
+     "0",
+     "smad4_cyt+R_smad_P_cyt==>R_smad_P_smad4_cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3",
+     ""
+    ],
+    [
+     "16.6",
+     "0",
+     "0",
+     "R_smad_P_smad4_cyt==>R_smad_P_smad4_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 1/2",
+     ""
+    ],
+    [
+     "0.0492",
+     "0",
+     "0",
+     "R_smad_P_smad4_nuc==>R_smad_P_nuc+smad4_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 2/2",
+     ""
+    ],
+    [
+     "0.000144",
+     "0",
+     "0",
+     "R_smad_P_nuc+smad4_nuc==>R_smad_P_smad4_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "R_smad_P_nuc+S[USER;cR_smad_P_nuc:(17100/(1*cR_smad_P_nuc+8950))]==>Pi+R_smad_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0 (consumes receptor)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*100*exp((-1*cTIME_/90))))]==>receptor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "receptor",
+     "0",
+     "10000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "receptors [receptor]",
+     ""
+    ],
+    [
+     "R_smad_cyt",
+     "0",
+     "162000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R-Smad_cyt [R_smad_cyt]",
+     ""
+    ],
+    [
+     "R_smad_P_cyt",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R-Smad-P_cyt [R_smad_P_cyt]",
+     ""
+    ],
+    [
+     "smad4_cyt",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad4_cyt [smad4_cyt]",
+     ""
+    ],
+    [
+     "R_smad_P_smad4_cyt",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R-Smad-P-Smad4_cyt [R_smad_P_smad4_cyt]",
+     ""
+    ],
+    [
+     "R_smad_P_smad4_nuc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R-Smad-P-Smad4_nuc [R_smad_P_smad4_nuc]",
+     ""
+    ],
+    [
+     "R_smad_nuc",
+     "0",
+     "18000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R-Smad_nuc [R_smad_nuc]",
+     ""
+    ],
+    [
+     "R_smad_P_nuc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R-Smad-P_nuc [R_smad_P_nuc]",
+     ""
+    ],
+    [
+     "smad4_nuc",
+     "0",
+     "30000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad4_nuc [smad4_nuc]",
+     ""
+    ],
+    [
+     "Pi",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pi [Pi]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

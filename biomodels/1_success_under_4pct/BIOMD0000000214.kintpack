@@ -1,0 +1,776 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:33:29.239881+00:00",
+ "description": "Akman2008_Circadian_Clock_Model2\nBioModels BIOMD0000000214 (curated). SBML file: BIOMD0000000214_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000214_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.68e-06 of species peak (worst: E1F)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'sFrq_tot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'lFrq_tot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Frq_tot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'WC1_tot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] MFdeg: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MWdeg: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PWdeg: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PWLdeg: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Akman2008_Circadian_Clock_Model2  (BIOMD0000000214, curated BioModels; source file BIOMD0000000214_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MFtrn term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPF,cPFp,cPW:(3.59797*cPW^1.34979/(12.439358129120537*cPF*cPW^1.34979+4.343024262353018*cPF+12.439358129120537*cPFp*cPW^1.34979+4.343024262353018*cPFp+cPW^1.34979+0.3491357204505592))]==>MF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MFtrn term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPF,cPFp,cPWL:(24.9736*cPWL^1.02419/(478.4688995215311*cPF*cPWL^1.02419+1040.3266506346367*cPF+478.4688995215311*cPFp*cPWL^1.02419+1040.3266506346367*cPFp+cPWL^1.02419+2.174282699826391))]==>MF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MFdeg",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MF+S[USER;cMF:(1.43549/(1*cMF+0.13056))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E1Ftrl",
+     ""
+    ],
+    [
+     "0.2834",
+     "0",
+     "0",
+     "MF==>E1F+MF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E1Fdeg",
+     ""
+    ],
+    [
+     "0.34603",
+     "0",
+     "0",
+     "E1F==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E2Ftrl",
+     ""
+    ],
+    [
+     "0.09292",
+     "0",
+     "0",
+     "E1F==>E2F",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E2Fdeg",
+     ""
+    ],
+    [
+     "0.34603",
+     "0",
+     "0",
+     "E2F==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PFtrl",
+     ""
+    ],
+    [
+     "0.09292",
+     "0",
+     "0",
+     "E2F==>PF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PFdeg",
+     ""
+    ],
+    [
+     "0.21251",
+     "0",
+     "0",
+     "PF==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MWtrn term 1/2",
+     ""
+    ],
+    [
+     "0.46227",
+     "0",
+     "0",
+     "source==>MW",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MWtrn term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPWL:(0.02917*cPWL^2.18234/(cPWL^2.18234+10.73697760848446))]==>MW",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MWdeg",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MW+S[USER;cMW:(0.50309/(1*cMW+0.11167))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E1Wtrl term 1/3",
+     ""
+    ],
+    [
+     "0.20695",
+     "0",
+     "0",
+     "MW==>E1W+MW",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E1Wtrl term 2/3",
+     ""
+    ],
+    [
+     "3.02856",
+     "0",
+     "0",
+     "MW+PF==>E1W+MW+PF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E1Wtrl term 3/3",
+     ""
+    ],
+    [
+     "3.02856",
+     "0",
+     "0",
+     "MW+PFp==>E1W+MW+PFp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E1Wdeg",
+     ""
+    ],
+    [
+     "0.00028",
+     "0",
+     "0",
+     "E1W==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E2Wtrl",
+     ""
+    ],
+    [
+     "0.14979",
+     "0",
+     "0",
+     "E1W==>E2W",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E2Wdeg",
+     ""
+    ],
+    [
+     "0.00028",
+     "0",
+     "0",
+     "E2W==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PWtrl",
+     ""
+    ],
+    [
+     "0.14979",
+     "0",
+     "0",
+     "E2W==>PW",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PWdeg",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PW+S[USER;cPW:(3.36641/(1*cPW+81.10381))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PWtrs",
+     ""
+    ],
+    [
+     "35.40005",
+     "0",
+     "0",
+     "PWL==>PW",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PWLdeg",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PWL+S[USER;cPWL:(0.41085/(1*cPWL+93.03664))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E1Fptrl",
+     ""
+    ],
+    [
+     "0.34578",
+     "0",
+     "0",
+     "MF==>E1Fp+MF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E1Fpdeg",
+     ""
+    ],
+    [
+     "0.40119",
+     "0",
+     "0",
+     "E1Fp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E2Fptrl",
+     ""
+    ],
+    [
+     "0.09588",
+     "0",
+     "0",
+     "E1Fp==>E2Fp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "E2Fpdeg",
+     ""
+    ],
+    [
+     "0.40119",
+     "0",
+     "0",
+     "E2Fp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PFptrl",
+     ""
+    ],
+    [
+     "0.09588",
+     "0",
+     "0",
+     "E2Fp==>PFp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PFpdeg",
+     ""
+    ],
+    [
+     "0.18191",
+     "0",
+     "0",
+     "PFp==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "E1F",
+     "0",
+     "0.43076",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "s-Frq_1 [E1F]",
+     ""
+    ],
+    [
+     "E1Fp",
+     "0",
+     "0.45583",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "l-Frq_1 [E1Fp]",
+     ""
+    ],
+    [
+     "E1W",
+     "0",
+     "5.84748",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "WC-1_1 [E1W]",
+     ""
+    ],
+    [
+     "E2F",
+     "0",
+     "0.10647",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "s-Frq_2 [E2F]",
+     ""
+    ],
+    [
+     "E2Fp",
+     "0",
+     "0.09872",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "l-Frq_2 [E2Fp]",
+     ""
+    ],
+    [
+     "E2W",
+     "0",
+     "5.70265",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "WC-1_2 [E2W]",
+     ""
+    ],
+    [
+     "MF",
+     "0",
+     "0.6935",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Frq mRNA [MF]",
+     ""
+    ],
+    [
+     "MW",
+     "0",
+     "1.2689",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "WC-1 mRNA [MW]",
+     ""
+    ],
+    [
+     "PF",
+     "0",
+     "0.06565",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "s-Frq [PF]",
+     ""
+    ],
+    [
+     "PFp",
+     "0",
+     "0.07719",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "l-Frq [PFp]",
+     ""
+    ],
+    [
+     "PW",
+     "0",
+     "26.4393",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "WC-1 [PW]",
+     ""
+    ],
+    [
+     "PWL",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "WC-1* [PWL]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

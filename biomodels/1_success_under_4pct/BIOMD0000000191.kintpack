@@ -1,0 +1,383 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:55:11.139887+00:00",
+ "description": "Monta\u00f1ez2008_Arginine_catabolism\nBioModels BIOMD0000000191 (curated). SBML file: BIOMD0000000191_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000191_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.18e-06 of species peak (worst: ARGin)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Arginase: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Ornithine_efflux term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Ornithine_efflux term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] NOS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ODC: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Monta\u00f1ez2008_Arginine_catabolism  (BIOMD0000000191, curated BioModels; source file BIOMD0000000191_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Arginase",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARGin+S[USER;cARGin,cORN:(110/(1*cARGin+1.5*cORN+1500))]==>ORN",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Arginine_transport term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cARGin,cORN:(117.75700934579439/(0.0011806375442739079*cARGin+0.002777777777777778*cORN+1))]==>ARGin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Arginine_transport term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cARGin,cORN:(132.4125/(0.014285714285714285*cARGin+0.002777777777777778*cORN+1))]==>ARGin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ornithine_efflux term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ORN+S[USER;cARGin,cORN:(302.2429906542056/(1*cARGin+1*cORN+847))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ornithine_efflux term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ORN+S[USER;cARGin,cORN:(28.0875/(5.142857142857143*cARGin+1*cORN+360))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NOS",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ARGin+S[USER;cARGin:(1.33/(1*cARGin+16))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ODC",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ORN+S[USER;cORN:(0.013/(1*cORN+90))]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "ARGex",
+     "0",
+     "330",
+     "Y",
+     "0",
+     "No",
+     "330",
+     "Arginine ex [ARGex]",
+     ""
+    ],
+    [
+     "ORN",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ornithine [ORN]",
+     ""
+    ],
+    [
+     "ARGin",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Arginine in [ARGin]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

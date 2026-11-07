@@ -1,0 +1,679 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:04:58.885887+00:00",
+ "description": "Mandlik2015 - Tristable genetic circuit of Leishmania\nBioModels BIOMD0000000584 (curated). SBML file: BIOMD0000000584_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000584_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.48e-06 of species peak (worst: proSLS1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'AUR1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'LACI' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'LAMDAR' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'SLS1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'SLS4' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'TETR' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'as1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ope1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'rs1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'rs2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'rs3' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'rs4' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'rs5' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'rs6' is defined by an assignment rule; not a Kintecus state (not output)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mandlik2015 - Tristable genetic circuit of Leishmania  (BIOMD0000000584, curated BioModels; source file BIOMD0000000584_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pp1_v1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>proSLS1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pp1_v2",
+     ""
+    ],
+    [
+     "0.07",
+     "0",
+     "0",
+     "proSLS1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pp5_v1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cproTETR:(6.25/(1*cproTETR^2+1))]==>proLAMDAR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pp5_v2",
+     ""
+    ],
+    [
+     "0.0415",
+     "0",
+     "0",
+     "proLAMDAR==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ia1_bind_forward",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ia1_ActiveTF+IPTG==>ia1_InactiveTF",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ia1_bind_reverse",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "ia1_InactiveTF==>ia1_ActiveTF+IPTG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pp2_v1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cproSLS1:(4.056195999999999/(1*cproSLS1^2+1))]==>proAUR1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pp2_v2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "proAUR1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pp6_v1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cproLACI:(6.25/(1*cproLACI^2+1))]==>proTETR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pp6_v2",
+     ""
+    ],
+    [
+     "0.08",
+     "0",
+     "0",
+     "proTETR==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pp3_v1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cproAUR1:(6.604899999999999/(1*cproAUR1^2+1))]==>proSLS4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pp3_v2",
+     ""
+    ],
+    [
+     "0.04",
+     "0",
+     "0",
+     "proSLS4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pp4_v1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cproLAMDAR:(5.76/(1*cproLAMDAR^2+1))]==>proLACI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pp4_v2",
+     ""
+    ],
+    [
+     "0.07",
+     "0",
+     "0",
+     "proLACI==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "IPTG",
+     "0",
+     "10000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IPTG [IPTG]",
+     ""
+    ],
+    [
+     "ia1_ActiveTF",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ia1_ActiveTF [ia1_ActiveTF]",
+     ""
+    ],
+    [
+     "ia1_InactiveTF",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ia1_InactiveTF [ia1_InactiveTF]",
+     ""
+    ],
+    [
+     "p1",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "p1 [p1]",
+     ""
+    ],
+    [
+     "p2",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "p2 [p2]",
+     ""
+    ],
+    [
+     "p3",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "p3 [p3]",
+     ""
+    ],
+    [
+     "pAUR1",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "pAUR1 [pAUR1]",
+     ""
+    ],
+    [
+     "pSLS1",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "pSLS1 [pSLS1]",
+     ""
+    ],
+    [
+     "pSLS4",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "pSLS4 [pSLS4]",
+     ""
+    ],
+    [
+     "proAUR1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "proAUR1 [proAUR1]",
+     ""
+    ],
+    [
+     "proLACI",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "proLACI [proLACI]",
+     ""
+    ],
+    [
+     "proLAMDAR",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "proLAMDAR [proLAMDAR]",
+     ""
+    ],
+    [
+     "proSLS1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "proSLS1 [proSLS1]",
+     ""
+    ],
+    [
+     "proSLS4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "proSLS4 [proSLS4]",
+     ""
+    ],
+    [
+     "proTETR",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "proTETR [proTETR]",
+     ""
+    ],
+    [
+     "ter1",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "ter1 [ter1]",
+     ""
+    ],
+    [
+     "ter2",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "ter2 [ter2]",
+     ""
+    ],
+    [
+     "ter3",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "ter3 [ter3]",
+     ""
+    ],
+    [
+     "ter4",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "ter4 [ter4]",
+     ""
+    ],
+    [
+     "ter5",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "ter5 [ter5]",
+     ""
+    ],
+    [
+     "ter6",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "ter6 [ter6]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

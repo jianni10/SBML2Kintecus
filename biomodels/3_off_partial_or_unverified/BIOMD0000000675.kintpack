@@ -1,0 +1,1673 @@
+{
+ "version": 3,
+ "created": "2026-11-06T15:23:26.082382+00:00",
+ "description": "Chen2000_CellCycle\nBioModels BIOMD0000000675 (curated). SBML file: BIOMD0000000675.xml.\nSimulation: 0 to 175 time units (SED-ML: MODEL1006230004.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 1.44e+00 of species peak (worst: BUD)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 1.44e+00 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] events not unrolled as time events (trigger uses 'SPN', which changes continuously)\n  [blocker] event 'Event_detection_for_END_M' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Event_detection_for_Cell_Division_and_BUD_SPN_reset' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Event_detection_for_START_S' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Event_detection_for_ORI_reset' not converted (state-triggered (not a time >= t0 trigger))\n  [info] species 'SBF' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Clb2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Mcm1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Sic1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Swi5' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Clb5' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Cln3' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'MBF' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Bck2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dCdc20_T/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - Cdc20_T: zero order, signed\n  [info] rate rule dHct1/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dClb2_Sic1/dt term 8: rate order differs from the stoichiometry; consumed on separate line(s) - Clb2_Sic1: zero order, signed\n  [info] rate rule dSic1_T/dt term 6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dSic1_T/dt term 7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dSic1_T/dt term 8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dSic1_T/dt term 9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dSic1_T/dt term 10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dClb5_Sic1/dt term 7: rate order differs from the stoichiometry; consumed on separate line(s) - Clb5_Sic1: zero order, signed\n  [info] rate rule dClb2_T/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - Clb2_T: zero order, signed\n  [info] rate rule dORI/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - p_ORI: zero order, signed\n  [info] rate rule dORI/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - p_ORI: zero order, signed\n  [info] rate rule dBUD/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - p_BUD: zero order, signed\n  [info] rate rule dSPN/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - p_SPN: zero order, signed\nRenamed species (Kintecus name = SBML id): p_mass = mass; p_ORI = ORI; p_BUD = BUD; p_SPN = SPN",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chen2000_CellCycle  (BIOMD0000000675, curated BioModels; source file BIOMD0000000675.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCln2/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cClb2_Sic1,cClb2_T,cClb5_Sic1,cClb5_T,cCln2,cp_mass:(-0.1*cCln2+0.05*cp_mass*(-0.01*cClb5_Sic1+0.01*cClb5_T+0.02*cCln2+0.004050000000000001*cp_mass+0.030000000000000002*cp_mass/(1*cp_mass+6))/(-6.06*cClb2_Sic1+6.06*cClb2_T+0.495*cClb5_Sic1-0.495*cClb5_T-0.99*cCln2-0.20047500000000001*cp_mass-1.485*cp_mass/(1*cp_mass+6)+(-(-0.02*cClb5_Sic1+0.02*cClb5_T+0.04*cCln2+0.008100000000000001*cp_mass+0.060000000000000005*cp_mass/(1*cp_mass+6))*(-6*cClb2_Sic1+6*cClb2_T+0.5*cClb5_Sic1-0.5*cClb5_T-1*cCln2-0.2025*cp_mass-1.5*cp_mass/(1*cp_mass+6)+0.5)+(-6.06*cClb2_Sic1+6.06*cClb2_T+0.495*cClb5_Sic1-0.495*cClb5_T-0.99*cCln2-0.20047500000000001*cp_mass-1.485*cp_mass/(1*cp_mass+6)+0.505)^2)^0.5+0.505))]==>Cln2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCdc20/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20_T==>Cdc20+Cdc20_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCdc20/dt term 2",
+     ""
+    ],
+    [
+     "1.18",
+     "0",
+     "0",
+     "Cdc20==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCdc20/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20+S[USER;cSW3,cSW4:(9.9*cSW3*cSW4)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCdc20/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20+S[USER;cSW1,cSW2:(1659.9*cSW1*cSW2)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCdc20/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20+S[USER;cSW1,cSW2,cTIME_:(0.8250000000000001*cSW1*cSW2*cTIME_)]==>2Cdc20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCdc20/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20+S[USER;cSW1,cSW2,cSW3,cSW4:(1659.9*cSW1*cSW2*cSW3*cSW4)]==>2Cdc20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCdc20/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20+S[USER;cSW1,cSW2,cSW3,cSW4,cTIME_:(0.8250000000000001*cSW1*cSW2*cSW3*cSW4*cTIME_)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCdc20_T/dt term 1",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "source==>Cdc20_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCdc20_T/dt term 2",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "Clb2_T==>Cdc20_T+Clb2_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCdc20_T/dt term 3 (consumes Cdc20_T)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cClb2_Sic1:((-1*0.06*cClb2_Sic1))]==>Cdc20_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCdc20_T/dt term 4",
+     ""
+    ],
+    [
+     "0.08",
+     "0",
+     "0",
+     "Cdc20_T==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dHct1/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cHct1:(0.04/(1.05-cHct1))]==>Hct1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dHct1/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20+S[USER;cHct1:(2/(1.05-cHct1))]==>Hct1+Cdc20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dHct1/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Hct1+S[USER;cHct1:((-1*0.04/(1*cHct1-1.05)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dHct1/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb5_Sic1+Hct1+S[USER;cHct1:(0.32/(cHct1+0.05))]==>2Hct1+Clb5_Sic1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dHct1/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb2_Sic1+Hct1+S[USER;cHct1:(0.64/(cHct1+0.05))]==>2Hct1+Clb2_Sic1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dHct1/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Hct1+Cdc20+S[USER;cHct1:((-1*2/(1*cHct1-1.05)))]==>Cdc20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dHct1/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Hct1+Clb5_T+S[USER;cHct1:(0.32/(1*cHct1+0.05))]==>Clb5_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dHct1/dt term 8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Hct1+Clb2_T+S[USER;cHct1:(0.64/(1*cHct1+0.05))]==>Clb2_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dHct1/dt term 9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Hct1+Cln2+S[USER;cHct1:(0.64/(1*cHct1+0.05))]==>Cln2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dHct1/dt term 10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Hct1+S[USER;cHct1,cp_mass:(0.0128*cp_mass/(6*cHct1+1*cp_mass*(cHct1+1e-30)+0.05*cp_mass+0.30000000000000004))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 1",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "Clb2_Sic1+Clb2_Sic1==>3Clb2_Sic1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 2",
+     ""
+    ],
+    [
+     "0.07",
+     "0",
+     "0",
+     "Clb2_Sic1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 3",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "Clb2_Sic1+Clb5_Sic1==>2Clb2_Sic1+Clb5_Sic1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 4",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "Clb2_T+Sic1_T==>Clb2_Sic1+Clb2_T+Sic1_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb2_Sic1+Clb2_Sic1+S[USER;cSic1_T:(0.0201/(cSic1_T+0.05))]==>3Clb2_Sic1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 6",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "Clb2_Sic1+Clb2_T==>Clb2_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 7",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "Clb2_Sic1+Sic1_T==>Sic1_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 8 (consumes Clb2_Sic1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cClb2_T,cClb5_Sic1:((-1*50*cClb2_T*cClb5_Sic1))]==>Clb2_Sic1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 9",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "Clb2_Sic1+Cdc20==>Cdc20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 10",
+     ""
+    ],
+    [
+     "1.99",
+     "0",
+     "0",
+     "Clb2_Sic1+Hct1==>Hct1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 11",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb2_Sic1+Clb5_Sic1+S[USER;cSic1_T:(0.3/(cSic1_T+0.05))]==>2Clb2_Sic1+Clb5_Sic1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 12",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb2_Sic1+Clb5_T+S[USER;cSic1_T:(0.3/(cSic1_T+0.05))]==>Clb5_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb2_Sic1+Cln2+S[USER;cSic1_T:(0.3/(cSic1_T+0.05))]==>Cln2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 14",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb2_Sic1+Clb2_T+S[USER;cSic1_T:(0.0201/(cSic1_T+0.05))]==>Clb2_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 15",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb2_Sic1+S[USER;cSic1_T,cp_mass:(0.0016200000000000001*cp_mass/(cSic1_T+0.05))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_Sic1/dt term 16",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb2_Sic1+S[USER;cSic1_T,cp_mass:(0.12*cp_mass/(1*cSic1_T*cp_mass+6*cSic1_T+0.05*cp_mass+0.30000000000000004))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dSic1_T/dt term 1",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "source==>Sic1_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dSic1_T/dt term 2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Sic1_T==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dSic1_T/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20+S[USER;cCdc20,cClb2_Sic1,cClb2_T:(0.020000000000000004/(-0.9*cCdc20-0.22*cClb2_Sic1+0.22*cClb2_T+(0.4*cCdc20^2+0.08000000000000002*cCdc20*cClb2_Sic1-0.08000000000000002*cCdc20*cClb2_T-0.12*cCdc20+(-0.9*cCdc20-0.22*cClb2_Sic1+0.22*cClb2_T+0.33)^2)^0.5+0.33))]==>Sic1_T+Cdc20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dSic1_T/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb5_Sic1+Sic1_T+S[USER;cSic1_T:(0.3/(cSic1_T+0.05))]==>2Sic1_T+Clb5_Sic1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dSic1_T/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb2_Sic1+Sic1_T+S[USER;cSic1_T:(0.0201/(cSic1_T+0.05))]==>2Sic1_T+Clb2_Sic1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dSic1_T/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Sic1_T+Clb5_T+S[USER;cSic1_T:(0.3/(1*cSic1_T+0.05))]==>Clb5_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dSic1_T/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Sic1_T+Cln2+S[USER;cSic1_T:(0.3/(1*cSic1_T+0.05))]==>Cln2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dSic1_T/dt term 8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Sic1_T+Clb2_T+S[USER;cSic1_T:(0.0201/(1*cSic1_T+0.05))]==>Clb2_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dSic1_T/dt term 9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Sic1_T+S[USER;cSic1_T,cp_mass:(0.0016200000000000001*cp_mass/(1*cSic1_T+0.05))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dSic1_T/dt term 10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Sic1_T+S[USER;cSic1_T,cp_mass:(0.12*cp_mass/(6*cSic1_T+1*cp_mass*(cSic1_T+1e-30)+0.05*cp_mass+0.30000000000000004))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 1",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "Clb5_Sic1+Clb5_Sic1==>3Clb5_Sic1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 2",
+     ""
+    ],
+    [
+     "0.16",
+     "0",
+     "0",
+     "Clb5_Sic1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 3",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "Clb2_Sic1+Clb5_Sic1==>2Clb5_Sic1+Clb2_Sic1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 4",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "Clb5_T+Sic1_T==>Clb5_Sic1+Clb5_T+Sic1_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb5_Sic1+Clb5_Sic1+S[USER;cSic1_T:(0.3/(cSic1_T+0.05))]==>3Clb5_Sic1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 6",
+     ""
+    ],
+    [
+     "0.25",
+     "0",
+     "0",
+     "Clb5_Sic1+Cdc20==>Cdc20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 7 (consumes Clb5_Sic1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cClb2_Sic1,cClb5_T:((-1*50*cClb2_Sic1*cClb5_T))]==>Clb5_Sic1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 8",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "Clb5_Sic1+Clb5_T==>Clb5_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 9",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "Clb5_Sic1+Sic1_T==>Sic1_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb2_Sic1+Clb5_Sic1+S[USER;cSic1_T:(0.0201/(cSic1_T+0.05))]==>2Clb5_Sic1+Clb2_Sic1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 11",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb5_Sic1+Clb5_T+S[USER;cSic1_T:(0.3/(cSic1_T+0.05))]==>Clb5_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 12",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb5_Sic1+Cln2+S[USER;cSic1_T:(0.3/(cSic1_T+0.05))]==>Cln2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb5_Sic1+Clb2_T+S[USER;cSic1_T:(0.0201/(cSic1_T+0.05))]==>Clb2_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 14",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb5_Sic1+S[USER;cSic1_T,cp_mass:(0.0016200000000000001*cp_mass/(cSic1_T+0.05))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_Sic1/dt term 15",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb5_Sic1+S[USER;cSic1_T,cp_mass:(0.12*cp_mass/(1*cSic1_T*cp_mass+6*cSic1_T+0.05*cp_mass+0.30000000000000004))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb5_T/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCdc20,cClb2_Sic1,cClb2_T,cClb5_Sic1,cClb5_T,cCln2,cp_mass:(-cClb5_T*(0.25*cCdc20+0.1)+cp_mass*(0.02*(-0.01*cClb5_Sic1+0.01*cClb5_T+0.02*cCln2+0.004050000000000001*cp_mass+0.030000000000000002*cp_mass/(1*cp_mass+6))/(-6.06*cClb2_Sic1+6.06*cClb2_T+0.495*cClb5_Sic1-0.495*cClb5_T-0.99*cCln2-0.20047500000000001*cp_mass-1.485*cp_mass/(1*cp_mass+6)+(-(-0.02*cClb5_Sic1+0.02*cClb5_T+0.04*cCln2+0.008100000000000001*cp_mass+0.060000000000000005*cp_mass/(1*cp_mass+6))*(-6*cClb2_Sic1+6*cClb2_T+0.5*cClb5_Sic1-0.5*cClb5_T-1*cCln2-0.2025*cp_mass-1.5*cp_mass/(1*cp_mass+6)+0.5)+(-6.06*cClb2_Sic1+6.06*cClb2_T+0.495*cClb5_Sic1-0.495*cClb5_T-0.99*cCln2-0.20047500000000001*cp_mass-1.485*cp_mass/(1*cp_mass+6)+0.505)^2)^0.5+0.505)+0.006))]==>Clb5_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_T/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_mass:(0.002*cp_mass)]==>Clb2_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_T/dt term 2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Clb2_T==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_T/dt term 3",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "Clb2_T+Cdc20==>Cdc20",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_T/dt term 4",
+     ""
+    ],
+    [
+     "1.99",
+     "0",
+     "0",
+     "Clb2_T+Hct1==>Hct1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_T/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb2_T+S[USER;cClb2_Sic1,cClb2_T,cp_mass:(0.1*cp_mass/((4*cClb2_Sic1^2-8*cClb2_Sic1*cClb2_T+0.6*cClb2_Sic1+4*cClb2_T^2-0.6*cClb2_T+0.09)^0.5+0.3))]==>2Clb2_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dClb2_T/dt term 6 (consumes Clb2_T)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cClb2_Sic1,cClb2_T,cp_mass:((-1*0.1*cClb2_Sic1*cp_mass/((4*cClb2_Sic1^2-8*cClb2_Sic1*cClb2_T+0.6*cClb2_Sic1+4*cClb2_T^2-0.6*cClb2_T+0.09)^0.5+0.3)))]==>Clb2_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dmass/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_mass:(0.005776*cp_mass)]==>p_mass",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dORI/dt term 1",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Clb5_T==>p_ORI+Clb5_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dORI/dt term 2",
+     ""
+    ],
+    [
+     "0.8",
+     "0",
+     "0",
+     "Clb2_T==>p_ORI+Clb2_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dORI/dt term 3 (consumes p_ORI)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cClb5_Sic1:((-1*2*cClb5_Sic1))]==>p_ORI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dORI/dt term 4",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "p_ORI==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dORI/dt term 5 (consumes p_ORI)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cClb2_Sic1:((-1*0.8*cClb2_Sic1))]==>p_ORI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBUD/dt term 1",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "Clb5_T==>p_BUD+Clb5_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBUD/dt term 2",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "Cln2==>p_BUD+Cln2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBUD/dt term 3",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "p_BUD==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBUD/dt term 4 (consumes p_BUD)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cClb5_Sic1:((-1*0.3*cClb5_Sic1))]==>p_BUD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBUD/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_mass:(0.006*cp_mass/(1*cp_mass+6))]==>p_BUD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dSPN/dt term 1",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "p_SPN==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dSPN/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Clb2_T+S[USER;cClb2_Sic1,cClb2_T:(0.08/(-cClb2_Sic1+cClb2_T+0.2))]==>p_SPN+Clb2_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dSPN/dt term 3 (consumes p_SPN)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cClb2_Sic1,cClb2_T:((-1*0.08*cClb2_Sic1/(-cClb2_Sic1+cClb2_T+0.2)))]==>p_SPN",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Cln2",
+     "0",
+     "0.0078",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cln2 [Cln2]",
+     ""
+    ],
+    [
+     "Cdc20",
+     "0",
+     "0.6848",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdc20 [Cdc20]",
+     ""
+    ],
+    [
+     "Cdc20_T",
+     "0",
+     "0.8332",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdc20_T [Cdc20_T]",
+     ""
+    ],
+    [
+     "Hct1",
+     "0",
+     "0.9946",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hct1 [Hct1]",
+     ""
+    ],
+    [
+     "Hct1_T",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "Hct1_T [Hct1_T]",
+     ""
+    ],
+    [
+     "Clb2_Sic1",
+     "0",
+     "0.079",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Clb2_Sic1 [Clb2_Sic1]",
+     ""
+    ],
+    [
+     "Sic1_T",
+     "0",
+     "0.1231",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Sic1_T [Sic1_T]",
+     ""
+    ],
+    [
+     "Clb5_Sic1",
+     "0",
+     "0.0207",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Clb5_Sic1 [Clb5_Sic1]",
+     ""
+    ],
+    [
+     "Bck2_0",
+     "0",
+     "0.0027",
+     "Y",
+     "0",
+     "No",
+     "0.0027",
+     "Bck2_0 [Bck2_0]",
+     ""
+    ],
+    [
+     "Cln3_max",
+     "0",
+     "0.02",
+     "Y",
+     "0",
+     "No",
+     "0.02",
+     "Cln3_max [Cln3_max]",
+     ""
+    ],
+    [
+     "Clb5_T",
+     "0",
+     "0.0614",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Clb5_T [Clb5_T]",
+     ""
+    ],
+    [
+     "Clb2_T",
+     "0",
+     "0.2342",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Clb2_T [Clb2_T]",
+     ""
+    ],
+    [
+     "p_mass",
+     "0",
+     "0.6608",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter mass [mass]",
+     ""
+    ],
+    [
+     "p_ORI",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter ORI [ORI]",
+     ""
+    ],
+    [
+     "p_BUD",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter BUD [BUD]",
+     ""
+    ],
+    [
+     "p_SPN",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter SPN [SPN]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "0",
+     "time switch at 2000 [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "time switch at 2012 [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "0",
+     "time switch at 1000 [__switch__]",
+     ""
+    ],
+    [
+     "SW4",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "time switch at 2000 [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.5",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "175",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.5",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

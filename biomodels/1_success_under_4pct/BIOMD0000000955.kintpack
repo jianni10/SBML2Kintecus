@@ -1,0 +1,1065 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:32:18.612905+00:00",
+ "description": "Giordano2020 - SIDARTHE model of COVID-19 spread in Italy\nBioModels BIOMD0000000955 (curated). SBML file: Giordano2020.xml.\nSimulation: 0 to 360 time units (SED-ML: Giordano2020.sedml), sampling 0.3333333333333333.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.07e-04 of species peak (worst: Diagnosed)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time event(s) on 'alpha' encoded as time/value pairs in EV_P_ALPHA.TXT (SET)\n  [info] time event(s) on 'beta' encoded as time/value pairs in EV_P_BETA.TXT (SET)\n  [info] time event(s) on 'gamma' encoded as time/value pairs in EV_P_GAMMA.TXT (SET)\n  [info] time event(s) on 'delta' encoded as time/value pairs in EV_P_DELTA.TXT (SET)\n  [info] time event(s) on 'epsilon' encoded as time/value pairs in EV_P_EPSILON.TXT (SET)\n  [info] time event(s) on 'mu' encoded as time/value pairs in EV_P_MU.TXT (SET)\n  [info] time event(s) on 'nu' encoded as time/value pairs in EV_P_NU.TXT (SET)\n  [info] time event(s) on 'lambda' encoded as time/value pairs in EV_P_LAMBDA.TXT (SET)\n  [info] time event(s) on 'rho' encoded as time/value pairs in EV_P_RHO.TXT (SET)\n  [info] time event(s) on 'kappa' encoded as time/value pairs in EV_P_KAPPA.TXT (SET)\n  [info] time event(s) on 'xi' encoded as time/value pairs in EV_P_XI.TXT (SET)\n  [info] time event(s) on 'sigma' encoded as time/value pairs in EV_P_SIGMA.TXT (SET)\n  [info] time event(s) on 'zeta' encoded as time/value pairs in EV_P_ZETA.TXT (SET)\n  [info] time event(s) on 'eta' encoded as time/value pairs in EV_P_ETA.TXT (SET)\n  [partial] 14 profile files exceed the GUI's 10 O_ file limit\nRenamed species (Kintecus name = SBML id): p_alpha = alpha; p_beta = beta; p_gamma = gamma; p_delta = delta; p_epsilon = epsilon; p_zeta = zeta; p_eta = eta; p_mu = mu; p_nu = nu; p_lambda = lambda; p_kappa = kappa; p_rho = rho; p_sigma = sigma; p_xi = xi",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Giordano2020 - SIDARTHE model of COVID-19 spread in Italy  (BIOMD0000000955, curated BioModels; source file Giordano2020.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Infected term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Ailing+S[USER;cp_gamma:(1*cp_gamma)]==>Infected+Ailing",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Infected term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Diagnosed+S[USER;cp_beta:(1*cp_beta)]==>Infected+Diagnosed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Infected term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Infected+S[USER;cp_alpha:(1*cp_alpha)]==>2Infected",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Infected term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Susceptible+Recognized+S[USER;cp_delta:(1*cp_delta)]==>Infected+Recognized",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_to_Diagnosed",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Infected+S[USER;cp_epsilon:(1*cp_epsilon)]==>Diagnosed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_to_Ailing",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Infected+S[USER;cp_zeta:(1*cp_zeta)]==>Ailing",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_to_Healed",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Infected+S[USER;cp_lambda:(1*cp_lambda)]==>Healed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Diagnosed_to_Recognized",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Diagnosed+S[USER;cp_eta:(1*cp_eta)]==>Recognized",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Diagnosed_to_Healed",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Diagnosed+S[USER;cp_rho:(1*cp_rho)]==>Healed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ailing_to_Recognised",
+     ""
+    ],
+    [
+     "0.371",
+     "0",
+     "0",
+     "Ailing==>Recognized",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ailing_to_Healed",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ailing+S[USER;cp_kappa:(1*cp_kappa)]==>Healed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ailing_to_Threatened",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ailing+S[USER;cp_mu:(1*cp_mu)]==>Threatened",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Recognised_to_Threatened",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Recognized+S[USER;cp_nu:(1*cp_nu)]==>Threatened",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Recognised_to_Healed",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Recognized+S[USER;cp_xi:(1*cp_xi)]==>Healed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Threatened_to_Extinct",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Threatened==>Extinct",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Threatened_to_Healed",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Threatened+S[USER;cp_sigma:(1*cp_sigma)]==>Healed",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Susceptible",
+     "0",
+     "0.9999963",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible [Susceptible]",
+     ""
+    ],
+    [
+     "Infected",
+     "0",
+     "3.33333333e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected [Infected]",
+     ""
+    ],
+    [
+     "Diagnosed",
+     "0",
+     "3.33333333e-7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Diagnosed [Diagnosed]",
+     ""
+    ],
+    [
+     "Ailing",
+     "0",
+     "1.66666666e-8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ailing [Ailing]",
+     ""
+    ],
+    [
+     "Recognized",
+     "0",
+     "3.33333333e-8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Recognized [Recognized]",
+     ""
+    ],
+    [
+     "Threatened",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Threatened [Threatened]",
+     ""
+    ],
+    [
+     "Healed",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Healed [Healed]",
+     ""
+    ],
+    [
+     "Extinct",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Extinct [Extinct]",
+     ""
+    ],
+    [
+     "p_alpha",
+     "0",
+     "0.57",
+     "N",
+     "0",
+     "No",
+     "EV_P_ALPHA.TXT-SET",
+     "parameter alpha [alpha]",
+     ""
+    ],
+    [
+     "p_beta",
+     "0",
+     "0.011",
+     "N",
+     "0",
+     "No",
+     "EV_P_BETA.TXT-SET",
+     "parameter beta [beta]",
+     ""
+    ],
+    [
+     "p_gamma",
+     "0",
+     "0.456",
+     "N",
+     "0",
+     "No",
+     "EV_P_GAMMA.TXT-SET",
+     "parameter gamma [gamma]",
+     ""
+    ],
+    [
+     "p_delta",
+     "0",
+     "0.011",
+     "N",
+     "0",
+     "No",
+     "EV_P_DELTA.TXT-SET",
+     "parameter delta [delta]",
+     ""
+    ],
+    [
+     "p_epsilon",
+     "0",
+     "0.171",
+     "N",
+     "0",
+     "No",
+     "EV_P_EPSILON.TXT-SET",
+     "parameter epsilon [epsilon]",
+     ""
+    ],
+    [
+     "p_zeta",
+     "0",
+     "0.125",
+     "N",
+     "0",
+     "No",
+     "EV_P_ZETA.TXT-SET",
+     "parameter zeta [zeta]",
+     ""
+    ],
+    [
+     "p_eta",
+     "0",
+     "0.125",
+     "N",
+     "0",
+     "No",
+     "EV_P_ETA.TXT-SET",
+     "parameter eta [eta]",
+     ""
+    ],
+    [
+     "p_mu",
+     "0",
+     "0.017",
+     "N",
+     "0",
+     "No",
+     "EV_P_MU.TXT-SET",
+     "parameter mu [mu]",
+     ""
+    ],
+    [
+     "p_nu",
+     "0",
+     "0.027",
+     "N",
+     "0",
+     "No",
+     "EV_P_NU.TXT-SET",
+     "parameter nu [nu]",
+     ""
+    ],
+    [
+     "p_lambda",
+     "0",
+     "0.034",
+     "N",
+     "0",
+     "No",
+     "EV_P_LAMBDA.TXT-SET",
+     "parameter lambda [lambda]",
+     ""
+    ],
+    [
+     "p_kappa",
+     "0",
+     "0.017",
+     "N",
+     "0",
+     "No",
+     "EV_P_KAPPA.TXT-SET",
+     "parameter kappa [kappa]",
+     ""
+    ],
+    [
+     "p_rho",
+     "0",
+     "0.034",
+     "N",
+     "0",
+     "No",
+     "EV_P_RHO.TXT-SET",
+     "parameter rho [rho]",
+     ""
+    ],
+    [
+     "p_sigma",
+     "0",
+     "0.017",
+     "N",
+     "0",
+     "No",
+     "EV_P_SIGMA.TXT-SET",
+     "parameter sigma [sigma]",
+     ""
+    ],
+    [
+     "p_xi",
+     "0",
+     "0.017",
+     "N",
+     "0",
+     "No",
+     "EV_P_XI.TXT-SET",
+     "parameter xi [xi]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3333333337",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "360",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3333333337",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_ALPHA.TXT",
+   "key": "O_EV_P_ALPHA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "4",
+     "0.422"
+    ],
+    [
+     "22",
+     "0.36"
+    ],
+    [
+     "28",
+     "0.21"
+    ],
+    [
+     "50",
+     "0.209"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_BETA.TXT",
+   "key": "O_EV_P_BETA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "4",
+     "0.0057"
+    ],
+    [
+     "22",
+     "0.005"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_GAMMA.TXT",
+   "key": "O_EV_P_GAMMA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "4",
+     "0.285"
+    ],
+    [
+     "22",
+     "0.2"
+    ],
+    [
+     "28",
+     "0.11"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_DELTA.TXT",
+   "key": "O_EV_P_DELTA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "4",
+     "0.0057"
+    ],
+    [
+     "22",
+     "0.005"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_EPSILON.TXT",
+   "key": "O_EV_P_EPSILON.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "12",
+     "0.143"
+    ],
+    [
+     "38",
+     "0.2"
+    ],
+    [
+     "50",
+     "0.2"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_MU.TXT",
+   "key": "O_EV_P_MU.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "22",
+     "0.008"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_NU.TXT",
+   "key": "O_EV_P_NU.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "22",
+     "0.015"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_LAMBDA.TXT",
+   "key": "O_EV_P_LAMBDA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "22",
+     "0.08"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_RHO.TXT",
+   "key": "O_EV_P_RHO.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "22",
+     "0.017"
+    ],
+    [
+     "38",
+     "0.02"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_KAPPA.TXT",
+   "key": "O_EV_P_KAPPA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "22",
+     "0.017"
+    ],
+    [
+     "38",
+     "0.02"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_XI.TXT",
+   "key": "O_EV_P_XI.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "22",
+     "0.017"
+    ],
+    [
+     "38",
+     "0.02"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_SIGMA.TXT",
+   "key": "O_EV_P_SIGMA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "22",
+     "0.017"
+    ],
+    [
+     "38",
+     "0.01"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_ZETA.TXT",
+   "key": "O_EV_P_ZETA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "22",
+     "0.034"
+    ],
+    [
+     "38",
+     "0.025"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_ETA.TXT",
+   "key": "O_EV_P_ETA.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "22",
+     "0.034"
+    ],
+    [
+     "38",
+     "0.025"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

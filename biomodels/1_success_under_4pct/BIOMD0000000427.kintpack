@@ -1,0 +1,780 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:51:05.712130+00:00",
+ "description": "Bianconi2012 - EGFR and IGF1R pathway in lung cancer\nBioModels BIOMD0000000427 (curated). SBML file: BIOMD0000000427_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000427_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.46e-06 of species peak (worst: ERK_active)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] SOS_conformational_activation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] kRas_Activation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ERK_activationBy_Mek: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SOS_deactivationBy_P90: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SOS_activationBy_IGF: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PI3KCA_activationBy_IGF1R: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PI3KCA_activationBy_EGF: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Akt_activationBy_PI3KCA: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ERK_deactivationBy_PP2A: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] PI3KCA_activationBy_kRas: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Raf_activationBy_kRas: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mek_activationBy_Raf: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Raf_deactivationBy_Akt: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Ras_deactivation: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] Mek_deactivation: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] Raf_deactivation: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] P90_activationBy_ERK: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bianconi2012 - EGFR and IGF1R pathway in lung cancer  (BIOMD0000000427, curated BioModels; source file BIOMD0000000427_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SOS_conformational_activation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "D_SOS+EGFR_active+S[USER;cD_SOS:(694.731/(1*(cD_SOS+1e-30)+6086070))]==>A_SOS+EGFR_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "kRas_Activation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ras+A_SOS+S[USER;cRas:(32.344/(1*(cRas+1e-30)+35954.3))]==>Ras_active+A_SOS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "EGFR_degradation",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "EGFR_active==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ERK_activationBy_Mek",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mek_active+ERK+S[USER;cERK:(9.85367/(1*cERK+1007340))]==>ERK_active+Mek_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SOS_deactivationBy_P90",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P90Rsk_Active+A_SOS+S[USER;cA_SOS:(161197/(1*(cA_SOS+1e-30)+896896))]==>D_SOS+P90Rsk_Active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SOS_activationBy_IGF",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "D_SOS+IGFR_active+S[USER;cD_SOS:(500/(1*(cD_SOS+1e-30)+100000))]==>A_SOS+IGFR_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PI3KCA_activationBy_IGF1R",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PI3KCA+IGFR_active+S[USER;cPI3KCA:(10.6737/(1*(cPI3KCA+1e-30)+184912))]==>IGFR_active+PI3KCA_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PI3KCA_activationBy_EGF",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PI3KCA+EGFR_active+EGFR_active+S[USER;cPI3KCA:(10.6737/(1*(cPI3KCA+1e-30)+184912))]==>2EGFR_active+PI3KCA_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Akt_activationBy_PI3KCA",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AKT+PI3KCA_active+S[USER;cAKT:(0.0566279/(1*(cAKT+1e-30)+653951))]==>AKT_active+PI3KCA_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Akt_deactivation",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "AKT_active==>AKT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ERK_deactivationBy_PP2A",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ERK_active+S[USER;cERK_active:(1066944/(1*cERK_active+3496490))]==>ERK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PI3KCA_activationBy_kRas",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PI3KCA+Ras_active+S[USER;cPI3KCA:(0.0771067/(1*(cPI3KCA+1e-30)+272056))]==>Ras_active+PI3KCA_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf_activationBy_kRas",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ras_active+Raf+S[USER;cRaf:(0.884096/(1*(cRaf+1e-30)+62464.6))]==>Raf_active+Ras_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mek_activationBy_Raf",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Raf_active+Mek+S[USER;cMek:(185.759/(1*(cMek+1e-30)+4768350))]==>Raf_active+Mek_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf_deactivationBy_Akt",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Raf_active+AKT_active+S[USER;cRaf_active:(15.1212/(1*(cRaf_active+1e-30)+119355))]==>Raf+AKT_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ras_deactivation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ras_active+S[USER;cRas_active:(181123200/(1*cRas_active+1432410))]==>Ras",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mek_deactivation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Mek_active+S[USER;cMek_active:(339891.6/(1*cMek_active+518753))]==>Mek",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IGFR_active_degradation",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "IGFR_active==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PI3KCA_deactivation",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "PI3KCA_active==>PI3KCA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf_deactivation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Raf_active+S[USER;cRaf_active:(15159.48/(1*cRaf_active+1061.71))]==>Raf",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P90_activationBy_ERK",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ERK_active+P90RskInactive+S[USER;cP90RskInactive:(0.0213697/(1*cP90RskInactive+763523))]==>ERK_active+P90Rsk_Active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P90_deactivation",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "P90Rsk_Active==>P90RskInactive",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "EGFR_active",
+     "0",
+     "8000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "EGFR_active [EGFR_active]",
+     ""
+    ],
+    [
+     "D_SOS",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "D_SOS [D_SOS]",
+     ""
+    ],
+    [
+     "A_SOS",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A_SOS [A_SOS]",
+     ""
+    ],
+    [
+     "Raf",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Raf [Raf]",
+     ""
+    ],
+    [
+     "Ras_active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ras_active [Ras_active]",
+     ""
+    ],
+    [
+     "Mek_active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mek_active [Mek_active]",
+     ""
+    ],
+    [
+     "ERK",
+     "0",
+     "600000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERK [ERK]",
+     ""
+    ],
+    [
+     "ERK_active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERK_active [ERK_active]",
+     ""
+    ],
+    [
+     "IGFR_active",
+     "0",
+     "800",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IGFR_active [IGFR_active]",
+     ""
+    ],
+    [
+     "PI3KCA",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI3KCA [PI3KCA]",
+     ""
+    ],
+    [
+     "PI3KCA_active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI3KCA_active [PI3KCA_active]",
+     ""
+    ],
+    [
+     "AKT_active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AKT_active [AKT_active]",
+     ""
+    ],
+    [
+     "AKT",
+     "0",
+     "600000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AKT [AKT]",
+     ""
+    ],
+    [
+     "PP2A",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "120000",
+     "PP2A [PP2A]",
+     ""
+    ],
+    [
+     "Ras",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ras [Ras]",
+     ""
+    ],
+    [
+     "Raf_active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Raf_active [Raf_active]",
+     ""
+    ],
+    [
+     "Mek",
+     "0",
+     "600000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mek [Mek]",
+     ""
+    ],
+    [
+     "RasGapActive",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "120000",
+     "RasGapActive [RasGapActive]",
+     ""
+    ],
+    [
+     "RafPP",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "120000",
+     "RafPP [RafPP]",
+     ""
+    ],
+    [
+     "P90RskInactive",
+     "0",
+     "120000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P90RskInactive [P90RskInactive]",
+     ""
+    ],
+    [
+     "P90Rsk_Active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P90Rsk_Active [P90Rsk_Active]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

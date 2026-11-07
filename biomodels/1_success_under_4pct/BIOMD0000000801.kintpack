@@ -1,0 +1,615 @@
+{
+ "version": 3,
+ "created": "2026-11-01T23:01:46.004277+00:00",
+ "description": "Sturrock2015 - glioma growth\nBioModels BIOMD0000000801 (curated). SBML file: Sturrock2015.xml.\nSimulation: 0 to 3300 time units (SED-ML: Sturrock2015.sedml), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.56e-04 of species peak (worst: B)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] glucose_intake term 5/6: rate order differs from the stoichiometry; consumed on separate line(s) - S1: zero order, signed\n  [info] glucose_intake term 6/6: rate order differs from the stoichiometry; consumed on separate line(s) - S1: zero order, signed\nRenamed species (Kintecus name = SBML id): T1 = T; S1 = S",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sturrock2015 - glioma growth  (BIOMD0000000801, curated BioModels; source file Sturrock2015.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth term 1/2",
+     ""
+    ],
+    [
+     "1.575",
+     "0",
+     "0",
+     "B+T1==>2T1+B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth term 2/2",
+     ""
+    ],
+    [
+     "0.7875",
+     "0",
+     "0",
+     "T1+T1+B==>B+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_death",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "T1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_immune",
+     ""
+    ],
+    [
+     "0.072",
+     "0",
+     "0",
+     "T1+I==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glucose_b_s",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "B==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glioma_consumption",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "B+T1==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glucose_consumption_b term 1/2",
+     ""
+    ],
+    [
+     "0.49999999999999994",
+     "0",
+     "0",
+     "B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glucose_consumption_b term 2/2",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "B+I==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "immune_growth term 1/2",
+     ""
+    ],
+    [
+     "0.48999999999999994",
+     "0",
+     "0",
+     "B==>I+B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "immune_growth term 2/2",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "B+I==>2I+B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "immune_recruitment",
+     ""
+    ],
+    [
+     "0.0003",
+     "0",
+     "0",
+     "I+T1==>2I+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "immune_cell_death",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "I==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glioma_response",
+     ""
+    ],
+    [
+     "0.72",
+     "0",
+     "0",
+     "I+T1==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glucose_intake term 1/6",
+     ""
+    ],
+    [
+     "0.0004",
+     "0",
+     "0",
+     "source==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glucose_intake term 2/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.0008*sin(6*3.141592653589793*cTIME_))]==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glucose_intake term 3/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(3.2e-7/(abs(0.0016*sin(6*3.141592653589793*cTIME_)-0.0008)+1e-300))]==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glucose_intake term 4/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(2.56e-6*sin(6*3.141592653589793*cTIME_)^2/(2*abs(0.0016*sin(6*3.141592653589793*cTIME_)-0.0008)+2e-300))]==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glucose_intake term 5/6 (consumes S1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*6.4e-7*sin(6*3.141592653589793*cTIME_)/(abs(0.0016*sin(6*3.141592653589793*cTIME_)-0.0008)+1e-300)))]==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glucose_intake term 6/6 (consumes S1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*1.28e-6*sin(6*3.141592653589793*cTIME_)/(2*abs(0.0016*sin(6*3.141592653589793*cTIME_)-0.0008)+2e-300)))]==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glucose_consumption_s",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "S1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "glucose_s_b",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "S1==>B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "0.14",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T [T]",
+     ""
+    ],
+    [
+     "B",
+     "0",
+     "0.000392",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B [B]",
+     ""
+    ],
+    [
+     "I",
+     "0",
+     "0.000284",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I [I]",
+     ""
+    ],
+    [
+     "S1",
+     "0",
+     "0.000439",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S [S]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

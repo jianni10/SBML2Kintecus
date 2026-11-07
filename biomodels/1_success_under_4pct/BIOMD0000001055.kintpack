@@ -1,0 +1,797 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:16:29.542461+00:00",
+ "description": "Jeon2018 - Enzyme clustering in Glucose metabolism\nBioModels BIOMD0000001055 (curated). SBML file: Enzyme_clustering_in glucose_metabolism.xml.\nSimulation: 0 to 10 time units (SED-ML: Enzyme_clustering_in glucose_metabolism.sedml), sampling 0.05.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.25e-06 of species peak (worst: Fructose_1_6_Bisphosphate)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): X3Phosphoglycerate1 = _3_Phosphoglycerate; MetabolicoutcomeofPentose1 = Metabolic_outcome_of_Pentose_Phosphate_Shunt; MetabolicoutcomeofSerineB1 = Metabolic_outcome_of_Serine_Biosynthesis_Flux; MetabolicoutcomeofGlycoly1 = Metabolic_outcome_of_Glycolytic_Flux; Fructose16Bisphosphatase1 = Fructose_1_6_Bisphosphatase; Largesizedenzymeclusters1 = Large_sized_enzyme_clusters; Mediumsizedenzymeclusters1 = Medium_sized_enzyme_clusters; Smallsizedenzymeclusters1 = Small_sized_enzyme_clusters; PhosphoenolpyruvateCarbox1 = Phosphoenolpyruvate_Carboxykinase_1; GlycosylatedPhosphofructo1 = Glycosylated_Phosphofructokinase; PyruvateKinaseM2tetramers1 = Pyruvate_Kinase_M2_tetramers",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jeon2018 - Enzyme clustering in Glucose metabolism  (BIOMD0000001055, curated BioModels; source file Enzyme_clustering_in glucose_metabolism.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "source==>Glucose",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "Glucose==>Fructose_6_Phosphate",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "Fructose_6_Phosphate==>Glucose",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Fructose_6_Phosphate+Phosphofructokinase_1+S[USER;cFructose_1_6_Bisphosphate:(40/(cFructose_1_6_Bisphosphate+1))]==>Fructose_1_6_Bisphosphate+Phosphofructokinase_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Fructose_6_Phosphate+Smallsizedenzymeclusters1+S[USER;cFructose_1_6_Bisphosphate:(40/(cFructose_1_6_Bisphosphate+1))]==>Fructose_1_6_Bisphosphate+Smallsizedenzymeclusters1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Fructose_1_6_Bisphosphate+Fructose16Bisphosphatase1+S[USER;cFructose_6_Phosphate:(7/(cFructose_6_Phosphate+1))]==>Fructose_6_Phosphate+Fructose16Bisphosphatase1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "Fructose_1_6_Bisphosphate==>X3Phosphoglycerate1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "X3Phosphoglycerate1==>Fructose_1_6_Bisphosphate",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8",
+     ""
+    ],
+    [
+     "14",
+     "0",
+     "0",
+     "X3Phosphoglycerate1==>Phosphoenolpyruvate",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9",
+     ""
+    ],
+    [
+     "7",
+     "0",
+     "0",
+     "Phosphoenolpyruvate==>X3Phosphoglycerate1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Phosphoenolpyruvate+PyruvateKinaseM2tetramers1==>Pyruvate+PyruvateKinaseM2tetramers1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "Pyruvate==>Oxaloacetate",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "Oxaloacetate+PhosphoenolpyruvateCarbox1==>Phosphoenolpyruvate+PhosphoenolpyruvateCarbox1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R19",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Phosphofructokinase_1==>GlycosylatedPhosphofructo1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R20",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GlycosylatedPhosphofructo1==>Phosphofructokinase_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R21",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PyruvateKinaseM2tetramers1==>Pyruvate_Kinase_M2_dimers",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R22 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pyruvate_Kinase_M2_dimers==>PyruvateKinaseM2tetramers1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R22 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pyruvate_Kinase_M2_dimers+Fructose_1_6_Bisphosphate+S[USER;cFructose_1_6_Bisphosphate:(1/(cFructose_1_6_Bisphosphate+1))]==>PyruvateKinaseM2tetramers1+Fructose_1_6_Bisphosphate",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R23",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "Fructose_6_Phosphate==>MetabolicoutcomeofPentose1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R24",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "X3Phosphoglycerate1==>MetabolicoutcomeofSerineB1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R25",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "Pyruvate==>MetabolicoutcomeofGlycoly1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R26",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "MetabolicoutcomeofPentose1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R27",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "MetabolicoutcomeofSerineB1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R28",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "MetabolicoutcomeofGlycoly1==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Glucose",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Glucose [Glucose]",
+     ""
+    ],
+    [
+     "Fructose_6_Phosphate",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fructose-6-Phosphate [Fructose_6_Phosphate]",
+     ""
+    ],
+    [
+     "Fructose_1_6_Bisphosphate",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fructose-1,6,Bisphosphate [Fructose_1_6_Bisphosphate]",
+     ""
+    ],
+    [
+     "X3Phosphoglycerate1",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "3-Phosphoglycerate [_3_Phosphoglycerate]",
+     ""
+    ],
+    [
+     "Phosphoenolpyruvate",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphoenolpyruvate [Phosphoenolpyruvate]",
+     ""
+    ],
+    [
+     "Pyruvate",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pyruvate [Pyruvate]",
+     ""
+    ],
+    [
+     "Oxaloacetate",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Oxaloacetate [Oxaloacetate]",
+     ""
+    ],
+    [
+     "MetabolicoutcomeofPentose1",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Metabolic outcome of Pentose Phosphate Shunt [Metabolic_outcome_of_Pentose_Phosphate_Shunt]",
+     ""
+    ],
+    [
+     "MetabolicoutcomeofSerineB1",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Metabolic outcome of Serine Biosynthesis Flux [Metabolic_outcome_of_Serine_Biosynthesis_Flux]",
+     ""
+    ],
+    [
+     "MetabolicoutcomeofGlycoly1",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Metabolic outcome of Glycolytic Flux [Metabolic_outcome_of_Glycolytic_Flux]",
+     ""
+    ],
+    [
+     "Phosphofructokinase_1",
+     "0",
+     "99.9899999999985",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphofructokinase 1 [Phosphofructokinase_1]",
+     ""
+    ],
+    [
+     "Fructose16Bisphosphatase1",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fructose-1,6-Bisphosphatase [Fructose_1_6_Bisphosphatase]",
+     ""
+    ],
+    [
+     "Largesizedenzymeclusters1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Large-sized enzyme clusters [Large_sized_enzyme_clusters]",
+     ""
+    ],
+    [
+     "Mediumsizedenzymeclusters1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Medium-sized enzyme clusters [Medium_sized_enzyme_clusters]",
+     ""
+    ],
+    [
+     "Smallsizedenzymeclusters1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Small-sized enzyme clusters [Small_sized_enzyme_clusters]",
+     ""
+    ],
+    [
+     "Pyruvate_Kinase_M2_dimers",
+     "0",
+     "99.9899999999985",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pyruvate Kinase M2 dimers [Pyruvate_Kinase_M2_dimers]",
+     ""
+    ],
+    [
+     "PhosphoenolpyruvateCarbox1",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphoenolpyruvate Carboxykinase 1 [Phosphoenolpyruvate_Carboxykinase_1]",
+     ""
+    ],
+    [
+     "GlycosylatedPhosphofructo1",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Glycosylated Phosphofructokinase [Glycosylated_Phosphofructokinase]",
+     ""
+    ],
+    [
+     "PyruvateKinaseM2tetramers1",
+     "0",
+     "0.999999999999996",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pyruvate Kinase M2 tetramers [Pyruvate_Kinase_M2_tetramers]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.05",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.05",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

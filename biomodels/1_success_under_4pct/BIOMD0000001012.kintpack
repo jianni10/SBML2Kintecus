@@ -1,0 +1,450 @@
+{
+ "version": 3,
+ "created": "2026-11-01T23:03:13.124764+00:00",
+ "description": "Leon-Triana2020 - CAR T-cell therapy in B-cell acute lymphoblastic leukaemia with contribution from immature B cells\nBioModels BIOMD0000001012 (curated). SBML file: Leon-Triana2020 (eqs 3).xml.\nSimulation: 0 to 1000 time units (SED-ML: Leon-Triana2020 (eqs 3).sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.67e-06 of species peak (worst: CAR_T_cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Bcell_proliferation: rate order differs from the stoichiometry; consumed on separate line(s) - B_cell_progenitors: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Leon-Triana2020 - CAR T-cell therapy in B-cell acute lymphoblastic leukaemia with contribution from immature B cells  (BIOMD0000001012, curated BioModels; source file Leon-Triana2020 (eqs 3).xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CARTcell_proliferation term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCAR_T_cells:(1.125e-5/(1e-9*cCAR_T_cells+1))]==>CAR_T_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CARTcell_proliferation term 2/3",
+     ""
+    ],
+    [
+     "1.125e-11",
+     "0",
+     "0",
+     "B_cells_healthy+CAR_T_cells==>2CAR_T_cells+B_cells_healthy",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CARTcell_proliferation term 3/3",
+     ""
+    ],
+    [
+     "1.125e-11",
+     "0",
+     "0",
+     "CAR_T_cells+Leukaemic_B_cells==>2CAR_T_cells+Leukaemic_B_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CARTcell_death",
+     ""
+    ],
+    [
+     "0.07142857142857142",
+     "0",
+     "0",
+     "CAR_T_cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Leukaemia_proliferation",
+     ""
+    ],
+    [
+     "0.03333333333",
+     "0",
+     "0",
+     "Leukaemic_B_cells==>2Leukaemic_B_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Leukaemia_death",
+     ""
+    ],
+    [
+     "4.5e-11",
+     "0",
+     "0",
+     "Leukaemic_B_cells+CAR_T_cells==>CAR_T_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bcell_death term 1/2",
+     ""
+    ],
+    [
+     "0.016666666666666666",
+     "0",
+     "0",
+     "B_cells_healthy==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bcell_death term 2/2",
+     ""
+    ],
+    [
+     "4.5e-11",
+     "0",
+     "0",
+     "B_cells_healthy+CAR_T_cells==>CAR_T_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bcell_proliferation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCAR_T_cells:(1666666.6666666667/(1e-9*cCAR_T_cells+1))]==>B_cells_healthy",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bcell_proliferation (consumes B_cell_progenitors)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCAR_T_cells:((-1*1666666.6666666667/(1e-9*cCAR_T_cells+1)))]==>B_cell_progenitors",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "proBcell_proliferation",
+     ""
+    ],
+    [
+     "10000000",
+     "0",
+     "0",
+     "source==>B_cell_progenitors",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "CAR_T_cells",
+     "0",
+     "10000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CAR_T-cells [CAR_T_cells]",
+     ""
+    ],
+    [
+     "Leukaemic_B_cells",
+     "0",
+     "50000000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Leukaemic_B_cells [Leukaemic_B_cells]",
+     ""
+    ],
+    [
+     "B_cells_healthy",
+     "0",
+     "25000000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B_cells_healthy [B_cells_healthy]",
+     ""
+    ],
+    [
+     "B_cell_progenitors",
+     "0",
+     "10000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B_cell_progenitors [B_cell_progenitors]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

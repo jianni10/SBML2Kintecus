@@ -1,0 +1,1550 @@
+{
+ "version": 3,
+ "created": "2026-10-25T09:53:22.631704+00:00",
+ "description": "Sivakumar2011_WntSignalingPathway\nBioModels BIOMD0000000397 (curated). SBML file: BIOMD0000000397_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000397_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.99e-06 of species peak (worst: s5)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sivakumar2011_WntSignalingPathway  (BIOMD0000000397, curated BioModels; source file BIOMD0000000397_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r68",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "s305==>s195",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1 term 1/2",
+     ""
+    ],
+    [
+     "0.82",
+     "0",
+     "0",
+     "s16==>s5+s1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r1 term 2/2",
+     ""
+    ],
+    [
+     "0.784",
+     "0",
+     "0",
+     "s5+s1==>s16",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r5 term 1/2",
+     ""
+    ],
+    [
+     "0.92",
+     "0",
+     "0",
+     "s27==>s28+s16",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r5 term 2/2",
+     ""
+    ],
+    [
+     "1.15",
+     "0",
+     "0",
+     "s28+s16==>s27",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r47 term 1/2",
+     ""
+    ],
+    [
+     "0.81",
+     "0",
+     "0",
+     "s123==>s121+s36",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r47 term 2/2",
+     ""
+    ],
+    [
+     "1.31",
+     "0",
+     "0",
+     "s121+s36==>s123",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r48 term 1/2",
+     ""
+    ],
+    [
+     "1.36",
+     "0",
+     "0",
+     "s129==>s123+s46",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r48 term 2/2",
+     ""
+    ],
+    [
+     "0.85",
+     "0",
+     "0",
+     "s123+s46==>s129",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r54 term 1/2",
+     ""
+    ],
+    [
+     "1.7",
+     "0",
+     "0",
+     "s159==>s123+s75",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r54 term 2/2",
+     ""
+    ],
+    [
+     "0.8",
+     "0",
+     "0",
+     "s123+s75==>s159",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r58 term 1/2",
+     ""
+    ],
+    [
+     "1.74",
+     "0",
+     "0",
+     "s36==>s232",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r58 term 2/2",
+     ""
+    ],
+    [
+     "0.25",
+     "0",
+     "0",
+     "s232==>s36",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r63 term 1/2",
+     ""
+    ],
+    [
+     "0.61",
+     "0",
+     "0",
+     "s176==>s174+s232",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r63 term 2/2",
+     ""
+    ],
+    [
+     "1.77",
+     "0",
+     "0",
+     "s174+s232==>s176",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r66 term 1/2",
+     ""
+    ],
+    [
+     "0.036",
+     "0",
+     "0",
+     "s188==>s173+s183",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r66 term 2/2",
+     ""
+    ],
+    [
+     "1.99",
+     "0",
+     "0",
+     "s173+s183==>s188",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r88 term 1/2",
+     ""
+    ],
+    [
+     "1.09",
+     "0",
+     "0",
+     "s259==>s252+s61",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r88 term 2/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "s252+s61==>s259",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r90 term 1/2",
+     ""
+    ],
+    [
+     "1.028",
+     "0",
+     "0",
+     "s266==>s259+s268",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r90 term 2/2",
+     ""
+    ],
+    [
+     "0.27",
+     "0",
+     "0",
+     "s259+s268==>s266",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r91 term 1/2",
+     ""
+    ],
+    [
+     "0.36",
+     "0",
+     "0",
+     "s266==>s267+s155",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r91 term 2/2",
+     ""
+    ],
+    [
+     "1.16",
+     "0",
+     "0",
+     "s267+s155==>s266",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r92 term 1/2",
+     ""
+    ],
+    [
+     "0.58",
+     "0",
+     "0",
+     "s267==>s260+s61",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r92 term 2/2",
+     ""
+    ],
+    [
+     "0.92",
+     "0",
+     "0",
+     "s260+s61==>s267",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r96 term 1/2",
+     ""
+    ],
+    [
+     "0.183",
+     "0",
+     "0",
+     "s275==>s159+s268",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r96 term 2/2",
+     ""
+    ],
+    [
+     "1.45",
+     "0",
+     "0",
+     "s159+s268==>s275",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r98 term 1/2",
+     ""
+    ],
+    [
+     "1.97",
+     "0",
+     "0",
+     "s275==>s278+s101",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r98 term 2/2",
+     ""
+    ],
+    [
+     "1.09",
+     "0",
+     "0",
+     "s278+s101==>s275",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r99 term 1/2",
+     ""
+    ],
+    [
+     "0.51",
+     "0",
+     "0",
+     "s278==>s270+s164",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r99 term 2/2",
+     ""
+    ],
+    [
+     "0.854",
+     "0",
+     "0",
+     "s270+s164==>s278",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r102 term 1/2",
+     ""
+    ],
+    [
+     "1.65",
+     "0",
+     "0",
+     "s288==>s31+s286",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r102 term 2/2",
+     ""
+    ],
+    [
+     "0.163",
+     "0",
+     "0",
+     "s31+s286==>s288",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r103 term 1/2",
+     ""
+    ],
+    [
+     "1.277",
+     "0",
+     "0",
+     "s292==>s288+s102",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r103 term 2/2",
+     ""
+    ],
+    [
+     "0.45",
+     "0",
+     "0",
+     "s288+s102==>s292",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r105 term 1/2",
+     ""
+    ],
+    [
+     "0.48",
+     "0",
+     "0",
+     "s292==>s37",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r105 term 2/2",
+     ""
+    ],
+    [
+     "1.62",
+     "0",
+     "0",
+     "s37==>s292",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r106 term 1/2",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "s286==>s30",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r106 term 2/2",
+     ""
+    ],
+    [
+     "1.13",
+     "0",
+     "0",
+     "s30==>s286",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r107 term 1/2",
+     ""
+    ],
+    [
+     "0.91",
+     "0",
+     "0",
+     "s239==>s5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r107 term 2/2",
+     ""
+    ],
+    [
+     "1.056",
+     "0",
+     "0",
+     "s5==>s239",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r104 term 1/2",
+     ""
+    ],
+    [
+     "0.39",
+     "0",
+     "0",
+     "s32+s107+s30==>s286+s33+s30",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r104 term 2/2",
+     ""
+    ],
+    [
+     "1.278",
+     "0",
+     "0",
+     "s286+s33+s30==>s32+s107+s30",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r85 term 1/2",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "s32+s129+s30==>s245+s33+s30",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r85 term 2/2",
+     ""
+    ],
+    [
+     "0.649",
+     "0",
+     "0",
+     "s245+s33+s30==>s32+s129+s30",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r65 term 1/2",
+     ""
+    ],
+    [
+     "0.004",
+     "0",
+     "0",
+     "s183==>s179+s171",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r65 term 2/2",
+     ""
+    ],
+    [
+     "1.8",
+     "0",
+     "0",
+     "s179+s171==>s183",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r64 term 1/2",
+     ""
+    ],
+    [
+     "0.72",
+     "0",
+     "0",
+     "s179==>s176+s170",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r64 term 2/2",
+     ""
+    ],
+    [
+     "1.29",
+     "0",
+     "0",
+     "s176+s170==>s179",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re65",
+     ""
+    ],
+    [
+     "1.68",
+     "0",
+     "0",
+     "s260==>s232",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re64",
+     ""
+    ],
+    [
+     "0.83",
+     "0",
+     "0",
+     "s270==>s232",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r67 term 1/2",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "s305==>s188+s172",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r67 term 2/2",
+     ""
+    ],
+    [
+     "0.86",
+     "0",
+     "0",
+     "s188+s172==>s305",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r86 term 1/2",
+     ""
+    ],
+    [
+     "0.6446113989637305",
+     "0",
+     "0",
+     "s245+s32+s32+s32+s37==>3s33+s252+s37",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r86 term 2/2",
+     ""
+    ],
+    [
+     "0.9780310880829016",
+     "0",
+     "0",
+     "s33+s33+s33+s252+s37==>s245+3s32+s37",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "s5",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Wnt [s5]",
+     ""
+    ],
+    [
+     "s16",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Wnt/Frizzled) [s16]",
+     ""
+    ],
+    [
+     "s1",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Frizzled [s1]",
+     ""
+    ],
+    [
+     "s27",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Frizzled/Wnt/_br_LRP5/6) [s27]",
+     ""
+    ],
+    [
+     "s28",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LRP5/6 [s28]",
+     ""
+    ],
+    [
+     "s30",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Casein Kinase 1 [s30]",
+     ""
+    ],
+    [
+     "s31",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Casein Kinase 2 [s31]",
+     ""
+    ],
+    [
+     "s32",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP [s32]",
+     ""
+    ],
+    [
+     "s33",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ADP [s33]",
+     ""
+    ],
+    [
+     "s37",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Glycogen Synthase Kinase-3_Beta_ [s37]",
+     ""
+    ],
+    [
+     "s46",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Diversin [s46]",
+     ""
+    ],
+    [
+     "s75",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Ebi/Siah-1) [s75]",
+     ""
+    ],
+    [
+     "s101",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Siah-1/Ebi) [s101]",
+     ""
+    ],
+    [
+     "s102",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FRAT [s102]",
+     ""
+    ],
+    [
+     "s107",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Dishevelled/Beta-Arrestin/_br_Frodo) [s107]",
+     ""
+    ],
+    [
+     "s121",
+     "0",
+     "4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Axin/PP2A/_br_Adenomatous Polyposis Coli) [s121]",
+     ""
+    ],
+    [
+     "s155",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Adenomatous Polyposis Coli/Axin/_br_Diversin/Casein Kinase 1/_br_Glycogen Synthase Kinase-3_Beta_/PP2A) [s15",
+     ""
+    ],
+    [
+     "s164",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Adenomatous Polyposis Coli/Axin/_br_PP2A) [s164]",
+     ""
+    ],
+    [
+     "s171",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pygo [s171]",
+     ""
+    ],
+    [
+     "s172",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CBP [s172]",
+     ""
+    ],
+    [
+     "s173",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SWI/SNF [s173]",
+     ""
+    ],
+    [
+     "s170",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Bcl9 [s170]",
+     ""
+    ],
+    [
+     "s195",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Wnt Target Genes [s195]",
+     ""
+    ],
+    [
+     "s174",
+     "0",
+     "4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(TCF/Smad4) [s174]",
+     ""
+    ],
+    [
+     "s239",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Wnt [s239]",
+     ""
+    ],
+    [
+     "s36",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "_Beta_-Catenin [s36]",
+     ""
+    ],
+    [
+     "s123",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Adenomatous Polyposis Coli/Axin/_br__Beta_-Catenin/PP2A) [s123]",
+     ""
+    ],
+    [
+     "s129",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Adenomatous Polyposis Coli/Axin/_br_Diversin/_Beta_-Catenin/_br_PP2A) [s129]",
+     ""
+    ],
+    [
+     "s159",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Adenomatous Polyposis Coli/Axin/_br_PP2A/_Beta_-Catenin/_br_Siah-1/Ebi) [s159]",
+     ""
+    ],
+    [
+     "s232",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "_Beta_-Catenin [s232]",
+     ""
+    ],
+    [
+     "s176",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(TCF/Smad4/_br__Beta_-Catenin) [s176]",
+     ""
+    ],
+    [
+     "s179",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(TCF/_Beta_-Catenin/_br_Smad4/Bcl9) [s179]",
+     ""
+    ],
+    [
+     "s183",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Bcl9/_Beta_-Catenin/_br_TCF/Smad4/_br_Pygo) [s183]",
+     ""
+    ],
+    [
+     "s188",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(_Beta_-Catenin/TCF/_br_Smad4/Bcl9/_br_Pygo/SWI/_br_SNF) [s188]",
+     ""
+    ],
+    [
+     "s245",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Adenomatous Polyposis Coli/_Beta_-Catenin/_br_Axin/PP2A/_br_Diversin/Casein Kinase 1) [s245]",
+     ""
+    ],
+    [
+     "s252",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Adenomatous Polyposis Coli/_Beta_-Catenin/_br_Glycogen Synthase Kinase-3_Beta_/Axin/_br_PP2A/Diversin/_br_Ca",
+     ""
+    ],
+    [
+     "s268",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ubiquitin [s268]",
+     ""
+    ],
+    [
+     "s260",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "_Beta_-Catenin [s260]",
+     ""
+    ],
+    [
+     "s270",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "_Beta_-Catenin [s270]",
+     ""
+    ],
+    [
+     "s275",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Adenomatous Polyposis Coli/_Beta_-Catenin/_br_Siah-1/Ebi/_br_Axin/PP2A) [s275]",
+     ""
+    ],
+    [
+     "s278",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Adenomatous Polyposis Coli/_Beta_-Catenin/_br_Axin/PP2A) [s278]",
+     ""
+    ],
+    [
+     "s286",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Dishevelled/Beta-Arrestin/_br_Frodo) [s286]",
+     ""
+    ],
+    [
+     "s288",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Dishevelled/Beta-Arrestin/_br_Frodo/Casein Kinase 2) [s288]",
+     ""
+    ],
+    [
+     "s292",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Dishevelled/Casein Kinase 2/_br_Beta-Arrestin/Frodo/_br_FRAT) [s292]",
+     ""
+    ],
+    [
+     "s61",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "_beta_TrCP [s61]",
+     ""
+    ],
+    [
+     "s259",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Adenomatous Polyposis Coli/Axin/_br_PP2A/Diversin/_br_Casein Kinase 1/_Beta_-Catenin/_br__beta_TrCP/Glycogen",
+     ""
+    ],
+    [
+     "s266",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Adenomatous Polyposis Coli/Axin/_br_PP2A/Diversin/_br_Casein Kinase 1/_Beta_-Catenin/_br__beta_TrCP/Glycogen",
+     ""
+    ],
+    [
+     "s267",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(_beta_TrCP/_Beta_-Catenin) [s267]",
+     ""
+    ],
+    [
+     "s304",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "0.5",
+     "6 bromoindirubin 3'oxime [s304]",
+     ""
+    ],
+    [
+     "s305",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(Bcl9/Pygo/../Smad4) [s305]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-06",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-08",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

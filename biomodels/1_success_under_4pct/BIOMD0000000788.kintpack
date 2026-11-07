@@ -1,0 +1,648 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:09:24.057023+00:00",
+ "description": "Schropp2019 - Target-Mediated Drug Disposition Model for Bispecific Antibodies\nBioModels BIOMD0000000788 (curated). SBML file: Schropp2019.xml.\nSimulation: 0 to 150 time units (SED-ML: Schropp2019.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.27e-06 of species peak (worst: RC_AB)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Schropp2019 - Target-Mediated Drug Disposition Model for Bispecific Antibodies  (BIOMD0000000788, curated BioModels; source file Schropp2019.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Binding_C_R_A",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "R_A+C_free==>RC_A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Binding_C_R_B",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_free+R_B==>RC_B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Binding_RC_A_R_B",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "RC_A+R_B==>RC_AB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Binding_RC_B_R_A",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "R_A+RC_B==>RC_AB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Disassociation_RC_A",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "RC_A==>R_A+C_free+RC_A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Disassociation_RC_B",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "RC_B==>C_free+R_B+RC_B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Disassociation_RC_AB_3",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "RC_AB==>R_B+RC_B+RC_AB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Disassociation_RC_AB_4",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "RC_AB==>R_A+RC_A+RC_AB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Elimination_C",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "C_free==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Distribution_C_Central",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "C_free==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Distribution_C_Peripheral",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "AP==>C_free+AP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Distribution_AP_Central",
+     ""
+    ],
+    [
+     "0.30000000000000004",
+     "0",
+     "0",
+     "C_free==>AP+C_free",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Distribution_AP_Peripheral",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "AP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_AD",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "AD==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Association_AD_C",
+     ""
+    ],
+    [
+     "0.6000000000000001",
+     "0",
+     "0",
+     "AD==>C_free+AD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_R_A",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>R_A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Synthesis_R_B",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "source==>R_B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_R_A",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "R_A==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_R_B",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "R_B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Internalisation_RC_A",
+     ""
+    ],
+    [
+     "0.060000000000000005",
+     "0",
+     "0",
+     "RC_A==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Internalisation_RC_B",
+     ""
+    ],
+    [
+     "0.060000000000000005",
+     "0",
+     "0",
+     "RC_B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Internalisation_RC_AB",
+     ""
+    ],
+    [
+     "0.12000000000000001",
+     "0",
+     "0",
+     "RC_AB==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "C_free",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_free [C_free]",
+     ""
+    ],
+    [
+     "R_A",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R_A [R_A]",
+     ""
+    ],
+    [
+     "R_B",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R_B [R_B]",
+     ""
+    ],
+    [
+     "RC_A",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RC_A [RC_A]",
+     ""
+    ],
+    [
+     "RC_B",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RC_B [RC_B]",
+     ""
+    ],
+    [
+     "RC_AB",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RC_AB [RC_AB]",
+     ""
+    ],
+    [
+     "AP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AP [AP]",
+     ""
+    ],
+    [
+     "AD",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AD [AD]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "150",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

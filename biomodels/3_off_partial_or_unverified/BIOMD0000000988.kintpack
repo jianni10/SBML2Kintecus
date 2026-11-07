@@ -1,0 +1,751 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:35:11.444831+00:00",
+ "description": "Westerhoff2020 - systems biology model of the coronavirus pandemic 2020\nBioModels BIOMD0000000988 (curated). SBML file: Westerhoff2020.xml.\nSimulation: 0 to 365 time units (SED-ML: Westerhoff2020.sedml), sampling 0.35714285714285715.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 1.00e+00 of species peak (worst: infected_nontested_0)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 1.00e+00 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'total_population_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'registered_corona_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'dead_corona_perc_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'recovered_corona_perc_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'dead_noncorona_perc_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'frac_coronaDeadOfAllDead_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'epidemic_extinguished_bool_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'infected_tested_div10' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] re1: USER expression is 4495 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [blocker] reaction 're1' not converted (rate term is 4495 characters (> 2153))\n  [info] re3: USER expression is 4495 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [blocker] reaction 're3' not converted (rate term is 4495 characters (> 2153))\n  [info] 4 species/parameters given short names (Q1...) so USER expressions fit Kintecus's expression length limit; original ids are in the SPECIES comments column\nRenamed species (Kintecus name = SBML id): Q1 = infected_nontested_0; Q2 = infected_tested_0; Q4 = symptoms_tested_0; Q3 = symptoms_nontested_0",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Westerhoff2020 - systems biology model of the coronavirus pandemic 2020  (BIOMD0000000988, curated BioModels; source file Westerhoff2020.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re2",
+     ""
+    ],
+    [
+     "0.0008",
+     "0",
+     "0",
+     "uninfected_nontested_0==>uninfected_tested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re4",
+     ""
+    ],
+    [
+     "0.0008",
+     "0",
+     "0",
+     "Q1==>Q2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re5",
+     ""
+    ],
+    [
+     "0.30165",
+     "0",
+     "0",
+     "Q1==>Q3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re6",
+     ""
+    ],
+    [
+     "0.30165",
+     "0",
+     "0",
+     "Q2==>Q4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re7",
+     ""
+    ],
+    [
+     "500",
+     "0",
+     "0",
+     "Q3==>Q4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re8",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "Q4==>dead_corona_tested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re9",
+     ""
+    ],
+    [
+     "0.067",
+     "0",
+     "0",
+     "Q4==>recovered_tested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re10",
+     ""
+    ],
+    [
+     "0.067",
+     "0",
+     "0",
+     "Q3==>recovered_nontested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 1/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "Q1==>uninfected_nontested_0+Q1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 2/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "Q2==>uninfected_nontested_0+Q2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 3/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "Q3==>uninfected_nontested_0+Q3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 4/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "Q4==>uninfected_nontested_0+Q4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 5/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "recovered_nontested_0==>uninfected_nontested_0+recovered_nontested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 6/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "recovered_tested_0==>uninfected_nontested_0+recovered_tested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 7/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "uninfected_nontested_0==>2uninfected_nontested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 8/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "uninfected_tested_0==>uninfected_nontested_0+uninfected_tested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re12",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "uninfected_nontested_0==>dead_noncorona_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re13",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "recovered_tested_0==>dead_noncorona_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re14",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "recovered_nontested_0==>dead_noncorona_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re15",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "Q2==>dead_corona_tested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re16",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "Q1==>dead_corona_nontested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re17",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "uninfected_tested_0==>dead_noncorona_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re18",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "Q3==>dead_corona_nontested_0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Q1",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "infected_nontested [infected_nontested_0]",
+     ""
+    ],
+    [
+     "Q2",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "infected_tested [infected_tested_0]",
+     ""
+    ],
+    [
+     "uninfected_nontested_0",
+     "0",
+     "630000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "uninfected_nontested [uninfected_nontested_0]",
+     ""
+    ],
+    [
+     "uninfected_tested_0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "uninfected_tested [uninfected_tested_0]",
+     ""
+    ],
+    [
+     "Q4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "symptoms_tested [symptoms_tested_0]",
+     ""
+    ],
+    [
+     "Q3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "symptoms_nontested [symptoms_nontested_0]",
+     ""
+    ],
+    [
+     "recovered_tested_0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "recovered_tested [recovered_tested_0]",
+     ""
+    ],
+    [
+     "recovered_nontested_0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "recovered_nontested [recovered_nontested_0]",
+     ""
+    ],
+    [
+     "susceptible_0",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "susceptible [susceptible_0]",
+     ""
+    ],
+    [
+     "dead_corona_tested_0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "dead_corona_tested [dead_corona_tested_0]",
+     ""
+    ],
+    [
+     "dead_corona_nontested_0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "dead_corona_nontested [dead_corona_nontested_0]",
+     ""
+    ],
+    [
+     "dead_noncorona_0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "dead_noncorona [dead_noncorona_0]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 15 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time switch at 15 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3571428575",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "365",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3571428575",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "15",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "15",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

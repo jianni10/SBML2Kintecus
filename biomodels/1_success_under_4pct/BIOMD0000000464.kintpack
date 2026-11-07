@@ -1,0 +1,652 @@
+{
+ "version": 3,
+ "created": "2026-11-02T03:48:16.385486+00:00",
+ "description": "Koo2013 - Shear stress induced calcium influx and eNOS activation - Model 1\nBioModels BIOMD0000000464 (curated). SBML file: BIOMD0000000464_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000464_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.04e-06 of species peak (worst: s10)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 's7' goes below zero in the SBML: integrated as s7_o = value + 10000000, output as s7 = OUTC[s7_o;-10000000*source]\n  [info] 's11' goes below zero in the SBML: integrated as s11_o = value + 1000000000, output as s11 = OUTC[s11_o;-1000000000*source]\n  [info] 's13' goes below zero in the SBML: integrated as s13_o = value + 200000, output as s13 = OUTC[s13_o;-200000*source]\n  [info] re5: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for s7_o\n  [info] re7 term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re12: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Koo2013 - Shear stress induced calcium influx and eNOS activation - Model 1  (BIOMD0000000464, curated BioModels; source file BIOMD0000000464_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 term 1/3",
+     ""
+    ],
+    [
+     "150",
+     "0",
+     "0",
+     "s4==>s3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 term 2/3",
+     ""
+    ],
+    [
+     "6000",
+     "0",
+     "0",
+     "s3==>s4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 term 3/3",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "s4+s3==>2s3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cs12:(26.4+0.004000606152447347*exp((-1*100*cs12))-26.404000606152444*exp((-1*0.015151515151515152*cs12)))]==>s6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re5 (consumes s7_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cs12:(-26.4-0.004000606152447347*exp((-1*100*cs12))+26.404000606152444*exp((-1*0.015151515151515152*cs12)))]==>s7_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s6==>s8",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re7 term 1/3",
+     ""
+    ],
+    [
+     "5e-11",
+     "0",
+     "0",
+     "s2+s2==>s3+s2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re7 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s3+s3+S[USER;cs3:(2500/(300*cs3+1*(cs3+1e-30)^2+22500))]==>s2+s3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re7 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s2+S[USER;cs6:(3.32*cs6^3/(1*cs6+200)^3)]==>s3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s3+S[USER;cs3:(2380*cs3^3/(1*(cs3+1e-30)^4+20851360000))]==>s9",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s3+S[USER;cs3:(9165/(1*cs3+321))]==>s10",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re10 (shifted s11_o)",
+     ""
+    ],
+    [
+     "-3000",
+     "0",
+     "0",
+     "source==>s11_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re10",
+     ""
+    ],
+    [
+     "3000",
+     "0",
+     "0",
+     "source==>s3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 (shifted s13_o)",
+     ""
+    ],
+    [
+     "-1",
+     "0",
+     "0",
+     "source==>s13_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>s12",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re12",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s3+s3+S[USER;cs3:(815/(1*(cs3+1e-30)^2+6400))]==>s9+s3",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "s1",
+     "0",
+     "1500000",
+     "Y",
+     "0",
+     "No",
+     "1500000",
+     "Ca_ex [s1]",
+     ""
+    ],
+    [
+     "s2",
+     "0",
+     "2830000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ca_s [s2]",
+     ""
+    ],
+    [
+     "s3",
+     "0",
+     "117.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ca_c [s3]",
+     ""
+    ],
+    [
+     "s4",
+     "0",
+     "3870",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ca_B [s4]",
+     ""
+    ],
+    [
+     "s5",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "s5 [s5]",
+     ""
+    ],
+    [
+     "s6",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IP3 [s6]",
+     ""
+    ],
+    [
+     "s7_o",
+     "0",
+     "10000000",
+     "N",
+     "0",
+     "No",
+     "No",
+     "s7 + 10000000 (shifted state) [__shifted__s7]",
+     ""
+    ],
+    [
+     "s8",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "s8 [s8]",
+     ""
+    ],
+    [
+     "s9",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "s9 [s9]",
+     ""
+    ],
+    [
+     "s10",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "s10 [s10]",
+     ""
+    ],
+    [
+     "s11_o",
+     "0",
+     "1000000000",
+     "N",
+     "0",
+     "No",
+     "No",
+     "s11 + 1000000000 (shifted state) [__shifted__s11]",
+     ""
+    ],
+    [
+     "s12",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TimeT [s12]",
+     ""
+    ],
+    [
+     "s13_o",
+     "0",
+     "200000",
+     "N",
+     "0",
+     "No",
+     "No",
+     "s13 + 200000 (shifted state) [__shifted__s13]",
+     ""
+    ],
+    [
+     "s119",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Shear Stress [s119]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "s7",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s7_o;-10000000*source]",
+     "No",
+     "s7 (= s7_o - 10000000) [s7]",
+     ""
+    ],
+    [
+     "s11",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s11_o;-1000000000*source]",
+     "No",
+     "s11 (= s11_o - 1000000000) [s11]",
+     ""
+    ],
+    [
+     "s13",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[s13_o;-200000*source]",
+     "No",
+     "s13 (= s13_o - 200000) [s13]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

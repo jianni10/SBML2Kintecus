@@ -1,0 +1,825 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:08:19.251941+00:00",
+ "description": "den Breems2015 - macrophage in cancer\nBioModels BIOMD0000000759 (curated). SBML file: denBreems2015.xml.\nSimulation: 0 to 40 time units (SED-ML: denBreems2015.sedml), sampling 0.4.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.24e-06 of species peak (worst: Ts)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "den Breems2015 - macrophage in cancer  (BIOMD0000000759, curated BioModels; source file denBreems2015.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tn_growth term 1/3",
+     ""
+    ],
+    [
+     "0.565",
+     "0",
+     "0",
+     "Tn==>2Tn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tn_growth term 2/3",
+     ""
+    ],
+    [
+     "2.8249999999999996e-10",
+     "0",
+     "0",
+     "Tn+Tn==>Tn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tn_growth term 3/3",
+     ""
+    ],
+    [
+     "2.8249999999999996e-10",
+     "0",
+     "0",
+     "Tn+Ts==>Ts",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ts_Tn_transition",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Ts==>Tn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tn_killing",
+     ""
+    ],
+    [
+     "2e-6",
+     "0",
+     "0",
+     "Tn+M1==>M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tn_stimulation",
+     ""
+    ],
+    [
+     "1e-7",
+     "0",
+     "0",
+     "M2+Tn==>2Tn+M2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ts_growth term 1/3",
+     ""
+    ],
+    [
+     "0.565",
+     "0",
+     "0",
+     "Ts==>2Ts",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ts_growth term 2/3",
+     ""
+    ],
+    [
+     "2.8249999999999996e-10",
+     "0",
+     "0",
+     "Ts+Ts==>Ts",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ts_growth term 3/3",
+     ""
+    ],
+    [
+     "2.8249999999999996e-10",
+     "0",
+     "0",
+     "Ts+Tn==>Tn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ts_killing_M1",
+     ""
+    ],
+    [
+     "2e-6",
+     "0",
+     "0",
+     "Ts+M1==>M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ts_killing_Th1",
+     ""
+    ],
+    [
+     "5.3e-8",
+     "0",
+     "0",
+     "Ts+Th1==>Th1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_growth term 1/6",
+     ""
+    ],
+    [
+     "5e-8",
+     "0",
+     "0",
+     "M1+Th1==>2M1+Th1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_growth term 2/6",
+     ""
+    ],
+    [
+     "1e-6",
+     "0",
+     "0",
+     "M1+Ts==>2M1+Ts",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_growth term 3/6",
+     ""
+    ],
+    [
+     "5e-13",
+     "0",
+     "0",
+     "M1+M1+Th1==>M1+Th1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_growth term 4/6",
+     ""
+    ],
+    [
+     "1e-11",
+     "0",
+     "0",
+     "M1+M1+Ts==>M1+Ts",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_growth term 5/6",
+     ""
+    ],
+    [
+     "5e-13",
+     "0",
+     "0",
+     "M1+M2+Th1==>M2+Th1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_growth term 6/6",
+     ""
+    ],
+    [
+     "1e-11",
+     "0",
+     "0",
+     "M1+M2+Ts==>M2+Ts",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_death",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "M1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M1_M2_transition",
+     ""
+    ],
+    [
+     "5e-5",
+     "0",
+     "0",
+     "M1+M2==>2M2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_M1_transition",
+     ""
+    ],
+    [
+     "4e-5",
+     "0",
+     "0",
+     "M2+M1==>2M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_growth term 1/6",
+     ""
+    ],
+    [
+     "5e-8",
+     "0",
+     "0",
+     "M2+Th2==>2M2+Th2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_growth term 2/6",
+     ""
+    ],
+    [
+     "5e-8",
+     "0",
+     "0",
+     "M2+Tn==>2M2+Tn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_growth term 3/6",
+     ""
+    ],
+    [
+     "5e-13",
+     "0",
+     "0",
+     "M2+M2+Th2==>M2+Th2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_growth term 4/6",
+     ""
+    ],
+    [
+     "5e-13",
+     "0",
+     "0",
+     "M2+M2+Tn==>M2+Tn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_growth term 5/6",
+     ""
+    ],
+    [
+     "5e-13",
+     "0",
+     "0",
+     "M2+M1+Th2==>M1+Th2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_growth term 6/6",
+     ""
+    ],
+    [
+     "5e-13",
+     "0",
+     "0",
+     "M2+M1+Tn==>M1+Tn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M2_death",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "M2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th1_growth term 1/3",
+     ""
+    ],
+    [
+     "9e-6",
+     "0",
+     "0",
+     "M1+Th1==>2Th1+M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th1_growth term 2/3",
+     ""
+    ],
+    [
+     "9.000000000000001e-14",
+     "0",
+     "0",
+     "Th1+Th1+M1==>M1+Th1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th1_growth term 3/3",
+     ""
+    ],
+    [
+     "9.000000000000001e-14",
+     "0",
+     "0",
+     "Th1+M1+Th2==>M1+Th2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th1_death",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "Th1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th1_stimulation",
+     ""
+    ],
+    [
+     "0.008",
+     "0",
+     "0",
+     "M1==>Th1+M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th2_growth term 1/3",
+     ""
+    ],
+    [
+     "9e-6",
+     "0",
+     "0",
+     "M2+Th2==>2Th2+M2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th2_growth term 2/3",
+     ""
+    ],
+    [
+     "9.000000000000001e-14",
+     "0",
+     "0",
+     "Th2+Th2+M2==>M2+Th2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th2_growth term 3/3",
+     ""
+    ],
+    [
+     "9.000000000000001e-14",
+     "0",
+     "0",
+     "Th2+M2+Th1==>M2+Th1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th2_death",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "Th2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Th2_stimulation",
+     ""
+    ],
+    [
+     "0.008",
+     "0",
+     "0",
+     "M2==>Th2+M2",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Tn",
+     "0",
+     "1000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tn [Tn]",
+     ""
+    ],
+    [
+     "Ts",
+     "0",
+     "1000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ts [Ts]",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M1 [M1]",
+     ""
+    ],
+    [
+     "M2",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M2 [M2]",
+     ""
+    ],
+    [
+     "Th1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Th1 [Th1]",
+     ""
+    ],
+    [
+     "Th2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Th2 [Th2]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.4",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "40",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.4",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

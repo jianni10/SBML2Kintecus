@@ -1,0 +1,807 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:59:56.820413+00:00",
+ "description": "Sivakumar2011_NeuralStemCellDifferentiation_Crosstalk\nBioModels BIOMD0000000398 (curated). SBML file: BIOMD0000000398_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000398_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.40e-06 of species peak (worst: s73)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] re29 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re29 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re40 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re40 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sivakumar2011_NeuralStemCellDifferentiation_Crosstalk  (BIOMD0000000398, curated BioModels; source file BIOMD0000000398_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re29 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s57+S[USER;cs53,cs57,cs58:(0.04950495049504951/(1*cs53*cs58+1*cs53+1*cs57+1*cs58+1))]==>s53+s58",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re29 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s53+s58+S[USER;cs53,cs57,cs58:(0.04950495049504951/(1*cs53+1*cs57+1*cs58+1*(cs53+1e-30)*(cs58+1e-30)+1))]==>s57",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re31 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s72==>s68+s53",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re31 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s68+s53==>s72",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re32 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s72==>s73",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re32 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s73==>s72",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re33 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s85==>s81+s83",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re33 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s81+s83==>s85",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re36 term 1/2",
+     ""
+    ],
+    [
+     "0.009900990099009901",
+     "0",
+     "0",
+     "s100==>s96+s98",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re36 term 2/2",
+     ""
+    ],
+    [
+     "0.009900990099009901",
+     "0",
+     "0",
+     "s96+s98==>s100",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re37 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s100==>s73",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re37 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s73==>s100",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re38 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s111==>s107+s109",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re38 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s107+s109==>s111",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re40 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s135+s111+S[USER;cs122,cs124,cs135:(1/(1*cs122*cs124+1*cs122+1*cs124+1*cs135+1))]==>s122+s124+s111",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re40 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s122+s124+s111+S[USER;cs122,cs124,cs135:(1/(1*cs122+1*cs124+1*cs135+1*(cs122+1e-30)*(cs124+1e-30)+1))]==>s135+s111",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re42 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s146+S[USER;cs135:(0.009900990099009901/(cs135+1))]==>s144+s142",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re42 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s144+s142+S[USER;cs135:(0.009900990099009901/(cs135+1))]==>s146",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re43 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s144==>s73",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re43 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s73==>s144",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "s53",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NICD [s53]",
+     ""
+    ],
+    [
+     "s57",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Notch [s57]",
+     ""
+    ],
+    [
+     "s58",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Notch TM [s58]",
+     ""
+    ],
+    [
+     "s60",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "5",
+     "Gamma secretase [s60]",
+     ""
+    ],
+    [
+     "s61",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "100",
+     "DAPT [s61]",
+     ""
+    ],
+    [
+     "s68",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RBP-jk [s68]",
+     ""
+    ],
+    [
+     "s72",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex NICD-RBP [s72]",
+     ""
+    ],
+    [
+     "s73",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hes-1 [s73]",
+     ""
+    ],
+    [
+     "s81",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Shh [s81]",
+     ""
+    ],
+    [
+     "s83",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ptch1 [s83]",
+     ""
+    ],
+    [
+     "s85",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex Shh Ptch1 [s85]",
+     ""
+    ],
+    [
+     "s88",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "smo [s88]",
+     ""
+    ],
+    [
+     "s89",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "SAG [s89]",
+     ""
+    ],
+    [
+     "s96",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "EGF [s96]",
+     ""
+    ],
+    [
+     "s98",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "EGFR [s98]",
+     ""
+    ],
+    [
+     "s100",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex EGF-EGFR [s100]",
+     ""
+    ],
+    [
+     "s101",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "100",
+     "Erlotinib [s101]",
+     ""
+    ],
+    [
+     "s107",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Wnt [s107]",
+     ""
+    ],
+    [
+     "s109",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Frzzl [s109]",
+     ""
+    ],
+    [
+     "s111",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex Wnt-Frzzl [s111]",
+     ""
+    ],
+    [
+     "s122",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Dishevelled [s122]",
+     ""
+    ],
+    [
+     "s124",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FRAT-CK2 [s124]",
+     ""
+    ],
+    [
+     "s135",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex Dishevelled-FRAT-CK2 [s135]",
+     ""
+    ],
+    [
+     "s142",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GSK3B [s142]",
+     ""
+    ],
+    [
+     "s144",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Beta-catenin [s144]",
+     ""
+    ],
+    [
+     "s146",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex GSK3B-Bcatenin [s146]",
+     ""
+    ],
+    [
+     "s147",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "100",
+     "6 bromoindirubin 3`oxime [s147]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

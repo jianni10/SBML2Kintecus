@@ -1,0 +1,730 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:07:56.035479+00:00",
+ "description": "Gallaher2018 - Tumor\u2013Immune dynamics in multiple myeloma\nBioModels BIOMD0000000743 (curated). SBML file: Gallaher2018.xml.\nSimulation: 0 to 1500 time units (SED-ML: Gallaher2018.sedml), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.81e-06 of species peak (worst: N)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): M1 = M",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Gallaher2018 - Tumor\u2013Immune dynamics in multiple myeloma  (BIOMD0000000743, curated BioModels; source file Gallaher2018.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_breakup term 1/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1+N+S[USER;cN:(0.01/(cN+150))]==>N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_breakup term 2/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1+Tc+S[USER;cTc:(0.01/(cTc+375))]==>Tc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_breakup term 3/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N+M1+M1+S[USER;cM1,cN:(0.005/(cM1*cN+150*cM1+3*cN+450))]==>3M1+N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_breakup term 4/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tc+M1+M1+S[USER;cM1,cTc:(0.005/(cM1*cTc+375*cM1+3*cTc+1125))]==>3M1+Tc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_breakup term 5/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1+N+Tc+S[USER;cN,cTc:(0.016/(cN*cTc+375*cN+150*cTc+56250))]==>N+Tc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_breakup term 6/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N+Tc+S[USER;cM1,cN,cTc:(0.008*cM1^2/(cM1*cN*cTc+375*cM1*cN+150*cM1*cTc+56250*cM1+3*cN*cTc+1125*cN+450*cTc+168750))]==>M1+N+Tc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_breakup term 7/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1+N+Tr+S[USER;cN,cTr:(0.005/(cN*cTr+25*cN+150*cTr+3750))]==>2M1+N+Tr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_breakup term 8/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1+Tc+Tr+S[USER;cTc,cTr:(0.005/(cTc*cTr+25*cTc+375*cTr+9375))]==>2M1+Tc+Tr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_breakup term 9/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1+N+Tc+S[USER;cN,cTc,cTr:(0.008*cTr/(cN*cTc*cTr+25*cN*cTc+375*cN*cTr+9375*cN+150*cTc*cTr+3750*cTc+56250*cTr+1406250))]==>2M1+N+Tc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_decay",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "M1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_source",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "source==>M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_growth term 1/2",
+     ""
+    ],
+    [
+     "0.0175",
+     "0",
+     "0",
+     "M1==>2M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "M_growth term 2/2",
+     ""
+    ],
+    [
+     "0.0017500000000000003",
+     "0",
+     "0",
+     "M1+M1==>M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tc_growth term 1/2",
+     ""
+    ],
+    [
+     "0.013",
+     "0",
+     "0",
+     "Tc==>2Tc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tc_growth term 2/2",
+     ""
+    ],
+    [
+     "1.625e-5",
+     "0",
+     "0",
+     "Tc+Tc==>Tc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tc_death",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Tc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tc_stimulation term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1+Tc+S[USER;cM1:(0.013/(cM1+150))]==>2Tc+M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tc_stimulation term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N+Tc+S[USER;cN:(0.065/(cN+3))]==>2Tc+N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tc_stimulation term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tc+Tc+N+S[USER;cN:(8.125e-5/(cN+3))]==>N+Tc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tc_stimulation term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tc+Tc+M1+S[USER;cM1:(1.625e-5/(cM1+150))]==>M1+Tc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "N_source",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "source==>N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "N_growth term 1/2",
+     ""
+    ],
+    [
+     "0.04",
+     "0",
+     "0",
+     "N==>2N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "N_growth term 2/2",
+     ""
+    ],
+    [
+     "8.888888888888889e-5",
+     "0",
+     "0",
+     "N+N==>N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "N_stimulation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N+Tc+S[USER;cTc:(0.04/(cTc+375))]==>2N+Tc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "N_stimulation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N+N+Tc+S[USER;cTc:(8.888888888888889e-5/(cTc+375))]==>N+Tc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "N_death",
+     ""
+    ],
+    [
+     "0.025",
+     "0",
+     "0",
+     "N==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tr_death",
+     ""
+    ],
+    [
+     "0.0757",
+     "0",
+     "0",
+     "Tr==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tr_growth term 1/2",
+     ""
+    ],
+    [
+     "0.0831",
+     "0",
+     "0",
+     "Tr==>2Tr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tr_growth term 2/2",
+     ""
+    ],
+    [
+     "0.00103875",
+     "0",
+     "0",
+     "Tr+Tr==>Tr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tr_stimulation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1+Tr+S[USER;cM1:(0.1662/(cM1+3))]==>2Tr+M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tr_stimulation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tr+Tr+M1+S[USER;cM1:(0.0020775/(cM1+3))]==>M1+Tr",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M [M]",
+     ""
+    ],
+    [
+     "Tc",
+     "0",
+     "464",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tc [Tc]",
+     ""
+    ],
+    [
+     "N",
+     "0",
+     "227",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N [N]",
+     ""
+    ],
+    [
+     "Tr",
+     "0",
+     "42",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tr [Tr]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1500",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

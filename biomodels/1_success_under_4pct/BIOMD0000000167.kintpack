@@ -1,0 +1,555 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:44:23.880486+00:00",
+ "description": "Mayya2005_STATmodule\nBioModels BIOMD0000000167 (curated). SBML file: BIOMD0000000167_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000167_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.58e-07 of species peak (worst: stat_nuc)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'statKinase_sol' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] statDephosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] statPhosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PstatDimer__import (volume 14.625): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] stat_export (volume 1): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] stat_import (volume 14.625): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Mayya2005_STATmodule  (BIOMD0000000167, curated BioModels; source file BIOMD0000000167_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PstatDimerisation term 1/2",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "Pstat_sol+Pstat_sol==>PstatDimer_sol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PstatDimerisation term 2/2",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "PstatDimer_sol==>2Pstat_sol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "statDephosphorylation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pstat_nuc+S[USER;cPstat_nuc:(0.05/(1*cPstat_nuc+2))]==>stat_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "statPhosphorylation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "stat_sol+S[USER;cSW1,cSW2,cTIME_,cstat_sol:(0.01*cSW1*cSW2*sin(0.001571*cTIME_-0.7855)/(1*cstat_sol+4))]==>Pstat_sol+species_test",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PstatDimerisationNuc term 1/2",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "Pstat_nuc+Pstat_nuc==>PstatDimer_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PstatDimerisationNuc term 2/2",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "PstatDimer_nuc==>2Pstat_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PstatDimer__import (volume 14.625)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PstatDimer_sol+S[USER;cPstatDimer_sol:(0.003076923076923077/(1*cPstatDimer_sol+0.3))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PstatDimer__import (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPstatDimer_sol:(0.045*cPstatDimer_sol/(cPstatDimer_sol+0.3))]==>PstatDimer_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "stat_export (volume 14.625)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cstat_nuc:(0.0041025641025641026*cstat_nuc/(cstat_nuc+0.6))]==>stat_sol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "stat_export (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "stat_nuc+S[USER;cstat_nuc:(0.06/(1*cstat_nuc+0.6))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "stat_import (volume 14.625)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "stat_sol+S[USER;cstat_sol:(0.00020512820512820514/(1*cstat_sol+3))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "stat_import (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cstat_sol:(0.003*cstat_sol/(cstat_sol+3))]==>stat_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "stat_sol",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "stat_sol [stat_sol]",
+     ""
+    ],
+    [
+     "Pstat_sol",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pstat_sol [Pstat_sol]",
+     ""
+    ],
+    [
+     "PstatDimer_sol",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PstatDimer_sol [PstatDimer_sol]",
+     ""
+    ],
+    [
+     "PstatDimer_nuc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PstatDimer_nuc [PstatDimer_nuc]",
+     ""
+    ],
+    [
+     "stat_nuc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "stat_nuc [stat_nuc]",
+     ""
+    ],
+    [
+     "Pstat_nuc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pstat_nuc [Pstat_nuc]",
+     ""
+    ],
+    [
+     "statPhosphatase_nuc",
+     "0",
+     "0.05",
+     "Y",
+     "0",
+     "No",
+     "0.05",
+     "statPhosphatase_nuc [statPhosphatase_nuc]",
+     ""
+    ],
+    [
+     "species_test",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "species_test [species_test]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "0",
+     "time switch at 500 [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "time switch at 2502.54614894971 [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

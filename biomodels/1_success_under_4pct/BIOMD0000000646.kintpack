@@ -1,0 +1,975 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:06:00.000959+00:00",
+ "description": "Barr2016 - All-or-nothing G1/S transition\nBioModels BIOMD0000000646 (curated). SBML file: BIOMD0000000646_url.xml.\nSimulation: 0 to 900 time units (SED-ML: Barr2016.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.15e-06 of species peak (worst: Skp2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'CycET' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'CycAT' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'p27T' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'EmiC' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Emi1T' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Cdh1dp' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Cdh1T' is defined by an assignment rule; not a Kintecus state (not output)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Barr2016 - All-or-nothing G1/S transition  (BIOMD0000000646, curated BioModels; source file BIOMD0000000646_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycE_Synthesis",
+     ""
+    ],
+    [
+     "0.003",
+     "0",
+     "0",
+     "source==>CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycE_degradation term 1/3",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "CycE==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycE_degradation term 2/3",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "CycE+CycE==>CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycE_degradation term 3/3",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "CycE+CycA==>CycA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycA_synthesis",
+     ""
+    ],
+    [
+     "0.0025",
+     "0",
+     "0",
+     "source==>CycA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycA_degradation term 1/2",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "CycA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycA_degradation term 2/2",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "CycA+Cdh1==>Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p27_Synthesis",
+     ""
+    ],
+    [
+     "0.008",
+     "0",
+     "0",
+     "source==>p27",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p27_degradation term 1/3",
+     ""
+    ],
+    [
+     "0.004",
+     "0",
+     "0",
+     "p27==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p27_degradation term 2/3",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "p27+CycA+Skp2==>CycA+Skp2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p27_degradation term 3/3",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "p27+CycE+Skp2==>CycE+Skp2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycE_p27_Binding term 1/2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "CycEp27==>CycE+p27",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycE_p27_Binding term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CycE+p27==>CycEp27",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycA_p27_Binding term 1/2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "CycAp27==>CycA+p27",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycA_p27_Binding term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CycA+p27==>CycAp27",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycA_degradation_from_CycA_p27_complexes term 1/2",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "CycAp27==>p27",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycA_degradation_from_CycA_p27_complexes term 2/2",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "CycAp27+Cdh1==>p27+Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p27_degradation_from_CycA_p27_complexes term 1/3",
+     ""
+    ],
+    [
+     "0.004",
+     "0",
+     "0",
+     "CycAp27==>CycA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p27_degradation_from_CycA_p27_complexes term 2/3",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "CycAp27+CycA+Skp2==>2CycA+Skp2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p27_degradation_from_CycA_p27_complexes term 3/3",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "CycAp27+CycE+Skp2==>CycA+CycE+Skp2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycE_degradation_from_CycE_p27_complexes term 1/3",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "CycEp27==>p27",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycE_degradation_from_CycE_p27_complexes term 2/3",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "CycEp27+CycA==>p27+CycA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycE_degradation_from_CycE_p27_complexes term 3/3",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "CycEp27+CycE==>p27+CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p27_degradation_from_CycE_p27_complexes term 1/3",
+     ""
+    ],
+    [
+     "0.004",
+     "0",
+     "0",
+     "CycEp27==>CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p27_degradation_from_CycE_p27_complexes term 2/3",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "CycEp27+CycA+Skp2==>CycE+CycA+Skp2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p27_degradation_from_CycE_p27_complexes term 3/3",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "CycEp27+CycE+Skp2==>2CycE+Skp2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Skp2_synthesis",
+     ""
+    ],
+    [
+     "0.004",
+     "0",
+     "0",
+     "source==>Skp2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Skp2_degradation term 1/2",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "Skp2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Skp2_degradation term 2/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Skp2+Cdh1==>Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1_phosphorylation term 1/2",
+     ""
+    ],
+    [
+     "0.07",
+     "0",
+     "0",
+     "Cdh1+CycE==>Cdh1p+CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1_phosphorylation term 2/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Cdh1+CycA==>Cdh1p+CycA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1_dephosphorylation",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Cdh1p==>Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1_Emi1_binding term 1/2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Emi1Cdh1==>Emi1+Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1_Emi1_binding term 2/2",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Emi1+Cdh1==>Emi1Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Emi1_degradation_from_Cdh1_Emi1_complexes",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Emi1Cdh1==>Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Emi1_synthesis",
+     ""
+    ],
+    [
+     "0.003",
+     "0",
+     "0",
+     "source==>Emi1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1p_Emi1_binding term 1/2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Emi1Cdh1p==>Emi1+Cdh1p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1p_Emi1_binding term 2/2",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Emi1+Cdh1p==>Emi1Cdh1p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1_Emi1_phosphorylation term 1/2",
+     ""
+    ],
+    [
+     "0.07",
+     "0",
+     "0",
+     "Emi1Cdh1+CycE==>Emi1Cdh1p+CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1_Emi1_phosphorylation term 2/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Emi1Cdh1+CycA==>Emi1Cdh1p+CycA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1p_Emi1_dephosphorylation",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Emi1Cdh1p==>Emi1Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Emi1_degradation_from_Cdh1p_Emi1_complexes",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Emi1Cdh1p==>Cdh1p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Emi1_degradation",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Emi1==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "CycE",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CycE [CycE]",
+     ""
+    ],
+    [
+     "CycA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CycA [CycA]",
+     ""
+    ],
+    [
+     "CycEp27",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CycEp27 [CycEp27]",
+     ""
+    ],
+    [
+     "CycAp27",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CycAp27 [CycAp27]",
+     ""
+    ],
+    [
+     "Skp2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Skp2 [Skp2]",
+     ""
+    ],
+    [
+     "Cdh1p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdh1p [Cdh1p]",
+     ""
+    ],
+    [
+     "Emi1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Emi1 [Emi1]",
+     ""
+    ],
+    [
+     "p27",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p27 [p27]",
+     ""
+    ],
+    [
+     "Cdh1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdh1 [Cdh1]",
+     ""
+    ],
+    [
+     "Emi1Cdh1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Emi1Cdh1 [Emi1Cdh1]",
+     ""
+    ],
+    [
+     "Emi1Cdh1p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Emi1Cdh1p [Emi1Cdh1p]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "900",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

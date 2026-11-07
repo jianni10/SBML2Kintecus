@@ -1,0 +1,1279 @@
+{
+ "version": 3,
+ "created": "2026-11-06T06:02:28.151879+00:00",
+ "description": "Cooling2007_IP3transients_CardiacMyocyte\nBioModels BIOMD0000000400 (curated). SBML file: BIOMD0000000400_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000400_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.51e-06 of species peak (worst: R)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dRl/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - Rl: zero order, signed\n  [info] rate rule dRlg/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - Rlg: zero order, signed\nRenamed species (Kintecus name = SBML id): R1 = R; P1 = P",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cooling2007_IP3transients_CardiacMyocyte  (BIOMD0000000400, curated BioModels; source file BIOMD0000000400_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP/dt term 1",
+     ""
+    ],
+    [
+     "7",
+     "0",
+     "0",
+     "Pg==>P1+Pg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP/dt term 2",
+     ""
+    ],
+    [
+     "0.0167",
+     "0",
+     "0",
+     "Pc==>P1+Pc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP/dt term 3",
+     ""
+    ],
+    [
+     "0.0167",
+     "0",
+     "0",
+     "P1+Ca==>Ca",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP/dt term 4",
+     ""
+    ],
+    [
+     "0.0042",
+     "0",
+     "0",
+     "P1+Gt==>Gt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPg/dt term 1",
+     ""
+    ],
+    [
+     "0.00334",
+     "0",
+     "0",
+     "Pcg==>Pg+Pcg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPg/dt term 2",
+     ""
+    ],
+    [
+     "7",
+     "0",
+     "0",
+     "Pg==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPg/dt term 3",
+     ""
+    ],
+    [
+     "0.0042",
+     "0",
+     "0",
+     "Gt+P1==>Pg+Gt+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPg/dt term 4",
+     ""
+    ],
+    [
+     "0.0334",
+     "0",
+     "0",
+     "Pg+Ca==>Ca",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPc/dt term 1",
+     ""
+    ],
+    [
+     "7",
+     "0",
+     "0",
+     "Pcg==>Pc+Pcg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPc/dt term 2",
+     ""
+    ],
+    [
+     "0.0167",
+     "0",
+     "0",
+     "Pc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPc/dt term 3",
+     ""
+    ],
+    [
+     "0.0167",
+     "0",
+     "0",
+     "Ca+P1==>Pc+Ca+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPc/dt term 4",
+     ""
+    ],
+    [
+     "0.042",
+     "0",
+     "0",
+     "Pc+Gt==>Gt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPcg/dt term 1",
+     ""
+    ],
+    [
+     "7.00334",
+     "0",
+     "0",
+     "Pcg==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPcg/dt term 2",
+     ""
+    ],
+    [
+     "0.0334",
+     "0",
+     "0",
+     "Ca+Pg==>Pcg+Ca+Pg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPcg/dt term 3",
+     ""
+    ],
+    [
+     "0.042",
+     "0",
+     "0",
+     "Gt+Pc==>Pcg+Gt+Pc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIP3/dt term 1",
+     ""
+    ],
+    [
+     "0.0020641980888959784",
+     "0",
+     "0",
+     "Pc==>IP3+Pc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIP3/dt term 2",
+     ""
+    ],
+    [
+     "0.025006743799455142",
+     "0",
+     "0",
+     "Pcg==>IP3+Pcg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIP3/dt term 3",
+     ""
+    ],
+    [
+     "1.25",
+     "0",
+     "0",
+     "IP3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGd/dt term 1",
+     ""
+    ],
+    [
+     "6",
+     "0",
+     "0",
+     "Pcg==>Gd+Pcg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGd/dt term 2",
+     ""
+    ],
+    [
+     "6",
+     "0",
+     "0",
+     "Pg==>Gd+Pg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGd/dt term 3",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Rlg==>Gd+Rlg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGd/dt term 4",
+     ""
+    ],
+    [
+     "0.15",
+     "0",
+     "0",
+     "Gt==>Gd+Gt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGd/dt term 5",
+     ""
+    ],
+    [
+     "7.562500000000001",
+     "0",
+     "0",
+     "Rg==>Gd+Rg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGd/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Gd+Rl==>Rl",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGd/dt term 7",
+     ""
+    ],
+    [
+     "0.000275",
+     "0",
+     "0",
+     "Gd+R1==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGt/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pcg==>Gt+Pcg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGt/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pg==>Gt+Pg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGt/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Rlg==>Gt+Rlg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGt/dt term 4",
+     ""
+    ],
+    [
+     "0.15",
+     "0",
+     "0",
+     "Gt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGt/dt term 5",
+     ""
+    ],
+    [
+     "0.0042",
+     "0",
+     "0",
+     "Gt+P1==>P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGt/dt term 6",
+     ""
+    ],
+    [
+     "0.042",
+     "0",
+     "0",
+     "Gt+Pc==>Pc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa/dt term 1",
+     ""
+    ],
+    [
+     "2.556858186648954e-5",
+     "0",
+     "0",
+     "Pcg==>Ca+Pcg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa/dt term 2",
+     ""
+    ],
+    [
+     "0.0001278429093324477",
+     "0",
+     "0",
+     "Pc==>Ca+Pc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa/dt term 3",
+     ""
+    ],
+    [
+     "0.0001278429093324477",
+     "0",
+     "0",
+     "Ca+P1==>P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCa/dt term 4",
+     ""
+    ],
+    [
+     "0.0002556858186648954",
+     "0",
+     "0",
+     "Ca+Pg==>Pg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 1",
+     ""
+    ],
+    [
+     "7.562500000000001",
+     "0",
+     "0",
+     "Rg==>R1+Rg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 2",
+     ""
+    ],
+    [
+     "9e-9",
+     "0",
+     "0",
+     "Rl==>R1+Rl",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 3",
+     ""
+    ],
+    [
+     "0.000275",
+     "0",
+     "0",
+     "R1+Gd==>Gd",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "R1+S[USER;cSW1:(2.9999999999999997e-5*cSW1)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "R1+S[USER;cSW1,cSW2,cSW3:(2.9999999999999997e-5*cSW1*cSW2*cSW3)]==>2R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dR/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "R1+S[USER;cSW2,cSW3,cTIME_:(2.9999999999999997e-5*cSW2*cSW3/(1+1e308*exp((-1*80*cTIME_))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRl/dt term 1",
+     ""
+    ],
+    [
+     "1.001",
+     "0",
+     "0",
+     "Rlg==>Rl+Rlg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRl/dt term 2",
+     ""
+    ],
+    [
+     "9e-9",
+     "0",
+     "0",
+     "Rl==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRl/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "R1+S[USER;cSW1:(2.9999999999999997e-5*cSW1)]==>Rl+R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRl/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Rl+Gd==>Gd",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRl/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "R1+S[USER;cSW2,cSW3,cTIME_:(2.9999999999999997e-5*cSW2*cSW3/(1+1e308*exp((-1*80*cTIME_))))]==>Rl+R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRl/dt term 6 (consumes Rl)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cR1,cSW1,cSW2,cSW3:((-1*2.9999999999999997e-5*cR1*cSW1*cSW2*cSW3))]==>Rl",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRg/dt term 1",
+     ""
+    ],
+    [
+     "9e-6",
+     "0",
+     "0",
+     "Rlg==>Rg+Rlg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRg/dt term 2",
+     ""
+    ],
+    [
+     "7.562500000000001",
+     "0",
+     "0",
+     "Rg==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRg/dt term 3",
+     ""
+    ],
+    [
+     "0.000275",
+     "0",
+     "0",
+     "Gd+R1==>Rg+Gd+R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRg/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Rg+S[USER;cSW1:(0.03*cSW1)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRg/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Rg+S[USER;cSW1,cSW2,cSW3:(0.03*cSW1*cSW2*cSW3)]==>2Rg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRg/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Rg+S[USER;cSW2,cSW3,cTIME_:(0.03*cSW2*cSW3/(1+1e308*exp((-1*80*cTIME_))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRlgp/dt term 1",
+     ""
+    ],
+    [
+     "0.0004",
+     "0",
+     "0",
+     "Rlg==>Rlgp+Rlg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRlg/dt term 1",
+     ""
+    ],
+    [
+     "1.001409",
+     "0",
+     "0",
+     "Rlg==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRlg/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Gd+Rl==>Rlg+Gd+Rl",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRlg/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Rg+S[USER;cSW1:(0.03*cSW1)]==>Rlg+Rg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRlg/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Rg+S[USER;cSW2,cSW3,cTIME_:(0.03*cSW2*cSW3/(1+1e308*exp((-1*80*cTIME_))))]==>Rlg+Rg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRlg/dt term 5 (consumes Rlg)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cRg,cSW1,cSW2,cSW3:((-1*0.03*cRg*cSW1*cSW2*cSW3))]==>Rlg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Gd",
+     "0",
+     "10000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gd [Gd]",
+     ""
+    ],
+    [
+     "Gt",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gt [Gt]",
+     ""
+    ],
+    [
+     "R1",
+     "0",
+     "13.9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R [R]",
+     ""
+    ],
+    [
+     "Rl",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rl [Rl]",
+     ""
+    ],
+    [
+     "Rg",
+     "0",
+     "5.06",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rg [Rg]",
+     ""
+    ],
+    [
+     "Rlg",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rlg [Rlg]",
+     ""
+    ],
+    [
+     "Rlgp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rlgp [Rlgp]",
+     ""
+    ],
+    [
+     "IP3",
+     "0",
+     "0.015",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IP3 [IP3]",
+     ""
+    ],
+    [
+     "Pc",
+     "0",
+     "9.09",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pc [Pc]",
+     ""
+    ],
+    [
+     "Pcg",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pcg [Pcg]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "90.9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P [P]",
+     ""
+    ],
+    [
+     "Pg",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pg [Pg]",
+     ""
+    ],
+    [
+     "Ca",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ca [Ca]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "0",
+     "time switch at 30.15 [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "time switch at 30.15 [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "0",
+     "time switch at 30 [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

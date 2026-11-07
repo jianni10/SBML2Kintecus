@@ -1,0 +1,2403 @@
+{
+ "version": 3,
+ "created": "2026-11-05T15:45:46.241489+00:00",
+ "description": "Hernjak2005_Calcium_Signaling\nBioModels BIOMD0000000162 (curated). SBML file: BIOMD0000000162_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000162_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.001.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.45e-06 of species peak (worst: D28kB_Cytosol)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] SERCA_fluxD: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SERCA_flux: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [partial] 13 profile files exceed the GUI's 10 O_ file limit",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hernjak2005_Calcium_Signaling  (BIOMD0000000162, curated BioModels; source file BIOMD0000000162_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD28k_highDbinding term 1/2",
+     ""
+    ],
+    [
+     "2.6",
+     "0",
+     "0",
+     "D28kB_high_D_Cytosol==>Ca_D_Cytosol+D28k_high_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD28k_highDbinding term 2/2",
+     ""
+    ],
+    [
+     "0.009136212624584705",
+     "0",
+     "0",
+     "Ca_D_Cytosol+D28k_high_D_Cytosol==>D28kB_high_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PA_Dbinding term 1/2",
+     ""
+    ],
+    [
+     "0.95",
+     "0",
+     "0",
+     "PABCa_D_Cytosol==>Ca_D_Cytosol+PA_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PA_Dbinding term 2/2",
+     ""
+    ],
+    [
+     "0.17774086378737516",
+     "0",
+     "0",
+     "Ca_D_Cytosol+PA_D_Cytosol==>PABCa_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CG_deg term 1/3",
+     ""
+    ],
+    [
+     "8057.201104021932",
+     "0",
+     "0",
+     "source==>CG_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CG_deg term 2/3",
+     ""
+    ],
+    [
+     "0.1033990133520849",
+     "0",
+     "0",
+     "CG_D_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CG_deg term 3/3",
+     ""
+    ],
+    [
+     "0.008122336685800726",
+     "0",
+     "0",
+     "CG_Cytosol==>CG_D_Cytosol+CG_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3deg term 1/3",
+     ""
+    ],
+    [
+     "173.1403338339007",
+     "0",
+     "0",
+     "source==>IP3_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3deg term 2/3",
+     ""
+    ],
+    [
+     "1.9507947185760017",
+     "0",
+     "0",
+     "IP3_D_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3deg term 3/3",
+     ""
+    ],
+    [
+     "0.15324141880544037",
+     "0",
+     "0",
+     "IP3_Cytosol==>IP3_D_Cytosol+IP3_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28kB_deg term 1/3",
+     ""
+    ],
+    [
+     "446.41099587159994",
+     "0",
+     "0",
+     "source==>D28kB_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28kB_deg term 2/3",
+     ""
+    ],
+    [
+     "0.19301149159055847",
+     "0",
+     "0",
+     "D28kB_D_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28kB_deg term 3/3",
+     ""
+    ],
+    [
+     "0.015161695146828021",
+     "0",
+     "0",
+     "D28kB_Cytosol==>D28kB_D_Cytosol+D28kB_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28k_deg term 1/3",
+     ""
+    ],
+    [
+     "8118.835200858471",
+     "0",
+     "0",
+     "source==>D28k_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28k_deg term 2/3",
+     ""
+    ],
+    [
+     "0.19301149159055847",
+     "0",
+     "0",
+     "D28k_D_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28k_deg term 3/3",
+     ""
+    ],
+    [
+     "0.015161695146828021",
+     "0",
+     "0",
+     "D28k_Cytosol==>D28k_D_Cytosol+D28k_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PA_MgD term 1/2",
+     ""
+    ],
+    [
+     "471.99999999999943",
+     "0",
+     "0",
+     "PA_D_Cytosol==>PABMg_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PA_MgD term 2/2",
+     ""
+    ],
+    [
+     "25",
+     "0",
+     "0",
+     "PABMg_D_Cytosol==>PA_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PA_Ca term 1/2",
+     ""
+    ],
+    [
+     "0.95",
+     "0",
+     "0",
+     "PABCa_Cytosol==>Ca_Cytosol+PA_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PA_Ca term 2/2",
+     ""
+    ],
+    [
+     "0.17774086378737516",
+     "0",
+     "0",
+     "Ca_Cytosol+PA_Cytosol==>PABCa_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PABMg_deg term 1/3",
+     ""
+    ],
+    [
+     "9942.971630179212",
+     "0",
+     "0",
+     "source==>PABMg_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PABMg_deg term 2/3",
+     ""
+    ],
+    [
+     "0.29641050494264337",
+     "0",
+     "0",
+     "PABMg_D_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PABMg_deg term 3/3",
+     ""
+    ],
+    [
+     "0.023284031832628747",
+     "0",
+     "0",
+     "PABMg_Cytosol==>PABMg_D_Cytosol+PABMg_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28k_high_deg term 1/3",
+     ""
+    ],
+    [
+     "7816.969158491337",
+     "0",
+     "0",
+     "source==>D28k_high_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28k_high_deg term 2/3",
+     ""
+    ],
+    [
+     "0.19301149159055847",
+     "0",
+     "0",
+     "D28k_high_D_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28k_high_deg term 3/3",
+     ""
+    ],
+    [
+     "0.015161695146828021",
+     "0",
+     "0",
+     "D28k_high_Cytosol==>D28k_high_D_Cytosol+D28k_high_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ca_d term 1/2",
+     ""
+    ],
+    [
+     "106.0827397723376",
+     "0",
+     "0",
+     "Ca_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ca_d term 2/2",
+     ""
+    ],
+    [
+     "106.0827397723376",
+     "0",
+     "0",
+     "Ca_D_Cytosol==>Ca_Cytosol+Ca_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28kB_high_deg term 1/3",
+     ""
+    ],
+    [
+     "748.2770382387324",
+     "0",
+     "0",
+     "source==>D28kB_high_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28kB_high_deg term 2/3",
+     ""
+    ],
+    [
+     "0.19301149159055847",
+     "0",
+     "0",
+     "D28kB_high_D_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28kB_high_deg term 3/3",
+     ""
+    ],
+    [
+     "0.015161695146828021",
+     "0",
+     "0",
+     "D28kB_high_Cytosol==>D28kB_high_D_Cytosol+D28kB_high_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CG_d term 1/2",
+     ""
+    ],
+    [
+     "7.135610298587731",
+     "0",
+     "0",
+     "CG_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CG_d term 2/2",
+     ""
+    ],
+    [
+     "7.135610298587731",
+     "0",
+     "0",
+     "CG_D_Cytosol==>CG_Cytosol+CG_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction1 term 1/3",
+     ""
+    ],
+    [
+     "0.54",
+     "0",
+     "0",
+     "source==>h_D_ERM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction1 term 2/3",
+     ""
+    ],
+    [
+     "0.54",
+     "0",
+     "0",
+     "h_D_ERM==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction1 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "h_D_ERM+S[USER;cCa_D_Cytosol:(0.004485049833887037*cCa_D_Cytosol)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CGbinding term 1/2",
+     ""
+    ],
+    [
+     "140",
+     "0",
+     "0",
+     "CGB_Cytosol==>CG_Cytosol+Ca_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CGbinding term 2/2",
+     ""
+    ],
+    [
+     "0.7142857142857133",
+     "0",
+     "0",
+     "CG_Cytosol+Ca_Cytosol==>CGB_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CaD28k_med term 1/2",
+     ""
+    ],
+    [
+     "35.8",
+     "0",
+     "0",
+     "D28kB_Cytosol==>Ca_Cytosol+D28k_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CaD28k_med term 2/2",
+     ""
+    ],
+    [
+     "0.07225913621262449",
+     "0",
+     "0",
+     "Ca_Cytosol+D28k_Cytosol==>D28kB_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PABCa_deg term 1/3",
+     ""
+    ],
+    [
+     "2684.1601432536445",
+     "0",
+     "0",
+     "source==>PABCa_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PABCa_deg term 2/3",
+     ""
+    ],
+    [
+     "0.29641050494264337",
+     "0",
+     "0",
+     "PABCa_D_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PABCa_deg term 3/3",
+     ""
+    ],
+    [
+     "0.023284031832628747",
+     "0",
+     "0",
+     "PABCa_Cytosol==>PABCa_D_Cytosol+PABCa_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3_d term 1/2",
+     ""
+    ],
+    [
+     "134.62518096668853",
+     "0",
+     "0",
+     "IP3_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3_d term 2/2",
+     ""
+    ],
+    [
+     "134.62518096668853",
+     "0",
+     "0",
+     "IP3_D_Cytosol==>IP3_Cytosol+IP3_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28k_high_d term 1/2",
+     ""
+    ],
+    [
+     "13.319805890697099",
+     "0",
+     "0",
+     "D28k_high_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28k_high_d term 2/2",
+     ""
+    ],
+    [
+     "13.319805890697099",
+     "0",
+     "0",
+     "D28k_high_D_Cytosol==>D28k_high_Cytosol+D28k_high_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction0 term 1/3",
+     ""
+    ],
+    [
+     "0.54",
+     "0",
+     "0",
+     "source==>h_ERM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction0 term 2/3",
+     ""
+    ],
+    [
+     "0.54",
+     "0",
+     "0",
+     "h_ERM==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction0 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "h_ERM+S[USER;cCa_Cytosol:(0.004485049833887037*cCa_Cytosol)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PABMg_d term 1/2",
+     ""
+    ],
+    [
+     "20.45541618928483",
+     "0",
+     "0",
+     "PABMg_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PABMg_d term 2/2",
+     ""
+    ],
+    [
+     "20.45541618928483",
+     "0",
+     "0",
+     "PABMg_D_Cytosol==>PABMg_Cytosol+PABMg_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD28k_high term 1/2",
+     ""
+    ],
+    [
+     "2.6",
+     "0",
+     "0",
+     "D28kB_high_Cytosol==>Ca_Cytosol+D28k_high_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD28k_high term 2/2",
+     ""
+    ],
+    [
+     "0.009136212624584705",
+     "0",
+     "0",
+     "Ca_Cytosol+D28k_high_Cytosol==>D28kB_high_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28kBDbinding term 1/2",
+     ""
+    ],
+    [
+     "35.8",
+     "0",
+     "0",
+     "D28kB_D_Cytosol==>Ca_D_Cytosol+D28k_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28kBDbinding term 2/2",
+     ""
+    ],
+    [
+     "0.07225913621262449",
+     "0",
+     "0",
+     "Ca_D_Cytosol+D28k_D_Cytosol==>D28kB_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PABCa_d term 1/2",
+     ""
+    ],
+    [
+     "20.45541618928483",
+     "0",
+     "0",
+     "PABCa_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PABCa_d term 2/2",
+     ""
+    ],
+    [
+     "20.45541618928483",
+     "0",
+     "0",
+     "PABCa_D_Cytosol==>PABCa_Cytosol+PABCa_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PA_d term 1/2",
+     ""
+    ],
+    [
+     "20.45541618928483",
+     "0",
+     "0",
+     "PA_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PA_d term 2/2",
+     ""
+    ],
+    [
+     "20.45541618928483",
+     "0",
+     "0",
+     "PA_D_Cytosol==>PA_Cytosol+PA_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CGB_deg term 1/3",
+     ""
+    ],
+    [
+     "1119.846671777792",
+     "0",
+     "0",
+     "source==>CGB_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CGB_deg term 2/3",
+     ""
+    ],
+    [
+     "0.1033990133520849",
+     "0",
+     "0",
+     "CGB_D_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CGB_deg term 3/3",
+     ""
+    ],
+    [
+     "0.008122336685800726",
+     "0",
+     "0",
+     "CGB_Cytosol==>CGB_D_Cytosol+CGB_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PA_Mg term 1/2",
+     ""
+    ],
+    [
+     "471.99999999999943",
+     "0",
+     "0",
+     "PA_Cytosol==>PABMg_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PA_Mg term 2/2",
+     ""
+    ],
+    [
+     "25",
+     "0",
+     "0",
+     "PABMg_Cytosol==>PA_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PA_deg term 1/3",
+     ""
+    ],
+    [
+     "526.6408157668334",
+     "0",
+     "0",
+     "source==>PA_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PA_deg term 2/3",
+     ""
+    ],
+    [
+     "0.29641050494264337",
+     "0",
+     "0",
+     "PA_D_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PA_deg term 3/3",
+     ""
+    ],
+    [
+     "0.023284031832628747",
+     "0",
+     "0",
+     "PA_Cytosol==>PA_D_Cytosol+PA_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3_degr term 1/2",
+     ""
+    ],
+    [
+     "13.484800000000021",
+     "0",
+     "0",
+     "source==>IP3_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3_degr term 2/2",
+     ""
+    ],
+    [
+     "0.14",
+     "0",
+     "0",
+     "IP3_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28kB_high_d term 1/2",
+     ""
+    ],
+    [
+     "13.319805890697099",
+     "0",
+     "0",
+     "D28kB_high_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28kB_high_d term 2/2",
+     ""
+    ],
+    [
+     "13.319805890697099",
+     "0",
+     "0",
+     "D28kB_high_D_Cytosol==>D28kB_high_Cytosol+D28kB_high_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28k_d term 1/2",
+     ""
+    ],
+    [
+     "13.319805890697099",
+     "0",
+     "0",
+     "D28k_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "D28k_d term 2/2",
+     ""
+    ],
+    [
+     "13.319805890697099",
+     "0",
+     "0",
+     "D28k_D_Cytosol==>D28k_Cytosol+D28k_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CGB_d term 1/2",
+     ""
+    ],
+    [
+     "7.135610298587731",
+     "0",
+     "0",
+     "CGB_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CGB_d term 2/2",
+     ""
+    ],
+    [
+     "7.135610298587731",
+     "0",
+     "0",
+     "CGB_D_Cytosol==>CGB_Cytosol+CGB_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CG_Dbinding term 1/2",
+     ""
+    ],
+    [
+     "140",
+     "0",
+     "0",
+     "CGB_D_Cytosol==>CG_D_Cytosol+Ca_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CG_Dbinding term 2/2",
+     ""
+    ],
+    [
+     "0.7142857142857133",
+     "0",
+     "0",
+     "CG_D_Cytosol+Ca_D_Cytosol==>CGB_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3_degr1 term 1/2",
+     ""
+    ],
+    [
+     "13.484800000000021",
+     "0",
+     "0",
+     "source==>IP3_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3_degr1 term 2/2",
+     ""
+    ],
+    [
+     "0.14",
+     "0",
+     "0",
+     "IP3_D_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ca_deg term 1/3",
+     ""
+    ],
+    [
+     "38.37153820722601",
+     "0",
+     "0",
+     "source==>Ca_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ca_deg term 2/3",
+     ""
+    ],
+    [
+     "1.5371986651676621",
+     "0",
+     "0",
+     "Ca_D_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ca_deg term 3/3",
+     ""
+    ],
+    [
+     "0.12075207206223747",
+     "0",
+     "0",
+     "Ca_Cytosol==>Ca_D_Cytosol+Ca_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ER_leak_flux term 1/2",
+     ""
+    ],
+    [
+     "263.3258759191332",
+     "0",
+     "0",
+     "source==>Ca_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ER_leak_flux term 2/2",
+     ""
+    ],
+    [
+     "0.0010935459963419152",
+     "0",
+     "0",
+     "Ca_Cytosol==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SERCA_fluxD",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_D_Cytosol+Ca_D_Cytosol+S[USER;cCa_D_Cytosol:(0.021981142166116012/(2.7593514420370556e-6*(cCa_D_Cytosol+1e-30)^2+0.0729))]==>Ca_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3R_fluxD term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCa_D_Cytosol,cIP3_D_Cytosol,ch_D_ERM:(9.37243240882231e-10*(cCa_D_Cytosol*cIP3_D_Cytosol*ch_D_ERM/(2.7593514420370556e-6*cCa_D_Cytosol*cIP3_D_Cytosol+0.0332225913621262*cCa_D_Cytosol+0.000498338870431893*cIP3_D_Cytosol+6))^3)]==>Ca_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3R_fluxD term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_D_Cytosol+S[USER;cCa_D_Cytosol,cIP3_D_Cytosol,ch_D_ERM:(3.8922061498431525e-15*(cCa_D_Cytosol*cIP3_D_Cytosol*ch_D_ERM/(2.7593514420370556e-6*cCa_D_Cytosol*cIP3_D_Cytosol+0.0332225913621262*cCa_D_Cytosol+0.000498338870431893*cIP3_D_Cytosol+6))^3)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SERCA_flux",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_Cytosol+Ca_Cytosol+S[USER;cCa_Cytosol:(0.021981142166116012/(2.7593514420370556e-6*(cCa_Cytosol+1e-30)^2+0.0729))]==>Ca_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "flux0 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW13,cSW14:(9383836.179787321*cSW13*cSW14)]==>Ca_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "flux0 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_Cytosol+S[USER;cSW13,cSW14:(15.5877677405105*cSW13*cSW14)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3R_flux term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCa_Cytosol,cIP3_Cytosol,ch_ERM:(9.37243240882231e-10*(cCa_Cytosol*cIP3_Cytosol*ch_ERM/(2.7593514420370556e-6*cCa_Cytosol*cIP3_Cytosol+0.0332225913621262*cCa_Cytosol+0.000498338870431893*cIP3_Cytosol+6))^3)]==>Ca_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3R_flux term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_Cytosol+S[USER;cCa_Cytosol,cIP3_Cytosol,ch_ERM:(3.8922061498431525e-15*(cCa_Cytosol*cIP3_Cytosol*ch_ERM/(2.7593514420370556e-6*cCa_Cytosol*cIP3_Cytosol+0.0332225913621262*cCa_Cytosol+0.000498338870431893*cIP3_Cytosol+6))^3)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "flux1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW13,cSW14:(4426337.820654397*cSW13*cSW14)]==>Ca_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "flux1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ca_D_Cytosol+S[USER;cSW13,cSW14:(7.352720632316274*cSW13*cSW14)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ER_leak_fluxD term 1/2",
+     ""
+    ],
+    [
+     "263.3258759191332",
+     "0",
+     "0",
+     "source==>Ca_D_Cytosol",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ER_leak_fluxD term 2/2",
+     ""
+    ],
+    [
+     "0.0010935459963419152",
+     "0",
+     "0",
+     "Ca_D_Cytosol==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "ERDensity_ERM",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "ERDensity_ERM [ERDensity_ERM]",
+     ""
+    ],
+    [
+     "PA_D_Cytosol",
+     "0",
+     "1928.1939600000003",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PA_D_Cytosol [PA_D_Cytosol]",
+     ""
+    ],
+    [
+     "PABCa_D_Cytosol",
+     "0",
+     "9827.53562",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PABCa_D_Cytosol [PABCa_D_Cytosol]",
+     ""
+    ],
+    [
+     "Ca_D_ER",
+     "0",
+     "240800",
+     "Y",
+     "0",
+     "No",
+     "240800",
+     "Ca_D_ER [Ca_D_ER]",
+     ""
+    ],
+    [
+     "h_D_ERM",
+     "0",
+     "0.8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "h_D_ERM [h_D_ERM]",
+     ""
+    ],
+    [
+     "PABMg_D_Cytosol",
+     "0",
+     "36404.27644",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PABMg_D_Cytosol [PABMg_D_Cytosol]",
+     ""
+    ],
+    [
+     "ERDensity_D_ERM",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "ERDensity_D_ERM [ERDensity_D_ERM]",
+     ""
+    ],
+    [
+     "CG_D_Cytosol",
+     "0",
+     "84566.35334",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CG_D_Cytosol [CG_D_Cytosol]",
+     ""
+    ],
+    [
+     "D28kB_D_Cytosol",
+     "0",
+     "2510.04502",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "D28kB_D_Cytosol [D28kB_D_Cytosol]",
+     ""
+    ],
+    [
+     "PA_Cytosol",
+     "0",
+     "1928.1939600000003",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PA_Cytosol [PA_Cytosol]",
+     ""
+    ],
+    [
+     "CG_Cytosol",
+     "0",
+     "84566.35334",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CG_Cytosol [CG_Cytosol]",
+     ""
+    ],
+    [
+     "PABCa_Cytosol",
+     "0",
+     "9827.53562",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PABCa_Cytosol [PABCa_Cytosol]",
+     ""
+    ],
+    [
+     "Mg_Cytosol",
+     "0",
+     "355180.00000000006",
+     "Y",
+     "0",
+     "No",
+     "355180.00000000006",
+     "Mg_Cytosol [Mg_Cytosol]",
+     ""
+    ],
+    [
+     "D28k_high_Cytosol",
+     "0",
+     "43952.64608",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "D28k_high_Cytosol [D28k_high_Cytosol]",
+     ""
+    ],
+    [
+     "D28k_high_D_Cytosol",
+     "0",
+     "43952.64608",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "D28k_high_D_Cytosol [D28k_high_D_Cytosol]",
+     ""
+    ],
+    [
+     "Ca_ER",
+     "0",
+     "240800",
+     "Y",
+     "0",
+     "No",
+     "240800",
+     "Ca_ER [Ca_ER]",
+     ""
+    ],
+    [
+     "D28kB_high_D_Cytosol",
+     "0",
+     "4207.35392",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "D28kB_high_D_Cytosol [D28kB_high_D_Cytosol]",
+     ""
+    ],
+    [
+     "CGB_D_Cytosol",
+     "0",
+     "11753.6286",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CGB_D_Cytosol [CGB_D_Cytosol]",
+     ""
+    ],
+    [
+     "Ca_D_Cytosol",
+     "0",
+     "27.09",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ca_D_Cytosol [Ca_D_Cytosol]",
+     ""
+    ],
+    [
+     "CGB_Cytosol",
+     "0",
+     "11753.6286",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CGB_Cytosol [CGB_Cytosol]",
+     ""
+    ],
+    [
+     "D28k_Cytosol",
+     "0",
+     "45649.95498",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "D28k_Cytosol [D28k_Cytosol]",
+     ""
+    ],
+    [
+     "D28kB_high_Cytosol",
+     "0",
+     "4207.35392",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "D28kB_high_Cytosol [D28kB_high_Cytosol]",
+     ""
+    ],
+    [
+     "PABMg_Cytosol",
+     "0",
+     "36404.27644",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PABMg_Cytosol [PABMg_Cytosol]",
+     ""
+    ],
+    [
+     "IP3_Cytosol",
+     "0",
+     "96.32",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IP3_Cytosol [IP3_Cytosol]",
+     ""
+    ],
+    [
+     "Ca_Extracellular",
+     "0",
+     "602000",
+     "Y",
+     "0",
+     "No",
+     "602000",
+     "Ca_Extracellular [Ca_Extracellular]",
+     ""
+    ],
+    [
+     "D28k_D_Cytosol",
+     "0",
+     "45649.95498",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "D28k_D_Cytosol [D28k_D_Cytosol]",
+     ""
+    ],
+    [
+     "IP3_D_Cytosol",
+     "0",
+     "96.32",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IP3_D_Cytosol [IP3_D_Cytosol]",
+     ""
+    ],
+    [
+     "Mg_D_Cytosol",
+     "0",
+     "355180.00000000006",
+     "Y",
+     "0",
+     "No",
+     "355180.00000000006",
+     "Mg_D_Cytosol [Mg_D_Cytosol]",
+     ""
+    ],
+    [
+     "Ca_Cytosol",
+     "0",
+     "27.09",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ca_Cytosol [Ca_Cytosol]",
+     ""
+    ],
+    [
+     "h_ERM",
+     "0",
+     "0.8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "h_ERM [h_ERM]",
+     ""
+    ],
+    [
+     "Ca_D_Extracellular",
+     "0",
+     "602000",
+     "Y",
+     "0",
+     "No",
+     "602000",
+     "Ca_D_Extracellular [Ca_D_Extracellular]",
+     ""
+    ],
+    [
+     "D28kB_Cytosol",
+     "0",
+     "2510.04502",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "D28kB_Cytosol [D28kB_Cytosol]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "time switch at 0 [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time switch at 0.012 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW3.TXT-SET",
+     "time switch at 0.024 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW4",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW4.TXT-SET",
+     "time switch at 0.036 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW5",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW5.TXT-SET",
+     "time switch at 0.048 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW6",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW6.TXT-SET",
+     "time switch at 0.06 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW7",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW7.TXT-SET",
+     "time switch at 0.072 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW8",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW8.TXT-SET",
+     "time switch at 0.084 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW9",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW9.TXT-SET",
+     "time switch at 0.096 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW10",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW10.TXT-SET",
+     "time switch at 0.108 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW11",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW11.TXT-SET",
+     "time switch at 0.12 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW12",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW12.TXT-SET",
+     "time switch at 0.132 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW13",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW13.TXT-SET",
+     "time switch at 0.1 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW14",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW14.TXT-SET",
+     "time switch at 0.105 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.001000000001",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.001000000001",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.012",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW3.TXT",
+   "key": "O_SW3.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.024",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW4.TXT",
+   "key": "O_SW4.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.036",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW5.TXT",
+   "key": "O_SW5.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.048",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW6.TXT",
+   "key": "O_SW6.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.06",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW7.TXT",
+   "key": "O_SW7.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.072",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW8.TXT",
+   "key": "O_SW8.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.084",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW9.TXT",
+   "key": "O_SW9.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.096",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW10.TXT",
+   "key": "O_SW10.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.108",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW11.TXT",
+   "key": "O_SW11.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.12",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW12.TXT",
+   "key": "O_SW12.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.132",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW13.TXT",
+   "key": "O_SW13.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.1",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW14.TXT",
+   "key": "O_SW14.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.105",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

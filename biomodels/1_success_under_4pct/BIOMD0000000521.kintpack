@@ -1,0 +1,450 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:02:40.049344+00:00",
+ "description": "Ribba2012 - Low-grade gliomas, tumour growth inhibition model\nBioModels BIOMD0000000521 (curated). SBML file: BIOMD0000000521_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000521_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.50e-07 of species peak (worst: P)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): P1 = P",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ribba2012 - Low-grade gliomas, tumour growth inhibition model  (BIOMD0000000521, curated BioModels; source file BIOMD0000000521_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dC/dt term 1",
+     ""
+    ],
+    [
+     "0.24",
+     "0",
+     "0",
+     "C==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP/dt term 1",
+     ""
+    ],
+    [
+     "0.0031",
+     "0",
+     "0",
+     "Qp==>P1+Qp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP/dt term 2",
+     ""
+    ],
+    [
+     "0.11805",
+     "0",
+     "0",
+     "P1==>2P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP/dt term 3",
+     ""
+    ],
+    [
+     "0.00121",
+     "0",
+     "0",
+     "P1+P1==>P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP/dt term 4",
+     ""
+    ],
+    [
+     "0.00121",
+     "0",
+     "0",
+     "P1+Q==>Q",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP/dt term 5",
+     ""
+    ],
+    [
+     "0.00121",
+     "0",
+     "0",
+     "P1+Qp==>Qp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dP/dt term 6",
+     ""
+    ],
+    [
+     "0.17495999999999998",
+     "0",
+     "0",
+     "P1+C==>C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dQ/dt term 1",
+     ""
+    ],
+    [
+     "0.00295",
+     "0",
+     "0",
+     "source==>Q",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dQ/dt term 2",
+     ""
+    ],
+    [
+     "0.17495999999999998",
+     "0",
+     "0",
+     "Q+C==>C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dQp/dt term 1",
+     ""
+    ],
+    [
+     "0.0118",
+     "0",
+     "0",
+     "Qp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dQp/dt term 2",
+     ""
+    ],
+    [
+     "0.17495999999999998",
+     "0",
+     "0",
+     "C+Q==>Qp+C+Q",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "C",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PCV_plasma [C]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "7.13",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Proliferative tissue [P]",
+     ""
+    ],
+    [
+     "Q",
+     "0",
+     "41.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "nonproliferative quiescent tissue [Q]",
+     ""
+    ],
+    [
+     "Qp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "damaged quiescent cells [Qp]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

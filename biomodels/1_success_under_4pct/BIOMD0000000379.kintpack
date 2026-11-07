@@ -1,0 +1,1008 @@
+{
+ "version": 3,
+ "created": "2026-11-02T03:09:13.248561+00:00",
+ "description": "DallaMan2007_MealModel_GlucoseInsulinSystem\nBioModels BIOMD0000000379 (curated). SBML file: BIOMD0000000379_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000379_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.50e-06 of species peak (worst: I_d)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'X' goes below zero in the SBML: integrated as X_o = value + 5, output as X = OUTC[X_o;-5*source]\n  [info] 'Y' goes below zero in the SBML: integrated as Y_o = value + 1, output as Y = OUTC[Y_o;-1*source]\n  [info] rate rule dG_p/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - G_p: zero order, signed\n  [info] rate rule dG_p/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - G_p: zero order, signed\n  [info] rate rule dG_t/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dG_t/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dQ_gut/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - Q_gut: zero order, signed\n  [info] rate rule dI_po/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - I_po: zero order, signed\n  [info] rate rule dI_po/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - I_po: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "DallaMan2007_MealModel_GlucoseInsulinSystem  (BIOMD0000000379, curated BioModels; source file BIOMD0000000379_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG_p/dt term 1",
+     ""
+    ],
+    [
+     "1.7000000000000002",
+     "0",
+     "0",
+     "source==>G_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG_p/dt term 2",
+     ""
+    ],
+    [
+     "0.079",
+     "0",
+     "0",
+     "G_t==>G_p+G_t",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG_p/dt term 3",
+     ""
+    ],
+    [
+     "0.0006576923076923077",
+     "0",
+     "0",
+     "Q_gut==>G_p+Q_gut",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG_p/dt term 4 (consumes G_p)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cI_d:((-1*0.009*cI_d))]==>G_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG_p/dt term 5 (consumes G_p)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cI_po:((-1*0.0618*cI_po))]==>G_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG_p/dt term 6",
+     ""
+    ],
+    [
+     "0.0671",
+     "0",
+     "0",
+     "G_p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG_t/dt term 1",
+     ""
+    ],
+    [
+     "0.065",
+     "0",
+     "0",
+     "G_p==>G_t+G_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG_t/dt term 2",
+     ""
+    ],
+    [
+     "0.079",
+     "0",
+     "0",
+     "G_t==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG_t/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G_t+S[USER;cG_t:(2/(1*cG_t+225.59))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dG_t/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G_t+S[USER;cG_t,cX_o:(0.0376*(cX_o-5)/(1*cG_t+225.59))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_l/dt term 1",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "I_po==>I_l+I_po",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_l/dt term 2",
+     ""
+    ],
+    [
+     "0.484",
+     "0",
+     "0",
+     "I_p==>I_l+I_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_l/dt term 3",
+     ""
+    ],
+    [
+     "0.19",
+     "0",
+     "0",
+     "I_l==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_l/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I_l+S[USER;cI_po:(0.122949/(0.0152*cI_po+0.3529))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_l/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I_l+I_po+S[USER;cI_po:(0.002888/(0.0152*cI_po+0.3529))]==>2I_l+I_po",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_p/dt term 1",
+     ""
+    ],
+    [
+     "0.19",
+     "0",
+     "0",
+     "I_l==>I_p+I_l",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_p/dt term 2",
+     ""
+    ],
+    [
+     "0.6779999999999999",
+     "0",
+     "0",
+     "I_p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dQ_sto1/dt term 1",
+     ""
+    ],
+    [
+     "0.0558",
+     "0",
+     "0",
+     "Q_sto1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dQ_sto2/dt term 1",
+     ""
+    ],
+    [
+     "0.0558",
+     "0",
+     "0",
+     "Q_sto1==>Q_sto2+Q_sto1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dQ_sto2/dt term 2",
+     ""
+    ],
+    [
+     "0.0558",
+     "0",
+     "0",
+     "Q_sto2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dQ_sto2/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q_sto2+S[USER;cQ_sto1,cQ_sto2:(0.0239*tanh(0.003205128205128205*cQ_sto1+0.003205128205128205*cQ_sto2-2.5))]==>2Q_sto2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dQ_sto2/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q_sto2+S[USER;cQ_sto1,cQ_sto2:(0.0239*tanh(0.00017806267806267802*cQ_sto1+0.00017806267806267802*cQ_sto2-11.388888888888886))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dQ_gut/dt term 1",
+     ""
+    ],
+    [
+     "0.0558",
+     "0",
+     "0",
+     "Q_sto2==>Q_gut+Q_sto2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dQ_gut/dt term 2",
+     ""
+    ],
+    [
+     "0.057",
+     "0",
+     "0",
+     "Q_gut==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dQ_gut/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q_sto2+S[USER;cQ_sto1,cQ_sto2:(0.0239*tanh(0.00017806267806267802*cQ_sto1+0.00017806267806267802*cQ_sto2-11.388888888888886))]==>Q_gut+Q_sto2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dQ_gut/dt term 4 (consumes Q_gut)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cQ_sto1,cQ_sto2:((-1*0.0239*cQ_sto2*tanh(0.003205128205128205*cQ_sto1+0.003205128205128205*cQ_sto2-2.5)))]==>Q_gut",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_1/dt term 1",
+     ""
+    ],
+    [
+     "0.158",
+     "0",
+     "0",
+     "I_p==>I_1+I_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_1/dt term 2",
+     ""
+    ],
+    [
+     "0.0079",
+     "0",
+     "0",
+     "I_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_d/dt term 1",
+     ""
+    ],
+    [
+     "0.0079",
+     "0",
+     "0",
+     "I_1==>I_d+I_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_d/dt term 2",
+     ""
+    ],
+    [
+     "0.0079",
+     "0",
+     "0",
+     "I_d==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dX/dt term 1 (shifted X_o)",
+     ""
+    ],
+    [
+     "-0.8274999999999999",
+     "0",
+     "0",
+     "source==>X_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dX/dt term 2 (shifted X_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cI_p:(0.6619999999999999*cI_p)]==>X_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dX/dt term 3 (shifted X_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX_o:((-1*0.0331*(cX_o-5)))]==>X_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_po/dt term 1",
+     ""
+    ],
+    [
+     "3.879787234042553",
+     "0",
+     "0",
+     "source==>I_po",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_po/dt term 2",
+     ""
+    ],
+    [
+     "0.0008046235679214403",
+     "0",
+     "0",
+     "Q_gut==>I_po+Q_gut",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_po/dt term 3",
+     ""
+    ],
+    [
+     "0.09664893617021277",
+     "0",
+     "0",
+     "G_t==>I_po+G_t",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_po/dt term 4 (consumes I_po)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cI_d:((-1*0.01101063829787234*cI_d))]==>I_po",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_po/dt term 5",
+     ""
+    ],
+    [
+     "0.5756063829787234",
+     "0",
+     "0",
+     "I_po==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_po/dt term 6 (consumes I_po)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG_p:((-1*0.0820904255319149*cG_p))]==>I_po",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI_po/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cY_o:((cY_o-1))]==>I_po",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dY/dt term 1 (shifted Y_o)",
+     ""
+    ],
+    [
+     "-0.5225000000000001",
+     "0",
+     "0",
+     "source==>Y_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dY/dt term 2 (shifted Y_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG_p:(0.0029255319148936173*cG_p)]==>Y_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dY/dt term 3 (shifted Y_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cY_o:((-1*0.05*(cY_o-1)))]==>Y_o",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "G_p",
+     "0",
+     "178",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G_p [G_p]",
+     ""
+    ],
+    [
+     "G_t",
+     "0",
+     "135",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G_t [G_t]",
+     ""
+    ],
+    [
+     "I_l",
+     "0",
+     "4.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I_l [I_l]",
+     ""
+    ],
+    [
+     "I_p",
+     "0",
+     "1.25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I_p [I_p]",
+     ""
+    ],
+    [
+     "Q_sto1",
+     "0",
+     "78000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Q_sto1 [Q_sto1]",
+     ""
+    ],
+    [
+     "Q_gut",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Q_gut [Q_gut]",
+     ""
+    ],
+    [
+     "I_1",
+     "0",
+     "25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I_1 [I_1]",
+     ""
+    ],
+    [
+     "I_d",
+     "0",
+     "25",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I_d [I_d]",
+     ""
+    ],
+    [
+     "X_o",
+     "0",
+     "5",
+     "N",
+     "0",
+     "No",
+     "No",
+     "X + 5 (shifted state) [__shifted__X]",
+     ""
+    ],
+    [
+     "I_po",
+     "0",
+     "3.6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I_po [I_po]",
+     ""
+    ],
+    [
+     "Y_o",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "No",
+     "Y + 1 (shifted state) [__shifted__Y]",
+     ""
+    ],
+    [
+     "Q_sto2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Q_sto2 [Q_sto2]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[X_o;-5*source]",
+     "No",
+     "X (= X_o - 5) [X]",
+     ""
+    ],
+    [
+     "Y",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[Y_o;-1*source]",
+     "No",
+     "Y (= Y_o - 1) [Y]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

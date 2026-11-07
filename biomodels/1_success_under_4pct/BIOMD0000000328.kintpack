@@ -1,0 +1,1108 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:57:56.806097+00:00",
+ "description": "Bucher2011_Atorvastatin_Metabolism\nBioModels BIOMD0000000328 (curated). SBML file: BIOMD0000000328_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000328_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.31e-06 of species peak (worst: ASpOH_c)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] CYP3A4_ASpOH: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CYP3A4_ASoOH: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CYP3A4_ASLpOH: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CYP3A4_ASLoOH: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] UGT1A3_AS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bucher2011_Atorvastatin_Metabolism  (BIOMD0000000328, curated BioModels; source file BIOMD0000000328_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Import_AS (volume 0.0142)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAS_m:(1.4320422535211266*cAS_m)]==>AS_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Import_AS (volume 2)",
+     ""
+    ],
+    [
+     "0.0101675",
+     "0",
+     "0",
+     "AS_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Import_ASL (volume 0.0142)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cASL_m:(19.394366197183096*cASL_m)]==>ASL_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Import_ASL (volume 2)",
+     ""
+    ],
+    [
+     "0.1377",
+     "0",
+     "0",
+     "ASL_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CYP3A4_ASpOH",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AS_c+S[USER;cASL_c,cAS_c:(0.04328124999999999/(0.0009706959706959707*cASL_c+7.273253367003367e-5*cAS_c+1))]==>ASpOH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CYP3A4_ASoOH",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AS_c+S[USER;cASL_c,cAS_c:(0.11262507706169678/(0.0009706959706959707*cASL_c+7.273253367003367e-5*cAS_c+1))]==>ASoOH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CYP3A4_ASLpOH",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ASL_c+S[USER;cASL_c,cAS_c:(0.8774949698189135/(0.0009706959706959707*cASL_c+7.273253367003367e-5*cAS_c+1))]==>ASLpOH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CYP3A4_ASLoOH",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ASL_c+S[USER;cASL_c,cAS_c:(0.706648609606356/(0.0009706959706959707*cASL_c+7.273253367003367e-5*cAS_c+1))]==>ASLoOH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Export_ASoOH (volume 2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cASoOH_c:(0.00079915*cASoOH_c)]==>ASoOH_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Export_ASoOH (volume 0.0142)",
+     ""
+    ],
+    [
+     "0.112556338028169",
+     "0",
+     "0",
+     "ASoOH_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "UGT1A3_AS",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AS_c+S[USER;cAS_c:(956.7746478873239/(1*cAS_c+1.3333333333333333e-5*(cAS_c+1e-30)^2+12000))]==>ASL_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_ASASL_c",
+     ""
+    ],
+    [
+     "0.31048591549295773",
+     "0",
+     "0",
+     "ASL_c==>AS_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CR_oOH",
+     ""
+    ],
+    [
+     "0.28298591549295776",
+     "0",
+     "0",
+     "ASLoOH_c==>ASoOH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CR_pOH",
+     ""
+    ],
+    [
+     "0.28298591549295776",
+     "0",
+     "0",
+     "ASLpOH_c==>ASpOH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Export_AS (volume 0.0142)",
+     ""
+    ],
+    [
+     "0.1525352112676056",
+     "0",
+     "0",
+     "AS_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Export_AS (volume 2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAS_c:(0.001083*cAS_c)]==>AS_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Export_ASL (volume 0.0142)",
+     ""
+    ],
+    [
+     "1.5367605633802817",
+     "0",
+     "0",
+     "ASL_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Export_ASL (volume 2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cASL_c:(0.010911*cASL_c)]==>ASL_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Import_ASLpOH (volume 2)",
+     ""
+    ],
+    [
+     "0.0168645",
+     "0",
+     "0",
+     "ASLpOH_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Import_ASLpOH (volume 0.0142)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cASLpOH_m:(2.375281690140845*cASLpOH_m)]==>ASLpOH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Import_ASLoOH (volume 2)",
+     ""
+    ],
+    [
+     "0.013061",
+     "0",
+     "0",
+     "ASLoOH_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Import_ASLoOH (volume 0.0142)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cASLoOH_m:(1.8395774647887322*cASLoOH_m)]==>ASLoOH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ASpOH_Prot term 1/2",
+     ""
+    ],
+    [
+     "2127.272727272727",
+     "0",
+     "0",
+     "ASpOH_c==>ASpOH_b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ASpOH_Prot term 2/2",
+     ""
+    ],
+    [
+     "599.9999999999999",
+     "0",
+     "0",
+     "ASpOH_b==>ASpOH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ASoOH_Prot term 1/2",
+     ""
+    ],
+    [
+     "2127.272727272727",
+     "0",
+     "0",
+     "ASoOH_c==>ASoOH_b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ASoOH_Prot term 2/2",
+     ""
+    ],
+    [
+     "599.9999999999999",
+     "0",
+     "0",
+     "ASoOH_b==>ASoOH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ASLpOH_Prot term 1/2",
+     ""
+    ],
+    [
+     "2127.272727272727",
+     "0",
+     "0",
+     "ASLpOH_c==>ASLpOH_b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ASLpOH_Prot term 2/2",
+     ""
+    ],
+    [
+     "599.9999999999999",
+     "0",
+     "0",
+     "ASLpOH_b==>ASLpOH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ASLoOH_Prot term 1/2",
+     ""
+    ],
+    [
+     "2127.272727272727",
+     "0",
+     "0",
+     "ASLoOH_c==>ASLoOH_b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ASLoOH_Prot term 2/2",
+     ""
+    ],
+    [
+     "599.9999999999999",
+     "0",
+     "0",
+     "ASLoOH_b==>ASLoOH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AS_Prot term 1/2",
+     ""
+    ],
+    [
+     "2127.272727272727",
+     "0",
+     "0",
+     "AS_c==>AS_b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AS_Prot term 2/2",
+     ""
+    ],
+    [
+     "599.9999999999999",
+     "0",
+     "0",
+     "AS_b==>AS_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ASL_Prot term 1/2",
+     ""
+    ],
+    [
+     "2127.272727272727",
+     "0",
+     "0",
+     "ASL_c==>ASL_b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ASL_Prot term 2/2",
+     ""
+    ],
+    [
+     "599.9999999999999",
+     "0",
+     "0",
+     "ASL_b==>ASL_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Import_ASpOH (volume 0.0142)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cASpOH_m:(0.2789718309859155*cASpOH_m)]==>ASpOH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Import_ASpOH (volume 2)",
+     ""
+    ],
+    [
+     "0.0019807",
+     "0",
+     "0",
+     "ASpOH_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_ASASL_m",
+     ""
+    ],
+    [
+     "0.0025",
+     "0",
+     "0",
+     "ASL_m==>AS_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_pOH_m",
+     ""
+    ],
+    [
+     "0.0025",
+     "0",
+     "0",
+     "ASLpOH_m==>ASpOH_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R_oOH_m",
+     ""
+    ],
+    [
+     "0.0025",
+     "0",
+     "0",
+     "ASLoOH_m==>ASoOH_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Export_ASLpOH (volume 2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cASLpOH_c:(0.00056595*cASLpOH_c)]==>ASLpOH_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Export_ASLpOH (volume 0.0142)",
+     ""
+    ],
+    [
+     "0.0797112676056338",
+     "0",
+     "0",
+     "ASLpOH_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Export_ASLoOH (volume 2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cASLoOH_c:(0.0013337*cASLoOH_c)]==>ASLoOH_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Export_ASLoOH (volume 0.0142)",
+     ""
+    ],
+    [
+     "0.1878450704225352",
+     "0",
+     "0",
+     "ASLoOH_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Export_ASpOH (volume 0.0142)",
+     ""
+    ],
+    [
+     "0.05600422535211267",
+     "0",
+     "0",
+     "ASpOH_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Export_ASpOH (volume 2)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cASpOH_c:(0.00039763*cASpOH_c)]==>ASpOH_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Import_ASoOH (volume 2)",
+     ""
+    ],
+    [
+     "0.000194375",
+     "0",
+     "0",
+     "ASoOH_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Import_ASoOH (volume 0.0142)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cASoOH_m:(0.02737676056338028*cASoOH_m)]==>ASoOH_c",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "AS_m",
+     "0",
+     "8797.15",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AS_m [AS_m]",
+     ""
+    ],
+    [
+     "ASL_m",
+     "0",
+     "30.56",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASL_m [ASL_m]",
+     ""
+    ],
+    [
+     "ASoOH_m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASoOH_m [ASoOH_m]",
+     ""
+    ],
+    [
+     "ASLpOH_m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASLpOH_m [ASLpOH_m]",
+     ""
+    ],
+    [
+     "ASpOH_m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASpOH_m [ASpOH_m]",
+     ""
+    ],
+    [
+     "ASLoOH_m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASLoOH_m [ASLoOH_m]",
+     ""
+    ],
+    [
+     "AS_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AS_c [AS_c]",
+     ""
+    ],
+    [
+     "ASL_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASL_c [ASL_c]",
+     ""
+    ],
+    [
+     "ASpOH_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASpOH_c [ASpOH_c]",
+     ""
+    ],
+    [
+     "ASoOH_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASoOH_c [ASoOH_c]",
+     ""
+    ],
+    [
+     "ASLpOH_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASLpOH_c [ASLpOH_c]",
+     ""
+    ],
+    [
+     "ASLoOH_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASLoOH_c [ASLoOH_c]",
+     ""
+    ],
+    [
+     "ASpOH_b",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASpOH_b [ASpOH_b]",
+     ""
+    ],
+    [
+     "ASoOH_b",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASoOH_b [ASoOH_b]",
+     ""
+    ],
+    [
+     "ASLpOH_b",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASLpOH_b [ASLpOH_b]",
+     ""
+    ],
+    [
+     "ASLoOH_b",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASLoOH_b [ASLoOH_b]",
+     ""
+    ],
+    [
+     "AS_b",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AS_b [AS_b]",
+     ""
+    ],
+    [
+     "ASL_b",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASL_b [ASL_b]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,711 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:44:34.781607+00:00",
+ "description": "Rodriguez-Caso2006_Polyamine_Metabolism\nBioModels BIOMD0000000190 (curated). SBML file: BIOMD0000000190_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000190_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.86e-06 of species peak (worst: A)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] SAMdc: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SSAT_for_S: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SSAT_for_D: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PAO_for_aD: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PAO_for_aS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SpdS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SpmS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dVmaxssat/dt term 2: rate order differs from the stoichiometry; consumed on separate line(s) - p_Vmaxssat: zero order, signed\n  [info] rate rule dAntz/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - p_Antz: zero order, signed\nRenamed species (Kintecus name = SBML id): P1 = P; S1 = S; p_Vmaxodc = Vmaxodc; p_Vmaxssat = Vmaxssat; p_Vmaxsamdc = Vmaxsamdc; p_Antz = Antz",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rodriguez-Caso2006_Polyamine_Metabolism  (BIOMD0000000190, curated BioModels; source file BIOMD0000000190_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ODC",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cP1,cp_Vmaxodc:(300*cp_Vmaxodc/(0.046153846153846156*cP1+360))]==>P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SAMdc",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "SAM+P1+S[USER;cA,cP1,cS1,cSAM,cp_Vmaxsamdc:(1*cp_Vmaxsamdc/(0.04*cA*cP1*cS1+20*cA*cP1+0.002*cP1*cS1*(cSAM+1e-30)+0.1*cP1*cS1+1*cP1*(cSAM+1e-30)+50*cP1+0.05*cS1+25))]==>A+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SSAT_for_S",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S1+S[USER;cD,cS1,cp_Vmaxssat:(8.896396396396396*cp_Vmaxssat/(12.653846153846153*cD+47*cS1+1645))]==>aS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SSAT_for_D",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "D+S[USER;cD,cS1,cp_Vmaxssat:(39.5*cp_Vmaxssat/(47*cD+174.57142857142858*cS1+6110))]==>aD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PAO_for_aD",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "aD+S[USER;cD,cS1,caD,caS:(10.35/(0.28*cD+0.9333333333333333*cS1+1*caD+23.333333333333336*caS+14))]==>P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PAO_for_aS",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "aS+S[USER;cD,cS1,caD,caS:(10.35/(0.012*cD+0.04*cS1+0.04285714285714286*caD+1*caS+0.6))]==>D",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SpdS",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P1+A+S[USER;cA,cD,cP1:(10.95/(40*cA+0.003*cD*(cP1+1e-30)+0.32*cD+0.3*cP1+1*(cA+1e-30)*(cP1+1e-30)+32))]==>D",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SpmS",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "D+A+S[USER;cA,cD,cS1:(3.23/(60*cA+0.1*cD+0.004*cS1*(cD+1e-30)+0.144*cS1+1*(cA+1e-30)*(cD+1e-30)+3.5999999999999996))]==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MAT",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSAM:(0.45/(0.0164*cSAM+1.82))]==>SAM",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P_efflux",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "P1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "aD_efflux",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "aD==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVmaxodc/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cD,cS1:(5/(1*cD+1*cS1+1))]==>p_Vmaxodc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVmaxodc/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_Vmaxodc+S[USER;cp_Antz:(0.05*cp_Antz)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVmaxssat/dt term 1",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "source==>p_Vmaxssat",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVmaxssat/dt term 2 (consumes p_Vmaxssat)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cD,cS1:((-1*0.001/(1*cD+1*cS1+1)))]==>p_Vmaxssat",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVmaxssat/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_Vmaxssat+S[USER;cD,cS1:(0.2/(1*cD+1*cS1+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVmaxsamdc/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cD,cS1:(1/(1*cD+1*cS1+1))]==>p_Vmaxsamdc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVmaxsamdc/dt term 2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "p_Vmaxsamdc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAntz/dt term 1",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "source==>p_Antz",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAntz/dt term 2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "p_Antz==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAntz/dt term 3 (consumes p_Antz)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cD,cS1:((-1*0.02/(0.01*cD+0.01*cS1+1)))]==>p_Antz",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "SAM",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S-adenosyl-L-methionine [SAM]",
+     ""
+    ],
+    [
+     "A",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S-adenosylmethioninamine [A]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Putrescine [P]",
+     ""
+    ],
+    [
+     "S1",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Spermine [S]",
+     ""
+    ],
+    [
+     "D",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Spermidine [D]",
+     ""
+    ],
+    [
+     "aS",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N1-Acetylspermine [aS]",
+     ""
+    ],
+    [
+     "aD",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N1-Acetylspermidine [aD]",
+     ""
+    ],
+    [
+     "Met",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "50",
+     "Methionine [Met]",
+     ""
+    ],
+    [
+     "ORN",
+     "0",
+     "300",
+     "Y",
+     "0",
+     "No",
+     "300",
+     "L-Ornithine [ORN]",
+     ""
+    ],
+    [
+     "AcCoA",
+     "0",
+     "39.5",
+     "Y",
+     "0",
+     "No",
+     "39.5",
+     "Acetyl-CoA [AcCoA]",
+     ""
+    ],
+    [
+     "CoA",
+     "0",
+     "160",
+     "Y",
+     "0",
+     "No",
+     "160",
+     "CoA [CoA]",
+     ""
+    ],
+    [
+     "p_Vmaxodc",
+     "0",
+     "1.27905671844446",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter Vmaxodc [Vmaxodc]",
+     ""
+    ],
+    [
+     "p_Vmaxssat",
+     "0",
+     "0.677298510125025",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter Vmaxssat [Vmaxssat]",
+     ""
+    ],
+    [
+     "p_Vmaxsamdc",
+     "0",
+     "0.367465856805639",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter Vmaxsamdc [Vmaxsamdc]",
+     ""
+    ],
+    [
+     "p_Antz",
+     "0",
+     "0.574589492832405",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter Antz [Antz]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

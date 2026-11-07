@@ -1,0 +1,802 @@
+{
+ "version": 3,
+ "created": "2026-11-02T00:03:45.980268+00:00",
+ "description": "Tyson2001_Cell_Cycle_Regulation\nBioModels BIOMD0000000195 (curated). SBML file: BIOMD0000000195_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000195_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 1.04e+01 of species peak (worst: m)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 1.04e+01 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'event' not converted (state-triggered (not a time >= t0 trigger))\n  [info] species 'CycB' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Trimer' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Mad' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Cdh1synthesis term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Cdh1synthesis term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Cdh1degradation term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Cdh1degradation term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Cdc20activation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Cdc20ainhibition: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] IEPsynthesis term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - IEP: zero order, signed\nRenamed species (Kintecus name = SBML id): m1 = m",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tyson2001_Cell_Cycle_Regulation  (BIOMD0000000195, curated BioModels; source file BIOMD0000000195_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycBt_synthesis",
+     ""
+    ],
+    [
+     "0.04",
+     "0",
+     "0",
+     "source==>CycBt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycBdegradation",
+     ""
+    ],
+    [
+     "0.04",
+     "0",
+     "0",
+     "CycBt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycBdegradationviaCdh1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CycBt+Cdh1==>Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CycBtdegradationviaCdc20a",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CycBt+Cdc20a==>Cdc20a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1synthesis term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCdh1:(1/(1.04-1*cCdh1))]==>Cdh1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1synthesis term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20a+S[USER;cCdh1:(10/(1.04-1*cCdh1))]==>Cdh1+Cdc20a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1synthesis term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdh1+S[USER;cCdh1:((-1*1/(1*cCdh1-1.04)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1synthesis term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdh1+Cdc20a+S[USER;cCdh1:((-1*10/(1*cCdh1-1.04)))]==>Cdc20a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1degradation term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdh1+SK+S[USER;cCdh1:(2/(1*cCdh1+0.04))]==>SK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1degradation term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdh1+CycBt+m1+S[USER;cCdh1:(35/(1*cCdh1+0.04))]==>CycBt+m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdh1degradation term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CKIt+Cdh1+CycBt+S[USER;cCKIt,cCdh1,cCycBt,cm1:(70*cm1/(1*cCKIt*cCdh1+0.04*cCKIt+1*cCdh1*cCycBt+1*cCdh1*(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+0.001*cCdh1+0.04*cCycBt+0.04*(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+4e-5))]==>2Cdh1+CKIt+CycBt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc20tsynthesis term 1/2",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "source==>Cdc20t",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc20tsynthesis term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCKIt,cCycBt,cm1:(24.691358024691365*(-2*cCKIt*cCycBt*cm1/(1*cCKIt+1*cCycBt+(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+0.001)+1*cCycBt*cm1)^4/(123.45679012345681*(-2*cCKIt*cCycBt*cm1/(1*cCKIt+1*cCycBt+(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+0.001)+1*cCycBt*cm1)^4+1))]==>Cdc20t",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc20t_deg",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Cdc20t==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc20activation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20t+IEP+S[USER;cCdc20a,cCdc20t:(1/(-1*cCdc20a+1*cCdc20t+0.001))]==>Cdc20a+Cdc20t+IEP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc20activation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20a+IEP+S[USER;cCdc20a,cCdc20t:((-1*1/(1*cCdc20a-1*cCdc20t-0.001)))]==>IEP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc20ainhibition",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cdc20a+S[USER;cCdc20a:(0.5/(1*cCdc20a+0.001))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cdc20adegradation",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Cdc20a==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IEPsynthesis term 1/4",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "CycBt+m1==>IEP+CycBt+m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IEPsynthesis term 2/4",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "IEP+CycBt+m1==>CycBt+m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IEPsynthesis term 3/4 (consumes IEP)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCKIt,cCycBt,cm1:((-1*0.2*cCKIt*cCycBt*cm1/(1*cCKIt+1*cCycBt+(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+0.001)))]==>IEP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IEPsynthesis term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CKIt+CycBt+IEP+S[USER;cCKIt,cCycBt,cm1:(0.2*cm1/(1*cCKIt+1*cCycBt+(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+0.001))]==>2IEP+CKIt+CycBt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IEPdegradation",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "IEP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "growth term 1/2",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "m1==>2m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "growth term 2/2",
+     ""
+    ],
+    [
+     "0.0005",
+     "0",
+     "0",
+     "m1+m1==>m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CKItsynthesis",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>CKIt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CKIdegradation",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "CKIt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CKItphosphorilationviaSK",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "CKIt+SK==>SK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "eq_7 term 1/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "CKIt+CycBt+m1==>CycBt+m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "eq_7 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CycBt+m1+S[USER;cCKIt,cCycBt:(200*cCKIt^2/(1*cCKIt+1*cCycBt+(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+0.001))]==>CKIt+CycBt+m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SKsynthesis term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "m1+S[USER;cCKIt,cCycBt,cSK,cm1:(0.03/(-6.06*cCKIt*cCycBt*cm1/(1*cCKIt+1*cCycBt+(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+0.001)+3.03*cCycBt*cm1-0.0495*cSK-1.485*cm1+(0.012*cCKIt*cCycBt*cSK*cm1/(1*cCKIt+1*cCycBt+(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+0.001)+0.36*cCKIt*cCycBt*cm1^2/(1*cCKIt+1*cCycBt+(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+0.001)-0.006*cCycBt*cSK*cm1-0.18*cCycBt*cm1^2+0.00010000000000000002*cSK^2+0.006*cSK*cm1-0.002*cSK+0.09*cm1^2-0.06*cm1+(-6.06*cCKIt*cCycBt*cm1/(1*cCKIt+1*cCycBt+(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+0.001)+3.03*cCycBt*cm1-0.0495*cSK-1.485*cm1+1.01)^2)^0.5+1.01))]==>SK+m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SKsynthesis term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "SK+S[USER;cCKIt,cCycBt,cSK,cm1:(0.001/(-6.06*cCKIt*cCycBt*cm1/(1*cCKIt+1*cCycBt+(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+0.001)+3.03*cCycBt*cm1-0.0495*cSK-1.485*cm1+(0.012*cCKIt*cCycBt*cSK*cm1/(1*cCKIt+1*cCycBt+(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+0.001)+0.36*cCKIt*cCycBt*cm1^2/(1*cCKIt+1*cCycBt+(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+0.001)-0.006*cCycBt*cSK*cm1-0.18*cCycBt*cm1^2+0.00010000000000000002*cSK^2+0.006*cSK*cm1-0.002*cSK+0.09*cm1^2-0.06*cm1+(-6.06*cCKIt*cCycBt*cm1/(1*cCKIt+1*cCycBt+(-4*cCKIt*cCycBt+(1*cCKIt+1*cCycBt+0.001)^2)^0.5+0.001)+3.03*cCycBt*cm1-0.0495*cSK-1.485*cm1+1.01)^2)^0.5+1.01))]==>2SK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SKdegradation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "SK==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "CycBt",
+     "0",
+     "0.001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CycBt [CycBt]",
+     ""
+    ],
+    [
+     "Cdc20a",
+     "0",
+     "0.001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdc20a [Cdc20a]",
+     ""
+    ],
+    [
+     "Cdh1",
+     "0",
+     "0.001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdh1 [Cdh1]",
+     ""
+    ],
+    [
+     "m1",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "m [m]",
+     ""
+    ],
+    [
+     "Cdc20t",
+     "0",
+     "0.001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cdc20t [Cdc20t]",
+     ""
+    ],
+    [
+     "IEP",
+     "0",
+     "0.001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IEP [IEP]",
+     ""
+    ],
+    [
+     "CKIt",
+     "0",
+     "0.001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CKIt [CKIt]",
+     ""
+    ],
+    [
+     "SK",
+     "0",
+     "0.001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SK [SK]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

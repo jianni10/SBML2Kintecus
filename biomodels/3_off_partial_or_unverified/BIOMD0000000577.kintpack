@@ -1,0 +1,2606 @@
+{
+ "version": 3,
+ "created": "2026-11-06T15:19:55.339938+00:00",
+ "description": "Zhou2015 - Circadian clock with immune regulator NPR1\nBioModels BIOMD0000000577 (curated). SBML file: BIOMD0000000577_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000577_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.2857142857142857.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 1.11e+00 of species peak (worst: species_2)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 1.11e+00 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] cL_m_trscr: USER expression is 19499 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] cL_m_trscr (part 2/2): USER expression is 19494 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [blocker] reaction 'cL_m_trscr' not converted (rate term is 19494 characters (> 2153))\n  [info] cL_degr term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cP7_m_trscr: USER expression is 19528 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] cP7_m_trscr (part 2/2): USER expression is 19521 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [blocker] reaction 'cP7_m_trscr' not converted (rate term is 19521 characters (> 2153))\n  [info] cT_m_trscr: USER expression is 19508 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] cT_m_trscr (part 2/2): USER expression is 19502 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [blocker] reaction 'cT_m_trscr' not converted (rate term is 19502 characters (> 2153))\n  [info] cE3n_degr term 4/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cLUX_degr term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [partial] 25 profile files exceed the GUI's 10 O_ file limit\n  [info] 1 species/parameters given short names (Q1...) so USER expressions fit Kintecus's expression length limit; original ids are in the SPECIES comments column\nRenamed species (Kintecus name = SBML id): Q1 = species_3",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Zhou2015 - Circadian clock with immune regulator NPR1  (BIOMD0000000577, curated BioModels; source file BIOMD0000000577_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cL_m_degr",
+     ""
+    ],
+    [
+     "0.54",
+     "0",
+     "0",
+     "cL_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cL_trsl",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "cL_m==>cL+cL_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cL_degr term 1/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "cL==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cL_degr term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cL+S[USER;ccL:(0.1*ccL/(1*(ccL+1e-30)^2+0.36))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cL_modif",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ccL:(0.1*ccL^2/(ccL^2+0.36))]==>cLm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cLm_degr",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "cLm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cP_degr",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cP9_m_trscr term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ccEC,ccT:(0.00025600000000000004/(ccEC*ccT^2+0.16000000000000003*ccEC+0.04*ccT^2+0.006400000000000001))]==>cP9_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cP9_m_trscr term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ccEC,ccL,ccT:(0.0006400000000000002*ccL^2/(ccEC*ccL^2*ccT^2+0.16000000000000003*ccEC*ccL^2+0.09*ccEC*ccT^2+0.014400000000000001*ccEC+0.04*ccL^2*ccT^2+0.006400000000000001*ccL^2+0.0036*ccT^2+0.000576))]==>cP9_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cP9_m_trscr term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cP+S[USER;ccT:(0.48000000000000004/(ccT^2+0.16000000000000003))]==>cP9_m+cP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cP9_m_degr",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cP9_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cP9_trsl",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "cP9_m==>cP9+cP9_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cP9_degr",
+     ""
+    ],
+    [
+     "0.32",
+     "0",
+     "0",
+     "cP9==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cP7_m_degr",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "cP7_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cP7_trsl",
+     ""
+    ],
+    [
+     "0.8",
+     "0",
+     "0",
+     "cP7_m==>cP7+cP7_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cP7_degr",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "cP7==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cNI_m_trscr term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ccLm,ccT:(0.10799999999999998*ccLm^2/(ccLm^2*ccT^2+0.36*ccLm^2+0.010000000000000002*ccT^2+0.0036000000000000003))]==>cNI_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cNI_m_trscr term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ccP7,ccT:(0.21599999999999997*ccP7^2/(ccP7^2*ccT^2+0.36*ccP7^2+1*ccT^2+0.36))]==>cNI_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cNI_m_degr",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "cNI_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cNI_trsl",
+     ""
+    ],
+    [
+     "0.54",
+     "0",
+     "0",
+     "cNI_m==>cNI+cNI_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cNI_degr",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "cNI==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cT_m_degr",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "cT_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cT_trsl",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "cT_m==>cT+cT_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cT_degr term 1/3",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "cT==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cT_degr term 2/3",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "cT+cZG==>cZG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cT_degr term 3/3",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "cT+cZTL==>cZTL",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE4_m_trscr",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ccEC,ccL,ccT:(0.000864/(ccEC*ccL^2*ccT^2+0.16000000000000003*ccEC*ccL^2+0.09*ccEC*ccT^2+0.014400000000000001*ccEC+0.03*ccL^2*ccT^2+0.0048000000000000004*ccL^2+0.0026999999999999997*ccT^2+0.000432))]==>cE4_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE4_m_degr",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "cE4_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE4_trsl",
+     ""
+    ],
+    [
+     "0.37",
+     "0",
+     "0",
+     "cE4_m==>cE4+cE4_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE4_degr term 1/3",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "cE4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE4_degr term 2/3",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "cE4+cE3n==>cE3n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE4_degr term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cE3n+cE4+S[USER;ccCOP1d,ccCOP1n,ccLUX:(2/(0.2*ccCOP1d+0.1*ccCOP1n+0.3*ccLUX+1))]==>2cE4+cE3n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE3_m_trscr",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ccL:(0.026099999999999995/(ccL^2+0.09))]==>cE3_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE3_m_degr",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "cE3_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE3_trsl",
+     ""
+    ],
+    [
+     "0.62",
+     "0",
+     "0",
+     "cE3_m==>cE3+cE3_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE3_degr",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "cE3+cCOP1c==>cCOP1c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE3n_import term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cE3==>cE3n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE3n_import term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "cE3n==>cE3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE3n_degr term 1/5",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "cE3n+cE4==>cE4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE3n_degr term 2/5",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "cE3n+cCOP1n==>cCOP1n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE3n_degr term 3/5",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "cE3n+cCOP1d==>cCOP1d",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE3n_degr term 4/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cE3n+cG+S[USER;ccE3n:(34/(17*ccE3n+1))]==>cG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cE3n_degr term 5/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cE3n+cE4+S[USER;ccCOP1d,ccCOP1n,ccLUX:(2/(0.2*ccCOP1d+0.1*ccCOP1n+0.3*ccLUX+1))]==>2cE3n+cE4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cLUX_m_trscr",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ccEC,ccL,ccT:(0.000288/(ccEC*ccL^2*ccT^2+0.16000000000000003*ccEC*ccL^2+0.09*ccEC*ccT^2+0.014400000000000001*ccEC+0.01*ccL^2*ccT^2+0.0016000000000000003*ccL^2+0.0009*ccT^2+0.000144))]==>cLUX_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cLUX_m_degr",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "cLUX_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cLUX_trsl",
+     ""
+    ],
+    [
+     "0.8",
+     "0",
+     "0",
+     "cLUX_m==>cLUX+cLUX_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cLUX_degr term 1/2",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "cLUX==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cLUX_degr term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cLUX+cE3n+cE4+S[USER;ccCOP1d,ccCOP1n,ccLUX:(0.6/(0.2*ccCOP1d+0.1*ccCOP1n+0.3*ccLUX+1))]==>cE3n+cE4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cCOP1c_trsl",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "source==>cCOP1c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cCOP1c_degr",
+     ""
+    ],
+    [
+     "0.30000000000000004",
+     "0",
+     "0",
+     "cCOP1c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cCOP1n_import",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "cCOP1c==>cCOP1n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cCOP1n_degr",
+     ""
+    ],
+    [
+     "0.30000000000000004",
+     "0",
+     "0",
+     "cCOP1n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cCOP1d_activ term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "cCOP1n==>cCOP1d",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cCOP1d_activ term 2/2",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "cCOP1n+cP==>cCOP1d+cP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cCOP1d_degr",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "cCOP1d==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cG_m_trscr term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ccEC,ccL,ccT:(0.010368/(ccEC*ccL^2*ccT^2+0.36*ccEC*ccL^2+0.16000000000000003*ccEC*ccT^2+0.057600000000000005*ccEC+0.02*ccL^2*ccT^2+0.0072*ccL^2+0.0032000000000000006*ccT^2+0.001152))]==>cG_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cG_m_trscr term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cP+S[USER;ccT:(0.5616/(ccT^2+0.36))]==>cG_m+cP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cG_m_degr",
+     ""
+    ],
+    [
+     "3.4",
+     "0",
+     "0",
+     "cG_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cG_trsl",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "cG_m==>cG+cG_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cG_degr term 1/2",
+     ""
+    ],
+    [
+     "2.9",
+     "0",
+     "0",
+     "cG==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cG_degr term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cG+S[USER;ccE3n:(0.2/(17*ccE3n+1))]==>2cG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cG_cZTL_assoc",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "cG+cZTL==>cZG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cZTL_trsl",
+     ""
+    ],
+    [
+     "0.14",
+     "0",
+     "0",
+     "source==>cZTL",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cZTL_degr",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "cZTL==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cZG_degr",
+     ""
+    ],
+    [
+     "0.08",
+     "0",
+     "0",
+     "cZG==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cG_cE3_assoc",
+     ""
+    ],
+    [
+     "17",
+     "0",
+     "0",
+     "cE3+cG==>cEG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cEG_degr term 1/4",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "cEG==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cEG_degr term 2/4",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "cEG+cCOP1c==>cCOP1c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cEG_degr term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cEG+S[USER;ccCOP1d,ccCOP1n:(0.4/(0.2*ccCOP1d+0.1*ccCOP1n+0.1))]==>2cEG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cEG_degr term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cE3n+cG+S[USER;ccCOP1d,ccCOP1n,ccE3n:(3.4000000000000004/(3.4000000000000004*ccCOP1d*ccE3n+0.2*ccCOP1d+1.7000000000000002*ccCOP1n*ccE3n+0.1*ccCOP1n+1.7000000000000002*ccE3n+0.1))]==>cEG+cE3n+cG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cEC_form",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cE3n+cE4+cLUX+S[USER;ccCOP1d,ccCOP1n,ccLUX:(0.6/(0.2*ccCOP1d+0.1*ccCOP1n+0.3*ccLUX+1))]==>cEC+cE3n+cE4+cLUX",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cEC_degr term 1/4",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "cEC==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cEC_degr term 2/4",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "cEC+cCOP1n==>cCOP1n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cEC_degr term 3/4",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "cEC+cCOP1d==>cCOP1d",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cEC_degr term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cEC+S[USER;ccCOP1d,ccCOP1n,ccE3n,ccEG,ccG:(2.2*(34*ccE3n*ccG/(3.4000000000000004*ccCOP1d*ccE3n+0.2*ccCOP1d+1.7000000000000002*ccCOP1n*ccE3n+0.1*ccCOP1n+1.7000000000000002*ccE3n+0.1)+4*ccEG/(0.2*ccCOP1d+0.1*ccCOP1n+0.1)+2*ccG/(17*ccE3n+1))^2/((34*ccE3n*ccG/(3.4000000000000004*ccCOP1d*ccE3n+0.2*ccCOP1d+1.7000000000000002*ccCOP1n*ccE3n+0.1*ccCOP1n+1.7000000000000002*ccE3n+0.1)+4*ccEG/(0.2*ccCOP1d+0.1*ccCOP1n+0.1)+2*ccG/(17*ccE3n+1))^2+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ccL,ccT:(0.045*ccL^2/(ccL^2*ccT^2+0.09*ccL^2+0.010000000000000002*ccT^2+0.0009000000000000001))]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "species_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_1:(0.008000000000000002/((0.5*cspecies_1-0.5*(-4*cspecies_1+(cspecies_1+2)^2)^0.5+1)^2+0.04000000000000001))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "species_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q1+species_2==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "source==>Q1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cQ1:(0.063/(cQ1^2+0.09))]==>species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_4+S[USER;cQ1:(0.063/(cQ1^2+0.09))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "species_4==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "species_1",
+     "0",
+     "0.856",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cABAR_m [species_1]",
+     ""
+    ],
+    [
+     "species_2",
+     "0",
+     "0.4027",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cPP2C [species_2]",
+     ""
+    ],
+    [
+     "Q1",
+     "0",
+     "0.2362",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cSnRK2 [species_3]",
+     ""
+    ],
+    [
+     "species_4",
+     "0",
+     "0.2843",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cs [species_4]",
+     ""
+    ],
+    [
+     "cCOP1c",
+     "0",
+     "1.3143",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cCOP1c [cCOP1c]",
+     ""
+    ],
+    [
+     "cCOP1d",
+     "0",
+     "0.4068",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cCOP1d [cCOP1d]",
+     ""
+    ],
+    [
+     "cCOP1n",
+     "0",
+     "0.8445",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cCOP1n [cCOP1n]",
+     ""
+    ],
+    [
+     "cE3",
+     "0",
+     "0.1485",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cE3 [cE3]",
+     ""
+    ],
+    [
+     "cE3_m",
+     "0",
+     "0.2893",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cE3_m [cE3_m]",
+     ""
+    ],
+    [
+     "cE3n",
+     "0",
+     "0.2234",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cE3n [cE3n]",
+     ""
+    ],
+    [
+     "cE4",
+     "0",
+     "0.4923",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cE4 [cE4]",
+     ""
+    ],
+    [
+     "cE4_m",
+     "0",
+     "0.2527",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cE4_m [cE4_m]",
+     ""
+    ],
+    [
+     "cEC",
+     "0",
+     "0.1419",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cEC [cEC]",
+     ""
+    ],
+    [
+     "cEG",
+     "0",
+     "0.0206",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cEG [cEG]",
+     ""
+    ],
+    [
+     "cG",
+     "0",
+     "0.0137",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cG [cG]",
+     ""
+    ],
+    [
+     "cG_m",
+     "0",
+     "0.1554",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cG_m [cG_m]",
+     ""
+    ],
+    [
+     "cL",
+     "0",
+     "0.5005",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cL [cL]",
+     ""
+    ],
+    [
+     "cLUX",
+     "0",
+     "0.6628",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cLUX [cLUX]",
+     ""
+    ],
+    [
+     "cLUX_m",
+     "0",
+     "0.0995",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cLUX_m [cLUX_m]",
+     ""
+    ],
+    [
+     "cL_m",
+     "0",
+     "0.9548",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cL_m [cL_m]",
+     ""
+    ],
+    [
+     "cLm",
+     "0",
+     "0.0811",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cLm [cLm]",
+     ""
+    ],
+    [
+     "cNI",
+     "0",
+     "0.0699",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cNI [cNI]",
+     ""
+    ],
+    [
+     "cNI_m",
+     "0",
+     "0.1502",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cNI_m [cNI_m]",
+     ""
+    ],
+    [
+     "cP",
+     "0",
+     "0.955999953963223",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cP [cP]",
+     ""
+    ],
+    [
+     "cP7",
+     "0",
+     "0.0849",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cP7 [cP7]",
+     ""
+    ],
+    [
+     "cP7_m",
+     "0",
+     "0.1811",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cP7_m [cP7_m]",
+     ""
+    ],
+    [
+     "cP9",
+     "0",
+     "0.0251",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cP9 [cP9]",
+     ""
+    ],
+    [
+     "cP9_m",
+     "0",
+     "0.0663",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cP9_m [cP9_m]",
+     ""
+    ],
+    [
+     "cT",
+     "0",
+     "0.0873",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cT [cT]",
+     ""
+    ],
+    [
+     "cT_m",
+     "0",
+     "0.0656",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cT_m [cT_m]",
+     ""
+    ],
+    [
+     "cZG",
+     "0",
+     "0.0768",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cZG [cZG]",
+     ""
+    ],
+    [
+     "cZTL",
+     "0",
+     "0.2505",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cZTL [cZTL]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 28 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time switch at 28 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW3.TXT-SET",
+     "time switch at 76 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW4",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW4.TXT-SET",
+     "time switch at 72 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW5",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW5.TXT-SET",
+     "time switch at 68 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW6",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW6.TXT-SET",
+     "time switch at 72 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW7",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW7.TXT-SET",
+     "time switch at 64 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW8",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW8.TXT-SET",
+     "time switch at 68 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW9",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW9.TXT-SET",
+     "time switch at 60 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW10",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW10.TXT-SET",
+     "time switch at 64 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW11",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW11.TXT-SET",
+     "time switch at 56 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW12",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW12.TXT-SET",
+     "time switch at 60 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW13",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW13.TXT-SET",
+     "time switch at 52 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW14",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW14.TXT-SET",
+     "time switch at 56 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW15",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW15.TXT-SET",
+     "time switch at 48 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW16",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW16.TXT-SET",
+     "time switch at 52 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW17",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW17.TXT-SET",
+     "time switch at 44 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW18",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW18.TXT-SET",
+     "time switch at 48 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW19",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW19.TXT-SET",
+     "time switch at 40 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW20",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW20.TXT-SET",
+     "time switch at 44 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW21",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW21.TXT-SET",
+     "time switch at 36 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW22",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW22.TXT-SET",
+     "time switch at 40 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW23",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW23.TXT-SET",
+     "time switch at 32 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW24",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW24.TXT-SET",
+     "time switch at 36 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW25",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW25.TXT-SET",
+     "time switch at 32 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.285714286",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.285714286",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "28",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "28",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW3.TXT",
+   "key": "O_SW3.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "76",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW4.TXT",
+   "key": "O_SW4.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "72",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW5.TXT",
+   "key": "O_SW5.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "68",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW6.TXT",
+   "key": "O_SW6.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "72",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW7.TXT",
+   "key": "O_SW7.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "64",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW8.TXT",
+   "key": "O_SW8.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "68",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW9.TXT",
+   "key": "O_SW9.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "60",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW10.TXT",
+   "key": "O_SW10.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "64",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW11.TXT",
+   "key": "O_SW11.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "56",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW12.TXT",
+   "key": "O_SW12.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "60",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW13.TXT",
+   "key": "O_SW13.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "52",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW14.TXT",
+   "key": "O_SW14.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "56",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW15.TXT",
+   "key": "O_SW15.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "48",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW16.TXT",
+   "key": "O_SW16.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "52",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW17.TXT",
+   "key": "O_SW17.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "44",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW18.TXT",
+   "key": "O_SW18.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "48",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW19.TXT",
+   "key": "O_SW19.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "40",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW20.TXT",
+   "key": "O_SW20.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "44",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW21.TXT",
+   "key": "O_SW21.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "36",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW22.TXT",
+   "key": "O_SW22.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "40",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW23.TXT",
+   "key": "O_SW23.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "32",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW24.TXT",
+   "key": "O_SW24.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "36",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW25.TXT",
+   "key": "O_SW25.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "32",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

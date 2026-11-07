@@ -1,0 +1,614 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:11:07.997305+00:00",
+ "description": "Larbat2016.1 - Modeling the diversion of primary carbon flux into secondary metabolism under variable nitrate and light or dark conditions (Base Model)\nBioModels BIOMD0000000857 (curated). SBML file: Larbat2016.1.xml.\nSimulation: 0 to 200 time units (SED-ML: Larbat2016.1.sedml), sampling 0.2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.14e-06 of species peak (worst: sucr)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] EtrioseP_Consumption_Sucrose: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Ephe_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Enitrate_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Estarch_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Larbat2016.1 - Modeling the diversion of primary carbon flux into secondary metabolism under variable nitrate and light or dark conditions (Base Model)  (BIOMD0000000857, curated BioModels; source file Larbat2016.1.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sucrose_Formation_TrioseP",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "trioseP+EtrioseP==>sucr+EtrioseP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sucrose_Consumption_Ephe",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "sucr+Ephe+S[USER;cN:(0.2/(cN+0.2))]==>Ephe",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sucrose_Consumption_PCF",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "sucr+N+S[USER;cN:(8/(cN+1))]==>N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sucrose_Consumption_PCF_Lignin",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "sucr==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sucrose_Formation_Starch",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "starch+Estarch==>sucr+Estarch",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "EtrioseP_Formation_Constant",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>EtrioseP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "EtrioseP_Consumption_Sucrose",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "EtrioseP+sucr+S[USER;cEtrioseP:(1/(1*cEtrioseP+1e-5))]==>sucr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ephe_Formation_Sucrose",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "sucr+S[USER;cN:(10000/(cN+1000))]==>Ephe+sucr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ephe_Consumption",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Ephe+S[USER;cEphe:(9.8/(1*cEphe+1e-6))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "N_Formation",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Enitrate+Next==>N+Enitrate+Next",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "N_Consumption",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "N==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Next_Consumption",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Next+Enitrate==>Enitrate",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Starch_Formation",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "trioseP==>starch",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Enitrate_Formation",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "source==>Enitrate",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Enitrate_Consumption",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Enitrate+N+S[USER;cEnitrate:(0.1/(1*cEnitrate+1e-6))]==>N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TrioseP_Formation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N+S[USER;cN:(10.1/(cN+1e-11))]==>trioseP+N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Estarch_Formation",
+     ""
+    ],
+    [
+     "9.8",
+     "0",
+     "0",
+     "source==>Estarch",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Estarch_Consumption",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Estarch+sucr+S[USER;cEstarch:(10/(1*cEstarch+0.0001))]==>sucr",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "sucr",
+     "0",
+     "0.7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "sucr [sucr]",
+     ""
+    ],
+    [
+     "EtrioseP",
+     "0",
+     "8.06",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "EtrioseP [EtrioseP]",
+     ""
+    ],
+    [
+     "Ephe",
+     "0",
+     "1e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ephe [Ephe]",
+     ""
+    ],
+    [
+     "N",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N [N]",
+     ""
+    ],
+    [
+     "starch",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "starch [starch]",
+     ""
+    ],
+    [
+     "Next",
+     "0",
+     "500",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Next [Next]",
+     ""
+    ],
+    [
+     "Enitrate",
+     "0",
+     "0.075",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Enitrate [Enitrate]",
+     ""
+    ],
+    [
+     "trioseP",
+     "0",
+     "1.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "trioseP [trioseP]",
+     ""
+    ],
+    [
+     "ECO2",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "ECO2 [ECO2]",
+     ""
+    ],
+    [
+     "Estarch",
+     "0",
+     "0.0001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Estarch [Estarch]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.2",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.2",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

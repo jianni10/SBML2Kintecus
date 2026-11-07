@@ -1,0 +1,411 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:11:44.303152+00:00",
+ "description": "Munz2009 - Zombie SIZRC\nBioModels BIOMD0000000882 (curated). SBML file: munz2000.xml.\nSimulation: 0 to 5 time units (SED-ML: munz2000.sedml), sampling 0.05.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.07e-06 of species peak (worst: Zombie)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Munz2009 - Zombie SIZRC  (BIOMD0000000882, curated BioModels; source file munz2000.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Birth",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "source==>Susceptible",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Zombification term 1/2",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "Removal==>Zombie+Removal",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Zombification term 2/2",
+     ""
+    ],
+    [
+     "0.0095",
+     "0",
+     "0",
+     "Susceptible+Zombie==>2Zombie+Susceptible",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Zombie_or_death term 1/2",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "Susceptible==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Susceptible_to_Zombie_or_death term 2/2",
+     ""
+    ],
+    [
+     "0.0095",
+     "0",
+     "0",
+     "Susceptible+Zombie==>Zombie",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_zombie_or_susceptible term 1/2",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "Susceptible==>Removal+Susceptible",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_zombie_or_susceptible term 2/2",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "Susceptible+Zombie==>Removal+Susceptible+Zombie",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Resurrection_to_Zombie",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "Removal==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Death_from_Zombie",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "Zombie+Susceptible==>Susceptible",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Susceptible",
+     "0",
+     "500",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible [Susceptible]",
+     ""
+    ],
+    [
+     "Zombie",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Zombie [Zombie]",
+     ""
+    ],
+    [
+     "Removal",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Removal [Removal]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.05",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "5",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.05",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,828 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:07:37.139715+00:00",
+ "description": "Robertson-Tessi M 2012 A model of tumor Immune interaction\nBioModels BIOMD0000000731 (curated). SBML file: 22051568_Tessi.xml.\nSimulation: 0 to 100000 time units (SED-ML: 22051568_Tessi.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.31e-06 of species peak (worst: sl_TRegs)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_Cell_Killing: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Dendritic_Cell_Licensing: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): Sink1 = Sink; M1 = M",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Robertson-Tessi M 2012 A model of tumor Immune interaction  (BIOMD0000000731, curated BioModels; source file 22051568_Tessi.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Growth",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumorcells+S[USER;cTumorcells:(1/(2.708116227040557e-8*cTumorcells^1.5+27.081162270405567)^0.3333333333333333)]==>2Tumorcells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_Killing",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumorcells+S[USER;cTGFb,cTumorcells,cfunc_CD8_ETC,cfunc_TRegs:(0.9*cfunc_CD8_ETC^3/(cfunc_CD8_ETC^3*(0.2857142857142857*cTGFb*(1e-6*(cTumorcells+1e-30)^1.0002+1)^0.3333333333333333+1*(1e-6*(cTumorcells+1e-30)^1.0002+1)^0.3333333333333333)+cfunc_CD8_ETC^2*(3.142857142857143*cTGFb*cfunc_TRegs*(1e-6*(cTumorcells+1e-30)^1.0002+1)^0.3333333333333333+0.34285714285714286*cTGFb*(cTumorcells+1e-30)+1.2*cTumorcells+11*cfunc_TRegs*(1e-6*(cTumorcells+1e-30)^1.0002+1)^0.3333333333333333+1.2000000000000001e-30)+cfunc_CD8_ETC*(3.7714285714285714*cTGFb*cfunc_TRegs*(cTumorcells+1e-30)+13.2*cfunc_TRegs*(cTumorcells+1e-30))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ul_DC_Production",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumorcells+S[USER;cIL10,cTumorcells,cfunc_TRegs:(6.31e-5/(1.25e-7*cIL10*cfunc_TRegs*(1e-6*cTumorcells^1.0002+1)^0.3333333333333333+2.5*cIL10*(1e-6*cTumorcells^1.0002+1)^0.3333333333333333+5e-8*cfunc_TRegs*(1e-6*cTumorcells^1.0002+1)^0.3333333333333333+1*(1e-6*cTumorcells^1.0002+1)^0.3333333333333333))]==>ul_DC+Tumorcells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Dendritic_Cell_Licensing",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ul_DC+S[USER;cul_DC:(0.5/(1.6666666666666668e-7*cul_DC+1))]==>l_DC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "sl_TRegs_Degradation",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "sl_TRegs==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL2_Production",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "sl_CD4_HTC+S[USER;cIL10,cTGFb:(1.7e-5/(1.4814814814814814*cIL10*cTGFb+1.3333333333333333*cIL10+1.1111111111111112*cTGFb+1))]==>IL2+sl_CD4_HTC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL2_Degradation",
+     ""
+    ],
+    [
+     "12.5",
+     "0",
+     "0",
+     "IL2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TGFb_Production term 1/2",
+     ""
+    ],
+    [
+     "1.8e-8",
+     "0",
+     "0",
+     "func_TRegs==>TGFb+func_TRegs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TGFb_Production term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumorcells+S[USER;cTumorcells:(1.1e-7/(1e-6*cTumorcells^1.0002+1)^0.3333333333333333)]==>TGFb+Tumorcells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TGFb_Degradation",
+     ""
+    ],
+    [
+     "14.285714285714285",
+     "0",
+     "0",
+     "TGFb==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL10_Production term 1/2",
+     ""
+    ],
+    [
+     "1.4e-8",
+     "0",
+     "0",
+     "func_TRegs==>IL10+func_TRegs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL10_Production term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tumorcells+S[USER;cTumorcells:(1.3e-10/(1e-6*cTumorcells^1.0002+1)^0.3333333333333333)]==>IL10+Tumorcells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL10_Degradation",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "IL10==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ul_DC_Degradation",
+     ""
+    ],
+    [
+     "0.14",
+     "0",
+     "0",
+     "ul_DC==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "l_DC_Degradation",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "l_DC==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "sl_CD8_ETC_Production",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cl_DC:(69000000/(1+3300000/cl_DC))]==>sl_CD8_ETC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "sl_CD8_ETC_Degradation",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "sl_CD8_ETC==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "func_CD8_ETC_Production",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IL2+sl_CD8_ETC+S[USER;cIL2,cTGFb:(16/(0.3448275862068966*cIL2*cTGFb+1*cIL2+0.10344827586206896*cTGFb+0.3))]==>func_CD8_ETC+IL2+sl_CD8_ETC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "func_CD8_ETC_Degradation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "func_CD8_ETC==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "sl_CD4_HTC_Production",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cl_DC,cul_DC:(59400000/(1+3300000/(cl_DC+cul_DC)))]==>sl_CD4_HTC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "sl_CD4_HTC_Degradation",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "sl_CD4_HTC==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "func_CD4_HTC_Production",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IL2+sl_CD4_HTC+S[USER;cIL2,cTGFb:(1.9/(0.3448275862068966*cIL2*cTGFb+1*cIL2+0.10344827586206896*cTGFb+0.3))]==>func_CD4_HTC+IL2+sl_CD4_HTC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "sl_TRegs_Production",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cl_DC:(5100000/(1+3300000/cl_DC))]==>sl_TRegs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "func_TRegs_Production_from_CD4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "func_CD4_HTC+TGFb+S[USER;cTGFb:(0.022/(cTGFb+1.7))]==>func_TRegs+TGFb",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "func_CD4_HTC_Degradation",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "func_CD4_HTC==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "func_TRegs_Degradation",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "func_TRegs==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "func_TRegs_Production_from_sl_TRegs",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IL2+sl_TRegs+S[USER;cIL2:(2.1/(cIL2+0.3))]==>func_TRegs+IL2+sl_TRegs",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Pool",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "Source [Pool]",
+     ""
+    ],
+    [
+     "Tumorcells",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumorcells [Tumorcells]",
+     ""
+    ],
+    [
+     "Sink1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "Sink [Sink]",
+     ""
+    ],
+    [
+     "sl_CD8_ETC",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "shortlived_CD8_ETC [sl_CD8_ETC]",
+     ""
+    ],
+    [
+     "func_CD8_ETC",
+     "0",
+     "1e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "func_CD8_ETC [func_CD8_ETC]",
+     ""
+    ],
+    [
+     "sl_CD4_HTC",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "shortlived_CD4_HTC [sl_CD4_HTC]",
+     ""
+    ],
+    [
+     "func_CD4_HTC",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "func_CD4_HTC [func_CD4_HTC]",
+     ""
+    ],
+    [
+     "sl_TRegs",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "shortlived_TRegs [sl_TRegs]",
+     ""
+    ],
+    [
+     "ul_DC",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "unlicensed_DC [ul_DC]",
+     ""
+    ],
+    [
+     "l_DC",
+     "0",
+     "1e-5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "licensed_DC [l_DC]",
+     ""
+    ],
+    [
+     "func_TRegs",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "func_TRegs [func_TRegs]",
+     ""
+    ],
+    [
+     "IL2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IL2 [IL2]",
+     ""
+    ],
+    [
+     "TGFb",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TGFb [TGFb]",
+     ""
+    ],
+    [
+     "IL10",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IL10 [IL10]",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "10000000",
+     "Y",
+     "0",
+     "No",
+     "10000000",
+     "MemTcell [M]",
+     ""
+    ],
+    [
+     "Mh",
+     "0",
+     "6000000",
+     "Y",
+     "0",
+     "No",
+     "6000000",
+     "MemHelperTcells [Mh]",
+     ""
+    ],
+    [
+     "Me",
+     "0",
+     "3000000",
+     "Y",
+     "0",
+     "No",
+     "3000000",
+     "MemEffectorCells [Me]",
+     ""
+    ],
+    [
+     "Mr",
+     "0",
+     "1000000",
+     "Y",
+     "0",
+     "No",
+     "1000000",
+     "RegMemTcell [Mr]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

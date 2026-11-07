@@ -1,0 +1,519 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:00:52.766303+00:00",
+ "description": "Sarma2012 - Oscillations in MAPK cascade (S1)\nBioModels BIOMD0000000440 (curated). SBML file: BIOMD0000000440_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000440_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.56e-06 of species peak (worst: species_3)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_0: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_1 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_1 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_2 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_2 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sarma2012 - Oscillations in MAPK cascade (S1)  (BIOMD0000000440, curated BioModels; source file BIOMD0000000440_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_0+S[USER;cspecies_0,cspecies_7:(0.125/(0.05*cspecies_0+0.005555555555555556*cspecies_7*(cspecies_0+1e-30)+0.1111111111111111*cspecies_7+1))]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_2+species_1+S[USER;cspecies_2,cspecies_3,cspecies_7:(0.005/(0.05*cspecies_2+0.0001*cspecies_3*cspecies_7+0.05*cspecies_3+0.0001*cspecies_7*(cspecies_2+1e-30)+0.002*cspecies_7+1))]==>species_3+species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_2+species_1+species_7+S[USER;cspecies_2,cspecies_3,cspecies_7:(0.0001/(0.05*cspecies_2+0.0001*cspecies_3*cspecies_7+0.05*cspecies_3+0.0001*cspecies_7*(cspecies_2+1e-30)+0.002*cspecies_7+1))]==>species_3+species_1+species_7",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_3+species_1+S[USER;cspecies_2,cspecies_3,cspecies_7:(0.005/(0.0001*cspecies_2*cspecies_7+0.05*cspecies_2+0.05*cspecies_3+0.0001*cspecies_7*(cspecies_3+1e-30)+0.002*cspecies_7+1))]==>species_4+species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_3+species_1+species_7+S[USER;cspecies_2,cspecies_3,cspecies_7:(0.0001/(0.0001*cspecies_2*cspecies_7+0.05*cspecies_2+0.05*cspecies_3+0.0001*cspecies_7*(cspecies_3+1e-30)+0.002*cspecies_7+1))]==>species_4+species_1+species_7",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_5+species_4+S[USER;cspecies_5,cspecies_6:(0.005/(0.05*cspecies_5+0.05*cspecies_6+1))]==>species_6+species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_6+species_4+S[USER;cspecies_5,cspecies_6:(0.005/(0.05*cspecies_5+0.05*cspecies_6+1))]==>species_7+species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_1+S[USER;cspecies_1:(0.0124999987961094/(0.005*cspecies_1+1))]==>species_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_4+S[USER;cspecies_3,cspecies_4:(0.2499999759221885/(0.005*cspecies_3+0.005*cspecies_4+1))]==>species_3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_3+S[USER;cspecies_3,cspecies_4:(0.2499999759221885/(0.005*cspecies_3+0.005*cspecies_4+1))]==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_7+S[USER;cspecies_6,cspecies_7:(0.2499999759221885/(0.005*cspecies_6+0.005*cspecies_7+1))]==>species_6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_6+S[USER;cspecies_6,cspecies_7:(0.2499999759221885/(0.005*cspecies_6+0.005*cspecies_7+1))]==>species_5",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "species_0",
+     "0",
+     "999.999903688753",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MKKK [species_0]",
+     ""
+    ],
+    [
+     "species_1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MKKK_P [species_1]",
+     ""
+    ],
+    [
+     "species_2",
+     "0",
+     "3999.99961475501",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MKK [species_2]",
+     ""
+    ],
+    [
+     "species_3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MKK_P [species_3]",
+     ""
+    ],
+    [
+     "species_4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MKK_PP [species_4]",
+     ""
+    ],
+    [
+     "species_5",
+     "0",
+     "999.999903688753",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M [species_5]",
+     ""
+    ],
+    [
+     "species_6",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M_P [species_6]",
+     ""
+    ],
+    [
+     "species_7",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M_PP [species_7]",
+     ""
+    ],
+    [
+     "species_8",
+     "0",
+     "99.9999903688752",
+     "Y",
+     "0",
+     "No",
+     "99.9999903688752",
+     "P1 [species_8]",
+     ""
+    ],
+    [
+     "species_9",
+     "0",
+     "499.999951844377",
+     "Y",
+     "0",
+     "No",
+     "499.999951844377",
+     "P2 [species_9]",
+     ""
+    ],
+    [
+     "species_10",
+     "0",
+     "499.999951844377",
+     "Y",
+     "0",
+     "No",
+     "499.999951844377",
+     "P3 [species_10]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

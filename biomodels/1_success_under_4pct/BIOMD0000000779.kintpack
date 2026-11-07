@@ -1,0 +1,710 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:09:03.991137+00:00",
+ "description": "dePillis2009 - Mathematical model creation for cancer chemo-immunotherapy\nBioModels BIOMD0000000779 (curated). SBML file: dePillis2009.xml.\nSimulation: 0 to 200 time units (SED-ML: dePillis2009.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.26e-06 of species peak (worst: I_IL_2)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "dePillis2009 - Mathematical model creation for cancer chemo-immunotherapy  (BIOMD0000000779, curated BioModels; source file dePillis2009.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Logistic_Tumour_Growth term 1/2",
+     ""
+    ],
+    [
+     "0.431",
+     "0",
+     "0",
+     "T_Tumour_Cells==>2T_Tumour_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Logistic_Tumour_Growth term 2/2",
+     ""
+    ],
+    [
+     "4.3962e-10",
+     "0",
+     "0",
+     "T_Tumour_Cells+T_Tumour_Cells==>T_Tumour_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_Induced_Tumour_Death",
+     ""
+    ],
+    [
+     "2.9077e-13",
+     "0",
+     "0",
+     "T_Tumour_Cells+N_Natural_Killer_Cells==>N_Natural_Killer_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chemotherapy_Induced_Tumour_Death term 1/2",
+     ""
+    ],
+    [
+     "0.9",
+     "0",
+     "0",
+     "T_Tumour_Cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chemotherapy_Induced_Tumour_Death term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T_Tumour_Cells+S[USER;cM_Chemotherapy_Drug:(0.9*exp((-1*1.8328*cM_Chemotherapy_Drug)))]==>2T_Tumour_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_Death_Tumour_Killing",
+     ""
+    ],
+    [
+     "2.794e-13",
+     "0",
+     "0",
+     "N_Natural_Killer_Cells+T_Tumour_Cells==>T_Tumour_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_Stimulation_IL_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I_IL_2+N_Natural_Killer_Cells+S[USER;cI_IL_2:(0.068/(cI_IL_2+250360))]==>2N_Natural_Killer_Cells+I_IL_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_Death_Medicine term 1/2",
+     ""
+    ],
+    [
+     "0.0675",
+     "0",
+     "0",
+     "N_Natural_Killer_Cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_Death_Medicine term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N_Natural_Killer_Cells+S[USER;cM_Chemotherapy_Drug:(0.0675*exp((-1*1.8328*cM_Chemotherapy_Drug)))]==>2N_Natural_Killer_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_Cell_Turnover",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "L_CD8_T_Cells+S[USER;cI_IL_2:(2.145645e-9/(cI_IL_2+2.38405e-7))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_Cell_Death_Tumour_Killing",
+     ""
+    ],
+    [
+     "3.422e-10",
+     "0",
+     "0",
+     "L_CD8_T_Cells+T_Tumour_Cells==>T_Tumour_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_Cell_Stimulation_NK",
+     ""
+    ],
+    [
+     "2.9077e-11",
+     "0",
+     "0",
+     "N_Natural_Killer_Cells+T_Tumour_Cells==>L_CD8_T_Cells+N_Natural_Killer_Cells+T_Tumour_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_Cell_Activation",
+     ""
+    ],
+    [
+     "5.8467e-13",
+     "0",
+     "0",
+     "C_Lymphocytes+T_Tumour_Cells==>L_CD8_T_Cells+C_Lymphocytes+T_Tumour_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_Breakdown_Stimulation_IL_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "L_CD8_T_Cells+C_Lymphocytes+I_IL_2+S[USER;cI_IL_2,cL_CD8_T_Cells:(4.417e-14*cL_CD8_T_Cells/(cI_IL_2+2503.6))]==>C_Lymphocytes+I_IL_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_Cell_Stimulation_Tumour_Debris",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "L_CD8_T_Cells+T_Tumour_Cells+S[USER;cT_Tumour_Cells:(0.01245/(cT_Tumour_Cells+20190000))]==>2L_CD8_T_Cells+T_Tumour_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_Cell_Death_Medicine term 1/2",
+     ""
+    ],
+    [
+     "0.0486",
+     "0",
+     "0",
+     "L_CD8_T_Cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_Cell_Death_Medicine term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "L_CD8_T_Cells+S[USER;cM_Chemotherapy_Drug:(0.0486*exp((-1*1.8328*cM_Chemotherapy_Drug)))]==>2L_CD8_T_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lymphocyte_Synthesis_Turnover_Bone_Marrow term 1/2",
+     ""
+    ],
+    [
+     "14175000",
+     "0",
+     "0",
+     "source==>C_Lymphocytes",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lymphocyte_Synthesis_Turnover_Bone_Marrow term 2/2",
+     ""
+    ],
+    [
+     "0.0063",
+     "0",
+     "0",
+     "C_Lymphocytes==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lymphocyte_Death_Medicine term 1/2",
+     ""
+    ],
+    [
+     "0.034",
+     "0",
+     "0",
+     "C_Lymphocytes==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lymphocyte_Death_Medicine term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C_Lymphocytes+S[USER;cM_Chemotherapy_Drug:(0.034*exp((-1*1.8328*cM_Chemotherapy_Drug)))]==>2C_Lymphocytes",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Medicine_Excretion",
+     ""
+    ],
+    [
+     "0.5199",
+     "0",
+     "0",
+     "M_Chemotherapy_Drug==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL_2_Turnover",
+     ""
+    ],
+    [
+     "11.7427",
+     "0",
+     "0",
+     "I_IL_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL_2_Production_Naive",
+     ""
+    ],
+    [
+     "2.38405e-7",
+     "0",
+     "0",
+     "C_Lymphocytes==>I_IL_2+C_Lymphocytes",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL_2_Production_Activated_CD8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I_IL_2+L_CD8_T_Cells+S[USER;cI_IL_2:(0.07874/(cI_IL_2+2503.6))]==>2I_IL_2+L_CD8_T_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_Production_and_Turnover term 1/2",
+     ""
+    ],
+    [
+     "0.0013875",
+     "0",
+     "0",
+     "C_Lymphocytes==>N_Natural_Killer_Cells+C_Lymphocytes",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_Production_and_Turnover term 2/2",
+     ""
+    ],
+    [
+     "0.0125",
+     "0",
+     "0",
+     "N_Natural_Killer_Cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CD8_T_Cell_Stimulation_IL_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I_IL_2+L_CD8_T_Cells+S[USER;cI_IL_2:(2.971/(cI_IL_2+2503.6))]==>2L_CD8_T_Cells+I_IL_2",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "T_Tumour_Cells",
+     "0",
+     "10000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T_Tumour_Cells [T_Tumour_Cells]",
+     ""
+    ],
+    [
+     "N_Natural_Killer_Cells",
+     "0",
+     "250000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N_Natural_Killer_Cells [N_Natural_Killer_Cells]",
+     ""
+    ],
+    [
+     "L_CD8_T_Cells",
+     "0",
+     "526800",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L_CD8_T_Cells [L_CD8_T_Cells]",
+     ""
+    ],
+    [
+     "C_Lymphocytes",
+     "0",
+     "2250000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C_Lymphocytes [C_Lymphocytes]",
+     ""
+    ],
+    [
+     "M_Chemotherapy_Drug",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M_Chemotherapy_Drug [M_Chemotherapy_Drug]",
+     ""
+    ],
+    [
+     "I_IL_2",
+     "0",
+     "1073",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I_IL-2 [I_IL_2]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "2",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "2",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

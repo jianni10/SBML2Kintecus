@@ -1,0 +1,489 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:58:26.387677+00:00",
+ "description": "Graham2013 - Role of osteocytes in targeted bone remodeling\nBioModels BIOMD0000000721 (curated). SBML file: Model.xml.\nSimulation: 0 to 100 time units (SED-ML: V3 - ANNOTATED.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.94e-06 of species peak (worst: Osteoclasts__C)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Differentiation_of_MSC_cells_to_Pre_Osteoblast_cells term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Pre_Osteoblasts__P: zero order, signed\n  [info] Resorption_of_bone: rate order differs from the stoichiometry; consumed on separate line(s) - Bone_volume__z: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Graham2013 - Role of osteocytes in targeted bone remodeling  (BIOMD0000000721, curated BioModels; source file Model.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Differentiation_of_Osteoblast_to_Osteocytes term 1/2",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "Osteoblasts__B==>Osteocytes__S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Differentiation_of_Osteoblast_to_Osteocytes term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Osteocytes__S+S[USER;cOsteoblasts__B:(0.0025*cOsteoblasts__B)]==>Osteoblasts__B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Differentiation_of_MSC_cells_to_Pre_Osteoblast_cells term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cOsteocytes__S:(0.1*cOsteocytes__S^2)]==>Pre_Osteoblasts__P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Differentiation_of_MSC_cells_to_Pre_Osteoblast_cells term 2/2 (consumes Pre_Osteoblasts__P)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cOsteocytes__S:((-1*0.0005*cOsteocytes__S^3))]==>Pre_Osteoblasts__P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_pre_osteoblasts term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPre_Osteoblasts__P:(0.1*cPre_Osteoblasts__P)]==>Pre_Osteoblasts__P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proliferation_of_pre_osteoblasts term 2/2",
+     ""
+    ],
+    [
+     "0.0005",
+     "0",
+     "0",
+     "Pre_Osteoblasts__P+Osteocytes__S==>Osteocytes__S",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Differentiation_of_Pre_Osteoblast_to_mature_osteoblast",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pre_Osteoblasts__P+S[USER;cOsteoclasts__C:(0.1*cOsteoclasts__C)]==>Osteoblasts__B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Apoptosis_of_pre_osteoblast",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Pre_Osteoblasts__P==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Apoptosis_of_osteoblasts",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Osteoblasts__B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Differentiation_of_pre_osteoclast_to_osteoclasts",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cOsteoblasts__B,cOsteocytes__S,cPre_Osteoblasts__P:(0.1*cOsteocytes__S*cPre_Osteoblasts__P*(1-0.005*cOsteocytes__S)/(cOsteoblasts__B+1))]==>Osteoclasts__C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Apoptosis_of_osteoclasts",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Osteoclasts__C==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Resorption_of_bone (consumes Bone_volume__z)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cOsteoclasts__C:((-1*0.7*cOsteoclasts__C))]==>Bone_volume__z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_bone",
+     ""
+    ],
+    [
+     "0.015445",
+     "0",
+     "0",
+     "Osteoblasts__B==>Bone_volume__z+Osteoblasts__B",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Osteocytes__S",
+     "0",
+     "180",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Osteocytes (S) [Osteocytes__S]",
+     ""
+    ],
+    [
+     "Pre_Osteoblasts__P",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pre-Osteoblasts (P) [Pre_Osteoblasts__P]",
+     ""
+    ],
+    [
+     "Osteoblasts__B",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Osteoblasts (B) [Osteoblasts__B]",
+     ""
+    ],
+    [
+     "Osteoclasts__C",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Osteoclasts (C) [Osteoclasts__C]",
+     ""
+    ],
+    [
+     "Bone_volume__z",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Bone volume (z) [Bone_volume__z]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

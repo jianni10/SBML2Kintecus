@@ -1,0 +1,970 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:30:03.134765+00:00",
+ "description": "Wang2008 - Mimicking the inhibitory effect of riluzole on membrane conductance in skeletal fibres\nBioModels BIOMD0000000693 (curated). SBML file: BIOMD0000000693_url.xml.\nSimulation: 0 to 150 time units (SED-ML: MODEL7817907010.sedml), sampling 0.14705882352941177.\nRun switches: -ig:mass -INT:5:10:0 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.17e-03 of species peak (worst: Vm)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 5.50e-09 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'INa' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IT' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IKCa' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ICa' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IL' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IK' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Stimulus' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'beta_n' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'beta_m' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'beta_h' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'alpha_n' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'alpha_m' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'alpha_h' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'w' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'jmem' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'jleak' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'jserca' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'jer' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dVm/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - Vm: zero order, signed\n  [info] rate rule dVm/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - Vm: zero order, signed\n  [info] rate rule dVm/dt term 12: rate order differs from the stoichiometry; consumed on separate line(s) - Vm: zero order, signed\n  [info] rate rule dVm/dt term 13: rate order differs from the stoichiometry; consumed on separate line(s) - Vm: zero order, signed\nRenamed species (Kintecus name = SBML id): m1 = m",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5:10:0 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wang2008 - Mimicking the inhibitory effect of riluzole on membrane conductance in skeletal fibres  (BIOMD0000000693, curated BioModels; source file BIOMD0000000693_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 1 (consumes Vm)",
+     ""
+    ],
+    [
+     "-20",
+     "0",
+     "0",
+     "source==>Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1:(111.11111111111111*cSW1)]==>Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 3",
+     ""
+    ],
+    [
+     "7.407407407407408",
+     "0",
+     "0",
+     "Vt==>Vm+Vt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 4 (consumes Vm)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cn:((-1*3266.666666666667*cn^4))]==>Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 5",
+     ""
+    ],
+    [
+     "7.674074074074075",
+     "0",
+     "0",
+     "Vm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "h+S[USER;cm1:(5000.000000000001*cm1^3)]==>Vm+h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cTIME_:(1333.3333333333335*cSW1/(2*abs(-cTIME_+50*floor(0.02*cTIME_-0.1)+6)+2e-300))]==>Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Vm+S[USER;cn:(46.66666666666667*cn^4)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cTIME_:(11111.111111111111*cSW1*floor(0.02*cTIME_-0.1)/(2*abs(-cTIME_+50*floor(0.02*cTIME_-0.1)+6)+2e-300))]==>Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Vm+S[USER;cVm,cd:(5.555555555555556*cd^2/(exp(0.117*cVm)-1))]==>2Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 11",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Vm+h+S[USER;cm1:(100.00000000000001*cm1^3)]==>h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 12 (consumes Vm)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cTIME_:((-1*222.22222222222223*cSW1*cTIME_/(2*abs(-cTIME_+50*floor(0.02*cTIME_-0.1)+6)+2e-300)))]==>Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 13 (consumes Vm)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cc,co:((-1*3888.888888888889*cc^5*co/(cc^5+0.00018895679999999997)))]==>Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVm/dt term 14",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Vm+o+S[USER;cc:(55.55555555555556*cc^5/(cc^5+0.00018895679999999997))]==>o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dm/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cVm:(8.735999999999999/(1-0.014995576820477707*exp((-1*0.1*cVm))))]==>m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dm/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Vm+S[USER;cVm:(0.208/(1-0.014995576820477707*exp((-1*0.1*cVm))))]==>m1+Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dm/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "m1+S[USER;cVm:(8.735999999999999/(1-0.014995576820477707*exp((-1*0.1*cVm))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dm/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "m1+S[USER;cVm:(0.20179866512582692*exp((-1*0.05555555555555555*cVm)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dm/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "m1+Vm+S[USER;cVm:(0.208/(1-0.014995576820477707*exp((-1*0.1*cVm))))]==>Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dh/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cVm:(0.00025853373626747545*exp((-1*0.1*cVm)))]==>h",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dh/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "h+S[USER;cVm:(3.382/(1+0.0045404150876735905*exp((-1*0.13157894736842105*cVm))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dh/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "h+S[USER;cVm:(0.00025853373626747545*exp((-1*0.1*cVm)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cVm:(0.916/(1-0.003298505755939092*exp((-1*0.14285714285714285*cVm))))]==>n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Vm+S[USER;cVm:(0.0229/(1-0.003298505755939092*exp((-1*0.14285714285714285*cVm))))]==>n+Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "n+S[USER;cVm:(0.916/(1-0.003298505755939092*exp((-1*0.14285714285714285*cVm))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "n+S[USER;cVm:(0.03537528706304589*exp((-1*0.025*cVm)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "n+Vm+S[USER;cVm:(0.0229/(1-0.003298505755939092*exp((-1*0.14285714285714285*cVm))))]==>Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVt/dt term 1",
+     ""
+    ],
+    [
+     "1.6666666666666667",
+     "0",
+     "0",
+     "Vm==>Vt+Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dVt/dt term 2",
+     ""
+    ],
+    [
+     "1.6666666666666667",
+     "0",
+     "0",
+     "Vt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dd/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cVm:(0.0125/(1*cosh(0.031*cVm+1.1501000000000001)+0.11338216780590397*exp((-1*0.08849557522123894*cVm))*cosh(0.031*cVm+1.1501000000000001)))]==>d",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dd/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "d+S[USER;cVm:(0.0125/cosh(0.031*cVm+1.1501000000000001))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule do/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cVm,cc:(0.13440000000000002/(4.581818181818182*cc*exp(0.07487695454577344*cVm)/(90.90909090909092*cc^2*exp(0.13777359636422312*cVm)+1*cc*exp(0.06289664181844969*cVm))+25.454545454545457*cc*exp(0.07487695454577344*cVm)/(90.90909090909092*cc*exp(0.07487695454577344*cVm)+1)+7.8545454545454545*cc*exp(0.07487695454577344*cVm)/(1*cc*exp(0.06289664181844969*cVm)+0.18)+43.63636363636364*cc*exp(0.07487695454577344*cVm)/(1+0.18*exp((-1*0.06289664181844969*cVm))/cc)+0.0504/(90.90909090909092*cc^2*exp(0.13777359636422312*cVm)+1*cc*exp(0.06289664181844969*cVm))+0.28/(90.90909090909092*cc*exp(0.07487695454577344*cVm)+1)+0.08639999999999999/(1*cc*exp(0.06289664181844969*cVm)+0.18)+0.48/(1+0.18*exp((-1*0.06289664181844969*cVm))/cc)))]==>o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule do/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cVm,cc:(0.2304/(0.009072/(90.90909090909092*cc^3*exp(0.2006702381826728*cVm)+1*cc^2*exp(0.12579328363689937*cVm))+0.1008/(90.90909090909092*cc^2*exp(0.13777359636422312*cVm)+1*cc*exp(0.06289664181844969*cVm))+0.015551999999999998/(1*cc^2*exp(0.12579328363689937*cVm)+0.18*cc*exp(0.06289664181844969*cVm))+0.28/(90.90909090909092*cc*exp(0.07487695454577344*cVm)+1)+0.17279999999999998/(1*cc*exp(0.06289664181844969*cVm)+0.18)+0.48/(1+0.18*exp((-1*0.06289664181844969*cVm))/cc)))]==>o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule do/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "o+S[USER;cVm,cc:(0.48/(1+0.18*exp((-1*0.06289664181844969*cVm))/cc))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule do/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "o+S[USER;cVm,cc:(0.28/(90.90909090909092*cc*exp(0.07487695454577344*cVm)+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dc/dt term 1",
+     ""
+    ],
+    [
+     "5e-6",
+     "0",
+     "0",
+     "cer==>c+cer",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dc/dt term 2",
+     ""
+    ],
+    [
+     "0.006005000000000001",
+     "0",
+     "0",
+     "c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dc/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Vm+S[USER;cVm,cd:(2.2500000000000003e-9*cd^2/(exp(0.117*cVm)-1))]==>c+Vm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dcer/dt term 1",
+     ""
+    ],
+    [
+     "0.020025",
+     "0",
+     "0",
+     "c==>cer+c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dcer/dt term 2",
+     ""
+    ],
+    [
+     "2.5e-5",
+     "0",
+     "0",
+     "cer==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Vm",
+     "0",
+     "-75",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Vm [Vm]",
+     ""
+    ],
+    [
+     "m1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "m [m]",
+     ""
+    ],
+    [
+     "h",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "h [h]",
+     ""
+    ],
+    [
+     "n",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "n [n]",
+     ""
+    ],
+    [
+     "Vt",
+     "0",
+     "-70",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Vt [Vt]",
+     ""
+    ],
+    [
+     "d",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "d [d]",
+     ""
+    ],
+    [
+     "o",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "o [o]",
+     ""
+    ],
+    [
+     "c",
+     "0",
+     "0.15",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "c [c]",
+     ""
+    ],
+    [
+     "cer",
+     "0",
+     "200",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cer [cer]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 5 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1470588237",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "150",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1470588237",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "5",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

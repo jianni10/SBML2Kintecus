@@ -1,0 +1,460 @@
+{
+ "version": 3,
+ "created": "2026-11-05T15:38:51.734614+00:00",
+ "description": "Chan2004_TCell_receptor_activation\nBioModels BIOMD0000000120 (curated). SBML file: BIOMD0000000120_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000120_url.sedml (auto-generated placeholder); duration chosen from the dynamics: default), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.18e-06 of species peak (worst: phosphatase_active)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'lck_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] time event(s) on 'r_l' encoded as time/value pairs in EV_P_R_L.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_r_l = r_l",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chan2004_TCell_receptor_activation  (BIOMD0000000120, curated BioModels; source file BIOMD0000000120_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_r_l:(1*cp_r_l)]==>lck_inactive",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "lck_active+phosphatase_active==>lck_inactive+phosphatase_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "lck_inactive==>lck_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "lck_inactive+S[USER;clck_active:(1*clck_active^1.95)]==>lck_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5",
+     ""
+    ],
+    [
+     "0.15",
+     "0",
+     "0",
+     "lck_inactive==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6",
+     ""
+    ],
+    [
+     "0.15",
+     "0",
+     "0",
+     "lck_active==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "phosphatase_inactive==>phosphatase_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "phosphatase_inactive+lck_active==>phosphatase_active+lck_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "phosphatase_active==>phosphatase_inactive",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "lck_inactive",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Inactive lck [lck_inactive]",
+     ""
+    ],
+    [
+     "lck_active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Active lck [lck_active]",
+     ""
+    ],
+    [
+     "phosphatase_inactive",
+     "0",
+     "0.6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Inactive phosphatase [phosphatase_inactive]",
+     ""
+    ],
+    [
+     "phosphatase_active",
+     "0",
+     "0.6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Active phosphatase [phosphatase_active]",
+     ""
+    ],
+    [
+     "p_r_l",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "EV_P_R_L.TXT-SET",
+     "parameter r_l [r_l]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1000000002",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1000000002",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_R_L.TXT",
+   "key": "O_EV_P_R_L.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "10",
+     "1"
+    ],
+    [
+     "24",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

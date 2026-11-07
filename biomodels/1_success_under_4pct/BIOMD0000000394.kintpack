@@ -1,0 +1,760 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:49:11.960434+00:00",
+ "description": "Sivakumar2011 - EGF Receptor Signaling Pathway\nBioModels BIOMD0000000394 (curated). SBML file: BIOMD0000000394_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000394_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.43e-06 of species peak (worst: s129)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r8 term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r8 term 2/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r8 term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r8 term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r9 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r9 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r11 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r11 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r14 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r14 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r4: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for s125\n  [info] re11: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sivakumar2011 - EGF Receptor Signaling Pathway  (BIOMD0000000394, curated BioModels; source file BIOMD0000000394_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s23+S[USER;cs22,cs23,cs24,cs29:(0.21386072426247432/(1.272264631043257*cs22*cs24*cs29+1.5508905852417303*cs22*cs24+2.127659574468085*cs22*cs29*(cs23+1e-30)+1*cs22*cs29+2.593617021276596*cs22*(cs23+1e-30)+1.219*cs22+1.5120787234042554*cs23+0.7417302798982187*cs24*cs29+0.9041692111959287*cs24+1.2404255319148936*cs29*(cs23+1e-30)+0.583*cs29+0.710677))]==>s24",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s23+S[USER;cs22,cs23,cs24,cs29:(0.23290243589960558/(0.731528895391368*cs22*cs24*cs29+0.8917337234820776*cs22*cs24+1.6286644951140066*cs22*cs29*(cs23+1e-30)+1*cs22*cs29+1.9853420195439742*cs22*(cs23+1e-30)+1.219*cs22+1.157454397394137*cs23+0.4264813460131675*cs24*cs29+0.5198807607900512*cs24+0.9495114006514658*cs29*(cs23+1e-30)+0.583*cs29+0.710677))]==>s24",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s24+S[USER;cs22,cs23,cs24,cs29:(0.2710278385863224/(2.127659574468085*cs22*cs23*cs29+2.593617021276596*cs22*cs23+1.272264631043257*cs22*cs29*(cs24+1e-30)+1*cs22*cs29+1.5508905852417303*cs22*(cs24+1e-30)+1.219*cs22+1.2404255319148936*cs23*cs29+1.5120787234042554*cs23+0.9041692111959287*cs24+0.7417302798982187*cs29*(cs24+1e-30)+0.583*cs29+0.710677))]==>s23",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r8 term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s24+S[USER;cs22,cs23,cs24,cs29:(0.09151590781381491/(1.6286644951140066*cs22*cs23*cs29+1.9853420195439742*cs22*cs23+0.731528895391368*cs22*cs29*(cs24+1e-30)+1*cs22*cs29+0.8917337234820776*cs22*(cs24+1e-30)+1.219*cs22+0.9495114006514658*cs23*cs29+1.157454397394137*cs23+0.5198807607900512*cs24+0.4264813460131675*cs29*(cs24+1e-30)+0.583*cs29+0.710677))]==>s23",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s25+s24+S[USER;cs25,cs26:(3.194888178913738/(1.597444089456869*cs25+2.159827213822894*cs26+1))]==>s26+s24",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r9 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s26+s24+S[USER;cs25,cs26:(1.4967602591792655/(1.597444089456869*cs25+2.159827213822894*cs26+1))]==>s25+s24",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r11 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s29+S[USER;cs29,cs30:(1.0788211103495544/(0.6854009595613434*cs29+0.9794319294809012*cs30+1))]==>s30",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r11 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s30+S[USER;cs29,cs30:(1.10871694417238/(0.6854009595613434*cs29+0.9794319294809012*cs30+1))]==>s29",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r14 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s27+s26+S[USER;cs27,cs28:(14.684210526315791/(26.315789473684212*cs27+0.6060606060606061*cs28+1))]==>s28+s26",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r14 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s28+s26+S[USER;cs27,cs28:(0.4393939393939394/(26.315789473684212*cs27+0.6060606060606061*cs28+1))]==>s27+s26",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r15 term 1/2",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "s28==>s34",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r15 term 2/2",
+     ""
+    ],
+    [
+     "0.074",
+     "0",
+     "0",
+     "s34==>s28",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r17 term 1/2",
+     ""
+    ],
+    [
+     "3.65",
+     "0",
+     "0",
+     "s123+s123==>s129",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r17 term 2/2",
+     ""
+    ],
+    [
+     "5.6499999999999995",
+     "0",
+     "0",
+     "s129==>2s123",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r7 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s21+s144==>s22+s144",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r7 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s22+s144==>s21+s144",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cs125,cs126,cs144:(1*cs144*(5*cs125-5*cs126))]==>s126",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r4 (consumes s125)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cs125,cs126,cs144:((-1*1*cs144*(5*cs125-5*cs126)))]==>s125",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s129+s147+S[USER;cs129,cs147:(0.6666666666666666/(1*cs129+1*cs147+1*(cs129+1e-30)*(cs147+1e-30)+1))]==>s144",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "s21",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Akt [s21]",
+     ""
+    ],
+    [
+     "s22",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Akt [s22]",
+     ""
+    ],
+    [
+     "s25",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MEK1_minus_2 [s25]",
+     ""
+    ],
+    [
+     "s26",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MEK1_minus_2 [s26]",
+     ""
+    ],
+    [
+     "s27",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERK1_minus_2 [s27]",
+     ""
+    ],
+    [
+     "s28",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERK1_minus_2 [s28]",
+     ""
+    ],
+    [
+     "s29",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RKIP [s29]",
+     ""
+    ],
+    [
+     "s30",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RKIP [s30]",
+     ""
+    ],
+    [
+     "s31",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "5",
+     "PP2A [s31]",
+     ""
+    ],
+    [
+     "s33",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "5",
+     "14_minus_3_minus_3 [s33]",
+     ""
+    ],
+    [
+     "s34",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Mitogenesis_br_Differentiation [s34]",
+     ""
+    ],
+    [
+     "s23",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Raf_minus_1 [s23]",
+     ""
+    ],
+    [
+     "s24",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Raf_minus_1 [s24]",
+     ""
+    ],
+    [
+     "s3",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "5",
+     "EGF [s3]",
+     ""
+    ],
+    [
+     "s123",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "EGFR [s123]",
+     ""
+    ],
+    [
+     "s124",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "5",
+     "Ras [s124]",
+     ""
+    ],
+    [
+     "s125",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GDP [s125]",
+     ""
+    ],
+    [
+     "s126",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GTP [s126]",
+     ""
+    ],
+    [
+     "s127",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "2",
+     "PKC [s127]",
+     ""
+    ],
+    [
+     "s129",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "EGFR [s129]",
+     ""
+    ],
+    [
+     "s142",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "0.5",
+     "erlotinib [s142]",
+     ""
+    ],
+    [
+     "s144",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex_br_(EGFR/../_br_GAP) [s144]",
+     ""
+    ],
+    [
+     "s147",
+     "0",
+     "5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Complex(Grb2/../PLC) [s147]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

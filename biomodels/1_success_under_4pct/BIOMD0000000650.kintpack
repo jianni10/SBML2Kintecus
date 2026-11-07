@@ -1,0 +1,519 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:27:55.792242+00:00",
+ "description": "Owen1998 - Tumour  treatment model\nBioModels BIOMD0000000650 (curated). SBML file: BIOMD0000000650_url.xml.\nSimulation: 0 to 500 time units (SED-ML: MODEL1708250002_treatment_start10.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.60e-06 of species peak (worst: m)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time event(s) on 'F' encoded as time/value pairs in EV_P_F.TXT (SET)\nRenamed species (Kintecus name = SBML id): m1 = m; p_F = F",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Owen1998 - Tumour  treatment model  (BIOMD0000000650, curated BioModels; source file BIOMD0000000650_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dl/dt term 1",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "source==>l",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dl/dt term 2",
+     ""
+    ],
+    [
+     "0.625",
+     "0",
+     "0",
+     "m1==>l+m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dl/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_F:(0.625*cp_F)]==>l",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dl/dt term 4",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "l==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dl/dt term 5",
+     ""
+    ],
+    [
+     "17.857",
+     "0",
+     "0",
+     "l+m1+m1==>2m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dl/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "l+m1+S[USER;cl,cm1,cn:(0.05/(cl+cm1+cn+1))]==>2l+m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dl/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "l+S[USER;cl,cm1,cn,cp_F:(0.05*cp_F/(cl+cm1+cn+1))]==>2l",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dl/dt term 8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "l+m1+S[USER;cp_F:(17.857*cp_F)]==>m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dm/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "m1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dm/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "m1+S[USER;cl,cm1,cn:(4/(cl+cm1+cn+1))]==>2m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dm/dt term 3",
+     ""
+    ],
+    [
+     "25",
+     "0",
+     "0",
+     "m1+m1+l==>l+m1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dm/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "m1+l+S[USER;cp_F:(25*cp_F)]==>l",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dn/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "n+S[USER;cl,cm1,cn:(2/(cl+cm1+cn+1))]==>2n",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "l",
+     "0",
+     "0.0999999999999994",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "macrophage [l]",
+     ""
+    ],
+    [
+     "m1",
+     "0",
+     "0.899999999999994",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mutated cell [m]",
+     ""
+    ],
+    [
+     "n",
+     "0",
+     "0.899999999999994",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "normal cell [n]",
+     ""
+    ],
+    [
+     "p_F",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "EV_P_F.TXT-SET",
+     "parameter F [F]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.5000000005",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "500",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.5000000005",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_F.TXT",
+   "key": "O_EV_P_F.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "10",
+     "0.072"
+    ],
+    [
+     "400",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

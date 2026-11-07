@@ -1,0 +1,1025 @@
+{
+ "version": 3,
+ "created": "2026-10-26T22:32:37.752778+00:00",
+ "description": "Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics\nBioModels BIOMD0000000651 (curated). SBML file: BIOMD0000000651_url.xml.\nSimulation: 0 to 3600 time units (SED-ML: BIOMD0000000651.sedml), sampling 3.6.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.81e-06 of species peak (worst: aMEK)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics  (BIOMD0000000651, curated BioModels; source file BIOMD0000000651_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IRS__activation_deactivation term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "IRS==>aIRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IRS__activation_deactivation term 2/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "aIRS==>IRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PI3K_activation_deactivation term 1/3",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "aPI3K==>PI3K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PI3K_activation_deactivation term 2/3",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "PI3K+aIRS==>aPI3K+aIRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PI3K_activation_deactivation term 3/3",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "PI3K+aRTK==>aPI3K+aRTK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Akt_activation_deactivation term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "aAkt==>Akt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Akt_activation_deactivation term 2/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Akt+aPI3K==>aAkt+aPI3K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mTOC1_acivation_deactivation term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "amTORC1==>mTORC1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "mTOC1_acivation_deactivation term 2/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "mTORC1+aAkt==>amTORC1+aAkt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "S6K_activation_deactivation term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "aS6K==>S6K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "S6K_activation_deactivation term 2/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "S6K+amTORC1==>aS6K+amTORC1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IRS_inhibition term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "iIRS==>IRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IRS_inhibition term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "IRS+aS6K==>iIRS+aS6K",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RTK_activation_deactivation term 1/3",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "RTK==>aRTK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RTK_activation_deactivation term 2/3",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "aRTK==>RTK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RTK_activation_deactivation term 3/3",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "RTK+FOXO==>aRTK+FOXO",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RasGDP__activation_deactivation term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "RasGTP==>RasGDP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RasGDP__activation_deactivation term 2/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "RasGDP+aRTK==>RasGTP+aRTK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf_activation_deactivation term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "aRaf==>Raf",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf_activation_deactivation term 2/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "Raf+RasGTP==>aRaf+RasGTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MEK_activation_deactivation term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "aMEK==>MEK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MEK_activation_deactivation term 2/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "MEK+aRaf==>aMEK+aRaf",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ERK_activation_deactivation term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "aERK==>ERK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ERK_activation_deactivation term 2/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "ERK+aMEK==>aERK+aMEK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf_inhibition term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "iRaf==>Raf",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Raf_inhibition term 2/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Raf+aERK==>iRaf+aERK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RTK_inhibition term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "iRTK==>RTK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RTK_inhibition term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "RTK+aERK==>iRTK+aERK",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FOXO_inhibition term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "iFOXO==>FOXO",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FOXO_inhibition term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "FOXO+aAkt==>iFOXO+aAkt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Akt_inhibition term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "iAkt==>AktI+Akt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Akt_inhibition term 2/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "AktI+Akt==>iAkt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MEK_inhibition term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "iMEK==>MEK+MEKI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MEK_inhibition term 2/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "MEK+MEKI==>iMEK",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "IRS",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRS [IRS]",
+     ""
+    ],
+    [
+     "aIRS",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "aIRS [aIRS]",
+     ""
+    ],
+    [
+     "iIRS",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iIRS [iIRS]",
+     ""
+    ],
+    [
+     "PI3K",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI3K [PI3K]",
+     ""
+    ],
+    [
+     "aPI3K",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "aPI3K [aPI3K]",
+     ""
+    ],
+    [
+     "Akt",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Akt [Akt]",
+     ""
+    ],
+    [
+     "aAkt",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "aAkt [aAkt]",
+     ""
+    ],
+    [
+     "mTORC1",
+     "0",
+     "299.999999999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mTORC1 [mTORC1]",
+     ""
+    ],
+    [
+     "amTORC1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "amTORC1 [amTORC1]",
+     ""
+    ],
+    [
+     "S6K",
+     "0",
+     "299.999999999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S6K [S6K]",
+     ""
+    ],
+    [
+     "aS6K",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "aS6K [aS6K]",
+     ""
+    ],
+    [
+     "FOXO",
+     "0",
+     "200",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FOXO [FOXO]",
+     ""
+    ],
+    [
+     "iFOXO",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iFOXO [iFOXO]",
+     ""
+    ],
+    [
+     "RTK",
+     "0",
+     "200",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RTK [RTK]",
+     ""
+    ],
+    [
+     "aRTK",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "aRTK [aRTK]",
+     ""
+    ],
+    [
+     "iRTK",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iRTK [iRTK]",
+     ""
+    ],
+    [
+     "RasGDP",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RasGDP [RasGDP]",
+     ""
+    ],
+    [
+     "RasGTP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RasGTP [RasGTP]",
+     ""
+    ],
+    [
+     "Raf",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Raf [Raf]",
+     ""
+    ],
+    [
+     "aRaf",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "aRaf [aRaf]",
+     ""
+    ],
+    [
+     "iRaf",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iRaf [iRaf]",
+     ""
+    ],
+    [
+     "MEK",
+     "0",
+     "299.999999999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MEK [MEK]",
+     ""
+    ],
+    [
+     "aMEK",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "aMEK [aMEK]",
+     ""
+    ],
+    [
+     "ERK",
+     "0",
+     "899.999999999996",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERK [ERK]",
+     ""
+    ],
+    [
+     "aERK",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "aERK [aERK]",
+     ""
+    ],
+    [
+     "AktI",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AktI [AktI]",
+     ""
+    ],
+    [
+     "iAkt",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iAkt [iAkt]",
+     ""
+    ],
+    [
+     "MEKI",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MEKI [MEKI]",
+     ""
+    ],
+    [
+     "iMEK",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iMEK [iMEK]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3.6",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3600",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3.6",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

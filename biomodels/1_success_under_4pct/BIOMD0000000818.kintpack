@@ -1,0 +1,555 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:30:07.629129+00:00",
+ "description": "Lee2008 - ERK and PI3K signal integration by Myc\nBioModels BIOMD0000000818 (curated). SBML file: Lee2008.xml.\nSimulation: 0 to 15 time units (SED-ML: Lee2008.sedml), sampling 0.14285714285714285.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.44e-06 of species peak (worst: Myc)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Myc_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] AKT_phosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] AKTp_dephosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] GSK3B_phosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] GSK3Bp_dephosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Myc_ser62_phosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Myc_thr58_phosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] time event(s) on 'ERK' encoded as time/value pairs in EV_ERK.TXT (SET)\n  [info] time event(s) on 'PI3K' encoded as time/value pairs in EV_PI3K.TXT (SET)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lee2008 - ERK and PI3K signal integration by Myc  (BIOMD0000000818, curated BioModels; source file Lee2008.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Myc_synthesis",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>Myc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AKT_phosphorylation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AKT+S[USER;cAKT,cPI3K:(360*cPI3K/(1*cAKT+0.01))]==>AKTp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AKTp_dephosphorylation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AKTp+S[USER;cAKTp:(72/(1*cAKTp+0.01))]==>AKT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GSK3B_phosphorylation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GSK3B+AKTp+S[USER;cGSK3B:(360/(1*cGSK3B+0.01))]==>GSK3Bp+AKTp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GSK3Bp_dephosphorylation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GSK3Bp+S[USER;cGSK3Bp:(72/(1*cGSK3Bp+0.01))]==>GSK3B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Myc_ser62_phosphorylation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Myc+S[USER;cERK,cMyc:(2.3*cERK/(1*cMyc+0.01))]==>Myc_ser62",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Myc_thr58_phosphorylation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Myc_ser62+GSK3B+S[USER;cMyc_ser62:(0.4/(1*cMyc_ser62+0.01))]==>Myc_thr58+GSK3B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Myc_degradation",
+     ""
+    ],
+    [
+     "2.08",
+     "0",
+     "0",
+     "Myc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Myc_ser62_degradation",
+     ""
+    ],
+    [
+     "0.35",
+     "0",
+     "0",
+     "Myc_ser62==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Myc_thr58_degradation",
+     ""
+    ],
+    [
+     "2.08",
+     "0",
+     "0",
+     "Myc_thr58==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Myc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Myc [Myc]",
+     ""
+    ],
+    [
+     "AKT",
+     "0",
+     "0.6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AKT [AKT]",
+     ""
+    ],
+    [
+     "AKTp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AKTp [AKTp]",
+     ""
+    ],
+    [
+     "PI3K",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "EV_PI3K.TXT-SET",
+     "PI3K [PI3K]",
+     ""
+    ],
+    [
+     "GSK3B",
+     "0",
+     "0.6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GSK3B [GSK3B]",
+     ""
+    ],
+    [
+     "GSK3Bp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GSK3Bp [GSK3Bp]",
+     ""
+    ],
+    [
+     "ERK",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "EV_ERK.TXT-SET",
+     "ERK [ERK]",
+     ""
+    ],
+    [
+     "Myc_ser62",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Myc_ser62 [Myc_ser62]",
+     ""
+    ],
+    [
+     "Myc_thr58",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Myc_thr58 [Myc_thr58]",
+     ""
+    ],
+    [
+     "GF",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "GF [GF]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.142857143",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "15",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.142857143",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_ERK.TXT",
+   "key": "O_EV_ERK.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "1",
+     "0.1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_PI3K.TXT",
+   "key": "O_EV_PI3K.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "1",
+     "0.1"
+    ],
+    [
+     "4",
+     "1"
+    ],
+    [
+     "6",
+     "0.1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

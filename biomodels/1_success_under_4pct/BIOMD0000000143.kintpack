@@ -1,0 +1,1068 @@
+{
+ "version": 3,
+ "created": "2026-11-02T03:14:29.168390+00:00",
+ "description": "Olsen2003_neutrophil_oscillatory_metabolism\nBioModels BIOMD0000000143 (curated). SBML file: BIOMD0000000143_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000143_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:5:10:0 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS (Kintecus within 0.0332% of the SBML; run on James's PC in 310 s)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'H_p' goes below zero in the SBML: integrated as H_p_o = value + 500000, output as H_p = OUTC[H_p_o;-500000*source]\n  [info] 'H_c' goes below zero in the SBML: integrated as H_c_o = value + 5000000, output as H_c = OUTC[H_c_o;-5000000*source]\n  [info] R19 term 1/2 (volume 10): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R19 term 2/2 (volume 10): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R19 (volume 1): rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for O2_p",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5:10:0 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Olsen2003_neutrophil_oscillatory_metabolism  (BIOMD0000000143, curated BioModels; source file BIOMD0000000143_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1 term 1/2",
+     ""
+    ],
+    [
+     "58",
+     "0",
+     "0",
+     "coI_p==>H2O2_p+per3_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1 term 2/2",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "H2O2_p+per3_p==>coI_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "MLTH_p+coI_p==>MLT_p+coII_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3",
+     ""
+    ],
+    [
+     "0.004",
+     "0",
+     "0",
+     "MLTH_p+coII_p==>MLT_p+per3_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4",
+     ""
+    ],
+    [
+     "20",
+     "0",
+     "0",
+     "O2minus_p+per3_p==>coIII_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5 (shifted H_p_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cO2minus_p:((-1*20*cO2minus_p^2))]==>H_p_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "O2minus_p+O2minus_p==>H2O2_p+O2_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "O2minus_p+coIII_p==>O2_p+coI_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7",
+     ""
+    ],
+    [
+     "1e-6",
+     "0",
+     "0",
+     "NADPH_c+O2_c==>H2O2_c+NADPplus_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "NADP_c+O2_c==>NADPplus_c+O2minus_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9 (shifted H_c_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cO2minus_c:((-1*1000*cO2minus_c^2))]==>H_c_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9",
+     ""
+    ],
+    [
+     "500",
+     "0",
+     "0",
+     "O2minus_c+O2minus_c==>H2O2_c+O2_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "MLT_c+NADPH_c==>MLTH_c+NADP_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11",
+     ""
+    ],
+    [
+     "60",
+     "0",
+     "0",
+     "NADP_c+NADP_c==>NADP2_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12",
+     ""
+    ],
+    [
+     "25",
+     "0",
+     "0",
+     "source==>NADPH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13a",
+     ""
+    ],
+    [
+     "12.5",
+     "0",
+     "0",
+     "source==>O2_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13b",
+     ""
+    ],
+    [
+     "0.045",
+     "0",
+     "0",
+     "O2_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14 term 1/2 (volume 10)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cO2_p:(3*cO2_p)]==>O2_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14 term 2/2 (volume 10)",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "O2_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14 term 1/2 (volume 1)",
+     ""
+    ],
+    [
+     "30",
+     "0",
+     "0",
+     "O2_p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14 term 2/2 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cO2_c:(30*cO2_c)]==>O2_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15 term 1/2 (volume 10)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cH2O2_p:(3*cH2O2_p)]==>H2O2_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15 term 2/2 (volume 10)",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "H2O2_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15 term 1/2 (volume 1)",
+     ""
+    ],
+    [
+     "30",
+     "0",
+     "0",
+     "H2O2_p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15 term 2/2 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cH2O2_c:(30*cH2O2_c)]==>H2O2_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16 term 1/2 (volume 10)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cMLTH_p:(1*cMLTH_p)]==>MLTH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16 term 2/2 (volume 10)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MLTH_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16 term 1/2 (volume 1)",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "MLTH_p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16 term 2/2 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cMLTH_c:(10*cMLTH_c)]==>MLTH_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 1/2 (volume 10)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cMLT_p:(1*cMLT_p)]==>MLT_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 2/2 (volume 10)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MLT_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 1/2 (volume 1)",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "MLT_p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 2/2 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cMLT_c:(10*cMLT_c)]==>MLT_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R18 term 1/2 (volume 10)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cO2minus_p:(0.2*cO2minus_p)]==>O2minus_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R18 term 2/2 (volume 10)",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "O2minus_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R18 term 1/2 (volume 1)",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "O2minus_p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R18 term 2/2 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cO2minus_c:(2*cO2minus_c)]==>O2minus_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R19 term 1/2 (volume 10)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADPH_c+S[USER;cNADPH_c,cO2_p:(0.48*cO2_p/(0.05*cNADPH_c+0.0002777777777777778*cO2_p*(cNADPH_c+1e-30)^2+0.03333333333333333*cO2_p*(cNADPH_c+1e-30)+551*cO2_p+0.0004166666666666667*(cNADPH_c+1e-30)^2+826.5))]==>NADPplus_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R19 term 2/2 (volume 10)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADPH_c+NADPH_c+S[USER;cNADPH_c,cO2_p:(0.008*cO2_p/(0.05*cNADPH_c+0.0002777777777777778*cO2_p*(cNADPH_c+1e-30)^2+0.03333333333333333*cO2_p*(cNADPH_c+1e-30)+551*cO2_p+0.0004166666666666667*(cNADPH_c+1e-30)^2+826.5))]==>NADPplus_c+NADPH_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R19 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNADPH_c,cO2_p:(4.8*cNADPH_c*cO2_p*(0.016666666666666666*cNADPH_c+1)/((cO2_p+1.5)*((0.016666666666666666*cNADPH_c+1)^2+550)))]==>2O2minus_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R19 (volume 1) (consumes O2_p)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNADPH_c,cO2_p:((-1*9.6*cNADPH_c*cO2_p*(0.016666666666666666*cNADPH_c+1)/((cO2_p+1.5)*((0.016666666666666666*cNADPH_c+1)^2+550))))]==>O2_p",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "H2O2_p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "H2O2 [H2O2_p]",
+     ""
+    ],
+    [
+     "per3_p",
+     "0",
+     "300",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ferric peroxidase [per3_p]",
+     ""
+    ],
+    [
+     "coI_p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "compound I [coI_p]",
+     ""
+    ],
+    [
+     "MLTH_p",
+     "0",
+     "300",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Melatonin [MLTH_p]",
+     ""
+    ],
+    [
+     "coII_p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "compound II [coII_p]",
+     ""
+    ],
+    [
+     "MLT_p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Melatonin free radical [MLT_p]",
+     ""
+    ],
+    [
+     "O2minus_p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Superoxide [O2minus_p]",
+     ""
+    ],
+    [
+     "H_p_o",
+     "0",
+     "500000",
+     "N",
+     "0",
+     "No",
+     "No",
+     "Hydrogen + 500000 (shifted state) [__shifted__H_p]",
+     ""
+    ],
+    [
+     "O2_p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Oxygen [O2_p]",
+     ""
+    ],
+    [
+     "NADPH_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADPH [NADPH_c]",
+     ""
+    ],
+    [
+     "O2_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Oxygen [O2_c]",
+     ""
+    ],
+    [
+     "NADPplus_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADP [NADPplus_c]",
+     ""
+    ],
+    [
+     "H2O2_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "H2O2 [H2O2_c]",
+     ""
+    ],
+    [
+     "NADP_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADP [NADP_c]",
+     ""
+    ],
+    [
+     "O2minus_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Superoxide [O2minus_c]",
+     ""
+    ],
+    [
+     "H_c_o",
+     "0",
+     "5000000",
+     "N",
+     "0",
+     "No",
+     "No",
+     "Hydrogen + 5000000 (shifted state) [__shifted__H_c]",
+     ""
+    ],
+    [
+     "MLT_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Melatonin free radical [MLT_c]",
+     ""
+    ],
+    [
+     "MLTH_c",
+     "0",
+     "300",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Melatonin [MLTH_c]",
+     ""
+    ],
+    [
+     "coIII_p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "compound III [coIII_p]",
+     ""
+    ],
+    [
+     "NADP2_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADP2 [NADP2_c]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "H_p",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[H_p_o;-500000*source]",
+     "No",
+     "Hydrogen (= H_p_o - 500000) [H_p]",
+     ""
+    ],
+    [
+     "H_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[H_c_o;-5000000*source]",
+     "No",
+     "Hydrogen (= H_c_o - 5000000) [H_c]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

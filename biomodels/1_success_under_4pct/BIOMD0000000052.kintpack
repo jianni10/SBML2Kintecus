@@ -1,0 +1,505 @@
+{
+ "version": 3,
+ "created": "2026-10-26T20:57:50.744793+00:00",
+ "description": "Brands2002 - Monosaccharide-casein systems\nBioModels BIOMD0000000052 (curated). SBML file: BIOMD0000000052_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000052_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.93e-06 of species peak (worst: Amadori)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Brands2002 - Monosaccharide-casein systems  (BIOMD0000000052, curated BioModels; source file BIOMD0000000052_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_J1",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Glu==>Fru",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_J2",
+     ""
+    ],
+    [
+     "0.00509",
+     "0",
+     "0",
+     "Fru==>Glu",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_J3",
+     ""
+    ],
+    [
+     "0.00047",
+     "0",
+     "0",
+     "Glu==>Formic_acid+C5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_J4",
+     ""
+    ],
+    [
+     "0.0011",
+     "0",
+     "0",
+     "Fru==>Formic_acid+C5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_J5",
+     ""
+    ],
+    [
+     "0.00712",
+     "0",
+     "0",
+     "Fru==>2Triose",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_J6",
+     ""
+    ],
+    [
+     "0.00439",
+     "0",
+     "0",
+     "Triose==>Cn+Acetic_acid",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_J7",
+     ""
+    ],
+    [
+     "0.00018",
+     "0",
+     "0",
+     "Glu+lys_R==>Amadori",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_J8",
+     ""
+    ],
+    [
+     "0.11134",
+     "0",
+     "0",
+     "Amadori==>Acetic_acid+lys_R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_J9",
+     ""
+    ],
+    [
+     "0.14359",
+     "0",
+     "0",
+     "Amadori==>AMP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_J10",
+     ""
+    ],
+    [
+     "0.00015",
+     "0",
+     "0",
+     "Fru+lys_R==>AMP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "_J11",
+     ""
+    ],
+    [
+     "0.12514",
+     "0",
+     "0",
+     "AMP==>Melanoidin",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Glu",
+     "0",
+     "160",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Glu [Glu]",
+     ""
+    ],
+    [
+     "Fru",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fru [Fru]",
+     ""
+    ],
+    [
+     "Formic_acid",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Formic_acid [Formic_acid]",
+     ""
+    ],
+    [
+     "Triose",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Triose [Triose]",
+     ""
+    ],
+    [
+     "Acetic_acid",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Acetic_acid [Acetic_acid]",
+     ""
+    ],
+    [
+     "Cn",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cn [Cn]",
+     ""
+    ],
+    [
+     "Amadori",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Amadori [Amadori]",
+     ""
+    ],
+    [
+     "AMP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AMP [AMP]",
+     ""
+    ],
+    [
+     "C5",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C5 [C5]",
+     ""
+    ],
+    [
+     "lys_R",
+     "0",
+     "15",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "lys_R [lys_R]",
+     ""
+    ],
+    [
+     "Melanoidin",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Melanoidin [Melanoidin]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

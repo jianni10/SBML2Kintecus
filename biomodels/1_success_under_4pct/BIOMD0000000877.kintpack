@@ -1,0 +1,450 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:11:36.584020+00:00",
+ "description": "Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus and chemotherapy with saturated infection rate\nBioModels BIOMD0000000877 (curated). SBML file: Ontah2019.xml.\nSimulation: 0 to 100 time units (SED-ML: Ontah2019.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.10e-06 of species peak (worst: V)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_Cell_Infection: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus and chemotherapy with saturated infection rate  (BIOMD0000000877, curated BioModels; source file Ontah2019.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Growth term 1/3",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "U==>2U",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Growth term 2/3",
+     ""
+    ],
+    [
+     "4.675081813931744e-5",
+     "0",
+     "0",
+     "U+U==>U",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Growth term 3/3",
+     ""
+    ],
+    [
+     "4.675081813931744e-5",
+     "0",
+     "0",
+     "U+I==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_Infection",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "V+U+S[USER;cI,cU:(0.01/(1*cI+1*cU+0.5))]==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_Tumor_Lysis_Drug",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "U+C+S[USER;cC:(50/(cC+10000))]==>C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_Tumor_Lysis_Drug",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I+C+S[USER;cC:(60/(cC+10000))]==>C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_Tumor_Death",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "I==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Virus_Production",
+     ""
+    ],
+    [
+     "0.25",
+     "0",
+     "0",
+     "I==>V+I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Virus_Decay",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "V==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Drug_Injection",
+     ""
+    ],
+    [
+     "150",
+     "0",
+     "0",
+     "source==>C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Drug_Decay",
+     ""
+    ],
+    [
+     "4.17",
+     "0",
+     "0",
+     "C==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "U",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "U [U]",
+     ""
+    ],
+    [
+     "I",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I [I]",
+     ""
+    ],
+    [
+     "V",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V [V]",
+     ""
+    ],
+    [
+     "C",
+     "0",
+     "30",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C [C]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

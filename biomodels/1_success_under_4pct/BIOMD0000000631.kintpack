@@ -1,0 +1,762 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:40:46.210706+00:00",
+ "description": "DeCaluwe2016 - Circadian Clock\nBioModels BIOMD0000000631 (curated). SBML file: BIOMD0000000631_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000631_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.59e-05 of species peak (worst: EL_m)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): P1 = P",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "DeCaluwe2016 - Circadian Clock  (BIOMD0000000631, curated BioModels; source file BIOMD0000000631_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CL_transcription",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cP51_p,cP97_p:(4.58/(0.7181844297615628*cP51_p^2+39.0625*cP97_p^2+1))]==>CL_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CL_light_transcription",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P1+S[USER;cP51_p,cP97_p:(3/(0.7181844297615628*cP51_p^2+39.0625*cP97_p^2+1))]==>CL_m+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CLm_light_degradation",
+     ""
+    ],
+    [
+     "0.53",
+     "0",
+     "0",
+     "CL_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CL_translation",
+     ""
+    ],
+    [
+     "0.76",
+     "0",
+     "0",
+     "CL_m==>CL_p+CL_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CL_light_translation",
+     ""
+    ],
+    [
+     "0.42",
+     "0",
+     "0",
+     "CL_m==>CL_p+CL_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "CLp_degradation",
+     ""
+    ],
+    [
+     "0.68",
+     "0",
+     "0",
+     "CL_p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P97_light_transcription",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P1+S[USER;cEL_p,cP51_p:(5/(11.111111111111112*cEL_p^2+18.90359168241966*cP51_p^2+1))]==>P97_m+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P97_transcription",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cEL_p,cP51_p:(1.27/(11.111111111111112*cEL_p^2+18.90359168241966*cP51_p^2+1))]==>P97_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P97_CL_transcription",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CL_p+CL_p+S[USER;cCL_p,cEL_p,cP51_p:(1.48/(11.111111111111112*cCL_p^2*cEL_p^2+18.90359168241966*cCL_p^2*cP51_p^2+cCL_p^2+0.64*cEL_p^2+1.0888468809073721*cP51_p^2+0.0576))]==>P97_m+2CL_p",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P97m_degradation",
+     ""
+    ],
+    [
+     "0.35",
+     "0",
+     "0",
+     "P97_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P97_translation",
+     ""
+    ],
+    [
+     "1.01",
+     "0",
+     "0",
+     "P97_m==>P97_p+P97_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P97_light_degradation",
+     ""
+    ],
+    [
+     "0.29",
+     "0",
+     "0",
+     "P97_p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P51_transcription",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCL_p,cP51_p:(1/(4.725897920604915*cCL_p^2+0.25*cP51_p^2+1))]==>P51_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P51m_degradation",
+     ""
+    ],
+    [
+     "0.56",
+     "0",
+     "0",
+     "P51_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P51_translation",
+     ""
+    ],
+    [
+     "0.64",
+     "0",
+     "0",
+     "P51_m==>P51_p+P51_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P51_light_degradation",
+     ""
+    ],
+    [
+     "0.78",
+     "0",
+     "0",
+     "P51_p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "EL_light_transcription",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCL_p,cEL_p,cP51_p:(1.47/(7.71604938271605*cCL_p^2+0.2770083102493075*cEL_p^2+0.2770083102493075*cP51_p^2+1))]==>EL_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ELm_degradation",
+     ""
+    ],
+    [
+     "0.57",
+     "0",
+     "0",
+     "EL_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "EL_translation",
+     ""
+    ],
+    [
+     "1.01",
+     "0",
+     "0",
+     "EL_m==>EL_p+EL_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "EL_light_degradation",
+     ""
+    ],
+    [
+     "0.38",
+     "0",
+     "0",
+     "EL_p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "P_light_degradation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "P1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIF_transcription",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cEL_p:(0.1/(22.67573696145125*cEL_p^2+1))]==>PIF_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIFm_degradation",
+     ""
+    ],
+    [
+     "0.14",
+     "0",
+     "0",
+     "PIF_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIF_translation",
+     ""
+    ],
+    [
+     "0.62",
+     "0",
+     "0",
+     "PIF_m==>PIF_p+PIF_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIF_light_degradation",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "PIF_p==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "basal_growth",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "source==>hypocotyl",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIF_induced_growth",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PIF_p+PIF_p+S[USER;cPIF_p:(0.12/(cPIF_p^2+0.31360000000000005))]==>hypocotyl+2PIF_p",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "CL_m",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CCA1/LHY mRNA [CL_m]",
+     ""
+    ],
+    [
+     "CL_p",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CCA1/LHY protein [CL_p]",
+     ""
+    ],
+    [
+     "P97_m",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PRR9/PRR7 mRNA [P97_m]",
+     ""
+    ],
+    [
+     "P97_p",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PRR9/PRR7 protein [P97_p]",
+     ""
+    ],
+    [
+     "P51_m",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PRR5/TOC1 mRNA [P51_m]",
+     ""
+    ],
+    [
+     "P51_p",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PRR5/TOC1 protein [P51_p]",
+     ""
+    ],
+    [
+     "EL_m",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ELF4/LUX mRNA [EL_m]",
+     ""
+    ],
+    [
+     "EL_p",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ELF4/LUX protein [EL_p]",
+     ""
+    ],
+    [
+     "PIF_m",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PIF4/PIF5 mRNA [PIF_m]",
+     ""
+    ],
+    [
+     "PIF_p",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PIF4/PIF5 protein [PIF_p]",
+     ""
+    ],
+    [
+     "hypocotyl",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hypocotyl length [hypocotyl]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P [P]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

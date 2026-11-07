@@ -1,0 +1,762 @@
+{
+ "version": 3,
+ "created": "2026-11-01T23:02:49.285295+00:00",
+ "description": "Rodenfels2019 - Heat Oscillations Driven by the Embryonic Cell Cycle Reveal the Energetic Costs of Signaling\nBioModels BIOMD0000000952 (curated). SBML file: Rodenfels2019_V1.xml.\nSimulation: 0 to 150 time units (SED-ML: Rodenfels2019_V1.sedml), sampling 0.15.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.68e-06 of species peak (worst: SP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Cyclin_B1_Cdk1_complex_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Stotal' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'cdk1a' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Cyclin_B1_Cdk1_phosphorylated_dephosphorylation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_heat_flow term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - Q: zero order, signed\nRenamed species (Kintecus name = SBML id): CyclinB1Cdk1complexphosph1 = Cyclin_B1_Cdk1_complex_phosphorylated; CyclinB1Cdk1complexunphos1 = Cyclin_B1_Cdk1_complex_unphosphorylated; S1 = S",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rodenfels2019 - Heat Oscillations Driven by the Embryonic Cell Cycle Reveal the Energetic Costs of Signaling  (BIOMD0000000952, curated BioModels; source file Rodenfels2019_V1.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cyclin_B1_Cdk1_phosphorylated_synthesis",
+     ""
+    ],
+    [
+     "2.85",
+     "0",
+     "0",
+     "source==>CyclinB1Cdk1complexphosph1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cyclin_B1_Cdk1_unphosphorylated_degradation",
+     ""
+    ],
+    [
+     "0.76",
+     "0",
+     "0",
+     "CyclinB1Cdk1complexunphos1+APC_C_active==>APC_C_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cyclin_B1_Cdk1_phosphorylated_degradation",
+     ""
+    ],
+    [
+     "0.76",
+     "0",
+     "0",
+     "CyclinB1Cdk1complexphosph1+APC_C_active==>APC_C_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cyclin_B1_Cdk1_phosphorylated_dephosphorylation term 1/2",
+     ""
+    ],
+    [
+     "0.011890000525651796",
+     "0",
+     "0",
+     "CyclinB1Cdk1complexphosph1==>CyclinB1Cdk1complexunphos1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cyclin_B1_Cdk1_phosphorylated_dephosphorylation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CyclinB1Cdk1complexphosph1+S[USER;cCyclinB1Cdk1complexphosph1:(0.05945000262825898/(3.942410517684042e-6*(cCyclinB1Cdk1complexphosph1+1e-30)^3.5+1))]==>CyclinB1Cdk1complexunphos1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cyclin_B1_Cdk1_phosphorylated_phosphorylation term 1/2",
+     ""
+    ],
+    [
+     "0.38048001682085747",
+     "0",
+     "0",
+     "CyclinB1Cdk1complexunphos1==>CyclinB1Cdk1complexphosph1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cyclin_B1_Cdk1_phosphorylated_phosphorylation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CyclinB1Cdk1complexunphos1+S[USER;cCyclinB1Cdk1complexphosph1:(1.9024000841042874/(1.77147e16*(1/cCyclinB1Cdk1complexphosph1)^11+1))]==>CyclinB1Cdk1complexphosph1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Plx1_activation_by_active_Cdk1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCyclinB1Cdk1complexphosph1:(2.85/(777600000*(1/cCyclinB1Cdk1complexphosph1)^5+1))]==>Plx1_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Plx1_activation_by_active_Cdk1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Plx1_active+S[USER;cCyclinB1Cdk1complexphosph1:(2.85/(777600000*(1/cCyclinB1Cdk1complexphosph1)^5+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Plx1_inactivation_after_Cdk1_inactivated",
+     ""
+    ],
+    [
+     "0.2375",
+     "0",
+     "0",
+     "Plx1_active==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_APC_CCdc20_by_active_Plx1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPlx1_active:(1.5/(0.0625*(1/cPlx1_active)^4+1))]==>APC_C_active",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_APC_CCdc20_by_active_Plx1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APC_C_active+S[USER;cPlx1_active:(1.5/(0.0625*(1/cPlx1_active)^4+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inactivation_of_APC_CCdc20_after_Plx1_is_inactivated",
+     ""
+    ],
+    [
+     "0.15",
+     "0",
+     "0",
+     "APC_C_active==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_SCdk1 term 1/2",
+     ""
+    ],
+    [
+     "181",
+     "0",
+     "0",
+     "SCdk1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_SCdk1 term 2/2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "CyclinB1Cdk1complexphosph1+S1==>SCdk1+CyclinB1Cdk1complexphosph1+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_S term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "SCdk1==>S1+SCdk1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_S term 2/3",
+     ""
+    ],
+    [
+     "1800",
+     "0",
+     "0",
+     "SPPP2A==>S1+SPPP2A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_S term 3/3",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "S1+CyclinB1Cdk1complexphosph1==>CyclinB1Cdk1complexphosph1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_SP term 1/3",
+     ""
+    ],
+    [
+     "180",
+     "0",
+     "0",
+     "SCdk1==>SP+SCdk1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_SP term 2/3",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "SPPP2A==>SP+SPPP2A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_SP term 3/3",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "SP+PP2A==>PP2A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_PP2A term 1/2",
+     ""
+    ],
+    [
+     "1800.01",
+     "0",
+     "0",
+     "SPPP2A==>PP2A+SPPP2A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_PP2A term 2/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "PP2A+SP==>SP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_SPPP2A term 1/2",
+     ""
+    ],
+    [
+     "1800.01",
+     "0",
+     "0",
+     "SPPP2A==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_SPPP2A term 2/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "PP2A+SP==>SPPP2A+PP2A+SP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_heat_flow term 1/2 (consumes Q)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSPPP2A:((-1*77.760432*cSPPP2A))]==>Q",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_heat_flow term 2/2",
+     ""
+    ],
+    [
+     "4.32",
+     "0",
+     "0",
+     "PP2A+SP==>Q+PP2A+SP",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "CyclinB1Cdk1complexphosph1",
+     "0",
+     "60",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cyclin B1 Cdk1 complex phosphorylated( Active) [Cyclin_B1_Cdk1_complex_phosphorylated]",
+     ""
+    ],
+    [
+     "CyclinB1Cdk1complexunphos1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cyclin B1 Cdk1 complex unphosphorylated [Cyclin_B1_Cdk1_complex_unphosphorylated]",
+     ""
+    ],
+    [
+     "Plx1_active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Plx1_active [Plx1_active]",
+     ""
+    ],
+    [
+     "APC_C_active",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APC/C active [APC_C_active]",
+     ""
+    ],
+    [
+     "Plx1_total",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "Plx1_total [Plx1_total]",
+     ""
+    ],
+    [
+     "APC_C_total",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "APC/C total [APC_C_total]",
+     ""
+    ],
+    [
+     "SCdk1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Substrate/Cdk1 complex [SCdk1]",
+     ""
+    ],
+    [
+     "S1",
+     "0",
+     "60",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Substrate [S]",
+     ""
+    ],
+    [
+     "SP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphorylated Substrate(SP) [SP]",
+     ""
+    ],
+    [
+     "PP2A",
+     "0",
+     "60",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PP2A [PP2A]",
+     ""
+    ],
+    [
+     "SPPP2A",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphorylated Substrate Phosphatase Complex(SP-PP2A) [SPPP2A]",
+     ""
+    ],
+    [
+     "Q",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Heat(Q) [Q]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.15",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "150",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.15",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

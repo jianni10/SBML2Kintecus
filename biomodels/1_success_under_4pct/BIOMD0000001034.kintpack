@@ -1,0 +1,450 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:15:52.975773+00:00",
+ "description": "Bunimovich-Mendrazitsky2007 - Mathematical model of BCG immunotherapy\nBioModels BIOMD0000001034 (curated). SBML file: Bunimovich-Mendrazitsky2007.xml.\nSimulation: 0 to 20 time units (SED-ML: Bunimovich-Mendrazitsky2007 - Fig4.sedml), sampling 0.02.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.02e-06 of species peak (worst: BCG)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bunimovich-Mendrazitsky2007 - Mathematical model of BCG immunotherapy  (BIOMD0000001034, curated BioModels; source file Bunimovich-Mendrazitsky2007.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "BCG_production",
+     ""
+    ],
+    [
+     "1.9",
+     "0",
+     "0",
+     "source==>BCG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Effector_cell_activation_recruitment term 1/2",
+     ""
+    ],
+    [
+     "0.52",
+     "0",
+     "0",
+     "Tumor_infected_cells==>Effector_cells+Tumor_infected_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Effector_cell_activation_recruitment term 2/2",
+     ""
+    ],
+    [
+     "0.085",
+     "0",
+     "0",
+     "BCG+Effector_cells==>2Effector_cells+BCG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Effector_cell_inactivation_death term 1/2",
+     ""
+    ],
+    [
+     "0.41",
+     "0",
+     "0",
+     "Effector_cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Effector_cell_inactivation_death term 2/2",
+     ""
+    ],
+    [
+     "0.003",
+     "0",
+     "0",
+     "Effector_cells+Tumor_infected_cells==>Tumor_infected_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_growth term 1/2",
+     ""
+    ],
+    [
+     "0.12",
+     "0",
+     "0",
+     "Tumor_uninfected_cells==>2Tumor_uninfected_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_growth term 2/2",
+     ""
+    ],
+    [
+     "0.0018599999999999999",
+     "0",
+     "0",
+     "Tumor_uninfected_cells+Tumor_uninfected_cells==>Tumor_uninfected_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_infection",
+     ""
+    ],
+    [
+     "0.285",
+     "0",
+     "0",
+     "BCG+Tumor_uninfected_cells==>Tumor_infected_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_tumor_cell_death",
+     ""
+    ],
+    [
+     "1.1",
+     "0",
+     "0",
+     "Tumor_infected_cells+Effector_cells==>Effector_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "BCG_killing term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "BCG==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "BCG_killing term 2/2",
+     ""
+    ],
+    [
+     "1.25",
+     "0",
+     "0",
+     "BCG+Effector_cells==>Effector_cells",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "BCG",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "BCG [BCG]",
+     ""
+    ],
+    [
+     "Effector_cells",
+     "0",
+     "0.05",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Effector_cells [Effector_cells]",
+     ""
+    ],
+    [
+     "Tumor_infected_cells",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumor_infected_cells [Tumor_infected_cells]",
+     ""
+    ],
+    [
+     "Tumor_uninfected_cells",
+     "0",
+     "0.55",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumor_uninfected_cells [Tumor_uninfected_cells]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.02",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "20",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.02",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

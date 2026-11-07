@@ -1,0 +1,778 @@
+{
+ "version": 3,
+ "created": "2026-11-05T15:54:43.092829+00:00",
+ "description": "Smith2009 - RGS mediated GTP hydrolysis\nBioModels BIOMD0000000439 (curated). SBML file: BIOMD0000000439_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000439_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.2857142857142857.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.38e-05 of species peak (worst: L)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time event(s) on 'L' encoded as time/value pairs in EV_L.TXT (ADD)\nRenamed species (Kintecus name = SBML id): R1 = R; P1 = P",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Smith2009 - RGS mediated GTP hydrolysis  (BIOMD0000000439, curated BioModels; source file BIOMD0000000439_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1",
+     ""
+    ],
+    [
+     "0.0025",
+     "0",
+     "0",
+     "L+R1==>RL",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "Gabg+R1==>RGabg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Gabg+RL==>RGabgL",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "L+RGabg==>RGabgL",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "RGabgL==>GaGTP+Gbg+RL",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Gabg==>GaGTP+Gbg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7",
+     ""
+    ],
+    [
+     "500",
+     "0",
+     "0",
+     "GaGTP+RGS==>RGSGaGTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8",
+     ""
+    ],
+    [
+     "2.5",
+     "0",
+     "0",
+     "RGSGaGTP==>GaGDPP+RGS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "GaGTP==>GaGDPP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "Effector+GaGTP==>GaGTPEffector",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GaGTPEffector==>Effector+inertGaGTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "RGS+inertGaGTP==>RGSinertGaGTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "RGSinertGaGTP==>GaGDPP+RGS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "inertGaGTP==>GaGDPP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "GaGDPP==>GaGDP+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "GaGDP+Gbg==>Gabg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "P1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R18",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "GaGTPEffector==>z1+GaGTPEffector",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R19",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "z1==>z2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R20",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "z2==>z3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R21",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "z3==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "R1",
+     "0",
+     "205",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R [R]",
+     ""
+    ],
+    [
+     "L",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "EV_L.TXT-ADD",
+     "L [L]",
+     ""
+    ],
+    [
+     "RL",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RL [RL]",
+     ""
+    ],
+    [
+     "Gabg",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gabg [Gabg]",
+     ""
+    ],
+    [
+     "RGabg",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RGabg [RGabg]",
+     ""
+    ],
+    [
+     "RGabgL",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RGabgL [RGabgL]",
+     ""
+    ],
+    [
+     "GaGTP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GaGTP [GaGTP]",
+     ""
+    ],
+    [
+     "Gbg",
+     "0",
+     "205",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gbg [Gbg]",
+     ""
+    ],
+    [
+     "RGS",
+     "0",
+     "60",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RGS [RGS]",
+     ""
+    ],
+    [
+     "RGSGaGTP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RGSGaGTP [RGSGaGTP]",
+     ""
+    ],
+    [
+     "GaGDPP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GaGDPP [GaGDPP]",
+     ""
+    ],
+    [
+     "Effector",
+     "0",
+     "205",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Effector [Effector]",
+     ""
+    ],
+    [
+     "GaGTPEffector",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GaGTPEffector [GaGTPEffector]",
+     ""
+    ],
+    [
+     "inertGaGTP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "inertGaGTP [inertGaGTP]",
+     ""
+    ],
+    [
+     "RGSinertGaGTP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RGSinertGaGTP [RGSinertGaGTP]",
+     ""
+    ],
+    [
+     "GaGDP",
+     "0",
+     "205",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GaGDP [GaGDP]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P [P]",
+     ""
+    ],
+    [
+     "z1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "z1 [z1]",
+     ""
+    ],
+    [
+     "z2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "z2 [z2]",
+     ""
+    ],
+    [
+     "z3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "z3 [z3]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.285714286",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.285714286",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_L.TXT",
+   "key": "O_EV_L.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "14",
+     "0.1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

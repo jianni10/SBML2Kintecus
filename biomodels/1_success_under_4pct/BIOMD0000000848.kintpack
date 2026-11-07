@@ -1,0 +1,799 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:10:57.793980+00:00",
+ "description": "FatehiChenar2018 - Mathematical model of immune response to hepatitis B\nBioModels BIOMD0000000848 (curated). SBML file: FatehiChenar2018.xml.\nSimulation: 0 to 30 time units (SED-ML: FatehiChenar2018.sedml), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.80e-06 of species peak (worst: F_2)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): T1 = T; E1 = E; R1 = R",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FatehiChenar2018 - Mathematical model of immune response to hepatitis B  (BIOMD0000000848, curated BioModels; source file FatehiChenar2018.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_Death term 1/2",
+     ""
+    ],
+    [
+     "0.003",
+     "0",
+     "0",
+     "source==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_Death term 2/2",
+     ""
+    ],
+    [
+     "0.003",
+     "0",
+     "0",
+     "T1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_Infection",
+     ""
+    ],
+    [
+     "7",
+     "0",
+     "0",
+     "T1+V==>I+V",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Refractory_To_Uninfected",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "R1==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_To_Refractory_IFN term 1/2",
+     ""
+    ],
+    [
+     "14",
+     "0",
+     "0",
+     "T1+F_1==>R1+F_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Uninfected_To_Refractory_IFN term 2/2",
+     ""
+    ],
+    [
+     "14",
+     "0",
+     "0",
+     "T1+F_2==>R1+F_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_Death",
+     ""
+    ],
+    [
+     "0.56",
+     "0",
+     "0",
+     "I==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_Killing_Immune term 1/6",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "I+N==>N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_Killing_Immune term 2/6",
+     ""
+    ],
+    [
+     "0.14",
+     "0",
+     "0",
+     "I+E1==>E1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_Killing_Immune term 3/6",
+     ""
+    ],
+    [
+     "7.5",
+     "0",
+     "0",
+     "I+F_1+N==>F_1+N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_Killing_Immune term 4/6",
+     ""
+    ],
+    [
+     "0.28",
+     "0",
+     "0",
+     "I+E1+F_2==>E1+F_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_Killing_Immune term 5/6",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "I+F_2+N==>F_2+N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_Killing_Immune term 6/6",
+     ""
+    ],
+    [
+     "0.266",
+     "0",
+     "0",
+     "I+E1+F_1==>E1+F_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFN_AB_Production_Infected",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I==>F_1+I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFN_AB_Degradation",
+     ""
+    ],
+    [
+     "4.9",
+     "0",
+     "0",
+     "F_1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFN_G_Production_CTLs",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "E1==>F_2+E1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFN_G_Production_NK",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "N==>F_2+N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFN_G_Degradation",
+     ""
+    ],
+    [
+     "5.16",
+     "0",
+     "0",
+     "F_2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_Cells_Proliferaton term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N==>2N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_Cells_Proliferaton term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N+N==>N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_Cells_Production_IFN term 1/2",
+     ""
+    ],
+    [
+     "0.8",
+     "0",
+     "0",
+     "F_1+N==>2N+F_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_Cells_Production_IFN term 2/2",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "F_2+N==>2N+F_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "HBV_S_CTL_Proliferation term 1/2",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "E1==>2E1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "HBV_S_CTL_Proliferation term 2/2",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "E1+E1==>E1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "HBV_S_CTL_Proliferation_Antigen",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E1+I==>2E1+I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_To_Refractory",
+     ""
+    ],
+    [
+     "21",
+     "0",
+     "0",
+     "I+F_2==>R1+F_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Virus_Production",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I+S[USER;cF_1,cF_2:(20/(1.7*cF_1+1*cF_2+1))]==>V+I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Virus_Clearance_Natural",
+     ""
+    ],
+    [
+     "0.67",
+     "0",
+     "0",
+     "V==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Virus_Clearance_Antibodies",
+     ""
+    ],
+    [
+     "8",
+     "0",
+     "0",
+     "V+A==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Antibody_Turnover term 1/2",
+     ""
+    ],
+    [
+     "0.332",
+     "0",
+     "0",
+     "source==>A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Antibody_Turnover term 2/2",
+     ""
+    ],
+    [
+     "0.332",
+     "0",
+     "0",
+     "A==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Antibody_Production_Virus",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "V==>A+V",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "0.9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T [T]",
+     ""
+    ],
+    [
+     "I",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I [I]",
+     ""
+    ],
+    [
+     "F_1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "F_1 [F_1]",
+     ""
+    ],
+    [
+     "F_2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "F_2 [F_2]",
+     ""
+    ],
+    [
+     "N",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N [N]",
+     ""
+    ],
+    [
+     "E1",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E [E]",
+     ""
+    ],
+    [
+     "R1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R [R]",
+     ""
+    ],
+    [
+     "V",
+     "0",
+     "0.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V [V]",
+     ""
+    ],
+    [
+     "A",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A [A]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.03",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.03",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

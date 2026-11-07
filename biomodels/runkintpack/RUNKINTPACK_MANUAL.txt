@@ -1,0 +1,184 @@
+RUNKINTPACK - run a Kintecus .kintpack from the command line
+=============================================================
+
+runkintpack unpacks a .kintpack into the text files Kintecus reads and runs Kintecus.exe on them.
+The .kintpack itself is never changed; everything is written into a separate run folder.
+
+Requirements: Windows with Python 3.8 or newer (python.org). No extra Python packages.
+Files:        runkintpack.py (the program) and runkintpack.bat (finds Python and runs it).
+
+
+USAGE
+-----
+    runkintpack.bat PACK.kintpack [options]
+    python runkintpack.py PACK.kintpack [options]
+
+
+WHAT IT DOES
+------------
+1. Reads PACK.kintpack (read only).
+2. Writes every sheet and file in it, tab-delimited with Windows line endings, into the run folder
+   (default: a folder named <pack name>_run next to the pack):
+      model sheet      -> MODEL.DAT
+      species sheet    -> SPECIES.DAT
+      parm sheet       -> PARM.DAT
+      therm sheet      -> THERM.DAT        (if the pack has one)
+      transport sheet  -> TRANSPORT.DAT    (if the pack has one)
+      fitdata sheet    -> FITDATA.TXT      (if the pack has one)
+      O_ files         -> under their own names: fitdata files, perturbation and Constant File
+                          profile files, and anything else stored in the pack
+3. Applies any --set changes to those written files (not to the pack).
+4. Runs Kintecus.exe in the run folder with the pack's switches (or the -k switches).
+5. Reports how Kintecus finished, and writes runkintpack_log.txt in the run folder with the
+   pack, switches, files written and every --set change.
+
+Exit codes: 0 = Kintecus finished, 1 = Kintecus stopped with a FATAL error or was stopped,
+            2 = usage error or a --set problem (nothing is run).
+
+
+OPTIONS
+-------
+  -k "SWITCHES"       Kintecus switches to use instead of the ones stored in the pack.
+                      Quote them:  -k "-ig:mass -INT:5 -obeymaxint"
+  -p PATH             Path to Kintecus.exe, used instead of the path stored in the pack.
+                      Without -p: the pack's path, then the KINTECUS_EXE environment variable,
+                      then the runkintpack folder, then the current folder, then PATH.
+  -i                  International inputs: numbers written with a decimal comma (4,34) are
+                      written with a decimal point (4.34) for Kintecus. Also on automatically when
+                      the pack's own international setting is on. With -i, fields inside a --set
+                      value are separated by ';' instead of ','.
+  --set FIELD=VALUE   Change one field in the written files (repeat for more; see below).
+  -o DIR              Run folder (default <pack name>_run next to the pack).
+  -u, --unpack-only   Write the files but do not run Kintecus.
+  --list              Show every field you can --set (species, columns, PARM fields, model
+                      lines, other sheets and files) and stop.
+  --check             Check the --set options and stop (nothing is written).
+  --batch             Run unattended: Kintecus runs with -i in its own hidden console and is
+                      watched through KDONE.OUT / KERR.OUT / CONC.TXT.
+                      Without --batch, Kintecus runs in this console as from a command prompt.
+  --stall SEC         (--batch) stop Kintecus if CONC.TXT gets no new row for SEC seconds [120]
+  --cap SEC           (--batch) stop Kintecus after SEC seconds [0 = no limit]
+  -h, --help          Show the built-in help.
+
+
+THE --set OPTION
+----------------
+--set changes a field in the files written to the run folder. The .kintpack is not touched.
+Every change is checked first; if any --set is wrong, all problems are listed and nothing runs.
+
+LINE always means the line number in the written text file (1 = first line), as Kintecus sees it.
+Use --list to see line numbers, species names and PARM field names.
+
+Species (SPECIES.DAT):   species.NAME.COLUMN=value
+    COLUMN is a name or a number 1-8:
+       species (1)  residence (2)  initialconcentration (3)  display (4)
+       externalconcentration (5)  ssa (6)  constantfile (7)  comments (8)
+    Short forms work too: initial, init, conc, external, const, comment.
+    The species must exist (a misspelling gets a "did you mean ..."); numbers are checked to be
+    numbers and display/ssa to be Y or N.
+
+Parameters (PARM.DAT):   parm.FIELD=value      or   parm.LINE.COLUMN=value
+    FIELD is the description written in the line ABOVE the value, without spaces or units, e.g.
+       startingintegrationtime  maximumintegrationtime  eaunits  concunits  temperature
+       pressure  volumeprofile  externalheatsource  days  hours  minutes  seconds  picoseconds
+       hv  samplinginterval  percent  accuracy
+    Short forms: temp, maxint, start, sampling, acc, sec. A field name that appears more than once
+    (X0) must be given as parm.LINE.COLUMN.
+
+Reactions (MODEL.DAT):   model.LINE="A,m,Ea,reaction,comment"
+                         model.LINE="A,reaction,comment"          (keeps m and Ea)
+                         model.LINE.FIELD=value                   FIELD = A, m, Ea, reaction, comment
+    LINE must be a line of MODEL.DAT (not the END line). The A, m and Ea fields are checked to be
+    numbers and the reaction to contain '=' or '==>'; species not in SPECIES.DAT give a warning.
+    A first field of '#' makes the line a comment; giving numbers to a '#' line makes it a reaction.
+    The last comma-separated field is the comment and the reaction may itself contain commas
+    (e.g. S[USER;cA,cB:(...)]). To be completely unambiguous, use model.LINE.reaction=...
+
+Any other sheet or file (therm, transport, fitdata, fitdata001, a profile file, ...):
+                         SHEET.LINE="v1,v2,v3"     the whole line, written tab-delimited
+                         SHEET.LINE="#comment"     a comment line
+                         SHEET.LINE.COLUMN=value   one cell (COLUMN = number, or header name)
+    SHEET is the sheet name or the file name without extension (fitdata001 = FITDATA001.TXT).
+    Data files can be extended: a LINE past the end is appended.
+
+Quoting: in a Windows command prompt put quotes around a value with spaces, commas or special
+characters (+, =, >, ^, &, |):   --set model.12="1,0,0,A+B==>C,my reaction"
+Inside double quotes cmd passes '^', '+', '=' and '>' through unchanged, so always quote values that
+contain a reaction or a USER expression. In a .bat file write % as %%.
+
+
+EXAMPLES
+--------
+1. Run a pack as it is:
+
+       runkintpack.bat BIOMD0000000010.kintpack
+
+   Writes BIOMD0000000010_run\MODEL.DAT, SPECIES.DAT, PARM.DAT (and any other files) and runs
+   Kintecus there with the pack's switches. Output (CONC.TXT, ...) is in the same folder.
+
+2. Use another integrator and a specific Kintecus.exe:
+
+       runkintpack.bat BIOMD0000000010.kintpack -k "-ig:mass -INT:5 -obeymaxint" -p "C:\Kintecus\Kintecus.exe"
+
+3. Change an initial concentration and the temperature:
+
+       runkintpack.bat h2o2.kintpack --set species.H2O.initialconcentration=4.34 --set parm.temperature=897
+
+   The run folder's SPECIES.DAT gets 4.34 in H2O's initial-concentration column and PARM.DAT gets
+   897 in the temperature field; h2o2.kintpack is unchanged.
+
+4. Change the run length and the output spacing:
+
+       runkintpack.bat BIOMD0000000010.kintpack --set parm.seconds=900 --set parm.sampling=4.5 --set parm.maxint=4.5
+
+   With -obeymaxint Kintecus writes CONC.TXT rows every Maximum Integration Time when that is
+   longer than the Sampling Interval, so set both to change the spacing.
+
+5. Edit reactions (line numbers as in MODEL.DAT; see --list):
+
+       runkintpack.bat mech.kintpack --set model.6.A=0.03
+       runkintpack.bat mech.kintpack --set model.7="2.5e10,0,1.2,OH+H2==>H2O+H,adjusted"
+       runkintpack.bat mech.kintpack --set model.9="#,,,O+O==>O2,switched off"
+
+6. Replace a line in a fitdata file and add a comment line:
+
+       runkintpack.bat fit.kintpack --set fitdata001.3="0,1.25,3.5" --set fitdata001.20="#end of set 1"
+
+7. International pack (decimal commas):
+
+       runkintpack.bat euro.kintpack -i --set species.O2.initial=0,21 --set fitdata001.3="0;1,25;3,5"
+
+   Writes 0.21 and the line 0 / 1.25 / 3.5 (tab-delimited) for Kintecus.
+
+8. Look before you run:
+
+       runkintpack.bat mech.kintpack --list
+       runkintpack.bat mech.kintpack --check --set species.NO2.init=1e-9 --set parm.temp=500
+       runkintpack.bat mech.kintpack -u -o C:\runs\test1
+
+9. Unattended runs (for scripts): give up if Kintecus is stuck for 60 s or runs over an hour:
+
+       runkintpack.bat big.kintpack --batch --stall 60 --cap 3600
+       if errorlevel 1 echo Run failed or stopped
+
+10. A small scan of one parameter from a .bat file:
+
+       for %%T in (800 900 1000 1100) do (
+           call runkintpack.bat h2o2.kintpack -o run_T%%T --set parm.temperature=%%T --batch
+       )
+
+    Each temperature gets its own run folder (run_T800\CONC.TXT, ...); the pack is never changed.
+
+
+MESSAGES
+--------
+  species 'H2O' is not in SPECIES.DAT; did you mean H2O2?   wrong species name (see --list)
+  no PARM field 'temprature'; did you mean temperature?    misspelled PARM field
+  'x0' matches several PARM fields ...                     use parm.LINE.COLUMN=value
+  MODEL.DAT has only 15 lines                               LINE beyond the end of MODEL.DAT
+  first field 'abc' is not a number (or # ...)              bad A field in a model line
+  '...' does not look like a reaction                       reaction without '=' or '==>'
+  warning: MODEL.DAT line 7: 'X' is not in SPECIES.DAT      the run continues; add X to the
+                                                            species or let Kintecus create it (-c)
+  Kintecus.exe not found                                    use -p PATH or set KINTECUS_EXE
+  Kintecus FATAL: FATAL Error # NN                          see the Kintecus manual, chapter 15

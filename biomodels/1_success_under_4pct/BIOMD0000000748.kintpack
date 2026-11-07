@@ -1,0 +1,439 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:08:02.418935+00:00",
+ "description": "Phan2017 - innate immune in oncolytic virotherapy\nBioModels BIOMD0000000748 (curated). SBML file: Phan2017.xml.\nSimulation: 0 to 200 time units (SED-ML: Phan2017.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.04e-06 of species peak (worst: z)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Phan2017 - innate immune in oncolytic virotherapy  (BIOMD0000000748, curated BioModels; source file Phan2017.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth",
+     ""
+    ],
+    [
+     "0.36",
+     "0",
+     "0",
+     "x==>2x",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_death",
+     ""
+    ],
+    [
+     "0.36",
+     "0",
+     "0",
+     "x+x==>x",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_cross_infection",
+     ""
+    ],
+    [
+     "0.36",
+     "0",
+     "0",
+     "x+y==>y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "infected_tumor_killing",
+     ""
+    ],
+    [
+     "0.48",
+     "0",
+     "0",
+     "y+z==>z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "infected_tumor_death",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "y==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "virus_multiplication_in_infected_tumor",
+     ""
+    ],
+    [
+     "9",
+     "0",
+     "0",
+     "y==>v+y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "virus_clearing",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "v==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "virus_killing_by_immune",
+     ""
+    ],
+    [
+     "0.16",
+     "0",
+     "0",
+     "v+z==>z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "immune_stimulation",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "y+z==>2z+y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "immune_cell_death",
+     ""
+    ],
+    [
+     "0.036",
+     "0",
+     "0",
+     "z==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "infection",
+     ""
+    ],
+    [
+     "0.11",
+     "0",
+     "0",
+     "v+x==>y",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x",
+     "0",
+     "0.99",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x [x]",
+     ""
+    ],
+    [
+     "y",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "y [y]",
+     ""
+    ],
+    [
+     "v",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "v [v]",
+     ""
+    ],
+    [
+     "z",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "z [z]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,703 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:45:17.050777+00:00",
+ "description": "Nazaret2009_TCA_RC_ATP\nBioModels BIOMD0000000232 (curated). SBML file: BIOMD0000000232_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000232_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.25e-06 of species peak (worst: Pyr)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'ADP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'NADH' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] v5: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for KG, NAD\n  [info] vresp term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vATP term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - ATP: zero order, signed\n  [info] rate rule dDeltaPsi/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - p_DeltaPsi: zero order, signed\n  [info] rate rule dDeltaPsi/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - p_DeltaPsi: zero order, signed\n  [info] rate rule dDeltaPsi/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - p_DeltaPsi: zero order, signed\nRenamed species (Kintecus name = SBML id): p_DeltaPsi = DeltaPsi",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Nazaret2009_TCA_RC_ATP  (BIOMD0000000232, curated BioModels; source file BIOMD0000000232_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1",
+     ""
+    ],
+    [
+     "0.038",
+     "0",
+     "0",
+     "source==>Pyr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2",
+     ""
+    ],
+    [
+     "0.152",
+     "0",
+     "0",
+     "Pyr+NAD==>AcCoA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3",
+     ""
+    ],
+    [
+     "57.142",
+     "0",
+     "0",
+     "OAA+AcCoA==>Cit",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4",
+     ""
+    ],
+    [
+     "0.053",
+     "0",
+     "0",
+     "NAD+Cit==>KG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cKG,cNAD:(0.082361*cKG*cNAD*(4.16-cATP))]==>ATP+OAA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5 (consumes KG)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cKG,cNAD:((-1*0.082361*cKG*cNAD*(4.16-cATP)))]==>KG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5 (consumes NAD)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cKG,cNAD:((-1*0.164722*cKG*cNAD*(4.16-cATP)))]==>NAD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6 term 1/2",
+     ""
+    ],
+    [
+     "0.0032",
+     "0",
+     "0",
+     "OAA==>KG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6 term 2/2",
+     ""
+    ],
+    [
+     "0.008050314465408805",
+     "0",
+     "0",
+     "KG==>OAA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7",
+     ""
+    ],
+    [
+     "0.04",
+     "0",
+     "0",
+     "Pyr+ATP==>OAA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8",
+     ""
+    ],
+    [
+     "3.6",
+     "0",
+     "0",
+     "OAA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vresp term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNAD,cp_DeltaPsi:(2.6750000000000003/(-3.059023205018255e-7*cNAD*exp(0.1*cp_DeltaPsi)-cNAD+9.391201239406044e-7*exp(0.1*cp_DeltaPsi)+3.0700000000000003))]==>NAD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vresp term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NAD+S[USER;cNAD,cp_DeltaPsi:((-1*2.5/(1*cNAD+3.059023205018255e-7*(cNAD+1e-30)*exp(0.1*cp_DeltaPsi)-9.391201239406044e-7*exp(0.1*cp_DeltaPsi)-3.0700000000000003)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vATP term 1/2 (consumes ATP)",
+     ""
+    ],
+    [
+     "-131.9",
+     "0",
+     "0",
+     "source==>ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vATP term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cp_DeltaPsi:(263.8/(exp(0.004*cATP-0.016640000000000002/(1+93144560.35767512*exp((-1*0.1401961274990192*cp_DeltaPsi))))+1))]==>ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vANT",
+     ""
+    ],
+    [
+     "0.05387",
+     "0",
+     "0",
+     "ATP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dDeltaPsi/dt term 1",
+     ""
+    ],
+    [
+     "58622222.222222224",
+     "0",
+     "0",
+     "source==>p_DeltaPsi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dDeltaPsi/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNAD,cp_DeltaPsi:(3962962.962962963/(-3.059023205018255e-7*cNAD*exp(0.1*cp_DeltaPsi)-cNAD+9.391201239406044e-7*exp(0.1*cp_DeltaPsi)+3.0700000000000003))]==>p_DeltaPsi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dDeltaPsi/dt term 3",
+     ""
+    ],
+    [
+     "63.111111111111114",
+     "0",
+     "0",
+     "p_DeltaPsi==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dDeltaPsi/dt term 4 (consumes p_DeltaPsi)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP,cp_DeltaPsi:((-1*117244444.44444445/(exp(0.004*cATP-0.016640000000000002/(1+93144560.35767512*exp((-1*0.1401961274990192*cp_DeltaPsi))))+1)))]==>p_DeltaPsi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dDeltaPsi/dt term 5 (consumes p_DeltaPsi)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP:((-1*7980.740740740741*cATP))]==>p_DeltaPsi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dDeltaPsi/dt term 6 (consumes p_DeltaPsi)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cNAD,cp_DeltaPsi:((-1*3703703.703703704*cNAD/(-3.059023205018255e-7*cNAD*exp(0.1*cp_DeltaPsi)-cNAD+9.391201239406044e-7*exp(0.1*cp_DeltaPsi)+3.0700000000000003)))]==>p_DeltaPsi",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "ATP",
+     "0",
+     "3.536",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP [ATP]",
+     ""
+    ],
+    [
+     "H",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "H+ [H]",
+     ""
+    ],
+    [
+     "He",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "H+ [He]",
+     ""
+    ],
+    [
+     "NAD",
+     "0",
+     "0.856",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NAD(+) [NAD]",
+     ""
+    ],
+    [
+     "AcCoA",
+     "0",
+     "0.063",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "acetyl-CoA [AcCoA]",
+     ""
+    ],
+    [
+     "KG",
+     "0",
+     "0.225",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "alpha-ketoglutarate [KG]",
+     ""
+    ],
+    [
+     "Cit",
+     "0",
+     "0.44",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "citrate [Cit]",
+     ""
+    ],
+    [
+     "OAA",
+     "0",
+     "0.005",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "oxaloacetate [OAA]",
+     ""
+    ],
+    [
+     "O2",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "oxygen [O2]",
+     ""
+    ],
+    [
+     "iP",
+     "0",
+     "2.44",
+     "Y",
+     "0",
+     "No",
+     "2.44",
+     "phosphate [iP]",
+     ""
+    ],
+    [
+     "Pyr",
+     "0",
+     "0.154",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pyruvate [Pyr]",
+     ""
+    ],
+    [
+     "H2O",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "water [H2O]",
+     ""
+    ],
+    [
+     "p_DeltaPsi",
+     "0",
+     "150",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter DeltaPsi [DeltaPsi]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

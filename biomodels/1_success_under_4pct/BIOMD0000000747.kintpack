@@ -1,0 +1,1195 @@
+{
+ "version": 3,
+ "created": "2026-10-26T22:45:26.239502+00:00",
+ "description": "Nagashima2002 - Simulating blood coagulation inhibitory effects\nBioModels BIOMD0000000747 (curated). SBML file: Nagashima2002.xml.\nSimulation: 0 to 1000 time units (SED-ML: Nagashima2002.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.74e-06 of species peak (worst: VIIIa_IXa_X)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Nagashima2002 - Simulating blood coagulation inhibitory effects  (BIOMD0000000747, curated BioModels; source file Nagashima2002.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R01a term 1/2",
+     ""
+    ],
+    [
+     "2.2",
+     "0",
+     "0",
+     "TF_VIIa_IX==>TF_VIIa+IX",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R01a term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "TF_VIIa+IX==>TF_VIIa_IX",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R01b",
+     ""
+    ],
+    [
+     "0.47",
+     "0",
+     "0",
+     "TF_VIIa_IX==>TF_VIIa+IXa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R02a term 1/2",
+     ""
+    ],
+    [
+     "5.5",
+     "0",
+     "0",
+     "TF_VIIa_X==>TF_VIIa+X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R02a term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "TF_VIIa+X==>TF_VIIa_X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R02b",
+     ""
+    ],
+    [
+     "1.4",
+     "0",
+     "0",
+     "TF_VIIa_X==>TF_VIIa+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R03a term 1/2",
+     ""
+    ],
+    [
+     "2.1",
+     "0",
+     "0",
+     "Xa_VIII==>Xa+VIII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R03a term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Xa+VIII==>Xa_VIII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R03b",
+     ""
+    ],
+    [
+     "0.023",
+     "0",
+     "0",
+     "Xa_VIII==>VIIIa+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R04a term 1/2",
+     ""
+    ],
+    [
+     "15",
+     "0",
+     "0",
+     "IIa_VIII==>IIa+VIII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R04a term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "IIa+VIII==>IIa_VIII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R04b",
+     ""
+    ],
+    [
+     "0.9",
+     "0",
+     "0",
+     "IIa_VIII==>IIa+VIIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R05 term 1/2",
+     ""
+    ],
+    [
+     "0.17",
+     "0",
+     "0",
+     "VIIIa_IXa==>VIIIa+IXa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R05 term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "VIIIa+IXa==>VIIIa_IXa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R06a term 1/2",
+     ""
+    ],
+    [
+     "19",
+     "0",
+     "0",
+     "VIIIa_IXa_X==>VIIIa_IXa+X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R06a term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "VIIIa_IXa+X==>VIIIa_IXa_X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R06b",
+     ""
+    ],
+    [
+     "29",
+     "0",
+     "0",
+     "VIIIa_IXa_X==>Xa+VIIIa_IXa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R07a term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Xa_V==>Xa+V",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R07a term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Xa+V==>Xa_V",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R07b",
+     ""
+    ],
+    [
+     "0.043",
+     "0",
+     "0",
+     "Xa_V==>Xa+Va",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R08a term 1/2",
+     ""
+    ],
+    [
+     "7.2",
+     "0",
+     "0",
+     "IIa_V==>IIa+V",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R08a term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "IIa+V==>IIa_V",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R08b",
+     ""
+    ],
+    [
+     "0.26",
+     "0",
+     "0",
+     "IIa_V==>IIa+Va",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R09 term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Va_Xa==>Va+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R09 term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Va+Xa==>Va_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10a term 1/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "Va_Xa_II==>Va_Xa+II",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10a term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Va_Xa+II==>Va_Xa_II",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10b",
+     ""
+    ],
+    [
+     "35",
+     "0",
+     "0",
+     "Va_Xa_II==>IIa+Va_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11a term 1/2",
+     ""
+    ],
+    [
+     "720",
+     "0",
+     "0",
+     "Fibrinogen_IIa==>IIa+Fibrinogen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11a term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "IIa+Fibrinogen==>Fibrinogen_IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11b",
+     ""
+    ],
+    [
+     "84",
+     "0",
+     "0",
+     "Fibrinogen_IIa==>IIa+Fibrin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12",
+     ""
+    ],
+    [
+     "0.0011",
+     "0",
+     "0",
+     "VIIIa==>VIIIa_inact",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13",
+     ""
+    ],
+    [
+     "0.0017",
+     "0",
+     "0",
+     "IXa==>IXa_inact",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "Xa==>Xa_inact",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R15",
+     ""
+    ],
+    [
+     "0.024",
+     "0",
+     "0",
+     "IIa==>IIa_inact",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16 term 1/2",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "Xa_Xa_Inhibitor==>Xa+Xa_Inhibitor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R16 term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Xa+Xa_Inhibitor==>Xa_Xa_Inhibitor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 1/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Va_Xa_Xa_Inhibitor==>Va+Xa_Xa_Inhibitor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R17 term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Va+Xa_Xa_Inhibitor==>Va_Xa_Xa_Inhibitor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R18 term 1/2",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "Va_Xa_Xa_Inhibitor==>Va_Xa+Xa_Inhibitor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R18 term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Va_Xa+Xa_Inhibitor==>Va_Xa_Xa_Inhibitor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R19 term 1/2",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "IIa_IIa_Inhibitor==>IIa+IIa_Inhibitor",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R19 term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "IIa+IIa_Inhibitor==>IIa_IIa_Inhibitor",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "IX",
+     "0",
+     "90",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IX [IX]",
+     ""
+    ],
+    [
+     "TF_VIIa_IX",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF:VIIa:IX [TF_VIIa_IX]",
+     ""
+    ],
+    [
+     "TF_VIIa",
+     "0",
+     "0.005",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF:VIIa [TF_VIIa]",
+     ""
+    ],
+    [
+     "IXa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IXa [IXa]",
+     ""
+    ],
+    [
+     "TF_VIIa_X",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF:VIIa:X [TF_VIIa_X]",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "170",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X [X]",
+     ""
+    ],
+    [
+     "Xa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa [Xa]",
+     ""
+    ],
+    [
+     "VIII",
+     "0",
+     "0.7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIII [VIII]",
+     ""
+    ],
+    [
+     "Xa_VIII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa:VIII [Xa_VIII]",
+     ""
+    ],
+    [
+     "VIIIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIIa [VIIIa]",
+     ""
+    ],
+    [
+     "IIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IIa [IIa]",
+     ""
+    ],
+    [
+     "IIa_VIII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IIa:VIII [IIa_VIII]",
+     ""
+    ],
+    [
+     "VIIIa_IXa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIIa:IXa [VIIIa_IXa]",
+     ""
+    ],
+    [
+     "VIIIa_IXa_X",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIIa:IXa:X [VIIIa_IXa_X]",
+     ""
+    ],
+    [
+     "V",
+     "0",
+     "20",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V [V]",
+     ""
+    ],
+    [
+     "Xa_V",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa:V [Xa_V]",
+     ""
+    ],
+    [
+     "Va",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va [Va]",
+     ""
+    ],
+    [
+     "IIa_V",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IIa:V [IIa_V]",
+     ""
+    ],
+    [
+     "Va_Xa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va:Xa [Va_Xa]",
+     ""
+    ],
+    [
+     "II",
+     "0",
+     "1400",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "II [II]",
+     ""
+    ],
+    [
+     "Va_Xa_II",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va:Xa:II [Va_Xa_II]",
+     ""
+    ],
+    [
+     "Fibrinogen",
+     "0",
+     "7900",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fibrinogen [Fibrinogen]",
+     ""
+    ],
+    [
+     "Fibrinogen_IIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fibrinogen:IIa [Fibrinogen_IIa]",
+     ""
+    ],
+    [
+     "Fibrin",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fibrin [Fibrin]",
+     ""
+    ],
+    [
+     "VIIIa_inact",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIIa_inact [VIIIa_inact]",
+     ""
+    ],
+    [
+     "IXa_inact",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IXa_inact [IXa_inact]",
+     ""
+    ],
+    [
+     "Xa_inact",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa_inact [Xa_inact]",
+     ""
+    ],
+    [
+     "IIa_inact",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IIa_inact [IIa_inact]",
+     ""
+    ],
+    [
+     "Xa_Xa_Inhibitor",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa:Xa_Inhibitor [Xa_Xa_Inhibitor]",
+     ""
+    ],
+    [
+     "Xa_Inhibitor",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa_Inhibitor [Xa_Inhibitor]",
+     ""
+    ],
+    [
+     "Va_Xa_Xa_Inhibitor",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va:Xa:Xa_Inhibitor [Va_Xa_Xa_Inhibitor]",
+     ""
+    ],
+    [
+     "IIa_IIa_Inhibitor",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IIa:IIa_Inhibitor [IIa_IIa_Inhibitor]",
+     ""
+    ],
+    [
+     "IIa_Inhibitor",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IIa_Inhibitor [IIa_Inhibitor]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

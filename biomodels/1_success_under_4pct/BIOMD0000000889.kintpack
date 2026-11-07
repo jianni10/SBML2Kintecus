@@ -1,0 +1,1053 @@
+{
+ "version": 3,
+ "created": "2026-10-31T04:37:27.600333+00:00",
+ "description": "Fribourg2014 - Model of influenza A virus infection dynamics of viral antagonism and innate immune response.\nBioModels BIOMD0000000889 (curated). SBML file: Fribourg2014.xml.\nSimulation: 0 to 8 time units (SED-ML: Fribourg2014.sedml), sampling 0.008.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.99e-06 of species peak (worst: IFNBenv)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fribourg2014 - Model of influenza A virus infection dynamics of viral antagonism and innate immune response.  (BIOMD0000000889, curated BioModels; source file Fribourg2014.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFNb_mRNA_Induction term 1/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.001/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>IFNBm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFNb_mRNA_Induction term 2/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRF7Pn+S[USER;cTIME_:(3.6e-5/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IFNBm+IRF7Pn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFNb_mRNA_Induction term 3/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.0029999999999999996*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>IFNBm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFNb_mRNA_Induction term 4/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.03255208333333333*(cTIME_^5/(cTIME_^5+7776))^5/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>IFNBm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFNb_mRNA_Induction term 5/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.09765624999999997*(cTIME_^5/(cTIME_^5+7776))^6/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>IFNBm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFNb_mRNA_Induction term 6/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRF7Pn+S[USER;cTIME_:(0.0011718749999999997*(cTIME_^5/(cTIME_^5+7776))^5/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IFNBm+IRF7Pn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFNb_mRNA_Degradation",
+     ""
+    ],
+    [
+     "0.2772588722239781",
+     "0",
+     "0",
+     "IFNBm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFNBenv_Translation_Secretion",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IFNBenv+S[USER;cIFNBenv:(6.006973269134982e-5/(cIFNBenv+0.002))]==>2IFNBenv",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STATP2n_Formation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IFNBenv+STAT+S[USER;cIFNBenv,cIFNaenv,cSOCSm,cSTAT:(0.36000000000000004/(5200000*cIFNBenv*cSOCSm*cSTAT+52000.00000000001*cIFNBenv*cSOCSm+2*cIFNBenv*cSTAT+0.02*cIFNBenv+5200000*cIFNaenv*cSOCSm*cSTAT+52000.00000000001*cIFNaenv*cSOCSm+2*cIFNaenv*cSTAT+0.02*cIFNaenv+22360.000000000004*cSOCSm*cSTAT+223.60000000000002*cSOCSm+0.0086*cSTAT+8.6e-5))]==>STATP2n+IFNBenv+STAT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STATP2n_Formation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IFNaenv+STAT+S[USER;cIFNBenv,cIFNaenv,cSOCSm,cSTAT:(0.36000000000000004/(5200000*cIFNBenv*cSOCSm*cSTAT+52000.00000000001*cIFNBenv*cSOCSm+2*cIFNBenv*cSTAT+0.02*cIFNBenv+5200000*cIFNaenv*cSOCSm*cSTAT+52000.00000000001*cIFNaenv*cSOCSm+2*cIFNaenv*cSTAT+0.02*cIFNaenv+22360.000000000004*cSOCSm*cSTAT+223.60000000000002*cSOCSm+0.0086*cSTAT+8.6e-5))]==>STATP2n+IFNaenv+STAT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STATP2n_Dephosphorylation",
+     ""
+    ],
+    [
+     "1.2377628224284736",
+     "0",
+     "0",
+     "STATP2n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SOCS_mRNA_Induction term 1/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(1e-7/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>SOCSm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SOCS_mRNA_Induction term 2/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STATP2n+S[USER;cTIME_:(0.0036/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>SOCSm+STATP2n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SOCS_mRNA_Induction term 3/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(2.9999999999999993e-7*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>SOCSm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SOCS_mRNA_Induction term 4/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(9.765624999999997e-6*(cTIME_^5/(cTIME_^5+7776))^6/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>SOCSm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SOCS_mRNA_Induction term 5/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(3.2552083333333327e-6*(cTIME_^5/(cTIME_^5+7776))^5/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>SOCSm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SOCS_mRNA_Induction term 6/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STATP2n+S[USER;cTIME_:(0.11718749999999997*(cTIME_^5/(cTIME_^5+7776))^5/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>SOCSm+STATP2n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SOCS_mRNA_Degradation",
+     ""
+    ],
+    [
+     "1.5068416968694462",
+     "0",
+     "0",
+     "SOCSm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IRF7_mRNA_Induction term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STATP2n+S[USER;cTIME_:(0.00036/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IRF7m+STATP2n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IRF7_mRNA_Induction term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRF7Pn+S[USER;cTIME_:(3.2040000000000004e-7/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IRF7m+IRF7Pn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IRF7_mRNA_Induction term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRF7Pn+S[USER;cTIME_:(1.0429687499999999e-5*(cTIME_^5/(cTIME_^5+7776))^5/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IRF7m+IRF7Pn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IRF7_mRNA_Induction term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STATP2n+S[USER;cTIME_:(0.011718749999999998*(cTIME_^5/(cTIME_^5+7776))^5/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IRF7m+STATP2n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IRF7_mRNA_Degradation",
+     ""
+    ],
+    [
+     "0.6931471805599453",
+     "0",
+     "0",
+     "IRF7m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IRF7_Translation term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRF7m+S[USER;cTIME_:(360/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>IRF7Pn+IRF7m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IRF7_Translation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRF7m+S[USER;cTIME_:(1080*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>IRF7Pn+IRF7m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFNa_mRNA_Induction term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRF7Pn+S[USER;cTIME_:(0.36/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IFNam+IRF7Pn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFNa_mRNA_Induction term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRF7Pn+S[USER;cTIME_:(11.718749999999998*(cTIME_^5/(cTIME_^5+7776))^5/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IFNam+IRF7Pn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFNa_mRNA_Degradation",
+     ""
+    ],
+    [
+     "0.34657359027997264",
+     "0",
+     "0",
+     "IFNam==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IFNaenv_Translation_Secretion",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IFNam+S[USER;cIFNam:(6.006973269134982e-5/(cIFNam+0.002))]==>IFNaenv+IFNam",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TNFa_mRNA_Induction term 1/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.0001/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>TNFam",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TNFa_mRNA_Induction term 2/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TFNenv+S[USER;cTFNenv,cTIME_:(0.001/(97.65624999999997*cTFNenv*(cTIME_^5/(cTIME_^5+7776))^5+1*cTFNenv+0.05859374999999998*(cTIME_^5/(cTIME_^5+7776))^5+0.0006))]==>TNFam+TFNenv",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TNFa_mRNA_Induction term 3/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.0003*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>TNFam",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TNFa_mRNA_Induction term 4/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.009765624999999998*(cTIME_^5/(cTIME_^5+7776))^6/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>TNFam",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TNFa_mRNA_Induction term 5/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.003255208333333333*(cTIME_^5/(cTIME_^5+7776))^5/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>TNFam",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TNFa_mRNA_Induction term 6/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TFNenv+S[USER;cTFNenv,cTIME_:(0.03255208333333333*(cTIME_^5/(cTIME_^5+7776))^5/(97.65624999999997*cTFNenv*(cTIME_^5/(cTIME_^5+7776))^5+1*cTFNenv+0.05859374999999998*(cTIME_^5/(cTIME_^5+7776))^5+0.0006))]==>TNFam+TFNenv",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TNFa_mRNA_Degradation",
+     ""
+    ],
+    [
+     "0.34657359027997264",
+     "0",
+     "0",
+     "TNFam==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TNFa_Translation_Secretion",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TNFam+S[USER;cTNFam:(0.0001374730200896563/(cTNFam+0.004))]==>TFNenv+TNFam",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT_mRNA_Induction term 1/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(1e-6/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>STATm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT_mRNA_Induction term 2/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STATP2n+S[USER;cTIME_:(0.018/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>STATm+STATP2n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT_mRNA_Induction term 3/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(2.9999999999999997e-6*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>STATm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT_mRNA_Induction term 4/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(3.2552083333333326e-5*(cTIME_^5/(cTIME_^5+7776))^5/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>STATm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT_mRNA_Induction term 5/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(9.765624999999996e-5*(cTIME_^5/(cTIME_^5+7776))^6/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>STATm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT_mRNA_Induction term 6/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STATP2n+S[USER;cTIME_:(0.5859374999999999*(cTIME_^5/(cTIME_^5+7776))^5/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>STATm+STATP2n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT_mRNA_Degradation",
+     ""
+    ],
+    [
+     "0.6931471805599453",
+     "0",
+     "0",
+     "STATm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT_Translation",
+     ""
+    ],
+    [
+     "360",
+     "0",
+     "0",
+     "STATm==>STAT+STATm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "STAT_Degradation",
+     ""
+    ],
+    [
+     "0.046209812037329684",
+     "0",
+     "0",
+     "STAT==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "IFNBm",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IFNBm [IFNBm]",
+     ""
+    ],
+    [
+     "IFNBenv",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IFNBenv [IFNBenv]",
+     ""
+    ],
+    [
+     "STATP2n",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STATP2n [STATP2n]",
+     ""
+    ],
+    [
+     "SOCSm",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SOCSm [SOCSm]",
+     ""
+    ],
+    [
+     "IRF7m",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRF7m [IRF7m]",
+     ""
+    ],
+    [
+     "IRF7Pn",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRF7Pn [IRF7Pn]",
+     ""
+    ],
+    [
+     "IFNam",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IFNam [IFNam]",
+     ""
+    ],
+    [
+     "IFNaenv",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IFNaenv [IFNaenv]",
+     ""
+    ],
+    [
+     "TNFam",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TNFam [TNFam]",
+     ""
+    ],
+    [
+     "TFNenv",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TFNenv [TFNenv]",
+     ""
+    ],
+    [
+     "STATm",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STATm [STATm]",
+     ""
+    ],
+    [
+     "STAT",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STAT [STAT]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.008",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "8",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.008",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

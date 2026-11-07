@@ -1,0 +1,400 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:07:12.826011+00:00",
+ "description": "Aston2018 - Dynamics of Hepatitis C Infection\nBioModels BIOMD0000000713 (curated). SBML file: PVR.xml.\nSimulation: 0 to 350 time units (SED-ML: Breakthrough.sedml), sampling 3.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.62e-06 of species peak (worst: I)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): T1 = T",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Aston2018 - Dynamics of Hepatitis C Infection  (BIOMD0000000713, curated BioModels; source file PVR.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_1",
+     ""
+    ],
+    [
+     "0.1178",
+     "0",
+     "0",
+     "I==>T1+I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T1+S[USER;cI,cT1:(10645/(cI+cT1))]==>2T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_3",
+     ""
+    ],
+    [
+     "0.0019927",
+     "0",
+     "0",
+     "T1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_4",
+     ""
+    ],
+    [
+     "8.3376e-9",
+     "0",
+     "0",
+     "T1+V==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I+S[USER;cI,cT1:(342.5252590256773/(cI+cT1))]==>2I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_6",
+     ""
+    ],
+    [
+     "6.411931269708475e-5",
+     "0",
+     "0",
+     "I==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_7",
+     ""
+    ],
+    [
+     "0.11747763580000001",
+     "0",
+     "0",
+     "I==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_8",
+     ""
+    ],
+    [
+     "203.96",
+     "0",
+     "0",
+     "I==>V+I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reaction_9",
+     ""
+    ],
+    [
+     "17.908",
+     "0",
+     "0",
+     "V==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "3.3246",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Healthy Hepatocytes (T) [T]",
+     ""
+    ],
+    [
+     "I",
+     "0",
+     "417520",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected Hepatocytes (I) [I]",
+     ""
+    ],
+    [
+     "V",
+     "0",
+     "4450000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Viral Load (V) [V]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3.5",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "350",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3.5",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

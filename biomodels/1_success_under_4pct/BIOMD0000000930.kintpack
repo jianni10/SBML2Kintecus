@@ -1,0 +1,506 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:13:12.454370+00:00",
+ "description": "Liu2017 - chemotherapy targeted model of tumor immune system\nBioModels BIOMD0000000930 (curated). SBML file: Liu2017.xml.\nSimulation: 0 to 50 time units (SED-ML: Liu2017.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.35e-06 of species peak (worst: Effector_immune_cell_population__N)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): Effectorimmunecellpopulat1 = Effector_immune_cell_population__N; Circulatinglymphocytepopu1 = Circulating_lymphocyte_population__C; Chemotherapeuticdrugconce1 = Chemotherapeutic_drug_concentration__M",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Liu2017 - chemotherapy targeted model of tumor immune system  (BIOMD0000000930, curated BioModels; source file Liu2017.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 1/2",
+     ""
+    ],
+    [
+     "0.431",
+     "0",
+     "0",
+     "Tumor_Cell_Population__T==>2Tumor_Cell_Population__T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 2/2",
+     ""
+    ],
+    [
+     "4.3962e-15",
+     "0",
+     "0",
+     "Tumor_Cell_Population__T+Tumor_Cell_Population__T==>Tumor_Cell_Population__T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2",
+     ""
+    ],
+    [
+     "3.41e-10",
+     "0",
+     "0",
+     "Tumor_Cell_Population__T+Effectorimmunecellpopulat1==>Effectorimmunecellpopulat1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3",
+     ""
+    ],
+    [
+     "0.8",
+     "0",
+     "0",
+     "Tumor_Cell_Population__T+Chemotherapeuticdrugconce1==>Chemotherapeuticdrugconce1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "12000",
+     "0",
+     "0",
+     "source==>Effectorimmunecellpopulat1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Effectorimmunecellpopulat1+Tumor_Cell_Population__T+S[USER;cTumor_Cell_Population__T:(0.015/(cTumor_Cell_Population__T+20.2))]==>2Effectorimmunecellpopulat1+Tumor_Cell_Population__T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6",
+     ""
+    ],
+    [
+     "0.0412",
+     "0",
+     "0",
+     "Effectorimmunecellpopulat1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7",
+     ""
+    ],
+    [
+     "2e-11",
+     "0",
+     "0",
+     "Effectorimmunecellpopulat1+Tumor_Cell_Population__T==>Tumor_Cell_Population__T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "Effectorimmunecellpopulat1+Chemotherapeuticdrugconce1==>Chemotherapeuticdrugconce1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9",
+     ""
+    ],
+    [
+     "750000000",
+     "0",
+     "0",
+     "source==>Circulatinglymphocytepopu1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10",
+     ""
+    ],
+    [
+     "0.012",
+     "0",
+     "0",
+     "Circulatinglymphocytepopu1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_11",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "Circulatinglymphocytepopu1+Chemotherapeuticdrugconce1==>Chemotherapeuticdrugconce1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_12",
+     ""
+    ],
+    [
+     "0.9",
+     "0",
+     "0",
+     "Chemotherapeuticdrugconce1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_13",
+     ""
+    ],
+    [
+     "0.45",
+     "0",
+     "0",
+     "source==>Chemotherapeuticdrugconce1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_14",
+     ""
+    ],
+    [
+     "3.2e-9",
+     "0",
+     "0",
+     "Chemotherapeuticdrugconce1+Tumor_Cell_Population__T==>Tumor_Cell_Population__T",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Tumor_Cell_Population__T",
+     "0",
+     "10000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumor Cell Population (T) [Tumor_Cell_Population__T]",
+     ""
+    ],
+    [
+     "Effectorimmunecellpopulat1",
+     "0",
+     "300000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Effector immune cell population (N) [Effector_immune_cell_population__N]",
+     ""
+    ],
+    [
+     "Circulatinglymphocytepopu1",
+     "0",
+     "62500000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Circulating lymphocyte population (C) [Circulating_lymphocyte_population__C]",
+     ""
+    ],
+    [
+     "Chemotherapeuticdrugconce1",
+     "0",
+     "0.45",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Chemotherapeutic drug concentration (M) [Chemotherapeutic_drug_concentration__M]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.5",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "50",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.5",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

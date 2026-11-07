@@ -1,0 +1,869 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:30:44.193814+00:00",
+ "description": "Rodrigues2019 - A mathematical model for chemoimmunotherapy of chronic lymphocytic leukemia\nBioModels BIOMD0000000879 (curated). SBML file: Rodrigues2019.xml.\nSimulation: 0 to 2000 time units (SED-ML: Rodrigues2019.sedml), sampling 0.125.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.22e-06 of species peak (worst: I)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [partial] 13 profile files exceed the GUI's 10 O_ file limit",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rodrigues2019 - A mathematical model for chemoimmunotherapy of chronic lymphocytic leukemia  (BIOMD0000000879, curated BioModels; source file Rodrigues2019.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cancer_Growth term 1/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "N==>2N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cancer_Growth term 2/2",
+     ""
+    ],
+    [
+     "1e-14",
+     "0",
+     "0",
+     "N+N==>N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cancer_Death_Immune",
+     ""
+    ],
+    [
+     "5e-11",
+     "0",
+     "0",
+     "N+I==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cancer_Death_Chemotherapy",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N+Q+S[USER;cQ:(8/(cQ+2000))]==>Q",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Immune_Growth_Constant",
+     ""
+    ],
+    [
+     "700000",
+     "0",
+     "0",
+     "source==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Immune_Death_Natural",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "I==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Immune_Growth_Cancer_Stimulation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I+N+S[USER;cN:(1e-12/(cN+100))]==>2I+N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Immune_Death_Cancer",
+     ""
+    ],
+    [
+     "1e-13",
+     "0",
+     "0",
+     "I+N==>N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Immune_Death_Chemotherapy",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I+Q+S[USER;cQ:(10000/(cQ+5000000))]==>Q",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chemotherapy_Decay",
+     ""
+    ],
+    [
+     "4.16",
+     "0",
+     "0",
+     "Q==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Chemotherapy",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW10,cSW11,cSW12,cSW13,cSW2,cSW3,cSW4,cSW5,cSW6,cSW7,cSW8,cSW9:(8640*cSW13+1*(1-cSW13)*(8640*cSW11*cSW12+(8640*cSW10*cSW9+(-cSW10*cSW9+1)*(8640*cSW7*cSW8+(8640*cSW5*cSW6+(-cSW5*cSW6+1)*(8640*cSW1*cSW2*(-cSW3*cSW4+1)+8640*cSW3*cSW4))*(-cSW7*cSW8+1)))*(-cSW11*cSW12+1)))]==>Q",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "N",
+     "0",
+     "20000000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "N [N]",
+     ""
+    ],
+    [
+     "I",
+     "0",
+     "50000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "I [I]",
+     ""
+    ],
+    [
+     "Q",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Q [Q]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 126 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time switch at 126.125 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW3.TXT-SET",
+     "time switch at 105 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW4",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW4.TXT-SET",
+     "time switch at 105.125 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW5",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW5.TXT-SET",
+     "time switch at 84 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW6",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW6.TXT-SET",
+     "time switch at 84.125 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW7",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW7.TXT-SET",
+     "time switch at 63 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW8",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW8.TXT-SET",
+     "time switch at 63.125 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW9",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW9.TXT-SET",
+     "time switch at 42 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW10",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW10.TXT-SET",
+     "time switch at 42.125 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW11",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW11.TXT-SET",
+     "time switch at 21 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW12",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW12.TXT-SET",
+     "time switch at 21.125 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW13",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW13.TXT-SET",
+     "time switch at 0.125 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1250000002",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "2000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1250000002",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "126",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "126.125",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW3.TXT",
+   "key": "O_SW3.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "105",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW4.TXT",
+   "key": "O_SW4.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "105.125",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW5.TXT",
+   "key": "O_SW5.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "84",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW6.TXT",
+   "key": "O_SW6.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "84.125",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW7.TXT",
+   "key": "O_SW7.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "63",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW8.TXT",
+   "key": "O_SW8.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "63.125",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW9.TXT",
+   "key": "O_SW9.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "42",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW10.TXT",
+   "key": "O_SW10.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "42.125",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW11.TXT",
+   "key": "O_SW11.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "21",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW12.TXT",
+   "key": "O_SW12.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "21.125",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW13.TXT",
+   "key": "O_SW13.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.125",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1290 @@
+{
+ "version": 3,
+ "created": "2026-11-01T20:11:27.123846+00:00",
+ "description": "Overgaard2007_PDmodel_IL21\nBioModels BIOMD0000000238 (curated). SBML file: BIOMD0000000238_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000238_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): KINTECUS_FAILED\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dM/dt term 7: rate order differs from the stoichiometry; consumed on separate line(s) - p_M: zero order, signed\n  [info] rate rule dM/dt term 8: rate order differs from the stoichiometry; consumed on separate line(s) - p_M: zero order, signed\n  [info] rate rule dM/dt term 9: rate order differs from the stoichiometry; consumed on separate line(s) - p_M: zero order, signed\n  [info] rate rule dM/dt term 18: rate order differs from the stoichiometry; consumed on separate line(s) - p_M: zero order, signed\n  [info] rate rule dM/dt term 19: rate order differs from the stoichiometry; consumed on separate line(s) - p_M: zero order, signed\n  [info] rate rule dM/dt term 20: rate order differs from the stoichiometry; consumed on separate line(s) - p_M: zero order, signed\n  [info] rate rule dM/dt term 21: rate order differs from the stoichiometry; consumed on separate line(s) - p_M: zero order, signed\n  [info] rate rule dM/dt term 22: rate order differs from the stoichiometry; consumed on separate line(s) - p_M: zero order, signed\n  [info] rate rule dM/dt term 23: rate order differs from the stoichiometry; consumed on separate line(s) - p_M: zero order, signed\n  [info] rate rule dM/dt term 24: rate order differs from the stoichiometry; consumed on separate line(s) - p_M: zero order, signed\n  [info] rate rule dM/dt term 25: rate order differs from the stoichiometry; consumed on separate line(s) - p_M: zero order, signed\n  [info] rate rule dM/dt term 27: rate order differs from the stoichiometry; consumed on separate line(s) - p_M: zero order, signed\n  [info] rate rule dT/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - p_T: zero order, signed\n  [info] rate rule dT/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - p_T: zero order, signed\n  [info] rate rule dBR/dt term 2: rate order differs from the stoichiometry; consumed on separate line(s) - p_BR: zero order, signed\n  [info] rate rule dBR/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - p_BR: zero order, signed\n  [info] rate rule dBR/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - p_BR: zero order, signed\n  [info] rate rule dBR/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - p_BR: zero order, signed\n  [info] rate rule dBR/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - p_BR: zero order, signed\n  [info] rate rule dBR/dt term 7: rate order differs from the stoichiometry; consumed on separate line(s) - p_BR: zero order, signed\n  [partial] rate rule dM/dt term 14: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] rate rule dM/dt term 15: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] rate rule dM/dt term 17: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] rate rule dM/dt term 19 (consumes p_M): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] rate rule dM/dt term 22 (consumes p_M): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] rate rule dM/dt term 25 (consumes p_M): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] rate rule dM/dt term 26: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] rate rule dM/dt term 27 (consumes p_M): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\nRenamed species (Kintecus name = SBML id): p_M = M; p_T = T; p_BR = BR",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Overgaard2007_PDmodel_IL21  (BIOMD0000000238, curated BioModels; source file BIOMD0000000238_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 1",
+     ""
+    ],
+    [
+     "3.705194459878676",
+     "0",
+     "0",
+     "source==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(129.36867522121324/(4*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+4e-300*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+4e-300*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+0))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(9.611342884191176/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(3.6962478634632356/(2*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+2e-300))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.27460979669117647/(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 6",
+     ""
+    ],
+    [
+     "1.1375",
+     "0",
+     "0",
+     "p_M==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 7 (consumes p_M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*129.36867522121324/(4*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+4e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+4e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+0*(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 8 (consumes p_M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*9.611342884191176/(2*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+2e-300)))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 9 (consumes p_M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*3.6962478634632356/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(13.18127024117647*floor(0.041666666666666664*cTIME_)/(2*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+2e-300))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 11",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(26.615181495308825*cTIME_/(4*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+4e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+4e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+0*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 12",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.5492195933823529*cTIME_/(2*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+2e-300))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(1.0984391867647059*cTIME_^2/(4*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+4e-300*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+4e-300*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+0))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 14",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(632.7009715764706*floor(0.041666666666666664*cTIME_)^2/(4*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+4e-300*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+4e-300*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+0))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 15",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(638.7643558874117*floor(0.041666666666666664*cTIME_)/(4*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+4e-300*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+4e-300*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+0))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 16",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.5492195933823529*cTIME_/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 17",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(13.18127024117647*floor(0.041666666666666664*cTIME_)/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 18 (consumes p_M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*13.18127024117647*floor(0.041666666666666664*cTIME_)/(2*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+2e-300)))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 19 (consumes p_M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*638.7643558874117*floor(0.041666666666666664*cTIME_)/(4*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+4e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+4e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+0*(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 20 (consumes p_M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*26.615181495308825*cTIME_/(4*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+4e-300*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+4e-300*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+0)))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 21 (consumes p_M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*0.5492195933823529*cTIME_/(2*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+2e-300)))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 22 (consumes p_M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*632.7009715764706*floor(0.041666666666666664*cTIME_)^2/(4*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+4e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+4e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+0*(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 23 (consumes p_M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*0.5492195933823529*cTIME_/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 24 (consumes p_M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*1.0984391867647059*cTIME_^2/(4*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+4e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+4e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+0*(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 25 (consumes p_M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*13.18127024117647*floor(0.041666666666666664*cTIME_)/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 26",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(52.72508096470588*cTIME_*floor(0.041666666666666664*cTIME_)/(4*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+4e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+4e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+0*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 27 (consumes p_M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*52.72508096470588*cTIME_*floor(0.041666666666666664*cTIME_)/(4*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+4e-300*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+6.73)+4e-300*abs(-1*cTIME_+24*floor(0.041666666666666664*cTIME_)+17.5)+0)))]==>p_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT/dt term 1 (consumes p_T)",
+     ""
+    ],
+    [
+     "-4.865278860823868",
+     "0",
+     "0",
+     "source==>p_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_M:(0.2881844380403458*cp_M)]==>p_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_T:(0.3878182742837769*cp_T)]==>p_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT/dt term 4 (consumes p_T)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_BR:((-1*0.8543889337175792*cp_BR))]==>p_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_T+S[USER;cp_T:(0.007435158501440922*cp_T)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_BR,cp_T:(0.04068518731988472*cp_BR*cp_T)]==>p_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 1",
+     ""
+    ],
+    [
+     "5.35",
+     "0",
+     "0",
+     "p_BR==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 2 (consumes p_BR)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*44.17780370235777*(0.041666666666666664*cTIME_-1)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)*abs(0.041666666666666664*cTIME_-1)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_))))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 3 (consumes p_BR)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*1.6645491897316773e28*(0.041666666666666664*cTIME_-5)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)*abs(0.041666666666666664*cTIME_-5)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_))))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 4 (consumes p_BR)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*3.616292035306024e18*(0.041666666666666664*cTIME_-3)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)*abs(0.041666666666666664*cTIME_-3)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_))))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 5 (consumes p_BR)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*436473469.656766*(0.041666666666666664*cTIME_-1)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)*abs(0.041666666666666664*cTIME_-1)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_))))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 6 (consumes p_BR)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*151489.65861005138*(0.041666666666666664*cTIME_-5)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)*abs(0.041666666666666664*cTIME_-5)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_))))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 7 (consumes p_BR)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:((-1*3470.8017404947923*(0.041666666666666664*cTIME_-3)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)*abs(0.041666666666666664*cTIME_-3)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_))))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(48.20557972909433*cTIME_*(0.041666666666666664*cTIME_-3)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)*abs(0.041666666666666664*cTIME_-3)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(22.088901851178885*(0.041666666666666664*cTIME_-1)^3*exp((-1*0.06802721088435373*cTIME_))/(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_,cp_BR:(44.17780370235777*cp_BR*(0.041666666666666664*cTIME_-1)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)*abs(0.041666666666666664*cTIME_-1)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 11",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_,cp_BR:(1.6645491897316773e28*cp_BR*(0.041666666666666664*cTIME_-5)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)*abs(0.041666666666666664*cTIME_-5)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 12",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(578.466956749132*(0.041666666666666664*cTIME_-3)^3*exp((-1*0.06802721088435373*cTIME_))/(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(1262.4138217504283*cTIME_*(0.041666666666666664*cTIME_-5)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)*abs(0.041666666666666664*cTIME_-5)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 14",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(5.0226278268139224e16*cTIME_*(0.041666666666666664*cTIME_-3)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)*abs(0.041666666666666664*cTIME_-3)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 15",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_,cp_BR:(3.616292035306024e18*cp_BR*(0.041666666666666664*cTIME_-3)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)*abs(0.041666666666666664*cTIME_-3)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 16",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(218236734.828383*(0.041666666666666664*cTIME_-1)^3*exp((-1*0.4528985507246377*cTIME_))/(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 17",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_,cp_BR:(436473469.656766*cp_BR*(0.041666666666666664*cTIME_-1)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)*abs(0.041666666666666664*cTIME_-1)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 18",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(6.027153392176707e17*(0.041666666666666664*cTIME_-3)^3*exp((-1*0.4528985507246377*cTIME_))/(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 19",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(18186394.569031917*cTIME_*(0.041666666666666664*cTIME_-1)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)*abs(0.041666666666666664*cTIME_-1)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 20",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_,cp_BR:(151489.65861005138*cp_BR*(0.041666666666666664*cTIME_-5)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)*abs(0.041666666666666664*cTIME_-5)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 21",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(1.664549189731677e27*(0.041666666666666664*cTIME_-5)^3*exp((-1*0.4528985507246377*cTIME_))/(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 22",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_,cp_BR:(3470.8017404947923*cp_BR*(0.041666666666666664*cTIME_-3)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)*abs(0.041666666666666664*cTIME_-3)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 23",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(1.3871243247763976e26*cTIME_*(0.041666666666666664*cTIME_-5)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)*abs(0.041666666666666664*cTIME_-5)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 24",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(1.8407418209315738*cTIME_*(0.041666666666666664*cTIME_-1)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)*abs(0.041666666666666664*cTIME_-1)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 25",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(15148.96586100514*(0.041666666666666664*cTIME_-5)^3*exp((-1*0.06802721088435373*cTIME_))/(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))]==>p_BR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 26",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_BR+S[USER;cTIME_:(48.20557972909433*cTIME_*(0.041666666666666664*cTIME_-3)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)*abs(0.041666666666666664*cTIME_-3)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 27",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_BR+S[USER;cTIME_:(22.088901851178885*(0.041666666666666664*cTIME_-1)^3*exp((-1*0.06802721088435373*cTIME_))/(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_BR+S[USER;cTIME_:(578.466956749132*(0.041666666666666664*cTIME_-3)^3*exp((-1*0.06802721088435373*cTIME_))/(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 29",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_BR+S[USER;cTIME_:(1262.4138217504283*cTIME_*(0.041666666666666664*cTIME_-5)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)*abs(0.041666666666666664*cTIME_-5)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 30",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_BR+S[USER;cTIME_:(5.0226278268139224e16*cTIME_*(0.041666666666666664*cTIME_-3)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)*abs(0.041666666666666664*cTIME_-3)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 31",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_BR+S[USER;cTIME_:(218236734.828383*(0.041666666666666664*cTIME_-1)^3*exp((-1*0.4528985507246377*cTIME_))/(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 32",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_BR+S[USER;cTIME_:(6.027153392176707e17*(0.041666666666666664*cTIME_-3)^3*exp((-1*0.4528985507246377*cTIME_))/(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 33",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_BR+S[USER;cTIME_:(18186394.569031917*cTIME_*(0.041666666666666664*cTIME_-1)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)*abs(0.041666666666666664*cTIME_-1)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 34",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_BR+S[USER;cTIME_:(1.664549189731677e27*(0.041666666666666664*cTIME_-5)^3*exp((-1*0.4528985507246377*cTIME_))/(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 35",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_BR+S[USER;cTIME_:(1.3871243247763976e26*cTIME_*(0.041666666666666664*cTIME_-5)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)*abs(0.041666666666666664*cTIME_-5)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.4528985507246377*cTIME_)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 36",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_BR+S[USER;cTIME_:(1.8407418209315738*cTIME_*(0.041666666666666664*cTIME_-1)^3/(2*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)*abs(0.041666666666666664*cTIME_-1)+2e-300*(1+4915949.081967496*exp((-1*0.2229166*cTIME_)))*exp(0.06802721088435373*cTIME_)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dBR/dt term 37",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_BR+S[USER;cTIME_:(15148.96586100514*(0.041666666666666664*cTIME_-5)^3*exp((-1*0.06802721088435373*cTIME_))/(1+4915949.081967496*exp((-1*0.2229166*cTIME_))))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "p_M",
+     "0",
+     "3.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter M [M]",
+     ""
+    ],
+    [
+     "p_T",
+     "0",
+     "38.785",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter T [T]",
+     ""
+    ],
+    [
+     "p_BR",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter BR [BR]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

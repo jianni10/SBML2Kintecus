@@ -1,0 +1,511 @@
+{
+ "version": 3,
+ "created": "2026-11-02T03:48:07.443994+00:00",
+ "description": "Proctor2012 - Role of Amyloid-beta dimers in aggregation formation\nBioModels BIOMD0000000462 (curated). SBML file: BIOMD0000000462_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000462_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.44e-07 of species peak (worst: Abeta)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'AbDim' goes below zero in the SBML: integrated as AbDim_o = value + 0.002, output as AbDim = OUTC[AbDim_o;-0.002*source]\n  [info] AbetaPlaqueFormation: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for AbDim_o\n  [info] AbetaPlaqueGrowth: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): Source1 = Source; Sink1 = Sink",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proctor2012 - Role of Amyloid-beta dimers in aggregation formation  (BIOMD0000000462, curated BioModels; source file BIOMD0000000462_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Abetaproduction",
+     ""
+    ],
+    [
+     "1.86e-5",
+     "0",
+     "0",
+     "source==>Abeta",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AbetaDegradation",
+     ""
+    ],
+    [
+     "2.1e-8",
+     "0",
+     "0",
+     "Abeta+Nep==>Nep",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AbetaDimerisation term 1/2 (shifted AbDim_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAbeta:(5.8915e-8*cAbeta^2)]==>AbDim_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AbetaDimerisation term 1/2",
+     ""
+    ],
+    [
+     "5.8915e-8",
+     "0",
+     "0",
+     "Abeta+Abeta==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AbetaDimerisation term 2/2 (shifted AbDim_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAbeta:((-1*5.8915e-8*cAbeta))]==>AbDim_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AbetaDimerisation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAbeta:(5.8915e-8*cAbeta)]==>2Abeta",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AbetaDedimerisation (shifted AbDim_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAbDim_o:((-1*8.4655e-6*(cAbDim_o-0.002)))]==>AbDim_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AbetaDedimerisation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAbDim_o:(8.4655e-6*(cAbDim_o-0.002))]==>2Abeta",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AbetaPlaqueFormation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAbDim_o:(1.3925e-6*(1*(cAbDim_o-0.002)-1)*(cAbDim_o-0.002))]==>4AbP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AbetaPlaqueFormation (consumes AbDim_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAbDim_o:((-1*2.785e-6*(1*(cAbDim_o-0.002)-1)*(cAbDim_o-0.002)))]==>AbDim_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AbetaPlaqueGrowth",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AbP+AbP+Abeta+S[USER;cAbP:(0.00574/(1*(cAbP+1e-30)^2+16))]==>3AbP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AbetaDisaggregation",
+     ""
+    ],
+    [
+     "5.4357e-5",
+     "0",
+     "0",
+     "AbP==>Abeta",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NepDegradation",
+     ""
+    ],
+    [
+     "1.8e-10",
+     "0",
+     "0",
+     "Nep==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Abeta",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AbetaMonomer [Abeta]",
+     ""
+    ],
+    [
+     "AbDim_o",
+     "0",
+     "0.002",
+     "N",
+     "0",
+     "No",
+     "No",
+     "AbetaDimer + 0.002 (shifted state) [__shifted__AbDim]",
+     ""
+    ],
+    [
+     "AbP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AbetaPlaque [AbP]",
+     ""
+    ],
+    [
+     "Source1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "Source [Source]",
+     ""
+    ],
+    [
+     "Sink1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "Sink [Sink]",
+     ""
+    ],
+    [
+     "Nep",
+     "0",
+     "1000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Neprilysin [Nep]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "AbDim",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[AbDim_o;-0.002*source]",
+     "No",
+     "AbetaDimer (= AbDim_o - 0.002) [AbDim]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

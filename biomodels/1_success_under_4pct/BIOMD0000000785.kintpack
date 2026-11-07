@@ -1,0 +1,344 @@
+{
+ "version": 3,
+ "created": "2026-11-06T06:24:09.884031+00:00",
+ "description": "Sotolongo-Costa2003 - Behavior of tumors under nonstationary therapy\nBioModels BIOMD0000000785 (curated). SBML file: Sotolongo-Costa2003.xml.\nSimulation: 0 to 180 time units (SED-ML: Sotolongo-Costa2003.sedml), sampling 0.18.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.42e-06 of species peak (worst: y_Lymphocytes)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Lymphocyte_Elimination_Malignant_Cells: rate order differs from the stoichiometry; consumed on separate line(s) - y_Lymphocytes: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sotolongo-Costa2003 - Behavior of tumors under nonstationary therapy  (BIOMD0000000785, curated BioModels; source file Sotolongo-Costa2003.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Malignant_Cells_Growth",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "x_Malignant_Cells==>2x_Malignant_Cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Malignant_Cells_Death_Lymphocytes",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x_Malignant_Cells+y_Lymphocytes==>2y_Lymphocytes",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lymphocytes_Production",
+     ""
+    ],
+    [
+     "0.25",
+     "0",
+     "0",
+     "source==>y_Lymphocytes",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lymphocyte_Death",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "y_Lymphocytes==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lymphocyte_Elimination_Malignant_Cells (consumes y_Lymphocytes)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx_Malignant_Cells:((-1*0.2*cx_Malignant_Cells))]==>y_Lymphocytes",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x_Malignant_Cells",
+     "0",
+     "5.3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x_Malignant_Cells [x_Malignant_Cells]",
+     ""
+    ],
+    [
+     "y_Lymphocytes",
+     "0",
+     "6.7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "y_Lymphocytes [y_Lymphocytes]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.18",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "180",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.18",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

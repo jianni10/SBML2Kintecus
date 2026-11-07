@@ -1,0 +1,492 @@
+{
+ "version": 3,
+ "created": "2026-11-01T23:02:24.955853+00:00",
+ "description": "Li\u00f22012_Modelling osteomyelitis_Control Model\nBioModels BIOMD0000000923 (curated). SBML file: Lio2012_Modelling osteomyelitis_Control Model.xml.\nSimulation: 0 to 1200 time units (SED-ML: Lio2012_Modelling osteomyelitis_Control Model.sedml), sampling 1.2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.57e-05 of species peak (worst: Osteoclasts__O_c)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_fo_z: piecewise/conditional rate encoded with abs()-based step functions\n  [info] reaction_fo_z term 4/9: rate order differs from the stoichiometry; consumed on separate line(s) - Bone_Density__z: zero order, signed\n  [info] reaction_fo_z term 5/9: rate order differs from the stoichiometry; consumed on separate line(s) - Bone_Density__z: zero order, signed\n  [info] reaction_fo_z term 8/9: rate order differs from the stoichiometry; consumed on separate line(s) - Bone_Density__z: zero order, signed\n  [info] reaction_fo_z term 9/9: rate order differs from the stoichiometry; consumed on separate line(s) - Bone_Density__z: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Li\u00f22012_Modelling osteomyelitis_Control Model  (BIOMD0000000923, curated BioModels; source file Lio2012_Modelling osteomyelitis_Control Model.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_fo_z term 1/9",
+     ""
+    ],
+    [
+     "0.009685277500000007",
+     "0",
+     "0",
+     "source==>Bone_Density__z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_fo_z term 2/9",
+     ""
+    ],
+    [
+     "0.00031975",
+     "0",
+     "0",
+     "Osteoblasts__O_b==>Bone_Density__z+Osteoblasts__O_b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_fo_z term 3/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cOsteoblasts__O_b:(20.24143359995/(2*abs(cOsteoblasts__O_b-177.91)+2e-300))]==>Bone_Density__z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_fo_z term 4/9 (consumes Bone_Density__z)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cOsteoclasts__O_c:((-1*0.0374*cOsteoclasts__O_c))]==>Bone_Density__z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_fo_z term 5/9 (consumes Bone_Density__z)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cOsteoclasts__O_c:((-1*0.23699632000000004/(2*abs(cOsteoclasts__O_c-1.78)+2e-300)))]==>Bone_Density__z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_fo_z term 6/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Osteoblasts__O_b+Osteoblasts__O_b+S[USER;cOsteoblasts__O_b:(0.0006395/(2*abs(cOsteoblasts__O_b-177.91)+2e-300))]==>Bone_Density__z+2Osteoblasts__O_b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_fo_z term 7/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Osteoclasts__O_c+S[USER;cOsteoclasts__O_c:(0.266288/(2*abs(cOsteoclasts__O_c-1.78)+2e-300))]==>Bone_Density__z+Osteoclasts__O_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_fo_z term 8/9 (consumes Bone_Density__z)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cOsteoclasts__O_c:((-1*0.0748*cOsteoclasts__O_c^2/(2*abs(cOsteoclasts__O_c-1.78)+2e-300)))]==>Bone_Density__z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_fo_z term 9/9 (consumes Bone_Density__z)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cOsteoblasts__O_b:((-1*0.22754689*cOsteoblasts__O_b/(2*abs(cOsteoblasts__O_b-177.91)+2e-300)))]==>Bone_Density__z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_O_b term 1/2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Osteoblasts__O_b==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_O_b term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cB,cOsteoblasts__O_b,cOsteoclasts__O_c:(4*cOsteoclasts__O_c/cOsteoblasts__O_b^(0.002*cB))]==>Osteoblasts__O_b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_O_c term 1/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Osteoclasts__O_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_O_c term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cB,cOsteoblasts__O_b,cOsteoclasts__O_c:(3*cOsteoblasts__O_b^(-2.5e-5*cB-0.5)*cOsteoclasts__O_c^(5.500000000000001e-5*cB+1.1))]==>Osteoclasts__O_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_B",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "B+S[USER;cB:(0.002*log(100/cB)/log(10))]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Bone_Density__z",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Bone Density (z) [Bone_Density__z]",
+     ""
+    ],
+    [
+     "Osteoblasts__O_b",
+     "0",
+     "316",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Osteoblasts (O_b) [Osteoblasts__O_b]",
+     ""
+    ],
+    [
+     "Osteoclasts__O_c",
+     "0",
+     "15",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Osteoclasts (O_c) [Osteoclasts__O_c]",
+     ""
+    ],
+    [
+     "B",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B [B]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1.2",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1.2",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

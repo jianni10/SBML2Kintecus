@@ -1,0 +1,884 @@
+{
+ "version": 3,
+ "created": "2026-11-02T03:13:53.375167+00:00",
+ "description": "Jones1994_BloodCoagulation\nBioModels BIOMD0000000336 (curated). SBML file: BIOMD0000000336_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000336_url.sedml (auto-generated placeholder); duration chosen from the dynamics: default), sampling 10.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH, max |difference| = 1.00e+00 of species peak (worst: I)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] VIIIa_IXa_degradation term 1/3: rate order differs from the stoichiometry; consumed on separate line(s) - VIIIa_IXa: zero order, signed\n  [info] VIIIa_IXa_degradation term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - VIIIa_IXa: zero order, signed\n  [info] rate rule dI/dt term 2: rate order differs from the stoichiometry; consumed on separate line(s) - p_I: zero order, signed\n  [info] rate rule dI/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - p_I: zero order, signed\nRenamed species (Kintecus name = SBML id): p_I = I",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jones1994_BloodCoagulation  (BIOMD0000000336, curated BioModels; source file BIOMD0000000336_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1 term 1/2",
+     ""
+    ],
+    [
+     "24",
+     "0",
+     "0",
+     "IX_TF_VIIa==>IX+TF_VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "IX+TF_VIIa==>IX_TF_VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1b",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "IX_TF_VIIa==>IXa+TF_VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2 term 1/2",
+     ""
+    ],
+    [
+     "44",
+     "0",
+     "0",
+     "X_TF_VIIa==>TF_VIIa+X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "TF_VIIa+X==>X_TF_VIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2b",
+     ""
+    ],
+    [
+     "1.15",
+     "0",
+     "0",
+     "X_TF_VIIa==>TF_VIIa+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3 term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "X_VIIIa_IXa==>VIIIa_IXa+X",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "VIIIa_IXa+X==>X_VIIIa_IXa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3b",
+     ""
+    ],
+    [
+     "8.2",
+     "0",
+     "0",
+     "X_VIIIa_IXa==>VIIIa_IXa+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4",
+     ""
+    ],
+    [
+     "100000",
+     "0",
+     "0",
+     "IX+Xa==>IXa+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5",
+     ""
+    ],
+    [
+     "20000000",
+     "0",
+     "0",
+     "V+Xa==>Va+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6",
+     ""
+    ],
+    [
+     "10000000",
+     "0",
+     "0",
+     "VIII+Xa==>VIIIa+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7",
+     ""
+    ],
+    [
+     "20000000",
+     "0",
+     "0",
+     "IIa+V==>IIa+Va",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8",
+     ""
+    ],
+    [
+     "20000000",
+     "0",
+     "0",
+     "IIa+VIII==>IIa+VIIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9 term 1/2",
+     ""
+    ],
+    [
+     "70",
+     "0",
+     "0",
+     "II_Va_Xa==>II+Va_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "II+Va_Xa==>II_Va_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9b",
+     ""
+    ],
+    [
+     "32",
+     "0",
+     "0",
+     "II_Va_Xa==>Va_Xa+mIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10",
+     ""
+    ],
+    [
+     "10000000",
+     "0",
+     "0",
+     "Va_Xa+mIIa==>IIa+Va_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 1/2",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "VIIIa_IXa==>IXa+VIIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 2/2",
+     ""
+    ],
+    [
+     "10000000",
+     "0",
+     "0",
+     "IXa+VIIIa==>VIIIa_IXa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 1/2",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "Va_Xa==>Va+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 2/2",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "Va+Xa==>Va_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7_atn",
+     ""
+    ],
+    [
+     "20000000",
+     "0",
+     "0",
+     "V+mIIa==>Va+mIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8_atn",
+     ""
+    ],
+    [
+     "20000000",
+     "0",
+     "0",
+     "VIII+mIIa==>VIIIa+mIIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4_atn",
+     ""
+    ],
+    [
+     "100000",
+     "0",
+     "0",
+     "IX+Va_Xa==>IXa+Va_Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "VIIIa_IXa_degradation term 1/3 (consumes VIIIa_IXa)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I:((-1*1*cp_I))]==>VIIIa_IXa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "VIIIa_IXa_degradation term 2/3 (consumes VIIIa_IXa)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cVIIIa_IXa,cp_I:((-1*1*abs(cVIIIa_IXa-cp_I)))]==>VIIIa_IXa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "VIIIa_IXa_degradation term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "VIIIa_IXa==>2VIIIa_IXa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_I:(0.02*cp_I)]==>p_I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI/dt term 2 (consumes p_I)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cVIIIa_IXa:((-1*0.02*cVIIIa_IXa))]==>p_I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dI/dt term 3 (consumes p_I)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cVIIIa_IXa,cp_I:((-1*0.02*abs(cVIIIa_IXa-cp_I)))]==>p_I",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "IX",
+     "0",
+     "9e-8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IX [IX]",
+     ""
+    ],
+    [
+     "IX_TF_VIIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IX_TF_VIIa [IX_TF_VIIa]",
+     ""
+    ],
+    [
+     "TF_VIIa",
+     "0",
+     "5e-9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF_VIIa [TF_VIIa]",
+     ""
+    ],
+    [
+     "IXa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IXa [IXa]",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "1.7e-7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X [X]",
+     ""
+    ],
+    [
+     "X_TF_VIIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X_TF_VIIa [X_TF_VIIa]",
+     ""
+    ],
+    [
+     "Xa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa [Xa]",
+     ""
+    ],
+    [
+     "VIIIa_IXa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIIa_IXa [VIIIa_IXa]",
+     ""
+    ],
+    [
+     "X_VIIIa_IXa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X_VIIIa_IXa [X_VIIIa_IXa]",
+     ""
+    ],
+    [
+     "V",
+     "0",
+     "2e-8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V [V]",
+     ""
+    ],
+    [
+     "Va",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va [Va]",
+     ""
+    ],
+    [
+     "VIII",
+     "0",
+     "7e-10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIII [VIII]",
+     ""
+    ],
+    [
+     "VIIIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "VIIIa [VIIIa]",
+     ""
+    ],
+    [
+     "IIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IIa [IIa]",
+     ""
+    ],
+    [
+     "II",
+     "0",
+     "1.4e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "II [II]",
+     ""
+    ],
+    [
+     "II_Va_Xa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "II_Va_Xa [II_Va_Xa]",
+     ""
+    ],
+    [
+     "Va_Xa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va_Xa [Va_Xa]",
+     ""
+    ],
+    [
+     "mIIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mIIa [mIIa]",
+     ""
+    ],
+    [
+     "p_I",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter I [I]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

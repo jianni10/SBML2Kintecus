@@ -1,0 +1,634 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:55:50.873723+00:00",
+ "description": "Fallon2000 - Interleukin-2 dynamics\nBioModels BIOMD0000000665 (curated). SBML file: BIOMD0000000665_url.xml.\nSimulation: 0 to 7200 time units (SED-ML: MODEL1006230001.sedml), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.51e-06 of species peak (worst: Rs_0)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dY_0/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - Y_0: zero order, signed\n  [info] rate rule dY_0/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - Y_0: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fallon2000 - Interleukin-2 dynamics  (BIOMD0000000665, curated BioModels; source file BIOMD0000000665_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Receptor_binding_to_Ligand",
+     ""
+    ],
+    [
+     "0.0012432432432432433",
+     "0",
+     "0",
+     "Rs_0+L_0==>Cs_0+L_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Receptor_Ligand_complex_dissocation",
+     ""
+    ],
+    [
+     "0.0138",
+     "0",
+     "0",
+     "Cs_0==>Rs_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Upregulation_of_Receptor_Synthesis",
+     ""
+    ],
+    [
+     "0.0011",
+     "0",
+     "0",
+     "Cs_0==>Rs_0+Cs_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Receptor_Internalisation",
+     ""
+    ],
+    [
+     "0.007",
+     "0",
+     "0",
+     "Rs_0==>Ri_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Receptor_Synthesis",
+     ""
+    ],
+    [
+     "11",
+     "0",
+     "0",
+     "source==>Rs_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Endocytosis_of_Receptor_Ligand_complex",
+     ""
+    ],
+    [
+     "0.04",
+     "0",
+     "0",
+     "Cs_0==>Ci_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL_2_binding_to_free_BetaGamma_heterodimer_1",
+     ""
+    ],
+    [
+     "0.0001104",
+     "0",
+     "0",
+     "Ri_0+Li_0==>Ci_0+Li_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Dissocation_of_IL_2_Heterodimer_complex",
+     ""
+    ],
+    [
+     "0.1104",
+     "0",
+     "0",
+     "Ci_0==>Ri_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_heterodimer",
+     ""
+    ],
+    [
+     "0.035",
+     "0",
+     "0",
+     "Ri_0==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_IL_2_heterodimer_complex",
+     ""
+    ],
+    [
+     "0.035",
+     "0",
+     "0",
+     "Ci_0==>Ld_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL_2_binding_dissociating term 1/2",
+     ""
+    ],
+    [
+     "18.332779807372965",
+     "0",
+     "0",
+     "Ci_0==>Li_0+Ci_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IL_2_binding_dissociating term 2/2",
+     ""
+    ],
+    [
+     "0.20645022305600186",
+     "0",
+     "0",
+     "Li_0+Ri_0==>Ri_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ligand_recycling",
+     ""
+    ],
+    [
+     "0.15",
+     "0",
+     "0",
+     "Li_0==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ligand_Binding_Dissociation_Recycling term 1/3",
+     ""
+    ],
+    [
+     "2.2915974759216207e-14",
+     "0",
+     "0",
+     "Cs_0+Y_0==>L_0+Cs_0+Y_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ligand_Binding_Dissociation_Recycling term 2/3",
+     ""
+    ],
+    [
+     "1.5e-15",
+     "0",
+     "0",
+     "Li_0+Y_0==>L_0+Li_0+Y_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ligand_Binding_Dissociation_Recycling term 3/3",
+     ""
+    ],
+    [
+     "2.0645022305600186e-15",
+     "0",
+     "0",
+     "L_0+Rs_0+Y_0==>Rs_0+Y_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dY_0/dt term 1 (consumes Y_0)",
+     ""
+    ],
+    [
+     "-100000",
+     "0",
+     "0",
+     "source==>Y_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dY_0/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCs_0:(40000000/(2*abs(600*cCs_0/(cCs_0+250)-200)+2e-300))]==>Y_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dY_0/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cs_0+S[USER;cCs_0:(300000/(cCs_0+250))]==>Y_0+Cs_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dY_0/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Cs_0+Cs_0+S[USER;cCs_0:(360000000/(2*(cCs_0+250)^2*abs(600*cCs_0/(cCs_0+250)-200)+2e-300*(cCs_0+250)^2))]==>Y_0+2Cs_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dY_0/dt term 5 (consumes Y_0)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCs_0:((-1*240000000*cCs_0/(2*cCs_0*abs(600*cCs_0/(cCs_0+250)-200)+2e-300*cCs_0+500*abs(600*cCs_0/(cCs_0+250)-200)+5e-298)))]==>Y_0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Rs_0",
+     "0",
+     "1500",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rs [Rs_0]",
+     ""
+    ],
+    [
+     "Cs_0",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cs [Cs_0]",
+     ""
+    ],
+    [
+     "Ri_0",
+     "0",
+     "300",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ri [Ri_0]",
+     ""
+    ],
+    [
+     "Ci_0",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ci [Ci_0]",
+     ""
+    ],
+    [
+     "Li_0",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Li [Li_0]",
+     ""
+    ],
+    [
+     "Ld_0",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ld [Ld_0]",
+     ""
+    ],
+    [
+     "L_0",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L [L_0]",
+     ""
+    ],
+    [
+     "Y_0",
+     "0",
+     "250000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Y [Y_0]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "7200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

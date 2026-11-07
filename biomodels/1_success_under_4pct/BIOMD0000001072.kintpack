@@ -1,0 +1,662 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:39:43.055742+00:00",
+ "description": "Phillips2013 - physiologically based modeling explaining Mammalian rest/activity patterns\nBioModels BIOMD0000001072 (curated). SBML file: Phillips2013.xml.\nSimulation: 0 to 86400 time units (SED-ML: Phillips2013.sedml), sampling 86.4.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS_PARTIAL, max |difference| = 4.69e-06 of species peak (worst: X)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'asleep' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'awake' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'day_0' not converted (trigger fires while time is below a threshold)\n  [info] 'V_v' goes below zero in the SBML: integrated as V_v_o = value + 50, output as V_v = OUTC[V_v_o;-50*source]\n  [info] 'V_m' goes below zero in the SBML: integrated as V_m_o = value + 50, output as V_m = OUTC[V_m_o;-50*source]\n  [info] 'X' goes below zero in the SBML: integrated as X_o = value + 5, output as X = OUTC[X_o;-5*source]\n  [info] 'Y' goes below zero in the SBML: integrated as Y_o = value + 2, output as Y = OUTC[Y_o;-2*source]\n  [info] time event(s) on 'I' encoded as time/value pairs in EV_P_I.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_I = I",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Phillips2013 - physiologically based modeling explaining Mammalian rest/activity patterns  (BIOMD0000001072, curated BioModels; source file Phillips2013.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vm_deg (shifted V_m_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_m_o:((-1*0.1*(cV_m_o-50)))]==>V_m_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vv_deg (shifted V_v_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_v_o:((-1*0.1*(cV_v_o-50)))]==>V_v_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vm_Vv term 1/4 (shifted V_v_o)",
+     ""
+    ],
+    [
+     "-0.3593",
+     "0",
+     "0",
+     "source==>V_v_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vm_Vv term 2/4 (shifted V_v_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cH:(0.1*cH)]==>V_v_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vm_Vv term 3/4 (shifted V_v_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX_o:((-1*0.28900000000000003*(cX_o-5)))]==>V_v_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vm_Vv term 4/4 (shifted V_v_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_m_o:((-1*21/(1+28.031624894526136*exp((-1*0.3333333333333333*(cV_m_o-50))))))]==>V_v_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vv_Vm term 1/3 (shifted V_m_o)",
+     ""
+    ],
+    [
+     "0.1868",
+     "0",
+     "0",
+     "source==>V_m_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vv_Vm term 2/3 (shifted V_m_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX_o:((-1*0.136*(cX_o-5)))]==>V_m_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vv_Vm term 3/3 (shifted V_m_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_v_o:((-1*18/(1+28.031624894526136*exp((-1*0.3333333333333333*(cV_v_o-50))))))]==>V_m_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Vm_H",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cV_m_o:(0.005555555555555556/(1+28.031624894526136*exp((-1*0.3333333333333333*(cV_m_o-50)))))]==>H",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "H_deg",
+     ""
+    ],
+    [
+     "1.2626262626262626e-5",
+     "0",
+     "0",
+     "H==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "X_syn term 1/5 (shifted X_o)",
+     ""
+    ],
+    [
+     "7.757018897752576e-7",
+     "0",
+     "0",
+     "source==>X_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "X_syn term 2/5 (shifted X_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX_o:(3.1512889272119844e-6*(cX_o-5))]==>X_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "X_syn term 3/5 (shifted X_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX_o:(1.2605155708847937e-5*(cX_o-5)^3)]==>X_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "X_syn term 4/5 (shifted X_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX_o:((-1*2.304942758189337e-5*(cX_o-5)^7))]==>X_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "X_syn term 5/5 (shifted X_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX_o:((-1*7.757018897752576e-7*tanh(10*(cX_o-5))))]==>X_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "n_deg",
+     ""
+    ],
+    [
+     "0.006666666666666667",
+     "0",
+     "0",
+     "n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Y_X (shifted X_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cY_o:(7.27220521664304e-5*(cY_o-2))]==>X_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "X_Y (shifted Y_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cX_o:((-1*7.191424887271786e-5*(cX_o-5)))]==>Y_o",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "V_v_o",
+     "0",
+     "53.82007920893978",
+     "N",
+     "0",
+     "No",
+     "No",
+     "V_v(mean_cell_body_potential_VLPO) + 50 (shifted state) [__shifted__V_v]",
+     ""
+    ],
+    [
+     "V_m_o",
+     "0",
+     "32.401881338697805",
+     "N",
+     "0",
+     "No",
+     "No",
+     "V_m(mean_cell_body_potential_MA) + 50 (shifted state) [__shifted__V_m]",
+     ""
+    ],
+    [
+     "H",
+     "0",
+     "5.57377096632541",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "H(sleep_homeostatic_drive) [H]",
+     ""
+    ],
+    [
+     "n",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "n(fraction_of_photoreceptors_that_are_activated) [n]",
+     ""
+    ],
+    [
+     "X_o",
+     "0",
+     "4.355770059865102",
+     "N",
+     "0",
+     "No",
+     "No",
+     "x(SCN_activity) + 5 (shifted state) [__shifted__X]",
+     ""
+    ],
+    [
+     "Y_o",
+     "0",
+     "1.196472163196465",
+     "N",
+     "0",
+     "No",
+     "No",
+     "y(complement_of_x) + 2 (shifted state) [__shifted__Y]",
+     ""
+    ],
+    [
+     "p_I",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "EV_P_I.TXT-SET",
+     "parameter I [I]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "V_v",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[V_v_o;-50*source]",
+     "No",
+     "V_v(mean_cell_body_potential_VLPO) (= V_v_o - 50) [V_v]",
+     ""
+    ],
+    [
+     "V_m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[V_m_o;-50*source]",
+     "No",
+     "V_m(mean_cell_body_potential_MA) (= V_m_o - 50) [V_m]",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[X_o;-5*source]",
+     "No",
+     "x(SCN_activity) (= X_o - 5) [X]",
+     ""
+    ],
+    [
+     "Y",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[Y_o;-2*source]",
+     "No",
+     "y(complement_of_x) (= Y_o - 2) [Y]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "86.40000009",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "86400",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "86.40000009",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_I.TXT",
+   "key": "O_EV_P_I.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "43200",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

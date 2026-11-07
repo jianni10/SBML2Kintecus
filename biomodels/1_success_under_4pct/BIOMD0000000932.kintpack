@@ -1,0 +1,369 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:13:47.697307+00:00",
+ "description": "Garde2020-Minimal model describing metabolic oscillations in Bacillus subtilis biofilms\nBioModels BIOMD0000000932 (curated). SBML file: Garde2020.xml.\nSimulation: 0 to 25 time units (SED-ML: Garde2020-Fig2.sedml), sampling 0.25.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.17e-02 of species peak (worst: B)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 9.21e-09 of species peak.\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Garde2020-Minimal model describing metabolic oscillations in Bacillus subtilis biofilms  (BIOMD0000000932, curated BioModels; source file Garde2020.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "The_uptake_of_glutamate_and_Consumption_of_glutamate_and_ammonia term 1/2",
+     ""
+    ],
+    [
+     "10.278",
+     "0",
+     "0",
+     "Gp==>2Gp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "The_uptake_of_glutamate_and_Consumption_of_glutamate_and_ammonia term 2/2",
+     ""
+    ],
+    [
+     "5.3",
+     "0",
+     "0",
+     "Gp+A==>A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Diffusion_of_glutamate",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Gp==>Gi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Consumption_of_glutamate_to_produce_ammonia",
+     ""
+    ],
+    [
+     "2.3",
+     "0",
+     "0",
+     "Gi==>A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Diffusion_of_ammonia",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "A==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "The_synthesis_of_biomass_from_ammonia_and_glutamate",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "A+B+Gp==>2B+A+Gp",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Gp",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gp [Gp]",
+     ""
+    ],
+    [
+     "Gi",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gi [Gi]",
+     ""
+    ],
+    [
+     "A",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A [A]",
+     ""
+    ],
+    [
+     "B",
+     "0",
+     "100000000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B [B]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.25",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "25",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.25",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

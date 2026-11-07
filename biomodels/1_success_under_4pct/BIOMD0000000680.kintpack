@@ -1,0 +1,509 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:56:06.062090+00:00",
+ "description": "Waugh2006 - Diabetic Wound Healing - TGF-B Dynamics\nBioModels BIOMD0000000680 (curated). SBML file: BIOMD0000000680_url.xml.\nSimulation: 0 to 80 time units (SED-ML: Waugh2006_2.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.20e-06 of species peak (worst: phi_R)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'K_T' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dphi_I/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - phi_I: zero order, signed\n  [info] rate rule dphi_R/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - phi_R: zero order, signed\nRenamed species (Kintecus name = SBML id): T1 = T",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Waugh2006 - Diabetic Wound Healing - TGF-B Dynamics  (BIOMD0000000680, curated BioModels; source file BIOMD0000000680_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dphi_I/dt term 1",
+     ""
+    ],
+    [
+     "1.4000000000000001",
+     "0",
+     "0",
+     "source==>phi_I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dphi_I/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cT1:(17.552000000000003*cT1^2)]==>phi_I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dphi_I/dt term 3",
+     ""
+    ],
+    [
+     "5.128",
+     "0",
+     "0",
+     "T1==>phi_I+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dphi_I/dt term 4",
+     ""
+    ],
+    [
+     "6.93e-5",
+     "0",
+     "0",
+     "phi_I+phi_I==>phi_I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dphi_I/dt term 5",
+     ""
+    ],
+    [
+     "0.16535000000000002",
+     "0",
+     "0",
+     "phi_I==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dphi_I/dt term 6 (consumes phi_I)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cT1:((-1*1.9760000000000002*cT1^3))]==>phi_I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dphi_I/dt term 7",
+     ""
+    ],
+    [
+     "6.93e-5",
+     "0",
+     "0",
+     "phi_I+phi_R==>phi_R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dphi_R/dt term 1",
+     ""
+    ],
+    [
+     "0.3499999999999999",
+     "0",
+     "0",
+     "source==>phi_R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dphi_R/dt term 2",
+     ""
+    ],
+    [
+     "1.2819999999999998",
+     "0",
+     "0",
+     "T1==>phi_R+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dphi_R/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cT1:(4.387999999999999*cT1^2)]==>phi_R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dphi_R/dt term 4",
+     ""
+    ],
+    [
+     "6.93e-5",
+     "0",
+     "0",
+     "phi_R+phi_R==>phi_R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dphi_R/dt term 5",
+     ""
+    ],
+    [
+     "0.16535000000000002",
+     "0",
+     "0",
+     "phi_R==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dphi_R/dt term 6 (consumes phi_R)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cT1:((-1*0.49399999999999994*cT1^3))]==>phi_R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dphi_R/dt term 7",
+     ""
+    ],
+    [
+     "6.93e-5",
+     "0",
+     "0",
+     "phi_R+phi_I==>phi_I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT/dt term 1",
+     ""
+    ],
+    [
+     "0.07",
+     "0",
+     "0",
+     "phi_I==>T1+phi_I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dT/dt term 2",
+     ""
+    ],
+    [
+     "9.1",
+     "0",
+     "0",
+     "T1==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "phi_I",
+     "0",
+     "200",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "phi_I [phi_I]",
+     ""
+    ],
+    [
+     "phi_R",
+     "0",
+     "200",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "phi_R [phi_R]",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T [T]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.5",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "80",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.5",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

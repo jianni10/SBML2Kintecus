@@ -1,0 +1,1101 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:38:00.870535+00:00",
+ "description": "Hynne2001_Glycolysis\nBioModels BIOMD0000000061 (curated). SBML file: BIOMD0000000061_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000061_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.89e-06 of species peak (worst: GAP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] vGlcTrans term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vGlcTrans term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Glc: first order\n  [info] vHK: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vPGI term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vPGI term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vPFK: rate order differs from the stoichiometry; consumed on separate line(s) - ATP: zero order, signed\n  [info] vALD term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vALD term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vTIM term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vTIM term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vGAPDH term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vGAPDH term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vPK: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vPDC: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vADH: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vdifEtOH term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - EtOH: first order\n  [info] vlpGlyc: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vdifGlyc term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - Glyc: first order\n  [info] vdifACA term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - ACA: first order\nRenamed species (Kintecus name = SBML id): P1 = P",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hynne2001_Glycolysis  (BIOMD0000000061, curated BioModels; source file BIOMD0000000061_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vinGlc term 1/2",
+     ""
+    ],
+    [
+     "1.1520000000000001",
+     "0",
+     "0",
+     "source==>GlcX",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vinGlc term 2/2",
+     ""
+    ],
+    [
+     "0.048",
+     "0",
+     "0",
+     "GlcX==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vGlcTrans term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GlcX+S[USER;cG6P,cGlc,cGlcX:((5.952495454812035*cGlc+10.11924227318046)/(0.04805843906189927*cG6P*cGlc*(cGlcX+1e-30)+0.08169934640522876*cG6P*cGlc+0.4901960784313726*cG6P*(cGlcX+1e-30)+0.8333333333333334*cG6P+0.6920415224913495*cGlc*(cGlcX+1e-30)+1.1764705882352942*cGlc+1.1764705882352942*cGlcX+2))]==>59Glc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vGlcTrans term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG6P,cGlc:(10.11924227318046*cGlc/(0.08169934640522876*cG6P*cGlc+0.8333333333333334*cG6P+1.1764705882352942*cGlc+2))]==>GlcX",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vGlcTrans term 2/2 (consumes Glc)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Glc+S[USER;cG6P,cGlc:(597.0352941176471/(0.08169934640522876*cG6P*cGlc+0.8333333333333334*cG6P+1.1764705882352942*cGlc+2))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vHK",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Glc+ATP+S[USER;cATP,cGlc:(51.7547/(0.1*cGlc+1*(cATP+1e-30)*(cGlc+1e-30)+0.037))]==>G6P+ADP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vPGI term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G6P+S[USER;cF6P,cG6P:(496.042/(5.333333333333334*cF6P+1*cG6P+0.8))]==>F6P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vPGI term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "F6P+S[USER;cF6P,cG6P:(3815.707692307692/(5.333333333333334*cF6P+1*cG6P+0.8))]==>G6P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vPFK",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "F6P+S[USER;cAMP,cATP,cF6P:(45.4327*cAMP^2*cF6P/(1*cAMP^2*cF6P^2+0.021*cAMP^2+0.00315*cATP^2))]==>FBP+ADP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vPFK (consumes ATP)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAMP,cATP,cF6P:((-1*45.4327*cF6P^2/(cF6P^2+0.021+0.00315*cATP^2/cAMP^2)))]==>ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vALD term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "FBP+S[USER;cDHAP,cFBP,cGAP:(2207.82/(2.4691358024691357*cDHAP*cGAP+9.876543209876543*cDHAP+1*cFBP+0.1*cGAP*(cFBP+1e-30)+4.938271604938271*cGAP+0.3))]==>DHAP+GAP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vALD term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DHAP+GAP+S[USER;cDHAP,cFBP,cGAP:(27257.037037037036/(9.876543209876543*cDHAP+0.1*cFBP*(cGAP+1e-30)+1*cFBP+4.938271604938271*cGAP+2.4691358024691357*(cDHAP+1e-30)*(cGAP+1e-30)+0.3))]==>FBP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vTIM term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DHAP+S[USER;cDHAP,cGAP:(116.365/(1*cDHAP+0.968503937007874*cGAP+1.23))]==>GAP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vTIM term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GAP+S[USER;cDHAP,cGAP:(2115.7272727272725/(1*cDHAP+0.968503937007874*cGAP+1.23))]==>DHAP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vGAPDH term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NAD+GAP+S[USER;cBPG,cGAP,cNAD,cNADH:(13897.633333333331/(1666.6666666666667*cBPG*cNADH+999.9999999999999*cBPG*(cNAD+1e-30)+100*cBPG+1.6666666666666667*cGAP+10*cNAD+27.77777777777778*cNADH*(cGAP+1e-30)+16.666666666666668*cNADH+16.666666666666668*(cGAP+1e-30)*(cNAD+1e-30)+1))]==>NADH+BPG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vGAPDH term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADH+BPG+S[USER;cBPG,cGAP,cNAD,cNADH:(2526842.4242424243/(100*cBPG+16.666666666666668*cGAP*cNAD+27.77777777777778*cGAP*(cNADH+1e-30)+1.6666666666666667*cGAP+999.9999999999999*cNAD*(cBPG+1e-30)+10*cNAD+16.666666666666668*cNADH+1666.6666666666667*(cBPG+1e-30)*(cNADH+1e-30)+1))]==>NAD+GAP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vlpPEP term 1/2",
+     ""
+    ],
+    [
+     "443866",
+     "0",
+     "0",
+     "ADP+BPG==>ATP+PEP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vlpPEP term 2/2",
+     ""
+    ],
+    [
+     "1528.62",
+     "0",
+     "0",
+     "ATP+PEP==>ADP+BPG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vPK",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ADP+PEP+S[USER;cADP,cPEP:(343.096/(0.2*cADP+0.17*cPEP+1*(cADP+1e-30)*(cPEP+1e-30)+0.034))]==>Pyr+ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vPDC",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pyr+S[USER;cPyr:(53.1328/(1*cPyr+0.3))]==>ACA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vADH",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADH+ACA+S[USER;cACA,cNADH:(89.8023/(0.1*cACA+0.71*cNADH+1*(cACA+1e-30)*(cNADH+1e-30)+0.071))]==>NAD+EtOH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vdifEtOH term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cEtOH:(0.28338983050847455*cEtOH)]==>EtOHX",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vdifEtOH term 1/2 (consumes EtOH)",
+     ""
+    ],
+    [
+     "16.72",
+     "0",
+     "0",
+     "EtOH==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vdifEtOH term 2/2",
+     ""
+    ],
+    [
+     "0.28338983050847455",
+     "0",
+     "0",
+     "EtOHX==>59EtOH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "voutEtOH",
+     ""
+    ],
+    [
+     "0.048",
+     "0",
+     "0",
+     "EtOHX==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vlpGlyc",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADH+DHAP+S[USER;cDHAP,cNAD,cNADH:(81.4797/(0.13*cDHAP+1*cNAD*(cDHAP+1e-30)+6.538461538461538*cNAD+25*cNADH+1*(cDHAP+1e-30)*(cNADH+1e-30)+0.8500000000000001))]==>NAD+Glyc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vdifGlyc term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cGlyc:(0.03220338983050847*cGlyc)]==>GlycX",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vdifGlyc term 1/2 (consumes Glyc)",
+     ""
+    ],
+    [
+     "1.9",
+     "0",
+     "0",
+     "Glyc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vdifGlyc term 2/2",
+     ""
+    ],
+    [
+     "0.03220338983050847",
+     "0",
+     "0",
+     "GlycX==>59Glyc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "voutGlyc",
+     ""
+    ],
+    [
+     "0.048",
+     "0",
+     "0",
+     "GlycX==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vdifACA term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cACA:(0.4186440677966102*cACA)]==>ACAX",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vdifACA term 1/2 (consumes ACA)",
+     ""
+    ],
+    [
+     "24.7",
+     "0",
+     "0",
+     "ACA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vdifACA term 2/2",
+     ""
+    ],
+    [
+     "0.4186440677966102",
+     "0",
+     "0",
+     "ACAX==>59ACA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "voutACA",
+     ""
+    ],
+    [
+     "0.048",
+     "0",
+     "0",
+     "ACAX==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vlacto",
+     ""
+    ],
+    [
+     "0.00283828",
+     "0",
+     "0",
+     "CNX+ACAX==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vinCN term 1/2",
+     ""
+    ],
+    [
+     "0.2688",
+     "0",
+     "0",
+     "source==>CNX",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vinCN term 2/2",
+     ""
+    ],
+    [
+     "0.048",
+     "0",
+     "0",
+     "CNX==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vstorage",
+     ""
+    ],
+    [
+     "2.25932",
+     "0",
+     "0",
+     "G6P+ATP==>ADP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vconsum",
+     ""
+    ],
+    [
+     "3.2076",
+     "0",
+     "0",
+     "ATP==>ADP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vAK term 1/2",
+     ""
+    ],
+    [
+     "133.333",
+     "0",
+     "0",
+     "ADP+ADP==>AMP+ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vAK term 2/2",
+     ""
+    ],
+    [
+     "432.9",
+     "0",
+     "0",
+     "AMP+ATP==>2ADP",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "GlcX",
+     "0",
+     "6.7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Extracellular glucose [GlcX]",
+     ""
+    ],
+    [
+     "Glc",
+     "0",
+     "0.573074",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Cytosolic glucose [Glc]",
+     ""
+    ],
+    [
+     "ATP",
+     "0",
+     "2.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP [ATP]",
+     ""
+    ],
+    [
+     "G6P",
+     "0",
+     "4.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Glucose-6-Phosphate [G6P]",
+     ""
+    ],
+    [
+     "ADP",
+     "0",
+     "1.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ADP [ADP]",
+     ""
+    ],
+    [
+     "F6P",
+     "0",
+     "0.49",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fructose-6-Phosphate [F6P]",
+     ""
+    ],
+    [
+     "FBP",
+     "0",
+     "4.64",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fructose 1,6-bisphosphate [FBP]",
+     ""
+    ],
+    [
+     "GAP",
+     "0",
+     "0.115",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Glyceraldehyde 3-phosphate [GAP]",
+     ""
+    ],
+    [
+     "DHAP",
+     "0",
+     "2.95",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Dihydroxyacetone phosphate [DHAP]",
+     ""
+    ],
+    [
+     "NAD",
+     "0",
+     "0.65",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NAD [NAD]",
+     ""
+    ],
+    [
+     "BPG",
+     "0",
+     "0.00027",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "1,3-Bisphosphoglycerate [BPG]",
+     ""
+    ],
+    [
+     "NADH",
+     "0",
+     "0.33",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADH [NADH]",
+     ""
+    ],
+    [
+     "PEP",
+     "0",
+     "0.04",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Phosphoenolpyruvate [PEP]",
+     ""
+    ],
+    [
+     "Pyr",
+     "0",
+     "8.7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pyruvate [Pyr]",
+     ""
+    ],
+    [
+     "ACA",
+     "0",
+     "1.48153",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Acetaldehyde [ACA]",
+     ""
+    ],
+    [
+     "EtOH",
+     "0",
+     "19.2379",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "EtOH [EtOH]",
+     ""
+    ],
+    [
+     "EtOHX",
+     "0",
+     "16.4514",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Extracellular ethanol [EtOHX]",
+     ""
+    ],
+    [
+     "Glyc",
+     "0",
+     "4.196",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Glycerol [Glyc]",
+     ""
+    ],
+    [
+     "GlycX",
+     "0",
+     "1.68478",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Extracellular glycerol [GlycX]",
+     ""
+    ],
+    [
+     "ACAX",
+     "0",
+     "1.28836",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Extracellular acetaldehyde [ACAX]",
+     ""
+    ],
+    [
+     "CNX",
+     "0",
+     "5.20358",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Extracellular cyanide [CNX]",
+     ""
+    ],
+    [
+     "AMP",
+     "0",
+     "0.33",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AMP [AMP]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "P [P]",
+     ""
+    ],
+    [
+     "CNX0",
+     "0",
+     "5.6",
+     "Y",
+     "0",
+     "No",
+     "5.6",
+     "Mixed flow cyanide [CNX0]",
+     ""
+    ],
+    [
+     "GlcX0",
+     "0",
+     "24",
+     "Y",
+     "0",
+     "No",
+     "24",
+     "Mixed flow glucose [GlcX0]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

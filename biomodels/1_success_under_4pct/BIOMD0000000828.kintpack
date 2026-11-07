@@ -1,0 +1,708 @@
+{
+ "version": 3,
+ "created": "2026-11-05T21:12:32.554124+00:00",
+ "description": "Jung2019 - Regulating glioblastoma signaling pathways and anti-invasion therapy - core control model\nBioModels BIOMD0000000828 (curated). SBML file: Jung2019 model.xml.\nSimulation: 0 to 120 time units (SED-ML: Jung2019 simulation.sedml), sampling 0.12.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.23e-06 of species peak (worst: Glucose_G)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 2 event(s) depend only on time (and on variables only they change): unrolled into 20 firing(s) up to t = 120\n  [info] species 'deltaD' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] time event(s) on 'u_1' encoded as time/value pairs in EV_P_U_1.TXT (SET)\n  [info] time event(s) on 'u_2' encoded as time/value pairs in EV_P_U_2.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_u_1 = u_1; p_u_2 = u_2",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jung2019 - Regulating glioblastoma signaling pathways and anti-invasion therapy - core control model  (BIOMD0000000828, curated BioModels; source file Jung2019 model.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Dose_for_Glucose",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_u_1:(1*cp_u_1)]==>Glucose_G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Dose_for_Drug",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_u_2:(1*cp_u_2)]==>Drug_D",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Consumption_of_Glucose",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "Glucose_G==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Decay_of_Drug",
+     ""
+    ],
+    [
+     "1.316",
+     "0",
+     "0",
+     "Drug_D==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_miR_451 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Glucose_G==>miR_451_M+Glucose_G",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_miR_451 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAMPK_A:(4/(1.6*cAMPK_A^2+1))]==>miR_451_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "loss_of_miR_451",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "miR_451_M==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "signal_source_of_AMPK",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "source==>AMPK_A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_AMPK",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cmiR_451_M:(4/(0.02*cmiR_451_M^2+0.02))]==>AMPK_A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "loss_of_AMPK",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "AMPK_A==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "signal_source_of_mTOR",
+     ""
+    ],
+    [
+     "60",
+     "0",
+     "0",
+     "source==>mTOR_R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_mTOR",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAMPK_A,cDrug_D:(4/(0.02*cAMPK_A^2*exp((-1*cDrug_D))+0.02))]==>mTOR_R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "loss_of_mTOR",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "mTOR_R==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Glucose_G",
+     "0",
+     "6.64215616170866e-22",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Glucose G [Glucose_G]",
+     ""
+    ],
+    [
+     "Drug_D",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Drug D [Drug_D]",
+     ""
+    ],
+    [
+     "miR_451_M",
+     "0",
+     "3.05539183438598e-21",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "miR-451 M [miR_451_M]",
+     ""
+    ],
+    [
+     "AMPK_A",
+     "0",
+     "2.07567380053396e-21",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AMPK A [AMPK_A]",
+     ""
+    ],
+    [
+     "mTOR_R",
+     "0",
+     "4.58308775157897e-21",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mTOR R [mTOR_R]",
+     ""
+    ],
+    [
+     "p_u_1",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "EV_P_U_1.TXT-SET",
+     "parameter u_1 [u_1]",
+     ""
+    ],
+    [
+     "p_u_2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "EV_P_U_2.TXT-SET",
+     "parameter u_2 [u_2]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1200000002",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "120",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1200000002",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_U_1.TXT",
+   "key": "O_EV_P_U_1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "3",
+     "0"
+    ],
+    [
+     "12",
+     "1"
+    ],
+    [
+     "15",
+     "0"
+    ],
+    [
+     "24",
+     "1"
+    ],
+    [
+     "27",
+     "0"
+    ],
+    [
+     "36",
+     "1"
+    ],
+    [
+     "39",
+     "0"
+    ],
+    [
+     "48",
+     "1"
+    ],
+    [
+     "51",
+     "0"
+    ],
+    [
+     "60",
+     "1"
+    ],
+    [
+     "63",
+     "0"
+    ],
+    [
+     "72",
+     "1"
+    ],
+    [
+     "75",
+     "0"
+    ],
+    [
+     "84",
+     "1"
+    ],
+    [
+     "87",
+     "0"
+    ],
+    [
+     "96",
+     "1"
+    ],
+    [
+     "99",
+     "0"
+    ],
+    [
+     "108",
+     "1"
+    ],
+    [
+     "111",
+     "0"
+    ],
+    [
+     "120",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_P_U_2.TXT",
+   "key": "O_EV_P_U_2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "3",
+     "0"
+    ],
+    [
+     "12",
+     "1"
+    ],
+    [
+     "15",
+     "0"
+    ],
+    [
+     "24",
+     "1"
+    ],
+    [
+     "27",
+     "0"
+    ],
+    [
+     "36",
+     "1"
+    ],
+    [
+     "39",
+     "0"
+    ],
+    [
+     "48",
+     "1"
+    ],
+    [
+     "51",
+     "0"
+    ],
+    [
+     "60",
+     "1"
+    ],
+    [
+     "63",
+     "0"
+    ],
+    [
+     "72",
+     "1"
+    ],
+    [
+     "75",
+     "0"
+    ],
+    [
+     "84",
+     "1"
+    ],
+    [
+     "87",
+     "0"
+    ],
+    [
+     "96",
+     "1"
+    ],
+    [
+     "99",
+     "0"
+    ],
+    [
+     "108",
+     "1"
+    ],
+    [
+     "111",
+     "0"
+    ],
+    [
+     "120",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

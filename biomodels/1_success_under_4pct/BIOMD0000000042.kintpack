@@ -1,0 +1,893 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:51:43.077936+00:00",
+ "description": "Nielsen1998_Glycolysis\nBioModels BIOMD0000000042 (curated). SBML file: BIOMD0000000042_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000042.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.26e-06 of species peak (worst: P)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): P1 = P",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Nielsen1998_Glycolysis  (BIOMD0000000042, curated BioModels; source file BIOMD0000000042_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ATPflow term 1/2",
+     ""
+    ],
+    [
+     "0.0385",
+     "0",
+     "0",
+     "source==>ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ATPflow term 2/2",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "ATP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ADPflow term 1/2",
+     ""
+    ],
+    [
+     "0.0121",
+     "0",
+     "0",
+     "source==>ADP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ADPflow term 2/2",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "ADP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NADHflow term 1/2",
+     ""
+    ],
+    [
+     "0.0026399999999999996",
+     "0",
+     "0",
+     "source==>NADH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NADHflow term 2/2",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "NADH==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NADflow term 1/2",
+     ""
+    ],
+    [
+     "0.044",
+     "0",
+     "0",
+     "source==>NAD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NADflow term 2/2",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "NAD==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GLCflow term 1/2",
+     ""
+    ],
+    [
+     "0.5499999999999999",
+     "0",
+     "0",
+     "source==>GLC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GLCflow term 2/2",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "GLC==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "F6Pflow",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "F6P==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "FBPflow",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "FBP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GAPflow",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "GAP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "DPGflow",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "DPG==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PEPflow",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "PEP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PYRflow",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "PYR==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ACAflow",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "ACA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "EtOHflow",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "EtOH==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AMPflow",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "AMP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Pflow",
+     ""
+    ],
+    [
+     "0.011",
+     "0",
+     "0",
+     "P1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+GLC+S[USER;cATP,cGLC:(0.5/(0.1*cATP+0.063*cGLC+1*(cATP+1e-30)*(cGLC+1e-30)+0.0063))]==>F6P+ADP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+F6P+F6P+S[USER;cAMP,cATP,cF6P:(1.5*cAMP^2/(1*cAMP^2*(cATP+1e-30)*(cF6P+1e-30)^2+0.0016*cAMP^2*(cATP+1e-30)+0.01*cAMP^2*(cF6P+1e-30)^2+1.6000000000000003e-5*cAMP^2+2.7200000000000004e-5*(cATP+1e-30)^3+2.7200000000000005e-7*(cATP+1e-30)^2))]==>FBP+ADP+F6P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "FBP==>2GAP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 2/2",
+     ""
+    ],
+    [
+     "50",
+     "0",
+     "0",
+     "GAP+GAP==>FBP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NAD+GAP+S[USER;cGAP,cNAD:(10/(1*cGAP+1*cNAD+1*(cGAP+1e-30)*(cNAD+1e-30)+1))]==>NADH+DPG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ADP+DPG==>ATP+PEP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 2/2",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "ATP+PEP==>ADP+DPG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PEP+ADP+S[USER;cADP,cPEP:(10/(0.2*cADP+0.3*cPEP+1*(cADP+1e-30)*(cPEP+1e-30)+0.06))]==>ATP+PYR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PYR+S[USER;cPYR:(2/(1*cPYR+0.3))]==>ACA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADH+ACA==>EtOH+NAD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8 term 2/2",
+     ""
+    ],
+    [
+     "0.000143",
+     "0",
+     "0",
+     "EtOH+NAD==>NADH+ACA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9 term 1/2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "ADP+ADP==>ATP+AMP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9 term 2/2",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "ATP+AMP==>2ADP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "F6P==>P1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "ATP",
+     "0",
+     "4.49064",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP [ATP]",
+     ""
+    ],
+    [
+     "ADP",
+     "0",
+     "0.108367",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ADP [ADP]",
+     ""
+    ],
+    [
+     "AMP",
+     "0",
+     "0.00261149",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AMP [AMP]",
+     ""
+    ],
+    [
+     "GLC",
+     "0",
+     "0.0112817",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GLC [GLC]",
+     ""
+    ],
+    [
+     "F6P",
+     "0",
+     "0.65939",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "F6P [F6P]",
+     ""
+    ],
+    [
+     "FBP",
+     "0",
+     "0.00770135",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FBP [FBP]",
+     ""
+    ],
+    [
+     "GAP",
+     "0",
+     "0.00190919",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GAP [GAP]",
+     ""
+    ],
+    [
+     "NAD",
+     "0",
+     "3.62057",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NAD [NAD]",
+     ""
+    ],
+    [
+     "NADH",
+     "0",
+     "0.616118",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADH [NADH]",
+     ""
+    ],
+    [
+     "DPG",
+     "0",
+     "0.299109",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DPG [DPG]",
+     ""
+    ],
+    [
+     "PEP",
+     "0",
+     "0.0021125",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PEP [PEP]",
+     ""
+    ],
+    [
+     "PYR",
+     "0",
+     "0.00422702",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PYR [PYR]",
+     ""
+    ],
+    [
+     "ACA",
+     "0",
+     "0.0738334",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ACA [ACA]",
+     ""
+    ],
+    [
+     "EtOH",
+     "0",
+     "0.33981",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "EtOH [EtOH]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "P [P]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.5",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.5",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

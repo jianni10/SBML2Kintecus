@@ -1,0 +1,358 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:59:13.392203+00:00",
+ "description": "Wodarz2018/1 - simple model\nBioModels BIOMD0000000774 (curated). SBML file: Wodarz2018_1.xml.\nSimulation: 0 to 10000 time units (SED-ML: Wodarz2018_1.sedml), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.25e-06 of species peak (worst: S)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] differentiation_of_cell term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - D: zero order, signed\nRenamed species (Kintecus name = SBML id): S1 = S",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wodarz2018/1 - simple model  (BIOMD0000000774, curated BioModels; source file Wodarz2018_1.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "stem_cell_division term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S1+S[USER;cD:(0.013999999999999999/(0.0001*cD+1)^2)]==>2S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "stem_cell_division term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S1+S[USER;cD:(0.01/(0.0001*cD+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "de_differentiation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "D+S[USER;cS1:(0.0035/(0.01*cS1+1))]==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "differentiation_of_cell term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S1+S[USER;cD:(0.02/(0.0001*cD+1))]==>D+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "differentiation_of_cell term 2/2 (consumes D)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cD,cS1:((-1*0.013999999999999999*cS1/(0.0001*cD+1)^2))]==>D",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "differentiated_cell_death",
+     ""
+    ],
+    [
+     "0.0025",
+     "0",
+     "0",
+     "D==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "S1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S [S]",
+     ""
+    ],
+    [
+     "D",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "D [D]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

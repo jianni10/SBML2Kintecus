@@ -1,0 +1,521 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:30:32.823237+00:00",
+ "description": "Proctor2017- Role of microRNAs in osteoarthritis (Positive Feedback By Micro RNA)\nBioModels BIOMD0000000862 (curated). SBML file: Proctor2017_model0.xml.\nSimulation: 0 to 28800 time units (SED-ML: Proctor2017_model0.sedml), sampling 276.9230769230769.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.14e-06 of species peak (worst: TF1_mRNA)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time event(s) on 'Signal' encoded as time/value pairs in EV_SIGNAL.TXT (SET)\nRenamed species (Kintecus name = SBML id): Sink1 = Sink",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Proctor2017- Role of microRNAs in osteoarthritis (Positive Feedback By Micro RNA)  (BIOMD0000000862, curated BioModels; source file Proctor2017_model0.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "miR_gene_TF1_binding",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "TF1+miR_gene==>miR_gene_TF1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "miR_gene_TF1_release",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "miR_gene_TF1==>TF1+miR_gene",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "miR_gene_TF2_binding",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "TF2+miR_gene==>miR_gene_TF2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "miR_gene_TF2_release",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "miR_gene_TF2==>TF2+miR_gene",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "miR_synthesis",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "miR_gene_TF2==>miR+miR_gene_TF2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "miR_degradation",
+     ""
+    ],
+    [
+     "0.0004",
+     "0",
+     "0",
+     "miR==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TF1_transcription",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "Signal==>Signal+TF1_mRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TF1_mRNA_degradation",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "TF1_mRNA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TF1_mRNA_degradation_via_miR",
+     ""
+    ],
+    [
+     "1e-6",
+     "0",
+     "0",
+     "TF1_mRNA+miR==>miR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TF1_translation",
+     ""
+    ],
+    [
+     "0.0003",
+     "0",
+     "0",
+     "TF1_mRNA==>TF1+TF1_mRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "TF1_degradation",
+     ""
+    ],
+    [
+     "1e-5",
+     "0",
+     "0",
+     "TF1==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "miR",
+     "0",
+     "1000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "miR [miR]",
+     ""
+    ],
+    [
+     "miR_gene",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "miR_gene [miR_gene]",
+     ""
+    ],
+    [
+     "miR_gene_TF1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "miR_gene_TF1 [miR_gene_TF1]",
+     ""
+    ],
+    [
+     "miR_gene_TF2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "miR_gene_TF2 [miR_gene_TF2]",
+     ""
+    ],
+    [
+     "Signal",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "EV_SIGNAL.TXT-SET",
+     "Signal [Signal]",
+     ""
+    ],
+    [
+     "TF1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF1 [TF1]",
+     ""
+    ],
+    [
+     "TF1_mRNA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF1_mRNA [TF1_mRNA]",
+     ""
+    ],
+    [
+     "TF2",
+     "0",
+     "1000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TF2 [TF2]",
+     ""
+    ],
+    [
+     "Sink1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Sink [Sink]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "276.9230772",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "28800",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "276.9230772",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_SIGNAL.TXT",
+   "key": "O_EV_SIGNAL.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "3600",
+     "100"
+    ],
+    [
+     "7200",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

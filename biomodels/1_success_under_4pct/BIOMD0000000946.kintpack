@@ -1,0 +1,654 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:13:54.379051+00:00",
+ "description": "Evans2005 - Compartmental model for antineoplastic drug topotecan in breast cancer cells\nBioModels BIOMD0000000946 (curated). SBML file: Evans2005.xml.\nSimulation: 0 to 450 time units (SED-ML: Evans2005.sedml), sampling 0.45.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.95e-06 of species peak (worst: L_m)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Evans2005 - Compartmental model for antineoplastic drug topotecan in breast cancer cells  (BIOMD0000000946, curated BioModels; source file Evans2005.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_m/dt term 1",
+     ""
+    ],
+    [
+     "0.00029553",
+     "0",
+     "0",
+     "H_m==>L_m+H_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_m/dt term 2",
+     ""
+    ],
+    [
+     "1.2871147950000001e-6",
+     "0",
+     "0",
+     "L_e==>L_m+L_e",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_m/dt term 3",
+     ""
+    ],
+    [
+     "0.0001573874",
+     "0",
+     "0",
+     "L_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH_m/dt term 1",
+     ""
+    ],
+    [
+     "0.00015599",
+     "0",
+     "0",
+     "L_m==>H_m+L_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH_m/dt term 2",
+     ""
+    ],
+    [
+     "1.2871147950000001e-6",
+     "0",
+     "0",
+     "H_e==>H_m+H_e",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH_m/dt term 3",
+     ""
+    ],
+    [
+     "0.0002969274",
+     "0",
+     "0",
+     "H_m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_e/dt term 1",
+     ""
+    ],
+    [
+     "0.00029553",
+     "0",
+     "0",
+     "H_e==>L_e+H_e",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_e/dt term 2",
+     ""
+    ],
+    [
+     "0.09288135593220338",
+     "0",
+     "0",
+     "L_m==>L_e+L_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_e/dt term 3",
+     ""
+    ],
+    [
+     "0.02174235491141084",
+     "0",
+     "0",
+     "L_c==>L_e+L_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_e/dt term 4",
+     ""
+    ],
+    [
+     "0.10781699",
+     "0",
+     "0",
+     "L_e==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH_e/dt term 1",
+     ""
+    ],
+    [
+     "0.00015599",
+     "0",
+     "0",
+     "L_e==>H_e+L_e",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH_e/dt term 2",
+     ""
+    ],
+    [
+     "0.09288135593220338",
+     "0",
+     "0",
+     "H_m==>H_e+H_m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH_e/dt term 3",
+     ""
+    ],
+    [
+     "0.08584653",
+     "0",
+     "0",
+     "H_e==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_c/dt term 1",
+     ""
+    ],
+    [
+     "0.00031578",
+     "0",
+     "0",
+     "H_c==>L_c+H_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_c/dt term 2",
+     ""
+    ],
+    [
+     "0.021833741857659832",
+     "0",
+     "0",
+     "L_n==>L_c+L_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_c/dt term 3",
+     ""
+    ],
+    [
+     "0.008024938683547507",
+     "0",
+     "0",
+     "L_e==>L_c+L_e",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_c/dt term 4",
+     ""
+    ],
+    [
+     "0.0422864662",
+     "0",
+     "0",
+     "L_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_c/dt term 5",
+     ""
+    ],
+    [
+     "0.00038085",
+     "0",
+     "0",
+     "L_c+L_n==>2L_c+L_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH_c/dt term 1",
+     ""
+    ],
+    [
+     "0.00012913",
+     "0",
+     "0",
+     "L_c==>H_c+L_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH_c/dt term 2",
+     ""
+    ],
+    [
+     "6.149956574185766e-8",
+     "0",
+     "0",
+     "L_n==>H_c+L_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH_c/dt term 3",
+     ""
+    ],
+    [
+     "0.00031578",
+     "0",
+     "0",
+     "H_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_n/dt term 1",
+     ""
+    ],
+    [
+     "0.0871361294779141",
+     "0",
+     "0",
+     "L_c==>L_n+L_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_n/dt term 2",
+     ""
+    ],
+    [
+     "0.05552215639",
+     "0",
+     "0",
+     "L_n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dL_n/dt term 3",
+     ""
+    ],
+    [
+     "0.0009684805214723927",
+     "0",
+     "0",
+     "L_n+L_c==>L_c",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "L_m",
+     "0",
+     "10.00015045",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L_m [L_m]",
+     ""
+    ],
+    [
+     "H_m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "H_m [H_m]",
+     ""
+    ],
+    [
+     "L_e",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L_e [L_e]",
+     ""
+    ],
+    [
+     "H_e",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "H_e [H_e]",
+     ""
+    ],
+    [
+     "L_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L_c [L_c]",
+     ""
+    ],
+    [
+     "H_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "H_c [H_c]",
+     ""
+    ],
+    [
+     "L_n",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L_n [L_n]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.45",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "450",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.45",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

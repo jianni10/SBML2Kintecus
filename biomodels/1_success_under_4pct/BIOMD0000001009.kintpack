@@ -1,0 +1,895 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:46:56.065344+00:00",
+ "description": "Zhang2007 - Mechanism of DNA damage response (Model2)\nBioModels BIOMD0000001009 (curated). SBML file: Zhang2007_M2_low_dose.xml.\nSimulation: 0 to 100 time units (SED-ML: Zhang2007_M2_high_dose.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.01e-05 of species peak (worst: p53_act)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'p53_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'DNAdamage' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] p53_inact_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] p53_act_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Zhang2007 - Mechanism of DNA damage response (Model2)  (BIOMD0000001009, curated BioModels; source file Zhang2007_M2_low_dose.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2cyt_production term 1/2",
+     ""
+    ],
+    [
+     "0.182",
+     "0",
+     "0",
+     "source==>MDM2cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2cyt_production term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp53_act:(3*cp53_act^3/(cp53_act^3+0.3429999999999999))]==>MDM2cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2cyt_translocation term 1/2",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "MDM2cyt==>MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2cyt_translocation term 2/2",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "MDM2nuc==>MDM2cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2cyt_degradation",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "MDM2cyt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 1/28",
+     ""
+    ],
+    [
+     "0.14125000000000001",
+     "0",
+     "0",
+     "MDM2nuc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 2/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.27225000000000005/(2*abs(0.05*cTIME_-3.3000000000000003)+2e-300))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 3/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(1361.2500000000002/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)^2+8e-300*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+0*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 4/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(206.25000000000003/(2*abs(cTIME_-50)^2+4e-300*abs(cTIME_-50)+0))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 5/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(13.612500000000002/(2*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+2e-300*abs(0.05*cTIME_-3.3000000000000003)+2e-300*abs(cTIME_-50)+0))]==>2MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 6/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(27.225000000000005/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+4e-300*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)+0))]==>2MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 7/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(2.0625000000000004/(abs(cTIME_-50)+1e-300))]==>2MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 8/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(4.125000000000001/(2*abs(cTIME_-50)+2e-300))]==>2MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 9/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.0006250000000000001*cTIME_)]==>2MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 10/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.07250000000000001*cTIME_/(abs(cTIME_-50)+1e-300))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 11/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.14500000000000002*cTIME_/(2*abs(cTIME_-50)+2e-300))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 12/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.20750000000000002*cTIME_^2/(2*abs(cTIME_-50)^2+4e-300*abs(cTIME_-50)+0))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 13/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(6.250000000000001e-5*cTIME_^2/(2*abs(0.05*cTIME_-3.3000000000000003)+2e-300))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 14/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(6.250000000000001e-5*cTIME_^3/(2*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+2e-300*abs(0.05*cTIME_-3.3000000000000003)+2e-300*abs(cTIME_-50)+0))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 15/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.00012500000000000003*cTIME_^3/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+4e-300*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)+0))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 16/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.00012500000000000003*cTIME_^4/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)^2+8e-300*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+0*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 17/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.6847500000000001*cTIME_/(2*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+2e-300*abs(0.05*cTIME_-3.3000000000000003)+2e-300*abs(cTIME_-50)+0))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 18/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(1.3695000000000002*cTIME_/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+4e-300*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)+0))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 19/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(2.5070000000000006*cTIME_^2/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)^2+8e-300*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+0*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 20/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(11.375000000000002*cTIME_/(2*abs(cTIME_-50)^2+4e-300*abs(cTIME_-50)+0))]==>2MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 21/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(95.70000000000002*cTIME_/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)^2+8e-300*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+0*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>2MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 22/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.008250000000000002*cTIME_/(2*abs(0.05*cTIME_-3.3000000000000003)+2e-300))]==>2MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 23/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.0006250000000000001*cTIME_^2/(abs(cTIME_-50)+1e-300))]==>2MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 24/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.0012500000000000002*cTIME_^2/(2*abs(cTIME_-50)+2e-300))]==>2MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 25/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.0012500000000000002*cTIME_^3/(2*abs(cTIME_-50)^2+4e-300*abs(cTIME_-50)+0))]==>2MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 26/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.011375000000000001*cTIME_^2/(2*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+2e-300*abs(0.05*cTIME_-3.3000000000000003)+2e-300*abs(cTIME_-50)+0))]==>2MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 27/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.022750000000000003*cTIME_^2/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+4e-300*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)+0))]==>2MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MDM2nuc_degradation term 28/28",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDM2nuc+S[USER;cTIME_:(0.029000000000000005*cTIME_^3/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)^2+8e-300*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+0*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>2MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_inact_production",
+     ""
+    ],
+    [
+     "0.6",
+     "0",
+     "0",
+     "source==>p53_inact",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_activation term 1/3",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "p53_inact==>p53_act",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_activation term 2/3",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "p53_act==>p53_inact",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_activation term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p53_inact+S[USER;cp53_act:(5*cp53_act^3/(cp53_act^3+0.008000000000000002))]==>p53_act",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_inact_degradation term 1/2",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "p53_inact==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_inact_degradation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p53_inact+MDM2nuc+S[USER;cMDM2nuc,cp53_act,cp53_inact:(1.6*(cp53_act+cp53_inact)/(0.1*cMDM2nuc*cp53_act+0.1*cMDM2nuc*(cp53_inact+1e-30)+0.08000000000000002*cp53_act+0.08000000000000002*cp53_inact+(cp53_act+cp53_inact+1e-30)*(-cMDM2nuc*cp53_act-cMDM2nuc*(cp53_inact+1e-30)+cp53_act*(0.4*cMDM2nuc^2/(cp53_act+cp53_inact+1e-30)-0.32000000000000006*cMDM2nuc/(cp53_act+cp53_inact+1e-30)+(-cMDM2nuc+0.1*cMDM2nuc/(cp53_act+cp53_inact+1e-30)+0.8+0.08000000000000002/(cp53_act+cp53_inact+1e-30))^2)^0.5+0.8*cp53_act+0.8*cp53_inact+(cp53_inact+1e-30)*(0.4*cMDM2nuc^2/(cp53_act+cp53_inact+1e-30)-0.32000000000000006*cMDM2nuc/(cp53_act+cp53_inact+1e-30)+(-cMDM2nuc+0.1*cMDM2nuc/(cp53_act+cp53_inact+1e-30)+0.8+0.08000000000000002/(cp53_act+cp53_inact+1e-30))^2)^0.5+8e-31)+8.000000000000002e-32))]==>MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_act_degradation term 1/2",
+     ""
+    ],
+    [
+     "0.3",
+     "0",
+     "0",
+     "p53_act==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "p53_act_degradation term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p53_act+MDM2nuc+S[USER;cMDM2nuc,cp53_act,cp53_inact:(1.6*(cp53_act+cp53_inact)/(0.1*cMDM2nuc*cp53_inact+0.1*cMDM2nuc*(cp53_act+1e-30)+0.08000000000000002*cp53_act+0.08000000000000002*cp53_inact+(cp53_act+cp53_inact+1e-30)*(-cMDM2nuc*cp53_inact-cMDM2nuc*(cp53_act+1e-30)+0.8*cp53_act+cp53_inact*(0.4*cMDM2nuc^2/(cp53_act+cp53_inact+1e-30)-0.32000000000000006*cMDM2nuc/(cp53_act+cp53_inact+1e-30)+(-cMDM2nuc+0.1*cMDM2nuc/(cp53_act+cp53_inact+1e-30)+0.8+0.08000000000000002/(cp53_act+cp53_inact+1e-30))^2)^0.5+0.8*cp53_inact+(cp53_act+1e-30)*(0.4*cMDM2nuc^2/(cp53_act+cp53_inact+1e-30)-0.32000000000000006*cMDM2nuc/(cp53_act+cp53_inact+1e-30)+(-cMDM2nuc+0.1*cMDM2nuc/(cp53_act+cp53_inact+1e-30)+0.8+0.08000000000000002/(cp53_act+cp53_inact+1e-30))^2)^0.5+8e-31)+8.000000000000002e-32))]==>MDM2nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "MDM2cyt",
+     "0",
+     "0.21",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MDM2cyt [MDM2cyt]",
+     ""
+    ],
+    [
+     "MDM2nuc",
+     "0",
+     "0.55",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MDM2nuc [MDM2nuc]",
+     ""
+    ],
+    [
+     "p53_inact",
+     "0",
+     "0.19",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p53_inact [p53_inact]",
+     ""
+    ],
+    [
+     "p53_act",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "p53_act [p53_act]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

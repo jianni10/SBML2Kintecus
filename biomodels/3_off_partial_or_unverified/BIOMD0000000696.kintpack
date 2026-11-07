@@ -1,0 +1,793 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:18:18.166297+00:00",
+ "description": "Boada2016 - Incoherent type 1 feed-forward loop (I1-FFL)\nBioModels BIOMD0000000696 (curated). SBML file: BIOMD0000000696_url.xml.\nSimulation: 0 to 50 time units (SED-ML: MODEL1511290000.sedml), sampling 0.05.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 1.00e+00 of species peak (worst: sum_abs_dx8)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 1.00e+00 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r019___AI2_dim_3 term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - x3: zero order, signed; x2: zero order, signed\n  [info] r020___AI2_dim_4 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - x4: zero order, signed\n  [blocker] rate rule for 'sum_abs_dx8' not converted (MathML node 'rateOf')\n  [blocker] rate rule for 'P_theta' not converted (MathML node 'rateOf')\nRenamed species (Kintecus name = SBML id): p_sum_abs_dx8 = sum_abs_dx8; p_P_theta = P_theta",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Boada2016 - Incoherent type 1 feed-forward loop (I1-FFL)  (BIOMD0000000696, curated BioModels; source file BIOMD0000000696_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r001___mA_transcription",
+     ""
+    ],
+    [
+     "104",
+     "0",
+     "0",
+     "source==>x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r002___A_translation",
+     ""
+    ],
+    [
+     "80",
+     "0",
+     "0",
+     "x1==>x2+x1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r003___mA_degradation",
+     ""
+    ],
+    [
+     "0.3624",
+     "0",
+     "0",
+     "x1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r004___A_degradation",
+     ""
+    ],
+    [
+     "0.035",
+     "0",
+     "0",
+     "x2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r005___AI2_dim_1",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "x3+x2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r006a___I_transport",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "x3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r007___I_degradation",
+     ""
+    ],
+    [
+     "0.0164",
+     "0",
+     "0",
+     "x3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r008___Ie_degradation",
+     ""
+    ],
+    [
+     "0.0164",
+     "0",
+     "0",
+     "x9==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r009___AI2_degradation",
+     ""
+    ],
+    [
+     "0.035",
+     "0",
+     "0",
+     "x4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r010___mB_transcription",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x4+S[USER;cx4:(1/(cx4+107.4))]==>x5+x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r011___B_translation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x5==>x5+x6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r012___B_degradation",
+     ""
+    ],
+    [
+     "0.016",
+     "0",
+     "0",
+     "x6==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r013___mB_degradation",
+     ""
+    ],
+    [
+     "0.3624",
+     "0",
+     "0",
+     "x5==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r014___mC_transcription term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x4+S[USER;cx4,cx6:(1/(8.56*cx4*cx6+0.01*cx4+1.15*cx6+0.2))]==>x7+x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r014___mC_transcription term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x6+S[USER;cx4,cx6:(0.057499999999999996/(8.56*cx4*cx6+0.01*cx4+1.15*cx6+0.2))]==>x7+x6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r014___mC_transcription term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x4+x6+S[USER;cx4,cx6:(0.42800000000000005/(8.56*cx4*cx6+0.01*cx4+1.15*cx6+0.2))]==>x7+x4+x6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r015___C_translation",
+     ""
+    ],
+    [
+     "11.42",
+     "0",
+     "0",
+     "x7==>x8+x7",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r016___C_degradation",
+     ""
+    ],
+    [
+     "0.2784",
+     "0",
+     "0",
+     "x8==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r017___mC_degradation",
+     ""
+    ],
+    [
+     "0.3624",
+     "0",
+     "0",
+     "x7==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r018___AI2_dim_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r019___AI2_dim_3 term 1/2 (consumes x3)",
+     ""
+    ],
+    [
+     "-1001.75",
+     "0",
+     "0",
+     "source==>x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r019___AI2_dim_3 term 1/2 (consumes x2)",
+     ""
+    ],
+    [
+     "-1001.75",
+     "0",
+     "0",
+     "source==>x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r019___AI2_dim_3 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx2,cx3,cx4:(50*sqrt(0.08000000000000002*cx2*cx3+1.6*cx4+401.401225))]==>x3+x2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r020___AI2_dim_4 term 1/4",
+     ""
+    ],
+    [
+     "501.75153124999997",
+     "0",
+     "0",
+     "source==>x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r020___AI2_dim_4 term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x4==>2x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r020___AI2_dim_4 term 3/4 (consumes x4)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cx2,cx3,cx4:((-1*25.04375*sqrt(0.08000000000000002*cx2*cx3+1.6*cx4+401.401225)))]==>x4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r020___AI2_dim_4 term 4/4",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "x2+x3==>x4+x2+x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r006b___I_transport",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "x9==>x9+x3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r006c___I_transport",
+     ""
+    ],
+    [
+     "8.000000000000001e-11",
+     "0",
+     "0",
+     "x9==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r006d___I_transport",
+     ""
+    ],
+    [
+     "8.000000000000001e-11",
+     "0",
+     "0",
+     "x3==>x9+x3",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x1",
+     "0",
+     "12.397350993377483",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x1 [x1]",
+     ""
+    ],
+    [
+     "x2",
+     "0",
+     "28336.8022705771",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x2 [x2]",
+     ""
+    ],
+    [
+     "x3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x3 [x3]",
+     ""
+    ],
+    [
+     "x4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x4 [x4]",
+     ""
+    ],
+    [
+     "x5",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x5 [x5]",
+     ""
+    ],
+    [
+     "x6",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x6 [x6]",
+     ""
+    ],
+    [
+     "x7",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x7 [x7]",
+     ""
+    ],
+    [
+     "x8",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x8 [x8]",
+     ""
+    ],
+    [
+     "x9",
+     "0",
+     "9000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x9 [x9]",
+     ""
+    ],
+    [
+     "p_sum_abs_dx8",
+     "0",
+     "1e-15",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter sum_abs_dx8 [sum_abs_dx8]",
+     ""
+    ],
+    [
+     "p_P_theta",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter P_theta [P_theta]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.05",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "50",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.05",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

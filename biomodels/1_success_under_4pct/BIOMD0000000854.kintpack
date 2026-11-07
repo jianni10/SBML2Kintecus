@@ -1,0 +1,372 @@
+{
+ "version": 3,
+ "created": "2026-10-25T11:38:18.512307+00:00",
+ "description": "Gray2016 - The Akt switch model\nBioModels BIOMD0000000854 (curated). SBML file: Gray2016.xml.\nSimulation: 0 to 30 time units (SED-ML: Gray2016.sedml), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.71e-06 of species peak (worst: Pc)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Gray2016 - The Akt switch model  (BIOMD0000000854, curated BioModels; source file Gray2016.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AktP_Dephosphorylation_Cytosol",
+     ""
+    ],
+    [
+     "0.35",
+     "0",
+     "0",
+     "Pc==>Ac",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Akt_Translocation_Cytosol_PM_Insulin",
+     ""
+    ],
+    [
+     "0.007700000000000001",
+     "0",
+     "0",
+     "Ac==>Ap",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Akt_Translocation_PM_Cytosol",
+     ""
+    ],
+    [
+     "0.55",
+     "0",
+     "0",
+     "Ap==>Ac",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AktP_Translocation_PM_Cytosol",
+     ""
+    ],
+    [
+     "0.55",
+     "0",
+     "0",
+     "Pp==>Pc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AktP_Translocation_Cytosol_PM_Insulin",
+     ""
+    ],
+    [
+     "0.007700000000000001",
+     "0",
+     "0",
+     "Pc==>Pp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AktP_Dephosphorylation_PM",
+     ""
+    ],
+    [
+     "0.35",
+     "0",
+     "0",
+     "Pp==>Ap",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Akt_Phosphorylation_PM_Equilibrium",
+     ""
+    ],
+    [
+     "0.77",
+     "0",
+     "0",
+     "Ap==>Pp",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Ac",
+     "0",
+     "0.95",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ac [Ac]",
+     ""
+    ],
+    [
+     "Pc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pc [Pc]",
+     ""
+    ],
+    [
+     "Ap",
+     "0",
+     "0.05",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ap [Ap]",
+     ""
+    ],
+    [
+     "Pp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pp [Pp]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-06",
+     "0.03",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.03",
+     "0",
+     "1e-08",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

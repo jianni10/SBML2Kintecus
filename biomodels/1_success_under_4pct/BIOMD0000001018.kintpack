@@ -1,0 +1,968 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:15:36.505650+00:00",
+ "description": "Bakshi2020 - Properdin model of alternative pathway of complement system\nBioModels BIOMD0000001018 (curated). SBML file: Bakshi2020 properdin model.xml.\nSimulation: 0 to 8640 time units (SED-ML: Bakshi2020 properdin model.sedml), sampling 8.64.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.63e-06 of species peak (worst: C3b)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'C3b_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'C3bB_closed_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'C3bB_open_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'C3bBb_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] C3_hydrolysis term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] C3_hydrolysis term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] C3_convertase_formation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] C3b_inactivation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] C3bBbP_formation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bakshi2020 - Properdin model of alternative pathway of complement system  (BIOMD0000001018, curated BioModels; source file Bakshi2020 properdin model.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3_hydrolysis term 1/3",
+     ""
+    ],
+    [
+     "0.0001",
+     "0",
+     "0",
+     "C3==>C3b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3_hydrolysis term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C3+C3bBb+S[USER;cC3:(107/(1*cC3+5.86))]==>C3b+C3bBb",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3_hydrolysis term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C3+C3bBbP+S[USER;cC3:(107/(1*cC3+5.86))]==>C3b+C3bBbP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bB_formation term 1/2",
+     ""
+    ],
+    [
+     "6.9",
+     "0",
+     "0",
+     "C3bB_closed==>Factor_B+C3b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bB_formation term 2/2",
+     ""
+    ],
+    [
+     "0.816",
+     "0",
+     "0",
+     "Factor_B+C3b==>C3bB_closed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bB_conformational_change term 1/2",
+     ""
+    ],
+    [
+     "0.33",
+     "0",
+     "0",
+     "C3bB_closed==>C3bB_open",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bB_conformational_change term 2/2",
+     ""
+    ],
+    [
+     "0.1068",
+     "0",
+     "0",
+     "C3bB_open==>C3bB_closed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3_convertase_formation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C3bB_open+S[USER;cC3bBP_open,cC3bB_open:(10.4/(1*cC3bBP_open+1*cC3bB_open+0.72))]==>C3bBb",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Factor_H_binding_C3_convertase term 1/2",
+     ""
+    ],
+    [
+     "195",
+     "0",
+     "0",
+     "C3bBbH==>Factor_H+C3bBb",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Factor_H_binding_C3_convertase term 2/2",
+     ""
+    ],
+    [
+     "312",
+     "0",
+     "0",
+     "Factor_H+C3bBb==>C3bBbH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Factor_H_induced__C3_convertase_decay",
+     ""
+    ],
+    [
+     "0.832",
+     "0",
+     "0",
+     "C3bBbH==>Bb+Factor_H+C3b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3_convertase_decay",
+     ""
+    ],
+    [
+     "0.46",
+     "0",
+     "0",
+     "C3bBb==>Bb+C3b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Factor_H_binding_C3b term 1/2",
+     ""
+    ],
+    [
+     "195",
+     "0",
+     "0",
+     "C3bH==>Factor_H+C3b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Factor_H_binding_C3b term 2/2",
+     ""
+    ],
+    [
+     "312",
+     "0",
+     "0",
+     "Factor_H+C3b==>C3bH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3b_inactivation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C3bH+S[USER;cC3bH:(31.200000000000003/(1*cC3bH+0.25))]==>Factor_H+iC3b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3_synthesis",
+     ""
+    ],
+    [
+     "0.00316",
+     "0",
+     "0",
+     "source==>C3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3_degradation",
+     ""
+    ],
+    [
+     "0.000392",
+     "0",
+     "0",
+     "C3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Factor_B_synthesis",
+     ""
+    ],
+    [
+     "0.000798",
+     "0",
+     "0",
+     "source==>Factor_B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Factor_B_degradation",
+     ""
+    ],
+    [
+     "0.000333",
+     "0",
+     "0",
+     "Factor_B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Factor_H_synthesis",
+     ""
+    ],
+    [
+     "0.00067",
+     "0",
+     "0",
+     "source==>Factor_H",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Factor_H_degradation",
+     ""
+    ],
+    [
+     "0.00022",
+     "0",
+     "0",
+     "Factor_H==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bP_association term 1/2",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "C3bP==>Properdin+C3b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bP_association term 2/2",
+     ""
+    ],
+    [
+     "0.87",
+     "0",
+     "0",
+     "Properdin+C3b==>C3bP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bBP_formation term 1/2",
+     ""
+    ],
+    [
+     "6.9",
+     "0",
+     "0",
+     "C3bBP_open==>C3bP+Factor_B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bBP_formation term 2/2",
+     ""
+    ],
+    [
+     "0.816",
+     "0",
+     "0",
+     "C3bP+Factor_B==>C3bBP_open",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bBP_conformational_change term 1/2",
+     ""
+    ],
+    [
+     "0.33",
+     "0",
+     "0",
+     "C3bBP_closed==>C3bBP_open",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bBP_conformational_change term 2/2",
+     ""
+    ],
+    [
+     "0.1068",
+     "0",
+     "0",
+     "C3bBP_open==>C3bBP_closed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bBbP_formation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C3bBP_open+S[USER;cC3bBP_open,cC3bB_open:(10.4/(1*cC3bBP_open+1*cC3bB_open+0.72))]==>C3bBbP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bBbP_dissociation term 1/2",
+     ""
+    ],
+    [
+     "0.028",
+     "0",
+     "0",
+     "C3bBbP==>Properdin+C3bBb",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bBbP_dissociation term 2/2",
+     ""
+    ],
+    [
+     "0.87",
+     "0",
+     "0",
+     "Properdin+C3bBb==>C3bBbP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bBbP_decay",
+     ""
+    ],
+    [
+     "0.023",
+     "0",
+     "0",
+     "C3bBbP==>Bb+Properdin+C3b",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bBP_closed_association term 1/2",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "C3bBP_closed==>Properdin+C3bB_closed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bBP_closed_association term 2/2",
+     ""
+    ],
+    [
+     "0.87",
+     "0",
+     "0",
+     "Properdin+C3bB_closed==>C3bBP_closed",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bBP_open_assocation term 1/2",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "C3bBP_open==>Properdin+C3bB_open",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "C3bBP_open_assocation term 2/2",
+     ""
+    ],
+    [
+     "0.87",
+     "0",
+     "0",
+     "Properdin+C3bB_open==>C3bBP_open",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Properdin_synthesis",
+     ""
+    ],
+    [
+     "7e-5",
+     "0",
+     "0",
+     "source==>Properdin",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Properdin_degradation",
+     ""
+    ],
+    [
+     "0.00016",
+     "0",
+     "0",
+     "Properdin==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "C3",
+     "0",
+     "6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3 [C3]",
+     ""
+    ],
+    [
+     "C3b",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3b [C3b]",
+     ""
+    ],
+    [
+     "C3bB_closed",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3bB_closed [C3bB_closed]",
+     ""
+    ],
+    [
+     "C3bB_open",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3bB_open [C3bB_open]",
+     ""
+    ],
+    [
+     "C3bBb",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3bBb [C3bBb]",
+     ""
+    ],
+    [
+     "C3bBbH",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3bBbH [C3bBbH]",
+     ""
+    ],
+    [
+     "Bb",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Bb [Bb]",
+     ""
+    ],
+    [
+     "Factor_H",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Factor_H [Factor_H]",
+     ""
+    ],
+    [
+     "Factor_B",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Factor_B [Factor_B]",
+     ""
+    ],
+    [
+     "C3bH",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3bH [C3bH]",
+     ""
+    ],
+    [
+     "Factor_I",
+     "0",
+     "0.4",
+     "Y",
+     "0",
+     "No",
+     "0.4",
+     "Factor_I [Factor_I]",
+     ""
+    ],
+    [
+     "iC3b",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iC3b [iC3b]",
+     ""
+    ],
+    [
+     "Factor_D",
+     "0",
+     "0.08",
+     "Y",
+     "0",
+     "No",
+     "0.08",
+     "Factor_D [Factor_D]",
+     ""
+    ],
+    [
+     "Properdin",
+     "0",
+     "0.3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Properdin [Properdin]",
+     ""
+    ],
+    [
+     "C3bBP_closed",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3bBP_closed [C3bBP_closed]",
+     ""
+    ],
+    [
+     "C3bBP_open",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3bBP_open [C3bBP_open]",
+     ""
+    ],
+    [
+     "C3bBbP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3bBbP [C3bBbP]",
+     ""
+    ],
+    [
+     "C3bP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C3bP [C3bP]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "8.64",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "8640",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "8.64",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

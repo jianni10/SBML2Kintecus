@@ -1,0 +1,783 @@
+{
+ "version": 3,
+ "created": "2026-11-03T22:05:28.224024+00:00",
+ "description": "Hoefnagel2002_PyruvateBranches\nBioModels BIOMD0000000017 (curated). SBML file: BIOMD0000000017_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000017_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.21e-06 of species peak (worst: AcO)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R2 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R2 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R3: USER expression is 1138 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] R4 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R4 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R5 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R5 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R6 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R6 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R7 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R7 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R8 term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - Q3: first order\n  [info] R8 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R11 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R11 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R12: rate order differs from the stoichiometry; consumed on separate line(s) - ATP: zero order, signed\n  [info] R13: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] 3 species/parameters given short names (Q1...) so USER expressions fit Kintecus's expression length limit; original ids are in the SPECIES comments column\nRenamed species (Kintecus name = SBML id): Q2 = NADH; Q3 = pyruvate; Q1 = AcCoA",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hoefnagel2002_PyruvateBranches  (BIOMD0000000017, curated BioModels; source file BIOMD0000000017_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ADP+NAD+S[USER;cADP,cATP,cNAD,cQ2,cQ3:(108380000.08440107/(3213.4496701425837*cADP+238.07918192183826*cATP*cQ2*cQ3+89874.89117549393*cATP*cQ2+151.7333256455115*cATP*cQ3*(cNAD+1e-30)+21.424745581146226*cATP*cQ3+57279.33043118059*cATP*(cNAD+1e-30)+8087.841456882699*cATP+1069.4050991501417*cNAD+94.59328211280528*cQ2*cQ3*(cADP+1e-30)+4.44493832648072*cQ2*cQ3+35708.963997584*cQ2*(cADP+1e-30)+1677.9642182464718*cQ2+60.28646924455629*cQ3*(cADP+1e-30)*(cNAD+1e-30)+8.512449457331348*cQ3*(cADP+1e-30)+2.8328611898017*cQ3*(cNAD+1e-30)+0.4*cQ3+22758.142139819996*(cADP+1e-30)*(cNAD+1e-30)+151))]==>ATP+Q2+Q3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NAD+S[USER;cNAD,cQ2,cQ3:(0.20193469058065813/(0.41708333333333336*cNAD+8.333333333333334*cQ2*cQ3+12.5125*cQ2+0.2777777777777778*cQ3*(cNAD+1e-30)+0.6666666666666666*cQ3+1.001))]==>Q2+Q3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q2+Q3+S[USER;cNAD,cQ2,cQ3:(42650/(0.2777777777777778*cNAD*(cQ3+1e-30)+0.41708333333333336*cNAD+12.5125*cQ2+0.6666666666666666*cQ3+8.333333333333334*(cQ2+1e-30)*(cQ3+1e-30)+1.001))]==>NAD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CoA+NAD+Q3+S[USER;cCoA,cNAD,cQ1,cQ2,cQ3:(46250*cNAD/(1*cNAD+58019.875*cQ1*(cQ2*cQ2)*(cQ3+1e-30)+58019.875*cQ1*(cQ2*cQ2)+15754.968749999998*cQ1*cQ2*(cNAD+1e-30)*(cQ3+1e-30)+15754.968749999998*cQ1*cQ2*(cNAD+1e-30)+5801.9875*cQ1*cQ2*(cQ3+1e-30)+5801.9875*cQ1*cQ2+312.5*cQ1*((cNAD+1e-30)*(cNAD+1e-30))*(cQ3+1e-30)+312.5*cQ1*((cNAD+1e-30)*(cNAD+1e-30))+125*cQ1*(cNAD+1e-30)*(cQ3+1e-30)+125*cQ1*(cNAD+1e-30)+33154.21428571428*(cQ2*cQ2)*(cCoA+1e-30)*(cQ3+1e-30)+33154.21428571428*(cQ2*cQ2)*(cCoA+1e-30)+464.159*(cQ2*cQ2)*(cQ3+1e-30)+464.159*(cQ2*cQ2)+9002.839285714284*cQ2*(cCoA+1e-30)*(cNAD+1e-30)*(cQ3+1e-30)+9002.839285714284*cQ2*(cCoA+1e-30)*(cNAD+1e-30)+3315.4214285714284*cQ2*(cCoA+1e-30)*(cQ3+1e-30)+3315.4214285714284*cQ2*(cCoA+1e-30)+126.03975*cQ2*(cNAD+1e-30)*(cQ3+1e-30)+126.03975*cQ2*(cNAD+1e-30)+46.4159*cQ2*(cQ3+1e-30)+46.4159*cQ2+178.57142857142856*(cCoA+1e-30)*((cNAD+1e-30)*(cNAD+1e-30))*(cQ3+1e-30)+178.57142857142856*(cCoA+1e-30)*((cNAD+1e-30)*(cNAD+1e-30))+71.42857142857143*(cCoA+1e-30)*(cNAD+1e-30)*(cQ3+1e-30)+71.42857142857143*(cCoA+1e-30)*(cNAD+1e-30)+2.5*((cNAD+1e-30)*(cNAD+1e-30))*(cQ3+1e-30)+2.5*((cNAD+1e-30)*(cNAD+1e-30))+1*(cNAD+1e-30)*(cQ3+1e-30)+1e-30))]==>Q1+Q2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q1+S[USER;cAcP,cCoA,cQ1:(807.6923076923076/(49.26108374384236*cAcP*cCoA+5*cAcP+34.48275862068965*cCoA+24.23076923076923*cQ1+4.846153846153846))]==>AcP+CoA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AcP+CoA+S[USER;cAcP,cCoA,cQ1:(12426.035502958579/(5*cAcP+34.48275862068965*cCoA+24.23076923076923*cQ1+49.26108374384236*(cAcP+1e-30)*(cCoA+1e-30)+4.846153846153846))]==>Q1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ATP+S[USER;cADP,cATP,cAcP:(193.72391902053184/(12.5*cADP*cAcP+2.2857142857142856*cADP+16.326530612244895*cATP+89.28571428571428*cAcP*(cATP+1e-30)+6.25*cAcP+1.1428571428571428))]==>ADP+AcP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ADP+AcP+S[USER;cADP,cATP,cAcP:(33750/(2.2857142857142856*cADP+89.28571428571428*cATP*(cAcP+1e-30)+16.326530612244895*cATP+6.25*cAcP+12.5*(cADP+1e-30)*(cAcP+1e-30)+1.1428571428571428))]==>ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q1+Q2+S[USER;cAcO,cCoA,cNAD,cQ1,cQ2:(554285.7142857142/(156.25*cAcO*cCoA*cNAD+499.99999999999994*cAcO*cCoA*(cQ2+1e-30)+12.5*cAcO*cCoA+178.57142857142856*cAcO*cNAD*(cQ1+1e-30)+1.25*cAcO*cNAD+571.4285714285713*cAcO*(cQ1+1e-30)*(cQ2+1e-30)+14.285714285714285*cAcO*(cQ1+1e-30)+4*cAcO*(cQ2+1e-30)+0.1*cAcO+1562.5*cCoA*cNAD+5000*cCoA*(cQ2+1e-30)+125*cCoA+1785.7142857142856*cNAD*(cQ1+1e-30)+12.5*cNAD+142.85714285714286*cQ1+40*cQ2+5714.285714285714*(cQ1+1e-30)*(cQ2+1e-30)+1))]==>AcO+CoA+NAD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AcO+CoA+NAD+S[USER;cAcO,cCoA,cNAD,cQ1,cQ2:(554285.7142857142/(0.1*cAcO+125*cCoA+12.5*cNAD+571.4285714285713*cQ1*cQ2*(cAcO+1e-30)+5714.285714285714*cQ1*cQ2+178.57142857142856*cQ1*(cAcO+1e-30)*(cNAD+1e-30)+14.285714285714285*cQ1*(cAcO+1e-30)+1785.7142857142856*cQ1*(cNAD+1e-30)+142.85714285714286*cQ1+499.99999999999994*cQ2*(cAcO+1e-30)*(cCoA+1e-30)+4*cQ2*(cAcO+1e-30)+5000*cQ2*(cCoA+1e-30)+40*cQ2+156.25*(cAcO+1e-30)*(cCoA+1e-30)*(cNAD+1e-30)+12.5*(cAcO+1e-30)*(cCoA+1e-30)+1.25*(cAcO+1e-30)*(cNAD+1e-30)+1562.5*(cCoA+1e-30)*(cNAD+1e-30)+1))]==>Q1+Q2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NAD+S[USER;cAcO,cNAD,cQ2:(8.7414709953136/(666.6666666666666*cAcO*cQ2+416.6666666666667*cAcO*(cNAD+1e-30)+33.333333333333336*cAcO+25*cNAD+40*cQ2+2))]==>AcO+Q2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AcO+Q2+S[USER;cAcO,cNAD,cQ2:(108000/(33.333333333333336*cAcO+416.6666666666667*cNAD*(cAcO+1e-30)+25*cNAD+40*cQ2+666.6666666666666*(cAcO+1e-30)*(cQ2+1e-30)+2))]==>NAD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAcLac,cQ3:(12*cQ3*(0.01*cAcLac+0.02*cQ3)^1.4/((0.01*cAcLac+0.02*cQ3)^2.4+1))]==>AcLac",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8 term 1/2 (consumes Q3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q3+S[USER;cAcLac,cQ3:(24*(0.01*cAcLac+0.02*cQ3)^1.4/(1*(0.01*cAcLac+0.02*cQ3)^2.4+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AcLac+S[USER;cAcLac,cQ3:(1.3333333333333334e-12*(0.01*cAcLac+0.02*cQ3)^1.4/(1*(0.01*cAcLac+0.02*cQ3+1e-32)^2.4+1))]==>2Q3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AcLac+S[USER;cAcLac,cAcetoinIn:(10.6/(0.1*cAcLac+0.01*cAcetoinIn+1))]==>AcetoinIn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AcetoinIn+S[USER;cAcetoinIn:(40/(0.2*cAcetoinIn+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NAD+S[USER;cAcetoinIn,cNAD,cQ2:(0.625/(833.3333333333334*cAcetoinIn*cQ2+104.16666666666667*cAcetoinIn*(cNAD+1e-30)+16.666666666666668*cAcetoinIn+6.274038461538462*cNAD+50.19230769230769*cQ2+1.0038461538461538))]==>AcetoinIn+Q2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "AcetoinIn+Q2+S[USER;cAcetoinIn,cNAD,cQ2:(87500/(16.666666666666668*cAcetoinIn+104.16666666666667*cNAD*(cAcetoinIn+1e-30)+6.274038461538462*cNAD+50.19230769230769*cQ2+833.3333333333334*(cAcetoinIn+1e-30)*(cQ2+1e-30)+1.0038461538461538))]==>NAD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cADP,cATP:(8.139450268351933*(cATP/cADP)^2.58/(0.009043833631502147*(cATP/cADP)^2.58+1))]==>ADP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 (consumes ATP)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cADP,cATP:((-1*8.139450268351933*(cATP/cADP)^2.58/(0.009043833631502147*(cATP/cADP)^2.58+1)))]==>ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q2+S[USER;cNAD,cQ2:(2878.048780487805/(2*cNAD+48.78048780487805*cQ2+2))]==>NAD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R14",
+     ""
+    ],
+    [
+     "0.0003",
+     "0",
+     "0",
+     "AcLac==>AcetoinIn",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "ADP",
+     "0",
+     "4.9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ADP [ADP]",
+     ""
+    ],
+    [
+     "NAD",
+     "0",
+     "6.33",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NAD [NAD]",
+     ""
+    ],
+    [
+     "ATP",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP [ATP]",
+     ""
+    ],
+    [
+     "Q2",
+     "0",
+     "3.67",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADH [NADH]",
+     ""
+    ],
+    [
+     "Q3",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pyruvate [pyruvate]",
+     ""
+    ],
+    [
+     "lactate",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "0.1",
+     "lactate [lactate]",
+     ""
+    ],
+    [
+     "CoA",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CoA [CoA]",
+     ""
+    ],
+    [
+     "halfglucose",
+     "0",
+     "30",
+     "Y",
+     "0",
+     "No",
+     "30",
+     "halfglucose [halfglucose]",
+     ""
+    ],
+    [
+     "Q1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AcCoA [AcCoA]",
+     ""
+    ],
+    [
+     "AcP",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AcP [AcP]",
+     ""
+    ],
+    [
+     "Ac",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "Ac [Ac]",
+     ""
+    ],
+    [
+     "AcO",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AcO [AcO]",
+     ""
+    ],
+    [
+     "EtOH",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "EtOH [EtOH]",
+     ""
+    ],
+    [
+     "AcLac",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AcLac [AcLac]",
+     ""
+    ],
+    [
+     "AcetoinIn",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AcetoinIn [AcetoinIn]",
+     ""
+    ],
+    [
+     "AcetoinOut",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "AcetoinOut [AcetoinOut]",
+     ""
+    ],
+    [
+     "Butanediol",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "0.01",
+     "Butanediol [Butanediol]",
+     ""
+    ],
+    [
+     "O2",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "0.2",
+     "O2 [O2]",
+     ""
+    ],
+    [
+     "PO4",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "10",
+     "PO4 [PO4]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

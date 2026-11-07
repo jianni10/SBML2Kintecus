@@ -1,0 +1,511 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:06:04.471872+00:00",
+ "description": "Cursons2015 - Regulation of ERK-MAPK signaling in human epidermis\nBioModels BIOMD0000000659 (curated). SBML file: BIOMD0000000659_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000659_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS_PARTIAL, max |difference| = 2.48e-06 of species peak (worst: pERK_nuc)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'Position_0' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Position_1' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Position_5' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Total_Rafc_input_less_than_0' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Total_Raf_input_greater_than_0' not converted (state-triggered (not a time >= t0 trigger))\n  [info] rate rule dpERK_nuc/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cursons2015 - Regulation of ERK-MAPK signaling in human epidermis  (BIOMD0000000659, curated BioModels; source file BIOMD0000000659_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dpRaf_cyto/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pRaf_cyto==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dpMEK_cyto/dt term 1",
+     ""
+    ],
+    [
+     "0.21212121212121213",
+     "0",
+     "0",
+     "pMEK_nuc==>pMEK_cyto+pMEK_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dpMEK_cyto/dt term 2",
+     ""
+    ],
+    [
+     "1.05",
+     "0",
+     "0",
+     "pMEK_cyto==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dpMEK_cyto/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpRaf_cyto:(2.56*cpRaf_cyto^1.4/(cpRaf_cyto^1.4+1.5538489334159153))]==>pMEK_cyto",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dpERK_cyto/dt term 1",
+     ""
+    ],
+    [
+     "0.004242424242424243",
+     "0",
+     "0",
+     "pERK_nuc==>pERK_cyto+pERK_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dpERK_cyto/dt term 2",
+     ""
+    ],
+    [
+     "1.01",
+     "0",
+     "0",
+     "pERK_cyto==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dpERK_cyto/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpMEK_cyto:(2.56*cpMEK_cyto^1.4/(cpMEK_cyto^1.4+1.5538489334159153))]==>pERK_cyto",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dpMEK_nuc/dt term 1",
+     ""
+    ],
+    [
+     "0.11785714285714287",
+     "0",
+     "0",
+     "pMEK_cyto==>pMEK_nuc+pMEK_cyto",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dpMEK_nuc/dt term 2",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "pMEK_nuc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dpERK_nuc/dt term 1",
+     ""
+    ],
+    [
+     "0.023571428571428573",
+     "0",
+     "0",
+     "pERK_cyto==>pERK_nuc+pERK_cyto",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dpERK_nuc/dt term 2",
+     ""
+    ],
+    [
+     "1.01",
+     "0",
+     "0",
+     "pERK_nuc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dpERK_nuc/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpMEK_nuc:(2.56*cpMEK_nuc^1.4/(cpMEK_nuc^1.4+1.5538489334159153))]==>pERK_nuc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dpERK_nuc/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pERK_nuc+S[USER;cpERK_nuc:(2.56*cpERK_nuc^0.3999999999999999/(1*(cpERK_nuc+1e-30)^1.4+1.5538489334159153))]==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "pRaf_cyto",
+     "0",
+     "0.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rafc [pRaf_cyto]",
+     ""
+    ],
+    [
+     "pMEK_cyto",
+     "0",
+     "0.8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MEKc [pMEK_cyto]",
+     ""
+    ],
+    [
+     "pERK_cyto",
+     "0",
+     "0.7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERKc [pERK_cyto]",
+     ""
+    ],
+    [
+     "pMEK_nuc",
+     "0",
+     "0.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MEKn [pMEK_nuc]",
+     ""
+    ],
+    [
+     "pERK_nuc",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERKn [pERK_nuc]",
+     ""
+    ],
+    [
+     "Ca",
+     "0",
+     "0.7632",
+     "Y",
+     "0",
+     "No",
+     "0.7632",
+     "Ca [Ca]",
+     ""
+    ],
+    [
+     "CaM_memb",
+     "0",
+     "0.72675",
+     "Y",
+     "0",
+     "No",
+     "0.72675",
+     "CaM [CaM_memb]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

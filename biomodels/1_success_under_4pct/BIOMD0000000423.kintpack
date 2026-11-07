@@ -1,0 +1,511 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:00:30.094596+00:00",
+ "description": "Nyman2012_InsulinSignalling\nBioModels BIOMD0000000423 (curated). SBML file: BIOMD0000000423_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000423_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.71e-06 of species peak (worst: Xp)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Nyman2012_InsulinSignalling  (BIOMD0000000423, curated BioModels; source file BIOMD0000000423_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1a",
+     ""
+    ],
+    [
+     "15.3801389",
+     "0",
+     "0",
+     "IR==>IRins",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1b",
+     ""
+    ],
+    [
+     "3.4699e-6",
+     "0",
+     "0",
+     "IRins==>IR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1c",
+     ""
+    ],
+    [
+     "0.574266",
+     "0",
+     "0",
+     "IRins==>IRp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1d",
+     ""
+    ],
+    [
+     "4.78844",
+     "0",
+     "0",
+     "IRp==>IRiP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1e term 1/2",
+     ""
+    ],
+    [
+     "5.25027e-5",
+     "0",
+     "0",
+     "IRiP==>IRi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1e term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRiP+Xp+S[USER;cXp:(119.353/(cXp+1))]==>IRi+Xp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1g",
+     ""
+    ],
+    [
+     "4.14899",
+     "0",
+     "0",
+     "IRp==>IR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1r",
+     ""
+    ],
+    [
+     "37954.7",
+     "0",
+     "0",
+     "IRi==>IR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRS+IRp+S[USER;cXp:(538004/(88.9096*cXp+1))]==>IRSiP+IRp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRS+IRiP+S[USER;cXp:(0.9281645008/(88.9096*cXp+1))]==>IRSiP+IRiP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vm2",
+     ""
+    ],
+    [
+     "262759",
+     "0",
+     "0",
+     "IRSiP==>IRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3",
+     ""
+    ],
+    [
+     "8.62917e-5",
+     "0",
+     "0",
+     "X+IRSiP==>Xp+IRSiP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vm3",
+     ""
+    ],
+    [
+     "0.132671",
+     "0",
+     "0",
+     "Xp==>X",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "IR",
+     "0",
+     "8.94067597532632",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IR [IR]",
+     ""
+    ],
+    [
+     "IRins",
+     "0",
+     "0.59688996214639",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRins [IRins]",
+     ""
+    ],
+    [
+     "IRp",
+     "0",
+     "0.0383525925240207",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRp [IRp]",
+     ""
+    ],
+    [
+     "IRiP",
+     "0",
+     "0.424076631823384",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRiP [IRiP]",
+     ""
+    ],
+    [
+     "IRi",
+     "0",
+     "4.83863890758515e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRi [IRi]",
+     ""
+    ],
+    [
+     "IRS",
+     "0",
+     "9.43998194225544",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRS [IRS]",
+     ""
+    ],
+    [
+     "IRSiP",
+     "0",
+     "0.560018057744573",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRSiP [IRSiP]",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "9.99635886407151",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X [X]",
+     ""
+    ],
+    [
+     "Xp",
+     "0",
+     "0.00364113592848386",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xp [Xp]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.03",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.03",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

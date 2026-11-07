@@ -1,0 +1,586 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:28:35.439039+00:00",
+ "description": "Stucki2005 - caspase-3 metabolism\nBioModels BIOMD0000001059 (curated). SBML file: Stucki2005.xml.\nSimulation: 0 to 7000 time units (SED-ML: Stucki2005.sedml), sampling 7.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 1.00e+00 of species peak (worst: cascade)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 1.00e+00 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'Release_of_SMAC' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'cascade__1' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'cascade__2' not converted (state-triggered (not a time >= t0 trigger))",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Stucki2005 - caspase-3 metabolism  (BIOMD0000001059, curated BioModels; source file Stucki2005.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_procaspase_3",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "source==>pc3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cleavage_of_procaspase_3_into_caspase_3",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "pc3==>c3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "caspase_3_proteolysis",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "c3+S[USER;ciapc3:(0.001*ciapc3^4/(ciapc3^4+16))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IAP_caspas_3_complex_formation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "c3+iap==>iapc3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Separation_of_caspase_3_and_iap",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "iapc3==>c3+iap",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_caspas_3",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "c3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_iap_smac_complex",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "smac+iap==>iapsmac",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Separation_of_iap_and_smac",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "iapsmac==>iap+smac",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_iap",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "source==>iap",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_iap",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "iap==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_smac_survivin_complex",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "survivin+smac==>sursmac",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cleavage_of_smac_survivin_complex",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "sursmac==>survivin+smac",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_survivin",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "survivin==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_iap_caspase_3_complex",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "iapc3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_iapsmac",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "iapsmac==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Degradation_of_sursmac",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "sursmac==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "pc3",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pc3 [pc3]",
+     ""
+    ],
+    [
+     "c3",
+     "0",
+     "0.710362",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "c3 [c3]",
+     ""
+    ],
+    [
+     "iap",
+     "0",
+     "0.3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iap [iap]",
+     ""
+    ],
+    [
+     "survivin",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "survivin [survivin]",
+     ""
+    ],
+    [
+     "cascade",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cascade [cascade]",
+     ""
+    ],
+    [
+     "iapc3",
+     "0",
+     "0.44919",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iapc3 [iapc3]",
+     ""
+    ],
+    [
+     "iapsmac",
+     "0",
+     "0.00483757",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iapsmac [iapsmac]",
+     ""
+    ],
+    [
+     "sursmac",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "sursmac [sursmac]",
+     ""
+    ],
+    [
+     "smacmit",
+     "0",
+     "9.99999999999994",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "smacmit [smacmit]",
+     ""
+    ],
+    [
+     "smac",
+     "0",
+     "0.0076907",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "smac [smac]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "7",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "7000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "7",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

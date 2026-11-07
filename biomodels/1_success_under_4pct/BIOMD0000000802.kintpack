@@ -1,0 +1,478 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:59:24.407190+00:00",
+ "description": "Hoffman2018- ADCC against cancer\nBioModels BIOMD0000000802 (curated). SBML file: Hoffman2017.xml.\nSimulation: 0 to 10 time units (SED-ML: Hoffman2017.sedml), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 7.18e-07 of species peak (worst: R)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] cancer_cell_killing_S: rate order differs from the stoichiometry; consumed on separate line(s) - S1: zero order, signed\nRenamed species (Kintecus name = SBML id): R1 = R; S1 = S",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Hoffman2018- ADCC against cancer  (BIOMD0000000802, curated BioModels; source file Hoffman2017.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "antibody_association term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "A+S1==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "antibody_association term 2/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "A+R1+S1==>2A+R1+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "antibody_dissociation",
+     ""
+    ],
+    [
+     "1.44",
+     "0",
+     "0",
+     "R1+S1==>A+R1+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "complex_formation term 1/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "A==>R1+A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "complex_formation term 2/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "R1+A==>A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "complex_dissociation",
+     ""
+    ],
+    [
+     "1.44",
+     "0",
+     "0",
+     "R1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cancer_cell_killing_C",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "C+R1+S[USER;cR1:(1/(cR1+0.5))]==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_complex_formation term 1/4",
+     ""
+    ],
+    [
+     "120",
+     "0",
+     "0",
+     "C+C==>3C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_complex_formation term 2/4",
+     ""
+    ],
+    [
+     "2400",
+     "0",
+     "0",
+     "S1==>C+S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_complex_formation term 3/4",
+     ""
+    ],
+    [
+     "2400",
+     "0",
+     "0",
+     "C==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_complex_formation term 4/4",
+     ""
+    ],
+    [
+     "120",
+     "0",
+     "0",
+     "C+S1==>S1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NK_complex_degradation",
+     ""
+    ],
+    [
+     "14.4",
+     "0",
+     "0",
+     "C==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cancer_cell_killing_S (consumes S1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cC,cR1:((-1*1*cC*cR1/(cR1+0.5)))]==>S1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "A",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A [A]",
+     ""
+    ],
+    [
+     "R1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R [R]",
+     ""
+    ],
+    [
+     "S1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "S [S]",
+     ""
+    ],
+    [
+     "C",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "C [C]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,695 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:05:32.831810+00:00",
+ "description": "NguyenLK2011 - Ubiquitination dynamics in Ring1B/Bmi1 system\nBioModels BIOMD0000000622 (curated). SBML file: BIOMD0000000622_url.xml.\nSimulation: 0 to 4800 time units (SED-ML: NguyenLK2011_High_Free_Bmi1_Levels.sedml), sampling 4.8.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.62e-06 of species peak (worst: Bmi1ubd)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NguyenLK2011 - Ubiquitination dynamics in Ring1B/Bmi1 system  (BIOMD0000000622, curated BioModels; source file BIOMD0000000622_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "Bmi1==>Bmi1ubd",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "Bmi1ubd==>Bmi1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "R1B==>R1Bubd",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "R1Bubd==>R1B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5 term 1/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Z==>R1B+Bmi1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5 term 2/2",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "R1B+Bmi1==>Z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6 term 1/2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "Z+Z==>Zub+Z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6 term 2/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "Z+Zub==>2Zub",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Zub+S[USER;cZub:(0.005/(1*cZub+0.0025))]==>Z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8 term 1/2",
+     ""
+    ],
+    [
+     "0.012",
+     "0",
+     "0",
+     "Zub==>Bmi1+R1Buba",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8 term 2/2",
+     ""
+    ],
+    [
+     "2e-5",
+     "0",
+     "0",
+     "Bmi1+R1Buba==>Zub",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9 term 1/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "R1B+R1B==>R1Bub+R1B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9 term 2/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "R1B+R1Bub==>2R1Bub",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10",
+     ""
+    ],
+    [
+     "0.0075",
+     "0",
+     "0",
+     "R1Bub==>R1B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "R1Buba==>R1B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 1/3",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "H2A+Zub==>H2Auba+Zub",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 2/3",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "H2A+R1Bub==>H2Auba+R1Bub",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R12 term 3/3",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "H2A+R1Buba==>H2Auba+R1Buba",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R13",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "H2Auba==>H2A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1Bprod",
+     ""
+    ],
+    [
+     "7.5e-6",
+     "0",
+     "0",
+     "source==>R1B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1Bdeg",
+     ""
+    ],
+    [
+     "3e-5",
+     "0",
+     "0",
+     "R1Bubd==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bmi1prod",
+     ""
+    ],
+    [
+     "7.5e-6",
+     "0",
+     "0",
+     "source==>Bmi1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bmi1deg",
+     ""
+    ],
+    [
+     "3e-5",
+     "0",
+     "0",
+     "Bmi1ubd==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Bmi1",
+     "0",
+     "1.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Bmi1 [Bmi1]",
+     ""
+    ],
+    [
+     "Bmi1ubd",
+     "0",
+     "1.08",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Bmi1ubd [Bmi1ubd]",
+     ""
+    ],
+    [
+     "R1B",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R1B [R1B]",
+     ""
+    ],
+    [
+     "R1Bubd",
+     "0",
+     "0.12",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R1Bubd [R1Bubd]",
+     ""
+    ],
+    [
+     "USP7tot",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "USP7tot [USP7tot]",
+     ""
+    ],
+    [
+     "Z",
+     "0",
+     "0.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Z [Z]",
+     ""
+    ],
+    [
+     "Zub",
+     "0",
+     "0.12",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Zub [Zub]",
+     ""
+    ],
+    [
+     "R1Buba",
+     "0",
+     "0.44",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R1Buba [R1Buba]",
+     ""
+    ],
+    [
+     "R1Bub",
+     "0",
+     "0.02",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R1Bub [R1Bub]",
+     ""
+    ],
+    [
+     "H2A",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "H2A [H2A]",
+     ""
+    ],
+    [
+     "H2Auba",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "H2Auba [H2Auba]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "4.8",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "4800",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "4.8",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

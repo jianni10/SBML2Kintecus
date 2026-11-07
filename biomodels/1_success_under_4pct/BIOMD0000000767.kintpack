@@ -1,0 +1,358 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:08:32.441169+00:00",
+ "description": "Macnamara2015/2 - virotherapy virus-free submodel\nBioModels BIOMD0000000767 (curated). SBML file: Macnamara2015_2.xml.\nSimulation: 0 to 20 time units (SED-ML: Macnamara2015_2.sedml), sampling 0.10526315789473684.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.85e-06 of species peak (worst: E)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): M1 = M; E1 = E",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Macnamara2015/2 - virotherapy virus-free submodel  (BIOMD0000000767, curated BioModels; source file Macnamara2015_2.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth term 1/2",
+     ""
+    ],
+    [
+     "0.927",
+     "0",
+     "0",
+     "U==>2U",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_growth term 2/2",
+     ""
+    ],
+    [
+     "5.098449015509845e-9",
+     "0",
+     "0",
+     "U+U==>U",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_killing",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "U+E1+S[USER;cE1:(2/(cE1+1000))]==>E1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "effector_growth",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "U+S[USER;cU:(0.4/(cU+10000))]==>E1+U",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "effector_death",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "E1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "effector_exhaustion",
+     ""
+    ],
+    [
+     "5e-9",
+     "0",
+     "0",
+     "E1+U==>U",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "U",
+     "0",
+     "1000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "U [U]",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "M [M]",
+     ""
+    ],
+    [
+     "E1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E [E]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1052631579",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "20",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1052631579",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

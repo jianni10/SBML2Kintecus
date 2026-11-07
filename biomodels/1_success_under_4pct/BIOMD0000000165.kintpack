@@ -1,0 +1,1570 @@
+{
+ "version": 3,
+ "created": "2026-11-05T15:45:58.507785+00:00",
+ "description": "Saucerman2006_PKA\nBioModels BIOMD0000000165 (curated). SBML file: BIOMD0000000165_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000165_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 9.74e-06 of species peak (worst: A2RC_cell)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] desens_bark term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - L_b1AR_cell: zero order, signed\n  [info] desens_pka term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - b1AR_cell: zero order, signed\n  [info] desens_pka term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - b1AR_cell: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Saucerman2006_PKA  (BIOMD0000000165, curated BioModels; source file BIOMD0000000165_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cAMP_synthesis_GsAC",
+     ""
+    ],
+    [
+     "2.351834430856068",
+     "0",
+     "0",
+     "GsAC_cell==>cAMP_cell+GsAC_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_b1AR_propranolol term 1/2",
+     ""
+    ],
+    [
+     "8",
+     "0",
+     "0",
+     "b1ARinhib_cell==>Propranolol_cell+b1AR_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_b1AR_propranolol term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "Propranolol_cell+b1AR_cell==>b1ARinhib_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "add_propranolol term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1:(1*cSW1)]==>Propranolol_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "add_propranolol term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Propranolol_cell+S[USER;cSW1:(1*cSW1)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cAMP_photolysis",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DMNB_cAMP_cell+S[USER;cSW2,cSW3:(0.1*cSW2*cSW3)]==>cAMP_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "LRG_activation",
+     ""
+    ],
+    [
+     "16",
+     "0",
+     "0",
+     "L_b1AR_Gs_cell==>Gsa_gtp_cell+Gsbg_cell+L_b1AR_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_Lb1AR_Gs term 1/2",
+     ""
+    ],
+    [
+     "62",
+     "0",
+     "0",
+     "L_b1AR_Gs_cell==>Gs_cell+L_b1AR_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_Lb1AR_Gs term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "Gs_cell+L_b1AR_cell==>L_b1AR_Gs_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "desens_bark term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cL_b1AR_Gs_cell:(0.0011*cL_b1AR_Gs_cell)]==>b1AR_S464_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "desens_bark term 1/2 (consumes L_b1AR_cell)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cL_b1AR_Gs_cell:((-1*0.0011*cL_b1AR_Gs_cell))]==>L_b1AR_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "desens_bark term 2/2",
+     ""
+    ],
+    [
+     "0.0011",
+     "0",
+     "0",
+     "L_b1AR_cell==>b1AR_S464_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_cAMP_ARC term 1/2",
+     ""
+    ],
+    [
+     "1640",
+     "0",
+     "0",
+     "A2RC_cell==>ARC_cell+cAMP_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_cAMP_ARC term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "ARC_cell+cAMP_cell==>A2RC_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_b1AR_Gs term 1/2",
+     ""
+    ],
+    [
+     "33000",
+     "0",
+     "0",
+     "b1AR_Gs_cell==>Gs_cell+b1AR_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_b1AR_Gs term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "Gs_cell+b1AR_cell==>b1AR_Gs_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_PDEcAMP term 1/2",
+     ""
+    ],
+    [
+     "1300",
+     "0",
+     "0",
+     "PDEcAMP_cell==>PDE_cell+cAMP_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_PDEcAMP term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "PDE_cell+cAMP_cell==>PDEcAMP_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Gs_gtp_hydrolysis",
+     ""
+    ],
+    [
+     "0.8",
+     "0",
+     "0",
+     "Gsa_gtp_cell==>Gsa_gdp_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Gs_reassociation",
+     ""
+    ],
+    [
+     "1210",
+     "0",
+     "0",
+     "Gsa_gdp_cell+Gsbg_cell==>Gs_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_FskAC term 1/2",
+     ""
+    ],
+    [
+     "860000",
+     "0",
+     "0",
+     "FskAC_cell==>AC_cell+Fsk_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_FskAC term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "AC_cell+Fsk_cell==>FskAC_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_AKARp_PP term 1/2",
+     ""
+    ],
+    [
+     "7000",
+     "0",
+     "0",
+     "PP_AKARp_cell==>AKARp_cell+PP_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_AKARp_PP term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "AKARp_cell+PP_cell==>PP_AKARp_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "desens_pka term 1/4",
+     ""
+    ],
+    [
+     "0.0022",
+     "0",
+     "0",
+     "b1AR_p_cell==>b1AR_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "desens_pka term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cL_b1AR_Gs_cell,cPKAC_cell:(0.0036*cL_b1AR_Gs_cell*cPKAC_cell)]==>b1AR_p_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "desens_pka term 2/4 (consumes b1AR_cell)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cL_b1AR_Gs_cell,cPKAC_cell:((-1*0.0036*cL_b1AR_Gs_cell*cPKAC_cell))]==>b1AR_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "desens_pka term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cL_b1AR_cell,cPKAC_cell:(0.0036*cL_b1AR_cell*cPKAC_cell)]==>b1AR_p_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "desens_pka term 3/4 (consumes b1AR_cell)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cL_b1AR_cell,cPKAC_cell:((-1*0.0036*cL_b1AR_cell*cPKAC_cell))]==>b1AR_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "desens_pka term 4/4",
+     ""
+    ],
+    [
+     "0.0036",
+     "0",
+     "0",
+     "b1AR_cell+PKAC_cell==>b1AR_p_cell+PKAC_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_L_b1ARGs term 1/2",
+     ""
+    ],
+    [
+     "0.535714",
+     "0",
+     "0",
+     "L_b1AR_Gs_cell==>L_cell+b1AR_Gs_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_L_b1ARGs term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "L_cell+b1AR_Gs_cell==>L_b1AR_Gs_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_L_b1AR term 1/2",
+     ""
+    ],
+    [
+     "285",
+     "0",
+     "0",
+     "L_b1AR_cell==>L_cell+b1AR_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_L_b1AR term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "L_cell+b1AR_cell==>L_b1AR_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_A2R_PKAC term 1/2",
+     ""
+    ],
+    [
+     "4375",
+     "0",
+     "0",
+     "A2RC_cell==>A2R_cell+PKAC_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_A2R_PKAC term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "A2R_cell+PKAC_cell==>A2RC_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inhib_PKAC term 1/2",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "PKAC_PKI_cell==>PKAC_cell+PKI_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inhib_PKAC term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "PKAC_cell+PKI_cell==>PKAC_PKI_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_RC_cAMP term 1/2",
+     ""
+    ],
+    [
+     "9140",
+     "0",
+     "0",
+     "ARC_cell==>RC_cell+cAMP_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_RC_cAMP term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "RC_cell+cAMP_cell==>ARC_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cAMP_synthesis_FskAC",
+     ""
+    ],
+    [
+     "6.228668941979522",
+     "0",
+     "0",
+     "FskAC_cell==>cAMP_cell+FskAC_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "add_Ligand term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW2:(0.1*cSW2)]==>L_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "add_Ligand term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "L_cell+S[USER;cSW2:(1*cSW2)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_Gs_AC term 1/2",
+     ""
+    ],
+    [
+     "400",
+     "0",
+     "0",
+     "GsAC_cell==>AC_cell+Gsa_gtp_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_Gs_AC term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "AC_cell+Gsa_gtp_cell==>GsAC_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "resens_bark",
+     ""
+    ],
+    [
+     "0.0022",
+     "0",
+     "0",
+     "b1AR_S464_cell==>L_b1AR_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_PKAC_AKAR term 1/2",
+     ""
+    ],
+    [
+     "21000",
+     "0",
+     "0",
+     "PKAC_AKAR_cell==>AKAR_cell+PKAC_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "bind_PKAC_AKAR term 2/2",
+     ""
+    ],
+    [
+     "1000",
+     "0",
+     "0",
+     "AKAR_cell+PKAC_cell==>PKAC_AKAR_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inhibit_PDE term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PDE_IBMX_cell+S[USER;cSW6:(30000*cSW6)]==>IBMX_cell+PDE_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "inhibit_PDE term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IBMX_cell+PDE_cell+S[USER;cSW6:(1000*cSW6)]==>PDE_IBMX_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AKARp_dephosph",
+     ""
+    ],
+    [
+     "8.5",
+     "0",
+     "0",
+     "PP_AKARp_cell==>AKAR_cell+PP_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AKAR_phosph",
+     ""
+    ],
+    [
+     "54",
+     "0",
+     "0",
+     "PKAC_AKAR_cell==>AKARp_cell+PKAC_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "RG_activation",
+     ""
+    ],
+    [
+     "16",
+     "0",
+     "0",
+     "b1AR_Gs_cell==>Gsa_gtp_cell+Gsbg_cell+b1AR_cell",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cAMP_degradation",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "PDEcAMP_cell==>PDE_cell",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Gsbg_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gsbg [Gsbg_cell]",
+     ""
+    ],
+    [
+     "L_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L [L_cell]",
+     ""
+    ],
+    [
+     "Gsa_gdp_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gsa_gdp [Gsa_gdp_cell]",
+     ""
+    ],
+    [
+     "Gsa_gtp_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gsa_gtp [Gsa_gtp_cell]",
+     ""
+    ],
+    [
+     "b1AR_S464_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "b1AR_S464 [b1AR_S464_cell]",
+     ""
+    ],
+    [
+     "PDEcAMP_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PDEcAMP [PDEcAMP_cell]",
+     ""
+    ],
+    [
+     "PDE_cell",
+     "0",
+     "0.014",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PDE [PDE_cell]",
+     ""
+    ],
+    [
+     "ATP_cell",
+     "0",
+     "5000",
+     "Y",
+     "0",
+     "No",
+     "5000",
+     "ATP [ATP_cell]",
+     ""
+    ],
+    [
+     "b1AR_cell",
+     "0",
+     "0.0132",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "b1AR [b1AR_cell]",
+     ""
+    ],
+    [
+     "Gs_cell",
+     "0",
+     "3.83",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gs [Gs_cell]",
+     ""
+    ],
+    [
+     "A2RC_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A2RC [A2RC_cell]",
+     ""
+    ],
+    [
+     "A2R_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A2R [A2R_cell]",
+     ""
+    ],
+    [
+     "PKAC_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PKAC [PKAC_cell]",
+     ""
+    ],
+    [
+     "ARC_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ARC [ARC_cell]",
+     ""
+    ],
+    [
+     "PKAC_AKAR_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PKAC_AKAR [PKAC_AKAR_cell]",
+     ""
+    ],
+    [
+     "Propranolol_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Propranolol [Propranolol_cell]",
+     ""
+    ],
+    [
+     "b1ARinhib_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "b1ARinhib [b1ARinhib_cell]",
+     ""
+    ],
+    [
+     "light_spot_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "light_spot [light_spot_cell]",
+     ""
+    ],
+    [
+     "AC_cell",
+     "0",
+     "0.0497",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AC [AC_cell]",
+     ""
+    ],
+    [
+     "PKI_cell",
+     "0",
+     "0.18",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PKI [PKI_cell]",
+     ""
+    ],
+    [
+     "PKAC_PKI_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PKAC_PKI [PKAC_PKI_cell]",
+     ""
+    ],
+    [
+     "RC_cell",
+     "0",
+     "1.18",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RC [RC_cell]",
+     ""
+    ],
+    [
+     "b1AR_Gs_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "b1AR_Gs [b1AR_Gs_cell]",
+     ""
+    ],
+    [
+     "cAMP_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cAMP [cAMP_cell]",
+     ""
+    ],
+    [
+     "GsAC_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GsAC [GsAC_cell]",
+     ""
+    ],
+    [
+     "IBMX_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IBMX [IBMX_cell]",
+     ""
+    ],
+    [
+     "PDE_IBMX_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PDE_IBMX [PDE_IBMX_cell]",
+     ""
+    ],
+    [
+     "Fsk_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fsk [Fsk_cell]",
+     ""
+    ],
+    [
+     "FskAC_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "FskAC [FskAC_cell]",
+     ""
+    ],
+    [
+     "b1AR_p_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "b1AR_p [b1AR_p_cell]",
+     ""
+    ],
+    [
+     "L_b1AR_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L_b1AR [L_b1AR_cell]",
+     ""
+    ],
+    [
+     "AKAR_cell",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AKAR [AKAR_cell]",
+     ""
+    ],
+    [
+     "AKARp_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AKARp [AKARp_cell]",
+     ""
+    ],
+    [
+     "PP_cell",
+     "0",
+     "0.67",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PP [PP_cell]",
+     ""
+    ],
+    [
+     "PP_AKARp_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PP_AKARp [PP_AKARp_cell]",
+     ""
+    ],
+    [
+     "DMNB_cAMP_cell",
+     "0",
+     "3.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DMNB_cAMP [DMNB_cAMP_cell]",
+     ""
+    ],
+    [
+     "L_b1AR_Gs_cell",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "L_b1AR_Gs [L_b1AR_Gs_cell]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 2420 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time switch at 2160 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW3.TXT-SET",
+     "time switch at 2165 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW4",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "time switch at 0 [__switch__]",
+     ""
+    ],
+    [
+     "SW5",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "0",
+     "time switch at 0 [__switch__]",
+     ""
+    ],
+    [
+     "SW6",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW6.TXT-SET",
+     "time switch at 1000 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "5.000000005",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "5.000000005",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2420",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2160",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW3.TXT",
+   "key": "O_SW3.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2165",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW6.TXT",
+   "key": "O_SW6.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "1000",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

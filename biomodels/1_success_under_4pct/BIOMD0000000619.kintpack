@@ -1,0 +1,712 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:05:31.259517+00:00",
+ "description": "Sluka2016  - Acetaminophen PBPK\nBioModels BIOMD0000000619 (curated). SBML file: BIOMD0000000619_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000619_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.38e-06 of species peak (worst: CVen)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Sluka2016  - Acetaminophen PBPK  (BIOMD0000000619, curated BioModels; source file BIOMD0000000619_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J1 (volume 1.1046)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCArt:(67.36954453573945*cCArt)]==>CGut",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J1 (volume 1.4994)",
+     ""
+    ],
+    [
+     "49.63078491008257",
+     "0",
+     "0",
+     "CArt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J2 (volume 1.1046)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAGutlumen:(1.3579576317218902*cAGutlumen)]==>CGut",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J2 (volume 1)",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "AGutlumen==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J3 (volume 1.4994)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCLung:(242.10138980528083*cCLung)]==>CArt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J3 (volume 0.5082)",
+     ""
+    ],
+    [
+     "714.2991418221923",
+     "0",
+     "0",
+     "CLung==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J4 (volume 3.4103999999999997)",
+     ""
+    ],
+    [
+     "106.4411282764597",
+     "0",
+     "0",
+     "CVen==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J4 (volume 0.5082)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCVen:(714.2991418221923*cCVen)]==>CLung",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J5 (volume 33.4698)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCArt:(5.640901621667511*cCArt)]==>CRest",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J5 (volume 1.4994)",
+     ""
+    ],
+    [
+     "125.91693283772658",
+     "0",
+     "0",
+     "CArt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J6 (volume 33.4698)",
+     ""
+    ],
+    [
+     "4.803580287201239",
+     "0",
+     "0",
+     "CRest==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J6 (volume 3.4103999999999997)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCRest:(47.1425262422496*cCRest)]==>CVen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J7 (volume 1.4994)",
+     ""
+    ],
+    [
+     "12.952424354582524",
+     "0",
+     "0",
+     "CArt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J7 (volume 1.7136)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCArt:(11.33337131025971*cCArt)]==>CLiver",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J8",
+     ""
+    ],
+    [
+     "11.875",
+     "0",
+     "0",
+     "CLiver==>CMetabolized",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J9 (volume 1.1046)",
+     ""
+    ],
+    [
+     "67.36954453573945",
+     "0",
+     "0",
+     "CGut==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J9 (volume 1.7136)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCGut:(43.426936796322245*cCGut)]==>CLiver",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J10 (volume 3.4103999999999997)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCLiver:(37.48923063602083*cCLiver)]==>CVen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J10 (volume 1.7136)",
+     ""
+    ],
+    [
+     "74.61091979521791",
+     "0",
+     "0",
+     "CLiver==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J11 (volume 1.4994)",
+     ""
+    ],
+    [
+     "53.60124770288918",
+     "0",
+     "0",
+     "CArt==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J11 (volume 0.294)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCArt:(273.36636328473486*cCArt)]==>CKidney",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J12 (volume 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCKidney:(0.943817742072499*cCKidney)]==>CTubules",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J12 (volume 0.294)",
+     ""
+    ],
+    [
+     "3.210264428818024",
+     "0",
+     "0",
+     "CKidney==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J13 (volume 3.4103999999999997)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCKidney:(32.10876465305614*cCKidney)]==>CVen",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J13 (volume 0.294)",
+     ""
+    ],
+    [
+     "372.4616699754513",
+     "0",
+     "0",
+     "CKidney==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "CArt",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CArt [CArt]",
+     ""
+    ],
+    [
+     "CGut",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CGut [CGut]",
+     ""
+    ],
+    [
+     "AGutlumen",
+     "0",
+     "0.009259259259259259",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AGutlumen [AGutlumen]",
+     ""
+    ],
+    [
+     "CLung",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CLung [CLung]",
+     ""
+    ],
+    [
+     "CVen",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CVen [CVen]",
+     ""
+    ],
+    [
+     "CRest",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CRest [CRest]",
+     ""
+    ],
+    [
+     "CLiver",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CLiver [CLiver]",
+     ""
+    ],
+    [
+     "CMetabolized",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CMetabolized [CMetabolized]",
+     ""
+    ],
+    [
+     "CKidney",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CKidney [CKidney]",
+     ""
+    ],
+    [
+     "CTubules",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CTubules [CTubules]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.03",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.03",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

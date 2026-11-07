@@ -1,0 +1,603 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:06:14.555008+00:00",
+ "description": "Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - basic PD model\nBioModels BIOMD0000000668 (curated). SBML file: BIOMD0000000668_url.xml.\nSimulation: 0 to 100 time units (SED-ML: MODEL1604270000_basic.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.90e-06 of species peak (worst: Ra)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Inh_g' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Inh_b' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Sti_g' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Sti_b' is defined by an assignment rule; not a Kintecus state (not output)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - basic PD model  (BIOMD0000000668, curated BioModels; source file BIOMD0000000668_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "g_death_stimulus_delay_2",
+     ""
+    ],
+    [
+     "0.086",
+     "0",
+     "0",
+     "Sti_g1==>Sti_g2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "g_death_stimulus_delay_3",
+     ""
+    ],
+    [
+     "0.086",
+     "0",
+     "0",
+     "Sti_g2==>Sti_g3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "g_death_stimulus_delay_4",
+     ""
+    ],
+    [
+     "0.086",
+     "0",
+     "0",
+     "Sti_g3==>Sti_g4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "g_death_stimulus_delay_4_degradation",
+     ""
+    ],
+    [
+     "0.086",
+     "0",
+     "0",
+     "Sti_g4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "b_death_stimulus_delay_2",
+     ""
+    ],
+    [
+     "0.611",
+     "0",
+     "0",
+     "Sti_b1==>Sti_b2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "b_death_stimulus_delay_3",
+     ""
+    ],
+    [
+     "0.611",
+     "0",
+     "0",
+     "Sti_b2==>Sti_b3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "b_death_stimulus_delay_4",
+     ""
+    ],
+    [
+     "0.611",
+     "0",
+     "0",
+     "Sti_b3==>Sti_b4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "b_death_stimulus_delay_4_degradation",
+     ""
+    ],
+    [
+     "0.611",
+     "0",
+     "0",
+     "Sti_b4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRa/dt term 1",
+     ""
+    ],
+    [
+     "0.020515",
+     "0",
+     "0",
+     "Ra==>2Ra",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRa/dt term 2",
+     ""
+    ],
+    [
+     "3.806921675774134e-9",
+     "0",
+     "0",
+     "Ra+Ra==>Ra",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRa/dt term 3",
+     ""
+    ],
+    [
+     "0.000385",
+     "0",
+     "0",
+     "Ra+Sti_b4==>Sti_b4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRa/dt term 4",
+     ""
+    ],
+    [
+     "0.000385",
+     "0",
+     "0",
+     "Ra+Sti_g4==>Sti_g4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRa/dt term 5",
+     ""
+    ],
+    [
+     "0.000385",
+     "0",
+     "0",
+     "Ra+Sti_b4+Sti_g4==>Sti_b4+Sti_g4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRd/dt term 1",
+     ""
+    ],
+    [
+     "0.000385",
+     "0",
+     "0",
+     "Ra==>Rd+Ra",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRd/dt term 2",
+     ""
+    ],
+    [
+     "0.000385",
+     "0",
+     "0",
+     "Rd==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRd/dt term 3",
+     ""
+    ],
+    [
+     "0.000385",
+     "0",
+     "0",
+     "Ra+Sti_b4==>Rd+Ra+Sti_b4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRd/dt term 4",
+     ""
+    ],
+    [
+     "0.000385",
+     "0",
+     "0",
+     "Ra+Sti_g4==>Rd+Ra+Sti_g4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dRd/dt term 5",
+     ""
+    ],
+    [
+     "0.000385",
+     "0",
+     "0",
+     "Ra+Sti_b4+Sti_g4==>Rd+Ra+Sti_b4+Sti_g4",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Ra",
+     "0",
+     "307000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ra [Ra]",
+     ""
+    ],
+    [
+     "Rd",
+     "0",
+     "1940",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Rd [Rd]",
+     ""
+    ],
+    [
+     "Sti_g1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Sti_g1 [Sti_g1]",
+     ""
+    ],
+    [
+     "Sti_g2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Sti_g2 [Sti_g2]",
+     ""
+    ],
+    [
+     "Sti_g3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Sti_g3 [Sti_g3]",
+     ""
+    ],
+    [
+     "Sti_g4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Sti_g4 [Sti_g4]",
+     ""
+    ],
+    [
+     "Sti_b1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Sti_b1 [Sti_b1]",
+     ""
+    ],
+    [
+     "Sti_b2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Sti_b2 [Sti_b2]",
+     ""
+    ],
+    [
+     "Sti_b3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Sti_b3 [Sti_b3]",
+     ""
+    ],
+    [
+     "Sti_b4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Sti_b4 [Sti_b4]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

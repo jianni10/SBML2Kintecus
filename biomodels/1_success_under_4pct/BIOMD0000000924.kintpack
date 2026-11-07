@@ -1,0 +1,559 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:13:02.801732+00:00",
+ "description": "Smith2011 - Three Stage Innate Immune Response to a Pneumococcal Lung Infection\nBioModels BIOMD0000000924 (curated). SBML file: Smith2011_V1.xml.\nSimulation: 0 to 120 time units (SED-ML: Smith2011_V1.sedml), sampling 0.8.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.16e-06 of species peak (worst: Neutrophils__N)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_for_P_Decay term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): Susceptibleepithelialcell1 = Susceptible_epithelial_cells__EU; Epithelialcellswithbacter1 = Epithelial_cells_with_bacteria_attached__Ea; proinflammatorycytokineC1 = proinflammatory_cytokine__C",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Smith2011 - Three Stage Innate Immune Response to a Pneumococcal Lung Infection  (BIOMD0000000924, curated BioModels; source file Smith2011_V1.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for__P_production term 1/2",
+     ""
+    ],
+    [
+     "1.13",
+     "0",
+     "0",
+     "Pneumococci___P==>2Pneumococci___P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for__P_production term 2/2",
+     ""
+    ],
+    [
+     "3.30636357217947e-9",
+     "0",
+     "0",
+     "Pneumococci___P+Pneumococci___P==>Pneumococci___P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_P_Decay term 1/2",
+     ""
+    ],
+    [
+     "1e-5",
+     "0",
+     "0",
+     "Pneumococci___P+Neutrophils__N==>Neutrophils__N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_P_Decay term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pneumococci___P+S[USER;cDebris__D,cPneumococci___P:(140000000/(0.005*cDebris__D*(cPneumococci___P+1e-30)^2+125000*cDebris__D+1*(cPneumococci___P+1e-30)^2+25000000))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for__EU_decay",
+     ""
+    ],
+    [
+     "2.1e-8",
+     "0",
+     "0",
+     "Susceptibleepithelialcell1+Pneumococci___P==>Pneumococci___P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_Ea_production",
+     ""
+    ],
+    [
+     "2.1e-8",
+     "0",
+     "0",
+     "Pneumococci___P+Susceptibleepithelialcell1==>Epithelialcellswithbacter1+Pneumococci___P+Susceptibleepithelialcell1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_Ea_decay",
+     ""
+    ],
+    [
+     "0.167",
+     "0",
+     "0",
+     "Epithelialcellswithbacter1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_C_production term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Epithelialcellswithbacter1+S[USER;cNeutrophils__N:(0.021/(1.4e-5*cNeutrophils__N+1))]==>proinflammatorycytokineC1+Epithelialcellswithbacter1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_C_production term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Pneumococci___P+S[USER;cNeutrophils__N,cPneumococci___P:(0.0012180000000000001/(5.88e-13*cNeutrophils__N*cPneumococci___P+4.2e-8*cPneumococci___P+0.043000000000000003))]==>proinflammatorycytokineC1+Pneumococci___P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_C_decay",
+     ""
+    ],
+    [
+     "0.83",
+     "0",
+     "0",
+     "proinflammatorycytokineC1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_N_production term 1/2",
+     ""
+    ],
+    [
+     "1.33",
+     "0",
+     "0",
+     "proinflammatorycytokineC1==>Neutrophils__N+proinflammatorycytokineC1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_N_production term 2/2",
+     ""
+    ],
+    [
+     "7.388888888888889e-6",
+     "0",
+     "0",
+     "Neutrophils__N+proinflammatorycytokineC1==>proinflammatorycytokineC1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_N_decay term 1/2",
+     ""
+    ],
+    [
+     "0.063",
+     "0",
+     "0",
+     "Neutrophils__N==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_N_decay term 2/2",
+     ""
+    ],
+    [
+     "1.76e-7",
+     "0",
+     "0",
+     "Neutrophils__N+Pneumococci___P==>Pneumococci___P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_D_production term 1/3",
+     ""
+    ],
+    [
+     "6.3e-5",
+     "0",
+     "0",
+     "Neutrophils__N==>Debris__D+Neutrophils__N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_D_production term 2/3",
+     ""
+    ],
+    [
+     "1.6700000000000003e-6",
+     "0",
+     "0",
+     "Epithelialcellswithbacter1==>Debris__D+Epithelialcellswithbacter1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_D_production term 3/3",
+     ""
+    ],
+    [
+     "2.6399999999999998e-8",
+     "0",
+     "0",
+     "Neutrophils__N+Pneumococci___P==>Debris__D+Neutrophils__N+Pneumococci___P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_D_decay",
+     ""
+    ],
+    [
+     "0.14",
+     "0",
+     "0",
+     "Debris__D==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Pneumococci___P",
+     "0",
+     "100000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Pneumococci  (P) [Pneumococci___P]",
+     ""
+    ],
+    [
+     "Susceptibleepithelialcell1",
+     "0",
+     "100000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Susceptible epithelial cells (EU) [Susceptible_epithelial_cells__EU]",
+     ""
+    ],
+    [
+     "Epithelialcellswithbacter1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Epithelial cells with bacteria attached (Ea) [Epithelial_cells_with_bacteria_attached__Ea]",
+     ""
+    ],
+    [
+     "proinflammatorycytokineC1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "proinflammatory cytokine (C) [proinflammatory_cytokine__C]",
+     ""
+    ],
+    [
+     "Neutrophils__N",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Neutrophils (N) [Neutrophils__N]",
+     ""
+    ],
+    [
+     "Debris__D",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Debris (D) [Debris__D]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.8",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "120",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.8",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

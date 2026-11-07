@@ -1,0 +1,1138 @@
+{
+ "version": 3,
+ "created": "2026-10-31T05:19:16.731928+00:00",
+ "description": "Zi2011_TGF-beta_Pathway\nBioModels BIOMD0000000342 (curated). SBML file: BIOMD0000000342_url.xml.\nSimulation: 0 to 480 time units (SED-ML: Zi2011_fig1Cblue.sedml), sampling 0.48.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 9.42e-02 of species peak (worst: TGF_beta_ns)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 9.42e-02 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [partial] compartment 'Vmed' has an assignment rule; its t=0 size is used\n  [blocker] event 'single_pulse_TGF_beta_washout' not converted (state-triggered (not a time >= t0 trigger))",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Zi2011_TGF-beta_Pathway  (BIOMD0000000342, curated BioModels; source file BIOMD0000000342_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1",
+     ""
+    ],
+    [
+     "0.0167",
+     "0",
+     "0",
+     "source==>T1R_surf",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re2",
+     ""
+    ],
+    [
+     "0.333",
+     "0",
+     "0",
+     "T1R_surf==>T1R_endo",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3",
+     ""
+    ],
+    [
+     "0.0333",
+     "0",
+     "0",
+     "T1R_endo==>T1R_surf",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re4",
+     ""
+    ],
+    [
+     "0.00256",
+     "0",
+     "0",
+     "T1R_endo==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re5",
+     ""
+    ],
+    [
+     "0.0190076",
+     "0",
+     "0",
+     "source==>T2R_surf",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re6",
+     ""
+    ],
+    [
+     "0.333",
+     "0",
+     "0",
+     "T2R_surf==>T2R_endo",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re7",
+     ""
+    ],
+    [
+     "0.0333",
+     "0",
+     "0",
+     "T2R_endo==>T2R_surf",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re8",
+     ""
+    ],
+    [
+     "0.0132",
+     "0",
+     "0",
+     "T2R_endo==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re9 (volume 2.3e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T2R_surf+T1R_surf+S[USER;cTGF_beta_ex:(117.897*cTGF_beta_ex)]==>LRC_surf",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re9 (volume 2e-9)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TGF_beta_ex+S[USER;cT1R_surf,cT2R_surf:(0.13558155*cT1R_surf*cT2R_surf)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re10",
+     ""
+    ],
+    [
+     "0.333",
+     "0",
+     "0",
+     "LRC_surf==>LRC_endo",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11",
+     ""
+    ],
+    [
+     "0.00256",
+     "0",
+     "0",
+     "LRC_endo==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re12",
+     ""
+    ],
+    [
+     "0.0438111",
+     "0",
+     "0",
+     "LRC_endo==>TGF_beta_endo+T2R_endo+T1R_endo",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re13",
+     ""
+    ],
+    [
+     "0.347",
+     "0",
+     "0",
+     "TGF_beta_endo==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re14 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSmad2c:(0.3588*cSmad2c)]==>Smad2n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re14 (volume 2.3e-12)",
+     ""
+    ],
+    [
+     "0.156",
+     "0",
+     "0",
+     "Smad2c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re15 (volume 1e-12)",
+     ""
+    ],
+    [
+     "0.763",
+     "0",
+     "0",
+     "Smad2n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re15 (volume 2.3e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSmad2n:(0.33173913043478265*cSmad2n)]==>Smad2c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re16 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSmad4c:(0.3588*cSmad4c)]==>Smad4n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re16 (volume 2.3e-12)",
+     ""
+    ],
+    [
+     "0.156",
+     "0",
+     "0",
+     "Smad4c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re17 (volume 1e-12)",
+     ""
+    ],
+    [
+     "0.359",
+     "0",
+     "0",
+     "Smad4n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re17 (volume 2.3e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSmad4n:(0.15608695652173912*cSmad4n)]==>Smad4c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re18",
+     ""
+    ],
+    [
+     "0.0488268",
+     "0",
+     "0",
+     "Smad2c+LRC_endo==>PSmad2c+LRC_endo",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re19 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPSmad2c:(0.3588*cPSmad2c)]==>PSmad2n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re19 (volume 2.3e-12)",
+     ""
+    ],
+    [
+     "0.156",
+     "0",
+     "0",
+     "PSmad2c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re20 (volume 1e-12)",
+     ""
+    ],
+    [
+     "0.763",
+     "0",
+     "0",
+     "PSmad2n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re20 (volume 2.3e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPSmad2n:(0.33173913043478265*cPSmad2n)]==>PSmad2c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re21 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PSmad2_Smad4_c==>PSmad2c+Smad4c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re21 term 2/2",
+     ""
+    ],
+    [
+     "0.198472",
+     "0",
+     "0",
+     "PSmad2c+Smad4c==>PSmad2_Smad4_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re22 (volume 2.3e-12)",
+     ""
+    ],
+    [
+     "0.889",
+     "0",
+     "0",
+     "PSmad2_Smad4_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re22 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPSmad2_Smad4_c:(2.0447*cPSmad2_Smad4_c)]==>PSmad2_Smad4_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re23 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PSmad2_Smad4_n==>PSmad2n+Smad4n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re23 term 2/2",
+     ""
+    ],
+    [
+     "0.198472",
+     "0",
+     "0",
+     "PSmad2n+Smad4n==>PSmad2_Smad4_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re24",
+     ""
+    ],
+    [
+     "0.394",
+     "0",
+     "0",
+     "PSmad2n==>Smad2n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re25 term 1/2",
+     ""
+    ],
+    [
+     "0.198472",
+     "0",
+     "0",
+     "PSmad2c+PSmad2c==>PSmad2_PSmad2_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re25 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PSmad2_PSmad2_c==>2PSmad2c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re26 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cPSmad2_PSmad2_c:(2.0447*cPSmad2_PSmad2_c)]==>PSmad2_PSmad2_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re26 (volume 2.3e-12)",
+     ""
+    ],
+    [
+     "0.889",
+     "0",
+     "0",
+     "PSmad2_PSmad2_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re27 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PSmad2_PSmad2_n==>2PSmad2n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re27 term 2/2",
+     ""
+    ],
+    [
+     "0.198472",
+     "0",
+     "0",
+     "PSmad2n+PSmad2n==>PSmad2_PSmad2_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re28 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "LRC_surf+S[USER;cPSmad2_Smad4_n:(0.0233678*cPSmad2_Smad4_n)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re28 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "LRC_surf+S[USER;cPSmad2n:(0.0233678*cPSmad2n)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re28 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "LRC_surf+S[USER;cPSmad2_PSmad2_n:(0.0467356*cPSmad2_PSmad2_n)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re29 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TGF_beta_ex+S[USER;cTIME_:(0.0505413*exp((-1*0.00025803024752255765*cTIME_)))]==>TGF_beta_ns",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re29 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TGF_beta_ns+S[USER;cTIME_:(2.03305917141*exp((-1*0.00025803024752255765*cTIME_)))]==>TGF_beta_ex",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "TGF_beta_ex",
+     "0",
+     "0.05",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TGF_beta_ex [TGF_beta_ex]",
+     ""
+    ],
+    [
+     "T1R_surf",
+     "0",
+     "0.7024939001501501",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T1R_surf [T1R_surf]",
+     ""
+    ],
+    [
+     "T1R_endo",
+     "0",
+     "6.523437499999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T1R_endo [T1R_endo]",
+     ""
+    ],
+    [
+     "T2R_surf",
+     "0",
+     "0.20107684957684957",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T2R_surf [T2R_surf]",
+     ""
+    ],
+    [
+     "T2R_endo",
+     "0",
+     "1.439969696969697",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T2R_endo [T2R_endo]",
+     ""
+    ],
+    [
+     "LRC_surf",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LRC_surf [LRC_surf]",
+     ""
+    ],
+    [
+     "LRC_endo",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "LRC_endo [LRC_endo]",
+     ""
+    ],
+    [
+     "Smad2c",
+     "0",
+     "60.599999999999994",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad2c [Smad2c]",
+     ""
+    ],
+    [
+     "Smad2n",
+     "0",
+     "28.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad2n [Smad2n]",
+     ""
+    ],
+    [
+     "Smad4c",
+     "0",
+     "50.8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad4c [Smad4c]",
+     ""
+    ],
+    [
+     "Smad4n",
+     "0",
+     "50.8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad4n [Smad4n]",
+     ""
+    ],
+    [
+     "PSmad2c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PSmad2c [PSmad2c]",
+     ""
+    ],
+    [
+     "PSmad2_PSmad2_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PSmad2_PSmad2_c [PSmad2_PSmad2_c]",
+     ""
+    ],
+    [
+     "PSmad2_Smad4_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PSmad2_Smad4_c [PSmad2_Smad4_c]",
+     ""
+    ],
+    [
+     "PSmad2n",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PSmad2n [PSmad2n]",
+     ""
+    ],
+    [
+     "PSmad2_PSmad2_n",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PSmad2_PSmad2_n [PSmad2_PSmad2_n]",
+     ""
+    ],
+    [
+     "PSmad2_Smad4_n",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PSmad2_Smad4_n [PSmad2_Smad4_n]",
+     ""
+    ],
+    [
+     "TGF_beta_endo",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TGF_beta_endo [TGF_beta_endo]",
+     ""
+    ],
+    [
+     "TGF_beta_ns",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TGF_beta_ns [TGF_beta_ns]",
+     ""
+    ],
+    [
+     "AA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "AA [AA]",
+     ""
+    ],
+    [
+     "empty_degraded",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "empty_degraded [empty_degraded]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.48",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "480",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.48",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

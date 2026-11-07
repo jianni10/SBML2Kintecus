@@ -1,0 +1,546 @@
+{
+ "version": 3,
+ "created": "2026-11-05T21:12:22.945053+00:00",
+ "description": "Gevertz2018 - cancer treatment with oncolytic viruses and dendritic cell injections minimal model\nBioModels BIOMD0000000817 (curated). SBML file: model.xml.\nSimulation: 0 to 30 time units (SED-ML: OVDC.sedml), sampling 0.029411764705882353.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.38e-05 of species peak (worst: Uninfected_Tumor_Cell_U)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 6 event(s) depend only on time (and on variables only they change): unrolled into 5 firing(s) up to t = 30\n  [info] species 'Total_cells_N' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'total_tumor_cells' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Tumour_cell_U_elimination term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Tumour_cell_U_elimination term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Tumor_Cell_U_infection: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Infected_Tumor_Cell_I_elimination term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Infected_Tumor_Cell_I_elimination term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] time event(s) on 'Dendritic_Cells_D' encoded as time/value pairs in EV_DENDRITIC_CELLS_D.TXT (ADD)\n  [info] time event(s) on 'Oncolytic_Adenovirus_V' encoded as time/value pairs in EV_ONCOLYTIC_ADENOVI.TXT (ADD)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Gevertz2018 - cancer treatment with oncolytic viruses and dendritic cell injections minimal model  (BIOMD0000000817, curated BioModels; source file model.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_cell_U_exponential_growth",
+     ""
+    ],
+    [
+     "0.3198",
+     "0",
+     "0",
+     "Uninfected_Tumor_Cell_U==>2Uninfected_Tumor_Cell_U",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumour_cell_U_elimination term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Uninfected_Tumor_Cell_U+Tumor_targeting_T_cells_T+S[USER;cInfected_Cancer_Cell_I,cTumor_targeting_T_cells_T,cUninfected_Tumor_Cell_U:(2/(1*cInfected_Cancer_Cell_I+1*cTumor_targeting_T_cells_T+1*cUninfected_Tumor_Cell_U+1e-30))]==>Tumor_targeting_T_cells_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumour_cell_U_elimination term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Uninfected_Tumor_Cell_U+Infected_Cancer_Cell_I+Tumor_targeting_T_cells_T+S[USER;cInfected_Cancer_Cell_I,cTumor_targeting_T_cells_T,cUninfected_Tumor_Cell_U:(0.623397/(1*cInfected_Cancer_Cell_I+1*cTumor_targeting_T_cells_T+1*cUninfected_Tumor_Cell_U+1e-30))]==>Infected_Cancer_Cell_I+Tumor_targeting_T_cells_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_Cell_U_infection",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Uninfected_Tumor_Cell_U+Oncolytic_Adenovirus_V+S[USER;cInfected_Cancer_Cell_I,cTumor_targeting_T_cells_T,cUninfected_Tumor_Cell_U:(1.008538/(1*cInfected_Cancer_Cell_I+1*cTumor_targeting_T_cells_T+1*cUninfected_Tumor_Cell_U+1e-30))]==>Infected_Cancer_Cell_I+Oncolytic_Adenovirus_V",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_Tumor_Cell_I_death",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Infected_Cancer_Cell_I==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_Tumor_Cell_I_elimination term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Infected_Cancer_Cell_I+Tumor_targeting_T_cells_T+S[USER;cInfected_Cancer_Cell_I,cTumor_targeting_T_cells_T,cUninfected_Tumor_Cell_U:(2/(1*cInfected_Cancer_Cell_I+1*cTumor_targeting_T_cells_T+1*cUninfected_Tumor_Cell_U+1e-30))]==>Tumor_targeting_T_cells_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Infected_Tumor_Cell_I_elimination term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Infected_Cancer_Cell_I+Infected_Cancer_Cell_I+Tumor_targeting_T_cells_T+S[USER;cInfected_Cancer_Cell_I,cTumor_targeting_T_cells_T,cUninfected_Tumor_Cell_U:(0.623397/(1*cInfected_Cancer_Cell_I+1*cTumor_targeting_T_cells_T+1*cUninfected_Tumor_Cell_U+1e-30))]==>Infected_Cancer_Cell_I+Tumor_targeting_T_cells_T",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Natural_decay_of_virus",
+     ""
+    ],
+    [
+     "2.3",
+     "0",
+     "0",
+     "Oncolytic_Adenovirus_V==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Release_of_virus",
+     ""
+    ],
+    [
+     "3",
+     "0",
+     "0",
+     "Infected_Cancer_Cell_I==>Oncolytic_Adenovirus_V+Infected_Cancer_Cell_I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Activation_of_T_cells_4_1BBL",
+     ""
+    ],
+    [
+     "1.428064",
+     "0",
+     "0",
+     "Infected_Cancer_Cell_I==>Tumor_targeting_T_cells_T+Infected_Cancer_Cell_I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_T_cells",
+     ""
+    ],
+    [
+     "4.901894",
+     "0",
+     "0",
+     "Dendritic_Cells_D==>Tumor_targeting_T_cells_T+Dendritic_Cells_D",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "natural_death_of_T_cells",
+     ""
+    ],
+    [
+     "0.35",
+     "0",
+     "0",
+     "Tumor_targeting_T_cells_T==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "natural_decay_of_Dendritic_Cells_D",
+     ""
+    ],
+    [
+     "0.35",
+     "0",
+     "0",
+     "Dendritic_Cells_D==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Uninfected_Tumor_Cell_U",
+     "0",
+     "57.414042",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Uninfected Tumor Cell U [Uninfected_Tumor_Cell_U]",
+     ""
+    ],
+    [
+     "Infected_Cancer_Cell_I",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Infected Cancer Cell I [Infected_Cancer_Cell_I]",
+     ""
+    ],
+    [
+     "Oncolytic_Adenovirus_V",
+     "0",
+     "2.5",
+     "Y",
+     "0",
+     "No",
+     "EV_ONCOLYTIC_ADENOVI.TXT-ADD",
+     "Oncolytic Adenovirus V [Oncolytic_Adenovirus_V]",
+     ""
+    ],
+    [
+     "Tumor_targeting_T_cells_T",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumor-targeting T cells T [Tumor_targeting_T_cells_T]",
+     ""
+    ],
+    [
+     "Naive_T_cells_A",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "Naive T cells A [Naive_T_cells_A]",
+     ""
+    ],
+    [
+     "Dendritic_Cells_D",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "EV_DENDRITIC_CELLS_D.TXT-ADD",
+     "Dendritic Cells D [Dendritic_Cells_D]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.02941176474",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.02941176474",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_DENDRITIC_CELLS_D.TXT",
+   "key": "O_EV_DENDRITIC_CELLS_D.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "1",
+     "1"
+    ],
+    [
+     "3",
+     "1"
+    ],
+    [
+     "5",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "EV_ONCOLYTIC_ADENOVI.TXT",
+   "key": "O_EV_ONCOLYTIC_ADENOVI.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "2",
+     "2.5"
+    ],
+    [
+     "4",
+     "2.5"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

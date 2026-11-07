@@ -1,0 +1,381 @@
+{
+ "version": 3,
+ "created": "2026-11-05T21:14:24.380299+00:00",
+ "description": "Wodarz2001 - Viruses as antitumor weapons\nBioModels BIOMD0000001043 (curated). SBML file: Wodarz2001.xml.\nSimulation: 0 to 100 time units (SED-ML: Wodarz2001 - Fig3A more cytotoxic.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.64e-07 of species peak (worst: uninfected_tumor_cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 1 event(s) depend only on time (and on variables only they change): unrolled into 1 firing(s) up to t = 100\n  [info] species 'overall_tumor_size' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] time event(s) on 'virus_specific_CTLs' encoded as time/value pairs in EV_VIRUS_SPECIFIC_CT.TXT (SET)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wodarz2001 - Viruses as antitumor weapons  (BIOMD0000001043, curated BioModels; source file Wodarz2001.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "uninfected_tumor_growth term 1/3",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "uninfected_tumor_cells==>2uninfected_tumor_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "uninfected_tumor_growth term 2/3",
+     ""
+    ],
+    [
+     "0.029411764705882353",
+     "0",
+     "0",
+     "uninfected_tumor_cells+uninfected_tumor_cells==>uninfected_tumor_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "uninfected_tumor_growth term 3/3",
+     ""
+    ],
+    [
+     "0.029411764705882353",
+     "0",
+     "0",
+     "uninfected_tumor_cells+infected_tumor_cells==>infected_tumor_cells",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "uninfected_tumor_death",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "uninfected_tumor_cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "infected_tumor_death",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "infected_tumor_cells==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "tumor_infection",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "uninfected_tumor_cells+infected_tumor_cells==>2infected_tumor_cells",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "uninfected_tumor_cells",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "uninfected_tumor_cells [uninfected_tumor_cells]",
+     ""
+    ],
+    [
+     "infected_tumor_cells",
+     "0",
+     "0.0001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "infected_tumor_cells [infected_tumor_cells]",
+     ""
+    ],
+    [
+     "virus_specific_CTLs",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "EV_VIRUS_SPECIFIC_CT.TXT-SET",
+     "virus-specific_CTLs [virus_specific_CTLs]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1000000002",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1000000002",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_VIRUS_SPECIFIC_CT.TXT",
+   "key": "O_EV_VIRUS_SPECIFIC_CT.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "20",
+     "0.001"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

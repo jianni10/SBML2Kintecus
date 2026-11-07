@@ -1,0 +1,528 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:11:02.170932+00:00",
+ "description": "Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human inflammation model for cancer development\nBioModels BIOMD0000000852 (curated). SBML file: Andersen2017.xml.\nSimulation: 0 to 29200 time units (SED-ML: Andersen2017.sedml), sampling 29.2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.61e-05 of species peak (worst: y0)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): s1 = s",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human inflammation model for cancer development  (BIOMD0000000852, curated BioModels; source file Andersen2017.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "HSC_Self_Renewal",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s1+x0+S[USER;cx0,cy0:(0.00087/((7.5e-5*cx0+7.5e-5*cy0)^2+1))]==>2x0+s1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "HSC_Death",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "x0==>a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "HSC_Proliferation",
+     ""
+    ],
+    [
+     "1.1e-5",
+     "0",
+     "0",
+     "x0==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "HSC_MPN_Mutation",
+     ""
+    ],
+    [
+     "2e-8",
+     "0",
+     "0",
+     "x0+s1==>y0+s1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "HSC_Proliferation_HMC",
+     ""
+    ],
+    [
+     "517000000",
+     "0",
+     "0",
+     "x0==>x1+x0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "HMC_Death",
+     ""
+    ],
+    [
+     "129",
+     "0",
+     "0",
+     "x1==>a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MPN_SC_Self_Renewal",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s1+y0+S[USER;cx0,cy0:(0.0013/((7.5e-5*cx0+7.5e-5*cy0)^2+1))]==>2y0+s1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MPN_SC_Death",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "y0==>a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MPN_SC_Proliferation",
+     ""
+    ],
+    [
+     "1.1e-5",
+     "0",
+     "0",
+     "y0==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MPN_SC_Proliferation_MPN_MC",
+     ""
+    ],
+    [
+     "517000000",
+     "0",
+     "0",
+     "y0==>y1+y0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MPN_MC_Death",
+     ""
+    ],
+    [
+     "129",
+     "0",
+     "0",
+     "y1==>a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Dead_Cells_Elimination_Per_Cytokine",
+     ""
+    ],
+    [
+     "2000000000",
+     "0",
+     "0",
+     "a+s1==>s1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Phagocyte_Upregulation_Dead_Cells",
+     ""
+    ],
+    [
+     "0.0003",
+     "0",
+     "0",
+     "a==>s1+a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cytokine_Elimination",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "s1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cytokines_Inflammation",
+     ""
+    ],
+    [
+     "7",
+     "0",
+     "0",
+     "source==>s1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x0",
+     "0",
+     "10100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x0 [x0]",
+     ""
+    ],
+    [
+     "x1",
+     "0",
+     "38400000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x1 [x1]",
+     ""
+    ],
+    [
+     "y0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "y0 [y0]",
+     ""
+    ],
+    [
+     "y1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "y1 [y1]",
+     ""
+    ],
+    [
+     "a",
+     "0",
+     "699",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "a [a]",
+     ""
+    ],
+    [
+     "s1",
+     "0",
+     "3.61",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "s [s]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "29.2",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "29200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "29.2",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

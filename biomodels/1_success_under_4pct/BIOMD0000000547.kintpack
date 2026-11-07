@@ -1,0 +1,807 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:04:58.864853+00:00",
+ "description": "Talemi2014 - Arsenic toxicity and detoxification mechanisms in yeast\nBioModels BIOMD0000000547 (curated). SBML file: BIOMD0000000547_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: BIOMD0000000547_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 30.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.97e-06 of species peak (worst: species_1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'species_6' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction_1 term 2/9: rate order differs from the stoichiometry; consumed on separate line(s) - species_1: zero order, signed\n  [info] reaction_1 term 3/9: rate order differs from the stoichiometry; consumed on separate line(s) - species_1: zero order, signed\n  [info] reaction_1 term 5/9: rate order differs from the stoichiometry; consumed on separate line(s) - species_1: zero order, signed\n  [info] reaction_1 term 9/9: rate order differs from the stoichiometry; consumed on separate line(s) - species_1: zero order, signed\n  [info] reaction_15: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Talemi2014 - Arsenic toxicity and detoxification mechanisms in yeast  (BIOMD0000000547, curated BioModels; source file BIOMD0000000547_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 1/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_11:(354189.4673258859*3.141592653589793^0.3333333333333333*cspecies_11)]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 2/9 (consumes species_1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW2,cspecies_11:((-1*321990.42484171444*3.141592653589793^0.3333333333333333*cSW2*cspecies_11))]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 3/9 (consumes species_1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_,cspecies_11:((-1*321990.42484171444*3.141592653589793^0.3333333333333333*cspecies_11*exp((-1*0.03333333333333333*cTIME_))))]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 4/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_1+S[USER;cspecies_11:(321.99042484171446*3.141592653589793^0.3333333333333333*cspecies_11)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 5/9 (consumes species_1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cspecies_11:((-1*354189.4673258859*3.141592653589793^0.3333333333333333*cSW1*cspecies_11))]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 6/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW2,cTIME_,cspecies_11:(321990.42484171444*3.141592653589793^0.3333333333333333*cSW2*cspecies_11*exp((-1*0.03333333333333333*cTIME_)))]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 7/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2,cspecies_11:(354189.4673258859*3.141592653589793^0.3333333333333333*cSW1*cSW2*cspecies_11)]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 8/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cTIME_,cspecies_11:(4.6192713061484665e57*3.141592653589793^0.3333333333333333*cSW1*cspecies_11*exp((-1*0.03333333333333333*cTIME_)))]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 9/9 (consumes species_1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW1,cSW2,cTIME_,cspecies_11:((-1*4.6192713061484665e57*3.141592653589793^0.3333333333333333*cSW1*cSW2*cspecies_11*exp((-1*0.03333333333333333*cTIME_))))]==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_9+S[USER;cspecies_1:(0.0757274*cspecies_1)]==>species_10",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "161.334",
+     "0",
+     "0",
+     "species_10==>species_9",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6",
+     ""
+    ],
+    [
+     "0.0719168",
+     "0",
+     "0",
+     "species_15==>species_11",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7",
+     ""
+    ],
+    [
+     "0.00880734",
+     "0",
+     "0",
+     "species_1==>species_2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8",
+     ""
+    ],
+    [
+     "0.000656918",
+     "0",
+     "0",
+     "species_2==>species_1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9",
+     ""
+    ],
+    [
+     "0.202797",
+     "0",
+     "0",
+     "species_1+species_7==>species_3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10 (volume 3e-14)",
+     ""
+    ],
+    [
+     "0.005462284746668336",
+     "0",
+     "0",
+     "species_3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10 (volume 2.0000000000000003e-14)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_3:(0.005594341460981444*3.141592653589793^0.3333333333333333*cspecies_3)]==>species_4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_13",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_1:(3.609352630367571e-17*cspecies_1)]==>species_14",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_14",
+     ""
+    ],
+    [
+     "9.01422e-13",
+     "0",
+     "0",
+     "species_14==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_15",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_1+S[USER;cspecies_1,cspecies_14:(149380.15821857218*3.141592653589793^0.3333333333333333*cspecies_14/(1*cspecies_1+5.16159e-6))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 1/3",
+     ""
+    ],
+    [
+     "0.0730991",
+     "0",
+     "0",
+     "species_11==>species_15",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "species_11+S[USER;cspecies_1:(0.000257134*cspecies_1)]==>species_15",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 3/3",
+     ""
+    ],
+    [
+     "1102.15",
+     "0",
+     "0",
+     "species_11+species_10==>species_15+species_10",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17",
+     ""
+    ],
+    [
+     "6.1432",
+     "0",
+     "0",
+     "species_3==>species_1+species_7",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_18 (volume 3e-14)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cspecies_4:(0.015633124337235616*3.141592653589793^0.3333333333333333*cspecies_4)]==>species_3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_18 (volume 2.0000000000000003e-14)",
+     ""
+    ],
+    [
+     "0.03434422062233384",
+     "0",
+     "0",
+     "species_4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "species_5",
+     "0",
+     "0.013151",
+     "Y",
+     "0",
+     "No",
+     "0.013151",
+     "Ycf1 [species_5]",
+     ""
+    ],
+    [
+     "species_10",
+     "0",
+     "0.001024844042979547",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hog1PP [species_10]",
+     ""
+    ],
+    [
+     "species_9",
+     "0",
+     "0.16597515595702045",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Hog1 [species_9]",
+     ""
+    ],
+    [
+     "species_15",
+     "0",
+     "0.02831172017554186",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fps1P [species_15]",
+     ""
+    ],
+    [
+     "species_11",
+     "0",
+     "0.001688279824458136",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Fps1 [species_11]",
+     ""
+    ],
+    [
+     "species_14",
+     "0",
+     "0.0003160384786518791",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Acr3 [species_14]",
+     ""
+    ],
+    [
+     "species_4",
+     "0",
+     "165.76251790519524",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "vAsGS3 [species_4]",
+     ""
+    ],
+    [
+     "species_3",
+     "0",
+     "694.8233507748405",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AsGS3 [species_3]",
+     ""
+    ],
+    [
+     "species_1",
+     "0",
+     "13.1549",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AsIIIin [species_1]",
+     ""
+    ],
+    [
+     "species_2",
+     "0",
+     "176.36855279654384",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AsIIIProt [species_2]",
+     ""
+    ],
+    [
+     "species_7",
+     "0",
+     "1600",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GSH [species_7]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 3600 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "0",
+     "time switch at 0 [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "30.00000003",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "30.00000003",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "3600",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

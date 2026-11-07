@@ -1,0 +1,447 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:16:26.025386+00:00",
+ "description": "Garde2020 - metabolic oscillations in Bacillus subtilis biofilms\nBioModels BIOMD0000001053 (curated). SBML file: Garde2020.xml.\nSimulation: 0 to 25 time units (SED-ML: Garde2020.sedml), sampling 0.025.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.40e-06 of species peak (worst: Ai)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Garde2020 - metabolic oscillations in Bacillus subtilis biofilms  (BIOMD0000001053, curated BioModels; source file Garde2020.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Positive_feedback_of_Gp_on_itself",
+     ""
+    ],
+    [
+     "10.200000000000001",
+     "0",
+     "0",
+     "Gp==>2Gp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Gp_diffusion_to_the_interior_cells",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Gp==>Gm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Biomass_production",
+     ""
+    ],
+    [
+     "5.3",
+     "0",
+     "0",
+     "Gp+Ap==>Ap",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Diffusion_of_Ammonia_from_interior_to_middle_layer",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "Ai==>Am",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_Ammonia_using_Glutamate_by_inner_cells",
+     ""
+    ],
+    [
+     "2.3",
+     "0",
+     "0",
+     "Gi==>Ai",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Ammonia_diffusion_from_middle_layer_to_periphery",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "Am==>Ap",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "loss_of_Ammonia_du_to_diffusion_to_the_environment",
+     ""
+    ],
+    [
+     "4",
+     "0",
+     "0",
+     "Ap==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Diffusion_of_Glutamate_from_middle_to_interior_layer",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "Gm==>Gi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Production_of_Ammonia_in_middle_layer_using_glutamate",
+     ""
+    ],
+    [
+     "2.3",
+     "0",
+     "0",
+     "Gm==>Am",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Use_of_glutamate_in_middle_layer_for_biomass_production",
+     ""
+    ],
+    [
+     "5.3",
+     "0",
+     "0",
+     "Gm+Am==>Am",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Gp",
+     "0",
+     "0.999999999999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gp [Gp]",
+     ""
+    ],
+    [
+     "Ai",
+     "0",
+     "0.999999999999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ai [Ai]",
+     ""
+    ],
+    [
+     "Am",
+     "0",
+     "0.999999999999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Am [Am]",
+     ""
+    ],
+    [
+     "Ap",
+     "0",
+     "0.999999999999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ap [Ap]",
+     ""
+    ],
+    [
+     "Gm",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gm [Gm]",
+     ""
+    ],
+    [
+     "Gi",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Gi [Gi]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.025",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "25",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.025",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

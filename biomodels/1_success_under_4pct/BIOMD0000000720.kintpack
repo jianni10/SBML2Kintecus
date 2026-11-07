@@ -1,0 +1,701 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:07:22.476513+00:00",
+ "description": "Yan2012 - Rb-E2F pathway dynamics with miR449\nBioModels BIOMD0000000720 (curated). SBML file: Yan2012.xml.\nSimulation: 0 to 200 time units (SED-ML: Yan2012.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.97e-06 of species peak (worst: CycE)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_19: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_21: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_22: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): S1 = S",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Yan2012 - Rb-E2F pathway dynamics with miR449  (BIOMD0000000720, curated BioModels; source file Yan2012.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E2F+Myc+S[USER;cE2F,cMyc:(0.4/(cE2F*cMyc+0.15*cE2F+0.15*cMyc+0.0225))]==>2E2F+Myc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Myc+S[USER;cMyc:(0.003/(cMyc+0.15))]==>E2F+Myc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "RE+CycD+S[USER;cRE:(18/(1*cRE+0.92))]==>PRB+E2F+CycD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "RE+CycE+S[USER;cRE:(18/(1*cRE+0.92))]==>PRB+E2F+CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "0.25",
+     "0",
+     "0",
+     "E2F==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "180",
+     "0",
+     "0",
+     "RB+E2F==>RE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E2F+S[USER;cE2F:(1.4/(cE2F+0.15))]==>miR449+E2F",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "miR449==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "miR449+Myc+S[USER;cMyc:(0.6/(1*cMyc+0.15))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CycD+miR449+S[USER;cCycD:(1/(1*cCycD+0.92))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "CycE+miR449+S[USER;cCycE:(0.7/(1*cCycE+0.92))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_11",
+     ""
+    ],
+    [
+     "0.8571428571428571",
+     "0",
+     "0",
+     "source==>Myc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_12",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "Myc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_13",
+     ""
+    ],
+    [
+     "0.38571428571428573",
+     "0",
+     "0",
+     "source==>CycD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_14",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Myc+S[USER;cMyc:(0.03/(cMyc+0.15))]==>CycD+Myc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_15",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "CycD==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "E2F+S[USER;cE2F:(0.35/(cE2F+0.15))]==>CycE+E2F",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "CycE==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_18",
+     ""
+    ],
+    [
+     "0.18",
+     "0",
+     "0",
+     "source==>RB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_19",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PRB+S[USER;cPRB:(3.6/(1*cPRB+0.01))]==>RB",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_20",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "RB==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_21",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "RB+CycD+S[USER;cRB:(18/(1*cRB+0.92))]==>PRB+CycD",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_22",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "RB+CycE+S[USER;cRB:(18/(1*cRB+0.92))]==>PRB+CycE",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_23",
+     ""
+    ],
+    [
+     "0.06",
+     "0",
+     "0",
+     "PRB==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_24",
+     ""
+    ],
+    [
+     "0.03",
+     "0",
+     "0",
+     "RE==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "E2F",
+     "0",
+     "1.2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "E2F [E2F]",
+     ""
+    ],
+    [
+     "Myc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Myc [Myc]",
+     ""
+    ],
+    [
+     "CycD",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CycD [CycD]",
+     ""
+    ],
+    [
+     "RE",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RE [RE]",
+     ""
+    ],
+    [
+     "CycE",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CycE [CycE]",
+     ""
+    ],
+    [
+     "RB",
+     "0",
+     "0.55",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "RB [RB]",
+     ""
+    ],
+    [
+     "miR449",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "miR449 [miR449]",
+     ""
+    ],
+    [
+     "S1",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "3",
+     "S [S]",
+     ""
+    ],
+    [
+     "PRB",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PRB [PRB]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

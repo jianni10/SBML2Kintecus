@@ -1,0 +1,405 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:48:40.793845+00:00",
+ "description": "Arnold2011_Farquhar1980_RuBisCO-CalvinCycle\nBioModels BIOMD0000000383 (curated). SBML file: BIOMD0000000383_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000383_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.35e-06 of species peak (worst: NADPH)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'NADP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] PGA_prod_Vc: rate order differs from the stoichiometry; consumed on separate line(s) - NADPH: zero order, signed\n  [info] PGA_prod_Vo: rate order differs from the stoichiometry; consumed on separate line(s) - NADPH: zero order, signed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Arnold2011_Farquhar1980_RuBisCO-CalvinCycle  (BIOMD0000000383, curated BioModels; source file BIOMD0000000383_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PGA_prod_Vc",
+     ""
+    ],
+    [
+     "0.7831423895253691",
+     "0",
+     "0",
+     "source==>2PGA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PGA_prod_Vc (consumes NADPH)",
+     ""
+    ],
+    [
+     "-1.5662847790507382",
+     "0",
+     "0",
+     "source==>NADPH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PGA_prod_Vo",
+     ""
+    ],
+    [
+     "0.20931260229132592",
+     "0",
+     "0",
+     "source==>1.5PGA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PGA_prod_Vo (consumes NADPH)",
+     ""
+    ],
+    [
+     "-0.41862520458265184",
+     "0",
+     "0",
+     "source==>NADPH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PGA_cons",
+     ""
+    ],
+    [
+     "2.091346153846156",
+     "0",
+     "0",
+     "PGA+NADPH==>NADPH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NADPH_prod term 1/2",
+     ""
+    ],
+    [
+     "2.9615384615384617",
+     "0",
+     "0",
+     "source==>NADPH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "NADPH_prod term 2/2",
+     ""
+    ],
+    [
+     "5.923076923076923",
+     "0",
+     "0",
+     "NADPH==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "RuBP",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "2",
+     "RuBP [RuBP]",
+     ""
+    ],
+    [
+     "PGA",
+     "0",
+     "2.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PGA [PGA]",
+     ""
+    ],
+    [
+     "NADPH",
+     "0",
+     "0.21",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADPH [NADPH]",
+     ""
+    ],
+    [
+     "CO2",
+     "0",
+     "230",
+     "Y",
+     "0",
+     "No",
+     "230",
+     "CO2 [CO2]",
+     ""
+    ],
+    [
+     "O2",
+     "0",
+     "210",
+     "Y",
+     "0",
+     "No",
+     "210",
+     "O2 [O2]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.03",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.03",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

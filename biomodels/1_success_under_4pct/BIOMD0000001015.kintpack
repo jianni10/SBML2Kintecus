@@ -1,0 +1,525 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:15:32.486744+00:00",
+ "description": "Jarrah2014 - mathematical model of the immune response in muscle degeneration and subsequent regeneration in Duchenne muscular dystrophy in mdx mice\nBioModels BIOMD0000001015 (curated). SBML file: Jarrah2014.xml.\nSimulation: 0 to 15 time units (SED-ML: Jarrah2014.sedml), sampling 0.015.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.47e-06 of species peak (worst: M)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): M1 = M; R1 = R",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jarrah2014 - mathematical model of the immune response in muscle degeneration and subsequent regeneration in Duchenne muscular dystrophy in mdx mice  (BIOMD0000001015, curated BioModels; source file Jarrah2014.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction",
+     ""
+    ],
+    [
+     "0.0341",
+     "0",
+     "0",
+     "D+M1==>H+D+M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "H==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 1/2",
+     ""
+    ],
+    [
+     "6.46044",
+     "0",
+     "0",
+     "source==>C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 2/2",
+     ""
+    ],
+    [
+     "0.115375",
+     "0",
+     "0",
+     "D+H==>C+D+H",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3",
+     ""
+    ],
+    [
+     "1.61511",
+     "0",
+     "0",
+     "C==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4 term 1/2",
+     ""
+    ],
+    [
+     "312.462",
+     "0",
+     "0",
+     "source==>M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4 term 2/2",
+     ""
+    ],
+    [
+     "0.766576",
+     "0",
+     "0",
+     "D+M1==>2M1+D",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5",
+     ""
+    ],
+    [
+     "0.781155",
+     "0",
+     "0",
+     "M1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 1/2",
+     ""
+    ],
+    [
+     "0.00409948",
+     "0",
+     "0",
+     "N+C==>D+C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N+S[USER;cTIME_:(0.3617961343415654/(2.2*3.141592653589793^0.5*cTIME_*exp(0.10330578512396693*(log(cTIME_+1e-11)-4.22686)^2)+2.2e-11*3.141592653589793^0.5*exp(0.10330578512396693*(log(cTIME_+1e-11)-4.22686)^2)))]==>D",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7 term 1/2",
+     ""
+    ],
+    [
+     "1.34671",
+     "0",
+     "0",
+     "D==>R1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7 term 2/2",
+     ""
+    ],
+    [
+     "0.000323097",
+     "0",
+     "0",
+     "D+M1==>R1+M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8",
+     ""
+    ],
+    [
+     "0.123848",
+     "0",
+     "0",
+     "R1==>N",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "H",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CD4+_T_Helper_cells_(H) [H]",
+     ""
+    ],
+    [
+     "D",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Damaged_fibres_(D) [D]",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "400",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Macrophages_(M) [M]",
+     ""
+    ],
+    [
+     "C",
+     "0",
+     "4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CD8+_cytotoxic_T_lymphocytes_(C) [C]",
+     ""
+    ],
+    [
+     "N",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Normal_fibres_(N) [N]",
+     ""
+    ],
+    [
+     "R1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Regenerative_fibres_(R) [R]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.015",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "15",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.015",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

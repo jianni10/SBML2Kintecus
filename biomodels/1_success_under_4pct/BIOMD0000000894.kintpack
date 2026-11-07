@@ -1,0 +1,386 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:12:00.408363+00:00",
+ "description": "Bose2011 - Noise-assisted interactions of tumor and immune cells\nBioModels BIOMD0000000894 (curated). SBML file: Bose2011.xml.\nSimulation: 0 to 200 time units (SED-ML: Bose2011.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.02e-06 of species peak (worst: y)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bose2011 - Noise-assisted interactions of tumor and immune cells  (BIOMD0000000894, curated BioModels; source file Bose2011.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_tumor_system term 1/2",
+     ""
+    ],
+    [
+     "2.73",
+     "0",
+     "0",
+     "z==>x+z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_tumor_system term 2/2",
+     ""
+    ],
+    [
+     "1.748",
+     "0",
+     "0",
+     "x==>2x",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_tumor_system term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x+x==>x",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_tumor_system term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "x+y==>y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_effector_cell_against_tumor_cell",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "y+z==>2y+z",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_effector_cell_functioning_against_tumor_cell",
+     ""
+    ],
+    [
+     "0.049999999999999996",
+     "0",
+     "0",
+     "y==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Formation_of_tumor_detecting_cell",
+     ""
+    ],
+    [
+     "1.126",
+     "0",
+     "0",
+     "x==>z+x",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Removal_of_tumor_detecting_cell",
+     ""
+    ],
+    [
+     "15.892",
+     "0",
+     "0",
+     "z==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "x",
+     "0",
+     "1e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "x [x]",
+     ""
+    ],
+    [
+     "y",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "y [y]",
+     ""
+    ],
+    [
+     "z",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "z [z]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "2",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "2",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

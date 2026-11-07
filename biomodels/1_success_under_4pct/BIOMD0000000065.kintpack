@@ -1,0 +1,589 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:51:56.461569+00:00",
+ "description": "Yildirim2003_Lac_Operon\nBioModels BIOMD0000000065 (curated). SBML file: BIOMD0000000065_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000065_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.02e-06 of species peak (worst: M)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r_a2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r_a3_l1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r_l3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): M1 = M; P1 = P",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Yildirim2003_Lac_Operon  (BIOMD0000000065, curated BioModels; source file BIOMD0000000065_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_m1",
+     ""
+    ],
+    [
+     "7.25e-7",
+     "0",
+     "0",
+     "source==>M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_m2",
+     ""
+    ],
+    [
+     "0.4336",
+     "0",
+     "0",
+     "M1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_m3_i1",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "I1==>M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_i1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cA:(0.000997/(25086.353035627162*cA^2+7200))]==>I1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_i1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A+A+S[USER;cA:(25.011093976520282/(25086.353035627162*cA^2+7200))]==>I1+2A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_b1",
+     ""
+    ],
+    [
+     "0.023433",
+     "0",
+     "0",
+     "B==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_b2_i2",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "I2==>B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_i2",
+     ""
+    ],
+    [
+     "0.01586638460415978",
+     "0",
+     "0",
+     "M1==>I2+M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_a1",
+     ""
+    ],
+    [
+     "0.5426",
+     "0",
+     "0",
+     "A==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_a2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A+B+S[USER;cA:(21500/(1*cA+1.95))]==>B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_a3_l1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "L+B+S[USER;cL:(17600/(1*cL+0.97))]==>A+B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_l2",
+     ""
+    ],
+    [
+     "0.0226",
+     "0",
+     "0",
+     "L==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_l3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "L+P1+S[USER;cL:(2650/(1*cL+1.81))]==>P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_l4",
+     ""
+    ],
+    [
+     "677.6470588235294",
+     "0",
+     "0",
+     "P1==>L+P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_p1",
+     ""
+    ],
+    [
+     "0.6726",
+     "0",
+     "0",
+     "P1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_p2_i3",
+     ""
+    ],
+    [
+     "0.35335689045936397",
+     "0",
+     "0",
+     "I3==>P1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r_i3",
+     ""
+    ],
+    [
+     "9.380443965680417",
+     "0",
+     "0",
+     "M1==>I3+M1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "0.000626",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mRNA [M]",
+     ""
+    ],
+    [
+     "B",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Betagalactosidase [B]",
+     ""
+    ],
+    [
+     "A",
+     "0",
+     "0.038",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "allolactose [A]",
+     ""
+    ],
+    [
+     "L",
+     "0",
+     "0.372",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "lactose_internal [L]",
+     ""
+    ],
+    [
+     "P1",
+     "0",
+     "0.0149",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "permease [P]",
+     ""
+    ],
+    [
+     "I1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PartialmRNA [I1]",
+     ""
+    ],
+    [
+     "I2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PartialBetagalactosidase [I2]",
+     ""
+    ],
+    [
+     "I3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PartialPermease [I3]",
+     ""
+    ],
+    [
+     "L_e",
+     "0",
+     "0.08",
+     "Y",
+     "0",
+     "No",
+     "0.08",
+     "External_Lactose [L_e]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

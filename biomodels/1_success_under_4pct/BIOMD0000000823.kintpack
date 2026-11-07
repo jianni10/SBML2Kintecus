@@ -1,0 +1,686 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:10:17.838938+00:00",
+ "description": "Varusai2018 - Dynamic modelling of the mTOR signalling network reveals complex emergent behaviours conferred by DEPTOR\nBioModels BIOMD0000000823 (curated). SBML file: Varusai2018.xml.\nSimulation: 0 to 3600 time units (SED-ML: Varusai2018.sedml), sampling 3.6.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.71e-06 of species peak (worst: pIR)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] v1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v5 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v5 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v11 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v12: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v15: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v16: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Varusai2018 - Dynamic modelling of the mTOR signalling network reveals complex emergent behaviours conferred by DEPTOR  (BIOMD0000000823, curated BioModels; source file Varusai2018.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IR+S[USER;cIR:(1/(1*cIR+95))]==>pIR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pIR+S[USER;cpIR:(1/(1*cpIR+35))]==>IR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRS+pIR+S[USER;cIRS:(0.1/(1*cIRS+50))]==>pIRS+pIR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pIRS+S[USER;cpIRS:(1/(1*cpIRS+50))]==>IRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Akt+pmTORC2+S[USER;cAkt:(1.5/(1*cAkt+4))]==>pAkt+pmTORC2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Akt+pIRS+S[USER;cAkt:(0.05/(1*cAkt+7))]==>pAkt+pIRS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pAkt+S[USER;cpAkt:(2/(1*cpAkt+34))]==>Akt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mTORC1+pAkt+S[USER;cmTORC1:(0.1/(1*cmTORC1+2))]==>pmTORC1+pAkt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pmTORC1+S[USER;cpmTORC1:(6/(1*cpmTORC1+1))]==>mTORC1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "mTORC2+pIR+S[USER;cmTORC2:(0.3/(1*cmTORC2+160))]==>pmTORC2+pIR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pmTORC2+S[USER;cpmTORC2:(3/(1*cpmTORC2+7))]==>mTORC2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DEPTOR+pmTORC2+S[USER;cDEPTOR:(0.13/(1*cDEPTOR+11))]==>pDEPTOR+pmTORC2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DEPTOR+pmTORC1+S[USER;cpDEPTOR:(0.1/(cpDEPTOR+120))]==>pDEPTOR+pmTORC1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pDEPTOR+S[USER;cpDEPTOR:(4/(1*cpDEPTOR+7))]==>DEPTOR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v13 term 1/2",
+     ""
+    ],
+    [
+     "0.006",
+     "0",
+     "0",
+     "mTORC1_DEPTOR==>mTORC1+DEPTOR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v13 term 2/2",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "mTORC1+DEPTOR==>mTORC1_DEPTOR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v14 term 1/2",
+     ""
+    ],
+    [
+     "0.006",
+     "0",
+     "0",
+     "mTORC2_DEPTOR==>mTORC2+DEPTOR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v14 term 2/2",
+     ""
+    ],
+    [
+     "0.007",
+     "0",
+     "0",
+     "mTORC2+DEPTOR==>mTORC2_DEPTOR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v15",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRS+pmTORC1+S[USER;cIRS:(0.1/(1*cIRS+50))]==>iIRS+pmTORC1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v16",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "iIRS+S[USER;ciIRS:(1/(1*ciIRS+50))]==>IRS",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "IR",
+     "0",
+     "50",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IR [IR]",
+     ""
+    ],
+    [
+     "pIR",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pIR [pIR]",
+     ""
+    ],
+    [
+     "IRS",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRS [IRS]",
+     ""
+    ],
+    [
+     "pIRS",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pIRS [pIRS]",
+     ""
+    ],
+    [
+     "iIRS",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "iIRS [iIRS]",
+     ""
+    ],
+    [
+     "Akt",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Akt [Akt]",
+     ""
+    ],
+    [
+     "pAkt",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pAkt [pAkt]",
+     ""
+    ],
+    [
+     "mTORC1",
+     "0",
+     "250",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mTORC1 [mTORC1]",
+     ""
+    ],
+    [
+     "pmTORC1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pmTORC1 [pmTORC1]",
+     ""
+    ],
+    [
+     "mTORC2",
+     "0",
+     "200",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mTORC2 [mTORC2]",
+     ""
+    ],
+    [
+     "pmTORC2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pmTORC2 [pmTORC2]",
+     ""
+    ],
+    [
+     "imTORC2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "imTORC2 [imTORC2]",
+     ""
+    ],
+    [
+     "mTORC1_DEPTOR",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mTORC1_DEPTOR [mTORC1_DEPTOR]",
+     ""
+    ],
+    [
+     "mTORC2_DEPTOR",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "mTORC2_DEPTOR [mTORC2_DEPTOR]",
+     ""
+    ],
+    [
+     "DEPTOR",
+     "0",
+     "350",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DEPTOR [DEPTOR]",
+     ""
+    ],
+    [
+     "pDEPTOR",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pDEPTOR [pDEPTOR]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "3.6",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3600",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "3.6",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

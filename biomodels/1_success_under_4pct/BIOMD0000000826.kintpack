@@ -1,0 +1,1081 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:23:59.515366+00:00",
+ "description": "Shin_2018_EGFR-PYK2-c-Met interaction network_model\nBioModels BIOMD0000000826 (curated). SBML file: Shin2018.xml.\nSimulation: 0 to 1440 time units (SED-ML: Shin2018.sedml), sampling 1.44.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS (Kintecus within 0.0391% of the SBML; run on James's PC in 22 s)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 3.23e-09 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] v1 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - pEGFR: zero order, signed\n  [info] v1 term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v2 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v2 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v3 term 3/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v3 term 4/6: rate order differs from the stoichiometry; consumed on separate line(s) - EGFRub: zero order, signed\n  [info] v3 term 5/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v3 term 6/6: rate order differs from the stoichiometry; consumed on separate line(s) - EGFRub: zero order, signed\n  [info] v4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v9 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v9 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v10 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v10 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v11 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - pSTAT3: zero order, signed\n  [info] v11 term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v12 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v12 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v16 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v16 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v17: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v18: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v19 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v20 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v20 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v21 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v22: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v23 term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v23 term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v24: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Shin_2018_EGFR-PYK2-c-Met interaction network_model  (BIOMD0000000826, curated BioModels; source file Shin2018.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cEGFRub,cpEGFR:(1659028.4921783512/(-1*cEGFRub-1*cpEGFR+646.993))]==>pEGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1 term 2/3 (consumes pEGFR)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cEGFRub,cpEGFR:((-1*4167.2929443048*cEGFRub/(-1*cEGFRub-1*cpEGFR+646.993)))]==>pEGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v1 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pEGFR+S[USER;cEGFRub,cpEGFR:((-1*4167.2929443048/(1*cEGFRub+1*cpEGFR-646.993)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pEGFR+S[USER;cpEGFR:(112.202/(1*cpEGFR+3.80189))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pEGFR+aPTP+S[USER;cpEGFR:(1406.05/(1*cpEGFR+3.80189))]==>aPTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3 term 1/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cEGFRub,cPYK2,cpEGFR,cpPYK2:(0.0034514411093514315/(-1*cEGFRub*cPYK2-1*cEGFRub*cpPYK2-0.0835603*cEGFRub-1*cPYK2*cpEGFR+400.3926*cPYK2-1*cpEGFR*cpPYK2-0.0835603*cpEGFR+400.3926*cpPYK2+33.45692577378001))]==>EGFRub",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3 term 2/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pCbl+S[USER;cEGFRub,cPYK2,cpEGFR,cpPYK2:(358.922863428983/(-1*cEGFRub*cPYK2-1*cEGFRub*cpPYK2-0.0835603*cEGFRub-1*cPYK2*cpEGFR+400.3926*cPYK2-1*cpEGFR*cpPYK2-0.0835603*cpEGFR+400.3926*cpPYK2+33.45692577378001))]==>EGFRub+pCbl",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3 term 3/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "EGFRub+S[USER;cEGFRub,cPYK2,cpEGFR,cpPYK2:((-1*8.6696318059e-6/(0.0835603*cEGFRub+1*cPYK2*cpEGFR+1*cPYK2*(cEGFRub+1e-30)-400.3926*cPYK2+1*cpEGFR*cpPYK2+0.0835603*cpEGFR+1*cpPYK2*(cEGFRub+1e-30)-400.3926*cpPYK2-33.45692577378001)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3 term 4/6 (consumes EGFRub)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cEGFRub,cPYK2,cpEGFR,cpPYK2:((-1*8.6696318059e-6*cpEGFR/(-1*cEGFRub*cPYK2-1*cEGFRub*cpPYK2-0.0835603*cEGFRub-1*cPYK2*cpEGFR+400.3926*cPYK2-1*cpEGFR*cpPYK2-0.0835603*cpEGFR+400.3926*cpPYK2+33.45692577378001)))]==>EGFRub",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3 term 5/6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "EGFRub+pCbl+S[USER;cEGFRub,cPYK2,cpEGFR,cpPYK2:((-1*0.90157385685/(0.0835603*cEGFRub+1*cPYK2*cpEGFR+1*cPYK2*(cEGFRub+1e-30)-400.3926*cPYK2+1*cpEGFR*cpPYK2+0.0835603*cpEGFR+1*cpPYK2*(cEGFRub+1e-30)-400.3926*cpPYK2-33.45692577378001)))]==>pCbl",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v3 term 6/6 (consumes EGFRub)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cEGFRub,cPYK2,cpCbl,cpEGFR,cpPYK2:((-1*0.90157385685*cpCbl*cpEGFR/(-1*cEGFRub*cPYK2-1*cEGFRub*cpPYK2-0.0835603*cEGFRub-1*cPYK2*cpEGFR+400.3926*cPYK2-1*cpEGFR*cpPYK2-0.0835603*cpEGFR+400.3926*cpPYK2+33.45692577378001)))]==>EGFRub",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "EGFRub+S[USER;cEGFRub:(11.1173/(1*cEGFRub+90.7821))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5 term 1/2",
+     ""
+    ],
+    [
+     "26.5461",
+     "0",
+     "0",
+     "source==>PYK2m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v5 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pSTAT3+S[USER;cpSTAT3:(34.0408/(1*cpSTAT3+4.74242))]==>PYK2m+pSTAT3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v6",
+     ""
+    ],
+    [
+     "53.5797",
+     "0",
+     "0",
+     "PYK2m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PYK2m+S[USER;cPYK2m:(3.34965/(1*cPYK2m+3.33426))]==>PYK2+PYK2m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8",
+     ""
+    ],
+    [
+     "0.0566239",
+     "0",
+     "0",
+     "PYK2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PYK2+pcMET+S[USER;cPYK2:(0.988553/(1*cPYK2+34.914))]==>pPYK2+pcMET",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v9 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PYK2+pEGFR+S[USER;cPYK2:(0.463447/(1*cPYK2+34.914))]==>pPYK2+pEGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pPYK2+S[USER;cpPYK2:(0.530884/(1*cpPYK2+9.14113))]==>PYK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v10 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pPYK2+aPTP+S[USER;cpPYK2:(0.00610942/(1*cpPYK2+9.14113))]==>PYK2+aPTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pPYK2+S[USER;cSTAT3uStattic,cpSTAT3:(46.34483359199999/(-1*cSTAT3uStattic-1*cpSTAT3+164.8183))]==>pSTAT3+pPYK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11 term 2/3 (consumes pSTAT3)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSTAT3uStattic,cpPYK2,cpSTAT3:((-1*0.321366*cSTAT3uStattic*cpPYK2/(-1*cSTAT3uStattic-1*cpSTAT3+164.8183)))]==>pSTAT3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v11 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pSTAT3+pPYK2+S[USER;cSTAT3uStattic,cpSTAT3:((-1*0.321366/(1*cSTAT3uStattic+1*cpSTAT3-164.8183)))]==>pPYK2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pSTAT3+S[USER;cpSTAT3:(7.63836/(1*cpSTAT3+11.5878))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v12 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pSTAT3+aPTP+S[USER;cpSTAT3:(0.000289734/(1*cpSTAT3+11.5878))]==>aPTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v13 term 1/2",
+     ""
+    ],
+    [
+     "0.0937562",
+     "0",
+     "0",
+     "source==>cMETm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v13 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pSTAT3+S[USER;cpSTAT3:(0.354813/(1*cpSTAT3+38.7258))]==>cMETm+pSTAT3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v14",
+     ""
+    ],
+    [
+     "4.56037",
+     "0",
+     "0",
+     "cMETm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v15",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cMETm+S[USER;ccMETm:(91.4113/(1*ccMETm+6.45654))]==>cMET+cMETm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v16 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cMET+S[USER;ccMET:(24.4906/(1*ccMET+528.445))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v16 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cMET+pCbl+S[USER;ccMET:(1.1749/(1*ccMET+528.445))]==>pCbl",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v17",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "cMET+S[USER;ccMET:(0.0090365/(1*ccMET+9.81748))]==>pcMET",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v18",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pcMET+S[USER;cpcMET:(0.0606736/(1*cpcMET+9.95405))]==>cMET",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v19 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pEGFR+S[USER;cpCbl:(9225.734155/(188.2895-1*cpCbl))]==>pCbl+pEGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v19 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pCbl+pEGFR+S[USER;cpCbl:((-1*52.723/(1*cpCbl-188.2895)))]==>pEGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v20 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pCbl+S[USER;cpCbl:(0.0483059/(1*cpCbl+24.322))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v20 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pCbl+aPTP+S[USER;cpCbl:(35.6451/(1*cpCbl+24.322))]==>aPTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v21 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pEGFR+S[USER;caPTP:(1.1776067573600002/(349.206-1*caPTP))]==>aPTP+pEGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v21 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "aPTP+pEGFR+S[USER;caPTP:((-1*0.00397192/(1*caPTP-349.206)))]==>pEGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v22",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "aPTP+S[USER;caPTP:(0.034914/(1*caPTP+46.4515))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v23 term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pEGFR+S[USER;cpERK:(140605027875/(169.55639-1*cpERK))]==>pERK+pEGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v23 term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pcMET+S[USER;cpERK:(1172196792000/(169.55639-1*cpERK))]==>pERK+pcMET",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v23 term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pERK+pcMET+S[USER;cpERK:((-1*7030720000/(1*cpERK-169.55639)))]==>pcMET",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v23 term 4/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pERK+pEGFR+S[USER;cpERK:((-1*843335000/(1*cpERK-169.55639)))]==>pEGFR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v24",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pERK+S[USER;cpERK:(4395420000/(1*cpERK+0.156675))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v25 term 1/3",
+     ""
+    ],
+    [
+     "127.35",
+     "0",
+     "0",
+     "STAT3uStattic+STAT3uStattic==>3STAT3uStattic",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v25 term 2/3",
+     ""
+    ],
+    [
+     "18377.1472",
+     "0",
+     "0",
+     "STAT3uStattic==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v25 term 3/3",
+     ""
+    ],
+    [
+     "127.35",
+     "0",
+     "0",
+     "STAT3uStattic+pSTAT3==>2STAT3uStattic+pSTAT3",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "pEGFR",
+     "0",
+     "0.109014",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pEGFR [pEGFR]",
+     ""
+    ],
+    [
+     "EGFRub",
+     "0",
+     "6.93991",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "EGFRub [EGFRub]",
+     ""
+    ],
+    [
+     "PYK2m",
+     "0",
+     "0.6219",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PYK2m [PYK2m]",
+     ""
+    ],
+    [
+     "PYK2",
+     "0",
+     "9.29922",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PYK2 [PYK2]",
+     ""
+    ],
+    [
+     "pPYK2",
+     "0",
+     "2.51016",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pPYK2 [pPYK2]",
+     ""
+    ],
+    [
+     "pSTAT3",
+     "0",
+     "1.17843",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pSTAT3 [pSTAT3]",
+     ""
+    ],
+    [
+     "cMETm",
+     "0",
+     "0.0228566",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cMETm [cMETm]",
+     ""
+    ],
+    [
+     "cMET",
+     "0",
+     "4.67164",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "cMET [cMET]",
+     ""
+    ],
+    [
+     "pcMET",
+     "0",
+     "0.502111",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pcMET [pcMET]",
+     ""
+    ],
+    [
+     "pCbl",
+     "0",
+     "10.4757",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pCbl [pCbl]",
+     ""
+    ],
+    [
+     "aPTP",
+     "0",
+     "0.49418",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "aPTP [aPTP]",
+     ""
+    ],
+    [
+     "pERK",
+     "0",
+     "0.669043",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pERK [pERK]",
+     ""
+    ],
+    [
+     "STAT3uStattic",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STAT3uStattic [STAT3uStattic]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1.44",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1440",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1.44",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

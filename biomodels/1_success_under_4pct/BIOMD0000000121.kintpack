@@ -1,0 +1,463 @@
+{
+ "version": 3,
+ "created": "2026-11-05T21:11:35.981485+00:00",
+ "description": "Clancy2001_Kchannel\nBioModels BIOMD0000000121 (curated). SBML file: BIOMD0000000121_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000121_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 2.9411764705882355.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.58e-06 of species peak (worst: c2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 2 event(s) depend only on time (and on variables only they change): unrolled into 2 firing(s) up to t = 3000\n  [info] species 'ik' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] time event(s) on 'v' encoded as time/value pairs in EV_P_V.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_v = v",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Clancy2001_Kchannel  (BIOMD0000000121, curated BioModels; source file BIOMD0000000121_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000001 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "c3+S[USER;cp_v:(0.02852339594184874*exp(0.05547153*cp_v))]==>c2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000001 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "c2+S[USER;cp_v:(0.002357*exp((-1*0.036588*cp_v)))]==>c3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000002 term 1/2",
+     ""
+    ],
+    [
+     "2.172",
+     "0",
+     "0",
+     "c2==>c1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000002 term 2/2",
+     ""
+    ],
+    [
+     "1.077",
+     "0",
+     "0",
+     "c1==>c2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000003 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "c1+S[USER;cp_v:(0.008891315933981186*exp(0.05547153*cp_v))]==>o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000003 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "o+S[USER;cp_v:(0.0029357000000000003*exp((-1*0.02158*cp_v)))]==>c1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000004 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "o+S[USER;cp_v:(0.6210827475353925*exp(0.000942*cp_v))]==>i",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000004 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "i+S[USER;cp_v:(0.203197386982025*exp((-1*0.02352*cp_v)))]==>o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000005 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "c1+S[USER;cp_v:(0.008891315933981186*exp(0.05547153*cp_v))]==>i",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000005 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "i+S[USER;cp_v:(0.0009604623076881357*exp((-1*0.046042*cp_v)))]==>c1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "c3",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ClosedState_3 [c3]",
+     ""
+    ],
+    [
+     "c2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ClosedState_2 [c2]",
+     ""
+    ],
+    [
+     "c1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ClosedState_1 [c1]",
+     ""
+    ],
+    [
+     "o",
+     "0",
+     "0.06",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "OpenState [o]",
+     ""
+    ],
+    [
+     "i",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "InactivationState [i]",
+     ""
+    ],
+    [
+     "p_v",
+     "0",
+     "-40",
+     "N",
+     "0",
+     "No",
+     "EV_P_V.TXT-SET",
+     "parameter v [v]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "2.941176474",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "3000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "2.941176474",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_P_V.TXT",
+   "key": "O_EV_P_V.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "50",
+     "0"
+    ],
+    [
+     "300",
+     "-40"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

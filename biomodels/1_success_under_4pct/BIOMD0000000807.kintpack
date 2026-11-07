@@ -1,0 +1,467 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:09:53.248307+00:00",
+ "description": "Fassoni2019 - Oncogenesis encompassing mutations and genetic instability\nBioModels BIOMD0000000807 (curated). SBML file: model.xml.\nSimulation: 0 to 40000 time units (SED-ML: Fassoni2019 - 5A.sedml), sampling 40.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.82e-07 of species peak (worst: normalized_pre_cancer_cell_g)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] transition_to_cancer_cell: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): normalizedprecancercellg1 = normalized_pre_cancer_cell_g",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fassoni2019 - Oncogenesis encompassing mutations and genetic instability  (BIOMD0000000807, curated BioModels; source file model.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "normal_cell_growth",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "source==>normalized_normal_cell_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "normal_cell_death",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "normalized_normal_cell_n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "normal_cell_damage_A",
+     ""
+    ],
+    [
+     "0.034999999999999996",
+     "0",
+     "0",
+     "normalized_normal_cell_n+normalized_cancer_cell_a==>normalized_cancer_cell_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pre_cancer_cell_logistic_growth",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "normalizedprecancercellg1==>2normalizedprecancercellg1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pre_cancer_cell_natural_death",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "normalizedprecancercellg1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pre_cancer_cell_death_tissue_repair_system",
+     ""
+    ],
+    [
+     "0.034999999999999996",
+     "0",
+     "0",
+     "normalizedprecancercellg1+normalized_normal_cell_n==>normalized_normal_cell_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "pre_cancer_cell_death_apoptosis",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "normalizedprecancercellg1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cancer_cell_natural_death",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "normalized_cancer_cell_a==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cancer_cell_logistic_growth term 1/2",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "normalized_cancer_cell_a==>2normalized_cancer_cell_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cancer_cell_logistic_growth term 2/2",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "normalized_cancer_cell_a+normalized_cancer_cell_a==>normalized_cancer_cell_a",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cancer_cell_death_tissue_repair_system",
+     ""
+    ],
+    [
+     "0.034999999999999996",
+     "0",
+     "0",
+     "normalized_cancer_cell_a+normalized_normal_cell_n==>normalized_normal_cell_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "cancer_cell_death_apoptosis",
+     ""
+    ],
+    [
+     "0.006",
+     "0",
+     "0",
+     "normalized_cancer_cell_a==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "transition_to_cancer_cell",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "normalizedprecancercellg1+S[USER;cnormalizedprecancercellg1:(1e-5*cnormalizedprecancercellg1/(1*cnormalizedprecancercellg1+1e-5))]==>normalized_cancer_cell_a",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "normalized_normal_cell_n",
+     "0",
+     "0.99999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "normalized normal cell n [normalized_normal_cell_n]",
+     ""
+    ],
+    [
+     "normalizedprecancercellg1",
+     "0",
+     "1e-8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "normalized pre-cancer cell g [normalized_pre_cancer_cell_g]",
+     ""
+    ],
+    [
+     "normalized_cancer_cell_a",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "normalized cancer cell a [normalized_cancer_cell_a]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "40",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "40000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "40",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

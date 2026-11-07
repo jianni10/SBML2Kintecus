@@ -1,0 +1,587 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:12:56.374888+00:00",
+ "description": "Jarrett2015 - Modelling the interaction between immune response, bacterial dynamics and inflammatory damage\nBioModels BIOMD0000000920 (curated). SBML file: Jarrett2015.xml.\nSimulation: 0 to 70 time units (SED-ML: Jarrett2015.sedml), sampling 0.7.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.97e-06 of species peak (worst: inflammation__I)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Jarrett2015 - Modelling the interaction between immune response, bacterial dynamics and inflammatory damage  (BIOMD0000000920, curated BioModels; source file Jarrett2015.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_A term 1/4",
+     ""
+    ],
+    [
+     "0.11",
+     "0",
+     "0",
+     "pro_inflammatory__P==>anti_inflammatory__A+pro_inflammatory__P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_A term 2/4",
+     ""
+    ],
+    [
+     "0.25",
+     "0",
+     "0",
+     "anti_inflammatory__A==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_A term 3/4",
+     ""
+    ],
+    [
+     "0.25",
+     "0",
+     "0",
+     "anti_inflammatory__A+bacterial_infection__B==>2anti_inflammatory__A+bacterial_infection__B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_A term 4/4",
+     ""
+    ],
+    [
+     "0.135",
+     "0",
+     "0",
+     "anti_inflammatory__A+inflammation__I==>inflammation__I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_For_I term 1/4",
+     ""
+    ],
+    [
+     "1.05",
+     "0",
+     "0",
+     "pro_inflammatory__P==>inflammation__I+pro_inflammatory__P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_For_I term 2/4",
+     ""
+    ],
+    [
+     "0.45",
+     "0",
+     "0",
+     "bacterial_infection__B==>inflammation__I+bacterial_infection__B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_For_I term 3/4",
+     ""
+    ],
+    [
+     "0.0174",
+     "0",
+     "0",
+     "inflammation__I==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_For_I term 4/4",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "inflammation__I+anti_inflammatory__A==>anti_inflammatory__A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_B term 1/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(1*exp((-1*0.01*cTIME_)))]==>bacterial_infection__B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_B term 2/5",
+     ""
+    ],
+    [
+     "0.9",
+     "0",
+     "0",
+     "bacterial_infection__B==>2bacterial_infection__B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_B term 3/5",
+     ""
+    ],
+    [
+     "0.9",
+     "0",
+     "0",
+     "bacterial_infection__B+bacterial_infection__B==>bacterial_infection__B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_B term 4/5",
+     ""
+    ],
+    [
+     "1.5",
+     "0",
+     "0",
+     "bacterial_infection__B+inflammation__I==>2bacterial_infection__B+inflammation__I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_for_B term 5/5",
+     ""
+    ],
+    [
+     "5",
+     "0",
+     "0",
+     "bacterial_infection__B+pro_inflammatory__P==>pro_inflammatory__P",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_For_P term 1/6",
+     ""
+    ],
+    [
+     "0.27",
+     "0",
+     "0",
+     "inflammation__I==>pro_inflammatory__P+inflammation__I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_For_P term 2/6",
+     ""
+    ],
+    [
+     "0.2",
+     "0",
+     "0",
+     "bacterial_infection__B==>pro_inflammatory__P+bacterial_infection__B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_For_P term 3/6",
+     ""
+    ],
+    [
+     "0.12",
+     "0",
+     "0",
+     "pro_inflammatory__P==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_For_P term 4/6",
+     ""
+    ],
+    [
+     "0.27",
+     "0",
+     "0",
+     "pro_inflammatory__P+inflammation__I==>inflammation__I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_For_P term 5/6",
+     ""
+    ],
+    [
+     "0.08000000000000002",
+     "0",
+     "0",
+     "pro_inflammatory__P+bacterial_infection__B==>bacterial_infection__B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_For_P term 6/6",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "pro_inflammatory__P+anti_inflammatory__A==>anti_inflammatory__A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "anti_inflammatory__A",
+     "0",
+     "3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "anti-inflammatory (A) [anti_inflammatory__A]",
+     ""
+    ],
+    [
+     "inflammation__I",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "inflammation (I) [inflammation__I]",
+     ""
+    ],
+    [
+     "bacterial_infection__B",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "bacterial infection (B) [bacterial_infection__B]",
+     ""
+    ],
+    [
+     "pro_inflammatory__P",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pro-inflammatory (P) [pro_inflammatory__P]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.7",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "70",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.7",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

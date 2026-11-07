@@ -1,0 +1,955 @@
+{
+ "version": 3,
+ "created": "2026-11-06T15:04:05.766428+00:00",
+ "description": "Suh2004_KCNQ_Regulation\nBioModels BIOMD0000000081 (curated). SBML file: BIOMD0000000081_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000081_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH, max |difference| = 7.81e+01 of species peak (worst: ip3_C)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 7.81e+01 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'GTP_C' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] PIP5kinase: non-integer reactant coefficient 0.0009967 on ATP_C written as a Kintecus coefficient\n  [info] PIP5kinase: rate order differs from the stoichiometry; consumed on separate line(s) - ATP_C: zero order, signed\n  [info] GTPon term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - GGTP_M: zero order, signed\n  [info] GTPgSon term 2/2: non-integer reactant coefficient 0.0009967 on GTPgS_C written as a Kintecus coefficient\n  [info] GDPbSon term 2/3: non-integer reactant coefficient 0.0009967 on GDPbS_C written as a Kintecus coefficient\n  [info] GDPdissoc term 3/3: non-integer reactant coefficient 0.0009967 on GDP_C written as a Kintecus coefficient\n  [info] AlF4on term 2/2: non-integer reactant coefficient 0.0009967 on AlF4_C written as a Kintecus coefficient\n  [info] PI4Kinase: non-integer reactant coefficient 0.0009967 on ATP_C written as a Kintecus coefficient\n  [info] PI4Kinase: rate order differs from the stoichiometry; consumed on separate line(s) - ATP_C: zero order, signed\n  [info] time event(s) on 'oxoM_EX' encoded as time/value pairs in EV_OXOM_EX.TXT (SET)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Suh2004_KCNQ_Regulation  (BIOMD0000000081, curated BioModels; source file BIOMD0000000081_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP5kinase",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PIP_M+S[USER;cATP_C:((0.05954716981132076*cATP_C+0.02977358490566038)/(1*cATP_C+300.5))]==>PIP2_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP5kinase (consumes ATP_C)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP_C,cPIP_M:((-1*5.93506641509434e-5*cPIP_M/(1+300/(cATP_C+0.5))))]==>ATP_C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "IP3Phosphatase",
+     ""
+    ],
+    [
+     "1.8066e17",
+     "0",
+     "0",
+     "ip3_C==>ip3_C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2binding term 1/2",
+     ""
+    ],
+    [
+     "0.25",
+     "0",
+     "0",
+     "PIP2xKCNQ_M==>KCNQsites_M+PIP2_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2binding term 2/2",
+     ""
+    ],
+    [
+     "0.00025",
+     "0",
+     "0",
+     "KCNQsites_M+PIP2_M==>PIP2xKCNQ_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MgonGGTPgS",
+     ""
+    ],
+    [
+     "4.2",
+     "0",
+     "0",
+     "GGTPgS_M==>GGTPgSMg_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GGTPase",
+     ""
+    ],
+    [
+     "1.7931753554502372",
+     "0",
+     "0",
+     "GGTPMg_M==>GGDP_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GTPon term 1/3",
+     ""
+    ],
+    [
+     "45",
+     "0",
+     "0",
+     "G_M==>GGTP_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GTPon term 2/3",
+     ""
+    ],
+    [
+     "0.08",
+     "0",
+     "0",
+     "GGTP_M==>G_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GTPon term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG_M,cTIME_:(2.0074166417083545*cG_M*exp((-1*0.00833333333333333*cTIME_)))]==>G_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GTPon term 3/3 (consumes GGTP_M)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG_M,cTIME_:((-1*2.0074166417083545*cG_M*exp((-1*0.00833333333333333*cTIME_))))]==>GGTP_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GTPgSon term 1/2",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "GGTPgS_M==>0.0009967GTPgS_C+G_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GTPgSon term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G_M+0.0009967GTPgS_C+S[USER;cGTPgS_C:(0.006*cGTPgS_C^0.9990033)]==>GGTPgS_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GDPbSon term 1/3",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "GGDPbS_M==>0.0009967GDPbS_C+G_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GDPbSon term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G_M+0.0009967GDPbS_C+S[USER;cGDPbS_C:(0.28*cGDPbS_C^0.9990033)]==>GGDPbS_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GDPbSon term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GGDPbS_M+S[USER;coxoM_EX:(2/(1+8/(coxoM_EX+1e-5)))]==>0.0009967GDPbS_C+G_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MgGTPon",
+     ""
+    ],
+    [
+     "6.3",
+     "0",
+     "0",
+     "GGTP_M==>GGTPMg_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GDPdissoc term 1/3",
+     ""
+    ],
+    [
+     "0.001",
+     "0",
+     "0",
+     "GGDP_M==>0.0009967GDP_C+G_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GDPdissoc term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GGDP_M+S[USER;coxoM_EX:(0.5/(1+8/(coxoM_EX+1e-5)))]==>0.0009967GDP_C+G_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "GDPdissoc term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "G_M+0.0009967GDP_C+S[USER;cGDP_C:(0.003*cGDP_C^0.9990033)]==>GGDP_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PIP2_5Pase",
+     ""
+    ],
+    [
+     "0.004952830188679245",
+     "0",
+     "0",
+     "PIP2_M==>PIP_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PLC term 1/4",
+     ""
+    ],
+    [
+     "0.0036",
+     "0",
+     "0",
+     "PIP2_M==>0.0009967ip3_C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PLC term 2/4",
+     ""
+    ],
+    [
+     "0.024",
+     "0",
+     "0",
+     "PIP2_M+GGDPAlF4Mg_M==>0.0009967ip3_C+GGDPAlF4Mg_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PLC term 3/4",
+     ""
+    ],
+    [
+     "0.024",
+     "0",
+     "0",
+     "PIP2_M+GGTPMg_M==>0.0009967ip3_C+GGTPMg_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PLC term 4/4",
+     ""
+    ],
+    [
+     "0.024",
+     "0",
+     "0",
+     "PIP2_M+GGTPgSMg_M==>0.0009967ip3_C+GGTPgSMg_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AlF4on term 1/2",
+     ""
+    ],
+    [
+     "0.005",
+     "0",
+     "0",
+     "GGDPAlF4_M==>0.0009967AlF4_C+GGDP_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "AlF4on term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GGDP_M+0.0009967AlF4_C+S[USER;cAlF4_C:(7e-6*cAlF4_C^0.9990033)]==>GGDPAlF4_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PI4Kinase",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PI_M+S[USER;cATP_C:((9.924528301886793e-5*cATP_C+4.962264150943397e-5)/(1*cATP_C+1000.5))]==>PIP_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PI4Kinase (consumes ATP_C)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP_C,cPI_M:((-1*9.891777358490568e-8*cPI_M/(1+1000/(cATP_C+0.5))))]==>ATP_C",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MgonGDPAlF4",
+     ""
+    ],
+    [
+     "4.2",
+     "0",
+     "0",
+     "GGDPAlF4_M==>GGDPAlF4Mg_M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "GTPgS_C",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GTPgS_C [GTPgS_C]",
+     ""
+    ],
+    [
+     "KCNQsites_M",
+     "0",
+     "6.7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "KCNQsites_M [KCNQsites_M]",
+     ""
+    ],
+    [
+     "PIP2_M",
+     "0",
+     "5000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PIP2_M [PIP2_M]",
+     ""
+    ],
+    [
+     "GGDPbS_M",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GGDPbS_M [GGDPbS_M]",
+     ""
+    ],
+    [
+     "Mg2_C",
+     "0",
+     "2100",
+     "Y",
+     "0",
+     "No",
+     "2100",
+     "Mg2_C [Mg2_C]",
+     ""
+    ],
+    [
+     "ATP_C",
+     "0",
+     "3000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ATP_C [ATP_C]",
+     ""
+    ],
+    [
+     "oxoM_EX",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "EV_OXOM_EX.TXT-SET",
+     "oxoM_EX [oxoM_EX]",
+     ""
+    ],
+    [
+     "GDPbS_C",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GDPbS_C [GDPbS_C]",
+     ""
+    ],
+    [
+     "GGTPMg_M",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GGTPMg_M [GGTPMg_M]",
+     ""
+    ],
+    [
+     "GDP_C",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GDP_C [GDP_C]",
+     ""
+    ],
+    [
+     "GGDPAlF4Mg_M",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GGDPAIF4Mg_M [GGDPAlF4Mg_M]",
+     ""
+    ],
+    [
+     "ip3_C",
+     "0",
+     "0.48",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IP3_C [ip3_C]",
+     ""
+    ],
+    [
+     "AlF4_C",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "AIF4_C [AlF4_C]",
+     ""
+    ],
+    [
+     "G_M",
+     "0",
+     "0.065",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "G_M [G_M]",
+     ""
+    ],
+    [
+     "GGTP_M",
+     "0",
+     "0.048",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GGTP_M [GGTP_M]",
+     ""
+    ],
+    [
+     "GGDPAlF4_M",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GGDPAIF4_M [GGDPAlF4_M]",
+     ""
+    ],
+    [
+     "GGTPgS_M",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GGTPgS_M [GGTPgS_M]",
+     ""
+    ],
+    [
+     "PI_M",
+     "0",
+     "200000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PI_M [PI_M]",
+     ""
+    ],
+    [
+     "PIP_M",
+     "0",
+     "1150",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PIP_M [PIP_M]",
+     ""
+    ],
+    [
+     "PIP2xKCNQ_M",
+     "0",
+     "33.3",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PIP2xKCNQ_M [PIP2xKCNQ_M]",
+     ""
+    ],
+    [
+     "GGTPgSMg_M",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GGTPgSMg_M [GGTPgSMg_M]",
+     ""
+    ],
+    [
+     "GGDP_M",
+     "0",
+     "200",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GGDP_M [GGDP_M]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1.000000001",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1.000000001",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_OXOM_EX.TXT",
+   "key": "O_EV_OXOM_EX.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "3",
+     "10"
+    ],
+    [
+     "8",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

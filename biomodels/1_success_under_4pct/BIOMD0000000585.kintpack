@@ -1,0 +1,1046 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:05:02.301996+00:00",
+ "description": "Rateitschak2012 - Interferon-gamma (IFN\u03b3) induced STAT1 signalling (PC_IFNg100)\nBioModels BIOMD0000000585 (curated). SBML file: BIOMD0000000585_url.xml.\nSimulation: 0 to 700 time units (SED-ML: PC_10.sedml), sampling 0.7.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.68e-06 of species peak (worst: Stat1Pd)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Stat1ex' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Stat1cex' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Stat1nex' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Stat1Pex' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Stat1Pcex' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Stat1Pnex' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Socs1ex' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'RSNCex' is defined by an assignment rule; not a Kintecus state (not output)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Rateitschak2012 - Interferon-gamma (IFN\u03b3) induced STAT1 signalling (PC_IFNg100)  (BIOMD0000000585, curated BioModels; source file BIOMD0000000585_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIfng/dt term 1",
+     ""
+    ],
+    [
+     "0.00094915",
+     "0",
+     "0",
+     "Ifng+Ir==>Ir",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dII/dt term 1",
+     ""
+    ],
+    [
+     "0.00094915",
+     "0",
+     "0",
+     "Ifng+Ir==>II+Ifng+Ir",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dd1/dt term 1",
+     ""
+    ],
+    [
+     "0.014421534234919582",
+     "0",
+     "0",
+     "II==>d1+II",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dd1/dt term 2",
+     ""
+    ],
+    [
+     "0.014421534234919582",
+     "0",
+     "0",
+     "d1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dd2/dt term 1",
+     ""
+    ],
+    [
+     "0.014421534234919582",
+     "0",
+     "0",
+     "d1==>d2+d1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dd2/dt term 2",
+     ""
+    ],
+    [
+     "0.014421534234919582",
+     "0",
+     "0",
+     "d2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dd3/dt term 1",
+     ""
+    ],
+    [
+     "0.014421534234919582",
+     "0",
+     "0",
+     "d2==>d3+d2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dd3/dt term 2",
+     ""
+    ],
+    [
+     "0.014421534234919582",
+     "0",
+     "0",
+     "d3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dd4/dt term 1",
+     ""
+    ],
+    [
+     "0.014421534234919582",
+     "0",
+     "0",
+     "d3==>d4+d3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dd4/dt term 2",
+     ""
+    ],
+    [
+     "0.014421534234919582",
+     "0",
+     "0",
+     "d4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dStat1Pd/dt term 1",
+     ""
+    ],
+    [
+     "0.0666851",
+     "0",
+     "0",
+     "Stat1Pd==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dStat1Pd/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "II+Stat1U+S[USER;cj4:(0.0997621/(0.748449*cj4+1))]==>Stat1Pd+II+Stat1U",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dStat1Pdn/dt term 1",
+     ""
+    ],
+    [
+     "0.0666851",
+     "0",
+     "0",
+     "Stat1Pd==>Stat1Pdn+Stat1Pd",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dStat1Pdn/dt term 2",
+     ""
+    ],
+    [
+     "298.763",
+     "0",
+     "0",
+     "Stat1Pdn==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule di1/dt term 1",
+     ""
+    ],
+    [
+     "0.05041885463487925",
+     "0",
+     "0",
+     "Stat1Pdn==>i1+Stat1Pdn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule di1/dt term 2",
+     ""
+    ],
+    [
+     "0.05041885463487925",
+     "0",
+     "0",
+     "i1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule di2/dt term 1",
+     ""
+    ],
+    [
+     "0.05041885463487925",
+     "0",
+     "0",
+     "i1==>i2+i1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule di2/dt term 2",
+     ""
+    ],
+    [
+     "0.05041885463487925",
+     "0",
+     "0",
+     "i2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule di3/dt term 1",
+     ""
+    ],
+    [
+     "0.05041885463487925",
+     "0",
+     "0",
+     "i2==>i3+i2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule di3/dt term 2",
+     ""
+    ],
+    [
+     "0.05041885463487925",
+     "0",
+     "0",
+     "i3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule di4/dt term 1",
+     ""
+    ],
+    [
+     "0.05041885463487925",
+     "0",
+     "0",
+     "i3==>i4+i3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule di4/dt term 2",
+     ""
+    ],
+    [
+     "0.05041885463487925",
+     "0",
+     "0",
+     "i4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dj1/dt term 1",
+     ""
+    ],
+    [
+     "0.008850791150093929",
+     "0",
+     "0",
+     "mRNA==>j1+mRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dj1/dt term 2",
+     ""
+    ],
+    [
+     "0.008850791150093929",
+     "0",
+     "0",
+     "j1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dj2/dt term 1",
+     ""
+    ],
+    [
+     "0.008850791150093929",
+     "0",
+     "0",
+     "j1==>j2+j1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dj2/dt term 2",
+     ""
+    ],
+    [
+     "0.008850791150093929",
+     "0",
+     "0",
+     "j2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dj3/dt term 1",
+     ""
+    ],
+    [
+     "0.008850791150093929",
+     "0",
+     "0",
+     "j2==>j3+j2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dj3/dt term 2",
+     ""
+    ],
+    [
+     "0.008850791150093929",
+     "0",
+     "0",
+     "j3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dj4/dt term 1",
+     ""
+    ],
+    [
+     "0.008850791150093929",
+     "0",
+     "0",
+     "j3==>j4+j3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dj4/dt term 2",
+     ""
+    ],
+    [
+     "0.008850791150093929",
+     "0",
+     "0",
+     "j4==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIr/dt term 1",
+     ""
+    ],
+    [
+     "0.00094915",
+     "0",
+     "0",
+     "Ir+Ifng==>Ifng",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dStat1U/dt term 1",
+     ""
+    ],
+    [
+     "0.0959796",
+     "0",
+     "0",
+     "d4==>Stat1U+d4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dStat1U/dt term 2",
+     ""
+    ],
+    [
+     "12.2679",
+     "0",
+     "0",
+     "Stat1Un==>Stat1U+Stat1Un",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dStat1U/dt term 3",
+     ""
+    ],
+    [
+     "8.90244",
+     "0",
+     "0",
+     "Stat1U==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dStat1U/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Stat1U+II+S[USER;cj4:(0.0997621/(0.748449*cj4+1))]==>II",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dStat1Un/dt term 1",
+     ""
+    ],
+    [
+     "8.90244",
+     "0",
+     "0",
+     "Stat1U==>Stat1Un+Stat1U",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dStat1Un/dt term 2",
+     ""
+    ],
+    [
+     "298.763",
+     "0",
+     "0",
+     "Stat1Pdn==>Stat1Un+Stat1Pdn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dStat1Un/dt term 3",
+     ""
+    ],
+    [
+     "12.2679",
+     "0",
+     "0",
+     "Stat1Un==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dmRNA/dt term 1",
+     ""
+    ],
+    [
+     "0.00949819",
+     "0",
+     "0",
+     "source==>mRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dmRNA/dt term 2",
+     ""
+    ],
+    [
+     "4179.56",
+     "0",
+     "0",
+     "i4==>mRNA+i4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dmRNA/dt term 3",
+     ""
+    ],
+    [
+     "0.0583427",
+     "0",
+     "0",
+     "mRNA==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Ifng",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ifng [Ifng]",
+     ""
+    ],
+    [
+     "II",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "II [II]",
+     ""
+    ],
+    [
+     "d1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "d1 [d1]",
+     ""
+    ],
+    [
+     "d2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "d2 [d2]",
+     ""
+    ],
+    [
+     "d3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "d3 [d3]",
+     ""
+    ],
+    [
+     "d4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "d4 [d4]",
+     ""
+    ],
+    [
+     "Stat1Pd",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STAT1D [Stat1Pd]",
+     ""
+    ],
+    [
+     "Stat1Pdn",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STAT1Dn [Stat1Pdn]",
+     ""
+    ],
+    [
+     "i1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "i1 [i1]",
+     ""
+    ],
+    [
+     "i2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "i2 [i2]",
+     ""
+    ],
+    [
+     "i3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "i3 [i3]",
+     ""
+    ],
+    [
+     "i4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "i4 [i4]",
+     ""
+    ],
+    [
+     "j1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "j1 [j1]",
+     ""
+    ],
+    [
+     "j2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "j2 [j2]",
+     ""
+    ],
+    [
+     "j3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "j3 [j3]",
+     ""
+    ],
+    [
+     "j4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "j4 [j4]",
+     ""
+    ],
+    [
+     "Ir",
+     "0",
+     "0.05721",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ir [Ir]",
+     ""
+    ],
+    [
+     "Stat1U",
+     "0",
+     "0.950418",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STAT1Uc [Stat1U]",
+     ""
+    ],
+    [
+     "Stat1Un",
+     "0",
+     "0.661213",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STAT1Un [Stat1Un]",
+     ""
+    ],
+    [
+     "mRNA",
+     "0",
+     "0.108325",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SOCS1 [mRNA]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.7",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "700",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.7",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

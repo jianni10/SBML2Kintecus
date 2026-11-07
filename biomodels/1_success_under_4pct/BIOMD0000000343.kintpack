@@ -1,0 +1,687 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:58:07.984842+00:00",
+ "description": "Brannmark2010_InsulinSignalling_Mifamodel\nBioModels BIOMD0000000343 (curated). SBML file: BIOMD0000000343_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000343_withevent.sedml), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.29e-06 of species peak (worst: IRip)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'V1a' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'V1b' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'V1c' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'V1d' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'V1e' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'V1g' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'V1r' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'V2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Vm2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'V3' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Vm3' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'simXP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'intamount' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'measdoublestep' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'measanna' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'measdosR' is defined by an assignment rule; not a Kintecus state (not output)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Brannmark2010_InsulinSignalling_Mifamodel  (BIOMD0000000343, curated BioModels; source file BIOMD0000000343_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIR/dt term 1",
+     ""
+    ],
+    [
+     "286.6994648072",
+     "0",
+     "0",
+     "IRp==>IR+IRp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIR/dt term 2",
+     ""
+    ],
+    [
+     "0.02000224505",
+     "0",
+     "0",
+     "IRins==>IR+IRins",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIR/dt term 3",
+     ""
+    ],
+    [
+     "3.6327773442",
+     "0",
+     "0",
+     "IRi==>IR+IRi",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIR/dt term 4",
+     ""
+    ],
+    [
+     "38.941271264",
+     "0",
+     "0",
+     "IR==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRins/dt term 1",
+     ""
+    ],
+    [
+     "38.941271264",
+     "0",
+     "0",
+     "IR==>IRins+IR",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRins/dt term 2",
+     ""
+    ],
+    [
+     "0.38351903784999997",
+     "0",
+     "0",
+     "IRins==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRp/dt term 1",
+     ""
+    ],
+    [
+     "0.3635167928",
+     "0",
+     "0",
+     "IRins==>IRp+IRins",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRp/dt term 2",
+     ""
+    ],
+    [
+     "1867.3777297473",
+     "0",
+     "0",
+     "IRp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRip/dt term 1",
+     ""
+    ],
+    [
+     "1580.6782649401",
+     "0",
+     "0",
+     "IRp==>IRip+IRp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRip/dt term 2",
+     ""
+    ],
+    [
+     "4.38334e-5",
+     "0",
+     "0",
+     "IRip==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRip/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRip+Xp+S[USER;cXp:(20.0726035037/(cXp+1))]==>Xp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRi/dt term 1",
+     ""
+    ],
+    [
+     "4.38334e-5",
+     "0",
+     "0",
+     "IRip==>IRi+IRip",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRi/dt term 2",
+     ""
+    ],
+    [
+     "3.6327773442",
+     "0",
+     "0",
+     "IRi==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRi/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRip+Xp+S[USER;cXp:(20.0726035037/(cXp+1))]==>IRi+IRip+Xp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRS/dt term 1",
+     ""
+    ],
+    [
+     "32.5942371891",
+     "0",
+     "0",
+     "IRSip==>IRS+IRSip",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRS/dt term 2",
+     ""
+    ],
+    [
+     "1.6722503302",
+     "0",
+     "0",
+     "IRS+IRp==>IRp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRS/dt term 3",
+     ""
+    ],
+    [
+     "0.06083917438596059",
+     "0",
+     "0",
+     "IRS+IRip==>IRip",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRSip/dt term 1",
+     ""
+    ],
+    [
+     "32.5942371891",
+     "0",
+     "0",
+     "IRSip==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRSip/dt term 2",
+     ""
+    ],
+    [
+     "1.6722503302",
+     "0",
+     "0",
+     "IRS+IRp==>IRSip+IRS+IRp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dIRSip/dt term 3",
+     ""
+    ],
+    [
+     "0.06083917438596059",
+     "0",
+     "0",
+     "IRS+IRip==>IRSip+IRS+IRip",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dX/dt term 1",
+     ""
+    ],
+    [
+     "0.1131073982",
+     "0",
+     "0",
+     "Xp==>X+Xp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dX/dt term 2",
+     ""
+    ],
+    [
+     "1.6286590231",
+     "0",
+     "0",
+     "X+IRSip==>IRSip",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXp/dt term 1",
+     ""
+    ],
+    [
+     "0.1131073982",
+     "0",
+     "0",
+     "Xp==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dXp/dt term 2",
+     ""
+    ],
+    [
+     "1.6286590231",
+     "0",
+     "0",
+     "IRSip+X==>Xp+IRSip+X",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "IR",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IR [IR]",
+     ""
+    ],
+    [
+     "IRins",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRins [IRins]",
+     ""
+    ],
+    [
+     "IRp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRp [IRp]",
+     ""
+    ],
+    [
+     "IRip",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRip [IRip]",
+     ""
+    ],
+    [
+     "IRi",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRi [IRi]",
+     ""
+    ],
+    [
+     "IRS",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRS [IRS]",
+     ""
+    ],
+    [
+     "IRSip",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRSip [IRSip]",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X [X]",
+     ""
+    ],
+    [
+     "Xp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xp [Xp]",
+     ""
+    ],
+    [
+     "measIRp",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "measIRp [measIRp]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.01",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.01",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

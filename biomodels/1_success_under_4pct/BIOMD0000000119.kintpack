@@ -1,0 +1,852 @@
+{
+ "version": 3,
+ "created": "2026-11-02T03:18:11.789758+00:00",
+ "description": "Golomb2006_SomaticBursting_nonzero[Ca]\nBioModels BIOMD0000000119 (curated). SBML file: BIOMD0000000119_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000119_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.97e-04 of species peak (worst: nns)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V' goes below zero in the SBML: integrated as p_V_o = value + 200, output as p_V = OUTC[p_V_o;-200*source]\n  [info] reaction_0000001 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - Ca: zero order, signed\nRenamed species (Kintecus name = SBML id): p_zzs = zzs; p_bbs = bbs; p_nns = nns; p_hhs = hhs; p_rrs = rrs; p_ccs = ccs; p_qqs = qqs; p_V = V",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Golomb2006_SomaticBursting_nonzero[Ca]  (BIOMD0000000119, curated BioModels; source file BIOMD0000000119_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000001 term 1/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_rrs:(0.096*cp_rrs^2)]==>Ca",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000001 term 2/3",
+     ""
+    ],
+    [
+     "0.07692307692307693",
+     "0",
+     "0",
+     "Ca==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_0000001 term 3/3 (consumes Ca)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o,cp_rrs:((-1*0.0008*cp_rrs^2*(cp_V_o-200)))]==>Ca",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dzzs/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(0.013333333333333334/(1+0.0004097349789797867*exp((-1*0.2*(cp_V_o-200)))))]==>p_zzs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dzzs/dt term 2",
+     ""
+    ],
+    [
+     "0.013333333333333334",
+     "0",
+     "0",
+     "p_zzs==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dbbs/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(0.06666666666666667/(617437.6269121324*exp(0.16666666666666666*(cp_V_o-200))+1))]==>p_bbs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dbbs/dt term 2",
+     ""
+    ],
+    [
+     "0.06666666666666667",
+     "0",
+     "0",
+     "p_bbs==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dhhs/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(10/(619.2886177591566*exp(0.14285714285714285*(cp_V_o-200))+1+4644.6646331936745*exp(0.14285714285714285*(cp_V_o-200))/(854.0587625261516*exp((cp_V_o-200)/6)+1)+7.5/(854.0587625261516*exp((cp_V_o-200)/6)+1)))]==>p_hhs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dhhs/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_hhs+S[USER;cp_V_o:(10/(1+7.5/(854.0587625261516*exp((cp_V_o-200)/6)+1)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dnns/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(10/(1+0.0301973834223185*exp((-1*0.1*(cp_V_o-200)))+0.1509869171115925/(1*exp(0.1*(cp_V_o-200))+6.049647464412946*exp(0.16666666666666666*(cp_V_o-200)))+5/(6.049647464412946*exp(0.06666666666666667*(cp_V_o-200))+1)))]==>p_nns",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dnns/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_nns+S[USER;cp_V_o:(10/(1+5/(6.049647464412946*exp(0.06666666666666667*(cp_V_o-200))+1)))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule drrs/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(1/(1+0.1353352832366127*exp((-1*0.1*(cp_V_o-200)))))]==>p_rrs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule drrs/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "p_rrs==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dccs/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(0.5/(1+0.0137637867330504*exp((-1*0.14285714285714285*(cp_V_o-200)))))]==>p_ccs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dccs/dt term 2",
+     ""
+    ],
+    [
+     "0.5",
+     "0",
+     "0",
+     "p_ccs==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dqqs/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCa:(0.0022222222222222222/(16/cCa^4+1))]==>p_qqs",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dqqs/dt term 2",
+     ""
+    ],
+    [
+     "0.0022222222222222222",
+     "0",
+     "0",
+     "p_qqs==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 1 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "-2.5",
+     "0",
+     "0",
+     "source==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 2 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_rrs:(9.6*cp_rrs^2)]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 3 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:(11/(1+1.16049181219686e-6*exp((-1*0.3333333333333333*(cp_V_o-200)))))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 4 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_zzs:((-1*90*cp_zzs))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 5 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_nns:((-1*540*cp_nns^4))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 6 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_qqs:((-1*450*cp_qqs))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 7 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:((-1*0.05*(cp_V_o-200)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 8 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o,cp_hhs:(1925*cp_hhs*(1/(1+0.04251515251442982*exp((-1*0.10526315789473684*(cp_V_o-200)))))^3)]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 9 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o,cp_zzs:((-1*1*cp_zzs*(cp_V_o-200)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 10 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o,cp_nns:((-1*6*cp_nns^4*(cp_V_o-200)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 11 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o,cp_qqs:((-1*5*cp_qqs*(cp_V_o-200)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 12 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCa,cp_ccs:((-1*900*cp_ccs/(6/cCa+1)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 13 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o:((-1*0.2*(cp_V_o-200)/(1+1.16049181219686e-6*exp((-1*0.3333333333333333*(cp_V_o-200))))))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 14 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o,cp_rrs:((-1*0.08*cp_rrs^2*(cp_V_o-200)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 15 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o,cp_bbs:((-1*125.99999999999999*cp_bbs/(1+0.0820849986238988*exp((-1*0.05*(cp_V_o-200))))^3))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 16 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCa,cp_V_o,cp_ccs:((-1*10*cp_ccs*(cp_V_o-200)/(6/cCa+1)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 17 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o,cp_hhs:((-1*35*cp_hhs*(1/(1+0.04251515251442982*exp((-1*0.10526315789473684*(cp_V_o-200)))))^3*(cp_V_o-200)))]==>p_V_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dV/dt term 18 (shifted p_V_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cp_V_o,cp_bbs:((-1*1.4*cp_bbs*(cp_V_o-200)/(1+0.0820849986238988*exp((-1*0.05*(cp_V_o-200))))^3))]==>p_V_o",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Ca",
+     "0",
+     "0.000787",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ca [Ca]",
+     ""
+    ],
+    [
+     "p_zzs",
+     "0",
+     "0.0013689",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter zzs [zzs]",
+     ""
+    ],
+    [
+     "p_bbs",
+     "0",
+     "0.207565",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter bbs [bbs]",
+     ""
+    ],
+    [
+     "p_nns",
+     "0",
+     "0.0242166",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter nns [nns]",
+     ""
+    ],
+    [
+     "p_hhs",
+     "0",
+     "0.979199",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter hhs [hhs]",
+     ""
+    ],
+    [
+     "p_V_o",
+     "0",
+     "128.038",
+     "N",
+     "0",
+     "No",
+     "No",
+     "parameter V + 200 (shifted state) [__shifted__V]",
+     ""
+    ],
+    [
+     "p_rrs",
+     "0",
+     "0.005507",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter rrs [rrs]",
+     ""
+    ],
+    [
+     "p_ccs",
+     "0",
+     "0.002486",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter ccs [ccs]",
+     ""
+    ],
+    [
+     "p_qqs",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "parameter qqs [qqs]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "p_V",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "OUTC[p_V_o;-200*source]",
+     "No",
+     "parameter V (= p_V_o - 200) [V]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "10",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "10000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "10",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

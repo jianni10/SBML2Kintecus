@@ -1,0 +1,489 @@
+{
+ "version": 3,
+ "created": "2026-10-31T15:12:03.844467+00:00",
+ "description": "Wang2007 - ATP induced intracellular Calcium Oscillation\nBioModels BIOMD0000000145 (curated). SBML file: BIOMD0000000145_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000145_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.08e-06 of species peak (worst: Galpha_GTP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'PLC' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'DG' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] R9 term 1/2: non-integer reactant coefficient 0.01 on Ca_Cyt written as a Kintecus coefficient\n  [info] R9 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R9 term 2/2: non-integer reactant coefficient 0.001 on Ca_ER written as a Kintecus coefficient\n  [info] R9 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R10: non-integer reactant coefficient 0.05 on Ca_Cyt written as a Kintecus coefficient\n  [info] R10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Wang2007 - ATP induced intracellular Calcium Oscillation  (BIOMD0000000145, curated BioModels; source file BIOMD0000000145_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "source==>Galpha_GTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2",
+     ""
+    ],
+    [
+     "3.4",
+     "0",
+     "0",
+     "Galpha_GTP==>2Galpha_GTP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Galpha_GTP+APLC+S[USER;cAPLC:(4/(cAPLC+4))]==>APLC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Galpha_GTP+Ca_Cyt+IP3+S[USER;cCa_Cyt,cIP3:(4.5/(cCa_Cyt*cIP3+10*cCa_Cyt+200*cIP3+2000))]==>Ca_Cyt+IP3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cGalpha_GTP,cIP3:(12*cGalpha_GTP^4*cIP3^2/(cGalpha_GTP^4*cIP3^2+100*cGalpha_GTP^4+390625*cIP3^2+39062500))]==>APLC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APLC+S[USER;cGalpha_GTP,cIP3:(1.2*cGalpha_GTP^4*cIP3^2/(cGalpha_GTP^4*cIP3^2+100*cGalpha_GTP^4+390625*cIP3^2+39062500))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6",
+     ""
+    ],
+    [
+     "0.12",
+     "0",
+     "0",
+     "APLC==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7",
+     ""
+    ],
+    [
+     "14",
+     "0",
+     "0",
+     "APLC==>IP3+APLC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8",
+     ""
+    ],
+    [
+     "2",
+     "0",
+     "0",
+     "IP3==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "0.01Ca_Cyt+S[USER;cCa_Cyt:(600*cCa_Cyt^0.99/(1*cCa_Cyt+1000))]==>0.001Ca_ER",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R9 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "0.001Ca_ER+S[USER;cCa_ER,cIP3:(10500*cCa_ER^2.999*cIP3^3/(1*cIP3^3*(cCa_ER+1e-30)^3+421875*cIP3^3+15625*(cCa_ER+1e-30)^3+6591796875))]==>0.01Ca_Cyt",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "0.05Ca_Cyt+S[USER;cCa_Cyt:(3000*cCa_Cyt^0.95/(1*cCa_Cyt+2000))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R11",
+     ""
+    ],
+    [
+     "260",
+     "0",
+     "0",
+     "source==>0.05Ca_Cyt",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Galpha_GTP",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Galpha_GTP [Galpha_GTP]",
+     ""
+    ],
+    [
+     "APLC",
+     "0",
+     "9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APLC [APLC]",
+     ""
+    ],
+    [
+     "IP3",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IP3 [IP3]",
+     ""
+    ],
+    [
+     "Ca_ER",
+     "0",
+     "1000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Calcium [Ca_ER]",
+     ""
+    ],
+    [
+     "Ca_Cyt",
+     "0",
+     "200",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Calcium [Ca_Cyt]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

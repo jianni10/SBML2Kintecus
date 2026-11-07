@@ -1,0 +1,380 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:15:39.805734+00:00",
+ "description": "Creemers2021 - Tumor-immune dynamics and implications on immunotherapy responses\nBioModels BIOMD0000001022 (curated). SBML file: Creemers2021.xml.\nSimulation: 0 to 300 time units (SED-ML: Creemers2021 - Fig 1(B).sedml), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.59e-06 of species peak (worst: T)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] T_cell_mediated_tumor_cell_killing: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): T1 = T; S1 = S",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Creemers2021 - Tumor-immune dynamics and implications on immunotherapy responses  (BIOMD0000001022, curated BioModels; source file Creemers2021.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Tumor_growth",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cT1:(6*cT1^0.8)]==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "T_cell_mediated_tumor_cell_killing",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T1+I+S[USER;cI,cT1:(0.035/(0.0017513134851138354*cI+0.0017513134851138354*cT1+1))]==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lymph_node_resident_T_cell_migration",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S1==>I",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Intratumoral_T_cell_death",
+     ""
+    ],
+    [
+     "0.019",
+     "0",
+     "0",
+     "I==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Lymph_node_resident_T_cell_conversion",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "N+T1+S[USER;cT1:(0.0025/(cT1+10000000))]==>S1+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Effector_T_cell_proliferation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "S1==>2S1",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tumor_cells [T]",
+     ""
+    ],
+    [
+     "I",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Intratumoral_T_cells [I]",
+     ""
+    ],
+    [
+     "S1",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Specific_T_cells [S]",
+     ""
+    ],
+    [
+     "N",
+     "0",
+     "1000000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Naive_T_cells [N]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "300",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

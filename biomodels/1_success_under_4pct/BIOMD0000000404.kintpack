@@ -1,0 +1,1388 @@
+{
+ "version": 3,
+ "created": "2026-11-05T15:54:34.341668+00:00",
+ "description": "Bray1993_chemotaxis\nBioModels BIOMD0000000404 (curated). SBML file: BIOMD0000000404_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000404_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.029940119760479042.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.06e-05 of species peak (worst: Tasp)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] phosphorylation_r8: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] time event(s) on 'asp' encoded as time/value pairs in EV_ASP.TXT (SET)\nRenamed species (Kintecus name = SBML id): T1 = T; M1 = M",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Bray1993_chemotaxis  (BIOMD0000000404, curated BioModels; source file BIOMD0000000404_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "phosphorylation_r1",
+     ""
+    ],
+    [
+     "0.0009970089730807576",
+     "0",
+     "0",
+     "A==>Ap",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "phosphorylation_r2",
+     ""
+    ],
+    [
+     "74775.67298105684",
+     "0",
+     "0",
+     "A+TWA==>Ap+TWA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "phosphorylation_r3",
+     ""
+    ],
+    [
+     "199401.79461615154",
+     "0",
+     "0",
+     "A+Tni_WA==>Ap+Tni_WA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "phosphorylation_r4",
+     ""
+    ],
+    [
+     "100000000",
+     "0",
+     "0",
+     "Tasp_WA+Yp==>Tasp_WA+Y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "phosphorylation_r5",
+     ""
+    ],
+    [
+     "200000",
+     "0",
+     "0",
+     "Ap+Y==>A+Yp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "phosphorylation_r7",
+     ""
+    ],
+    [
+     "0.037",
+     "0",
+     "0",
+     "Yp==>Y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "phosphorylation_r8",
+     ""
+    ],
+    [
+     "10",
+     "0",
+     "0",
+     "Yp==>Y",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "phosphorylation_r9",
+     ""
+    ],
+    [
+     "1000000",
+     "0",
+     "0",
+     "Ap+B==>A+Bp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "phosphorylation_r10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Bp==>B",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tasp==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "T1+S[USER;casp:(1000000*casp)]==>Tasp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tni==>T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r3 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TW==>T1+W",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r3 term 2/2",
+     ""
+    ],
+    [
+     "100000",
+     "0",
+     "0",
+     "T1+W==>TW",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r4 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TA==>A+T1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r4 term 2/2",
+     ""
+    ],
+    [
+     "10000",
+     "0",
+     "0",
+     "A+T1==>TA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r5 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "WA==>A+W",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r5 term 2/2",
+     ""
+    ],
+    [
+     "100000",
+     "0",
+     "0",
+     "A+W==>WA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r6 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TWA==>A+TW",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r6 term 2/2",
+     ""
+    ],
+    [
+     "400000",
+     "0",
+     "0",
+     "A+TW==>TWA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r7 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TWA==>TA+W",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r7 term 2/2",
+     ""
+    ],
+    [
+     "400000",
+     "0",
+     "0",
+     "TA+W==>TWA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r8 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TWA==>T1+WA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r8 term 2/2",
+     ""
+    ],
+    [
+     "400000",
+     "0",
+     "0",
+     "T1+WA==>TWA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r9 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tasp_W==>Tasp+W",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r9 term 2/2",
+     ""
+    ],
+    [
+     "100000",
+     "0",
+     "0",
+     "Tasp+W==>Tasp_W",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r10 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tasp_A==>A+Tasp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r10 term 2/2",
+     ""
+    ],
+    [
+     "10000",
+     "0",
+     "0",
+     "A+Tasp==>Tasp_A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r11 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tasp_WA==>A+Tasp_W",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r11 term 2/2",
+     ""
+    ],
+    [
+     "400000",
+     "0",
+     "0",
+     "A+Tasp_W==>Tasp_WA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r12 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tasp_WA==>Tasp_A+W",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r12 term 2/2",
+     ""
+    ],
+    [
+     "400000",
+     "0",
+     "0",
+     "Tasp_A+W==>Tasp_WA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r13 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tasp_WA==>Tasp+WA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r13 term 2/2",
+     ""
+    ],
+    [
+     "400000",
+     "0",
+     "0",
+     "Tasp+WA==>Tasp_WA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r14 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tni_W==>Tni+W",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r14 term 2/2",
+     ""
+    ],
+    [
+     "0.1",
+     "0",
+     "0",
+     "Tni+W==>Tni_W",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r15 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tni_A==>A+Tni",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r15 term 2/2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "A+Tni==>Tni_A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r16 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tni_WA==>A+Tni_W",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r16 term 2/2",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "A+Tni_W==>Tni_WA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r17 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tni_WA==>Tni_A+W",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r17 term 2/2",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "Tni_A+W==>Tni_WA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r18 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tni_WA==>Tni+WA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "regulatory_r18 term 2/2",
+     ""
+    ],
+    [
+     "0.4",
+     "0",
+     "0",
+     "Tni+WA==>Tni_WA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "motor_r1 term 1/2",
+     ""
+    ],
+    [
+     "3989361.7021276597",
+     "0",
+     "0",
+     "MYp==>M1+Yp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "motor_r1 term 2/2",
+     ""
+    ],
+    [
+     "70921985815602.84",
+     "0",
+     "0",
+     "M1+Yp==>MYp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "motor_r2 term 1/2",
+     ""
+    ],
+    [
+     "1489361.7021276597",
+     "0",
+     "0",
+     "MYpYp==>MYp+Yp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "motor_r2 term 2/2",
+     ""
+    ],
+    [
+     "70921985815602.84",
+     "0",
+     "0",
+     "MYp+Yp==>MYpYp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "motor_r3 term 1/2",
+     ""
+    ],
+    [
+     "469148.93617021287",
+     "0",
+     "0",
+     "MYpYpYp==>MYpYp+Yp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "motor_r3 term 2/2",
+     ""
+    ],
+    [
+     "70921985815602.84",
+     "0",
+     "0",
+     "MYpYp+Yp==>MYpYpYp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "motor_r4 term 1/2",
+     ""
+    ],
+    [
+     "175148.9361702128",
+     "0",
+     "0",
+     "MYpYpYpYp==>MYpYpYp+Yp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "motor_r4 term 2/2",
+     ""
+    ],
+    [
+     "70921985815602.84",
+     "0",
+     "0",
+     "MYpYpYp+Yp==>MYpYpYpYp",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tasp_A==>TA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TA+S[USER;casp:(1000000*casp)]==>Tasp_A",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tasp_W==>TW",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TW+S[USER;casp:(1000000*casp)]==>Tasp_W",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Tasp_WA==>TWA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TWA+S[USER;casp:(1000000*casp)]==>Tasp_WA",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "asp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "EV_ASP.TXT-SET",
+     "asp [asp]",
+     ""
+    ],
+    [
+     "ni",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "ni [ni]",
+     ""
+    ],
+    [
+     "T1",
+     "0",
+     "3.1199999999999998e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "T [T]",
+     ""
+    ],
+    [
+     "Tasp",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tasp [Tasp]",
+     ""
+    ],
+    [
+     "Tni",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tni [Tni]",
+     ""
+    ],
+    [
+     "W",
+     "0",
+     "2.8900000000000003e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "W [W]",
+     ""
+    ],
+    [
+     "TW",
+     "0",
+     "5.91e-7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TW [TW]",
+     ""
+    ],
+    [
+     "Tasp_W",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tasp_W [Tasp_W]",
+     ""
+    ],
+    [
+     "Tni_W",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tni_W [Tni_W]",
+     ""
+    ],
+    [
+     "TA",
+     "0",
+     "4.44e-7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TA [TA]",
+     ""
+    ],
+    [
+     "Tasp_A",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tasp_A [Tasp_A]",
+     ""
+    ],
+    [
+     "Tni_A",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tni_A [Tni_A]",
+     ""
+    ],
+    [
+     "WA",
+     "0",
+     "6.78e-7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "WA [WA]",
+     ""
+    ],
+    [
+     "TWA",
+     "0",
+     "8.47e-7",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TWA [TWA]",
+     ""
+    ],
+    [
+     "Tasp_WA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tasp_WA [Tasp_WA]",
+     ""
+    ],
+    [
+     "Tni_WA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Tni_WA [Tni_WA]",
+     ""
+    ],
+    [
+     "A",
+     "0",
+     "2.9999999999999997e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A [A]",
+     ""
+    ],
+    [
+     "Ap",
+     "0",
+     "3.48e-8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Ap [Ap]",
+     ""
+    ],
+    [
+     "B",
+     "0",
+     "1.93e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "B [B]",
+     ""
+    ],
+    [
+     "Bp",
+     "0",
+     "6.87e-8",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Bp [Bp]",
+     ""
+    ],
+    [
+     "Z",
+     "0",
+     "2e-5",
+     "Y",
+     "0",
+     "No",
+     "2e-5",
+     "Z [Z]",
+     ""
+    ],
+    [
+     "Y",
+     "0",
+     "9.9e-6",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Y [Y]",
+     ""
+    ],
+    [
+     "Yp",
+     "0",
+     "7e-9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Yp [Yp]",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "6.24e-9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M [M]",
+     ""
+    ],
+    [
+     "MYp",
+     "0",
+     "7.77e-10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MYp [MYp]",
+     ""
+    ],
+    [
+     "MYpYp",
+     "0",
+     "2.9899999999999995e-10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MYpYp [MYpYp]",
+     ""
+    ],
+    [
+     "MYpYpYp",
+     "0",
+     "3.78e-10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MYpYpYp [MYpYpYp]",
+     ""
+    ],
+    [
+     "MYpYpYpYp",
+     "0",
+     "2.31e-9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MYpYpYpYp [MYpYpYpYp]",
+     ""
+    ],
+    [
+     "species_1",
+     "0",
+     "0.10000000000000002",
+     "Y",
+     "0",
+     "No",
+     "0.10000000000000002",
+     "ATP [species_1]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.0299401198",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.0299401198",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "EV_ASP.TXT",
+   "key": "O_EV_ASP.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "5",
+     "1e-7"
+    ],
+    [
+     "10",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,478 @@
+{
+ "version": 3,
+ "created": "2026-11-01T22:55:01.431665+00:00",
+ "description": "Musante2017 - Switching behaviour of PP2A inhibition by ARPP-16 - mutual inhibitions and PKA inhibits MAST3\nBioModels BIOMD0000000644 (curated). SBML file: BIOMD0000000644_url.xml.\nSimulation: 0 to 1200 time units (SED-ML: ARPP-16_Layer1and2_mutualInhibitions_PKAinhibitsMAST3.sedml), sampling 1.2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.85e-06 of species peak (worst: M)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'BB' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Complex' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dA46/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - A46: zero order, signed\n  [info] rate rule dA46/dt term 5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dA88/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dA88/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): M1 = M",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Musante2017 - Switching behaviour of PP2A inhibition by ARPP-16 - mutual inhibitions and PKA inhibits MAST3  (BIOMD0000000644, curated BioModels; source file BIOMD0000000644_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dA46/dt term 1 (consumes A46)",
+     ""
+    ],
+    [
+     "-0.05040378787878788",
+     "0",
+     "0",
+     "source==>A46",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dA46/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cA46:(0.025*sqrt(-8*cA46+(cA46+2.016151515151515)^2))]==>A46",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dA46/dt term 3",
+     ""
+    ],
+    [
+     "0.025",
+     "0",
+     "0",
+     "A46==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dA46/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "M1+S[USER;cA46,cA88,cM1:(0.988/(-cA46+0.037526*cA88-0.4444444444444444*cM1+11.29))]==>A46+M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dA46/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A46+M1+S[USER;cA46,cA88,cM1:((-1*0.0988/(1*cA46-0.037526*cA88+0.4444444444444444*cM1-11.29)))]==>M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dA88/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "PKA+S[USER;cA46,cA88:(9.350000000000001/(0.236*cA46-cA88+11.6))]==>A88+PKA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dA88/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A88+S[USER;cA88:(2.5/(1*cA88+1))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dA88/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "A88+PKA+S[USER;cA46,cA88:(0.935/(0.236*cA46-1*cA88+11.6))]==>PKA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 1",
+     ""
+    ],
+    [
+     "0.135",
+     "0",
+     "0",
+     "source==>M1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 2",
+     ""
+    ],
+    [
+     "0.05",
+     "0",
+     "0",
+     "M1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 3",
+     ""
+    ],
+    [
+     "0.01865",
+     "0",
+     "0",
+     "M1+A88==>A88",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dM/dt term 4",
+     ""
+    ],
+    [
+     "0.097",
+     "0",
+     "0",
+     "M1+PKA==>PKA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dPKA/dt term 1",
+     ""
+    ],
+    [
+     "0.02335",
+     "0",
+     "0",
+     "PKA+A46==>A46",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "A46",
+     "0",
+     "9.80000000000001",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A46 [A46]",
+     ""
+    ],
+    [
+     "A88",
+     "0",
+     "0.1999999999999904",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "A88 [A88]",
+     ""
+    ],
+    [
+     "M1",
+     "0",
+     "0.0093807",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "M [M]",
+     ""
+    ],
+    [
+     "PKA",
+     "0",
+     "0.01",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PKA [PKA]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1.2",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1200",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1.2",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

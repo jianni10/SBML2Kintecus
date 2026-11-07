@@ -1,0 +1,1315 @@
+{
+ "version": 3,
+ "created": "2026-11-05T16:06:02.927560+00:00",
+ "description": "Reiterer2013 - pseudophosphatase STYX role in ERK signalling\nBioModels BIOMD0000000557 (curated). SBML file: BIOMD0000000557_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000557_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.00e-06 of species peak (worst: pERKn)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'u_ppMEKc_tot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ppMEKc_tot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ERKc_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'pERKc_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ppERKc_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ERK_ppMEKc_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction_1 term 3/7: rate order differs from the stoichiometry; consumed on separate line(s) - ERK_ppMEKc: zero order, signed\n  [info] reaction_1 term 5/7: rate order differs from the stoichiometry; consumed on separate line(s) - ERK_ppMEKc: zero order, signed\n  [info] reaction_1 term 6/7: rate order differs from the stoichiometry; consumed on separate line(s) - ERK_ppMEKc: zero order, signed\n  [info] reaction_3 term 3/7: rate order differs from the stoichiometry; consumed on separate line(s) - pERK_ppMEKc: zero order, signed\n  [info] reaction_3 term 5/7: rate order differs from the stoichiometry; consumed on separate line(s) - pERK_ppMEKc: zero order, signed\n  [info] reaction_3 term 6/7: rate order differs from the stoichiometry; consumed on separate line(s) - pERK_ppMEKc: zero order, signed\nRenamed species (Kintecus name = SBML id): DUSPn1 = DUSPn",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Reiterer2013 - pseudophosphatase STYX role in ERK signalling  (BIOMD0000000557, curated BioModels; source file BIOMD0000000557_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 1/7",
+     ""
+    ],
+    [
+     "94",
+     "0",
+     "0",
+     "ERKc==>ERK_ppMEKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 2/7",
+     ""
+    ],
+    [
+     "350",
+     "0",
+     "0",
+     "ERK_ppMEKc==>ERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 3/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cERKc,cpERK_ppMEKc:(1*cERKc*cpERK_ppMEKc)]==>ERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 3/7 (consumes ERK_ppMEKc)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cERKc,cpERK_ppMEKc:((-1*1*cERKc*cpERK_ppMEKc))]==>ERK_ppMEKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 4/7",
+     ""
+    ],
+    [
+     "0.94",
+     "0",
+     "0",
+     "ERK_ppMEKc+ERKc==>2ERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 5/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cERKc,cSW2:(94*cERKc*cSW2)]==>ERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 5/7 (consumes ERK_ppMEKc)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cERKc,cSW2:((-1*94*cERKc*cSW2))]==>ERK_ppMEKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 6/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cERKc,cSW3:(94*cERKc*cSW3)]==>ERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 6/7 (consumes ERK_ppMEKc)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cERKc,cSW3:((-1*94*cERKc*cSW3))]==>ERK_ppMEKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 7/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ERKc+S[USER;cSW2,cSW3:(94*cSW2*cSW3)]==>ERK_ppMEKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2",
+     ""
+    ],
+    [
+     "13.2",
+     "0",
+     "0",
+     "ERK_ppMEKc==>pERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 1/7",
+     ""
+    ],
+    [
+     "94",
+     "0",
+     "0",
+     "pERKc==>pERK_ppMEKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 2/7",
+     ""
+    ],
+    [
+     "350",
+     "0",
+     "0",
+     "pERK_ppMEKc==>pERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 3/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cERK_ppMEKc,cpERKc:(1*cERK_ppMEKc*cpERKc)]==>pERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 3/7 (consumes pERK_ppMEKc)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cERK_ppMEKc,cpERKc:((-1*1*cERK_ppMEKc*cpERKc))]==>pERK_ppMEKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 4/7",
+     ""
+    ],
+    [
+     "0.94",
+     "0",
+     "0",
+     "pERK_ppMEKc+pERKc==>2pERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 5/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW2,cpERKc:(94*cSW2*cpERKc)]==>pERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 5/7 (consumes pERK_ppMEKc)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW2,cpERKc:((-1*94*cSW2*cpERKc))]==>pERK_ppMEKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 6/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW3,cpERKc:(94*cSW3*cpERKc)]==>pERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 6/7 (consumes pERK_ppMEKc)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cSW3,cpERKc:((-1*94*cSW3*cpERKc))]==>pERK_ppMEKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 7/7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "pERKc+S[USER;cSW2,cSW3:(94*cSW2*cSW3)]==>pERK_ppMEKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "13.2",
+     "0",
+     "0",
+     "pERK_ppMEKc==>ppERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 1/2 (volume 0.94)",
+     ""
+    ],
+    [
+     "0.144",
+     "0",
+     "0",
+     "ERKc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 2/2 (volume 0.94)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cERKn:(0.2527659574468085*cERKn)]==>ERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 1/2 (volume 0.22)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cERKc:(0.6152727272727272*cERKc)]==>ERKn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 2/2 (volume 0.22)",
+     ""
+    ],
+    [
+     "1.08",
+     "0",
+     "0",
+     "ERKn==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 1/2 (volume 0.94)",
+     ""
+    ],
+    [
+     "0.144",
+     "0",
+     "0",
+     "pERKc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 2/2 (volume 0.94)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpERKn:(0.2527659574468085*cpERKn)]==>pERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 1/2 (volume 0.22)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpERKc:(0.6152727272727272*cpERKc)]==>pERKn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 2/2 (volume 0.22)",
+     ""
+    ],
+    [
+     "1.08",
+     "0",
+     "0",
+     "pERKn==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7 term 1/2 (volume 0.94)",
+     ""
+    ],
+    [
+     "0.66",
+     "0",
+     "0",
+     "ppERKc==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7 term 2/2 (volume 0.94)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cppERKn:(0.18255319148936172*cppERKn)]==>ppERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7 term 1/2 (volume 0.22)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cppERKc:(2.82*cppERKc)]==>ppERKn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7 term 2/2 (volume 0.22)",
+     ""
+    ],
+    [
+     "0.78",
+     "0",
+     "0",
+     "ppERKn==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8 term 1/2",
+     ""
+    ],
+    [
+     "60",
+     "0",
+     "0",
+     "ppERK_DUSPc==>DUSPc+ppERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DUSPc+ppERKc==>ppERK_DUSPc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9",
+     ""
+    ],
+    [
+     "0.388",
+     "0",
+     "0",
+     "ppERK_DUSPc==>DUSPc+pERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10 term 1/2",
+     ""
+    ],
+    [
+     "160",
+     "0",
+     "0",
+     "pERK_DUSPc==>DUSPc+pERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DUSPc+pERKc==>pERK_DUSPc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_11",
+     ""
+    ],
+    [
+     "0.432",
+     "0",
+     "0",
+     "pERK_DUSPc==>DUSPc+ERKc",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_12 term 1/2",
+     ""
+    ],
+    [
+     "60",
+     "0",
+     "0",
+     "ppERK_DUSPn==>DUSPn1+ppERKn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_12 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DUSPn1+ppERKn==>ppERK_DUSPn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_13",
+     ""
+    ],
+    [
+     "38.88",
+     "0",
+     "0",
+     "ppERK_DUSPn==>DUSPn1+pERKn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_14 term 1/2",
+     ""
+    ],
+    [
+     "160",
+     "0",
+     "0",
+     "pERK_DUSPn==>DUSPn1+pERKn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_14 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DUSPn1+pERKn==>pERK_DUSPn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_15",
+     ""
+    ],
+    [
+     "43.2",
+     "0",
+     "0",
+     "pERK_DUSPn==>DUSPn1+ERKn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 1/2",
+     ""
+    ],
+    [
+     "0.315",
+     "0",
+     "0",
+     "source==>duspn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cppERKn:(6.3*cppERKn^2/(0.22*cppERKn^2+1000000))]==>duspn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17",
+     ""
+    ],
+    [
+     "0.0693",
+     "0",
+     "0",
+     "duspn==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_18",
+     ""
+    ],
+    [
+     "0.7",
+     "0",
+     "0",
+     "duspn==>DUSPn1+duspn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_19",
+     ""
+    ],
+    [
+     "0.015399999999999999",
+     "0",
+     "0",
+     "DUSPn1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_20 term 1/2",
+     ""
+    ],
+    [
+     "60",
+     "0",
+     "0",
+     "ERK_STYXn==>ERKn+STYXn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_20 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "ERKn+STYXn==>ERK_STYXn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_21 term 1/2",
+     ""
+    ],
+    [
+     "60",
+     "0",
+     "0",
+     "pERK_STYXn==>STYXn+pERKn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_21 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STYXn+pERKn==>pERK_STYXn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_22 term 1/2",
+     ""
+    ],
+    [
+     "60",
+     "0",
+     "0",
+     "ppERK_STYXn==>STYXn+ppERKn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_22 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "STYXn+ppERKn==>ppERK_STYXn",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "ERKc",
+     "0",
+     "572.5",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERKc [ERKc]",
+     ""
+    ],
+    [
+     "pERKc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pERKc [pERKc]",
+     ""
+    ],
+    [
+     "ppERKc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ppERKc [ppERKc]",
+     ""
+    ],
+    [
+     "ERK_ppMEKc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERK_ppMEKc [ERK_ppMEKc]",
+     ""
+    ],
+    [
+     "pERK_ppMEKc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pERK_ppMEKc [pERK_ppMEKc]",
+     ""
+    ],
+    [
+     "DUSPc",
+     "0",
+     "100",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DUSPc [DUSPc]",
+     ""
+    ],
+    [
+     "pERK_DUSPc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pERK_DUSPc [pERK_DUSPc]",
+     ""
+    ],
+    [
+     "ppERK_DUSPc",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ppERK_DUSPc [ppERK_DUSPc]",
+     ""
+    ],
+    [
+     "ERKn",
+     "0",
+     "1630.9",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERKn [ERKn]",
+     ""
+    ],
+    [
+     "pERKn",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pERKn [pERKn]",
+     ""
+    ],
+    [
+     "ppERKn",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ppERKn [ppERKn]",
+     ""
+    ],
+    [
+     "pERK_DUSPn",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pERK_DUSPn [pERK_DUSPn]",
+     ""
+    ],
+    [
+     "ppERK_DUSPn",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ppERK_DUSPn [ppERK_DUSPn]",
+     ""
+    ],
+    [
+     "STYXn",
+     "0",
+     "3000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STYXn [STYXn]",
+     ""
+    ],
+    [
+     "ERK_STYXn",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ERK_STYXn [ERK_STYXn]",
+     ""
+    ],
+    [
+     "pERK_STYXn",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pERK_STYXn [pERK_STYXn]",
+     ""
+    ],
+    [
+     "ppERK_STYXn",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ppERK_STYXn [ppERK_STYXn]",
+     ""
+    ],
+    [
+     "duspn",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "duspn [duspn]",
+     ""
+    ],
+    [
+     "DUSPn1",
+     "0",
+     "10",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DUSPn [DUSPn]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 120 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "0",
+     "time switch at 0 [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "0",
+     "time switch at -1 [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1.000000001",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1.000000001",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "120",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

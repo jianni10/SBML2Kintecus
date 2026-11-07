@@ -1,0 +1,854 @@
+{
+ "version": 3,
+ "created": "2026-10-31T04:01:20.792254+00:00",
+ "description": "Fribourg2014 - Dynamics of viral antagonism and innate immune response (H1N1 influenza A virus - Cal/09)\nBioModels BIOMD0000000528 (curated). SBML file: BIOMD0000000528_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000528_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.81e-06 of species peak (worst: IFNb_mRNA)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Fribourg2014 - Dynamics of viral antagonism and innate immune response (H1N1 influenza A virus - Cal/09)  (BIOMD0000000528, curated BioModels; source file BIOMD0000000528_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J1 term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.001/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>IFNb_mRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J1 term 2/4",
+     ""
+    ],
+    [
+     "3.6e-8",
+     "0",
+     "0",
+     "IRF7Pn==>IFNb_mRNA+IRF7Pn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J1 term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.0029999999999999996*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>IFNb_mRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J1 term 4/4",
+     ""
+    ],
+    [
+     "0.2772588722239781",
+     "0",
+     "0",
+     "IFNb_mRNA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IFNb_mRNA+S[USER;cIFNb_mRNA:(5.977087829985058e-5/(cIFNb_mRNA+0.002))]==>IFNb_env+IFNb_mRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J3 term 1/3",
+     ""
+    ],
+    [
+     "1.2377628224284736",
+     "0",
+     "0",
+     "STATP2n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J3 term 2/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IFNa_env+STAT+S[USER;cIFNa_env,cIFNb_env,cSOCS1m,cSTAT:(5.000000000000001e-7/(2600000*cIFNa_env*cSOCS1m*cSTAT+26000.000000000004*cIFNa_env*cSOCS1m+cIFNa_env*cSTAT+0.01*cIFNa_env+2600000*cIFNb_env*cSOCS1m*cSTAT+26000.000000000004*cIFNb_env*cSOCS1m+cIFNb_env*cSTAT+0.01*cIFNb_env+11180.000000000002*cSOCS1m*cSTAT+111.80000000000001*cSOCS1m+0.0043*cSTAT+4.3e-5))]==>STATP2n+IFNa_env+STAT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J3 term 3/3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IFNb_env+STAT+S[USER;cIFNa_env,cIFNb_env,cSOCS1m,cSTAT:(5.000000000000001e-7/(2600000*cIFNa_env*cSOCS1m*cSTAT+26000.000000000004*cIFNa_env*cSOCS1m+cIFNa_env*cSTAT+0.01*cIFNa_env+2600000*cIFNb_env*cSOCS1m*cSTAT+26000.000000000004*cIFNb_env*cSOCS1m+cIFNb_env*cSTAT+0.01*cIFNb_env+11180.000000000002*cSOCS1m*cSTAT+111.80000000000001*cSOCS1m+0.0043*cSTAT+4.3e-5))]==>STATP2n+IFNb_env+STAT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J4 term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(1e-7/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>SOCS1m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J4 term 2/4",
+     ""
+    ],
+    [
+     "0.0036",
+     "0",
+     "0",
+     "STATP2n==>SOCS1m+STATP2n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J4 term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(2.9999999999999993e-7*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>SOCS1m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J4 term 4/4",
+     ""
+    ],
+    [
+     "1.5068416968694462",
+     "0",
+     "0",
+     "SOCS1m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J5 term 1/3",
+     ""
+    ],
+    [
+     "3.204e-7",
+     "0",
+     "0",
+     "IRF7Pn==>IRF7m+IRF7Pn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J5 term 2/3",
+     ""
+    ],
+    [
+     "0.00036",
+     "0",
+     "0",
+     "STATP2n==>IRF7m+STATP2n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J5 term 3/3",
+     ""
+    ],
+    [
+     "0.6931471805599453",
+     "0",
+     "0",
+     "IRF7m==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J6 term 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRF7m+S[USER;cTIME_:(360/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>IRF7Pn+IRF7m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J6 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IRF7m+S[USER;cTIME_:(1080*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>IRF7Pn+IRF7m",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J7 term 1/2",
+     ""
+    ],
+    [
+     "0.36",
+     "0",
+     "0",
+     "IRF7Pn==>IFNa_mRNA+IRF7Pn",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J7 term 2/2",
+     ""
+    ],
+    [
+     "0.34657359027997264",
+     "0",
+     "0",
+     "IFNa_mRNA==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "IFNa_mRNA+S[USER;cIFNa_mRNA:(5.977087829985058e-5/(cIFNa_mRNA+0.002))]==>IFNa_env+IFNa_mRNA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J9 term 1/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.0001/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>TNFam",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J9 term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TNFenv+S[USER;cTNFenv:(0.001/(cTNFenv+0.0006))]==>TNFam+TNFenv",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J9 term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(0.0003*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>TNFam",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J9 term 4/4",
+     ""
+    ],
+    [
+     "0.34657359027997264",
+     "0",
+     "0",
+     "TNFam==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J10",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "TNFam+S[USER;cTNFam:(0.00012850738834467874/(cTNFam+0.004))]==>TNFenv+TNFam",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J11 term 1/4",
+     ""
+    ],
+    [
+     "0.360085",
+     "0",
+     "0",
+     "STATP2n==>STATm+STATP2n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J11 term 2/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(1e-5/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>STATm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J11 term 3/4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cTIME_:(3e-5*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>STATm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J11 term 4/4",
+     ""
+    ],
+    [
+     "0.6931471805599453",
+     "0",
+     "0",
+     "STATm==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J12 term 1/2",
+     ""
+    ],
+    [
+     "360",
+     "0",
+     "0",
+     "STATm==>STAT+STATm",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "J12 term 2/2",
+     ""
+    ],
+    [
+     "0.046209812037329684",
+     "0",
+     "0",
+     "STAT==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "w",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "0",
+     "w [w]",
+     ""
+    ],
+    [
+     "IFNb_mRNA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IFNb_mRNA [IFNb_mRNA]",
+     ""
+    ],
+    [
+     "IFNb_env",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IFNb_env [IFNb_env]",
+     ""
+    ],
+    [
+     "STATP2n",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STATP2n [STATP2n]",
+     ""
+    ],
+    [
+     "SOCS1m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "SOCS1m [SOCS1m]",
+     ""
+    ],
+    [
+     "IRF7m",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRF7m [IRF7m]",
+     ""
+    ],
+    [
+     "IRF7Pn",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IRF7Pn [IRF7Pn]",
+     ""
+    ],
+    [
+     "IFNa_mRNA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IFNa_mRNA [IFNa_mRNA]",
+     ""
+    ],
+    [
+     "IFNa_env",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IFNa_env [IFNa_env]",
+     ""
+    ],
+    [
+     "TNFam",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TNFam [TNFam]",
+     ""
+    ],
+    [
+     "TNFenv",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "TNFenv [TNFenv]",
+     ""
+    ],
+    [
+     "STATm",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STATm [STATm]",
+     ""
+    ],
+    [
+     "STAT",
+     "0",
+     "0.1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "STAT [STAT]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "100",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "100",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

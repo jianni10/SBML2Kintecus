@@ -1,0 +1,488 @@
+{
+ "version": 3,
+ "created": "2026-10-31T06:58:52.255344+00:00",
+ "description": "Orfao2008_ThrombinGeneration_AmidolyticActivity\nBioModels BIOMD0000000366 (curated). SBML file: BIOMD0000000366_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000366_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.23e-06 of species peak (worst: Xa)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Orfao2008_ThrombinGeneration_AmidolyticActivity  (BIOMD0000000366, curated BioModels; source file BIOMD0000000366_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "X+S[USER;cX:(7.172999999999999/(1*cX+23.65))]==>Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R2",
+     ""
+    ],
+    [
+     "4.531",
+     "0",
+     "0",
+     "Xa==>Xa_ATIII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3 term 1/2",
+     ""
+    ],
+    [
+     "801.4",
+     "0",
+     "0",
+     "PT==>Va+Xa+PL",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R3 term 2/2",
+     ""
+    ],
+    [
+     "122.9",
+     "0",
+     "0",
+     "Va+Xa+PL==>PT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "V+IIa+S[USER;cV:(7.844/(1*cV+149.7))]==>Va+IIa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "II+PT+S[USER;cII:(43.87/(1*cII+62.25))]==>IIa+PT",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "II+Xa+S[USER;cII:(12.4/(1*cII+0.06148))]==>IIa+Xa",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R7",
+     ""
+    ],
+    [
+     "0.1762",
+     "0",
+     "0",
+     "IIa==>IIa_alpha2M",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "R8",
+     ""
+    ],
+    [
+     "0.7859",
+     "0",
+     "0",
+     "IIa==>IIa_ATIII",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "X",
+     "0",
+     "0.1999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "X [X]",
+     ""
+    ],
+    [
+     "Xa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa [Xa]",
+     ""
+    ],
+    [
+     "Xa_ATIII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Xa_ATIII [Xa_ATIII]",
+     ""
+    ],
+    [
+     "PL",
+     "0",
+     "0.04999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PL [PL]",
+     ""
+    ],
+    [
+     "PT",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "PT [PT]",
+     ""
+    ],
+    [
+     "Va",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Va [Va]",
+     ""
+    ],
+    [
+     "IIa",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IIa [IIa]",
+     ""
+    ],
+    [
+     "V",
+     "0",
+     "0.02999999",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "V [V]",
+     ""
+    ],
+    [
+     "II",
+     "0",
+     "1.4",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "II [II]",
+     ""
+    ],
+    [
+     "IIa_alpha2M",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IIa_alpha2M [IIa_alpha2M]",
+     ""
+    ],
+    [
+     "IIa_ATIII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "IIa_ATIII [IIa_ATIII]",
+     ""
+    ],
+    [
+     "RVV",
+     "0",
+     "0.03",
+     "Y",
+     "0",
+     "No",
+     "0.03",
+     "RVV [RVV]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.03",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "30",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.03",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

@@ -1,0 +1,1336 @@
+{
+ "version": 3,
+ "created": "2026-11-01T19:58:52.470489+00:00",
+ "description": "Schmierer_2008_Smad_Tgfb\nBioModels BIOMD0000000173 (curated). SBML file: BIOMD0000000173_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000173_url.sedml (auto-generated placeholder); duration chosen from the dynamics: default), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.65e-06 of species peak (worst: pS2_c)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'SB' is defined by an assignment rule; not a Kintecus state (not output)\nRenamed species (Kintecus name = SBML id): R1 = R",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Schmierer_2008_Smad_Tgfb  (BIOMD0000000173, curated BioModels; source file BIOMD0000000173_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 1/2 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS4_c:(0.0059299999999999995*cS4_c)]==>S4_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 2/2 (volume 1e-12)",
+     ""
+    ],
+    [
+     "0.0059299999999999995",
+     "0",
+     "0",
+     "S4_n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 1/2 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "0.0026123348017621146",
+     "0",
+     "0",
+     "S4_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_1 term 2/2 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS4_n:(0.0026123348017621146*cS4_n)]==>S4_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 1/2 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "0.0026123348017621146",
+     "0",
+     "0",
+     "S2_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 2/2 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS2_n:(0.005550660792951542*cS2_n)]==>S2_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 1/2 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS2_c:(0.0059299999999999995*cS2_c)]==>S2_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_2 term 2/2 (volume 1e-12)",
+     ""
+    ],
+    [
+     "0.0126",
+     "0",
+     "0",
+     "S2_n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 1/2 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "0.0026123348017621146",
+     "0",
+     "0",
+     "pS2_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 2/2 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpS2_n:(0.005550660792951542*cpS2_n)]==>pS2_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 1/2 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpS2_c:(0.0059299999999999995*cpS2_c)]==>pS2_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_3 term 2/2 (volume 1e-12)",
+     ""
+    ],
+    [
+     "0.0126",
+     "0",
+     "0",
+     "pS2_n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_4",
+     ""
+    ],
+    [
+     "0.0004037081673984",
+     "0",
+     "0",
+     "S2_c+R_act==>pS2_c+R_act",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 1/2",
+     ""
+    ],
+    [
+     "0.016",
+     "0",
+     "0",
+     "S24_c==>pS2_c+S4_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_5 term 2/2",
+     ""
+    ],
+    [
+     "0.00183925592901392",
+     "0",
+     "0",
+     "pS2_c+S4_c==>S24_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 1/2",
+     ""
+    ],
+    [
+     "0.016",
+     "0",
+     "0",
+     "S24_n==>S4_n+pS2_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_6 term 2/2",
+     ""
+    ],
+    [
+     "0.00183925592901392",
+     "0",
+     "0",
+     "S4_n+pS2_n==>S24_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "0.014817084625550661",
+     "0",
+     "0",
+     "S24_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_7 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS24_c:(0.033634782099999996*cS24_c)]==>S24_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "0.014817084625550661",
+     "0",
+     "0",
+     "S22_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_8 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cS22_c:(0.033634782099999996*cS22_c)]==>S22_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9 term 1/2",
+     ""
+    ],
+    [
+     "0.00183925592901392",
+     "0",
+     "0",
+     "pS2_c+pS2_c==>S22_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_9 term 2/2",
+     ""
+    ],
+    [
+     "0.016",
+     "0",
+     "0",
+     "S22_c==>2pS2_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10 term 1/2",
+     ""
+    ],
+    [
+     "0.00183925592901392",
+     "0",
+     "0",
+     "pS2_n+pS2_n==>S22_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_10 term 2/2",
+     ""
+    ],
+    [
+     "0.016",
+     "0",
+     "0",
+     "S22_n==>2pS2_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_11",
+     ""
+    ],
+    [
+     "0.00656639",
+     "0",
+     "0",
+     "pS2_n==>S2_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_12",
+     ""
+    ],
+    [
+     "0.004899545012636492",
+     "0",
+     "0",
+     "R1==>R_act",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_13 term 1/2",
+     ""
+    ],
+    [
+     "100",
+     "0",
+     "0",
+     "R_inact==>R_act",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_13 term 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "R_act+S[USER;cSW1:(1464.22317103884*cSW1)]==>R_inact",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_14",
+     ""
+    ],
+    [
+     "0.0004037081673984",
+     "0",
+     "0",
+     "G_c+R_act==>pG_c+R_act",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_15",
+     ""
+    ],
+    [
+     "0.00656639",
+     "0",
+     "0",
+     "pG_n==>G_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 1/2 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG_c:(0.0059299999999999995*cG_c)]==>G_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 2/2 (volume 1e-12)",
+     ""
+    ],
+    [
+     "0.0126",
+     "0",
+     "0",
+     "G_n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 1/2 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "0.0026123348017621146",
+     "0",
+     "0",
+     "G_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_16 term 2/2 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG_n:(0.005550660792951542*cG_n)]==>G_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17 term 1/2 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpG_c:(0.0059299999999999995*cpG_c)]==>pG_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17 term 2/2 (volume 1e-12)",
+     ""
+    ],
+    [
+     "0.0126",
+     "0",
+     "0",
+     "pG_n==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17 term 1/2 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "0.0026123348017621146",
+     "0",
+     "0",
+     "pG_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_17 term 2/2 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cpG_n:(0.005550660792951542*cpG_n)]==>pG_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_18 term 1/2",
+     ""
+    ],
+    [
+     "0.00183925592901392",
+     "0",
+     "0",
+     "pG_c+pG_c==>GG_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_18 term 2/2",
+     ""
+    ],
+    [
+     "0.016",
+     "0",
+     "0",
+     "GG_c==>2pG_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_19 term 1/2",
+     ""
+    ],
+    [
+     "0.00183925592901392",
+     "0",
+     "0",
+     "pG_n+pG_n==>GG_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_19 term 2/2",
+     ""
+    ],
+    [
+     "0.016",
+     "0",
+     "0",
+     "GG_n==>2pG_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_20 term 1/2",
+     ""
+    ],
+    [
+     "0.016",
+     "0",
+     "0",
+     "G2_c==>pS2_c+pG_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_20 term 2/2",
+     ""
+    ],
+    [
+     "0.00183925592901392",
+     "0",
+     "0",
+     "pS2_c+pG_c==>G2_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_21 term 1/2",
+     ""
+    ],
+    [
+     "0.016",
+     "0",
+     "0",
+     "G2_n==>pG_n+pS2_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_21 term 2/2",
+     ""
+    ],
+    [
+     "0.00183925592901392",
+     "0",
+     "0",
+     "pG_n+pS2_n==>G2_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_22 term 1/2",
+     ""
+    ],
+    [
+     "0.016",
+     "0",
+     "0",
+     "G4_c==>pG_c+S4_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_22 term 2/2",
+     ""
+    ],
+    [
+     "0.00183925592901392",
+     "0",
+     "0",
+     "pG_c+S4_c==>G4_c",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_23 term 1/2",
+     ""
+    ],
+    [
+     "0.016",
+     "0",
+     "0",
+     "G4_n==>pG_n+S4_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_23 term 2/2",
+     ""
+    ],
+    [
+     "0.00183925592901392",
+     "0",
+     "0",
+     "pG_n+S4_n==>G4_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_24 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cGG_c:(0.033634782099999996*cGG_c)]==>GG_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_24 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "0.014817084625550661",
+     "0",
+     "0",
+     "GG_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_25 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG2_c:(0.033634782099999996*cG2_c)]==>G2_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_25 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "0.014817084625550661",
+     "0",
+     "0",
+     "G2_c==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_26 (volume 1e-12)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cG4_c:(0.033634782099999996*cG4_c)]==>G4_n",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "reaction_26 (volume 2.27e-12)",
+     ""
+    ],
+    [
+     "0.014817084625550661",
+     "0",
+     "0",
+     "G4_c==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "PPase",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "PPase [PPase]",
+     ""
+    ],
+    [
+     "S2_n",
+     "0",
+     "28.514773357617",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad2_n [S2_n]",
+     ""
+    ],
+    [
+     "pS2_n",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pSmad2_n [pS2_n]",
+     ""
+    ],
+    [
+     "G_n",
+     "0",
+     "28.514773357617",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GFP-Smad2_n [G_n]",
+     ""
+    ],
+    [
+     "pG_n",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pGFP-Smad2_n [pG_n]",
+     ""
+    ],
+    [
+     "S22_n",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pSmad2/pSmad2_n [S22_n]",
+     ""
+    ],
+    [
+     "S24_n",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pSmad2/Smad4_n [S24_n]",
+     ""
+    ],
+    [
+     "S4_n",
+     "0",
+     "50.78093897",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad4_n [S4_n]",
+     ""
+    ],
+    [
+     "G2_n",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pGFP-Smad2/pSmad2_n [G2_n]",
+     ""
+    ],
+    [
+     "G4_n",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pGFP-Smad2/Smad4_n [G4_n]",
+     ""
+    ],
+    [
+     "GG_n",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pGFP-Smad2/pGFP_Smad2_n [GG_n]",
+     ""
+    ],
+    [
+     "S22_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pSmad2/pSmad2_c [S22_c]",
+     ""
+    ],
+    [
+     "S24_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pSmad2/Smad4_c [S24_c]",
+     ""
+    ],
+    [
+     "S4_c",
+     "0",
+     "50.78103407",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad4_c [S4_c]",
+     ""
+    ],
+    [
+     "S2_c",
+     "0",
+     "60.5899176013587",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "Smad2_c [S2_c]",
+     ""
+    ],
+    [
+     "pS2_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pSmad2_c [pS2_c]",
+     ""
+    ],
+    [
+     "G_c",
+     "0",
+     "60.5899176013587",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GFP-Smad2_c [G_c]",
+     ""
+    ],
+    [
+     "pG_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pGFP-Smad2_c [pG_c]",
+     ""
+    ],
+    [
+     "G2_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pGFP-Smad2/pSmad2_c [G2_c]",
+     ""
+    ],
+    [
+     "G4_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pGFP-Smad2/Smad4_c [G4_c]",
+     ""
+    ],
+    [
+     "GG_c",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "pGFP-Smad2/pGFP-Smad2_c [GG_c]",
+     ""
+    ],
+    [
+     "TGFb_c",
+     "0",
+     "0.0659999824780232",
+     "Y",
+     "0",
+     "No",
+     "0.0659999824780232",
+     "TGFb_c [TGFb_c]",
+     ""
+    ],
+    [
+     "R_act",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R_act [R_act]",
+     ""
+    ],
+    [
+     "R1",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R [R]",
+     ""
+    ],
+    [
+     "R_inact",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "R_inact [R_inact]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "0",
+     "time switch at 2700 [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "1",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "1000",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "1",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}

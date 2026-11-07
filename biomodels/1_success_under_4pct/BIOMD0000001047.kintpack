@@ -1,0 +1,408 @@
+{
+ "version": 3,
+ "created": "2026-10-31T07:16:16.436461+00:00",
+ "description": "Collier1996 - Delta Notch intercellular signalling and lateral inhibition\nBioModels BIOMD0000001047 (curated). SBML file: delta_notch.xml.\nSimulation: 0 to 25 time units (SED-ML: delta_notch.sedml), sampling 0.025.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.04e-07 of species peak (worst: notch2)\nSBML time units are used unchanged as Kintecus seconds.",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Collier1996 - Delta Notch intercellular signalling and lateral inhibition  (BIOMD0000001047, curated BioModels; source file delta_notch.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "notch1_activation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cdelta2:(1*cdelta2^2/(cdelta2^2+0.01))]==>notch1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "notch2_activation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cdelta1:(1*cdelta1^2/(cdelta1^2+0.01))]==>notch2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "delta2_activation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cnotch2:(1/(100*cnotch2^2+1))]==>delta2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "delta1_activation",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cnotch1:(1/(100*cnotch1^2+1))]==>delta1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "delta1_inhibition",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "delta1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "delta2_inhibition",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "delta2==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "notch1_inhibition",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "notch1==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "notch2_inhibition",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "notch2==>sink",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "delta1",
+     "0",
+     "0.999999999999985",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "delta1 [delta1]",
+     ""
+    ],
+    [
+     "delta2",
+     "0",
+     "0.99",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "delta2 [delta2]",
+     ""
+    ],
+    [
+     "notch1",
+     "0",
+     "0.999999999999987",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "notch1 [notch1]",
+     ""
+    ],
+    [
+     "notch2",
+     "0",
+     "0.99",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "notch2 [notch2]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.025",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "25",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.025",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": []
+}
