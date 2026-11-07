@@ -1,6 +1,7 @@
 # SBML2Kintecus
 
-Converts SBML Level 2 (all versions) and Level 3 core models to Kintecus MODEL.DAT / SPECIES.DAT / PARM.DAT. Supports mass-action and complex kinetic laws (Michaelis–Menten, Arrhenius, Hill) via Kintecus USER syntax. Python 3.9+, no dependencies.
+Converts SBML Level 2 (all versions) and Level 3 core models to Kintecus. Supports mass-action and complex kinetic laws (Michaelis–Menten, Arrhenius, Hill) via Kintecus USER syntax. 
+Results: 942 of 1,072 match the SBML to under 4% (921 within 0.1%); 1,045 packs written. Per-model detail in biomodels/FINAL_RESULTS_TABLE.csv and BioModels_Kintecus_Catalog.xlsx
 
 > **BioModels collection:** [`biomodels/`](biomodels) holds the full converter (`sbml2kintpack`), run and
 > check scripts, and every curated BioModels entry converted to a Kintecus `.kintpack` and verified against
