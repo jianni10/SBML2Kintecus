@@ -1,4 +1,4 @@
-FINAL RESULTS - 1072 curated BioModels entries -> 1045 .kintpack files   (2026-11-06)
+FINAL RESULTS - 1072 curated BioModels entries -> 1045 .kintpack files   (2026-11-07)
 
 SUCCESS = Kintecus output agrees with the original SBML (simulated by libRoadRunner) to under 4% (rule set
           2026-10-30; it was 0.1% before - column within_0.1pct keeps the strict result):
@@ -15,11 +15,11 @@ lines -INT:5:10:0 (DASPK without non-negativity), then for packs that still did 
 15 references (55, 165, 179, 180, 250, 286, 288, 451, 540, 541, 658, 858, 859, 948, 1025) use libRoadRunner default
 tolerances because CVODE fails at rtol 1e-10.
 
-  SUCCESS (under 4%)                                   942
-    of which within 0.1%                               921
-  off by 4% or more                                     57
+  SUCCESS (under 4%)                                   943
+    of which within 0.1%                               922
+  off by 4% or more                                     64
   deck correct, Kintecus too slow / stops                4
-  Kintecus too slow / stops, deck not confirmed         35
+  Kintecus too slow / stops, deck not confirmed         27
   runs, SBML reference not simulable                     7
   runs, nothing changes to compare                       8
   no pack (nothing convertible / converter error)       27
@@ -241,8 +241,9 @@ BIOMD0000000051  NO   Kintecus        -%  deck      inf%  KINTECUS_FAILED
     Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=751.042);
     -INT:5: reached the end time, but the output contains NaN; -INT:5:10:0: reached the end time, but the
     output contains NaN; -INT:1 (deck before 11-01): stalled (no output row for 30 s at t=751.042); -INT:5
-    (deck before 11-01): too slow (projected 371 s at t=27)). Independent run of the deck: off by inf%.
-    Duration 1000 chosen from the dynamics (no curated SED-ML time course).
+    (deck before 11-01): too slow (projected 371 s at t=27); -INT:1 on James's PC: ended early at t=1000).
+    Independent run of the deck: off by inf%. Duration 1000 chosen from the dynamics (no curated SED-ML time
+    course).
 BIOMD0000000052  YES  Kintecus  0.00039%  deck        -%  PASS
     Brands2002 - Monosaccharide-casein systems
     Kintecus matches the SBML within 0.1% (max 0.00039% of peak, worst species Amadori). Duration 3000
@@ -263,7 +264,7 @@ BIOMD0000000056  NO   Kintecus        -%  deck      inf%  KINTECUS_FAILED_PARTIA
     Chen2004 - Cell Cycle Regulation
     Kintecus did not finish within the time limit (-INT:1: FATAL #167; -INT:5: too slow (projected 10509 s
     at t=1); -INT:5:10:0: too slow (projected 10512 s at t=1); -INT:1 (deck before 11-01): FATAL #167;
-    -INT:5 (deck before 11-01): too slow (projected 11014 s at t=1); -INT:5 on James's PC: ended early at
+    -INT:5 (deck before 11-01): too slow (projected 11014 s at t=1); -INT:1 on James's PC: ended early at
     t=1000). Independent run of the deck: off by inf% (unconverted parts below). Not converted (4): event
     'reset_ORI' not converted (state-triggered (not a time >= t0 trigger)); event 'start_S' not converted
     (state-triggered (not a time >= t0 trigger)); event 'spindle_checkpoint' not converted (state-triggered
@@ -564,9 +565,10 @@ BIOMD0000000127  NO   Kintecus        -%  deck      inf%  KINTECUS_FAILED_PARTIA
     output row for 30 s at t=14.92); -INT:5 (deck before 11-01): stalled (no output row for 30 s at t=0);
     -INT:5:10:0 (deck before 11-01): reached the end time, but the output contains NaN; -INT:1 (deck before
     11-01): stalled (no output row for 30 s at t=15.12); -INT:5 (deck before 11-01): stalled (no output row
-    for 30 s at t=0)). Independent run of the deck: off by inf% (unconverted parts below). Not converted
-    (1): event 'event_0000001' not converted (state-triggered (not a time >= t0 trigger)) Duration 100
-    chosen from the dynamics (no curated SED-ML time course).
+    for 30 s at t=0); -INT:1 on James's PC: projected 4826 s > cap 3600 s (at t=14.92 of 100)). Independent
+    run of the deck: off by inf% (unconverted parts below). Not converted (1): event 'event_0000001' not
+    converted (state-triggered (not a time >= t0 trigger)) Duration 100 chosen from the dynamics (no curated
+    SED-ML time course).
 BIOMD0000000128  YES  Kintecus  0.00088%  deck        -%  PASS
     Bertram2006_Endothelin
     Kintecus matches the SBML within 0.1% (max 0.00088% of peak, worst species n). Duration 100000 chosen
@@ -659,9 +661,10 @@ BIOMD0000000142  NO   Kintecus        -%  deck      inf%  KINTECUS_FAILED_PARTIA
     output row for 30 s at t=108.004); -INT:5 (deck before 11-01): stalled (no output row for 30 s at t=0);
     -INT:5:10:0 (deck before 11-01): reached the end time, but the output contains NaN; -INT:1 (deck before
     11-01): stalled (no output row for 30 s at t=107.704); -INT:5 (deck before 11-01): stalled (no output
-    row for 30 s at t=0)). Independent run of the deck: off by inf% (unconverted parts below). Not converted
-    (1): event 'event_0000001' not converted (state-triggered (not a time >= t0 trigger)) Duration 300
-    chosen from the dynamics (no curated SED-ML time course).
+    row for 30 s at t=0); -INT:1 on James's PC: projected 3600 s > cap 3600 s (at t=107.704 of 300)).
+    Independent run of the deck: off by inf% (unconverted parts below). Not converted (1): event
+    'event_0000001' not converted (state-triggered (not a time >= t0 trigger)) Duration 300 chosen from the
+    dynamics (no curated SED-ML time course).
 BIOMD0000000143  YES  Kintecus   0.0332%  deck        -%  PASS
     Olsen2003_neutrophil_oscillatory_metabolism
     Kintecus matches the SBML within 0.1% (max 0.0332% of peak, worst species H2O2_p). Duration 100000
@@ -975,8 +978,9 @@ BIOMD0000000215  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     Schulz2009_Th1_differentiation
     Kintecus did not finish within the time limit (-INT:1: too slow (projected 911 s at t=330); -INT:5:
     reached the end time, but the output contains NaN; -INT:5:10:0: reached the end time, but the output
-    contains NaN). The independent deck run also failed (deck simulation over 180 s). Duration 30000 chosen
-    from the dynamics (no curated SED-ML time course).
+    contains NaN; -INT:1 on James's PC: projected 40002 s > cap 3600 s (at t=540 of 30000)). The independent
+    deck run also failed (deck simulation over 180 s). Duration 30000 chosen from the dynamics (no curated
+    SED-ML time course).
 BIOMD0000000216  YES  Kintecus  0.00035%  deck        -%  PASS
     Hong2009_CircadianClock
     Kintecus matches the SBML within 0.1% (max 0.00035% of peak, worst species M). Duration 100 chosen from
@@ -1052,13 +1056,11 @@ BIOMD0000000233  YES  Kintecus  0.00026%  deck        -%  PASS
 BIOMD0000000234  YES  Kintecus  0.00016%  deck        -%  PASS
     Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin
     Kintecus matches the SBML within 0.1% (max 0.00016% of peak, worst species Ce).
-BIOMD0000000235  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
+BIOMD0000000235  NO   Kintecus     99.1%  deck        -%  MISMATCH
     Kuhn2009_EndoMesodermNetwork
-    Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=0); -INT:5:
-    stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1
-    (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0)). The independent deck run also failed (deck simulation over 180 s).
-    Duration 300 chosen from the dynamics (no curated SED-ML time course).
+    Kintecus finishes but is off by 99.1% of peak (worst species mRNA_E_Gcm). Independent deck check not
+    available (deck simulation over 180 s). Duration 300 chosen from the dynamics (no curated SED-ML time
+    course).
 BIOMD0000000236  YES  Kintecus  0.00036%  deck        -%  PASS
     Westermark2003_Pancreatic_GlycOsc_extended
     Kintecus matches the SBML within 0.1% (max 0.00036% of peak, worst species FBP). Duration 1000 chosen
@@ -1071,9 +1073,8 @@ BIOMD0000000238  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     Overgaard2007_PDmodel_IL21
     Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=0); -INT:5:
     stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1 on
-    James's PC: no new output row for 2400 s (simulated time 0 of 1000)). The independent deck run also
-    failed (Unexpected istate in LSODA.). Duration 1000 chosen from the dynamics (no curated SED-ML time
-    course).
+    James's PC: over 3600 s (simulated time 0 of 1000)). The independent deck run also failed (Unexpected
+    istate in LSODA.). Duration 1000 chosen from the dynamics (no curated SED-ML time course).
 BIOMD0000000239  YES  Kintecus  0.00049%  deck        -%  PASS
     Jiang2007 - GSIS system, Pancreatic Beta Cells
     Kintecus matches the SBML within 0.1% (max 0.00049% of peak, worst species FAD). Duration 300 chosen
@@ -1150,9 +1151,8 @@ BIOMD0000000255  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     Chen2009 - ErbB Signaling
     Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=0); -INT:5:
     stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1 on
-    James's PC: no new output row for 2400 s (simulated time 0 of 300)). The independent deck run also
-    failed (deck simulation over 180 s). Duration 300 chosen from the dynamics (no curated SED-ML time
-    course).
+    James's PC: over 3600 s (simulated time 0 of 300)). The independent deck run also failed (deck
+    simulation over 180 s). Duration 300 chosen from the dynamics (no curated SED-ML time course).
 BIOMD0000000256  NO   Kintecus     1045%  deck     1045%  MISMATCH_PARTIAL
     Rehm2006_Caspase
     Kintecus finishes but is off by 1045% of peak (worst species BIR12). The deck itself is also off (1045%
@@ -1502,7 +1502,7 @@ BIOMD0000000338  NO   Kintecus        -%  deck     1243%  KINTECUS_FAILED_PARTIA
     Wajima2009_BloodCoagulation_aPTTtest
     Kintecus did not finish within the time limit (-INT:1: too slow (projected 9998 s at t=10.0123); -INT:5:
     too slow (projected 11508 s at t=10); -INT:5:10:0: too slow (projected 11011 s at t=10); -INT:1 on
-    James's PC: projected 241921 s > cap 2420 s (at t=20.0152 of 10000)). Independent run of the deck: off
+    James's PC: projected 359746 s > cap 3600 s (at t=20.0152 of 10000)). Independent run of the deck: off
     by 1243% (unconverted parts below). Not converted (2): event 'clottingTime_event' not converted (state-
     triggered (not a time >= t0 trigger)); event assignment to 'compartment_1' not converted (assignment to
     a compartment) Duration 10000 chosen from the dynamics (no curated SED-ML time course).
@@ -1635,12 +1635,10 @@ BIOMD0000000369  YES  Kintecus   0.0002%  deck        -%  PASS
     Beltrami1995_ThrombinGeneration_D
     Kintecus matches the SBML within 0.1% (max 0.0002% of peak, worst species E4). Duration 100 chosen from
     the dynamics (no curated SED-ML time course).
-BIOMD0000000370  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
+BIOMD0000000370  YES  Kintecus   0.0082%  deck        -%  PASS
     Vinod2011_MitoticExit
-    Kintecus did not finish within the time limit (-INT:1: too slow (projected 5003 s at t=200); -INT:5: too
-    slow (projected 14011 s at t=100); -INT:5:10:0: too slow (projected 15020 s at t=100); -INT:1 on James's
-    PC: projected 2849 s > cap 2420 s (at t=17000 of 100000)). The independent deck run also failed (deck
-    simulation over 180 s). Duration 100000 chosen from the dynamics (no curated SED-ML time course).
+    Kintecus matches the SBML within 0.1% (max 0.0082% of peak, worst species MEN_1). Duration 100000 chosen
+    from the dynamics (no curated SED-ML time course).
 BIOMD0000000371  YES  Kintecus  0.00068%  deck        -%  PASS
     DeVries2000_PancreaticBetaCells_InsulinSecretion
     Kintecus matches the SBML within 0.1% (max 0.00068% of peak, worst species n). Duration 10000 chosen
@@ -1814,8 +1812,9 @@ BIOMD0000000412  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     (deck before 11-01): too slow (projected 15015 s at t=100); -INT:5 (deck before 11-01): stalled (no
     output row for 30 s at t=0); -INT:5:10:0 (deck before 11-01): stalled (no output row for 30 s at t=0);
     -INT:1 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:5 (deck before 11-01): stalled
-    (no output row for 30 s at t=0)). The independent deck run also failed (deck simulation over 180 s).
-    Duration 100000 chosen from the dynamics (no curated SED-ML time course).
+    (no output row for 30 s at t=0); -INT:1 on James's PC: projected 8183 s > cap 3600 s (at t=8800 of
+    100000)). The independent deck run also failed (deck simulation over 180 s). Duration 100000 chosen from
+    the dynamics (no curated SED-ML time course).
 BIOMD0000000413  YES  Kintecus  0.00035%  deck        -%  PASS
     Band2012_DII-Venus_FullModel
     Kintecus matches the SBML within 0.1% (max 0.00035% of peak, worst species auxinTIR1). Duration 300
@@ -2053,49 +2052,40 @@ BIOMD0000000468  YES  Kintecus    0.355%  deck   0.0012%  PASS
     PASS under the 4% rule: Kintecus is off by 0.355% of peak (worst species s66); before 2026-10-30 (0.1%
     rule) this was ?. The deck itself reproduces the SBML to 0.0012% (independent SciPy run of the same
     deck), so the remaining difference arises inside Kintecus (integration or evaluation).
-BIOMD0000000469  NO   Kintecus        -%  deck      393%  KINTECUS_FAILED_PARTIAL
+BIOMD0000000469  NO   Kintecus      393%  deck      393%  MISMATCH_PARTIAL
     Smallbone2013 - E.coli metabolic model with linlog rate law
-    Kintecus did not finish within the time limit (-INT:1: too slow (projected 10011 s at t=0.01); -INT:5:
-    stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1
-    (deck before 11-01): too slow (projected 15016 s at t=0.01); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0)). Independent run of the deck: off by 393% (unconverted parts below). Not
-    converted (1): reaction 'r_2584' not converted (reaction line is 2417 characters) Duration 10 chosen
-    from the dynamics (no curated SED-ML time course).
-BIOMD0000000470  NO   Kintecus        -%  deck      417%  KINTECUS_FAILED_PARTIAL
+    Kintecus finishes but is off by 393% of peak (worst species Q36). The deck itself is also off (393% in
+    the independent run), consistent with the unconverted parts below. Not converted (1): reaction 'r_2584'
+    not converted (reaction line is 2417 characters) Duration 10 chosen from the dynamics (no curated SED-ML
+    time course).
+BIOMD0000000470  NO   Kintecus      417%  deck      417%  MISMATCH_PARTIAL
     Smallbone2013 - E.coli metabolic model with modular rate law
-    Kintecus did not finish within the time limit (-INT:1: too slow (projected 5007 s at t=0.02); -INT:5:
-    stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1
-    (deck before 11-01): too slow (projected 10006 s at t=0.01); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0)). Independent run of the deck: off by 417% (unconverted parts below). Not
-    converted (1): reaction 'r_2584' not converted (reaction line is 2158 characters) Duration 10 chosen
-    from the dynamics (no curated SED-ML time course).
-BIOMD0000000471  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED_PARTIAL
+    Kintecus finishes but is off by 417% of peak (worst species Q68). The deck itself is also off (417% in
+    the independent run), consistent with the unconverted parts below. Not converted (1): reaction 'r_2584'
+    not converted (reaction line is 2158 characters) Duration 10 chosen from the dynamics (no curated SED-ML
+    time course).
+BIOMD0000000471  NO   Kintecus      981%  deck        -%  MISMATCH_PARTIAL
     Smallbone2013 - Yeast metabolic model with linlog rate law
-    Kintecus did not finish within the time limit (-INT:1: too slow (projected 1252 s at t=0.08); -INT:5:
-    stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1
-    (deck before 11-01): too slow (projected 10011 s at t=0.01); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0)). The independent deck run also failed (deck simulation over 180 s). Not
-    converted (1): reaction 'r_2111' not converted (reaction line is 2382 characters) Duration 10 chosen
-    from the dynamics (no curated SED-ML time course).
+    Kintecus finishes but is off by 981% of peak (worst species s_0555). Independent deck check not
+    available (deck simulation over 180 s). Not converted (1): reaction 'r_2111' not converted (reaction
+    line is 2382 characters) Duration 10 chosen from the dynamics (no curated SED-ML time course).
 BIOMD0000000472  NO   Kintecus      402%  deck      402%  MISMATCH_PARTIAL
     Smallbone2013 - Yeast metabolic model with modular rate law
     Kintecus finishes but is off by 402% of peak (worst species s_1275). The deck itself is also off (402%
     in the independent run), consistent with the unconverted parts below. Not converted (1): reaction
     'r_2111' not converted (reaction line is 2372 characters) Duration 10 chosen from the dynamics (no
     curated SED-ML time course).
-BIOMD0000000473  NO   Kintecus        -%  deck      362%  KINTECUS_FAILED_PARTIAL
+BIOMD0000000473  NO   Kintecus      362%  deck      362%  MISMATCH_PARTIAL
     Smallbone2013 - Yeast metabolic model with modular rate law, merged with Pritchard 2002
-    Kintecus did not finish within the time limit (-INT:1: too slow (projected 715 s at t=0.14); -INT:5:
-    stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1
-    (deck before 11-01): too slow (projected 667 s at t=0.15); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0)). Independent run of the deck: off by 362% (unconverted parts below). Not
-    converted (1): reaction 'r_2111' not converted (reaction line is 2365 characters) Duration 10 chosen
-    from the dynamics (no curated SED-ML time course).
+    Kintecus finishes but is off by 362% of peak (worst species Q15). The deck itself is also off (362% in
+    the independent run), consistent with the unconverted parts below. Not converted (1): reaction 'r_2111'
+    not converted (reaction line is 2365 characters) Duration 10 chosen from the dynamics (no curated SED-ML
+    time course).
 BIOMD0000000474  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     Smith2013 - Regulation of Insulin Signalling by Oxidative Stress
     Kintecus did not finish within the time limit (-INT:1: too slow (projected 6757 s at t=5.61); -INT:5:
     stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1 on
-    James's PC: projected 34588 s > cap 2420 s (at t=39.27 of 2805)). The independent deck run also failed
+    James's PC: projected 51435 s > cap 3600 s (at t=39.27 of 2805)). The independent deck run also failed
     (deck simulation over 180 s).
 BIOMD0000000475  YES  Kintecus   0.0005%  deck        -%  PASS
     Amara2013 - PCNA ubiquitylation in the activation of PRR pathway
@@ -2183,22 +2173,16 @@ BIOMD0000000495  YES  Kintecus  0.00035%  deck        -%  PASS
     Kintecus matches the SBML within 0.1% (max 0.00035% of peak, worst species
     mwf166ad55_4ff0_49fb_95d2_b657ad7653d5). Duration 3000 chosen from the dynamics (no curated SED-ML time
     course).
-BIOMD0000000496  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED_PARTIAL
+BIOMD0000000496  NO   Kintecus    97711%  deck        -%  MISMATCH_PARTIAL
     Stanford2013 - Kinetic model of yeast metabolic network (standard)
-    Kintecus did not finish within the time limit (-INT:1: too slow (projected 14015 s at t=100); -INT:5:
-    stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1
-    (deck before 11-01): too slow (projected 10511 s at t=100); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0)). The independent deck run also failed (deck simulation over 180 s). Not
-    converted (1): reaction 'r_1812' not converted (rate term is 3108 characters (> 2153)) Duration 100000
-    chosen from the dynamics (no curated SED-ML time course).
-BIOMD0000000497  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED_PARTIAL
+    Kintecus finishes but is off by 97711% of peak (worst species s_0017). Independent deck check not
+    available (deck simulation over 180 s). Not converted (1): reaction 'r_1812' not converted (rate term is
+    3108 characters (> 2153)) Duration 100000 chosen from the dynamics (no curated SED-ML time course).
+BIOMD0000000497  NO   Kintecus    78816%  deck        -%  MISMATCH_PARTIAL
     Stanford2013 - Kinetic model of yeast metabolic network (regulation)
-    Kintecus did not finish within the time limit (-INT:1: too slow (projected 11016 s at t=100); -INT:5:
-    stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1
-    (deck before 11-01): too slow (projected 10511 s at t=100); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0)). The independent deck run also failed (deck simulation over 180 s). Not
-    converted (1): reaction 'r_1812' not converted (rate term is 3108 characters (> 2153)) Duration 100000
-    chosen from the dynamics (no curated SED-ML time course).
+    Kintecus finishes but is off by 78816% of peak (worst species s_0017). Independent deck check not
+    available (deck simulation over 180 s). Not converted (1): reaction 'r_1812' not converted (rate term is
+    3108 characters (> 2153)) Duration 100000 chosen from the dynamics (no curated SED-ML time course).
 BIOMD0000000498  YES  Kintecus  0.00043%  deck        -%  PASS
     Mitchell2013 - Liver Iron Metabolism
     Kintecus matches the SBML within 0.1% (max 0.00043% of peak, worst species species_6). Duration 100000
@@ -2236,8 +2220,9 @@ BIOMD0000000506  NO   Kintecus        -%  deck  2.7e-07%  DECK_VERIFIED_KINTECUS
     The deck reproduces the SBML to 2.7e-07% (independent SciPy run of the same deck), but Kintecus did not
     finish within the time limit: -INT:1: too slow (projected 302 s at t=199); -INT:5: too slow (projected
     24518 s at t=1); -INT:5:10:0: too slow (projected 24522 s at t=1); -INT:1 (deck before 11-01): too slow
-    (projected 301 s at t=256); -INT:5 (deck before 11-01): too slow (projected 18015 s at t=1). Duration
-    1000 chosen from the dynamics (no curated SED-ML time course).
+    (projected 301 s at t=256); -INT:5 (deck before 11-01): too slow (projected 18015 s at t=1); -INT:1 on
+    James's PC: projected 3600 s > cap 3600 s (at t=266 of 1000). Duration 1000 chosen from the dynamics (no
+    curated SED-ML time course).
 BIOMD0000000507  YES  Kintecus  0.00032%  deck        -%  PASS
     Gardner2000 - genetic toggle switch in E.coli
     Kintecus matches the SBML within 0.1% (max 0.00032% of peak, worst species species_1). Duration 10
@@ -2383,8 +2368,9 @@ BIOMD0000000541  NO   Kintecus        -%  deck      100%  KINTECUS_FAILED
     -INT:5: too slow (projected 349 s at t=86); -INT:1 (deck before 11-01): stalled (no output row for 30 s
     at t=920); -INT:5 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:5:10:0 (deck before
     11-01): too slow (projected 362 s at t=83); -INT:1 (deck before 11-01): too slow (projected 25521 s at
-    t=3); -INT:5 (deck before 11-01): too slow (projected 1430 s at t=21)). Independent run of the deck: off
-    by 100%. Duration 3000 chosen from the dynamics (no curated SED-ML time course).
+    t=3); -INT:5 (deck before 11-01): too slow (projected 1430 s at t=21); -INT:1 on James's PC: projected
+    3600 s > cap 3600 s (at t=602 of 3000)). Independent run of the deck: off by 100%. Duration 3000 chosen
+    from the dynamics (no curated SED-ML time course).
 BIOMD0000000542  YES  Kintecus  0.00048%  deck        -%  PASS
     Yuraszeck2010 - Vulnerabilities in the Tau Network in Tau Pathophysiology
     Kintecus matches the SBML within 0.1% (max 0.00048% of peak, worst species TauH4R).
@@ -2432,8 +2418,8 @@ BIOMD0000000554  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     Kintecus did not finish within the time limit (-INT:1: too slow (projected 302 s at t=177.921); -INT:5:
     too slow (projected 11010 s at t=2.5); -INT:5:10:0: too slow (projected 11005 s at t=2.5); -INT:1 (deck
     before 11-01): stalled (no output row for 30 s at t=0); -INT:5 (deck before 11-01): too slow (projected
-    15507 s at t=2.5)). The independent deck run also failed (All components of the initial state `y0` must
-    be finite.).
+    15507 s at t=2.5); -INT:1 on James's PC: projected 10118 s > cap 3600 s (at t=177.921 of 2500)). The
+    independent deck run also failed (All components of the initial state `y0` must be finite.).
 BIOMD0000000555  NO   Kintecus        -%  deck        -%  NOT_CONVERTIBLE
     Auer2010 - Correlation between lag time and aggregation rate in protein aggregation
     No pack: no reactions or rate rules could be converted Not converted (2): no reactions or rate rules
@@ -2569,7 +2555,7 @@ BIOMD0000000589  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=0); -INT:5:
     too slow (projected 303 s at t=10.9); -INT:5:10:0: too slow (projected 303 s at t=10.9); -INT:1 (deck
     before 11-01): stalled (no output row for 30 s at t=0); -INT:5 (deck before 11-01): too slow (projected
-    300 s at t=32); -INT:5 on James's PC: projected 2420 s > cap 2420 s (at t=24 of 100)). The independent
+    300 s at t=32); -INT:1 on James's PC: projected 3601 s > cap 3600 s (at t=24 of 100)). The independent
     deck run also failed (deck simulation over 180 s). Duration 100 chosen from the dynamics (no curated
     SED-ML time course).
 BIOMD0000000590  YES  Kintecus  0.00018%  deck        -%  PASS
@@ -2627,25 +2613,29 @@ BIOMD0000000603  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     Kintecus did not finish within the time limit (-INT:1: too slow (projected 303 s at t=3605); -INT:5:
     stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1
     (deck before 11-01): too slow (projected 301 s at t=3595); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0)). The independent deck run also failed (deck simulation over 180 s).
+    output row for 30 s at t=0); -INT:1 on James's PC: projected 4317 s > cap 3600 s (at t=3605 of 21600)).
+    The independent deck run also failed (deck simulation over 180 s).
 BIOMD0000000604  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     PetelenzKuehn_osmoadaptation_pfk2627D
     Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=3605);
     -INT:5: too slow (projected 100525 s at t=5); -INT:5:10:0: too slow (projected 100532 s at t=5); -INT:1
     (deck before 11-01): too slow (projected 302 s at t=3600); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0)). The independent deck run also failed (deck simulation over 180 s).
+    output row for 30 s at t=0); -INT:1 on James's PC: projected 3600 s > cap 3600 s (at t=3605 of 16200)).
+    The independent deck run also failed (deck simulation over 180 s).
 BIOMD0000000605  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     PetelenzKuehn_osmoadaptation_HOG1att
     Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=3605);
     -INT:5: too slow (projected 100526 s at t=5); -INT:5:10:0: too slow (projected 100541 s at t=5); -INT:1
     (deck before 11-01): too slow (projected 302 s at t=3600); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0)). The independent deck run also failed (deck simulation over 180 s).
+    output row for 30 s at t=0); -INT:1 on James's PC: projected 3602 s > cap 3600 s (at t=3605 of 16200)).
+    The independent deck run also failed (deck simulation over 180 s).
 BIOMD0000000606  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     PetelenzKuehn_osmoadaptation_hog1D
     Kintecus did not finish within the time limit (-INT:1: too slow (projected 631 s at t=257); -INT:5: too
     slow (projected 413541 s at t=1); -INT:5:10:0: too slow (projected 405332 s at t=1); -INT:1 (deck before
     11-01): too slow (projected 1074 s at t=151); -INT:5 (deck before 11-01): stalled (no output row for 30
-    s at t=0)). The independent deck run also failed (deck simulation over 180 s).
+    s at t=0); -INT:1 on James's PC: projected 3601 s > cap 3600 s (at t=3608 of 16200)). The independent
+    deck run also failed (deck simulation over 180 s).
 BIOMD0000000607  YES  Kintecus  0.00048%  deck        -%  PASS
     PetelenzKuehn_osmoadaptation_fps1D1
     Kintecus matches the SBML within 0.1% (max 0.00048% of peak, worst species glycerol_e).
@@ -2654,7 +2644,7 @@ BIOMD0000000608  NO   Kintecus        -%  deck  4.3e-05%  DECK_VERIFIED_KINTECUS
     The deck reproduces the SBML to 4.3e-05% (independent SciPy run of the same deck), but Kintecus did not
     finish within the time limit: -INT:1: too slow (projected 302 s at t=12600); -INT:5: too slow (projected
     3337 s at t=300); -INT:5:10:0: too slow (projected 3337 s at t=300); -INT:1 on James's PC: projected
-    2420 s > cap 2420 s (at t=37064.4 of 100000). Duration 100000 chosen from the dynamics (no curated SED-
+    3600 s > cap 3600 s (at t=62758.8 of 100000). Duration 100000 chosen from the dynamics (no curated SED-
     ML time course).
 BIOMD0000000609  YES  Kintecus  0.00038%  deck        -%  PASS
     Reddyhoff2015 - Acetaminophen metabolism and toxicity
@@ -2665,8 +2655,9 @@ BIOMD0000000610  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     Kintecus did not finish within the time limit (-INT:1: too slow (projected 304 s at t=3610); -INT:5:
     stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1
     (deck before 11-01): too slow (projected 466 s at t=645); -INT:5 (deck before 11-01): stalled (no output
-    row for 30 s at t=0)). The independent deck run also failed (All components of the initial state `y0`
-    must be finite.). Duration 30000 chosen from the dynamics (no curated SED-ML time course).
+    row for 30 s at t=0); -INT:1 on James's PC: projected 5987 s > cap 3600 s (at t=3610 of 30000)). The
+    independent deck run also failed (All components of the initial state `y0` must be finite.). Duration
+    30000 chosen from the dynamics (no curated SED-ML time course).
 BIOMD0000000611  NO   Kintecus 12889116%  deck  2.4e-07%  DECK_VERIFIED_KINTECUS_NUMERICS
     Nayak2015 - Blood Coagulation Network - Predicting the Effects of Various Therapies on Biomarkers
     The deck reproduces the SBML to 2.4e-07% (independent SciPy run of the same deck), but Kintecus's output
@@ -2685,10 +2676,10 @@ BIOMD0000000613  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED_PARTIA
     Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=0); -INT:5:
     stalled (no output row for 30 s at t=0); -INT:5:10:0: too slow (projected 323 s at t=3100); -INT:1 (deck
     before 11-01): too slow (projected 12008 s at t=100); -INT:5 (deck before 11-01): stalled (no output row
-    for 30 s at t=0)). The independent deck run also failed (deck simulation over 180 s). Not converted (2):
-    event 'Event' not converted (state-triggered (not a time >= t0 trigger)); reaction 'Ca_filtration' not
-    converted (reaction line is 2175 characters) Duration 100000 chosen from the dynamics (no curated SED-ML
-    time course).
+    for 30 s at t=0); -INT:1 on James's PC: ended early at t=100000). The independent deck run also failed
+    (deck simulation over 180 s). Not converted (2): event 'Event' not converted (state-triggered (not a
+    time >= t0 trigger)); reaction 'Ca_filtration' not converted (reaction line is 2175 characters) Duration
+    100000 chosen from the dynamics (no curated SED-ML time course).
 BIOMD0000000614  YES  Kintecus    5e-05%  deck        -%  PASS
     Kamihira2000
     Kintecus matches the SBML within 0.1% (max 5e-05% of peak, worst species f). Duration 100000 chosen from
@@ -2747,9 +2738,9 @@ BIOMD0000000627  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED_PARTIA
     Kintecus did not finish within the time limit (-INT:1: too slow (projected 4171 s at t=0.96); -INT:5:
     stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1
     (deck before 11-01): too slow (projected 10007 s at t=0.4); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0)). The independent deck run also failed (All components of the initial state
-    `y0` must be finite.). Not converted (1): rate rule on compartment 'venous_balloon' (variable volume)
-    not convertible
+    output row for 30 s at t=0); -INT:1 on James's PC: projected 200012 s > cap 3600 s (at t=1.44 of 400)).
+    The independent deck run also failed (All components of the initial state `y0` must be finite.). Not
+    converted (1): rate rule on compartment 'venous_balloon' (variable volume) not convertible
 BIOMD0000000628  NO   Kintecus      102%  deck      102%  MISMATCH_PARTIAL
     Li2012 Calcium mediated synaptic plasticity
     Kintecus finishes but is off by 102% of peak (worst species Dp_CamR_Ca2_BD_PP2B). The deck itself is
@@ -2781,8 +2772,8 @@ BIOMD0000000633  YES  Kintecus   0.0018%  deck        -%  PASS
 BIOMD0000000634  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     Proctor2013 - Effect of Aβ immunisation in Alzheimer's disease (stochastic version)
     Kintecus did not finish within the time limit (-INT:1: too slow (projected 905 s at t=1105.38); -INT:5:
-    too slow (projected 1251 s at t=800); -INT:5:10:0: too slow (projected 10009 s at t=100); -INT:5 on
-    James's PC: over 2420 s (simulated time 14600 of 0)). The independent deck run also failed (deck
+    too slow (projected 1251 s at t=800); -INT:5:10:0: too slow (projected 10009 s at t=100); -INT:1 on
+    James's PC: over 3600 s (simulated time 14600 of 0)). The independent deck run also failed (deck
     simulation over 180 s). Duration 100000 chosen from the dynamics (no curated SED-ML time course).
 BIOMD0000000635  YES  Kintecus  0.00039%  deck        -%  PASS
     Nair2015 - Interaction between neuromodulators via GPCRs - Effect on cAMP/PKA signaling (D1 Neuron)
@@ -3539,8 +3530,8 @@ BIOMD0000000859  NO   Kintecus        -%  deck      inf%  KINTECUS_FAILED
     Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=7.968);
     -INT:5: reached the end time, but the output contains NaN; -INT:5:10:0: reached the end time, but the
     output contains NaN; -INT:1 (deck before 11-01): stalled (no output row for 30 s at t=8.0192); -INT:5
-    (deck before 11-01): reached the end time, but the output contains NaN). Independent run of the deck:
-    off by inf%.
+    (deck before 11-01): reached the end time, but the output contains NaN; -INT:1 on James's PC: projected
+    4338 s > cap 3600 s (at t=7.968 of 48)). Independent run of the deck: off by inf%.
 BIOMD0000000860  YES  Kintecus   0.0002%  deck        -%  PASS
     Proctor2017- Role of microRNAs in osteoarthritis (Positive Feedforward Incoherent By MicroRNA)_1
     Kintecus matches the SBML within 0.1% (max 0.0002% of peak, worst species miR).
@@ -3872,8 +3863,8 @@ BIOMD0000000961  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     t=120); -INT:5:10:0: too slow (projected 404 s at t=125); -INT:1 (deck before 11-01): FATAL #167; -INT:5
     (deck before 11-01): too slow (projected 404 s at t=125); -INT:5:10:0 (deck before 11-01): too slow
     (projected 404 s at t=125); -INT:1 (deck before 11-01): FATAL #167; -INT:5 (deck before 11-01): too slow
-    (projected 481 s at t=105)). The independent deck run also failed (All components of the initial state
-    `y0` must be finite.).
+    (projected 481 s at t=105); -INT:1 on James's PC: ended early at t=5050). The independent deck run also
+    failed (All components of the initial state `y0` must be finite.).
 BIOMD0000000962  YES  Kintecus  0.00015%  deck        -%  PASS
     Zhao2020 - SUQC model of COVID-19 transmission dynamics in Wuhan, Hubei, and China
     Kintecus matches the SBML within 0.1% (max 0.00015% of peak, worst species Quarantined_Infected).
