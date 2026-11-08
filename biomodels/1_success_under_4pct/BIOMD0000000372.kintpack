@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T06:59:09.157754+00:00",
+ "created": "2026-11-07T20:58:54.138504+00:00",
  "description": "Tolic2000_InsulinGlucoseFeedback\nBioModels BIOMD0000000372 (curated). SBML file: BIOMD0000000372_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000372_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.63e-06 of species peak (worst: x3)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cG:(210/(1+785.7719942274173*exp((-1*0.0003333333333333333*cG))))]==>Ip",
+     "source+S[USER;cG:(210/(exp(6.666666666666667-0.0003333333333333333*cG)+1))]==>Ip",
      ""
     ],
     [
@@ -140,7 +140,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cG:(72*exp((-1*0.0006944444444444445*cG)))]==>G",
+     "source+S[USER;cG:(-0.004*cG+72*exp((-1*0.0006944444444444445*cG)))]==>G",
      ""
     ],
     [
@@ -154,7 +154,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cx3:(180/(0.0005313976217982533*exp(0.09666666666666666*cx3)+1))]==>G",
+     "source+S[USER;cx3:(180/(exp(0.09666666666666666*cx3-7.539999999999999)+1))]==>G",
      ""
     ],
     [
@@ -165,24 +165,10 @@
      ""
     ],
     [
-     "0.004",
-     "0",
-     "0",
-     "G==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dG/dt term 5",
-     ""
-    ],
-    [
      "1",
      "0",
      "0",
-     "G+S[USER;cIi:(0.09/(74963.0458040227/cIi^1.77+1))]==>sink",
+     "G+S[USER;cIi:(0.09/(exp((-1*1.77*log(0.0017613636363636364*cIi)))+1))]==>sink",
      ""
     ],
     [

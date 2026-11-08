@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:12:32.249236+00:00",
+ "created": "2026-11-07T22:28:04.569516+00:00",
  "description": "dePillis2013 - Mathematical modeling of regulatory T cell effects on renal cell carcinoma treatment\nBioModels BIOMD0000000908 (curated). SBML file: dePillis2013.xml.\nSimulation: 0 to 300 time units (SED-ML: dePillis2013.sedml), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.00e-06 of species peak (worst: N)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): T1 = T; R1 = R; S1 = S",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Increase_in_total_tumor_cell_population_in_number_of_cells term 1/2",
+     "Increase_in_total_tumor_cell_population_in_number_of_cells",
      ""
     ],
     [
-     "0.2065",
+     "1",
      "0",
      "0",
-     "T1==>2T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Increase_in_total_tumor_cell_population_in_number_of_cells term 2/2",
-     ""
-    ],
-    [
-     "4.429425e-11",
-     "0",
-     "0",
-     "T1+T1==>T1",
+     "T1+S[USER;cT1:(0.2065-4.429425e-11*cT1)]==>2T1",
      ""
     ],
     [

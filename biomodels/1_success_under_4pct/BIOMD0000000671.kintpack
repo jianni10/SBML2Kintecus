@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:06:18.898296+00:00",
+ "created": "2026-11-07T22:05:05.478885+00:00",
  "description": "Murphy2016 - Differences in predictions of ODE models of tumor growth\nBioModels BIOMD0000000671 (curated). SBML file: BIOMD0000000671_url.xml.\nSimulation: 0 to 120 time units (SED-ML: MODEL1708250001.sedml), sampling 0.12.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.50e-06 of species peak (worst: V_gomp)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -81,24 +81,10 @@
      ""
     ],
     [
-     "0.0295",
+     "1",
      "0",
      "0",
-     "V_log==>2V_log",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dV_log/dt term 2",
-     ""
-    ],
-    [
-     "4.263005780346821e-6",
-     "0",
-     "0",
-     "V_log+V_log==>V_log",
+     "V_log+S[USER;cV_log:(0.0295-4.263005780346821e-6*cV_log)]==>2V_log",
      ""
     ],
     [
@@ -154,21 +140,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_bert:(0.2344*cV_bert^0.6666666666666666)]==>V_bert",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dV_bert/dt term 2",
-     ""
-    ],
-    [
-     "3.46e-19",
-     "0",
-     "0",
-     "V_bert==>sink",
+     "source+S[USER;cV_bert:(0.2344*cV_bert^0.6666666666666666-3.46e-19*cV_bert)]==>V_bert",
      ""
     ],
     [
@@ -301,17 +273,6 @@
      "No",
      "1",
      "constant 1.0: nothing consumed [__source__]",
-     ""
-    ],
-    [
-     "sink",
-     "0",
-     "1",
-     "N",
-     "0",
-     "No",
-     "1",
-     "constant 1.0: nothing produced [__sink__]",
      ""
     ],
     [

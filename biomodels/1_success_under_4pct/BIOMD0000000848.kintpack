@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:10:57.793980+00:00",
+ "created": "2026-11-07T22:25:49.020493+00:00",
  "description": "FatehiChenar2018 - Mathematical model of immune response to hepatitis B\nBioModels BIOMD0000000848 (curated). SBML file: FatehiChenar2018.xml.\nSimulation: 0 to 30 time units (SED-ML: FatehiChenar2018.sedml), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.80e-06 of species peak (worst: F_2)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): T1 = T; E1 = E; R1 = R",
  "settings": {
   "kpath": "",
@@ -301,28 +301,14 @@
      "#",
      "",
      "",
-     "NK_Cells_Proliferaton term 1/2",
+     "NK_Cells_Proliferaton",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "N==>2N",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "NK_Cells_Proliferaton term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "N+N==>N",
+     "N+S[USER;cN:(1-1*cN)]==>2N",
      ""
     ],
     [
@@ -357,28 +343,14 @@
      "#",
      "",
      "",
-     "HBV_S_CTL_Proliferation term 1/2",
+     "HBV_S_CTL_Proliferation",
      ""
     ],
     [
-     "0.5",
+     "1",
      "0",
      "0",
-     "E1==>2E1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "HBV_S_CTL_Proliferation term 2/2",
-     ""
-    ],
-    [
-     "0.5",
-     "0",
-     "0",
-     "E1+E1==>E1",
+     "E1+S[USER;cE1:(0.5-0.5*cE1)]==>2E1",
      ""
     ],
     [
@@ -448,7 +420,7 @@
      "8",
      "0",
      "0",
-     "V+A==>sink",
+     "A+V==>sink",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:45:30.743729+00:00",
- "description": "Teusink1998_Glycolysis_TurboDesign\nBioModels BIOMD0000000253 (curated). SBML file: BIOMD0000000253_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000253_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.52e-06 of species peak (worst: HMP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Tre6P' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ADP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] HK: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PFK term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PFK term 2/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PFK term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PFK term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] lower term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] lower term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - ATP: first order\n  [info] ATPase: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T20:47:55.013916+00:00",
+ "description": "Teusink1998_Glycolysis_TurboDesign\nBioModels BIOMD0000000253 (curated). SBML file: BIOMD0000000253_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000253_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.52e-06 of species peak (worst: HMP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Tre6P' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ADP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] HK: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PFK term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PFK term 2/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PFK term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PFK term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] lower: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ATPase: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -119,42 +119,14 @@
      "#",
      "",
      "",
-     "lower term 1/2",
+     "lower",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Fru16P2+S[USER;cATP,cFru16P2:((-1*1000/(10*cATP*(cFru16P2+1e-30)+10*cATP-51*cFru16P2-51)))]==>4ATP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "lower term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cATP,cFru16P2:(200*cATP*cFru16P2/(-10*cATP*cFru16P2-10*cATP+51*cFru16P2+51))]==>Fru16P2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "lower term 2/2 (consumes ATP)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "ATP+S[USER;cATP,cFru16P2:((-1*800*cFru16P2/(10*cATP*cFru16P2+10*cATP-51*cFru16P2-51)))]==>sink",
+     "Fru16P2+S[USER;cATP,cFru16P2:((200*cATP-1000)/(10*cATP*(cFru16P2+1e-30)+10*cATP-51*cFru16P2-51))]==>4ATP",
      ""
     ],
     [
@@ -257,17 +229,6 @@
      "No",
      "10",
      "glucose [Glc]",
-     ""
-    ],
-    [
-     "source",
-     "0",
-     "1",
-     "N",
-     "0",
-     "No",
-     "1",
-     "constant 1.0: nothing consumed [__source__]",
      ""
     ],
     [

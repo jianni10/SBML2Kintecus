@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-02T03:28:24.001695+00:00",
+ "created": "2026-11-07T20:49:25.011874+00:00",
  "description": "Morris1981_MuscleFibre_Voltage_reduced\nBioModels BIOMD0000000280 (curated). SBML file: BIOMD0000000280_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000280_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 9.85e-07 of species peak (worst: V)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V' goes below zero in the SBML: integrated as p_V_o = value + 100, output as p_V = OUTC[p_V_o;-100*source]\nRenamed species (Kintecus name = SBML id): p_N = N; p_V = V",
  "settings": {
   "kpath": "",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(10*tanh(0.06666666666666667*(cp_V_o-100)-0.6666666666666666))]==>p_V_o",
+     "source+S[USER;cp_V_o:(-0.1*(cp_V_o-100)*tanh(0.06666666666666667*(cp_V_o-100)-0.6666666666666666)-0.2*(cp_V_o-100)+10*tanh(0.06666666666666667*(cp_V_o-100)-0.6666666666666666))]==>p_V_o",
      ""
     ],
     [
@@ -92,34 +92,6 @@
      "",
      "",
      "rate rule dV/dt term 4 (shifted p_V_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cp_V_o:((-1*0.2*(cp_V_o-100)))]==>p_V_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dV/dt term 5 (shifted p_V_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cp_V_o:((-1*0.1*(cp_V_o-100)*tanh(0.06666666666666667*(cp_V_o-100)-0.6666666666666666)))]==>p_V_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dV/dt term 6 (shifted p_V_o)",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T16:04:58.864853+00:00",
- "description": "Talemi2014 - Arsenic toxicity and detoxification mechanisms in yeast\nBioModels BIOMD0000000547 (curated). SBML file: BIOMD0000000547_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: BIOMD0000000547_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 30.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.97e-06 of species peak (worst: species_1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'species_6' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction_1 term 2/9: rate order differs from the stoichiometry; consumed on separate line(s) - species_1: zero order, signed\n  [info] reaction_1 term 3/9: rate order differs from the stoichiometry; consumed on separate line(s) - species_1: zero order, signed\n  [info] reaction_1 term 5/9: rate order differs from the stoichiometry; consumed on separate line(s) - species_1: zero order, signed\n  [info] reaction_1 term 9/9: rate order differs from the stoichiometry; consumed on separate line(s) - species_1: zero order, signed\n  [info] reaction_15: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T21:54:42.035319+00:00",
+ "description": "Talemi2014 - Arsenic toxicity and detoxification mechanisms in yeast\nBioModels BIOMD0000000547 (curated). SBML file: BIOMD0000000547_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: BIOMD0000000547_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 30.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.97e-06 of species peak (worst: species_1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'species_6' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction_15: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,49 +49,21 @@
      "#",
      "",
      "",
-     "reaction_1 term 1/9",
+     "reaction_1 term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cspecies_11:(354189.4673258859*3.141592653589793^0.3333333333333333*cspecies_11)]==>species_1",
+     "source+S[USER;cSW1,cSW2,cTIME_,cspecies_11:(33333333333333.336*3.141592653589793^0.3333333333333333*cspecies_11*(-9.659712745251433e-9*cSW1*cSW2*exp((-1*0.03333333333333333*cTIME_))-1.0625684019776577e-8*cSW1*cSW2*exp(120-0.03333333333333333*cTIME_)+1.0625684019776577e-8*cSW1*cSW2+9.659712745251433e-9*cSW1*exp((-1*0.03333333333333333*cTIME_))+1.0625684019776577e-8*cSW1*exp(120-0.03333333333333333*cTIME_)-1.0625684019776577e-8*cSW1+9.659712745251433e-9*cSW2*exp((-1*0.03333333333333333*cTIME_))-9.659712745251433e-9*cSW2-9.659712745251433e-9*exp((-1*0.03333333333333333*cTIME_))+1.0625684019776577e-8))]==>species_1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "reaction_1 term 2/9 (consumes species_1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW2,cspecies_11:((-1*321990.42484171444*3.141592653589793^0.3333333333333333*cSW2*cspecies_11))]==>species_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 3/9 (consumes species_1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,cspecies_11:((-1*321990.42484171444*3.141592653589793^0.3333333333333333*cspecies_11*exp((-1*0.03333333333333333*cTIME_))))]==>species_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 4/9",
+     "reaction_1 term 2/2",
      ""
     ],
     [
@@ -99,76 +71,6 @@
      "0",
      "0",
      "species_1+S[USER;cspecies_11:(321.99042484171446*3.141592653589793^0.3333333333333333*cspecies_11)]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 5/9 (consumes species_1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cspecies_11:((-1*354189.4673258859*3.141592653589793^0.3333333333333333*cSW1*cspecies_11))]==>species_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 6/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW2,cTIME_,cspecies_11:(321990.42484171444*3.141592653589793^0.3333333333333333*cSW2*cspecies_11*exp((-1*0.03333333333333333*cTIME_)))]==>species_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 7/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cSW2,cspecies_11:(354189.4673258859*3.141592653589793^0.3333333333333333*cSW1*cSW2*cspecies_11)]==>species_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 8/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cTIME_,cspecies_11:(4.6192713061484665e57*3.141592653589793^0.3333333333333333*cSW1*cspecies_11*exp((-1*0.03333333333333333*cTIME_)))]==>species_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 9/9 (consumes species_1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cSW2,cTIME_,cspecies_11:((-1*4.6192713061484665e57*3.141592653589793^0.3333333333333333*cSW1*cSW2*cspecies_11*exp((-1*0.03333333333333333*cTIME_))))]==>species_1",
      ""
     ],
     [

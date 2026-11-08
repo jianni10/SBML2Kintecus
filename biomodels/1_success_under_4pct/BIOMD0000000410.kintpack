@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:00:10.987734+00:00",
+ "created": "2026-11-07T21:12:52.100548+00:00",
  "description": "Wegner2012_TGFbetaSignalling_FeedbackLoops\nBioModels BIOMD0000000410 (curated). SBML file: BIOMD0000000410_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000410_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.74e-06 of species peak (worst: _96)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] _31: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] _35: 4 reactants split over 2 lines (Kintecus allows 3 per line)\n  [info] _39: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] _125: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] _132: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_17: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_24: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_25: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_26: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_27: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_28: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_62 term 2/2: 6 reactants split over 2 lines (Kintecus allows 3 per line)\n  [info] reaction_63 term 2/2: 6 reactants split over 2 lines (Kintecus allows 3 per line)\n  [info] reaction_68: 4 reactants split over 2 lines (Kintecus allows 3 per line)\n  [info] reaction_69: 4 reactants split over 2 lines (Kintecus allows 3 per line)\nRenamed species (Kintecus name = SBML id): X75 = _75; X79 = _79; X84 = _84; X96 = _96; X99 = _99; X101 = _101; X105 = _105; X129 = _129; X147 = _147; X153 = _153; X174 = _174; X181 = _181; X198 = _198; X5 = _5; X9 = _9; X11 = _11; X13 = _13; X15 = _15; X19 = _19; X21 = _21; X25 = _25; X27 = _27",
  "settings": {
   "kpath": "",
@@ -56,7 +56,7 @@
      "0.0492",
      "0",
      "0",
-     "species_27==>2species_17+X5",
+     "species_27==>X5+2species_17",
      ""
     ],
     [
@@ -84,7 +84,7 @@
      "1.6",
      "0",
      "0",
-     "X13==>X9+2X11",
+     "X13==>2X11+X9",
      ""
     ],
     [
@@ -98,7 +98,7 @@
      "1.6",
      "0",
      "0",
-     "X9+X11+X11==>X13",
+     "X11+X11+X9==>X13",
      ""
     ],
     [
@@ -112,7 +112,7 @@
      "1",
      "0",
      "0",
-     "species_13+X15+X15+S[USER;cX15:(0.232*cX15)]==>3X19",
+     "X15+X15+X15+S[USER;cspecies_13:(0.232*cspecies_13)]==>3X19",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "X15+S[USER;cX15,cspecies_13:(0.232*cX15^2*cspecies_13)]==>sink",
+     "species_13+S[USER;cX15:(0.232*cX15^3)]==>sink",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "0.2",
      "0",
      "0",
-     "X21+X15==>sink",
+     "X15+X21==>sink",
      ""
     ],
     [
@@ -182,7 +182,7 @@
      "0.2",
      "0",
      "0",
-     "X27==>X25+X15",
+     "X27==>X15+X25",
      ""
     ],
     [
@@ -196,7 +196,7 @@
      "2.9",
      "0",
      "0",
-     "X25+X15==>X27",
+     "X15+X25==>X27",
      ""
     ],
     [
@@ -224,7 +224,7 @@
      "0.03333",
      "0",
      "0",
-     "X96==>2X84+X79",
+     "X96==>X79+2X84",
      ""
     ],
     [
@@ -238,7 +238,7 @@
      "0.03333",
      "0",
      "0",
-     "X84+X84+X79==>X96",
+     "X79+X84+X84==>X96",
      ""
     ],
     [
@@ -252,7 +252,7 @@
      "0.1",
      "0",
      "0",
-     "X105==>X99+X101",
+     "X105==>X101+X99",
      ""
     ],
     [
@@ -266,7 +266,7 @@
      "1",
      "0",
      "0",
-     "X99+X101==>X105",
+     "X101+X99==>X105",
      ""
     ],
     [
@@ -294,7 +294,7 @@
      "1",
      "0",
      "0",
-     "X105+X96+S[USER;cX105:(3.51/(1*cX105+0.53))]==>X129+X101+X96",
+     "X105+X96+S[USER;cX105:(3.51/(1*cX105+0.53))]==>X101+X129+X96",
      ""
     ],
     [
@@ -966,7 +966,7 @@
      "1",
      "0",
      "0",
-     "species_5+X96+S[USER;cspecies_5:(3.51/(1*cspecies_5+0.53))]==>species_4+X101+X96",
+     "species_5+X96+S[USER;cspecies_5:(3.51/(1*cspecies_5+0.53))]==>X101+species_4+X96",
      ""
     ],
     [
@@ -1022,7 +1022,7 @@
      "0.1",
      "0",
      "0",
-     "species_5==>species_3+X101",
+     "species_5==>X101+species_3",
      ""
     ],
     [
@@ -1036,7 +1036,7 @@
      "1",
      "0",
      "0",
-     "species_3+X101==>species_5",
+     "X101+species_3==>species_5",
      ""
     ],
     [
@@ -1078,7 +1078,7 @@
      "1000",
      "0",
      "0",
-     "species_4+species_4+X147==>species_6",
+     "X147+species_4+species_4==>species_6",
      ""
     ],
     [
@@ -1092,7 +1092,7 @@
      "255.068",
      "0",
      "0",
-     "species_20+species_20+X5==>species_18",
+     "X5+species_20+species_20==>species_18",
      ""
     ],
     [
@@ -1106,7 +1106,7 @@
      "1.6",
      "0",
      "0",
-     "species_21==>species_18+2X11",
+     "species_21==>2X11+species_18",
      ""
     ],
     [
@@ -1120,7 +1120,7 @@
      "1.6",
      "0",
      "0",
-     "species_18+X11+X11==>species_21",
+     "X11+X11+species_18==>species_21",
      ""
     ],
     [
@@ -1288,7 +1288,7 @@
      "0.05288",
      "0",
      "0",
-     "species_23==>species_22+X5",
+     "species_23==>X5+species_22",
      ""
     ],
     [
@@ -1302,7 +1302,7 @@
      "1",
      "0",
      "0",
-     "species_22+X5==>species_23",
+     "X5+species_22==>species_23",
      ""
     ],
     [
@@ -1428,7 +1428,7 @@
      "1900",
      "0",
      "0",
-     "species_10+X96==>sink",
+     "X96+species_10==>sink",
      ""
     ],
     [
@@ -1666,7 +1666,7 @@
      "1.6",
      "0",
      "0",
-     "species_11==>2species_22+X9",
+     "species_11==>X9+2species_22",
      ""
     ],
     [
@@ -1680,7 +1680,7 @@
      "1.6",
      "0",
      "0",
-     "species_22+species_22+X9==>species_11",
+     "X9+species_22+species_22==>species_11",
      ""
     ],
     [
@@ -1750,7 +1750,7 @@
      "0.1",
      "0",
      "0",
-     "species_12==>species_7+X99",
+     "species_12==>X99+species_7",
      ""
     ],
     [
@@ -1764,7 +1764,7 @@
      "0.1",
      "0",
      "0",
-     "species_7+X99==>species_12",
+     "X99+species_7==>species_12",
      ""
     ],
     [
@@ -1778,7 +1778,7 @@
      "1",
      "0",
      "0",
-     "species_13==>3X19+3X11",
+     "species_13==>3X11+3X19",
      ""
     ],
     [
@@ -1792,7 +1792,7 @@
      "1",
      "0",
      "0",
-     "X19+X19+X19+S[USER;cX11:(1*cX11^3)]==>species_13",
+     "X11+X11+X11+S[USER;cX19:(1*cX19^3)]==>species_13",
      ""
     ],
     [
@@ -1806,7 +1806,7 @@
      "1",
      "0",
      "0",
-     "X11+X11+X11+S[USER;cX19:(1*cX19^3)]==>sink",
+     "X19+X19+X19+S[USER;cX11:(1*cX11^3)]==>sink",
      ""
     ],
     [
@@ -1820,7 +1820,7 @@
      "1",
      "0",
      "0",
-     "species_14==>3species_20+3X11",
+     "species_14==>3X11+3species_20",
      ""
     ],
     [
@@ -1834,7 +1834,7 @@
      "1",
      "0",
      "0",
-     "species_20+species_20+species_20+S[USER;cX11:(1*cX11^3)]==>species_14",
+     "X11+X11+X11+S[USER;cspecies_20:(1*cspecies_20^3)]==>species_14",
      ""
     ],
     [
@@ -1848,7 +1848,7 @@
      "1",
      "0",
      "0",
-     "X11+X11+X11+S[USER;cspecies_20:(1*cspecies_20^3)]==>sink",
+     "species_20+species_20+species_20+S[USER;cX11:(1*cX11^3)]==>sink",
      ""
     ],
     [
@@ -1946,7 +1946,7 @@
      "1",
      "0",
      "0",
-     "species_31+species_31+species_31+S[USER;cspecies_14:(0.1*cspecies_14)]==>species_20",
+     "species_14+species_31+species_31+S[USER;cspecies_31:(0.1*cspecies_31)]==>species_20",
      ""
     ],
     [
@@ -1960,7 +1960,7 @@
      "1",
      "0",
      "0",
-     "species_14+S[USER;cspecies_31:(0.1*cspecies_31^3)]==>sink",
+     "species_31+S[USER;cspecies_14,cspecies_31:(0.1*cspecies_14*cspecies_31^2)]==>sink",
      ""
     ],
     [

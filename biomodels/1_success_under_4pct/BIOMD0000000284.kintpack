@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T06:56:51.304439+00:00",
- "description": "Hofmeyer1986_SeqFb_Proc_AA_Synthesis\nBioModels BIOMD0000000284 (curated). SBML file: BIOMD0000000284_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000284_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.26e-06 of species peak (worst: A)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R1 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R2 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R2 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R3 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R3 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R4 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R4 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R5 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R6 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R6 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R7 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R7 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R8 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): E1 = E",
+ "created": "2026-11-07T20:49:28.063606+00:00",
+ "description": "Hofmeyer1986_SeqFb_Proc_AA_Synthesis\nBioModels BIOMD0000000284 (curated). SBML file: BIOMD0000000284_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000284_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.26e-06 of species peak (worst: A)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R2: rate order differs from the stoichiometry; consumed on separate line(s) - A: zero order, signed\n  [info] R3: rate order differs from the stoichiometry; consumed on separate line(s) - B: zero order, signed\n  [info] R4: rate order differs from the stoichiometry; consumed on separate line(s) - C: zero order, signed\n  [info] R5: rate order differs from the stoichiometry; consumed on separate line(s) - D: zero order, signed\n  [info] R6: rate order differs from the stoichiometry; consumed on separate line(s) - B: zero order, signed\n  [info] R7: rate order differs from the stoichiometry; consumed on separate line(s) - E1: zero order, signed\n  [info] R8: rate order differs from the stoichiometry; consumed on separate line(s) - F: zero order, signed\nRenamed species (Kintecus name = SBML id): E1 = E",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,224 +49,182 @@
      "#",
      "",
      "",
-     "R1 term 1/2",
+     "R1",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cA,cB:(100/(cA+cB^2+11))]==>A",
+     "source+S[USER;cA,cB:(1*(100-cA)/(cA+cB^2+11))]==>A",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R1 term 2/2",
+     "R2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "A+S[USER;cA,cB:(1/(1*cA+1*cB^2+11))]==>sink",
+     "source+S[USER;cA,cB:(1*(2*cA-cB)/(cA+cB+1))]==>B",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R2 term 1/2",
+     "R2 (consumes A)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "A+S[USER;cA,cB:(2/(1*cA+1*cB+1))]==>B",
+     "source+S[USER;cA,cB:((-1*1*(2*cA-cB)/(cA+cB+1)))]==>A",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R2 term 2/2",
+     "R3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "B+S[USER;cA,cB:(1/(1*cA+1*cB+1))]==>A",
+     "source+S[USER;cB,cC,cD:(1*(cB-cC)/(cB+cC+cD^2+1))]==>C",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R3 term 1/2",
+     "R3 (consumes B)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "B+S[USER;cB,cC,cD:(1/(1*cB+1*cC+1*cD^2+1))]==>C",
+     "source+S[USER;cB,cC,cD:((-1*1*(cB-cC)/(cB+cC+cD^2+1)))]==>B",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R3 term 2/2",
+     "R4",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "C+S[USER;cB,cC,cD:(1/(1*cB+1*cC+1*cD^2+1))]==>B",
+     "source+S[USER;cC,cD:(1*(5*cC-cD)/(cC+cD+1))]==>D",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R4 term 1/2",
+     "R4 (consumes C)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "C+S[USER;cC,cD:(5/(1*cC+1*cD+1))]==>D",
+     "source+S[USER;cC,cD:((-1*1*(5*cC-cD)/(cC+cD+1)))]==>C",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R4 term 2/2",
+     "R5 (consumes D)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "D+S[USER;cC,cD:(1/(1*cC+1*cD+1))]==>C",
+     "source+S[USER;cD:((-1*1*(10*cD-2)/(cD+3)))]==>D",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R5 term 1/2",
+     "R6",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cD:(2/(cD+3))]==>D",
+     "source+S[USER;cB,cE1,cF:(1*(cB-cE1)/(cB+cE1+cF^2+1))]==>E1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R5 term 2/2",
+     "R6 (consumes B)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "D+S[USER;cD:(10/(1*cD+3))]==>sink",
+     "source+S[USER;cB,cE1,cF:((-1*1*(cB-cE1)/(cB+cE1+cF^2+1)))]==>B",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R6 term 1/2",
+     "R7",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "B+S[USER;cB,cE1,cF:(1/(1*cB+1*cE1+1*cF^2+1))]==>E1",
+     "source+S[USER;cE1,cF:(1*(5*cE1-cF)/(cE1+cF+1))]==>F",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R6 term 2/2",
+     "R7 (consumes E1)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "E1+S[USER;cB,cE1,cF:(1/(1*cB+1*cE1+1*cF^2+1))]==>B",
+     "source+S[USER;cE1,cF:((-1*1*(5*cE1-cF)/(cE1+cF+1)))]==>E1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R7 term 1/2",
+     "R8 (consumes F)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "E1+S[USER;cE1,cF:(5/(1*cE1+1*cF+1))]==>F",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R7 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "F+S[USER;cE1,cF:(1/(1*cE1+1*cF+1))]==>E1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R8 term 1/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cF:(1/(cF+2))]==>F",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R8 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "F+S[USER;cF:(10/(1*cF+2))]==>sink",
+     "source+S[USER;cF:((-1*1*(10*cF-1)/(cF+2)))]==>F",
      ""
     ],
     [
@@ -421,17 +379,6 @@
      "No",
      "1",
      "constant 1.0: nothing consumed [__source__]",
-     ""
-    ],
-    [
-     "sink",
-     "0",
-     "1",
-     "N",
-     "0",
-     "No",
-     "1",
-     "constant 1.0: nothing produced [__sink__]",
      ""
     ],
     [

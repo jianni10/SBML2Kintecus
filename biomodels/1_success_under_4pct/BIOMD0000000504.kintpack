@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:52:51.161082+00:00",
- "description": "Proctor2013 - Cartilage breakdown, interventions to reduce collagen release\nBioModels BIOMD0000000504 (curated). SBML file: BIOMD0000000504_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000504_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.58e-06 of species peak (worst: PTPRT)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] cJunDimerisation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - cJun_dimer: zero order, signed\nRenamed species (Kintecus name = SBML id): Source1 = Source; Sink1 = Sink",
+ "created": "2026-11-07T21:49:12.832305+00:00",
+ "description": "Proctor2013 - Cartilage breakdown, interventions to reduce collagen release\nBioModels BIOMD0000000504 (curated). SBML file: BIOMD0000000504_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000504_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.58e-06 of species peak (worst: PTPRT)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] cJunDimerisation: rate order differs from the stoichiometry; consumed on separate line(s) - cJun_P: first order\nRenamed species (Kintecus name = SBML id): Source1 = Source; Sink1 = Sink",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -84,7 +84,7 @@
      "0.0001",
      "0",
      "0",
-     "IL1Ra+IL1==>IL1_IL1Ra",
+     "IL1+IL1Ra==>IL1_IL1Ra",
      ""
     ],
     [
@@ -98,7 +98,7 @@
      "0.0001",
      "0",
      "0",
-     "IL1_IL1Ra==>IL1Ra+IL1",
+     "IL1_IL1Ra==>IL1+IL1Ra",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "5e-5",
      "0",
      "0",
-     "IRAK2+IL1_IL1R==>IL1_IL1R_IRAK2",
+     "IL1_IL1R+IRAK2==>IL1_IL1R_IRAK2",
      ""
     ],
     [
@@ -140,7 +140,7 @@
      "0.001",
      "0",
      "0",
-     "IL1_IL1R_IRAK2==>IRAK2+IL1_IL1R",
+     "IL1_IL1R_IRAK2==>IL1_IL1R+IRAK2",
      ""
     ],
     [
@@ -154,7 +154,7 @@
      "1e-5",
      "0",
      "0",
-     "IL1_IL1R_IRAK2+TRAF6==>IRAK2_TRAF6+IL1_IL1R",
+     "IL1_IL1R_IRAK2+TRAF6==>IL1_IL1R+IRAK2_TRAF6",
      ""
     ],
     [
@@ -182,7 +182,7 @@
      "0.0001",
      "0",
      "0",
-     "JNK+IRAK2_TRAF6==>JNK_P+IRAK2_TRAF6",
+     "IRAK2_TRAF6+JNK==>IRAK2_TRAF6+JNK_P",
      ""
     ],
     [
@@ -210,7 +210,7 @@
      "0.001",
      "0",
      "0",
-     "JNK_P+DUSP16==>DUSP16+JNK",
+     "DUSP16+JNK_P==>DUSP16+JNK",
      ""
     ],
     [
@@ -245,42 +245,28 @@
      "#",
      "",
      "",
-     "cJunDimerisation term 1/2",
-     ""
-    ],
-    [
-     "2.5e-5",
-     "0",
-     "0",
-     "cJun_P+cJun_P==>cJun_dimer",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cJunDimerisation term 2/2",
+     "cJunDimerisation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;ccJun_P:(2.5e-5*ccJun_P)]==>2cJun_P",
+     "source+S[USER;ccJun_P:(2.5e-5*ccJun_P*(1*ccJun_P-1))]==>cJun_dimer",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cJunDimerisation term 2/2 (consumes cJun_dimer)",
+     "cJunDimerisation (consumes cJun_P)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;ccJun_P:((-1*2.5e-5*ccJun_P))]==>cJun_dimer",
+     "cJun_P+S[USER;ccJun_P:(5e-5*ccJun_P-5e-5)]==>sink",
      ""
     ],
     [
@@ -308,7 +294,7 @@
      "0.0125",
      "0",
      "0",
-     "cFos_cJun==>cJun_mRNA+cFos_cJun",
+     "cFos_cJun==>cFos_cJun+cJun_mRNA",
      ""
     ],
     [
@@ -364,7 +350,7 @@
      "0.0026",
      "0",
      "0",
-     "cJun_mRNA==>cJun_mRNA+cJun",
+     "cJun_mRNA==>cJun+cJun_mRNA",
      ""
     ],
     [
@@ -392,7 +378,7 @@
      "0.0001",
      "0",
      "0",
-     "p38+IRAK2_TRAF6==>IRAK2_TRAF6+p38_P",
+     "IRAK2_TRAF6+p38==>IRAK2_TRAF6+p38_P",
      ""
     ],
     [
@@ -420,7 +406,7 @@
      "1e-5",
      "0",
      "0",
-     "p38_P+MKP1==>p38+MKP1",
+     "MKP1+p38_P==>MKP1+p38",
      ""
     ],
     [
@@ -448,7 +434,7 @@
      "0.0002",
      "0",
      "0",
-     "cJun_dimer==>cJun_dimer+MMP1_mRNA",
+     "cJun_dimer==>MMP1_mRNA+cJun_dimer",
      ""
     ],
     [
@@ -490,7 +476,7 @@
      "1e-9",
      "0",
      "0",
-     "Matriptase+proMMP1==>Matriptase+MMP1",
+     "Matriptase+proMMP1==>MMP1+Matriptase",
      ""
     ],
     [
@@ -504,7 +490,7 @@
      "1e-8",
      "0",
      "0",
-     "MMP3+proMMP1==>MMP3+MMP1",
+     "MMP3+proMMP1==>MMP1+MMP3",
      ""
     ],
     [
@@ -546,7 +532,7 @@
      "0.0002",
      "0",
      "0",
-     "cJun_dimer==>cJun_dimer+MMP3_mRNA",
+     "cJun_dimer==>MMP3_mRNA+cJun_dimer",
      ""
     ],
     [
@@ -560,7 +546,7 @@
      "3e-5",
      "0",
      "0",
-     "MMP3_mRNA==>proMMP3+MMP3_mRNA",
+     "MMP3_mRNA==>MMP3_mRNA+proMMP3",
      ""
     ],
     [
@@ -588,7 +574,7 @@
      "4e-6",
      "0",
      "0",
-     "proMMP3+Matriptase==>MMP3+Matriptase",
+     "Matriptase+proMMP3==>MMP3+Matriptase",
      ""
     ],
     [
@@ -616,7 +602,7 @@
      "0.0005",
      "0",
      "0",
-     "cFos_cJun==>cFos_cJun+MMP13_mRNA",
+     "cFos_cJun==>MMP13_mRNA+cFos_cJun",
      ""
     ],
     [
@@ -630,7 +616,7 @@
      "2e-5",
      "0",
      "0",
-     "cJun_dimer==>cJun_dimer+MMP13_mRNA",
+     "cJun_dimer==>MMP13_mRNA+cJun_dimer",
      ""
     ],
     [
@@ -644,7 +630,7 @@
      "1.5e-5",
      "0",
      "0",
-     "MMP13_mRNA==>proMMP13+MMP13_mRNA",
+     "MMP13_mRNA==>MMP13_mRNA+proMMP13",
      ""
     ],
     [
@@ -672,7 +658,7 @@
      "5e-8",
      "0",
      "0",
-     "proMMP13+MMP3==>MMP13+MMP3",
+     "MMP3+proMMP13==>MMP13+MMP3",
      ""
     ],
     [
@@ -756,7 +742,7 @@
      "4e-6",
      "0",
      "0",
-     "cJun_dimer==>cJun_dimer+ADAMTS4_mRNA",
+     "cJun_dimer==>ADAMTS4_mRNA+cJun_dimer",
      ""
     ],
     [
@@ -770,7 +756,7 @@
      "0.0005",
      "0",
      "0",
-     "ADAMTS4_mRNA==>ADAMTS4_mRNA+ADAMTS4",
+     "ADAMTS4_mRNA==>ADAMTS4+ADAMTS4_mRNA",
      ""
     ],
     [
@@ -826,7 +812,7 @@
      "0.0002",
      "0",
      "0",
-     "cJun_dimer==>cJun_dimer+PP4",
+     "cJun_dimer==>PP4+cJun_dimer",
      ""
     ],
     [
@@ -854,7 +840,7 @@
      "0.0002",
      "0",
      "0",
-     "cJun_dimer==>cJun_dimer+DUSP16",
+     "cJun_dimer==>DUSP16+cJun_dimer",
      ""
     ],
     [
@@ -910,7 +896,7 @@
      "0.5",
      "0",
      "0",
-     "PP4+IRAK2_TRAF6==>IRAK2_TRAF6_PP4",
+     "IRAK2_TRAF6+PP4==>IRAK2_TRAF6_PP4",
      ""
     ],
     [
@@ -938,7 +924,7 @@
      "1e-6",
      "0",
      "0",
-     "IRAK2_TRAF6_PP4==>PP4+IRAK2_TRAF6",
+     "IRAK2_TRAF6_PP4==>IRAK2_TRAF6+PP4",
      ""
     ],
     [
@@ -952,7 +938,7 @@
      "5e-6",
      "0",
      "0",
-     "cFos_cJun==>cFos_mRNA+cFos_cJun",
+     "cFos_cJun==>cFos_cJun+cFos_mRNA",
      ""
     ],
     [
@@ -980,7 +966,7 @@
      "0.001",
      "0",
      "0",
-     "cFos_mRNA==>cFos_mRNA+cFos",
+     "cFos_mRNA==>cFos+cFos_mRNA",
      ""
     ],
     [
@@ -1008,7 +994,7 @@
      "5e-7",
      "0",
      "0",
-     "p38_P+cFos==>p38_P+cFos_P",
+     "cFos+p38_P==>cFos_P+p38_P",
      ""
     ],
     [
@@ -1036,7 +1022,7 @@
      "2.5e-5",
      "0",
      "0",
-     "cFos_cJun==>cFos_cJun+MKP1",
+     "cFos_cJun==>MKP1+cFos_cJun",
      ""
     ],
     [
@@ -1050,7 +1036,7 @@
      "1e-6",
      "0",
      "0",
-     "cJun_dimer==>cJun_dimer+MKP1",
+     "cJun_dimer==>MKP1+cJun_dimer",
      ""
     ],
     [
@@ -1092,7 +1078,7 @@
      "5e-5",
      "0",
      "0",
-     "cJun_P+cFos_P==>cFos_cJun",
+     "cFos_P+cJun_P==>cFos_cJun",
      ""
     ],
     [
@@ -1106,7 +1092,7 @@
      "4e-5",
      "0",
      "0",
-     "cFos_cJun==>cJun_P+cFos_P",
+     "cFos_cJun==>cFos_P+cJun_P",
      ""
     ],
     [
@@ -1162,7 +1148,7 @@
      "1e-5",
      "0",
      "0",
-     "OSM_OSMRa==>OSMRa+OSM",
+     "OSM_OSMRa==>OSM+OSMRa",
      ""
     ],
     [
@@ -1176,7 +1162,7 @@
      "1e-5",
      "0",
      "0",
-     "OSM_OSMR+JAK1==>OSM_OSMR+JAK1_P",
+     "JAK1+OSM_OSMR==>JAK1_P+OSM_OSMR",
      ""
     ],
     [
@@ -1204,7 +1190,7 @@
      "0.004",
      "0",
      "0",
-     "PTPRT+JAK1_P==>PTPRT+JAK1",
+     "JAK1_P+PTPRT==>JAK1+PTPRT",
      ""
     ],
     [
@@ -1218,7 +1204,7 @@
      "0.005",
      "0",
      "0",
-     "STAT3_cyt+JAK1_P==>STAT3_P_cyt+JAK1_P",
+     "JAK1_P+STAT3_cyt==>JAK1_P+STAT3_P_cyt",
      ""
     ],
     [
@@ -1246,7 +1232,7 @@
      "0.0008",
      "0",
      "0",
-     "STAT3_P_cyt+PTPRT==>STAT3_cyt+PTPRT",
+     "PTPRT+STAT3_P_cyt==>PTPRT+STAT3_cyt",
      ""
     ],
     [
@@ -1274,7 +1260,7 @@
      "0.0005",
      "0",
      "0",
-     "STAT3_P_nuc+PTPRT==>STAT3_nuc+PTPRT",
+     "PTPRT+STAT3_P_nuc==>PTPRT+STAT3_nuc",
      ""
     ],
     [
@@ -1316,7 +1302,7 @@
      "0.05",
      "0",
      "0",
-     "STAT3_P_nuc==>cFos_mRNA+STAT3_P_nuc",
+     "STAT3_P_nuc==>STAT3_P_nuc+cFos_mRNA",
      ""
     ],
     [
@@ -1330,7 +1316,7 @@
      "0.0001",
      "0",
      "0",
-     "STAT3_P_nuc==>STAT3_P_nuc+PTPRT",
+     "STAT3_P_nuc==>PTPRT+STAT3_P_nuc",
      ""
     ],
     [
@@ -1358,7 +1344,7 @@
      "0.006",
      "0",
      "0",
-     "STAT3_P_nuc==>STAT3_P_nuc+SOCS3_mRNA",
+     "STAT3_P_nuc==>SOCS3_mRNA+STAT3_P_nuc",
      ""
     ],
     [
@@ -1386,7 +1372,7 @@
      "0.001",
      "0",
      "0",
-     "SOCS3_mRNA==>SOCS3_mRNA+SOCS3",
+     "SOCS3_mRNA==>SOCS3+SOCS3_mRNA",
      ""
     ],
     [
@@ -1414,7 +1400,7 @@
      "0.005",
      "0",
      "0",
-     "SOCS3+OSMR==>OSMR_SOCS3",
+     "OSMR+SOCS3==>OSMR_SOCS3",
      ""
     ],
     [
@@ -1428,7 +1414,7 @@
      "1e-5",
      "0",
      "0",
-     "OSMR_SOCS3==>SOCS3+OSMR",
+     "OSMR_SOCS3==>OSMR+SOCS3",
      ""
     ],
     [
@@ -1456,7 +1442,7 @@
      "3e-7",
      "0",
      "0",
-     "TIMP1+MMP1==>MMP1_TIMP1",
+     "MMP1+TIMP1==>MMP1_TIMP1",
      ""
     ],
     [
@@ -1470,7 +1456,7 @@
      "0.001",
      "0",
      "0",
-     "MMP1_TIMP1==>TIMP1+MMP1",
+     "MMP1_TIMP1==>MMP1+TIMP1",
      ""
     ],
     [
@@ -1484,7 +1470,7 @@
      "3e-7",
      "0",
      "0",
-     "TIMP1+MMP3==>MMP3_TIMP1",
+     "MMP3+TIMP1==>MMP3_TIMP1",
      ""
     ],
     [
@@ -1498,7 +1484,7 @@
      "0.001",
      "0",
      "0",
-     "MMP3_TIMP1==>TIMP1+MMP3",
+     "MMP3_TIMP1==>MMP3+TIMP1",
      ""
     ],
     [
@@ -1540,7 +1526,7 @@
      "3e-6",
      "0",
      "0",
-     "TIMP1+ADAMTS4==>ADAMTS4_TIMP1",
+     "ADAMTS4+TIMP1==>ADAMTS4_TIMP1",
      ""
     ],
     [
@@ -1554,7 +1540,7 @@
      "0.001",
      "0",
      "0",
-     "ADAMTS4_TIMP1==>TIMP1+ADAMTS4",
+     "ADAMTS4_TIMP1==>ADAMTS4+TIMP1",
      ""
     ],
     [
@@ -1582,7 +1568,7 @@
      "5e-11",
      "0",
      "0",
-     "Collagen2+MMP13==>MMP13+ColFrag",
+     "Collagen2+MMP13==>ColFrag+MMP13",
      ""
     ],
     [
@@ -1596,7 +1582,7 @@
      "3e-8",
      "0",
      "0",
-     "ADAMTS4+Aggrecan_Collagen2==>AggFrag+Collagen2+ADAMTS4",
+     "ADAMTS4+Aggrecan_Collagen2==>ADAMTS4+AggFrag+Collagen2",
      ""
     ],
     [
@@ -1694,7 +1680,7 @@
      "4e-5",
      "0",
      "0",
-     "TIMP1_DNA+STAT3_P_nuc==>TIMP1_DNA+STAT3_P_nuc+TIMP1_mRNA",
+     "STAT3_P_nuc+TIMP1_DNA==>STAT3_P_nuc+TIMP1_DNA+TIMP1_mRNA",
      ""
     ],
     [
@@ -1750,7 +1736,7 @@
      "5e-7",
      "0",
      "0",
-     "cFos_cJun==>cFos_cJun+TIMP3_mRNA",
+     "cFos_cJun==>TIMP3_mRNA+cFos_cJun",
      ""
     ],
     [
@@ -1820,7 +1806,7 @@
      "0.0005",
      "0",
      "0",
-     "TIMP3+ADAMTS4==>ADAMTS4_TIMP3",
+     "ADAMTS4+TIMP3==>ADAMTS4_TIMP3",
      ""
     ],
     [
@@ -1834,7 +1820,7 @@
      "0.001",
      "0",
      "0",
-     "ADAMTS4_TIMP3==>TIMP3+ADAMTS4",
+     "ADAMTS4_TIMP3==>ADAMTS4+TIMP3",
      ""
     ],
     [
@@ -1848,7 +1834,7 @@
      "1e-8",
      "0",
      "0",
-     "TIMP3+MMP1==>MMP1_TIMP3",
+     "MMP1+TIMP3==>MMP1_TIMP3",
      ""
     ],
     [
@@ -1862,7 +1848,7 @@
      "0.001",
      "0",
      "0",
-     "MMP1_TIMP3==>TIMP3+MMP1",
+     "MMP1_TIMP3==>MMP1+TIMP3",
      ""
     ],
     [
@@ -1876,7 +1862,7 @@
      "1e-8",
      "0",
      "0",
-     "TIMP3+MMP3==>MMP3_TIMP3",
+     "MMP3+TIMP3==>MMP3_TIMP3",
      ""
     ],
     [
@@ -1890,7 +1876,7 @@
      "0.001",
      "0",
      "0",
-     "MMP3_TIMP3==>TIMP3+MMP3",
+     "MMP3_TIMP3==>MMP3+TIMP3",
      ""
     ],
     [
@@ -1904,7 +1890,7 @@
      "1e-8",
      "0",
      "0",
-     "TIMP3+MMP13==>MMP13_TIMP3",
+     "MMP13+TIMP3==>MMP13_TIMP3",
      ""
     ],
     [
@@ -1918,7 +1904,7 @@
      "0.001",
      "0",
      "0",
-     "MMP13_TIMP3==>TIMP3+MMP13",
+     "MMP13_TIMP3==>MMP13+TIMP3",
      ""
     ],
     [

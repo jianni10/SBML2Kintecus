@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-05T21:12:16.595191+00:00",
+ "created": "2026-11-07T22:23:56.401962+00:00",
  "description": "Perez-Garcia19 - Computational design of improved standardized chemotherapy protocols for grade 2 oligodendrogliomas\nBioModels BIOMD0000000814 (curated). SBML file: Perez-Garcia19 Computational design of improved standardized chemotherapy protocols for grade 2 oligodendrogliomas.xml.\nSimulation: 0 to 1022 time units (SED-ML: Perez-Garcia19 Computational design of improved standardized chemotherapy protocols for grade 2 oligodendrogliomas.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.21e-06 of species peak (worst: Tumor_Cell_Population_P)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 5 event(s) depend only on time (and on variables only they change): unrolled into 100 firing(s) up to t = 1022\n  [info] time event(s) on 'dose1' encoded as time/value pairs in EV_P_DOSE1.TXT (SET)\n  [info] time event(s) on 'Drug_Concentration_C' encoded as time/value pairs in EV_DRUG_CONCENTRATIO.TXT (ADD)\n  [info] time event(s) on 'dose2' encoded as time/value pairs in EV_P_DOSE2.TXT (SET)\n  [info] time event(s) on 'dose3' encoded as time/value pairs in EV_P_DOSE3.TXT (SET)\n  [info] time event(s) on 'dose_4' encoded as time/value pairs in EV_P_DOSE_4.TXT (SET)\n  [info] time event(s) on 'dose_5' encoded as time/value pairs in EV_P_DOSE_5.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_dose1 = dose1; p_dose2 = dose2; p_dose3 = dose3; p_dose_4 = dose_4; p_dose_5 = dose_5",
  "settings": {
   "kpath": "",
@@ -49,35 +49,21 @@
      "#",
      "",
      "",
-     "Tumor_Cell_P_logistic_growth term 1/3",
+     "Tumor_Cell_P_logistic_growth term 1/2",
      ""
     ],
     [
-     "0.002931927433",
+     "1",
      "0",
      "0",
-     "Tumor_Cell_Population_P==>2Tumor_Cell_Population_P",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Cell_P_logistic_growth term 2/3",
-     ""
-    ],
-    [
-     "1.1199154439092586e-5",
-     "0",
-     "0",
-     "Tumor_Cell_Population_P+Tumor_Cell_Population_P==>Tumor_Cell_Population_P",
+     "Tumor_Cell_Population_P+S[USER;cTumor_Cell_Population_P:(0.002931927433-1.1199154439092586e-5*cTumor_Cell_Population_P)]==>2Tumor_Cell_Population_P",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Tumor_Cell_P_logistic_growth term 3/3",
+     "Tumor_Cell_P_logistic_growth term 2/2",
      ""
     ],
     [
@@ -119,35 +105,21 @@
      "#",
      "",
      "",
-     "Damaged_Tumor_Cell_D_death term 1/3",
+     "Damaged_Tumor_Cell_D_death term 1/2",
      ""
     ],
     [
-     "0.002931927433",
+     "1",
      "0",
      "0",
-     "Damaged_Tumor_Cells_D==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Damaged_Tumor_Cell_D_death term 2/3",
-     ""
-    ],
-    [
-     "1.1199154439092586e-5",
-     "0",
-     "0",
-     "Damaged_Tumor_Cells_D+Damaged_Tumor_Cells_D==>3Damaged_Tumor_Cells_D",
+     "Damaged_Tumor_Cells_D+S[USER;cDamaged_Tumor_Cells_D:(0.002931927433-1.1199154439092586e-5*cDamaged_Tumor_Cells_D)]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Damaged_Tumor_Cell_D_death term 3/3",
+     "Damaged_Tumor_Cell_D_death term 2/2",
      ""
     ],
     [

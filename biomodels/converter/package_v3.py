@@ -170,6 +170,17 @@ CONVERSION CONVENTIONS (also in each pack's description)
     the double range (e.g. exp(3800) inside a switch) are written as +-1e308, which is what IEEE arithmetic in
     Kintecus gives; a time trigger whose threshold the events themselves change (time >= t_int*cups + t_lag,
     cups = cups + 1) is unrolled like the time-only events below.
+  * Step functions, signs and exp() (since 2026-11-07; why the slow jobs were slow). Kintecus USER has no
+    conditionals, so SBML piecewise/relations on the state are written with H(z) = (z/(abs(z)+1e-300)+1)/2.
+    That step, and max(z,0) = (z+abs(z))/2, are now kept as one factor while rates are simplified; before,
+    sympy multiplied them out into terms of size ~1/|z| on separate lines that cancel, so near the switch
+    point the rate was rounding noise and the integrators crawled (deck round trip through CVODE: 158,707 steps
+    for BIOMD0000000603 against 1,767 for the SBML; now 1,832). Terms of opposite sign that depend on the same
+    species stay one rate instead of separate (signed) lines; exp() is kept whole (sympy wrote exp(3800-4t) as
+    1e308*exp(-4t), which overflows to inf/NaN); conditions on time alone (daily light windows with
+    floor(time/24), time - c >= 0, i == k) become switch species with Time/value pairs; and a negative
+    product of a sum is printed -1*(a+b), not -1*a+b. Packs kept from before this change are rebuilt the old
+    way by sbml2kintpack (release_settings.csv variant "...+pre1107").
   * Events that depend only on time (since 2026-11-05): triggers built from time, constants and variables that
     only the events themselves change - time windows ((time > 50) && (time <= 300)), periodic doses written with
     % or floor ((time - t1) % P == 0), self-resetting clocks (Day = Day + 24), exact instants (time == 20) - are
@@ -340,6 +351,16 @@ INTERFACE NOTES
     spacing-format profiles keep the grid. Values are correct; row times move. The references in this
     release are written at the times Kintecus prints (if the grid changes, kintcheck interpolates between
     rows, which is inexact across a dose). Repro: repros/TIMEPAIRS_OUTPUT_GRID (pairs/ and spacing/).
+24. (2026-11-07) -INT:1 never applies Time/value-pair changes in one deck: BIOMD0000000554 (3 switch files at
+    t=200, 500, 723). Under -INT:1 the switch species keep their initial values all run and the output jumps
+    197.5 -> 212.077 (no row at the pair time); -INT:5 applies them and matches the SBML (0.027%). Small decks
+    with the same pair files switch correctly. Repro: repros/PAIR_SKIP_INT1_BIOMD0000000554 (README.txt).
+25. (2026-11-07) Kintecus's stiff integrators are much slower than CVODE/LSODA on a few correct decks:
+    BIOMD0000000506 (56 species, 108k characters of USER: LSODA 3 s, CVODE 0.02 s, -INT:1 reaches t=220 of 1000
+    in 150 s regardless of sampling or maximum step), BIOMD0000000608 (LSODA 0.4 s; -INT:1 t=41,000 of 100,000
+    in 600 s, view.txt "Stepsize underflow in stiff sub" x1139), BIOMD0000000603 after t=5425 (-INT:1 stops where
+    the cell volume sits on the turgor threshold, a kink; -INT:5 passes it). Long USER lines cost time per
+    evaluation: 160 lines of 366 characters added 10 s to a 0.8 s run (slowdiag/jac/LONG*).
 22. FIXED in the build compiled 2026-11-03 16:34:03: USER rates were re-parsed on every call on the 11-03
     12:39/13:35 builds (interpreter cache key 1,024 characters < 2,159-character caller buffer; earlier builds
     thrashed a 64-entry round-robin cache). New hashed cache: same output bit-for-bit, 33-64x faster on USER
@@ -512,7 +533,7 @@ with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
         z.write(f"{B}/repro_null/PROFILE_ADD_TIMING/{fn}", f"repros/PROFILE_ADD_TIMING/{fn}")
     for d in ("REACTION_FIELD_897", "REACTION_FIELD_898", "SPEED_USER_BIOMD0000000010", "TIMEPAIRS_ADD_3PAIRS",
               "TIMEPAIRS_PINNED_2PAIRS", "TIMEPAIRS_RUN_60S", "TIMEPAIRS_RUN_70S", "TIMEPAIRS_BIOMD0000000439",
-              "TIMEPAIRS_OUTPUT_GRID/pairs", "TIMEPAIRS_OUTPUT_GRID/spacing"):
+              "TIMEPAIRS_OUTPUT_GRID/pairs", "TIMEPAIRS_OUTPUT_GRID/spacing", "PAIR_SKIP_INT1_BIOMD0000000554"):
         for fn in sorted(os.listdir(f"{B}/repro_null/{d}")):
             if os.path.isfile(f"{B}/repro_null/{d}/{fn}") and fn.upper() not in ("KINTECUS.EXE",):
                 z.write(f"{B}/repro_null/{d}/{fn}", f"repros/{d}/{fn}")

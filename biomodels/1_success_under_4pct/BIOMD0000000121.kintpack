@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-05T21:11:35.981485+00:00",
+ "created": "2026-11-07T20:26:54.755475+00:00",
  "description": "Clancy2001_Kchannel\nBioModels BIOMD0000000121 (curated). SBML file: BIOMD0000000121_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000121_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 2.9411764705882355.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.58e-06 of species peak (worst: c2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 2 event(s) depend only on time (and on variables only they change): unrolled into 2 firing(s) up to t = 3000\n  [info] species 'ik' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] time event(s) on 'v' encoded as time/value pairs in EV_P_V.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_v = v",
  "settings": {
   "kpath": "",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "c3+S[USER;cp_v:(0.02852339594184874*exp(0.05547153*cp_v))]==>c2",
+     "c3+S[USER;cp_v:(0.0555*exp(0.05547153*cp_v-0.66565836))]==>c2",
      ""
     ],
     [
@@ -112,7 +112,7 @@
      "1",
      "0",
      "0",
-     "c1+S[USER;cp_v:(0.008891315933981186*exp(0.05547153*cp_v))]==>o",
+     "c1+S[USER;cp_v:(0.0655*exp(0.05547153*cp_v-1.99697508))]==>o",
      ""
     ],
     [
@@ -154,7 +154,7 @@
      "1",
      "0",
      "0",
-     "i+S[USER;cp_v:(0.203197386982025*exp((-1*0.02352*cp_v)))]==>o",
+     "i+S[USER;cp_v:(0.3658333333333333*exp(-0.02352*cp_v-0.588))]==>o",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "1",
      "0",
      "0",
-     "c1+S[USER;cp_v:(0.008891315933981186*exp(0.05547153*cp_v))]==>i",
+     "c1+S[USER;cp_v:(0.0655*exp(0.05547153*cp_v-1.99697508))]==>i",
      ""
     ],
     [
@@ -182,7 +182,7 @@
      "1",
      "0",
      "0",
-     "i+S[USER;cp_v:(0.0009604623076881357*exp((-1*0.046042*cp_v)))]==>c1",
+     "i+S[USER;cp_v:(0.001729201013759388*exp((-1*0.02158*cp_v))*exp(-0.02352*cp_v-0.588)/exp(0.000942*cp_v))]==>c1",
      ""
     ],
     [

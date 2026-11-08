@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:16:13.274970+00:00",
+ "created": "2026-11-07T22:34:22.152009+00:00",
  "description": "Makhlouf2020 - No treatment model of the role of CD4 T cells in tumor-immune interactions\nBioModels BIOMD0000001042 (curated). SBML file: Makhlouf2020.xml.\nSimulation: 0 to 100 time units (SED-ML: Makhlouf2020 - Fig1(a).sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.45e-06 of species peak (worst: CD4_T_cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumour_death term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Tumour_death term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Tumour_growth term 1/2",
+     "Tumour_growth",
      ""
     ],
     [
-     "0.431",
+     "1",
      "0",
      "0",
-     "Tumor_cells==>2Tumor_cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumour_growth term 2/2",
-     ""
-    ],
-    [
-     "4.3962e-10",
-     "0",
-     "0",
-     "Tumor_cells+Tumor_cells==>Tumor_cells",
+     "Tumor_cells+S[USER;cTumor_cells:(0.431-4.3962e-10*cTumor_cells)]==>2Tumor_cells",
      ""
     ],
     [

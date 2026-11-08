@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:07:57.332074+00:00",
+ "created": "2026-11-07T22:19:29.532100+00:00",
  "description": "Hu2019 - Pancreatic cancer dynamics\nBioModels BIOMD0000000744 (curated). SBML file: Hu2019.xml.\nSimulation: 0 to 150 time units (SED-ML: Hu2019.sedml), sampling 0.15.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.62e-06 of species peak (worst: z)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -49,56 +49,28 @@
      "#",
      "",
      "",
-     "PCC_growth term 1/2",
+     "PCC_growth",
      ""
     ],
     [
-     "0.0195",
+     "1",
      "0",
      "0",
-     "x==>2x",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PCC_growth term 2/2",
-     ""
-    ],
-    [
-     "1.989e-13",
-     "0",
-     "0",
-     "x+x==>x",
+     "x+S[USER;cx:(0.0195-1.989e-13*cx)]==>2x",
      ""
     ],
     [
      "#",
      "",
      "",
-     "PCC_activation_by_PSC term 1/2",
+     "PCC_activation_by_PSC",
      ""
     ],
     [
-     "3.482115e-12",
+     "1",
      "0",
      "0",
-     "x+y==>2x+y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PCC_activation_by_PSC term 2/2",
-     ""
-    ],
-    [
-     "3.5517572999999997e-23",
-     "0",
-     "0",
-     "x+x+y==>x+y",
+     "x+y+S[USER;cx:(3.482115e-12-3.5517572999999997e-23*cx)]==>2x+y",
      ""
     ],
     [
@@ -119,56 +91,28 @@
      "#",
      "",
      "",
-     "PSC_growth term 1/2",
-     ""
-    ],
-    [
-     "0.00195",
-     "0",
-     "0",
-     "y==>2y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PSC_growth term 2/2",
-     ""
-    ],
-    [
-     "3.4821149999999996e-12",
-     "0",
-     "0",
-     "y+y==>y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PSC_activation_by_tp_cytokine term 1/2",
+     "PSC_growth",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "w+y+S[USER;cw:(0.125/(cw+56000000000))]==>2y+w",
+     "y+S[USER;cy:(0.00195-3.4821149999999996e-12*cy)]==>2y",
      ""
     ],
     [
      "#",
      "",
      "",
-     "PSC_activation_by_tp_cytokine term 2/2",
+     "PSC_activation_by_tp_cytokine",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "y+y+w+S[USER;cw:(2.232125e-10/(cw+56000000000))]==>w+y",
+     "w+y+S[USER;cw,cy:(0.125*(1-1.7857e-9*cy)/(cw+56000000000))]==>2y+w",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:52:19.583199+00:00",
- "description": "St\u00f6tzel2012 - Bovine estrous cycle, synchronization with prostaglandin F2\u03b1\nBioModels BIOMD0000000481 (curated). SBML file: BIOMD0000000481_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000481_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.71e-06 of species peak (worst: FSH_Pit)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] re26 term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - GnRH_Pit: zero order, signed",
+ "created": "2026-11-07T21:36:19.514845+00:00",
+ "description": "St\u00f6tzel2012 - Bovine estrous cycle, synchronization with prostaglandin F2\u03b1\nBioModels BIOMD0000000481 (curated). SBML file: BIOMD0000000481_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000481_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.71e-06 of species peak (worst: FSH_Pit)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -553,21 +553,21 @@
      "#",
      "",
      "",
-     "re26 term 1/4",
+     "re26 term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "GnRH_Hyp+S[USER;cE2,cP4:(0.24861374999999994*cE2^5/(1*cE2^5*cP4^2+0.12249999999999998*cE2^5+0.11425495125196802*cP4^2+0.01399623152836608))]==>GnRH_Pit+GnRH_Hyp",
+     "GnRH_Hyp+S[USER;cE2,cP4:(1*cE2^5*(-0.0023488629317999993/(1*cE2^7*cP4^2+0.12249999999999998*cE2^7+0.009447839999999999*cE2^5*cP4^2+0.0011573603999999998*cE2^5+0.11425495125196802*cE2^2*cP4^2+0.01399623152836608*cE2^2+0.0010794624986363935*cP4^2+0.00013223415608295817)+0.24861374999999994/(1*cE2^5*cP4^2+0.12249999999999998*cE2^5+0.11425495125196802*cP4^2+0.01399623152836608)+0.1200797136/(1*cE2^5*cP4^2+0.063504*cE2^5+0.11425495125196802*cP4^2+0.007255646424304977)))]==>GnRH_Pit+GnRH_Hyp",
      ""
     ],
     [
      "#",
      "",
      "",
-     "re26 term 2/4",
+     "re26 term 2/2",
      ""
     ],
     [
@@ -575,34 +575,6 @@
      "0",
      "0",
      "GnRH_Hyp+S[USER;cE2:(0.019174391279999994*cE2^5/(1*cE2^7+0.009447839999999999*cE2^5+0.11425495125196802*cE2^2+0.0010794624986363935))]==>GnRH_Pit+GnRH_Hyp",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "re26 term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "GnRH_Hyp+S[USER;cE2,cP4:(0.1200797136*cE2^5/(1*cE2^5*cP4^2+0.063504*cE2^5+0.11425495125196802*cP4^2+0.007255646424304977))]==>GnRH_Pit+GnRH_Hyp",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "re26 term 4/4 (consumes GnRH_Pit)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cE2,cGnRH_Hyp,cP4:((-1*0.0023488629317999993*cE2^5*cGnRH_Hyp/(1*cE2^7*cP4^2+0.12249999999999998*cE2^7+0.009447839999999999*cE2^5*cP4^2+0.0011573603999999998*cE2^5+0.11425495125196802*cE2^2*cP4^2+0.01399623152836608*cE2^2+0.0010794624986363935*cP4^2+0.00013223415608295817)))]==>GnRH_Pit",
      ""
     ],
     [

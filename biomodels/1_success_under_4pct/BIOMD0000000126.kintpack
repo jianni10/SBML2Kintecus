@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-05T21:12:07.458112+00:00",
+ "created": "2026-11-07T20:27:32.416311+00:00",
  "description": "Clancy2002_CardiacSodiumChannel_WT\nBioModels BIOMD0000000126 (curated). SBML file: BIOMD0000000126_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: BIOMD0000000126_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 5.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.90e-06 of species peak (worst: C2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 2 event(s) depend only on time (and on variables only they change): unrolled into 2 firing(s) up to t = 30000\n  [info] time event(s) on 'v' encoded as time/value pairs in EV_P_V.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_v = v",
  "settings": {
   "kpath": "",
@@ -98,7 +98,7 @@
      "1",
      "0",
      "0",
-     "IF+S[USER;cp_v:(0.2558580466131638*exp((-1*0.04926108374384236*cp_v)))]==>IC2",
+     "IF+S[USER;cp_v:(0.2*exp(0.24630541871921183-0.04926108374384236*cp_v))]==>IC2",
      ""
     ],
     [
@@ -280,7 +280,7 @@
      "1",
      "0",
      "0",
-     "C1+S[USER;cp_v:(0.2558580466131638*exp((-1*0.04926108374384236*cp_v)))]==>C2",
+     "C1+S[USER;cp_v:(0.2*exp(0.24630541871921183-0.04926108374384236*cp_v))]==>C2",
      ""
     ],
     [
@@ -350,7 +350,7 @@
      "1",
      "0",
      "0",
-     "IF+S[USER;cp_v:(3.676347094725769e-5/(5e-6*cp_v*exp(0.040249657087653185*cp_v)+2.054e-6*cp_v*exp((-1*0.03641700957901348*cp_v))+0.0021*exp(0.040249657087653185*cp_v)+0.0008626799999999999*exp((-1*0.03641700957901348*cp_v))))]==>O",
+     "O+S[USER;cp_v:(9.178*exp(0.03369272237196765*cp_v))]==>IF",
      ""
     ],
     [
@@ -364,7 +364,7 @@
      "1",
      "0",
      "0",
-     "O+S[USER;cp_v:(9.178*exp(0.03369272237196765*cp_v))]==>IF",
+     "IF+S[USER;cp_v:(6.016648997036364e-5*exp((-1*0.12987012987012986*cp_v))*exp(0.03369272237196765*cp_v)/(2.054e-6*cp_v*exp((-1*cp_v/12))*exp(0.49261083743842365-0.04926108374384236*cp_v)+5e-6*cp_v*exp((-1*cp_v/150))*exp(0.49261083743842365-0.04926108374384236*cp_v)+0.0008626799999999999*exp((-1*cp_v/12))*exp(0.49261083743842365-0.04926108374384236*cp_v)+0.0021*exp((-1*cp_v/150))*exp(0.49261083743842365-0.04926108374384236*cp_v)))]==>O",
      ""
     ],
     [
@@ -378,7 +378,7 @@
      "1",
      "0",
      "0",
-     "O+S[USER;cp_v:(0.3600483700918714*exp((-1*0.04926108374384236*cp_v)))]==>C1",
+     "O+S[USER;cp_v:(0.22*exp(0.49261083743842365-0.04926108374384236*cp_v))]==>C1",
      ""
     ],
     [

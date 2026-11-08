@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:09:58.141494+00:00",
+ "created": "2026-11-07T22:23:47.402909+00:00",
  "description": "He2017 - A mathematical model of pancreatic cancer with two kinds of treatments\nBioModels BIOMD0000000811 (curated). SBML file: He2017.xml.\nSimulation: 0 to 600 time units (SED-ML: He2017.sedml), sampling 0.6.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.99e-06 of species peak (worst: R_T_Regulatory)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_Removal_CD8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
@@ -49,56 +49,28 @@
      "#",
      "",
      "",
-     "Tumor_Growth term 1/4",
+     "Tumor_Growth term 1/2",
      ""
     ],
     [
-     "0.0195",
+     "1",
      "0",
      "0",
-     "C_PCC==>2C_PCC",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Growth term 2/4",
-     ""
-    ],
-    [
-     "1.989e-13",
-     "0",
-     "0",
-     "C_PCC+C_PCC==>C_PCC",
+     "C_PCC+S[USER;cC_PCC:(0.0195-1.989e-13*cC_PCC)]==>2C_PCC",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Tumor_Growth term 3/4",
+     "Tumor_Growth term 2/2",
      ""
     ],
     [
-     "1.8214139999999998e-21",
+     "1",
      "0",
      "0",
-     "C_PCC+P_PSC==>2C_PCC+P_PSC",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Growth term 4/4",
-     ""
-    ],
-    [
-     "1.85784228e-32",
-     "0",
-     "0",
-     "C_PCC+C_PCC+P_PSC==>C_PCC+P_PSC",
+     "C_PCC+P_PSC+S[USER;cC_PCC:(1.8214139999999998e-21-1.85784228e-32*cC_PCC)]==>2C_PCC+P_PSC",
      ""
     ],
     [
@@ -133,56 +105,28 @@
      "#",
      "",
      "",
-     "PSC_Growth term 1/4",
-     ""
-    ],
-    [
-     "0.0019500000000000001",
-     "0",
-     "0",
-     "P_PSC==>2P_PSC",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PSC_Growth term 2/4",
-     ""
-    ],
-    [
-     "3.482115e-12",
-     "0",
-     "0",
-     "P_PSC+P_PSC==>P_PSC",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PSC_Growth term 3/4",
+     "PSC_Growth term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "C_PCC+P_PSC+S[USER;cC_PCC:(0.125/(cC_PCC+56000000))]==>2P_PSC+C_PCC",
+     "P_PSC+S[USER;cP_PSC:(0.0019500000000000001-3.482115e-12*cP_PSC)]==>2P_PSC",
      ""
     ],
     [
      "#",
      "",
      "",
-     "PSC_Growth term 4/4",
+     "PSC_Growth term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "P_PSC+P_PSC+C_PCC+S[USER;cC_PCC:(2.232125e-10/(cC_PCC+56000000))]==>C_PCC+P_PSC",
+     "C_PCC+P_PSC+S[USER;cC_PCC,cP_PSC:(1*(0.125-2.232125e-10*cP_PSC)/(cC_PCC+56000000))]==>2P_PSC+C_PCC",
      ""
     ],
     [

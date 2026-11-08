@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:38:47.715938+00:00",
- "description": "Wolf2001_Respiratory_Oscillations\nBioModels BIOMD0000000090 (curated). SBML file: BIOMD0000000090_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000090_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.94e-06 of species peak (worst: aco)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'A2c' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'N1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'S2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'A2m' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] v4: rate order differs from the stoichiometry; consumed on separate line(s) - N2: first order\n  [info] v7 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - aco: zero order, signed; N2: first order\n  [info] v9 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - N2: first order\n  [info] v11a: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v11a2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v11b term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T20:24:24.406228+00:00",
+ "description": "Wolf2001_Respiratory_Oscillations\nBioModels BIOMD0000000090 (curated). SBML file: BIOMD0000000090_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000090_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.94e-06 of species peak (worst: aco)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'A2c' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'N1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'S2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'A2m' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] v4: rate order differs from the stoichiometry; consumed on separate line(s) - N2: first order\n  [info] v7 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - N2: first order; aco: zero order, signed\n  [info] v9 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - N2: first order\n  [info] v11a: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v11a2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -84,7 +84,7 @@
      "0.2",
      "0",
      "0",
-     "sul+A3c==>aps",
+     "A3c+sul==>aps",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "0.2",
      "0",
      "0",
-     "aps+A3c==>pap",
+     "A3c+aps==>pap",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "0.1",
      "0",
      "0",
-     "oah+hyd==>cys",
+     "hyd+oah==>cys",
      ""
     ],
     [
@@ -196,7 +196,7 @@
      "20",
      "0",
      "0",
-     "eth==>aco+2N2",
+     "eth==>2N2+aco",
      ""
     ],
     [
@@ -217,20 +217,6 @@
      "#",
      "",
      "",
-     "v7 term 2/2 (consumes aco)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cN2,ceth:((-1*10*cN2*ceth))]==>aco",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
      "v7 term 2/2 (consumes N2)",
      ""
     ],
@@ -239,6 +225,20 @@
      "0",
      "0",
      "N2+S[USER;ceth:(20*ceth)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v7 term 2/2 (consumes aco)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cN2,ceth:((-1*10*cN2*ceth))]==>aco",
      ""
     ],
     [
@@ -413,28 +413,14 @@
      "#",
      "",
      "",
-     "v11b term 1/2",
+     "v11b",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "N2+oxy+S[USER;cA3m,cN2,chyd,coxy:(60/(-1.6*cA3m*cN2*chyd^4-0.1*cA3m*cN2-16*cA3m*chyd^4*coxy-cA3m*coxy+4.800000000000001*cN2*chyd^4+0.30000000000000004*cN2+48*chyd^4*coxy+3*coxy))]==>A3m+N2+oxy",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v11b term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "A3m+N2+oxy+S[USER;cA3m,cN2,chyd,coxy:((-1*30/(1.6*cN2*chyd^4*(cA3m+1e-30)-4.800000000000001*cN2*chyd^4+0.1*cN2*(cA3m+1e-30)-0.30000000000000004*cN2+16*chyd^4*coxy*(cA3m+1e-30)-48*chyd^4*coxy+1*coxy*(cA3m+1e-30)-3*coxy)))]==>N2+oxy",
+     "N2+oxy+S[USER;cA3m,cN2,chyd,coxy:(30*(2-cA3m)/((3-cA3m)*(0.1*cN2+coxy)*(16*chyd^4+1)))]==>A3m+N2+oxy",
      ""
     ],
     [

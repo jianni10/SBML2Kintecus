@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T06:59:51.007263+00:00",
- "description": "Sivakumar2011 - Hedgehog Signaling Pathway\nBioModels BIOMD0000000395 (curated). SBML file: BIOMD0000000395_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000395_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.64e-06 of species peak (worst: s69)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r14 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r14 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T21:11:32.240208+00:00",
+ "description": "Sivakumar2011 - Hedgehog Signaling Pathway\nBioModels BIOMD0000000395 (curated). SBML file: BIOMD0000000395_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000395_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.64e-06 of species peak (worst: s69)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r14: rate order differs from the stoichiometry; consumed on separate line(s) - s69: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -98,7 +98,7 @@
      "1.122",
      "0",
      "0",
-     "s21==>s7+s1",
+     "s21==>s1+s7",
      ""
     ],
     [
@@ -112,35 +112,35 @@
      "1.13",
      "0",
      "0",
-     "s7+s1==>s21",
+     "s1+s7==>s21",
      ""
     ],
     [
      "#",
      "",
      "",
-     "r14 term 1/2",
+     "r14",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s69+s21+S[USER;cs46,cs69:(1.1126213592233007/(4.651162790697675*cs46+0.970873786407767*cs69+1))]==>s46+s21",
+     "source+S[USER;cs21,cs46,cs69:(1*cs21*(-8.13953488372093*cs46+1.1126213592233007*cs69)/(4.651162790697675*cs46+0.970873786407767*cs69+1))]==>s46",
      ""
     ],
     [
      "#",
      "",
      "",
-     "r14 term 2/2",
+     "r14 (consumes s69)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s46+s21+S[USER;cs46,cs69:(8.13953488372093/(4.651162790697675*cs46+0.970873786407767*cs69+1))]==>s69+s21",
+     "source+S[USER;cs21,cs46,cs69:((-1*1*cs21*(-8.13953488372093*cs46+1.1126213592233007*cs69)/(4.651162790697675*cs46+0.970873786407767*cs69+1)))]==>s69",
      ""
     ],
     [
@@ -154,7 +154,7 @@
      "0.46",
      "0",
      "0",
-     "s140==>s135+s128",
+     "s140==>s128+s135",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "1.23",
      "0",
      "0",
-     "s135+s128==>s140",
+     "s128+s135==>s140",
      ""
     ],
     [
@@ -182,7 +182,7 @@
      "0.5",
      "0",
      "0",
-     "s150+s148==>s159",
+     "s148+s150==>s159",
      ""
     ],
     [
@@ -196,7 +196,7 @@
      "1.53",
      "0",
      "0",
-     "s9+s46+s21==>s48+s10+s21",
+     "s46+s9+s21==>s10+s48+s21",
      ""
     ],
     [
@@ -210,7 +210,7 @@
      "0.89",
      "0",
      "0",
-     "s48+s10+s21==>s9+s46+s21",
+     "s10+s48+s21==>s46+s9+s21",
      ""
     ],
     [
@@ -224,7 +224,7 @@
      "1",
      "0",
      "0",
-     "s159+s21==>s68+s160+s21",
+     "s159+s21==>s160+s68+s21",
      ""
     ],
     [
@@ -238,7 +238,7 @@
      "1",
      "0",
      "0",
-     "s68+s160+s21==>s159+s21",
+     "s160+s68+s21==>s159+s21",
      ""
     ],
     [
@@ -252,7 +252,7 @@
      "0.71",
      "0",
      "0",
-     "s158==>s71+s70",
+     "s158==>s70+s71",
      ""
     ],
     [
@@ -266,7 +266,7 @@
      "1.28",
      "0",
      "0",
-     "s71+s70==>s158",
+     "s70+s71==>s158",
      ""
     ],
     [
@@ -308,7 +308,7 @@
      "1.27",
      "0",
      "0",
-     "s160==>s69+s161",
+     "s160==>s161+s69",
      ""
     ],
     [
@@ -322,7 +322,7 @@
      "0.73",
      "0",
      "0",
-     "s69+s161==>s160",
+     "s161+s69==>s160",
      ""
     ],
     [
@@ -620,6 +620,17 @@
      "No",
      "No",
      "Complex_br_(Su(fu)/Cubitus) [s161]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
      ""
     ],
     [

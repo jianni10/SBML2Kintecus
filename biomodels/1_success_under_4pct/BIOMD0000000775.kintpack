@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:08:50.843198+00:00",
+ "created": "2026-11-07T22:20:24.777523+00:00",
  "description": "Iarosz2015 - brain tumor\nBioModels BIOMD0000000775 (curated). SBML file: Iarosz2015.xml.\nSimulation: 0 to 500 time units (SED-ML: Iarosz2015.sedml), sampling 5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS_PARTIAL, max |difference| = 7.62e-03 of species peak (worst: N)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 7.62e-03 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] gc_killing: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cc_killing: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [blocker] reaction 'n_increase' not converted (MathML node 'rateOf')\n  [info] n_killing: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "gc_growth term 1/2",
+     "gc_growth",
      ""
     ],
     [
-     "0.0068",
+     "1",
      "0",
      "0",
-     "G==>2G",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "gc_growth term 2/2",
-     ""
-    ],
-    [
-     "0.0068",
-     "0",
-     "0",
-     "G+G==>G",
+     "G+S[USER;cG:(0.0068-0.0068*cG)]==>2G",
      ""
     ],
     [
@@ -105,28 +91,14 @@
      "#",
      "",
      "",
-     "cc_growth term 1/2",
+     "cc_growth",
      ""
     ],
     [
-     "0.012",
+     "1",
      "0",
      "0",
-     "C==>2C",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cc_growth term 2/2",
-     ""
-    ],
-    [
-     "0.012",
-     "0",
-     "0",
-     "C+C==>C",
+     "C+S[USER;cC:(0.012-0.012*cC)]==>2C",
      ""
     ],
     [

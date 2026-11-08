@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-25T09:53:22.631704+00:00",
- "description": "Sivakumar2011_WntSignalingPathway\nBioModels BIOMD0000000397 (curated). SBML file: BIOMD0000000397_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000397_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.99e-06 of species peak (worst: s5)\nSBML time units are used unchanged as Kintecus seconds.",
+ "created": "2026-11-07T21:11:40.438521+00:00",
+ "description": "Sivakumar2011_WntSignalingPathway\nBioModels BIOMD0000000397 (curated). SBML file: BIOMD0000000397_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000397_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.99e-06 of species peak (worst: s5)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r86 term 1/2: 4 reactants split over 2 lines (Kintecus allows 3 per line)\n  [info] r86 term 2/2: 4 reactants split over 2 lines (Kintecus allows 3 per line)",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -70,7 +70,7 @@
      "0.82",
      "0",
      "0",
-     "s16==>s5+s1",
+     "s16==>s1+s5",
      ""
     ],
     [
@@ -84,7 +84,7 @@
      "0.784",
      "0",
      "0",
-     "s5+s1==>s16",
+     "s1+s5==>s16",
      ""
     ],
     [
@@ -98,7 +98,7 @@
      "0.92",
      "0",
      "0",
-     "s27==>s28+s16",
+     "s27==>s16+s28",
      ""
     ],
     [
@@ -112,7 +112,7 @@
      "1.15",
      "0",
      "0",
-     "s28+s16==>s27",
+     "s16+s28==>s27",
      ""
     ],
     [
@@ -350,7 +350,7 @@
      "0.36",
      "0",
      "0",
-     "s266==>s267+s155",
+     "s266==>s155+s267",
      ""
     ],
     [
@@ -364,7 +364,7 @@
      "1.16",
      "0",
      "0",
-     "s267+s155==>s266",
+     "s155+s267==>s266",
      ""
     ],
     [
@@ -434,7 +434,7 @@
      "1.97",
      "0",
      "0",
-     "s275==>s278+s101",
+     "s275==>s101+s278",
      ""
     ],
     [
@@ -448,7 +448,7 @@
      "1.09",
      "0",
      "0",
-     "s278+s101==>s275",
+     "s101+s278==>s275",
      ""
     ],
     [
@@ -462,7 +462,7 @@
      "0.51",
      "0",
      "0",
-     "s278==>s270+s164",
+     "s278==>s164+s270",
      ""
     ],
     [
@@ -476,7 +476,7 @@
      "0.854",
      "0",
      "0",
-     "s270+s164==>s278",
+     "s164+s270==>s278",
      ""
     ],
     [
@@ -490,7 +490,7 @@
      "1.65",
      "0",
      "0",
-     "s288==>s31+s286",
+     "s288==>s286+s31",
      ""
     ],
     [
@@ -504,7 +504,7 @@
      "0.163",
      "0",
      "0",
-     "s31+s286==>s288",
+     "s286+s31==>s288",
      ""
     ],
     [
@@ -518,7 +518,7 @@
      "1.277",
      "0",
      "0",
-     "s292==>s288+s102",
+     "s292==>s102+s288",
      ""
     ],
     [
@@ -532,7 +532,7 @@
      "0.45",
      "0",
      "0",
-     "s288+s102==>s292",
+     "s102+s288==>s292",
      ""
     ],
     [
@@ -630,7 +630,7 @@
      "0.39",
      "0",
      "0",
-     "s32+s107+s30==>s286+s33+s30",
+     "s107+s32+s30==>s286+s33+s30",
      ""
     ],
     [
@@ -644,7 +644,7 @@
      "1.278",
      "0",
      "0",
-     "s286+s33+s30==>s32+s107+s30",
+     "s286+s33+s30==>s107+s32+s30",
      ""
     ],
     [
@@ -658,7 +658,7 @@
      "0.7",
      "0",
      "0",
-     "s32+s129+s30==>s245+s33+s30",
+     "s129+s32+s30==>s245+s33+s30",
      ""
     ],
     [
@@ -672,7 +672,7 @@
      "0.649",
      "0",
      "0",
-     "s245+s33+s30==>s32+s129+s30",
+     "s245+s33+s30==>s129+s32+s30",
      ""
     ],
     [
@@ -686,7 +686,7 @@
      "0.004",
      "0",
      "0",
-     "s183==>s179+s171",
+     "s183==>s171+s179",
      ""
     ],
     [
@@ -700,7 +700,7 @@
      "1.8",
      "0",
      "0",
-     "s179+s171==>s183",
+     "s171+s179==>s183",
      ""
     ],
     [
@@ -714,7 +714,7 @@
      "0.72",
      "0",
      "0",
-     "s179==>s176+s170",
+     "s179==>s170+s176",
      ""
     ],
     [
@@ -728,7 +728,7 @@
      "1.29",
      "0",
      "0",
-     "s176+s170==>s179",
+     "s170+s176==>s179",
      ""
     ],
     [
@@ -770,7 +770,7 @@
      "0.7",
      "0",
      "0",
-     "s305==>s188+s172",
+     "s305==>s172+s188",
      ""
     ],
     [
@@ -784,35 +784,63 @@
      "0.86",
      "0",
      "0",
-     "s188+s172==>s305",
+     "s172+s188==>s305",
      ""
     ],
     [
      "#",
      "",
      "",
-     "r86 term 1/2",
+     "r86 term 1/2 part 1/2",
      ""
     ],
     [
-     "0.6446113989637305",
+     "1",
      "0",
      "0",
-     "s245+s32+s32+s32+s37==>3s33+s252+s37",
+     "s245+s32+s32+S[USER;cs32,cs37:(0.6446113989637305*cs32*cs37)]==>s252+3s33",
      ""
     ],
     [
      "#",
      "",
      "",
-     "r86 term 2/2",
+     "r86 term 1/2 part 2/2",
      ""
     ],
     [
-     "0.9780310880829016",
+     "1",
      "0",
      "0",
-     "s33+s33+s33+s252+s37==>s245+3s32+s37",
+     "s32+S[USER;cs245,cs32,cs37:(0.6446113989637305*cs245*cs32^2*cs37)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r86 term 2/2 part 1/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s252+s33+s33+S[USER;cs33,cs37:(0.9780310880829016*cs33*cs37)]==>s245+3s32",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "r86 term 2/2 part 2/2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "s33+S[USER;cs252,cs33,cs37:(0.9780310880829016*cs252*cs33^2*cs37)]==>sink",
      ""
     ],
     [
@@ -1410,6 +1438,17 @@
      ""
     ],
     [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
      "END",
      "",
      "",
@@ -1449,7 +1488,7 @@
      ""
     ],
     [
-     "1e-06",
+     "1e-6",
      "0.3",
      "KCAL",
      "MOLES/LITER",
@@ -1500,7 +1539,7 @@
      "None1",
      "0.3",
      "0",
-     "1e-08",
+     "1e-8",
      "0",
      ""
     ],

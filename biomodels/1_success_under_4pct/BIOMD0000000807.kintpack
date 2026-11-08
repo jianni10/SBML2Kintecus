@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:09:53.248307+00:00",
+ "created": "2026-11-07T22:23:39.898550+00:00",
  "description": "Fassoni2019 - Oncogenesis encompassing mutations and genetic instability\nBioModels BIOMD0000000807 (curated). SBML file: model.xml.\nSimulation: 0 to 40000 time units (SED-ML: Fassoni2019 - 5A.sedml), sampling 40.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.82e-07 of species peak (worst: normalized_pre_cancer_cell_g)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] transition_to_cancer_cell: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): normalizedprecancercellg1 = normalized_pre_cancer_cell_g",
  "settings": {
   "kpath": "",
@@ -161,28 +161,14 @@
      "#",
      "",
      "",
-     "cancer_cell_logistic_growth term 1/2",
+     "cancer_cell_logistic_growth",
      ""
     ],
     [
-     "0.05",
+     "1",
      "0",
      "0",
-     "normalized_cancer_cell_a==>2normalized_cancer_cell_a",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cancer_cell_logistic_growth term 2/2",
-     ""
-    ],
-    [
-     "0.5",
-     "0",
-     "0",
-     "normalized_cancer_cell_a+normalized_cancer_cell_a==>normalized_cancer_cell_a",
+     "normalized_cancer_cell_a+S[USER;cnormalized_cancer_cell_a:(0.05-0.5*cnormalized_cancer_cell_a)]==>2normalized_cancer_cell_a",
      ""
     ],
     [

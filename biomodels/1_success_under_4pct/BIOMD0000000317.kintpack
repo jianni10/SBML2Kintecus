@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T15:54:13.308151+00:00",
- "description": "Shen-Orr2002_Single_Input_Module\nBioModels BIOMD0000000317 (curated). SBML file: BIOMD0000000317_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000317_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.029411764705882353.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.40e-06 of species peak (worst: Z1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r1: piecewise/conditional rate encoded with abs()-based step functions\n  [info] r1 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - Z1: zero order, signed\n  [info] r3: piecewise/conditional rate encoded with abs()-based step functions\n  [info] r3 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - Z2: zero order, signed\n  [info] r5: piecewise/conditional rate encoded with abs()-based step functions\n  [info] r5 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - Z3: zero order, signed\n  [info] time event(s) on 'FX' encoded as time/value pairs in EV_P_FX.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_FX = FX",
+ "created": "2026-11-07T20:53:59.440803+00:00",
+ "description": "Shen-Orr2002_Single_Input_Module\nBioModels BIOMD0000000317 (curated). SBML file: BIOMD0000000317_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000317_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.029411764705882353.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.40e-06 of species peak (worst: Z1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r1: piecewise/conditional rate encoded with abs()-based step functions\n  [info] r3: piecewise/conditional rate encoded with abs()-based step functions\n  [info] r5: piecewise/conditional rate encoded with abs()-based step functions\n  [info] time event(s) on 'FX' encoded as time/value pairs in EV_P_FX.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_FX = FX",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:5 -obeymaxint",
@@ -49,42 +49,14 @@
      "#",
      "",
      "",
-     "r1 term 1/3",
-     ""
-    ],
-    [
-     "0.5",
-     "0",
-     "0",
-     "source==>Z1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r1 term 2/3 (consumes Z1)",
+     "r1",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cX:((-1*0.1/(2*abs(cX-0.1)+2e-300)))]==>Z1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r1 term 3/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "X+S[USER;cX:(1/(2*abs(cX-0.1)+2e-300))]==>Z1+X",
+     "source+S[USER;cX:(1*((cX-0.1)/(2*(abs(cX-0.1)+1e-300))+0.5))]==>Z1",
      ""
     ],
     [
@@ -105,42 +77,14 @@
      "#",
      "",
      "",
-     "r3 term 1/3",
-     ""
-    ],
-    [
-     "0.5",
-     "0",
-     "0",
-     "source==>Z2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r3 term 2/3 (consumes Z2)",
+     "r3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cX:((-1*0.5/(2*abs(cX-0.5)+2e-300)))]==>Z2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r3 term 3/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "X+S[USER;cX:(1/(2*abs(cX-0.5)+2e-300))]==>Z2+X",
+     "source+S[USER;cX:(1*((cX-0.5)/(2*(abs(cX-0.5)+1e-300))+0.5))]==>Z2",
      ""
     ],
     [
@@ -161,42 +105,14 @@
      "#",
      "",
      "",
-     "r5 term 1/3",
-     ""
-    ],
-    [
-     "0.5",
-     "0",
-     "0",
-     "source==>Z3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r5 term 2/3 (consumes Z3)",
+     "r5",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cX:((-1*0.8/(2*abs(cX-0.8)+2e-300)))]==>Z3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r5 term 3/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "X+S[USER;cX:(1/(2*abs(cX-0.8)+2e-300))]==>Z3+X",
+     "source+S[USER;cX:(1*((cX-0.8)/(2*(abs(cX-0.8)+1e-300))+0.5))]==>Z3",
      ""
     ],
     [

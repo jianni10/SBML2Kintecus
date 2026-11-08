@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:09:30.787644+00:00",
+ "created": "2026-11-07T22:20:56.007112+00:00",
  "description": "Hu2019 - Modeling Pancreatic Cancer Dynamics with Immunotherapy\nBioModels BIOMD0000000792 (curated). SBML file: Hu2019.xml.\nSimulation: 0 to 500 time units (SED-ML: Hu2019.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.61e-06 of species peak (worst: v_TSC)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -49,56 +49,28 @@
      "#",
      "",
      "",
-     "PCC_Tumor_Growth term 1/4",
+     "PCC_Tumor_Growth term 1/2",
      ""
     ],
     [
-     "0.0195",
+     "1",
      "0",
      "0",
-     "x_PCC==>2x_PCC",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PCC_Tumor_Growth term 2/4",
-     ""
-    ],
-    [
-     "1.989e-13",
-     "0",
-     "0",
-     "x_PCC+x_PCC==>x_PCC",
+     "x_PCC+S[USER;cx_PCC:(0.0195-1.989e-13*cx_PCC)]==>2x_PCC",
      ""
     ],
     [
      "#",
      "",
      "",
-     "PCC_Tumor_Growth term 3/4",
+     "PCC_Tumor_Growth term 2/2",
      ""
     ],
     [
-     "1.7857e-12",
+     "1",
      "0",
      "0",
-     "x_PCC+y_PSC==>2x_PCC+y_PSC",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PCC_Tumor_Growth term 4/4",
-     ""
-    ],
-    [
-     "1.821414e-23",
-     "0",
-     "0",
-     "x_PCC+x_PCC+y_PSC==>x_PCC+y_PSC",
+     "x_PCC+y_PSC+S[USER;cx_PCC:(1.7857e-12-1.821414e-23*cx_PCC)]==>2x_PCC+y_PSC",
      ""
     ],
     [
@@ -119,56 +91,28 @@
      "#",
      "",
      "",
-     "PSC_Tumor_Growth term 1/4",
-     ""
-    ],
-    [
-     "0.00195",
-     "0",
-     "0",
-     "y_PSC==>2y_PSC",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PSC_Tumor_Growth term 2/4",
-     ""
-    ],
-    [
-     "3.4821149999999996e-12",
-     "0",
-     "0",
-     "y_PSC+y_PSC==>y_PSC",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PSC_Tumor_Growth term 3/4",
+     "PSC_Tumor_Growth term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "w_TPC+y_PSC+S[USER;cw_TPC:(0.125/(cw_TPC+56000000000))]==>2y_PSC+w_TPC",
+     "y_PSC+S[USER;cy_PSC:(0.00195-3.4821149999999996e-12*cy_PSC)]==>2y_PSC",
      ""
     ],
     [
      "#",
      "",
      "",
-     "PSC_Tumor_Growth term 4/4",
+     "PSC_Tumor_Growth term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "y_PSC+y_PSC+w_TPC+S[USER;cw_TPC:(2.232125e-10/(cw_TPC+56000000000))]==>w_TPC+y_PSC",
+     "w_TPC+y_PSC+S[USER;cw_TPC,cy_PSC:(1*(0.125-2.232125e-10*cy_PSC)/(cw_TPC+56000000000))]==>2y_PSC+w_TPC",
      ""
     ],
     [

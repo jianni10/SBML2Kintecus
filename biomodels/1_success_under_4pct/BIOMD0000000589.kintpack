@@ -1,0 +1,1527 @@
+{
+ "version": 3,
+ "created": "2026-11-07T23:05:12.186324+00:00",
+ "description": "Valero2016 - Ascorbate-Glutathione cycle in chloroplasts under light/dark conditions\nBioModels BIOMD0000000589 (curated). SBML file: BIOMD0000000589_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000589_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.08333333333333333.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.32e-05 of species peak (worst: MDA)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dNADPH/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dNADPplus/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dNADPplus/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dGSH/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dGSSG/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dDHA/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dMDA/dt term 6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dMDA/dt term 7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dAPX/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - APX: zero order, signed\n  [info] rate rule dAPX/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - APX: zero order, signed\n  [info] 6 condition(s) on time alone written as switch species with time/value pairs (16 changes)",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Valero2016 - Ascorbate-Glutathione cycle in chloroplasts under light/dark conditions  (BIOMD0000000589, curated BioModels; source file BIOMD0000000589_url.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADPH/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADPplus+S[USER;cMDA,cNADPplus,cSW1:(8800000000*cSW1/(15000*cMDA+4400*cNADPplus+30000))]==>NADPH+NADPplus",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADPH/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADPH+GSSG+S[USER;cGSSG,cNADPH:(2998800/(1*cGSSG*(cNADPH+1e-30)+3*cGSSG+200*cNADPH+2.0000000000000002e-28))]==>GSSG",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADPH/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADPplus+S[USER;cMDA,cNADPplus,cSW1,cTIME_:(8800000000*cSW1*sin(2*3.141592653589793*cTIME_/(0.25*floor(0.041666666666666664*cTIME_)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*cTIME_)/(0.25*floor(0.041666666666666664*cTIME_)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>NADPH+NADPplus",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADPH/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADPH+NADPplus+S[USER;cMDA,cNADPplus,cSW1:(88000000*cSW1/(15000*cMDA+4400*cNADPplus+30000))]==>NADPplus",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADPH/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADPH+NADPplus+S[USER;cMDA,cNADPplus,cSW1,cTIME_:(88000000*cSW1*sin(2*3.141592653589793*cTIME_/(0.25*floor(0.041666666666666664*cTIME_)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*cTIME_)/(0.25*floor(0.041666666666666664*cTIME_)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>NADPplus",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADPplus/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GSSG+NADPH+S[USER;cGSSG,cNADPH:(2998800/(cGSSG*cNADPH+3*cGSSG+200*cNADPH))]==>NADPplus+GSSG+NADPH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADPplus/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADPplus+S[USER;cMDA,cNADPplus,cSW1:(8800000000*cSW1/(15000*cMDA+4400*cNADPplus+30000))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADPplus/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADPH+NADPplus+S[USER;cMDA,cNADPplus,cSW1:(88000000*cSW1/(15000*cMDA+4400*cNADPplus+30000))]==>2NADPplus+NADPH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADPplus/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADPplus+S[USER;cMDA,cNADPplus,cSW1,cTIME_:(8800000000*cSW1*sin(2*3.141592653589793*cTIME_/(0.25*floor(0.041666666666666664*cTIME_)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*cTIME_)/(0.25*floor(0.041666666666666664*cTIME_)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dNADPplus/dt term 5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "NADPH+NADPplus+S[USER;cMDA,cNADPplus,cSW1,cTIME_:(88000000*cSW1*sin(2*3.141592653589793*cTIME_/(0.25*floor(0.041666666666666664*cTIME_)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*cTIME_)/(0.25*floor(0.041666666666666664*cTIME_)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>2NADPplus+NADPH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGSH/dt term 1",
+     ""
+    ],
+    [
+     "5040",
+     "0",
+     "0",
+     "GSH+O2neg==>O2neg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGSH/dt term 2",
+     ""
+    ],
+    [
+     "0.02",
+     "0",
+     "0",
+     "GSH+DHA==>DHA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGSH/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GSSG+NADPH+S[USER;cGSSG,cNADPH:(5997600/(cGSSG*cNADPH+3*cGSSG+200*cNADPH))]==>GSH+GSSG+NADPH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGSH/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GSH+DHA+S[USER;cDHA,cGSH:(1738080/(1*cDHA*(cGSH+1e-30)+2500*cDHA+70*cGSH+500))]==>DHA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGSSG/dt term 1",
+     ""
+    ],
+    [
+     "2520",
+     "0",
+     "0",
+     "GSH+O2neg==>GSSG+GSH+O2neg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGSSG/dt term 2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "DHA+GSH==>GSSG+DHA+GSH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGSSG/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DHA+GSH+S[USER;cDHA,cGSH:(869040/(cDHA*cGSH+2500*cDHA+70*cGSH+500))]==>GSSG+DHA+GSH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dGSSG/dt term 4",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "GSSG+NADPH+S[USER;cGSSG,cNADPH:(2998800/(3*cGSSG+1*cNADPH*(cGSSG+1e-30)+200*cNADPH+3.0000000000000003e-30))]==>NADPH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dASC/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cMDA:(1800*cMDA^2)]==>ASC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dASC/dt term 2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "DHA+GSH==>ASC+DHA+GSH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dASC/dt term 3",
+     ""
+    ],
+    [
+     "720",
+     "0",
+     "0",
+     "ASC+O2neg==>O2neg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dASC/dt term 4",
+     ""
+    ],
+    [
+     "7560",
+     "0",
+     "0",
+     "ASC+CoII==>CoII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dASC/dt term 5",
+     ""
+    ],
+    [
+     "180000",
+     "0",
+     "0",
+     "ASC+CoI==>CoI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dASC/dt term 6",
+     ""
+    ],
+    [
+     "0.0144",
+     "0",
+     "0",
+     "ASC+H2O2==>H2O2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dASC/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDA+S[USER;cMDA,cNADPplus,cSW1:(60000000000*cSW1/(15000*cMDA+4400*cNADPplus+30000))]==>ASC+MDA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dASC/dt term 8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DHA+GSH+S[USER;cDHA,cGSH:(869040/(cDHA*cGSH+2500*cDHA+70*cGSH+500))]==>ASC+DHA+GSH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dASC/dt term 9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDA+S[USER;cMDA,cNADPplus,cSW1,cTIME_:(60000000000*cSW1*sin(2*3.141592653589793*cTIME_/(0.25*floor(0.041666666666666664*cTIME_)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*cTIME_)/(0.25*floor(0.041666666666666664*cTIME_)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>ASC+MDA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dDHA/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cMDA:(1800*cMDA^2)]==>DHA",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dDHA/dt term 2",
+     ""
+    ],
+    [
+     "0.01",
+     "0",
+     "0",
+     "DHA+GSH==>GSH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dDHA/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "DHA+GSH+S[USER;cDHA,cGSH:(869040/(2500*cDHA+1*cGSH*(cDHA+1e-30)+70*cGSH+500))]==>GSH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dMDA/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDA+S[USER;cMDA:(3600*cMDA)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dMDA/dt term 2",
+     ""
+    ],
+    [
+     "720",
+     "0",
+     "0",
+     "ASC+O2neg==>MDA+ASC+O2neg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dMDA/dt term 3",
+     ""
+    ],
+    [
+     "7560",
+     "0",
+     "0",
+     "ASC+CoII==>MDA+ASC+CoII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dMDA/dt term 4",
+     ""
+    ],
+    [
+     "180000",
+     "0",
+     "0",
+     "ASC+CoI==>MDA+ASC+CoI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dMDA/dt term 5",
+     ""
+    ],
+    [
+     "0.0144",
+     "0",
+     "0",
+     "ASC+H2O2==>MDA+ASC+H2O2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dMDA/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDA+S[USER;cMDA,cNADPplus,cSW1:(60000000000*cSW1/(15000*cMDA+4400*cNADPplus+30000))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dMDA/dt term 7",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "MDA+S[USER;cMDA,cNADPplus,cSW1,cTIME_:(60000000000*cSW1*sin(2*3.141592653589793*cTIME_/(0.25*floor(0.041666666666666664*cTIME_)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*cTIME_)/(0.25*floor(0.041666666666666664*cTIME_)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH2O2/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cO2neg:(720*cO2neg^2)]==>H2O2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH2O2/dt term 2",
+     ""
+    ],
+    [
+     "36000000",
+     "0",
+     "0",
+     "O2neg==>H2O2+O2neg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH2O2/dt term 3",
+     ""
+    ],
+    [
+     "720",
+     "0",
+     "0",
+     "ASC+O2neg==>H2O2+ASC+O2neg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH2O2/dt term 4",
+     ""
+    ],
+    [
+     "2520",
+     "0",
+     "0",
+     "GSH+O2neg==>H2O2+GSH+O2neg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH2O2/dt term 5",
+     ""
+    ],
+    [
+     "2520",
+     "0",
+     "0",
+     "H2O2+CoI==>CoI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH2O2/dt term 6",
+     ""
+    ],
+    [
+     "43200",
+     "0",
+     "0",
+     "H2O2+APX==>APX",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dH2O2/dt term 7",
+     ""
+    ],
+    [
+     "0.0072",
+     "0",
+     "0",
+     "H2O2+ASC==>ASC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAPX/dt term 1",
+     ""
+    ],
+    [
+     "40",
+     "0",
+     "0",
+     "source==>APX",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAPX/dt term 2",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "APX==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAPX/dt term 3 (consumes APX)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCoI:((-1*1*cCoI))]==>APX",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAPX/dt term 4 (consumes APX)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCoII:((-1*1*cCoII))]==>APX",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAPX/dt term 5",
+     ""
+    ],
+    [
+     "7560",
+     "0",
+     "0",
+     "ASC+CoII==>APX+ASC+CoII",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAPX/dt term 6",
+     ""
+    ],
+    [
+     "43200",
+     "0",
+     "0",
+     "APX+H2O2==>H2O2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCoI/dt term 1",
+     ""
+    ],
+    [
+     "43200",
+     "0",
+     "0",
+     "APX+H2O2==>CoI+APX+H2O2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCoI/dt term 2",
+     ""
+    ],
+    [
+     "2520",
+     "0",
+     "0",
+     "CoI+H2O2==>H2O2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCoI/dt term 3",
+     ""
+    ],
+    [
+     "180000",
+     "0",
+     "0",
+     "CoI+ASC==>ASC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCoII/dt term 1",
+     ""
+    ],
+    [
+     "180000",
+     "0",
+     "0",
+     "ASC+CoI==>CoII+ASC+CoI",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dCoII/dt term 2",
+     ""
+    ],
+    [
+     "7560",
+     "0",
+     "0",
+     "CoII+ASC==>ASC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dAPXi/dt term 1",
+     ""
+    ],
+    [
+     "2520",
+     "0",
+     "0",
+     "CoI+H2O2==>APXi+CoI+H2O2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dO2neg/dt term 1",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "O2neg+S[USER;cO2neg:(1440*cO2neg)]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dO2neg/dt term 2",
+     ""
+    ],
+    [
+     "72000000",
+     "0",
+     "0",
+     "O2neg==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dO2neg/dt term 3",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cMDA,cNADPplus,cSW1:(120000000000*cSW1/(15000*cMDA+4400*cNADPplus+30000))]==>O2neg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dO2neg/dt term 4",
+     ""
+    ],
+    [
+     "720",
+     "0",
+     "0",
+     "O2neg+ASC==>ASC",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dO2neg/dt term 5",
+     ""
+    ],
+    [
+     "2520",
+     "0",
+     "0",
+     "O2neg+GSH==>GSH",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rate rule dO2neg/dt term 6",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cMDA,cNADPplus,cSW1,cTIME_:(120000000000*cSW1*sin(2*3.141592653589793*cTIME_/(0.25*floor(0.041666666666666664*cTIME_)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*cTIME_)/(0.25*floor(0.041666666666666664*cTIME_)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>O2neg",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "NADPH",
+     "0",
+     "110.000032696018",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADPH [NADPH]",
+     ""
+    ],
+    [
+     "NADPplus",
+     "0",
+     "40.0000118894612",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "NADPplus [NADPplus]",
+     ""
+    ],
+    [
+     "GSH",
+     "0",
+     "4000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GSH [GSH]",
+     ""
+    ],
+    [
+     "GSSG",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "GSSG [GSSG]",
+     ""
+    ],
+    [
+     "ASC",
+     "0",
+     "10000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "ASC [ASC]",
+     ""
+    ],
+    [
+     "DHA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "DHA [DHA]",
+     ""
+    ],
+    [
+     "MDA",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "MDA [MDA]",
+     ""
+    ],
+    [
+     "H2O2",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "H2O2 [H2O2]",
+     ""
+    ],
+    [
+     "APX",
+     "0",
+     "40",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APX [APX]",
+     ""
+    ],
+    [
+     "CoI",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CoI [CoI]",
+     ""
+    ],
+    [
+     "CoII",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "CoII [CoII]",
+     ""
+    ],
+    [
+     "APXi",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "APXi [APXi]",
+     ""
+    ],
+    [
+     "O2neg",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "O2neg [O2neg]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time condition: 8 change(s), first at 11 [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time condition: 1 change(s), first at 96 [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW3.TXT-SET",
+     "time condition: 2 change(s), first at 72 [__switch__]",
+     ""
+    ],
+    [
+     "SW4",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW4.TXT-SET",
+     "time condition: 2 change(s), first at 48 [__switch__]",
+     ""
+    ],
+    [
+     "SW5",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW5.TXT-SET",
+     "time condition: 2 change(s), first at 24 [__switch__]",
+     ""
+    ],
+    [
+     "SW6",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW6.TXT-SET",
+     "time condition: 1 change(s), first at 24 [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.08333333342",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "100",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.08333333342",
+     "0",
+     "1e-10",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "11",
+     "0"
+    ],
+    [
+     "24",
+     "1"
+    ],
+    [
+     "35.25",
+     "0"
+    ],
+    [
+     "48",
+     "1"
+    ],
+    [
+     "59.5",
+     "0"
+    ],
+    [
+     "72",
+     "1"
+    ],
+    [
+     "83.75",
+     "0"
+    ],
+    [
+     "96",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "96",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW3.TXT",
+   "key": "O_SW3.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "72",
+     "1"
+    ],
+    [
+     "96",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW4.TXT",
+   "key": "O_SW4.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "48",
+     "1"
+    ],
+    [
+     "72",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW5.TXT",
+   "key": "O_SW5.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "24",
+     "1"
+    ],
+    [
+     "48",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW6.TXT",
+   "key": "O_SW6.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "24",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T16:25:48.954298+00:00",
- "description": "Dunster2014 - WBC Interactions (Model1)\nBioModels BIOMD0000000616 (curated). SBML file: BIOMD0000000616_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000616_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.11e-06 of species peak (worst: m)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R8: piecewise/conditional rate encoded with abs()-based step functions\n  [info] R8 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - c: zero order, signed\nRenamed species (Kintecus name = SBML id): m1 = m",
+ "created": "2026-11-08T01:49:27.571310+00:00",
+ "description": "Dunster2014 - WBC Interactions (Model1)\nBioModels BIOMD0000000616 (curated). SBML file: BIOMD0000000616_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000616_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.52e-06 of species peak (worst: m)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R8: piecewise/conditional rate encoded with abs()-based step functions\n  [info] 1 condition(s) on time alone written as switch species with time/value pairs (1 changes)\n  [partial] event times do not fit a practical sampling grid; events fire up to one sampling interval (1) late\nRenamed species (Kintecus name = SBML id): m1 = m",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -147,42 +147,14 @@
      "#",
      "",
      "",
-     "R8 term 1/3",
+     "R8",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cTIME_:(0.025*cSW1*sin(cTIME_)^2)]==>c",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R8 term 2/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cTIME_:(0.05*3.141592653589793*cSW1*sin(cTIME_)^2/(2*abs(cTIME_-1*3.141592653589793)+2e-300))]==>c",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R8 term 3/3 (consumes c)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cTIME_:((-1*0.05*cSW1*cTIME_*sin(cTIME_)^2/(2*abs(cTIME_-1*3.141592653589793)+2e-300)))]==>c",
+     "source+S[USER;cSW1,cSW2,cTIME_:(0.05*cSW1*cSW2*sin(cTIME_)^2)]==>c",
      ""
     ],
     [
@@ -349,6 +321,17 @@
      ""
     ],
     [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time switch at 10 (on->off) [__switch__]",
+     ""
+    ],
+    [
      "SW1",
      "0",
      "1",
@@ -356,7 +339,7 @@
      "0",
      "No",
      "SW1.TXT-SET",
-     "time switch at 10 (on->off) [__switch__]",
+     "time condition: 1 change(s), first at 3.14159265359 [__switch__]",
      ""
     ],
     [
@@ -498,6 +481,28 @@
  },
  "ofiles": [
   {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "10",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
    "filename": "SW1.TXT",
    "key": "O_SW1.TXT",
    "cols": [
@@ -510,7 +515,7 @@
      "Concentrations"
     ],
     [
-     "10",
+     "3.14159265359",
      "0"
     ],
     [

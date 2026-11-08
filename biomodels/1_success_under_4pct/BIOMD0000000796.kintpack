@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:09:37.678989+00:00",
+ "created": "2026-11-07T22:21:04.915096+00:00",
  "description": "Yang2012 - cancer growth with angiogenesis\nBioModels BIOMD0000000796 (curated). SBML file: Yang2012.xml.\nSimulation: 0 to 630 time units (SED-ML: Yang2012.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.56e-06 of species peak (worst: P)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): E1 = E; T1 = T; P1 = P",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "normal_cell_growth term 1/2",
+     "normal_cell_growth",
      ""
     ],
     [
-     "0.1",
+     "1",
      "0",
      "0",
-     "C==>2C",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "normal_cell_growth term 2/2",
-     ""
-    ],
-    [
-     "0.01",
-     "0",
-     "0",
-     "C+C==>C",
+     "C+S[USER;cC:(0.1-0.01*cC)]==>2C",
      ""
     ],
     [
@@ -105,28 +91,14 @@
      "#",
      "",
      "",
-     "endothelial_growth term 1/2",
+     "endothelial_growth",
      ""
     ],
     [
-     "0.1",
+     "1",
      "0",
      "0",
-     "E1==>2E1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "endothelial_growth term 2/2",
-     ""
-    ],
-    [
-     "0.005",
-     "0",
-     "0",
-     "E1+E1==>E1",
+     "E1+S[USER;cE1:(0.1-0.005*cE1)]==>2E1",
      ""
     ],
     [
@@ -161,28 +133,14 @@
      "#",
      "",
      "",
-     "tumor_growth term 1/2",
+     "tumor_growth",
      ""
     ],
     [
-     "0.2",
+     "1",
      "0",
      "0",
-     "A+T1==>2T1+A",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth term 2/2",
-     ""
-    ],
-    [
-     "0.04",
-     "0",
-     "0",
-     "T1+T1+A==>A+T1",
+     "A+T1+S[USER;cT1:(0.2-0.04*cT1)]==>2T1+A",
      ""
     ],
     [
@@ -245,28 +203,14 @@
      "#",
      "",
      "",
-     "angiogenesis term 1/2",
+     "angiogenesis",
      ""
     ],
     [
-     "0.01",
+     "1",
      "0",
      "0",
-     "A+T1==>2A+T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "angiogenesis term 2/2",
-     ""
-    ],
-    [
-     "0.01",
-     "0",
-     "0",
-     "A+A+T1==>A+T1",
+     "A+T1+S[USER;cA:(0.01-0.01*cA)]==>2A+T1",
      ""
     ],
     [

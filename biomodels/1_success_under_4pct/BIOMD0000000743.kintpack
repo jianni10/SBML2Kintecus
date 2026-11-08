@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T07:07:56.035479+00:00",
- "description": "Gallaher2018 - Tumor\u2013Immune dynamics in multiple myeloma\nBioModels BIOMD0000000743 (curated). SBML file: Gallaher2018.xml.\nSimulation: 0 to 1500 time units (SED-ML: Gallaher2018.sedml), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.81e-06 of species peak (worst: N)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): M1 = M",
+ "created": "2026-11-07T22:19:26.561983+00:00",
+ "description": "Gallaher2018 - Tumor\u2013Immune dynamics in multiple myeloma\nBioModels BIOMD0000000743 (curated). SBML file: Gallaher2018.xml.\nSimulation: 0 to 1500 time units (SED-ML: Gallaher2018.sedml), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.81e-06 of species peak (worst: N)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] M_breakup term 1/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] M_breakup term 2/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] M_breakup term 3/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): M1 = M",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,91 +49,49 @@
      "#",
      "",
      "",
-     "M_breakup term 1/9",
+     "M_breakup term 1/6",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "M1+N+S[USER;cN:(0.01/(cN+150))]==>N",
+     "M1+S[USER;cM1,cN:((0.005*cM1*cN^2+0.75*cM1*cN+0.03*cN^2+4.5*cN)/(22500*cM1+1*cN^2*(cM1+1e-30)+3*cN^2+300*cN*(cM1+1e-30)+900*cN+67500))]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "M_breakup term 2/9",
+     "M_breakup term 2/6",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "M1+Tc+S[USER;cTc:(0.01/(cTc+375))]==>Tc",
+     "M1+S[USER;cM1,cTc:((0.005*cM1*cTc^2+1.875*cM1*cTc+0.03*cTc^2+11.25*cTc)/(140625*cM1+1*cTc^2*(cM1+1e-30)+3*cTc^2+750*cTc*(cM1+1e-30)+2250*cTc+421875))]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "M_breakup term 3/9",
+     "M_breakup term 3/6",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "N+M1+M1+S[USER;cM1,cN:(0.005/(cM1*cN+150*cM1+3*cN+450))]==>3M1+N",
+     "M1+S[USER;cM1,cN,cTc:((0.008*cM1*cN^2*cTc^2+3*cM1*cN^2*cTc+1.2*cM1*cN*cTc^2+450*cM1*cN*cTc+0.048*cN^2*cTc^2+18*cN^2*cTc+7.2*cN*cTc^2+2700*cN*cTc)/(3164062500*cM1+1*cN^2*cTc^2*(cM1+1e-30)+3*cN^2*cTc^2+750*cN^2*cTc*(cM1+1e-30)+2250*cN^2*cTc+140625*cN^2*(cM1+1e-30)+421875*cN^2+300*cN*cTc^2*(cM1+1e-30)+900*cN*cTc^2+225000*cN*cTc*(cM1+1e-30)+675000*cN*cTc+42187500*cN*(cM1+1e-30)+126562500*cN+22500*cTc^2*(cM1+1e-30)+67500*cTc^2+16875000*cTc*(cM1+1e-30)+50625000*cTc+9492187500))]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "M_breakup term 4/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Tc+M1+M1+S[USER;cM1,cTc:(0.005/(cM1*cTc+375*cM1+3*cTc+1125))]==>3M1+Tc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "M_breakup term 5/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "M1+N+Tc+S[USER;cN,cTc:(0.016/(cN*cTc+375*cN+150*cTc+56250))]==>N+Tc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "M_breakup term 6/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "N+Tc+S[USER;cM1,cN,cTc:(0.008*cM1^2/(cM1*cN*cTc+375*cM1*cN+150*cM1*cTc+56250*cM1+3*cN*cTc+1125*cN+450*cTc+168750))]==>M1+N+Tc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "M_breakup term 7/9",
+     "M_breakup term 4/6",
      ""
     ],
     [
@@ -147,7 +105,7 @@
      "#",
      "",
      "",
-     "M_breakup term 8/9",
+     "M_breakup term 5/6",
      ""
     ],
     [
@@ -161,7 +119,7 @@
      "#",
      "",
      "",
-     "M_breakup term 9/9",
+     "M_breakup term 6/6",
      ""
     ],
     [
@@ -203,56 +161,28 @@
      "#",
      "",
      "",
-     "M_growth term 1/2",
+     "M_growth",
      ""
     ],
     [
-     "0.0175",
+     "1",
      "0",
      "0",
-     "M1==>2M1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "M_growth term 2/2",
-     ""
-    ],
-    [
-     "0.0017500000000000003",
-     "0",
-     "0",
-     "M1+M1==>M1",
+     "M1+S[USER;cM1:(0.0175-0.0017500000000000003*cM1)]==>2M1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Tc_growth term 1/2",
+     "Tc_growth",
      ""
     ],
     [
-     "0.013",
+     "1",
      "0",
      "0",
-     "Tc==>2Tc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tc_growth term 2/2",
-     ""
-    ],
-    [
-     "1.625e-5",
-     "0",
-     "0",
-     "Tc+Tc==>Tc",
+     "Tc+S[USER;cTc:(0.013-1.625e-5*cTc)]==>2Tc",
      ""
     ],
     [
@@ -273,56 +203,28 @@
      "#",
      "",
      "",
-     "Tc_stimulation term 1/4",
+     "Tc_stimulation term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "M1+Tc+S[USER;cM1:(0.013/(cM1+150))]==>2Tc+M1",
+     "M1+Tc+S[USER;cM1,cTc:(1*(0.013-1.625e-5*cTc)/(cM1+150))]==>2Tc+M1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Tc_stimulation term 2/4",
+     "Tc_stimulation term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "N+Tc+S[USER;cN:(0.065/(cN+3))]==>2Tc+N",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tc_stimulation term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Tc+Tc+N+S[USER;cN:(8.125e-5/(cN+3))]==>N+Tc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tc_stimulation term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Tc+Tc+M1+S[USER;cM1:(1.625e-5/(cM1+150))]==>M1+Tc",
+     "N+Tc+S[USER;cN,cTc:(1*(0.065-8.125e-5*cTc)/(cN+3))]==>2Tc+N",
      ""
     ],
     [
@@ -343,56 +245,28 @@
      "#",
      "",
      "",
-     "N_growth term 1/2",
-     ""
-    ],
-    [
-     "0.04",
-     "0",
-     "0",
-     "N==>2N",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "N_growth term 2/2",
-     ""
-    ],
-    [
-     "8.888888888888889e-5",
-     "0",
-     "0",
-     "N+N==>N",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "N_stimulation term 1/2",
+     "N_growth",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "N+Tc+S[USER;cTc:(0.04/(cTc+375))]==>2N+Tc",
+     "N+S[USER;cN:(0.04-8.888888888888889e-5*cN)]==>2N",
      ""
     ],
     [
      "#",
      "",
      "",
-     "N_stimulation term 2/2",
+     "N_stimulation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "N+N+Tc+S[USER;cTc:(8.888888888888889e-5/(cTc+375))]==>N+Tc",
+     "N+Tc+S[USER;cN,cTc:(1*(0.04-8.888888888888889e-5*cN)/(cTc+375))]==>2N+Tc",
      ""
     ],
     [
@@ -427,56 +301,28 @@
      "#",
      "",
      "",
-     "Tr_growth term 1/2",
-     ""
-    ],
-    [
-     "0.0831",
-     "0",
-     "0",
-     "Tr==>2Tr",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tr_growth term 2/2",
-     ""
-    ],
-    [
-     "0.00103875",
-     "0",
-     "0",
-     "Tr+Tr==>Tr",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tr_stimulation term 1/2",
+     "Tr_growth",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "M1+Tr+S[USER;cM1:(0.1662/(cM1+3))]==>2Tr+M1",
+     "Tr+S[USER;cTr:(0.0831-0.00103875*cTr)]==>2Tr",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Tr_stimulation term 2/2",
+     "Tr_stimulation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Tr+Tr+M1+S[USER;cM1:(0.0020775/(cM1+3))]==>M1+Tr",
+     "M1+Tr+S[USER;cM1,cTr:(1*(0.1662-0.0020775*cTr)/(cM1+3))]==>2Tr+M1",
      ""
     ],
     [

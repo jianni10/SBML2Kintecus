@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-05T15:45:46.241489+00:00",
+ "created": "2026-11-07T20:37:09.023062+00:00",
  "description": "Hernjak2005_Calcium_Signaling\nBioModels BIOMD0000000162 (curated). SBML file: BIOMD0000000162_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000162_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.001.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.45e-06 of species peak (worst: D28kB_Cytosol)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] SERCA_fluxD: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SERCA_flux: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [partial] 13 profile files exceed the GUI's 10 O_ file limit",
  "settings": {
   "kpath": "",
@@ -1253,28 +1253,14 @@
      "#",
      "",
      "",
-     "IP3R_fluxD term 1/2",
+     "IP3R_fluxD",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cCa_D_Cytosol,cIP3_D_Cytosol,ch_D_ERM:(9.37243240882231e-10*(cCa_D_Cytosol*cIP3_D_Cytosol*ch_D_ERM/(2.7593514420370556e-6*cCa_D_Cytosol*cIP3_D_Cytosol+0.0332225913621262*cCa_D_Cytosol+0.000498338870431893*cIP3_D_Cytosol+6))^3)]==>Ca_D_Cytosol",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "IP3R_fluxD term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Ca_D_Cytosol+S[USER;cCa_D_Cytosol,cIP3_D_Cytosol,ch_D_ERM:(3.8922061498431525e-15*(cCa_D_Cytosol*cIP3_D_Cytosol*ch_D_ERM/(2.7593514420370556e-6*cCa_D_Cytosol*cIP3_D_Cytosol+0.0332225913621262*cCa_D_Cytosol+0.000498338870431893*cIP3_D_Cytosol+6))^3)]==>sink",
+     "source+S[USER;cCa_D_Cytosol,cIP3_D_Cytosol,ch_D_ERM:(4.463063051820148e-14*(cCa_D_Cytosol*cIP3_D_Cytosol*ch_D_ERM/((0.00166112956810631*cCa_D_Cytosol+0.3)*(0.00166112956810631*cIP3_D_Cytosol+20)))^3*(21000-0.0872093023255814*cCa_D_Cytosol))]==>Ca_D_Cytosol",
      ""
     ],
     [
@@ -1323,28 +1309,14 @@
      "#",
      "",
      "",
-     "IP3R_flux term 1/2",
+     "IP3R_flux",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cCa_Cytosol,cIP3_Cytosol,ch_ERM:(9.37243240882231e-10*(cCa_Cytosol*cIP3_Cytosol*ch_ERM/(2.7593514420370556e-6*cCa_Cytosol*cIP3_Cytosol+0.0332225913621262*cCa_Cytosol+0.000498338870431893*cIP3_Cytosol+6))^3)]==>Ca_Cytosol",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "IP3R_flux term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Ca_Cytosol+S[USER;cCa_Cytosol,cIP3_Cytosol,ch_ERM:(3.8922061498431525e-15*(cCa_Cytosol*cIP3_Cytosol*ch_ERM/(2.7593514420370556e-6*cCa_Cytosol*cIP3_Cytosol+0.0332225913621262*cCa_Cytosol+0.000498338870431893*cIP3_Cytosol+6))^3)]==>sink",
+     "source+S[USER;cCa_Cytosol,cIP3_Cytosol,ch_ERM:(4.463063051820148e-14*(cCa_Cytosol*cIP3_Cytosol*ch_ERM/((0.00166112956810631*cCa_Cytosol+0.3)*(0.00166112956810631*cIP3_Cytosol+20)))^3*(21000-0.0872093023255814*cCa_Cytosol))]==>Ca_Cytosol",
      ""
     ],
     [

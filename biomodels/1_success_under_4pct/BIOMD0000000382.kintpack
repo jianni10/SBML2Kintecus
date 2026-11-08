@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T06:59:32.862470+00:00",
+ "created": "2026-11-07T21:10:23.807214+00:00",
  "description": "Sturis1991_InsulinGlucoseModel_UltradianOscillation\nBioModels BIOMD0000000382 (curated). SBML file: BIOMD0000000382_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000382_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.73e-06 of species peak (worst: h3)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cz:(209/(1+735.0951892419727*exp((-1*0.0003333333333333333*cz))))]==>x",
+     "source+S[USER;cz:(209/(exp(6.6-0.0003333333333333333*cz)+1))]==>x",
      ""
     ],
     [
@@ -140,7 +140,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cz:(72*exp((-1*0.06944444444444445*cz)))]==>z",
+     "source+S[USER;cz:(-0.004*cz+72*exp((-1*0.06944444444444445*cz)))]==>z",
      ""
     ],
     [
@@ -154,7 +154,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;ch3:(180/(0.0005530843701478336*exp(0.09666666666666666*ch3)+1))]==>z",
+     "source+S[USER;ch3:(180/(exp(0.09666666666666666*ch3-7.5)+1))]==>z",
      ""
     ],
     [
@@ -165,24 +165,10 @@
      ""
     ],
     [
-     "0.004",
-     "0",
-     "0",
-     "z==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 5",
-     ""
-    ],
-    [
      "1",
      "0",
      "0",
-     "z+S[USER;cy:(0.09/(77860.97653551359/cy^1.772+1))]==>sink",
+     "z+S[USER;cy:(0.09/(exp(7.76-1.772*log(0.13852813852813853*cy))+1))]==>sink",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-02T03:27:00.934324+00:00",
- "description": "Tabak2007_dopamine\nBioModels BIOMD0000000138 (curated). SBML file: BIOMD0000000138_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000138_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.86e-06 of species peak (worst: n)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V' goes below zero in the SBML: integrated as p_V_o = value + 200, output as p_V = OUTC[p_V_o;-200*source]\n  [info] reaction_0000004 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - c: zero order, signed\nRenamed species (Kintecus name = SBML id): p_n = n; p_h = h; p_V = V",
+ "created": "2026-11-07T20:32:40.765868+00:00",
+ "description": "Tabak2007_dopamine\nBioModels BIOMD0000000138 (curated). SBML file: BIOMD0000000138_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000138_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.86e-06 of species peak (worst: n)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V' goes below zero in the SBML: integrated as p_V_o = value + 200, output as p_V = OUTC[p_V_o;-200*source]\nRenamed species (Kintecus name = SBML id): p_n = n; p_h = h; p_V = V",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,21 +49,21 @@
      "#",
      "",
      "",
-     "reaction_0000004 term 1/3",
+     "reaction_0000004 term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(0.0015/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200)))))]==>c",
+     "source+S[USER;cp_V_o:(1*(0.0015-3e-5*(cp_V_o-200))/(exp((-1*(0.08333333333333333*(cp_V_o-200)+1.6666666666666667)))+1))]==>c",
      ""
     ],
     [
      "#",
      "",
      "",
-     "reaction_0000004 term 2/3",
+     "reaction_0000004 term 2/2",
      ""
     ],
     [
@@ -77,20 +77,6 @@
      "#",
      "",
      "",
-     "reaction_0000004 term 3/3 (consumes c)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cp_V_o:((-1*3e-5*(cp_V_o-200)/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200))))))]==>c",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
      "rate rule dV/dt term 1 (shifted p_V_o)",
      ""
     ],
@@ -98,7 +84,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(10/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200)))))]==>p_V_o",
+     "source+S[USER;cp_V_o:((10-0.2*(cp_V_o-200))/(exp((-1*(0.08333333333333333*(cp_V_o-200)+1.6666666666666667)))+1))]==>p_V_o",
      ""
     ],
     [
@@ -140,20 +126,6 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:((-1*0.2*(cp_V_o-200)/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200))))))]==>p_V_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dV/dt term 5 (shifted p_V_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
      "source+S[USER;cp_V_o,cp_n:((-1*0.4*cp_n*(cp_V_o-200)))]==>p_V_o",
      ""
     ],
@@ -161,7 +133,7 @@
      "#",
      "",
      "",
-     "rate rule dV/dt term 6 (shifted p_V_o)",
+     "rate rule dV/dt term 5 (shifted p_V_o)",
      ""
     ],
     [
@@ -182,7 +154,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(0.02333333333333333/(1+0.6065306597126334*exp((-1*0.1*(cp_V_o-200)))))]==>p_n",
+     "source+S[USER;cp_V_o:(0.02333333333333333/(exp(-0.1*(cp_V_o-200)-0.5)+1))]==>p_n",
      ""
     ],
     [
@@ -210,7 +182,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(0.05/(162754.79141900392*exp(0.2*(cp_V_o-200))+1))]==>p_h",
+     "source+S[USER;cp_V_o:(0.05/(exp(0.2*(cp_V_o-200)+12)+1))]==>p_h",
      ""
     ],
     [

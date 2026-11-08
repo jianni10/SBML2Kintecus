@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:54:58.143962+00:00",
- "description": "Musante2017 - Switching behaviour of PP2A inhibition by ARPP-16 - mutual inhibitions\nBioModels BIOMD0000000643 (curated). SBML file: BIOMD0000000643_url.xml.\nSimulation: 0 to 300 time units (SED-ML: none; duration chosen from the dynamics: settled), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.85e-06 of species peak (worst: M)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'BB' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Complex' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dA46/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - A46: zero order, signed\n  [info] rate rule dA46/dt term 5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dA88/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dA88/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): M1 = M",
+ "created": "2026-11-07T22:04:16.626400+00:00",
+ "description": "Musante2017 - Switching behaviour of PP2A inhibition by ARPP-16 - mutual inhibitions\nBioModels BIOMD0000000643 (curated). SBML file: BIOMD0000000643_url.xml.\nSimulation: 0 to 300 time units (SED-ML: none; duration chosen from the dynamics: settled), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.85e-06 of species peak (worst: M)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'BB' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Complex' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dA46/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - A46: zero order, signed\n  [info] rate rule dA88/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): M1 = M",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cA46:(0.025*sqrt(-8*cA46+(cA46+2.016151515151515)^2))]==>A46",
+     "source+S[USER;cA46:(0.025*(-cA46+sqrt(-8*cA46+(cA46+2.016151515151515)^2)))]==>A46",
      ""
     ],
     [
@@ -81,38 +81,10 @@
      ""
     ],
     [
-     "0.025",
-     "0",
-     "0",
-     "A46==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dA46/dt term 4",
-     ""
-    ],
-    [
      "1",
      "0",
      "0",
-     "M1+S[USER;cA46,cA88:(0.988/(-cA46+0.037526*cA88+10.09))]==>A46+M1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dA46/dt term 5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "A46+M1+S[USER;cA46,cA88:((-1*0.0988/(1*cA46-0.037526*cA88-10.09)))]==>M1",
+     "M1+S[USER;cA46,cA88:((0.988-0.0988*cA46)/(-cA46+0.037526*cA88+10.09))]==>A46+M1",
      ""
     ],
     [
@@ -126,7 +98,7 @@
      "1",
      "0",
      "0",
-     "PKA+S[USER;cA46,cA88:(9.350000000000001/(0.236*cA46-cA88+11.6))]==>A88+PKA",
+     "PKA+S[USER;cA46,cA88:((9.350000000000001-0.935*cA88)/(0.236*cA46-cA88+11.6))]==>A88+PKA",
      ""
     ],
     [
@@ -141,20 +113,6 @@
      "0",
      "0",
      "A88+S[USER;cA88:(2.5/(1*cA88+1))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dA88/dt term 3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "A88+PKA+S[USER;cA46,cA88:(0.935/(0.236*cA46-1*cA88+11.6))]==>PKA",
      ""
     ],
     [

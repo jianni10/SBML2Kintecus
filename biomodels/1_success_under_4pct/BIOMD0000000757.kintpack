@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:08:16.025705+00:00",
+ "created": "2026-11-07T22:19:43.679068+00:00",
  "description": "Abernathy2016 - glioblastoma treatment\nBioModels BIOMD0000000757 (curated). SBML file: Abernathy2016.xml.\nSimulation: 0 to 3500 time units (SED-ML: Abernathy2016.sedml), sampling 3.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.48e-06 of species peak (worst: MHC2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Tumor_Plot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'CSC_Plot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'CTL_Plot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] tumor_killing term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] tumor_killing term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] csc_killing term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] csc_killing term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
@@ -49,56 +49,28 @@
      "#",
      "",
      "",
-     "tumor_growth term 1/2",
+     "tumor_growth",
      ""
     ],
     [
-     "0.001",
+     "1",
      "0",
      "0",
-     "Tumor==>2Tumor",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth term 2/2",
-     ""
-    ],
-    [
-     "1.0000000000000001e-11",
-     "0",
-     "0",
-     "Tumor+Tumor==>Tumor",
+     "Tumor+S[USER;cTumor:(0.001-1.0000000000000001e-11*cTumor)]==>2Tumor",
      ""
     ],
     [
      "#",
      "",
      "",
-     "tumor_transformation term 1/2",
+     "tumor_transformation",
      ""
     ],
     [
-     "6e-10",
+     "1",
      "0",
      "0",
-     "CancerStemCell+Tumor==>2Tumor",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_transformation term 2/2",
-     ""
-    ],
-    [
-     "6.0000000000000004e-18",
-     "0",
-     "0",
-     "Tumor+Tumor+CancerStemCell==>2CancerStemCell+Tumor",
+     "CancerStemCell+Tumor+S[USER;cTumor:(6e-10-6.0000000000000004e-18*cTumor)]==>2Tumor",
      ""
     ],
     [
@@ -133,28 +105,14 @@
      "#",
      "",
      "",
-     "csc_growth term 1/2",
+     "csc_growth",
      ""
     ],
     [
-     "0.1",
+     "1",
      "0",
      "0",
-     "CancerStemCell==>2CancerStemCell",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "csc_growth term 2/2",
-     ""
-    ],
-    [
-     "1e-8",
-     "0",
-     "0",
-     "CancerStemCell+CancerStemCell==>CancerStemCell",
+     "CancerStemCell+S[USER;cCancerStemCell:(0.1-1e-8*cCancerStemCell)]==>2CancerStemCell",
      ""
     ],
     [

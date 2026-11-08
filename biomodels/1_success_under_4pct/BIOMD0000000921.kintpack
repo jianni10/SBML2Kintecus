@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:12:59.119219+00:00",
+ "created": "2026-11-07T22:28:32.536811+00:00",
  "description": "Khajanchi2017 - Uniform Persistence and Global Stability for a Brain Tumor and Immune System Interaction\nBioModels BIOMD0000000921 (curated). SBML file: khajanchi2017.xml.\nSimulation: 0 to 60 time units (SED-ML: khajanchi2017.sedml), sampling 0.06.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.99e-06 of species peak (worst: G)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Elimination_of_glioma_due_to_interaction_with_CTL_and_macrophage term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Elimination_of_glioma_due_to_interaction_with_CTL_and_macrophage term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): M1 = M",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "The_rate_of_change_of_glioma_whose_growth_follows_the_logistic_fashion_without_any_immune_intervention term 1/2",
+     "The_rate_of_change_of_glioma_whose_growth_follows_the_logistic_fashion_without_any_immune_intervention",
      ""
     ],
     [
-     "0.01",
+     "1",
      "0",
      "0",
-     "G==>2G",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "The_rate_of_change_of_glioma_whose_growth_follows_the_logistic_fashion_without_any_immune_intervention term 2/2",
-     ""
-    ],
-    [
-     "1.1329519061915822e-8",
-     "0",
-     "0",
-     "G+G==>G",
+     "G+S[USER;cG:(0.01-1.1329519061915822e-8*cG)]==>2G",
      ""
     ],
     [
@@ -105,28 +91,14 @@
      "#",
      "",
      "",
-     "Logistic_growth_term_for_macrophage term 1/2",
+     "Logistic_growth_term_for_macrophage",
      ""
     ],
     [
-     "0.3307",
+     "1",
      "0",
      "0",
-     "M1==>2M1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Logistic_growth_term_for_macrophage term 2/2",
-     ""
-    ],
-    [
-     "0.3307",
-     "0",
-     "0",
-     "M1+M1==>M1",
+     "M1+S[USER;cM1:(0.3307-0.3307*cM1)]==>2M1",
      ""
     ],
     [

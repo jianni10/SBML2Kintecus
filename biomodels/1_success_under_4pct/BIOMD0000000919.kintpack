@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:12:55.405081+00:00",
+ "created": "2026-11-07T22:28:26.542476+00:00",
  "description": "Ledzewicz2013 - On optimal chemotherapy with a strongly targeted agent for a model of tumor immune system interactions with generalized logistic growth\nBioModels BIOMD0000000919 (curated). SBML file: Ledzewicz2013.xml.\nSimulation: 0 to 30 time units (SED-ML: none; duration chosen from the dynamics: settled), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.77e-07 of species peak (worst: x)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -77,28 +77,14 @@
      "#",
      "",
      "",
-     "Tumor_immune_interaction_on_the_immune_system term 1/2",
+     "Tumor_immune_interaction_on_the_immune_system",
      ""
     ],
     [
-     "0.00484",
+     "1",
      "0",
      "0",
-     "x+y==>2y+x",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_immune_interaction_on_the_immune_system term 2/2",
-     ""
-    ],
-    [
-     "1.27776e-5",
-     "0",
-     "0",
-     "y+x+x==>2x",
+     "x+y+S[USER;cx:(0.00484-1.27776e-5*cx)]==>2y+x",
      ""
     ],
     [
@@ -119,28 +105,14 @@
      "#",
      "",
      "",
-     "Increase_in_tumor_volume term 1/2",
-     ""
-    ],
-    [
-     "0.5599",
-     "0",
-     "0",
-     "x==>2x",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Increase_in_tumor_volume term 2/2",
+     "Increase_in_tumor_volume",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "x+S[USER;cx:(0.0007178205128205127*cx)]==>sink",
+     "x+S[USER;cx:(0.5599-0.0007178205128205127*cx)]==>2x",
      ""
     ],
     [

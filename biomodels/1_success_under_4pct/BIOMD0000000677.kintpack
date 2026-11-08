@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T16:28:33.478096+00:00",
- "description": "Holmes2006 - Hill's model of muscle contraction\nBioModels BIOMD0000000677 (curated). SBML file: BIOMD0000000677_url.xml.\nSimulation: 0 to 5 time units (SED-ML: MODEL1006230007.sedml), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 7.14e-07 of species peak (worst: L_ce)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dL_ce/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): p_L_ce = L_ce",
+ "created": "2026-11-07T22:08:47.102596+00:00",
+ "description": "Holmes2006 - Hill's model of muscle contraction\nBioModels BIOMD0000000677 (curated). SBML file: BIOMD0000000677_url.xml.\nSimulation: 0 to 5 time units (SED-ML: MODEL1006230007.sedml), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 7.14e-07 of species peak (worst: L_ce)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): p_L_ce = L_ce",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -56,35 +56,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cp_L_ce:(259.01445375/(72.45135000000006*cSW1-1449.027*cp_L_ce+979.10755))]==>p_L_ce",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dL_ce/dt term 2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cp_L_ce:(23.546688750000023*cSW1/(72.45135000000006*cSW1-1449.027*cp_L_ce+979.10755))]==>p_L_ce",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dL_ce/dt term 3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "p_L_ce+S[USER;cSW1,cp_L_ce:(470.933775/(72.45135000000006*cSW1-1449.027*cp_L_ce+979.10755))]==>sink",
+     "source+S[USER;cSW1,cp_L_ce:((23.546688750000023*cSW1-470.933775*cp_L_ce+259.01445375)/(72.45135000000006*cSW1-1449.027*cp_L_ce+979.10755))]==>p_L_ce",
      ""
     ],
     [
@@ -151,17 +123,6 @@
      "No",
      "1",
      "constant 1.0: nothing consumed [__source__]",
-     ""
-    ],
-    [
-     "sink",
-     "0",
-     "1",
-     "N",
-     "0",
-     "No",
-     "1",
-     "constant 1.0: nothing produced [__sink__]",
      ""
     ],
     [

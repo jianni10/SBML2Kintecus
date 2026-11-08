@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T23:03:19.840801+00:00",
- "description": "Kurlovics2021 - Metformin partitioning between plasma and RBC with independent Kin and Kout coefficients\nBioModels BIOMD0000001026 (curated). SBML file: Kurlovics2021.xml.\nSimulation: 0 to 40 time units (SED-ML: Independent.sedml), sampling 0.04.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.62e-06 of species peak (worst: Mrbc)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Vin term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Mrbc: zero order, signed",
+ "created": "2026-11-07T22:32:59.463088+00:00",
+ "description": "Kurlovics2021 - Metformin partitioning between plasma and RBC with independent Kin and Kout coefficients\nBioModels BIOMD0000001026 (curated). SBML file: Kurlovics2021.xml.\nSimulation: 0 to 40 time units (SED-ML: Independent.sedml), sampling 0.04.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.62e-06 of species peak (worst: Mrbc)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -63,28 +63,14 @@
      "#",
      "",
      "",
-     "Vin term 1/2",
+     "Vin",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(60.81957380892484*exp((-1*0.215608884195034*cTIME_)))]==>Mrbc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Vin term 2/2 (consumes Mrbc)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_:((-1*60.81957380892484*exp((-1*0.783006790599975*cTIME_))))]==>Mrbc",
+     "source+S[USER;cTIME_:(-60.81957380892484*exp((-1*0.783006790599975*cTIME_))+60.81957380892484*exp((-1*0.215608884195034*cTIME_)))]==>Mrbc",
      ""
     ],
     [

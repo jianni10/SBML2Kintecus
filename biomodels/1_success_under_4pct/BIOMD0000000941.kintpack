@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T07:13:45.671314+00:00",
- "description": "Gerard2010 - Progression of mammalian cell cycle by successive activation of various cyclin cdk complexes\nBioModels BIOMD0000000941 (curated). SBML file: gerard2010.xml.\nSimulation: 0 to 100 time units (SED-ML: gerard2010.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.08e-06 of species peak (worst: Cdc20_active)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R2_Degradation_of_cyclin_D_Cdk4_6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R3_E2F_activation term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R3_E2F_activation term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R4_E2F_inactivation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R6_Degradation_of_cyclin_E_Cdk2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R8_Degradation_of_cyclin_A_Cdk2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R10_Degradation_of_cyclin_B_Cdk1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R11_Phosphorylation_and_activation_of_Cdc20 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R12_Dephosphorylation_and_inactivation_of_Cdc20: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): transcriptionfactorE2Fact1 = transcription_factor_E2F_active",
+ "created": "2026-11-07T22:28:53.341714+00:00",
+ "description": "Gerard2010 - Progression of mammalian cell cycle by successive activation of various cyclin cdk complexes\nBioModels BIOMD0000000941 (curated). SBML file: gerard2010.xml.\nSimulation: 0 to 100 time units (SED-ML: gerard2010.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.08e-06 of species peak (worst: Cdc20_active)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R2_Degradation_of_cyclin_D_Cdk4_6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R4_E2F_inactivation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R6_Degradation_of_cyclin_E_Cdk2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R8_Degradation_of_cyclin_A_Cdk2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R10_Degradation_of_cyclin_B_Cdk1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R12_Dephosphorylation_and_inactivation_of_Cdc20: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): transcriptionfactorE2Fact1 = transcription_factor_E2F_active",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -77,56 +77,28 @@
      "#",
      "",
      "",
-     "R3_E2F_activation term 1/4",
+     "R3_E2F_activation term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cyclin_D_Cdk4_6+S[USER;ctranscriptionfactorE2Fact1:(2.415/(3.01-ctranscriptionfactorE2Fact1))]==>transcriptionfactorE2Fact1+cyclin_D_Cdk4_6",
+     "cyclin_D_Cdk4_6+S[USER;ctranscriptionfactorE2Fact1:(1*(2.415-0.805*ctranscriptionfactorE2Fact1)/(3.01-ctranscriptionfactorE2Fact1))]==>transcriptionfactorE2Fact1+cyclin_D_Cdk4_6",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R3_E2F_activation term 2/4",
+     "R3_E2F_activation term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cyclin_E_Cdk2+S[USER;ctranscriptionfactorE2Fact1:(2.415/(3.01-ctranscriptionfactorE2Fact1))]==>transcriptionfactorE2Fact1+cyclin_E_Cdk2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R3_E2F_activation term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "transcriptionfactorE2Fact1+cyclin_D_Cdk4_6+S[USER;ctranscriptionfactorE2Fact1:((-1*0.805/(1*ctranscriptionfactorE2Fact1-3.01)))]==>cyclin_D_Cdk4_6",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R3_E2F_activation term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "transcriptionfactorE2Fact1+cyclin_E_Cdk2+S[USER;ctranscriptionfactorE2Fact1:((-1*0.805/(1*ctranscriptionfactorE2Fact1-3.01)))]==>cyclin_E_Cdk2",
+     "cyclin_E_Cdk2+S[USER;ctranscriptionfactorE2Fact1:(1*(2.415-0.805*ctranscriptionfactorE2Fact1)/(3.01-ctranscriptionfactorE2Fact1))]==>transcriptionfactorE2Fact1+cyclin_E_Cdk2",
      ""
     ],
     [
@@ -231,28 +203,14 @@
      "#",
      "",
      "",
-     "R11_Phosphorylation_and_activation_of_Cdc20 term 1/2",
+     "R11_Phosphorylation_and_activation_of_Cdc20",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cyclin_B_Cdk1+S[USER;cCdc20_active:(1.05/(6-cCdc20_active))]==>Cdc20_active+cyclin_B_Cdk1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R11_Phosphorylation_and_activation_of_Cdc20 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Cdc20_active+cyclin_B_Cdk1+S[USER;cCdc20_active:((-1*0.21/(1*cCdc20_active-6)))]==>cyclin_B_Cdk1",
+     "cyclin_B_Cdk1+S[USER;cCdc20_active:(0.21*(5-cCdc20_active)/(6-cCdc20_active))]==>Cdc20_active+cyclin_B_Cdk1",
      ""
     ],
     [

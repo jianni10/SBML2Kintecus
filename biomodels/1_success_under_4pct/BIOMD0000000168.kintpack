@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:44:27.129962+00:00",
- "description": "Obeyesekere1999_CellCycle\nBioModels BIOMD0000000168 (curated). SBML file: BIOMD0000000168_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000168_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.94e-06 of species peak (worst: RS_1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'E2F_1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'RP_1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] cyclin_1 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - E_1: zero order, signed\n  [info] pRBpdephosphorylation_1 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - R_1: zero order, signed\n  [info] pRBpdephosphorylation_1 term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] pRBE2FcomplexdeassociationviacycDCDK4_1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] _7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cycleprogression_1 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - X_1: zero order, signed",
+ "created": "2026-11-07T20:37:11.906590+00:00",
+ "description": "Obeyesekere1999_CellCycle\nBioModels BIOMD0000000168 (curated). SBML file: BIOMD0000000168_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000168_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.94e-06 of species peak (worst: RS_1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'E2F_1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'RP_1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] cyclin_1 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - E_1: zero order, signed\n  [info] pRBE2FcomplexdeassociationviacycDCDK4_1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] _7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cycleprogression_1 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - X_1: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -119,42 +119,14 @@
      "#",
      "",
      "",
-     "pRBpdephosphorylation_1 term 1/3",
+     "pRBpdephosphorylation_1",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "X_1+S[USER;cRS_1,cR_1,cX_1:(1.2/(-cRS_1-cR_1+cX_1+3.3))]==>R_1+X_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "pRBpdephosphorylation_1 term 2/3 (consumes R_1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cRS_1,cR_1,cX_1:((-1*0.48*cRS_1*cX_1/(-cRS_1-cR_1+cX_1+3.3)))]==>R_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "pRBpdephosphorylation_1 term 3/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "R_1+X_1+S[USER;cRS_1,cR_1,cX_1:((-1*0.48/(1*cRS_1+1*cR_1-1*cX_1-3.3)))]==>X_1",
+     "X_1+S[USER;cRS_1,cR_1,cX_1:(1*(-0.48*cRS_1-0.48*cR_1+1.2)/(-cRS_1-cR_1+cX_1+3.3))]==>R_1+X_1",
      ""
     ],
     [

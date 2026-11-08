@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:55:50.873723+00:00",
- "description": "Fallon2000 - Interleukin-2 dynamics\nBioModels BIOMD0000000665 (curated). SBML file: BIOMD0000000665_url.xml.\nSimulation: 0 to 7200 time units (SED-ML: MODEL1006230001.sedml), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.51e-06 of species peak (worst: Rs_0)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dY_0/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - Y_0: zero order, signed\n  [info] rate rule dY_0/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - Y_0: zero order, signed",
+ "created": "2026-11-07T22:04:35.635970+00:00",
+ "description": "Fallon2000 - Interleukin-2 dynamics\nBioModels BIOMD0000000665 (curated). SBML file: BIOMD0000000665_url.xml.\nSimulation: 0 to 7200 time units (SED-ML: MODEL1006230001.sedml), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.51e-06 of species peak (worst: Rs_0)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -273,70 +273,14 @@
      "#",
      "",
      "",
-     "rate rule dY_0/dt term 1 (consumes Y_0)",
-     ""
-    ],
-    [
-     "-100000",
-     "0",
-     "0",
-     "source==>Y_0",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dY_0/dt term 2",
+     "rate rule dY_0/dt term 1",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cCs_0:(40000000/(2*abs(600*cCs_0/(cCs_0+250)-200)+2e-300))]==>Y_0",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dY_0/dt term 3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Cs_0+S[USER;cCs_0:(300000/(cCs_0+250))]==>Y_0+Cs_0",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dY_0/dt term 4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Cs_0+Cs_0+S[USER;cCs_0:(360000000/(2*(cCs_0+250)^2*abs(600*cCs_0/(cCs_0+250)-200)+2e-300*(cCs_0+250)^2))]==>Y_0+2Cs_0",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dY_0/dt term 5 (consumes Y_0)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCs_0:((-1*240000000*cCs_0/(2*cCs_0*abs(600*cCs_0/(cCs_0+250)-200)+2e-300*cCs_0+500*abs(600*cCs_0/(cCs_0+250)-200)+5e-298)))]==>Y_0",
+     "source+S[USER;cCs_0:(1000*(300*cCs_0/(cCs_0+250)+abs(600*cCs_0/(cCs_0+250)-200)/2-100))]==>Y_0",
      ""
     ],
     [

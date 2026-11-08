@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-05T16:28:39.716563+00:00",
+ "created": "2026-11-07T22:09:02.559711+00:00",
  "description": "Wodarz1999 CTL memory response HIV\nBioModels BIOMD0000000683 (curated). SBML file: BIOMD0000000683.xml.\nSimulation: 0 to 200 time units (SED-ML: BIOMD0000000683.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.58e-07 of species peak (worst: w)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -119,56 +119,14 @@
      "#",
      "",
      "",
-     "Infection_of_x term 1/4",
-     ""
-    ],
-    [
-     "0.0063",
-     "0",
-     "0",
-     "x+y==>2y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Infection_of_x term 2/4",
+     "Infection_of_x",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "x+y+S[USER;cSW1:(1.4937*cSW1)]==>2y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Infection_of_x term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "x+y+S[USER;cSW2:(1.4937*cSW2)]==>2y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Infection_of_x term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "y+x+S[USER;cSW1,cSW2:(1.4937*cSW1*cSW2)]==>2x",
+     "x+y+S[USER;cSW1,cSW2:(1.5*cSW2+1.5*(1-cSW2)*(0.9958*cSW1+0.0042))]==>2y",
      ""
     ],
     [

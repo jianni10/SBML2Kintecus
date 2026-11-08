@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:14:35.618021+00:00",
+ "created": "2026-11-07T22:29:32.315769+00:00",
  "description": "Wan2020 - risk estimation and prediction of the transmission of COVID-19 in maninland China excluding Hubei province\nBioModels BIOMD0000000981 (curated). SBML file: Wan2020.xml.\nSimulation: 0 to 80 time units (SED-ML: Wan2020.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.27e-06 of species peak (worst: Recovered_from_hospitals)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Total_population' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Susceptible_to_Exposed term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Susceptible_to_Exposed term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Susceptible_to_isolated term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Susceptible_to_isolated term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Exposed_to_Quarantined term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Exposed_to_Quarantined term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Infected_to_Quarantined term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Infected_to_Quarantined term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Asymptomatic_to_Quarantined term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Asymptomatic_to_Quarantined term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "Susceptible+Infected+S[USER;cAsymptomatic,cExposed,cInfected,cRecovered,cSusceptible,cTotal_reported_cases:(2.178959717/(1*cAsymptomatic*exp(0.00028286*cTotal_reported_cases)+1*cExposed*exp(0.00028286*cTotal_reported_cases)+1*cInfected*exp(0.00028286*cTotal_reported_cases)+1*cRecovered*exp(0.00028286*cTotal_reported_cases)+1*(cSusceptible+1e-30)*exp(0.00028286*cTotal_reported_cases)))]==>Exposed+Infected",
+     "Susceptible+Infected+S[USER;cAsymptomatic,cExposed,cInfected,cRecovered,cSusceptible,cTotal_reported_cases:(2.178959717*exp((-1*0.00028286*cTotal_reported_cases))/(1*cAsymptomatic+1*cExposed+1*cInfected+1*cRecovered+1*cSusceptible+1e-30))]==>Exposed+Infected",
      ""
     ],
     [
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "Susceptible+Asymptomatic+S[USER;cAsymptomatic,cExposed,cInfected,cRecovered,cSusceptible,cTotal_reported_cases:(1.76467410600679/(1*cAsymptomatic*exp(0.00028286*cTotal_reported_cases)+1*cExposed*exp(0.00028286*cTotal_reported_cases)+1*cInfected*exp(0.00028286*cTotal_reported_cases)+1*cRecovered*exp(0.00028286*cTotal_reported_cases)+1*(cSusceptible+1e-30)*exp(0.00028286*cTotal_reported_cases)))]==>Exposed+Asymptomatic",
+     "Susceptible+Asymptomatic+S[USER;cAsymptomatic,cExposed,cInfected,cRecovered,cSusceptible,cTotal_reported_cases:(1.76467410600679*exp((-1*0.00028286*cTotal_reported_cases))/(1*cAsymptomatic+1*cExposed+1*cInfected+1*cRecovered+1*cSusceptible+1e-30))]==>Exposed+Asymptomatic",
      ""
     ],
     [

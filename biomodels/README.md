@@ -7,10 +7,10 @@ Kintecus V2027 and compared with the original SBML simulated by [libRoadRunner](
 |---|---|
 | Curated entries | 1,072 |
 | `.kintpack` files written | 1,045 |
-| **SUCCESS** — Kintecus within 4% of the SBML | **943** |
-| … of which within 0.1% | 922 |
+| **SUCCESS** — Kintecus within 4% of the SBML | **961** |
+| … of which within 0.1% | 942 |
 | Deck reproduces the SBML (independent SciPy run), Kintecus too slow | 4 |
-| Off, partial, or no SBML reference to check against | 98 |
+| Off, partial, or no SBML reference to check against | 80 |
 | No pack (nothing convertible / converter error) | 27 |
 
 Match error = max over species of |Kintecus − SBML| / peak of that species. Status as of 2026-11-07.
@@ -58,7 +58,7 @@ MAKE_KINTPACK.bat path\to\model.xml
 or `python sbml2kintpack.py model.xml --kintecus C:\Kintecus\Kintecus.exe`. Needs Python 3.8+ with
 `python-libsbml`, `libroadrunner`, `sympy`, `numpy`. For a BioModels entry the duration, sampling, switches,
 accuracy and deck variant of the verified pack are taken from `release_settings.csv`, so converting any of the
-943 SUCCESS models from its original SBML gives the verified deck. Other SBML is converted the same way but is
+961 SUCCESS models from its original SBML gives the verified deck. Other SBML is converted the same way but is
 not verified — check the pack description's conversion notes and "NOT converted" list.
 
 ## Checking a Kintecus build

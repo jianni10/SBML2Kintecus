@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T06:59:56.820413+00:00",
- "description": "Sivakumar2011_NeuralStemCellDifferentiation_Crosstalk\nBioModels BIOMD0000000398 (curated). SBML file: BIOMD0000000398_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000398_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.40e-06 of species peak (worst: s73)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] re29 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re29 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re40 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re40 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T21:11:43.631939+00:00",
+ "description": "Sivakumar2011_NeuralStemCellDifferentiation_Crosstalk\nBioModels BIOMD0000000398 (curated). SBML file: BIOMD0000000398_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000398_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.40e-06 of species peak (worst: s73)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] re29: rate order differs from the stoichiometry; consumed on separate line(s) - s57: zero order, signed\n  [info] re40: rate order differs from the stoichiometry; consumed on separate line(s) - s122: zero order, signed; s124: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,28 +49,28 @@
      "#",
      "",
      "",
-     "re29 term 1/2",
+     "re29",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s57+S[USER;cs53,cs57,cs58:(0.04950495049504951/(1*cs53*cs58+1*cs53+1*cs57+1*cs58+1))]==>s53+s58",
+     "source+S[USER;cs53,cs57,cs58:(0.04950495049504951*(-1*cs53*cs58+1*cs57)/(1*cs57+(1*cs53+1)*(1*cs58+1)))]==>s53+s58",
      ""
     ],
     [
      "#",
      "",
      "",
-     "re29 term 2/2",
+     "re29 (consumes s57)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s53+s58+S[USER;cs53,cs57,cs58:(0.04950495049504951/(1*cs53+1*cs57+1*cs58+1*(cs53+1e-30)*(cs58+1e-30)+1))]==>s57",
+     "source+S[USER;cs53,cs57,cs58:((-1*0.04950495049504951*(-1*cs53*cs58+1*cs57)/(1*cs57+(1*cs53+1)*(1*cs58+1))))]==>s57",
      ""
     ],
     [
@@ -84,7 +84,7 @@
      "1",
      "0",
      "0",
-     "s72==>s68+s53",
+     "s72==>s53+s68",
      ""
     ],
     [
@@ -98,7 +98,7 @@
      "1",
      "0",
      "0",
-     "s68+s53==>s72",
+     "s53+s68==>s72",
      ""
     ],
     [
@@ -245,28 +245,42 @@
      "#",
      "",
      "",
-     "re40 term 1/2",
+     "re40",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s135+s111+S[USER;cs122,cs124,cs135:(1/(1*cs122*cs124+1*cs122+1*cs124+1*cs135+1))]==>s122+s124+s111",
+     "source+S[USER;cs111,cs122,cs124,cs135:(1*(1*cs111*cs122*cs124-1*cs111*cs135)/(1*cs122*cs124+1*cs122+1*cs124+1*cs135+1))]==>s135",
      ""
     ],
     [
      "#",
      "",
      "",
-     "re40 term 2/2",
+     "re40 (consumes s122)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s122+s124+s111+S[USER;cs122,cs124,cs135:(1/(1*cs122+1*cs124+1*cs135+1*(cs122+1e-30)*(cs124+1e-30)+1))]==>s135+s111",
+     "source+S[USER;cs111,cs122,cs124,cs135:((-1*1*(1*cs111*cs122*cs124-1*cs111*cs135)/(1*cs122*cs124+1*cs122+1*cs124+1*cs135+1)))]==>s122",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re40 (consumes s124)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cs111,cs122,cs124,cs135:((-1*1*(1*cs111*cs122*cs124-1*cs111*cs135)/(1*cs122*cs124+1*cs122+1*cs124+1*cs135+1)))]==>s124",
      ""
     ],
     [
@@ -280,7 +294,7 @@
      "1",
      "0",
      "0",
-     "s146+S[USER;cs135:(0.009900990099009901/(cs135+1))]==>s144+s142",
+     "s146+S[USER;cs135:(0.009900990099009901/(cs135+1))]==>s142+s144",
      ""
     ],
     [
@@ -294,7 +308,7 @@
      "1",
      "0",
      "0",
-     "s144+s142+S[USER;cs135:(0.009900990099009901/(cs135+1))]==>s146",
+     "s142+s144+S[USER;cs135:(0.009900990099009901/(cs135+1))]==>s146",
      ""
     ],
     [
@@ -664,6 +678,17 @@
      "No",
      "100",
      "6 bromoindirubin 3`oxime [s147]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-02T03:15:11.918218+00:00",
- "description": "Chassagnole2001_Threonine Synthesis\nBioModels BIOMD0000000066 (curated). SBML file: BIOMD0000000066_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000066_url.sedml (auto-generated placeholder); duration chosen from the dynamics: default), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.39e-06 of species peak (worst: phos)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'atp' goes below zero in the SBML: integrated as atp_o = value + 0.1, output as atp = OUTC[atp_o;-0.1*source]\n  [info] vak term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vak term 2/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vak term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vak term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vasd term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vasd term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vhdh term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vhdh term 2/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vhdh term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vhdh term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vtsy: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vhk: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T20:21:20.122768+00:00",
+ "description": "Chassagnole2001_Threonine Synthesis\nBioModels BIOMD0000000066 (curated). SBML file: BIOMD0000000066_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000066_url.sedml (auto-generated placeholder); duration chosen from the dynamics: default), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.39e-06 of species peak (worst: phos)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'atp' goes below zero in the SBML: integrated as atp_o = value + 0.1, output as atp = OUTC[atp_o;-0.1*source]\n  [info] vak: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for asp, atp_o\n  [info] vasd: rate order differs from the stoichiometry; consumed on separate line(s) - aspp: zero order, signed; nadph: zero order, signed\n  [info] vhdh: rate order differs from the stoichiometry; consumed on separate line(s) - asa: zero order, signed; nadph: zero order, signed\n  [info] vtsy: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vhk: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,196 +49,126 @@
      "#",
      "",
      "",
-     "vak term 1/4 (shifted atp_o)",
+     "vak",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cadp,casp,caspp,catp_o:((-1*0.0722*casp*(catp_o-0.1)/(2.267106095342452*cadp*casp+42.67493826526969*cadp*caspp+0.7254739505095847*cadp+2.576256926525514*casp*(catp_o-0.1)+0.566776523835613*casp+48.49424802871556*caspp*(catp_o-0.1)+10.668734566317422*caspp+0.8244022164881646*(catp_o-0.1)+0.18136848762739619)))]==>atp_o",
+     "source+S[USER;cadp,casp,caspp,catp_o,cthr:(1*(-234.37499999999997*cadp*caspp+0.15*casp*(catp_o-0.1))/((3.92*cadp+(catp_o-0.1)+0.98)*(casp+57.05882352941176*caspp+(1465.0800927380121*cthr^4.09+0.97)/(37.407535277527636*cthr^4.09+1)))+1*(-112.81249999999999*cadp*caspp+0.0722*casp*(catp_o-0.1))/((0.88*cadp+(catp_o-0.1)+0.22)*(2.576256926525514*casp+48.49424802871556*caspp+0.8244022164881646)))]==>adp+aspp",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vak term 1/4",
+     "vak (consumes asp)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "asp+S[USER;cadp,casp,caspp,catp_o:(0.0722*(catp_o-0.1)/(42.67493826526969*cadp*caspp+2.267106095342452*cadp*(casp+1e-30)+0.7254739505095847*cadp+0.566776523835613*casp+48.49424802871556*caspp*(catp_o-0.1)+10.668734566317422*caspp+2.576256926525514*(casp+1e-30)*(catp_o-0.1)+0.8244022164881646*(catp_o-0.1)+0.18136848762739619))]==>adp+aspp",
+     "source+S[USER;cadp,casp,caspp,catp_o,cthr:(-1*(-234.37499999999997*cadp*caspp+0.15*casp*(catp_o-0.1))/((3.92*cadp+(catp_o-0.1)+0.98)*(casp+57.05882352941176*caspp+(1465.0800927380121*cthr^4.09+0.97)/(37.407535277527636*cthr^4.09+1)))-1*(-112.81249999999999*cadp*caspp+0.0722*casp*(catp_o-0.1))/((0.88*cadp+(catp_o-0.1)+0.22)*(2.576256926525514*casp+48.49424802871556*caspp+0.8244022164881646)))]==>asp",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vak term 2/4 (shifted atp_o)",
+     "vak (consumes atp_o)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cadp,casp,caspp,catp_o,cthr:((-1*0.15*casp*(catp_o-0.1)/(3.92*cadp*casp+223.6705882352941*cadp*caspp+5743.113963533007*cadp*cthr^4.09/(37.407535277527636*cthr^4.09+1)+3.8024*cadp/(37.407535277527636*cthr^4.09+1)+casp*(catp_o-0.1)+0.98*casp+57.05882352941176*caspp*(catp_o-0.1)+55.917647058823526*caspp+1465.0800927380121*cthr^4.09*(catp_o-0.1)/(37.407535277527636*cthr^4.09+1)+1435.7784908832518*cthr^4.09/(37.407535277527636*cthr^4.09+1)+0.97*(catp_o-0.1)/(37.407535277527636*cthr^4.09+1)+0.9506/(37.407535277527636*cthr^4.09+1))))]==>atp_o",
+     "source+S[USER;cadp,casp,caspp,catp_o,cthr:(-1*(-234.37499999999997*cadp*caspp+0.15*casp*(catp_o-0.1))/((3.92*cadp+(catp_o-0.1)+0.98)*(casp+57.05882352941176*caspp+(1465.0800927380121*cthr^4.09+0.97)/(37.407535277527636*cthr^4.09+1)))-1*(-112.81249999999999*cadp*caspp+0.0722*casp*(catp_o-0.1))/((0.88*cadp+(catp_o-0.1)+0.22)*(2.576256926525514*casp+48.49424802871556*caspp+0.8244022164881646)))]==>atp_o",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vak term 2/4",
+     "vasd",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "asp+S[USER;cadp,casp,caspp,catp_o,cthr:(0.15*(37.407535277527636*cthr^4.09+1)*(catp_o-0.1)/(5743.113963533007*cadp*cthr^4.09+3.8024*cadp+1465.0800927380121*cthr^4.09*(catp_o-0.1)+1435.7784908832518*cthr^4.09+(37.407535277527636*cthr^4.09+1)*(223.6705882352941*cadp*caspp+3.92*cadp*(casp+1e-30)+0.98*casp+57.05882352941176*caspp*(catp_o-0.1)+55.917647058823526*caspp+(casp+1e-30)*(catp_o-0.1)+9.8e-31)+0.97*(catp_o-0.1)+0.9506))]==>adp+aspp",
+     "source+S[USER;casa,caspp,cnadp,cnadph,cphos:(1*(-0.003211909820753981*casa*cnadp*cphos+0.1812*caspp*cnadph)/((caspp+(0.19999999999999998*casa+0.022)*(0.1*cphos+1))*(0.20138888888888892*cnadp+cnadph+0.029)))]==>asa+nadp+phos",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vak term 3/4 (shifted atp_o)",
+     "vasd (consumes aspp)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cadp,casp,caspp,catp_o:(112.81249999999999*cadp*caspp/(2.267106095342452*cadp*casp+42.67493826526969*cadp*caspp+0.7254739505095847*cadp+2.576256926525514*casp*(catp_o-0.1)+0.566776523835613*casp+48.49424802871556*caspp*(catp_o-0.1)+10.668734566317422*caspp+0.8244022164881646*(catp_o-0.1)+0.18136848762739619))]==>atp_o",
+     "source+S[USER;casa,caspp,cnadp,cnadph,cphos:((-1*1*(-0.003211909820753981*casa*cnadp*cphos+0.1812*caspp*cnadph)/((caspp+(0.19999999999999998*casa+0.022)*(0.1*cphos+1))*(0.20138888888888892*cnadp+cnadph+0.029))))]==>aspp",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vak term 3/4",
+     "vasd (consumes nadph)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "adp+aspp+S[USER;cadp,casp,caspp,catp_o:(112.81249999999999/(0.7254739505095847*cadp+2.267106095342452*casp*(cadp+1e-30)+2.576256926525514*casp*(catp_o-0.1)+0.566776523835613*casp+10.668734566317422*caspp+42.67493826526969*(cadp+1e-30)*(caspp+1e-30)+48.49424802871556*(caspp+1e-30)*(catp_o-0.1)+0.8244022164881646*(catp_o-0.1)+0.18136848762739619))]==>asp",
+     "source+S[USER;casa,caspp,cnadp,cnadph,cphos:((-1*1*(-0.003211909820753981*casa*cnadp*cphos+0.1812*caspp*cnadph)/((caspp+(0.19999999999999998*casa+0.022)*(0.1*cphos+1))*(0.20138888888888892*cnadp+cnadph+0.029))))]==>nadph",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vak term 4/4 (shifted atp_o)",
+     "vhdh",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cadp,casp,caspp,catp_o,cthr:(234.37499999999997*cadp*caspp/(3.92*cadp*casp+223.6705882352941*cadp*caspp+5743.113963533007*cadp*cthr^4.09/(37.407535277527636*cthr^4.09+1)+3.8024*cadp/(37.407535277527636*cthr^4.09+1)+casp*(catp_o-0.1)+0.98*casp+57.05882352941176*caspp*(catp_o-0.1)+55.917647058823526*caspp+1465.0800927380121*cthr^4.09*(catp_o-0.1)/(37.407535277527636*cthr^4.09+1)+1435.7784908832518*cthr^4.09/(37.407535277527636*cthr^4.09+1)+0.97*(catp_o-0.1)/(37.407535277527636*cthr^4.09+1)+0.9506/(37.407535277527636*cthr^4.09+1)))]==>atp_o",
+     "source+S[USER;casa,chs,cnadp,cnadph,cthr:(1*(3.8954564968330314*cthr^1.41+1)*(1.001*casa*cnadph-0.0003165439937828547*chs*cnadp)/((26.831926442700137*cthr^1.41+1)*(casa+0.07079646017699115*chs+0.24)*(0.5522388059701492*cnadp+cnadph+0.037)))]==>hs+nadp",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vak term 4/4",
+     "vhdh (consumes asa)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "adp+aspp+S[USER;cadp,casp,caspp,catp_o,cthr:((8767.391080670539*cthr^4.09+234.37499999999997)/(3.8024*cadp+5743.113963533007*cthr^4.09*(cadp+1e-30)+1465.0800927380121*cthr^4.09*(catp_o-0.1)+1435.7784908832518*cthr^4.09+(37.407535277527636*cthr^4.09+1)*(3.92*casp*(cadp+1e-30)+casp*(catp_o-0.1)+0.98*casp+55.917647058823526*caspp+223.6705882352941*(cadp+1e-30)*(caspp+1e-30)+57.05882352941176*(caspp+1e-30)*(catp_o-0.1)+5.591764705882353e-29)+0.97*(catp_o-0.1)+0.9506))]==>asp",
+     "source+S[USER;casa,chs,cnadp,cnadph,cthr:((-1*1*(3.8954564968330314*cthr^1.41+1)*(1.001*casa*cnadph-0.0003165439937828547*chs*cnadp)/((26.831926442700137*cthr^1.41+1)*(casa+0.07079646017699115*chs+0.24)*(0.5522388059701492*cnadp+cnadph+0.037))))]==>asa",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vasd term 1/2",
+     "vhdh (consumes nadph)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "aspp+nadph+S[USER;casa,caspp,cnadp,cnadph,cphos:(0.1812/(0.004027777777777778*casa*cnadp*cphos+0.04027777777777778*casa*cnadp+0.02*casa*cphos*(cnadph+1e-30)+0.00058*casa*cphos+0.19999999999999998*casa*(cnadph+1e-30)+0.0058*casa+0.029*caspp+0.0004430555555555556*cnadp*cphos+0.20138888888888892*cnadp*(caspp+1e-30)+0.004430555555555556*cnadp+0.022*cnadph+0.0021999999999999997*cphos*(cnadph+1e-30)+6.38e-5*cphos+1*(caspp+1e-30)*(cnadph+1e-30)+0.000638))]==>asa+nadp+phos",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "vasd term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "asa+nadp+phos+S[USER;casa,caspp,cnadp,cnadph,cphos:(0.003211909820753981/(0.0058*casa+1*caspp*cnadph+0.20138888888888892*caspp*(cnadp+1e-30)+0.029*caspp+0.004430555555555556*cnadp+0.02*cnadph*(casa+1e-30)*(cphos+1e-30)+0.19999999999999998*cnadph*(casa+1e-30)+0.0021999999999999997*cnadph*(cphos+1e-30)+0.022*cnadph+6.38e-5*cphos+0.004027777777777778*(casa+1e-30)*(cnadp+1e-30)*(cphos+1e-30)+0.04027777777777778*(casa+1e-30)*(cnadp+1e-30)+0.00058*(casa+1e-30)*(cphos+1e-30)+0.0004430555555555556*(cnadp+1e-30)*(cphos+1e-30)+0.000638))]==>aspp+nadph",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "vhdh term 1/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "asa+nadph+S[USER;casa,chs,cnadp,cnadph,cthr:(1.001/(0.037*casa+1.0490358244669449*chs*cnadp*cthr^1.41+0.03909655263505481*chs*cnadp+1.8996054118725758*chs*cthr^1.41*(cnadph+1e-30)+0.07028540023928531*chs*cthr^1.41+0.07079646017699115*chs*(cnadph+1e-30)+0.0026194690265486723*chs+14.817631020595597*cnadp*cthr^1.41*(casa+1e-30)+3.556231444942943*cnadp*cthr^1.41+0.5522388059701492*cnadp*(casa+1e-30)+0.1325373134328358*cnadp+0.24*cnadph+26.831926442700137*cthr^1.41*(casa+1e-30)*(cnadph+1e-30)+0.992781278379905*cthr^1.41*(casa+1e-30)+6.439662346248032*cthr^1.41*(cnadph+1e-30)+0.2382675068111772*cthr^1.41+(casa+1e-30)*(cnadph+1e-30)+0.008879999999999999))]==>hs+nadp",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "vhdh term 2/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "hs+nadp+S[USER;casa,chs,cnadp,cnadph,cthr:(0.0003165439937828547/(26.831926442700137*casa*cnadph*cthr^1.41+casa*cnadph+14.817631020595597*casa*cthr^1.41*(cnadp+1e-30)+0.992781278379905*casa*cthr^1.41+0.5522388059701492*casa*(cnadp+1e-30)+0.037*casa+0.0026194690265486723*chs+0.1325373134328358*cnadp+1.8996054118725758*cnadph*cthr^1.41*(chs+1e-30)+6.439662346248032*cnadph*cthr^1.41+0.07079646017699115*cnadph*(chs+1e-30)+0.24*cnadph+1.0490358244669449*cthr^1.41*(chs+1e-30)*(cnadp+1e-30)+0.07028540023928531*cthr^1.41*(chs+1e-30)+3.556231444942943*cthr^1.41*(cnadp+1e-30)+0.2382675068111772*cthr^1.41+0.03909655263505481*(chs+1e-30)*(cnadp+1e-30)+0.008879999999999999))]==>asa+nadph",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "vhdh term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "asa+nadph+S[USER;casa,chs,cnadp,cnadph,cthr:(3.899351953329864*cthr^1.41/(0.037*casa+1.0490358244669449*chs*cnadp*cthr^1.41+0.03909655263505481*chs*cnadp+1.8996054118725758*chs*cthr^1.41*(cnadph+1e-30)+0.07028540023928531*chs*cthr^1.41+0.07079646017699115*chs*(cnadph+1e-30)+0.0026194690265486723*chs+14.817631020595597*cnadp*cthr^1.41*(casa+1e-30)+3.556231444942943*cnadp*cthr^1.41+0.5522388059701492*cnadp*(casa+1e-30)+0.1325373134328358*cnadp+0.24*cnadph+26.831926442700137*cthr^1.41*(casa+1e-30)*(cnadph+1e-30)+0.992781278379905*cthr^1.41*(casa+1e-30)+6.439662346248032*cthr^1.41*(cnadph+1e-30)+0.2382675068111772*cthr^1.41+(casa+1e-30)*(cnadph+1e-30)+0.008879999999999999))]==>hs+nadp",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "vhdh term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "hs+nadp+S[USER;casa,chs,cnadp,cnadph,cthr:(0.001233083357114896*cthr^1.41/(26.831926442700137*casa*cnadph*cthr^1.41+casa*cnadph+14.817631020595597*casa*cthr^1.41*(cnadp+1e-30)+0.992781278379905*casa*cthr^1.41+0.5522388059701492*casa*(cnadp+1e-30)+0.037*casa+0.0026194690265486723*chs+0.1325373134328358*cnadp+1.8996054118725758*cnadph*cthr^1.41*(chs+1e-30)+6.439662346248032*cnadph*cthr^1.41+0.07079646017699115*cnadph*(chs+1e-30)+0.24*cnadph+1.0490358244669449*cthr^1.41*(chs+1e-30)*(cnadp+1e-30)+0.07028540023928531*cthr^1.41*(chs+1e-30)+3.556231444942943*cthr^1.41*(cnadp+1e-30)+0.2382675068111772*cthr^1.41+0.03909655263505481*(chs+1e-30)*(cnadp+1e-30)+0.008879999999999999))]==>asa+nadph",
+     "source+S[USER;casa,chs,cnadp,cnadph,cthr:((-1*1*(3.8954564968330314*cthr^1.41+1)*(1.001*casa*cnadph-0.0003165439937828547*chs*cnadp)/((26.831926442700137*cthr^1.41+1)*(casa+0.07079646017699115*chs+0.24)*(0.5522388059701492*cnadp+cnadph+0.037))))]==>nadph",
      ""
     ],
     [

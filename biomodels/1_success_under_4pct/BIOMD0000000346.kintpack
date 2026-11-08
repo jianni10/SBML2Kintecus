@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-02T03:33:45.546813+00:00",
+ "created": "2026-11-07T20:56:46.408251+00:00",
  "description": "FitzHugh1961_NerveMembrane\nBioModels BIOMD0000000346 (curated). SBML file: BIOMD0000000346_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000346_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.67e-06 of species peak (worst: y)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'x' goes below zero in the SBML: integrated as x_o = value + 5, output as x = OUTC[x_o;-5*source]\n  [info] 'y' goes below zero in the SBML: integrated as y_o = value + 1, output as y = OUTC[y_o;-1*source]",
  "settings": {
   "kpath": "",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cx_o:(3*(cx_o-5))]==>x_o",
+     "source+S[USER;cx_o:(3*(cx_o-5)-1*(cx_o-5)^3)]==>x_o",
      ""
     ],
     [
@@ -85,20 +85,6 @@
      "0",
      "0",
      "source+S[USER;cy_o:(3*(cy_o-1))]==>x_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dx/dt term 4 (shifted x_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cx_o:((-1*1*(cx_o-5)^3))]==>x_o",
      ""
     ],
     [

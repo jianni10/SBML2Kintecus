@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-05T16:30:10.678290+00:00",
+ "created": "2026-11-07T22:24:04.953099+00:00",
  "description": "West2019 - Cellular interactions constrain tumor growth\nBioModels BIOMD0000000820 (curated). SBML file: West2019 - Cellular interactions constrain tumor growth.xml.\nSimulation: 0 to 20 time units (SED-ML: West2019 - Cellular interactions constrain tumor growth.sedml), sampling 0.02.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.82e-06 of species peak (worst: tumor_at_Exp_Lin_growth)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time event(s) on 'alpha_1_variable' encoded as time/value pairs in EV_P_ALPHA_1_VARIABL.TXT (SET)\n  [info] time event(s) on 'alpha_0_variable' encoded as time/value pairs in EV_P_ALPHA_0_VARIABL.TXT (SET)\nRenamed species (Kintecus name = SBML id): tumoratGenlogisticgrowth1 = tumor_at_Gen__logistic_growth; p_alpha_1_variable = alpha_1_variable; p_alpha_0_variable = alpha_0_variable",
  "settings": {
   "kpath": "",
@@ -77,56 +77,28 @@
      "#",
      "",
      "",
-     "generalized_logistic_growth term 1/2",
+     "generalized_logistic_growth",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "tumoratGenlogisticgrowth1==>2tumoratGenlogisticgrowth1",
+     "tumoratGenlogisticgrowth1+S[USER;ctumoratGenlogisticgrowth1:(1-0.251188643150958*ctumoratGenlogisticgrowth1^0.3)]==>2tumoratGenlogisticgrowth1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "generalized_logistic_growth term 2/2",
+     "Gompertz_growth",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "tumoratGenlogisticgrowth1+S[USER;ctumoratGenlogisticgrowth1:(0.251188643150958*ctumoratGenlogisticgrowth1^0.3)]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Gompertz_growth term 1/2",
-     ""
-    ],
-    [
-     "4.605170185988092",
-     "0",
-     "0",
-     "tumor_at_Gomp__growth==>2tumor_at_Gomp__growth",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Gompertz_growth term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "tumor_at_Gomp__growth+S[USER;ctumor_at_Gomp__growth:(1*log(ctumor_at_Gomp__growth))]==>sink",
+     "source+S[USER;ctumor_at_Gomp__growth:(-1*ctumor_at_Gomp__growth*log(ctumor_at_Gomp__growth)+4.605170185988092*ctumor_at_Gomp__growth)]==>tumor_at_Gomp__growth",
      ""
     ],
     [
@@ -147,28 +119,14 @@
      "#",
      "",
      "",
-     "Von_Bertalanffy_equation term 1/2",
+     "Von_Bertalanffy_equation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;ctumor_at_Von_Bert__growth:(4*ctumor_at_Von_Bert__growth^0.6666666666666666)]==>tumor_at_Von_Bert__growth",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Von_Bertalanffy_equation term 2/2",
-     ""
-    ],
-    [
-     "0.2",
-     "0",
-     "0",
-     "tumor_at_Von_Bert__growth==>sink",
+     "source+S[USER;ctumor_at_Von_Bert__growth:(4*ctumor_at_Von_Bert__growth^0.6666666666666666-0.2*ctumor_at_Von_Bert__growth)]==>tumor_at_Von_Bert__growth",
      ""
     ],
     [
@@ -189,28 +147,14 @@
      "#",
      "",
      "",
-     "logistic_growth term 1/2",
+     "logistic_growth",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "tumor_at_Logistic_growth==>2tumor_at_Logistic_growth",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "logistic_growth term 2/2",
-     ""
-    ],
-    [
-     "0.01",
-     "0",
-     "0",
-     "tumor_at_Logistic_growth+tumor_at_Logistic_growth==>tumor_at_Logistic_growth",
+     "tumor_at_Logistic_growth+S[USER;ctumor_at_Logistic_growth:(1-0.01*ctumor_at_Logistic_growth)]==>2tumor_at_Logistic_growth",
      ""
     ],
     [
@@ -365,17 +309,6 @@
      "No",
      "1",
      "constant 1.0: nothing consumed [__source__]",
-     ""
-    ],
-    [
-     "sink",
-     "0",
-     "1",
-     "N",
-     "0",
-     "No",
-     "1",
-     "constant 1.0: nothing produced [__sink__]",
      ""
     ],
     [

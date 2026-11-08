@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:08:32.789999+00:00",
+ "created": "2026-11-07T22:20:04.618466+00:00",
  "description": "Eftimie2010 - immunity to melanoma\nBioModels BIOMD0000000768 (curated). SBML file: Eftimie2010.xml.\nSimulation: 0 to 30 time units (SED-ML: Eftimie2010.sedml), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.75e-06 of species peak (worst: Cs)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] tumor_death: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): T1 = T",
  "settings": {
   "kpath": "",
@@ -63,28 +63,14 @@
      "#",
      "",
      "",
-     "Th_growth term 1/2",
+     "Th_growth",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Th+S[USER;cCp:(0.09/(1*cCp+1))]==>2Th",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Th_growth term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Th+Th+S[USER;cCp:(9e-10/(1*cCp+1))]==>Th",
+     "Th+S[USER;cCp,cTh:(0.09*(1-1e-8*cTh)/(1*cCp+1))]==>2Th",
      ""
     ],
     [
@@ -119,56 +105,28 @@
      "#",
      "",
      "",
-     "tumor_growth term 1/4",
+     "tumor_growth term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "T1+S[USER;cCs:(0.514/(1*cCs+1))]==>2T1",
+     "T1+S[USER;cCs,cT1:(1*(0.514-5.2428e-10*cT1)/(cCs+1))]==>2T1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "tumor_growth term 2/4",
+     "tumor_growth term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "T1+T1+S[USER;cCs:(5.2428e-10/(1*cCs+1))]==>T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Cp+T1+S[USER;cCs:(0.514/(1*cCs+1))]==>2T1+Cp",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "T1+T1+Cp+S[USER;cCs:(5.2428e-10/(1*cCs+1))]==>Cp+T1",
+     "Cp+T1+S[USER;cCs,cT1:(1*(0.514-5.2428e-10*cT1)/(cCs+1))]==>2T1+Cp",
      ""
     ],
     [

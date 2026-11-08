@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:53:44.839265+00:00",
- "description": "Sonntag2012 - mTOR model - IRS dependent regulation of AMPK by insulin\nBioModels BIOMD0000000580 (curated). SBML file: BIOMD0000000580_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000580_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.96e-06 of species peak (worst: PRAS40_pS183)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Insulin' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Amino_Acids' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IR_beta_pY1146_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IRS1_pS636_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'AMPK_pT172_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Akt_pT308_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Akt_pS473_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'TSC1_TSC2_pS1387_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'mTOR_pS2448_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'mTOR_pS2481_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'p70S6K_pT389_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'PRAS40_pT246_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'PRAS40_pS183_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction_1 term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - IR_beta_pY1146: zero order, signed\n  [info] reaction_1 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - IR_beta_pY1146: zero order, signed\n  [info] reaction_14 term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - mTORC1_pS2448: zero order, signed\n  [info] reaction_14 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - mTORC1_pS2448: zero order, signed",
+ "created": "2026-11-07T21:57:48.669733+00:00",
+ "description": "Sonntag2012 - mTOR model - IRS dependent regulation of AMPK by insulin\nBioModels BIOMD0000000580 (curated). SBML file: BIOMD0000000580_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000580_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.96e-06 of species peak (worst: PRAS40_pS183)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Insulin' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Amino_Acids' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IR_beta_pY1146_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IRS1_pS636_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'AMPK_pT172_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Akt_pT308_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Akt_pS473_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'TSC1_TSC2_pS1387_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'mTOR_pS2448_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'mTOR_pS2481_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'p70S6K_pT389_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'PRAS40_pT246_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'PRAS40_pS183_obs' is defined by an assignment rule; not a Kintecus state (not output)",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,84 +49,14 @@
      "#",
      "",
      "",
-     "reaction_1 term 1/4",
-     ""
-    ],
-    [
-     "1.24273166818913",
-     "0",
-     "0",
-     "IR_beta==>IR_beta_pY1146",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 2/4",
+     "reaction_1",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cIR_beta,cSW1:(1.24273166818913*cIR_beta*cSW1)]==>IR_beta",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 2/4 (consumes IR_beta_pY1146)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cIR_beta,cSW1:((-1*1.24273166818913*cIR_beta*cSW1))]==>IR_beta_pY1146",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cIR_beta,cSW2:(1.24273166818913*cIR_beta*cSW2)]==>IR_beta",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 3/4 (consumes IR_beta_pY1146)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cIR_beta,cSW2:((-1*1.24273166818913*cIR_beta*cSW2))]==>IR_beta_pY1146",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "IR_beta+S[USER;cSW1,cSW2:(1.24273166818913*cSW1*cSW2)]==>IR_beta_pY1146",
+     "IR_beta+S[USER;cSW1,cSW2:(0.124273166818913*(1-cSW2)*(10-10*cSW1))]==>IR_beta_pY1146",
      ""
     ],
     [
@@ -301,84 +231,14 @@
      "#",
      "",
      "",
-     "reaction_14 term 1/4",
-     ""
-    ],
-    [
-     "0.0438915524637669",
-     "0",
-     "0",
-     "mTORC1==>mTORC1_pS2448",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_14 term 2/4",
+     "reaction_14",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cmTORC1:(0.0438915524637669*cSW1*cmTORC1)]==>mTORC1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_14 term 2/4 (consumes mTORC1_pS2448)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cmTORC1:((-1*0.0438915524637669*cSW1*cmTORC1))]==>mTORC1_pS2448",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_14 term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW2,cmTORC1:(0.0438915524637669*cSW2*cmTORC1)]==>mTORC1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_14 term 3/4 (consumes mTORC1_pS2448)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW2,cmTORC1:((-1*0.0438915524637669*cSW2*cmTORC1))]==>mTORC1_pS2448",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_14 term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "mTORC1+S[USER;cSW1,cSW2:(0.0438915524637669*cSW1*cSW2)]==>mTORC1_pS2448",
+     "mTORC1+S[USER;cSW1,cSW2:(0.00438915524637669*(1-cSW2)*(10-10*cSW1))]==>mTORC1_pS2448",
      ""
     ],
     [
@@ -877,17 +737,6 @@
      "No",
      "No",
      "PI3K_variant_p [PI3K_variant_p]",
-     ""
-    ],
-    [
-     "source",
-     "0",
-     "1",
-     "N",
-     "0",
-     "No",
-     "1",
-     "constant 1.0: nothing consumed [__source__]",
      ""
     ],
     [

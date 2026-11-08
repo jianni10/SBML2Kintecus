@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:59:07.088704+00:00",
- "description": "Feizabadi2011/1 - immunodeficiency in cancer core model\nBioModels BIOMD0000000760 (curated). SBML file: Feizabadi2011_1.xml.\nSimulation: 0 to 200 time units (SED-ML: Feizabadi2011_1.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.16e-06 of species peak (worst: T)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] tumor_inhibition: rate order differs from the stoichiometry; consumed on separate line(s) - T1: zero order, signed\n  [info] normal_cell_stimulation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - N: zero order, signed\nRenamed species (Kintecus name = SBML id): T1 = T",
+ "created": "2026-11-07T22:19:49.792972+00:00",
+ "description": "Feizabadi2011/1 - immunodeficiency in cancer core model\nBioModels BIOMD0000000760 (curated). SBML file: Feizabadi2011_1.xml.\nSimulation: 0 to 200 time units (SED-ML: Feizabadi2011_1.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.16e-06 of species peak (worst: T)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] tumor_inhibition: rate order differs from the stoichiometry; consumed on separate line(s) - T1: zero order, signed\nRenamed species (Kintecus name = SBML id): T1 = T",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,56 +49,28 @@
      "#",
      "",
      "",
-     "tumor_growth term 1/2",
+     "tumor_growth",
      ""
     ],
     [
-     "0.3",
+     "1",
      "0",
      "0",
-     "T1==>2T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth term 2/2",
-     ""
-    ],
-    [
-     "2.5e-7",
-     "0",
-     "0",
-     "T1+T1==>T1",
+     "T1+S[USER;cT1:(0.3-2.5e-7*cT1)]==>2T1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "normal_cell_growth term 1/2",
+     "normal_cell_growth",
      ""
     ],
     [
-     "0.4",
+     "1",
      "0",
      "0",
-     "N==>2N",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "normal_cell_growth term 2/2",
-     ""
-    ],
-    [
-     "4.0000000000000003e-7",
-     "0",
-     "0",
-     "N+N==>N",
+     "N+S[USER;cN:(0.4-4.0000000000000003e-7*cN)]==>2N",
      ""
     ],
     [
@@ -119,28 +91,14 @@
      "#",
      "",
      "",
-     "normal_cell_stimulation term 1/2",
-     ""
-    ],
-    [
-     "0.028",
-     "0",
-     "0",
-     "T1==>N+T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "normal_cell_stimulation term 2/2 (consumes N)",
+     "normal_cell_stimulation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cT1:((-1*9.333333333333334e-8*cT1^2))]==>N",
+     "T1+S[USER;cT1:(0.028-9.333333333333334e-8*cT1)]==>N+T1",
      ""
     ],
     [

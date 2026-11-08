@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T16:06:02.927560+00:00",
- "description": "Reiterer2013 - pseudophosphatase STYX role in ERK signalling\nBioModels BIOMD0000000557 (curated). SBML file: BIOMD0000000557_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000557_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.00e-06 of species peak (worst: pERKn)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'u_ppMEKc_tot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ppMEKc_tot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ERKc_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'pERKc_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ppERKc_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ERK_ppMEKc_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction_1 term 3/7: rate order differs from the stoichiometry; consumed on separate line(s) - ERK_ppMEKc: zero order, signed\n  [info] reaction_1 term 5/7: rate order differs from the stoichiometry; consumed on separate line(s) - ERK_ppMEKc: zero order, signed\n  [info] reaction_1 term 6/7: rate order differs from the stoichiometry; consumed on separate line(s) - ERK_ppMEKc: zero order, signed\n  [info] reaction_3 term 3/7: rate order differs from the stoichiometry; consumed on separate line(s) - pERK_ppMEKc: zero order, signed\n  [info] reaction_3 term 5/7: rate order differs from the stoichiometry; consumed on separate line(s) - pERK_ppMEKc: zero order, signed\n  [info] reaction_3 term 6/7: rate order differs from the stoichiometry; consumed on separate line(s) - pERK_ppMEKc: zero order, signed\nRenamed species (Kintecus name = SBML id): DUSPn1 = DUSPn",
+ "created": "2026-11-07T21:54:48.338263+00:00",
+ "description": "Reiterer2013 - pseudophosphatase STYX role in ERK signalling\nBioModels BIOMD0000000557 (curated). SBML file: BIOMD0000000557_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000557_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.00e-06 of species peak (worst: pERKn)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'u_ppMEKc_tot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ppMEKc_tot' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ERKc_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'pERKc_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ppERKc_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ERK_ppMEKc_obs' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction_1 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - ERK_ppMEKc: zero order, signed\n  [info] reaction_3 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - pERK_ppMEKc: zero order, signed\nRenamed species (Kintecus name = SBML id): DUSPn1 = DUSPn",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,21 +49,21 @@
      "#",
      "",
      "",
-     "reaction_1 term 1/7",
+     "reaction_1 term 1/4",
      ""
     ],
     [
-     "94",
+     "1",
      "0",
      "0",
-     "ERKc==>ERK_ppMEKc",
+     "ERKc+S[USER;cSW2,cSW3:(94*cSW2*cSW3-94*cSW2-94*cSW3+94)]==>ERK_ppMEKc",
      ""
     ],
     [
      "#",
      "",
      "",
-     "reaction_1 term 2/7",
+     "reaction_1 term 2/4",
      ""
     ],
     [
@@ -77,7 +77,7 @@
      "#",
      "",
      "",
-     "reaction_1 term 3/7",
+     "reaction_1 term 3/4",
      ""
     ],
     [
@@ -91,7 +91,7 @@
      "#",
      "",
      "",
-     "reaction_1 term 3/7 (consumes ERK_ppMEKc)",
+     "reaction_1 term 3/4 (consumes ERK_ppMEKc)",
      ""
     ],
     [
@@ -105,7 +105,7 @@
      "#",
      "",
      "",
-     "reaction_1 term 4/7",
+     "reaction_1 term 4/4",
      ""
     ],
     [
@@ -113,76 +113,6 @@
      "0",
      "0",
      "ERK_ppMEKc+ERKc==>2ERKc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 5/7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cERKc,cSW2:(94*cERKc*cSW2)]==>ERKc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 5/7 (consumes ERK_ppMEKc)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cERKc,cSW2:((-1*94*cERKc*cSW2))]==>ERK_ppMEKc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 6/7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cERKc,cSW3:(94*cERKc*cSW3)]==>ERKc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 6/7 (consumes ERK_ppMEKc)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cERKc,cSW3:((-1*94*cERKc*cSW3))]==>ERK_ppMEKc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 7/7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "ERKc+S[USER;cSW2,cSW3:(94*cSW2*cSW3)]==>ERK_ppMEKc",
      ""
     ],
     [
@@ -203,21 +133,21 @@
      "#",
      "",
      "",
-     "reaction_3 term 1/7",
+     "reaction_3 term 1/4",
      ""
     ],
     [
-     "94",
+     "1",
      "0",
      "0",
-     "pERKc==>pERK_ppMEKc",
+     "pERKc+S[USER;cSW2,cSW3:(94*cSW2*cSW3-94*cSW2-94*cSW3+94)]==>pERK_ppMEKc",
      ""
     ],
     [
      "#",
      "",
      "",
-     "reaction_3 term 2/7",
+     "reaction_3 term 2/4",
      ""
     ],
     [
@@ -231,7 +161,7 @@
      "#",
      "",
      "",
-     "reaction_3 term 3/7",
+     "reaction_3 term 3/4",
      ""
     ],
     [
@@ -245,7 +175,7 @@
      "#",
      "",
      "",
-     "reaction_3 term 3/7 (consumes pERK_ppMEKc)",
+     "reaction_3 term 3/4 (consumes pERK_ppMEKc)",
      ""
     ],
     [
@@ -259,7 +189,7 @@
      "#",
      "",
      "",
-     "reaction_3 term 4/7",
+     "reaction_3 term 4/4",
      ""
     ],
     [
@@ -267,76 +197,6 @@
      "0",
      "0",
      "pERK_ppMEKc+pERKc==>2pERKc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_3 term 5/7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW2,cpERKc:(94*cSW2*cpERKc)]==>pERKc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_3 term 5/7 (consumes pERK_ppMEKc)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW2,cpERKc:((-1*94*cSW2*cpERKc))]==>pERK_ppMEKc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_3 term 6/7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW3,cpERKc:(94*cSW3*cpERKc)]==>pERKc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_3 term 6/7 (consumes pERK_ppMEKc)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW3,cpERKc:((-1*94*cSW3*cpERKc))]==>pERK_ppMEKc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_3 term 7/7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "pERKc+S[USER;cSW2,cSW3:(94*cSW2*cSW3)]==>pERK_ppMEKc",
      ""
     ],
     [

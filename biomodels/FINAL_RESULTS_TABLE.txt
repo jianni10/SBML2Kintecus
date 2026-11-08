@@ -15,15 +15,15 @@ lines -INT:5:10:0 (DASPK without non-negativity), then for packs that still did 
 15 references (55, 165, 179, 180, 250, 286, 288, 451, 540, 541, 658, 858, 859, 948, 1025) use libRoadRunner default
 tolerances because CVODE fails at rtol 1e-10.
 
-  SUCCESS (under 4%)                                   943
-    of which within 0.1%                               922
-  off by 4% or more                                     64
+  SUCCESS (under 4%)                                   961
+    of which within 0.1%                               942
+  off by 4% or more                                     59
   deck correct, Kintecus too slow / stops                4
-  Kintecus too slow / stops, deck not confirmed         27
+  Kintecus too slow / stops, deck not confirmed         14
   runs, SBML reference not simulable                     7
   runs, nothing changes to compare                       8
   no pack (nothing convertible / converter error)       27
-  (of all packs, 81 have parts that could not be converted - listed in the notes)
+  (of all packs, 78 have parts that could not be converted - listed in the notes)
   1072 entries were rebuilt with the latest converter (column built_with_latest_fixes); the rest keep their earlier build and result.
 
 Columns in FINAL_RESULTS_TABLE.csv: id, name, success_under_4pct, within_0.1pct, kintecus_match_error_percent (Kintecus vs
@@ -277,11 +277,12 @@ BIOMD0000000058  YES  Kintecus  0.00038%  deck        -%  PASS
     Bindschadler2001_coupled_Ca_oscillators
     Kintecus matches the SBML within 0.1% (max 0.00038% of peak, worst species c2). Duration 30 chosen from
     the dynamics (no curated SED-ML time course).
-BIOMD0000000059  YES  Kintecus    0.312%  deck    0.148%  PASS
+BIOMD0000000059  YES  Kintecus    0.312%  deck   0.0646%  PASS
     Fridlyand2003_Calcium_flux
     PASS under the 4% rule: Kintecus is off by 0.312% of peak (worst species n); before 2026-10-30 (0.1%
-    rule) this was ?. The deck itself is also off (0.148% in the independent run). Duration 100000 chosen
-    from the dynamics (no curated SED-ML time course).
+    rule) this was ?. The deck itself reproduces the SBML to 0.0646% (independent SciPy run of the same
+    deck), so the remaining difference arises inside Kintecus (integration or evaluation). Duration 100000
+    chosen from the dynamics (no curated SED-ML time course).
 BIOMD0000000060  YES  Kintecus   0.0002%  deck        -%  PASS
     Keizer1996_Ryanodine_receptor_adaptation
     Kintecus matches the SBML within 0.1% (max 0.0002% of peak, worst species Po1). Duration 10 chosen from
@@ -342,9 +343,9 @@ BIOMD0000000074  YES  Kintecus   0.0005%  deck        -%  PASS
     Leloup2003_CircClock_DD_REV-ERBalpha
     Kintecus matches the SBML within 0.1% (max 0.0005% of peak, worst species species_0). Duration 300
     chosen from the dynamics (no curated SED-ML time course).
-BIOMD0000000075  YES  Kintecus  0.00039%  deck        -%  PASS
+BIOMD0000000075  YES  Kintecus  0.00038%  deck        -%  PASS
     Xu2003 - Phosphoinositide turnover
-    Kintecus matches the SBML within 0.1% (max 0.00039% of peak, worst species IP3_Cyt). Duration 1000
+    Kintecus matches the SBML within 0.1% (max 0.00038% of peak, worst species IP3_Cyt). Duration 1000
     chosen from the dynamics (no curated SED-ML time course).
 BIOMD0000000076  YES  Kintecus  0.00011%  deck        -%  PASS
     Cronwright2002_Glycerol_Synthesis
@@ -411,9 +412,9 @@ BIOMD0000000090  YES  Kintecus  0.00039%  deck        -%  PASS
     Wolf2001_Respiratory_Oscillations
     Kintecus matches the SBML within 0.1% (max 0.00039% of peak, worst species aco). Duration 300 chosen
     from the dynamics (no curated SED-ML time course).
-BIOMD0000000091  YES  Kintecus   0.0068%  deck        -%  PASS
+BIOMD0000000091  YES  Kintecus   0.0014%  deck        -%  PASS
     Proctor2005 - Actions of chaperones and their role in ageing
-    Kintecus matches the SBML within 0.1% (max 0.0068% of peak, worst species TriH). Duration 100000 chosen
+    Kintecus matches the SBML within 0.1% (max 0.0014% of peak, worst species MisP). Duration 100000 chosen
     from the dynamics (no curated SED-ML time course).
 BIOMD0000000092  YES  Kintecus  0.00021%  deck        -%  PASS
     Fuentes2005_ZymogenActivation
@@ -475,9 +476,9 @@ BIOMD0000000106  YES  Kintecus  0.00039%  deck        -%  PASS
     Yang2007_ArachidonicAcid
     Kintecus matches the SBML within 0.1% (max 0.00039% of peak, worst species x11). Duration 100000 chosen
     from the dynamics (no curated SED-ML time course).
-BIOMD0000000107  YES  Kintecus   0.0101%  deck        -%  PASS
+BIOMD0000000107  YES  Kintecus   0.0098%  deck        -%  PASS
     Novak1993 - Cell cycle M-phase control
-    Kintecus matches the SBML within 0.1% (max 0.0101% of peak, worst species UbE_star). Duration 100000
+    Kintecus matches the SBML within 0.1% (max 0.0098% of peak, worst species UbE_star). Duration 100000
     chosen from the dynamics (no curated SED-ML time course).
 BIOMD0000000108  YES  Kintecus  0.00044%  deck        -%  PASS
     Kowald2006_SOD
@@ -528,8 +529,8 @@ BIOMD0000000118  YES  Kintecus   0.0146%  deck        -%  PASS
     the dynamics (no curated SED-ML time course).
 BIOMD0000000119  YES  Kintecus   0.0497%  deck        -%  PASS
     Golomb2006_SomaticBursting_nonzero[Ca]
-    Kintecus matches the SBML within 0.1% (max 0.0497% of peak, worst species nns). Duration 10000 chosen
-    from the dynamics (no curated SED-ML time course).
+    Kintecus matches the SBML within 0.1% (max 0.0497% of peak, worst species V). Duration 10000 chosen from
+    the dynamics (no curated SED-ML time course).
 BIOMD0000000120  YES  Kintecus  0.00042%  deck        -%  PASS
     Chan2004_TCell_receptor_activation
     Kintecus matches the SBML within 0.1% (max 0.00042% of peak, worst species phosphatase_active). Duration
@@ -546,9 +547,9 @@ BIOMD0000000123  YES  Kintecus   0.0004%  deck        -%  PASS
     Fisher2006_NFAT_Activation
     Kintecus matches the SBML within 0.1% (max 0.0004% of peak, worst species NFAT_Cyt). Duration 3000
     chosen from the dynamics (no curated SED-ML time course).
-BIOMD0000000124  YES  Kintecus  0.00095%  deck        -%  PASS
+BIOMD0000000124  YES  Kintecus   0.0052%  deck        -%  PASS
     Wu2006_K+Channel
-    Kintecus matches the SBML within 0.1% (max 0.00095% of peak, worst species n). Duration 100000 chosen
+    Kintecus matches the SBML within 0.1% (max 0.0052% of peak, worst species n). Duration 100000 chosen
     from the dynamics (no curated SED-ML time course).
 BIOMD0000000125  YES  Kintecus  0.00051%  deck        -%  PASS
     Komarova2005_TheoreticalFramework_BasicArchitecture
@@ -569,9 +570,9 @@ BIOMD0000000127  NO   Kintecus        -%  deck      inf%  KINTECUS_FAILED_PARTIA
     run of the deck: off by inf% (unconverted parts below). Not converted (1): event 'event_0000001' not
     converted (state-triggered (not a time >= t0 trigger)) Duration 100 chosen from the dynamics (no curated
     SED-ML time course).
-BIOMD0000000128  YES  Kintecus  0.00088%  deck        -%  PASS
+BIOMD0000000128  YES  Kintecus  0.00057%  deck        -%  PASS
     Bertram2006_Endothelin
-    Kintecus matches the SBML within 0.1% (max 0.00088% of peak, worst species n). Duration 100000 chosen
+    Kintecus matches the SBML within 0.1% (max 0.00057% of peak, worst species n). Duration 100000 chosen
     from the dynamics (no curated SED-ML time course).
 BIOMD0000000129  NO   Kintecus     68.9%  deck     68.9%  MISMATCH_PARTIAL
     Izhikevich2004_SpikingNeurons_inhibitionInducedSpiking
@@ -748,9 +749,9 @@ BIOMD0000000160  YES  Kintecus  0.00019%  deck        -%  PASS
     Xie2007_CircClock
     Kintecus matches the SBML within 0.1% (max 0.00019% of peak, worst species clkm). Duration 300 chosen
     from the dynamics (no curated SED-ML time course).
-BIOMD0000000161  YES  Kintecus   0.0172%  deck        -%  PASS
+BIOMD0000000161  YES  Kintecus   0.0005%  deck        -%  PASS
     Eungdamrong2007_Ras_Activation
-    Kintecus matches the SBML within 0.1% (max 0.0172% of peak, worst species CaCAPRI_PM_PM). Duration 30000
+    Kintecus matches the SBML within 0.1% (max 0.0005% of peak, worst species SosGrb2_cyt). Duration 30000
     chosen from the dynamics (no curated SED-ML time course).
 BIOMD0000000162  YES  Kintecus  0.00045%  deck        -%  PASS
     Hernjak2005_Calcium_Signaling
@@ -942,9 +943,9 @@ BIOMD0000000206  YES  Kintecus   0.0012%  deck        -%  PASS
     Wolf2000_Glycolytic_Oscillations
     Kintecus matches the SBML within 0.1% (max 0.0012% of peak, worst species at). Duration 10 chosen from
     the dynamics (no curated SED-ML time course).
-BIOMD0000000207  YES  Kintecus  0.00038%  deck        -%  PASS
+BIOMD0000000207  YES  Kintecus   0.0004%  deck        -%  PASS
     Romond1999_CellCycle
-    Kintecus matches the SBML within 0.1% (max 0.00038% of peak, worst species M1). Duration 10000 chosen
+    Kintecus matches the SBML within 0.1% (max 0.0004% of peak, worst species M2). Duration 10000 chosen
     from the dynamics (no curated SED-ML time course).
 BIOMD0000000208  YES  Kintecus  0.00041%  deck        -%  PASS
     Deineko2003_CellCycle
@@ -1069,12 +1070,10 @@ BIOMD0000000237  YES  Kintecus  0.00068%  deck        -%  PASS
     Schaber2006_Pheromone_Starvation_Crosstalk
     Kintecus matches the SBML within 0.1% (max 0.00068% of peak, worst species Ste5Ste11GbgFus3). Duration
     300 chosen from the dynamics (no curated SED-ML time course).
-BIOMD0000000238  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
+BIOMD0000000238  YES  Kintecus  0.00014%  deck        -%  PASS
     Overgaard2007_PDmodel_IL21
-    Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=0); -INT:5:
-    stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1 on
-    James's PC: over 3600 s (simulated time 0 of 1000)). The independent deck run also failed (Unexpected
-    istate in LSODA.). Duration 1000 chosen from the dynamics (no curated SED-ML time course).
+    Kintecus matches the SBML within 0.1% (max 0.00014% of peak, worst species M). Duration 1000 chosen from
+    the dynamics (no curated SED-ML time course).
 BIOMD0000000239  YES  Kintecus  0.00049%  deck        -%  PASS
     Jiang2007 - GSIS system, Pancreatic Beta Cells
     Kintecus matches the SBML within 0.1% (max 0.00049% of peak, worst species FAD). Duration 300 chosen
@@ -1095,14 +1094,10 @@ BIOMD0000000243  YES  Kintecus  0.00043%  deck        -%  PASS
     Neumann2010_CD95Stimulation_NFkB_Apoptosis
     Kintecus matches the SBML within 0.1% (max 0.00043% of peak, worst species p43_FLIP). Duration 3000
     chosen from the dynamics (no curated SED-ML time course).
-BIOMD0000000244  NO   Kintecus      100%  deck      100%  MISMATCH_PARTIAL
+BIOMD0000000244  YES  Kintecus  0.00049%  deck        -%  PASS
     Kotte2010_Ecoli_Metabolic_Adaption
-    Kintecus finishes but is off by 100% of peak (worst species ICT). The deck itself is also off (100% in
-    the independent run), consistent with the unconverted parts below. Not converted (3): event assignment
-    to 'GLC' not converted (absolute assignments at irregular times on a reacting species); event assignment
-    to 'ACT' not converted (absolute assignments at irregular times on a reacting species); event assignment
-    to 'BM' not converted (absolute assignments at irregular times on a reacting species) Duration 100000
-    chosen from the dynamics (no curated SED-ML time course).
+    Kintecus matches the SBML within 0.1% (max 0.00049% of peak, worst species Acs). Duration 100000 chosen
+    from the dynamics (no curated SED-ML time course).
 BIOMD0000000245  YES  Kintecus  0.00033%  deck        -%  PASS
     Lei2001_Yeast_Aerobic_Metabolism
     Kintecus matches the SBML within 0.1% (max 0.00033% of peak, worst species s_glu). Duration 100 chosen
@@ -1147,12 +1142,10 @@ BIOMD0000000254  YES  Kintecus   0.0004%  deck        -%  PASS
     Bier2000_GlycolyticOscillation
     Kintecus matches the SBML within 0.1% (max 0.0004% of peak, worst species G2). Duration 300 chosen from
     the dynamics (no curated SED-ML time course).
-BIOMD0000000255  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
+BIOMD0000000255  YES  Kintecus  0.00041%  deck        -%  PASS
     Chen2009 - ErbB Signaling
-    Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=0); -INT:5:
-    stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1 on
-    James's PC: over 3600 s (simulated time 0 of 300)). The independent deck run also failed (deck
-    simulation over 180 s). Duration 300 chosen from the dynamics (no curated SED-ML time course).
+    Kintecus matches the SBML within 0.1% (max 0.00041% of peak, worst species c288). Duration 300 chosen
+    from the dynamics (no curated SED-ML time course).
 BIOMD0000000256  NO   Kintecus     1045%  deck     1045%  MISMATCH_PARTIAL
     Rehm2006_Caspase
     Kintecus finishes but is off by 1045% of peak (worst species BIR12). The deck itself is also off (1045%
@@ -1206,9 +1199,9 @@ BIOMD0000000267  YES  Kintecus  0.00022%  deck        -%  PASS
     Lebeda2008 - BoNT paralysis (3 step model)
     Kintecus matches the SBML within 0.1% (max 0.00022% of peak, worst species bound). Duration 1000 chosen
     from the dynamics (no curated SED-ML time course).
-BIOMD0000000268  YES  Kintecus    0.001%  deck        -%  PASS
+BIOMD0000000268  YES  Kintecus  0.00045%  deck        -%  PASS
     Reed2008_Glutathione_Metabolism
-    Kintecus matches the SBML within 0.1% (max 0.001% of peak, worst species b_glu). Duration 100 chosen
+    Kintecus matches the SBML within 0.1% (max 0.00045% of peak, worst species m_coo). Duration 100 chosen
     from the dynamics (no curated SED-ML time course).
 BIOMD0000000269  YES  Kintecus  0.00046%  deck        -%  PASS
     Liu2010_Hormonal_Crosstalk_Arabidopsis
@@ -1238,17 +1231,15 @@ BIOMD0000000275  YES  Kintecus   0.0002%  deck        -%  PASS
     Goldbeter2007_Somitogenesis_Switch
     Kintecus matches the SBML within 0.1% (max 0.0002% of peak, worst species C). Duration 100 chosen from
     the dynamics (no curated SED-ML time course).
-BIOMD0000000276  NO   Kintecus        -%  deck      inf%  KINTECUS_FAILED
+BIOMD0000000276  YES  Kintecus  0.00026%  deck        -%  PASS
     Shrestha2010_HypoCalcemia_PTHresponse
-    Kintecus did not finish within the time limit (-INT:1: FATAL #167; -INT:5: reached the end time, but the
-    output contains NaN; -INT:1 (deck before 11-01): finished, off by 90.1%; -INT:5 (deck before 11-01):
-    finished, off by 90.1%). Independent run of the deck: off by inf%. Duration 300 chosen from the dynamics
-    (no curated SED-ML time course).
-BIOMD0000000277  NO   Kintecus     90.6%  deck     90.6%  MISMATCH
+    Kintecus matches the SBML within 0.1% (max 0.00026% of peak, worst species x2). Duration 300 chosen from
+    the dynamics (no curated SED-ML time course).
+BIOMD0000000277  YES  Kintecus    0.379%  deck    0.379%  PASS
     Shrestha2010_HyperCalcemia_PTHresponse
-    Kintecus finishes but is off by 90.6% of peak (worst species x2). The deck itself is also off (90.6% in
-    the independent run), so the conversion is the likely cause. Duration 300 chosen from the dynamics (no
-    curated SED-ML time course).
+    PASS under the 4% rule: Kintecus is off by 0.379% of peak (worst species x2); before 2026-10-30 (0.1%
+    rule) this was ?. The deck itself is also off (0.379% in the independent run). Duration 300 chosen from
+    the dynamics (no curated SED-ML time course).
 BIOMD0000000278  YES  Kintecus  6.9e-05%  deck        -%  PASS
     Lemaire2004 - Role of RANK/RANKL/OPG pathway in bone remodelling process
     Kintecus matches the SBML within 0.1% (max 6.9e-05% of peak, worst species B).
@@ -1362,9 +1353,9 @@ BIOMD0000000303  YES  Kintecus  0.00045%  deck        -%  PASS
     Liu2011_Complement_System
     Kintecus matches the SBML within 0.1% (max 0.00045% of peak, worst species dC4b_C2a_C4BP). Duration
     100000 chosen from the dynamics (no curated SED-ML time course).
-BIOMD0000000304  YES  Kintecus   0.0074%  deck        -%  PASS
+BIOMD0000000304  YES  Kintecus   0.0112%  deck        -%  PASS
     Plant1981_BurstingNerveCells
-    Kintecus matches the SBML within 0.1% (max 0.0074% of peak, worst species V_membrane). Duration 3000
+    Kintecus matches the SBML within 0.1% (max 0.0112% of peak, worst species V_membrane). Duration 3000
     chosen from the dynamics (no curated SED-ML time course).
 BIOMD0000000305  YES  Kintecus  0.00015%  deck        -%  PASS
     Kolomeisky2003_MyosinV_Processivity
@@ -1663,10 +1654,10 @@ BIOMD0000000376  NO   Kintecus     99.6%  deck      100%  MISMATCH
     Bertram2007_IsletCell_Oscillations
     Kintecus finishes but is off by 99.6% of peak (worst species n). The deck itself is also off (100% in
     the independent run), so the conversion is the likely cause.
-BIOMD0000000377  YES  Kintecus    0.112%  deck   0.0273%  PASS
+BIOMD0000000377  YES  Kintecus    0.112%  deck   0.0446%  PASS
     Bertram2000_PancreaticBetaCells_Oscillations
     PASS under the 4% rule: Kintecus is off by 0.112% of peak (worst species n); before 2026-10-30 (0.1%
-    rule) this was ?. The deck itself reproduces the SBML to 0.0273% (independent SciPy run of the same
+    rule) this was ?. The deck itself reproduces the SBML to 0.0446% (independent SciPy run of the same
     deck), so the remaining difference arises inside Kintecus (integration or evaluation).
 BIOMD0000000378  YES  Kintecus  0.00048%  deck        -%  PASS
     Chay1997_CalciumConcentration
@@ -1719,17 +1710,17 @@ BIOMD0000000390  YES  Kintecus  0.00041%  deck        -%  PASS
     Arnold2011_Giersch1990_CalvinCycle
     Kintecus matches the SBML within 0.1% (max 0.00041% of peak, worst species ATP). Duration 100 chosen
     from the dynamics (no curated SED-ML time course).
-BIOMD0000000391  YES  Kintecus   0.0012%  deck        -%  PASS
+BIOMD0000000391  YES  Kintecus   0.0004%  deck        -%  PASS
     Arnold2011_Poolman2000_CalvinCycle_Starch
-    Kintecus matches the SBML within 0.1% (max 0.0012% of peak, worst species DPGA). Duration 10 chosen from
+    Kintecus matches the SBML within 0.1% (max 0.0004% of peak, worst species F6P). Duration 10 chosen from
     the dynamics (no curated SED-ML time course).
 BIOMD0000000392  YES  Kintecus  0.00042%  deck        -%  PASS
     Arnold2011_Laisk2006_CalvinCycle_Starch_Sucrose
     Kintecus matches the SBML within 0.1% (max 0.00042% of peak, worst species PGAc). Duration 300 chosen
     from the dynamics (no curated SED-ML time course).
-BIOMD0000000393  YES  Kintecus   0.0012%  deck        -%  PASS
+BIOMD0000000393  YES  Kintecus   0.0015%  deck        -%  PASS
     Arnold2011_Zhu2007_CalvinCycle_Starch_Sucrose_Photorespiration
-    Kintecus matches the SBML within 0.1% (max 0.0012% of peak, worst species PGAc). Duration 10000 chosen
+    Kintecus matches the SBML within 0.1% (max 0.0015% of peak, worst species PGAc). Duration 10000 chosen
     from the dynamics (no curated SED-ML time course).
 BIOMD0000000394  YES  Kintecus  0.00034%  deck        -%  PASS
     Sivakumar2011 - EGF Receptor Signaling Pathway
@@ -2081,12 +2072,10 @@ BIOMD0000000473  NO   Kintecus      362%  deck      362%  MISMATCH_PARTIAL
     the independent run), consistent with the unconverted parts below. Not converted (1): reaction 'r_2111'
     not converted (reaction line is 2365 characters) Duration 10 chosen from the dynamics (no curated SED-ML
     time course).
-BIOMD0000000474  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
+BIOMD0000000474  YES  Kintecus  0.00057%  deck        -%  PASS
     Smith2013 - Regulation of Insulin Signalling by Oxidative Stress
-    Kintecus did not finish within the time limit (-INT:1: too slow (projected 6757 s at t=5.61); -INT:5:
-    stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1 on
-    James's PC: projected 51435 s > cap 3600 s (at t=39.27 of 2805)). The independent deck run also failed
-    (deck simulation over 180 s).
+    Kintecus matches the SBML within 0.1% (max 0.00057% of peak, worst species
+    dnabound_Foxo1_Pa1_Pd0_Pe0_pUb1).
 BIOMD0000000475  YES  Kintecus   0.0005%  deck        -%  PASS
     Amara2013 - PCNA ubiquitylation in the activation of PRR pathway
     Kintecus matches the SBML within 0.1% (max 0.0005% of peak, worst species species_23). Duration 100000
@@ -2099,9 +2088,9 @@ BIOMD0000000477  YES  Kintecus   0.0012%  deck        -%  PASS
     Mol2013 - Immune Signal Transduction in Leishmaniasis
     Kintecus matches the SBML within 0.1% (max 0.0012% of peak, worst species
     mw6ee00a71_ab68_454b_b1cd_60c1ebd19cfa).
-BIOMD0000000478  YES  Kintecus   0.0012%  deck        -%  PASS
+BIOMD0000000478  YES  Kintecus   0.0011%  deck        -%  PASS
     Besozzi2012 - Oscillatory regimes in the Ras/cAMP/PKA pathway in S.cerevisiae
-    Kintecus matches the SBML within 0.1% (max 0.0012% of peak, worst species Pde1f). Duration 100000 chosen
+    Kintecus matches the SBML within 0.1% (max 0.0011% of peak, worst species Pde1f). Duration 100000 chosen
     from the dynamics (no curated SED-ML time course).
 BIOMD0000000479  YES  Kintecus  0.00034%  deck        -%  PASS
     Croft2013 - GPCR-RGS interaction that compartmentalizes RGS activity
@@ -2227,9 +2216,9 @@ BIOMD0000000507  YES  Kintecus  0.00032%  deck        -%  PASS
     Gardner2000 - genetic toggle switch in E.coli
     Kintecus matches the SBML within 0.1% (max 0.00032% of peak, worst species species_1). Duration 10
     chosen from the dynamics (no curated SED-ML time course).
-BIOMD0000000508  YES  Kintecus   0.0343%  deck        -%  PASS
+BIOMD0000000508  YES  Kintecus  0.00043%  deck        -%  PASS
     Barrack2014 - Calcium/cell cycle coupling - Cyclin D dependent ATP release
-    Kintecus matches the SBML within 0.1% (max 0.0343% of peak, worst species atp). Duration 10 chosen from
+    Kintecus matches the SBML within 0.1% (max 0.00043% of peak, worst species rs). Duration 10 chosen from
     the dynamics (no curated SED-ML time course).
 BIOMD0000000509  YES  Kintecus  0.00045%  deck        -%  PASS
     Barrack2014 - Calcium/cell cycle coupling - Rs dependent ATP release
@@ -2413,13 +2402,9 @@ BIOMD0000000552  YES  Kintecus  0.00022%  deck        -%  PASS
 BIOMD0000000553  YES  Kintecus  0.00022%  deck        -%  PASS
     Ehrenstein1997 - The choline-leakage hypothesis in Alzheimer's disease
     Kintecus matches the SBML within 0.1% (max 0.00022% of peak, worst species b).
-BIOMD0000000554  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
+BIOMD0000000554  YES  Kintecus  0.00046%  deck        -%  PASS
     Cloutier2009 - Brain Energy Metabolism
-    Kintecus did not finish within the time limit (-INT:1: too slow (projected 302 s at t=177.921); -INT:5:
-    too slow (projected 11010 s at t=2.5); -INT:5:10:0: too slow (projected 11005 s at t=2.5); -INT:1 (deck
-    before 11-01): stalled (no output row for 30 s at t=0); -INT:5 (deck before 11-01): too slow (projected
-    15507 s at t=2.5); -INT:1 on James's PC: projected 10118 s > cap 3600 s (at t=177.921 of 2500)). The
-    independent deck run also failed (All components of the initial state `y0` must be finite.).
+    Kintecus matches the SBML within 0.1% (max 0.00046% of peak, worst species F6Pn).
 BIOMD0000000555  NO   Kintecus        -%  deck        -%  NOT_CONVERTIBLE
     Auer2010 - Correlation between lag time and aggregation rate in protein aggregation
     No pack: no reactions or rate rules could be converted Not converted (2): no reactions or rate rules
@@ -2550,14 +2535,10 @@ BIOMD0000000588  YES  Kintecus  0.00046%  deck        -%  PASS
     Benson2013 - Identification of key drug targets in nerve growth factor pathway
     Kintecus matches the SBML within 0.1% (max 0.00046% of peak, worst species pShc_pTrkA). Duration 100000
     chosen from the dynamics (no curated SED-ML time course).
-BIOMD0000000589  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
+BIOMD0000000589  YES  Kintecus   0.0053%  deck        -%  PASS
     Valero2016 - Ascorbate-Glutathione cycle in chloroplasts under light/dark conditions
-    Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=0); -INT:5:
-    too slow (projected 303 s at t=10.9); -INT:5:10:0: too slow (projected 303 s at t=10.9); -INT:1 (deck
-    before 11-01): stalled (no output row for 30 s at t=0); -INT:5 (deck before 11-01): too slow (projected
-    300 s at t=32); -INT:1 on James's PC: projected 3601 s > cap 3600 s (at t=24 of 100)). The independent
-    deck run also failed (deck simulation over 180 s). Duration 100 chosen from the dynamics (no curated
-    SED-ML time course).
+    Kintecus matches the SBML within 0.1% (max 0.0053% of peak, worst species MDA). Duration 100 chosen from
+    the dynamics (no curated SED-ML time course).
 BIOMD0000000590  YES  Kintecus  0.00018%  deck        -%  PASS
     Hermansen2015 - denovo biosynthesis of pyrimidines in yeast
     Kintecus matches the SBML within 0.1% (max 0.00018% of peak, worst species cp). Duration 100 chosen from
@@ -2608,34 +2589,18 @@ BIOMD0000000602  YES  Kintecus  0.00032%  deck        -%  PASS
     Stavrum2013 - Tryptophan Metabolism in Liver
     Kintecus matches the SBML within 0.1% (max 0.00032% of peak, worst species M_trp_DASH_L_c). Duration 10
     chosen from the dynamics (no curated SED-ML time course).
-BIOMD0000000603  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
+BIOMD0000000603  YES  Kintecus   0.0097%  deck        -%  PASS
     PetelenzKuehn_osmoadaptation_WT
-    Kintecus did not finish within the time limit (-INT:1: too slow (projected 303 s at t=3605); -INT:5:
-    stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1
-    (deck before 11-01): too slow (projected 301 s at t=3595); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0); -INT:1 on James's PC: projected 4317 s > cap 3600 s (at t=3605 of 21600)).
-    The independent deck run also failed (deck simulation over 180 s).
-BIOMD0000000604  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
+    Kintecus matches the SBML within 0.1% (max 0.0097% of peak, worst species Fps1r).
+BIOMD0000000604  YES  Kintecus   0.0052%  deck        -%  PASS
     PetelenzKuehn_osmoadaptation_pfk2627D
-    Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=3605);
-    -INT:5: too slow (projected 100525 s at t=5); -INT:5:10:0: too slow (projected 100532 s at t=5); -INT:1
-    (deck before 11-01): too slow (projected 302 s at t=3600); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0); -INT:1 on James's PC: projected 3600 s > cap 3600 s (at t=3605 of 16200)).
-    The independent deck run also failed (deck simulation over 180 s).
-BIOMD0000000605  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
+    Kintecus matches the SBML within 0.1% (max 0.0052% of peak, worst species Fps1r).
+BIOMD0000000605  YES  Kintecus   0.0036%  deck        -%  PASS
     PetelenzKuehn_osmoadaptation_HOG1att
-    Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=3605);
-    -INT:5: too slow (projected 100526 s at t=5); -INT:5:10:0: too slow (projected 100541 s at t=5); -INT:1
-    (deck before 11-01): too slow (projected 302 s at t=3600); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0); -INT:1 on James's PC: projected 3602 s > cap 3600 s (at t=3605 of 16200)).
-    The independent deck run also failed (deck simulation over 180 s).
-BIOMD0000000606  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
+    Kintecus matches the SBML within 0.1% (max 0.0036% of peak, worst species Fps1r).
+BIOMD0000000606  YES  Kintecus   0.0015%  deck        -%  PASS
     PetelenzKuehn_osmoadaptation_hog1D
-    Kintecus did not finish within the time limit (-INT:1: too slow (projected 631 s at t=257); -INT:5: too
-    slow (projected 413541 s at t=1); -INT:5:10:0: too slow (projected 405332 s at t=1); -INT:1 (deck before
-    11-01): too slow (projected 1074 s at t=151); -INT:5 (deck before 11-01): stalled (no output row for 30
-    s at t=0); -INT:1 on James's PC: projected 3601 s > cap 3600 s (at t=3608 of 16200)). The independent
-    deck run also failed (deck simulation over 180 s).
+    Kintecus matches the SBML within 0.1% (max 0.0015% of peak, worst species Fps1r).
 BIOMD0000000607  YES  Kintecus  0.00048%  deck        -%  PASS
     PetelenzKuehn_osmoadaptation_fps1D1
     Kintecus matches the SBML within 0.1% (max 0.00048% of peak, worst species glycerol_e).
@@ -2671,15 +2636,11 @@ BIOMD0000000612  NO   Kintecus      100%  deck      100%  MISMATCH_PARTIAL
     converted (state-triggered (not a time >= t0 trigger)); event 'AddLOAD2' not converted (state-triggered
     (not a time >= t0 trigger)); event 'AddPTH1' not converted (state-triggered (not a time >= t0 trigger))
     ... Duration 100000 chosen from the dynamics (no curated SED-ML time course).
-BIOMD0000000613  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED_PARTIAL
+BIOMD0000000613  YES  Kintecus   0.0005%  deck        -%  PASS_PARTIAL
     Peterson2010 - Integrated calcium homeostasis and bone remodelling
-    Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=0); -INT:5:
-    stalled (no output row for 30 s at t=0); -INT:5:10:0: too slow (projected 323 s at t=3100); -INT:1 (deck
-    before 11-01): too slow (projected 12008 s at t=100); -INT:5 (deck before 11-01): stalled (no output row
-    for 30 s at t=0); -INT:1 on James's PC: ended early at t=100000). The independent deck run also failed
-    (deck simulation over 180 s). Not converted (2): event 'Event' not converted (state-triggered (not a
-    time >= t0 trigger)); reaction 'Ca_filtration' not converted (reaction line is 2175 characters) Duration
-    100000 chosen from the dynamics (no curated SED-ML time course).
+    Kintecus matches the SBML within 0.1% (max 0.0005% of peak, worst species RX2). Not converted (1): event
+    'Event' not converted (state-triggered (not a time >= t0 trigger)) Duration 100000 chosen from the
+    dynamics (no curated SED-ML time course).
 BIOMD0000000614  YES  Kintecus    5e-05%  deck        -%  PASS
     Kamihira2000
     Kintecus matches the SBML within 0.1% (max 5e-05% of peak, worst species f). Duration 100000 chosen from
@@ -2688,9 +2649,9 @@ BIOMD0000000615  YES  Kintecus  0.00042%  deck        -%  PASS
     Kuznetsov2016(II) - α-syn aggregation kinetics in Parkinson's Disease
     Kintecus matches the SBML within 0.1% (max 0.00042% of peak, worst species Bs). Duration 100000 chosen
     from the dynamics (no curated SED-ML time course).
-BIOMD0000000616  YES  Kintecus  0.00061%  deck        -%  PASS
+BIOMD0000000616  YES  Kintecus  0.00045%  deck        -%  PASS
     Dunster2014 - WBC Interactions (Model1)
-    Kintecus matches the SBML within 0.1% (max 0.00061% of peak, worst species m). Duration 1000 chosen from
+    Kintecus matches the SBML within 0.1% (max 0.00045% of peak, worst species m). Duration 1000 chosen from
     the dynamics (no curated SED-ML time course).
 BIOMD0000000617  YES  Kintecus  0.00015%  deck        -%  PASS
     Walsh2014 - Inhibition kinetics of DAPT on APP Cleavage
@@ -2765,10 +2726,10 @@ BIOMD0000000632  NO   Kintecus        -%  deck        -%  ERROR
     
     Converter error: TypeError: unsupported operand type(s) for /: 'float' and 'NoneType' Duration 10 chosen
     from the dynamics (no curated SED-ML time course).
-BIOMD0000000633  YES  Kintecus   0.0018%  deck        -%  PASS
+BIOMD0000000633  YES  Kintecus  0.00047%  deck        -%  PASS
     Bulik2016 - Regulation of hepatic glucose metabolism
-    Kintecus matches the SBML within 0.1% (max 0.0018% of peak, worst species fru16bp). Duration 30 chosen
-    from the dynamics (no curated SED-ML time course).
+    Kintecus matches the SBML within 0.1% (max 0.00047% of peak, worst species pep). Duration 30 chosen from
+    the dynamics (no curated SED-ML time course).
 BIOMD0000000634  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
     Proctor2013 - Effect of Aβ immunisation in Alzheimer's disease (stochastic version)
     Kintecus did not finish within the time limit (-INT:1: too slow (projected 905 s at t=1105.38); -INT:5:
@@ -2858,9 +2819,9 @@ BIOMD0000000656  YES  Kintecus  0.00045%  deck        -%  PASS
 BIOMD0000000657  YES  Kintecus    8e-05%  deck        -%  PASS
     Araujo2016 - Positive feedback in Cdk1 signalling keeps mitotic duration short and constant
     Kintecus matches the SBML within 0.1% (max 8e-05% of peak, worst species Cdk1CycB).
-BIOMD0000000658  YES  Kintecus  0.00064%  deck        -%  PASS
+BIOMD0000000658  YES  Kintecus  0.00044%  deck        -%  PASS
     Lee2003 - Roles of APC and Axin in Wnt Pathway (without regulatory loop)
-    Kintecus matches the SBML within 0.1% (max 0.00064% of peak, worst species B_catenin__APC__axin__GSK3).
+    Kintecus matches the SBML within 0.1% (max 0.00044% of peak, worst species B_catenin).
 BIOMD0000000659  YES  Kintecus  0.00025%  deck        -%  PASS_PARTIAL
     Cursons2015 - Regulation of ERK-MAPK signaling in human epidermis
     Kintecus matches the SBML within 0.1% (max 0.00025% of peak, worst species pERK_nuc). Not converted (5):
@@ -2868,10 +2829,9 @@ BIOMD0000000659  YES  Kintecus  0.00025%  deck        -%  PASS_PARTIAL
     converted (state-triggered (not a time >= t0 trigger)); event 'Position_5' not converted (state-
     triggered (not a time >= t0 trigger)) ... Duration 10 chosen from the dynamics (no curated SED-ML time
     course).
-BIOMD0000000660  NO   Kintecus      100%  deck        -%  MISMATCH
+BIOMD0000000660  YES  Kintecus  0.00046%  deck        -%  PASS
     Barr2017 - Dynamics of p21 in hTert-RPE1 cells
-    Kintecus finishes but is off by 100% of peak (worst species aRc). Independent deck check not available
-    (deck simulation over 180 s).
+    Kintecus matches the SBML within 0.1% (max 0.00046% of peak, worst species Dna).
 BIOMD0000000661  YES  Kintecus  0.00036%  deck        -%  PASS
     Webb2002 - Fas/FasL mediated tumor T-cell interaction
     Kintecus matches the SBML within 0.1% (max 0.00036% of peak, worst species Rm).
@@ -2908,19 +2868,16 @@ BIOMD0000000670  YES  Kintecus  0.00048%  deck        -%  PASS
 BIOMD0000000671  YES  Kintecus  0.00015%  deck        -%  PASS
     Murphy2016 - Differences in predictions of ODE models of tumor growth
     Kintecus matches the SBML within 0.1% (max 0.00015% of peak, worst species V_gomp).
-BIOMD0000000672  YES  Kintecus  0.00024%  deck        -%  PASS
+BIOMD0000000672  YES  Kintecus  0.00022%  deck        -%  PASS
     Brown1997 - Plasma Melatonin Levels
-    Kintecus matches the SBML within 0.1% (max 0.00024% of peak, worst species H2).
+    Kintecus matches the SBML within 0.1% (max 0.00022% of peak, worst species H2).
 BIOMD0000000673  NO   Kintecus        -%  deck        -%  NOT_CONVERTIBLE
     Lockwood2006 - Alzheimer's Disease PBPK model
     No pack: no reactions or rate rules could be converted Not converted (2): no reactions or rate rules
     could be converted; nothing convertible
-BIOMD0000000674  NO   Kintecus     6785%  deck     6785%  MISMATCH_PARTIAL
+BIOMD0000000674  YES  Kintecus   0.0081%  deck        -%  PASS
     Reyes-Palomares2012 - a combined model hepatic polyamine and sulfur aminoacid metabolism - version1
-    Kintecus finishes but is off by 6785% of peak (worst species c_coo). The deck itself is also off (6785%
-    in the independent run), consistent with the unconverted parts below. Not converted (2): reaction
-    'V_b_SER_c' not converted (reaction line is 2179 characters); reaction 'V_b_MET_c' not converted
-    (reaction line is 2175 characters)
+    Kintecus matches the SBML within 0.1% (max 0.0081% of peak, worst species met).
 BIOMD0000000675  NO   Kintecus      144%  deck      144%  MISMATCH_PARTIAL
     Chen2000_CellCycle
     Kintecus finishes but is off by 144% of peak (worst species BUD). The deck itself is also off (144% in
@@ -2934,9 +2891,9 @@ BIOMD0000000676  YES  Kintecus  0.00047%  deck        -%  PASS
 BIOMD0000000677  YES  Kintecus  7.1e-05%  deck        -%  PASS
     Holmes2006 - Hill's model of muscle contraction
     Kintecus matches the SBML within 0.1% (max 7.1e-05% of peak, worst species L_ce).
-BIOMD0000000678  YES  Kintecus   0.0013%  deck        -%  PASS
+BIOMD0000000678  YES  Kintecus  0.00013%  deck        -%  PASS
     Tomida2003 - Calcium Oscillatory-induced translocation of nuclear factor of activated T cells
-    Kintecus matches the SBML within 0.1% (max 0.0013% of peak, worst species NFAT_dephosphorylated).
+    Kintecus matches the SBML within 0.1% (max 0.00013% of peak, worst species NFAT_dephosphorylated).
 BIOMD0000000679  YES  Kintecus  0.00022%  deck        -%  PASS
     Waugh2006 - Diabetic Wound Healing - Macrophage Dynamics
     Kintecus matches the SBML within 0.1% (max 0.00022% of peak, worst species phi_R).
@@ -2983,10 +2940,10 @@ BIOMD0000000691  YES  Kintecus    0.155%  deck    8e-05%  PASS
 BIOMD0000000692  YES  Kintecus  0.00039%  deck        -%  PASS
     Phillips2003 - The Mechanism of Ras GTPase Activation by Neurofibromin
     Kintecus matches the SBML within 0.1% (max 0.00039% of peak, worst species RasGDP_minus_NF1_Pi).
-BIOMD0000000693  YES  Kintecus    0.117%  deck  5.5e-07%  PASS
+BIOMD0000000693  YES  Kintecus    0.164%  deck  4.7e-07%  PASS
     Wang2008 - Mimicking the inhibitory effect of riluzole on membrane conductance in skeletal fibres
-    PASS under the 4% rule: Kintecus is off by 0.117% of peak (worst species Vm); before 2026-10-30 (0.1%
-    rule) this was ?. The deck itself reproduces the SBML to 5.5e-07% (independent SciPy run of the same
+    PASS under the 4% rule: Kintecus is off by 0.164% of peak (worst species Vm); before 2026-10-30 (0.1%
+    rule) this was ?. The deck itself reproduces the SBML to 4.7e-07% (independent SciPy run of the same
     deck), so the remaining difference arises inside Kintecus (integration or evaluation).
 BIOMD0000000695  YES  Kintecus  0.00046%  deck        -%  PASS
     FelixGarza2017 - Blue Light Treatment of Psoriasis (simplified)
@@ -3006,10 +2963,9 @@ BIOMD0000000698  YES  Kintecus  0.00044%  deck        -%  PASS
 BIOMD0000000699  YES  Kintecus  0.00044%  deck        -%  PASS
     Caydasi2012 - Regulation of Tem1 by the GAP complex in spindle position cell cycle checkpoint - Ubiq
     Kintecus matches the SBML within 0.1% (max 0.00044% of peak, worst species Bfa1P5_Tem1GTP).
-BIOMD0000000700  YES  Kintecus     3.14%  deck        -%  PASS
+BIOMD0000000700  YES  Kintecus  0.00047%  deck        -%  PASS
     Heldt2018 - Proliferation-quiescence decision in response to DNA damage
-    PASS under the 4% rule: Kintecus is off by 3.14% of peak (worst species iPcna); before 2026-10-30 (0.1%
-    rule) this was ?. Independent deck check not available (deck simulation over 180 s).
+    Kintecus matches the SBML within 0.1% (max 0.00047% of peak, worst species Ce).
 BIOMD0000000701  YES  Kintecus  0.00043%  deck        -%  PASS
     Caydasi2012 - Inhibition of Tem1 by the GAP complex in Spindle Position Checkpoint
     Kintecus matches the SBML within 0.1% (max 0.00043% of peak, worst species Bfa1_Tem1GTP).
@@ -3215,9 +3171,9 @@ BIOMD0000000761  YES  Kintecus  0.00041%  deck        -%  PASS
 BIOMD0000000762  YES  Kintecus  0.00016%  deck        -%  PASS
     Kuznetsov1994 - Nonlinear dynamics of immunogenic tumors
     Kintecus matches the SBML within 0.1% (max 0.00016% of peak, worst species E).
-BIOMD0000000763  YES  Kintecus   0.0007%  deck        -%  PASS
+BIOMD0000000763  YES  Kintecus  0.00075%  deck        -%  PASS
     Dritschel2018 - A mathematical model of cytotoxic and helper T cell interactions in a tumour microen
-    Kintecus matches the SBML within 0.1% (max 0.0007% of peak, worst species N_Tumour).
+    Kintecus matches the SBML within 0.1% (max 0.00075% of peak, worst species N_Tumour).
 BIOMD0000000764  YES  Kintecus  0.00045%  deck        -%  PASS
     Malinzi2019 - chemovirotherapy
     Kintecus matches the SBML within 0.1% (max 0.00045% of peak, worst species V).
@@ -3332,9 +3288,9 @@ BIOMD0000000799  YES  Kintecus  0.00033%  deck        -%  PASS
 BIOMD0000000800  YES  Kintecus  0.00025%  deck        -%  PASS
     Precup2012 - Mathematical modeling of cell dynamics after allogeneic bone marrow transplantation
     Kintecus matches the SBML within 0.1% (max 0.00025% of peak, worst species x).
-BIOMD0000000801  YES  Kintecus   0.0156%  deck        -%  PASS
+BIOMD0000000801  YES  Kintecus   0.0137%  deck        -%  PASS
     Sturrock2015 - glioma growth
-    Kintecus matches the SBML within 0.1% (max 0.0156% of peak, worst species B).
+    Kintecus matches the SBML within 0.1% (max 0.0137% of peak, worst species B).
 BIOMD0000000802  YES  Kintecus  7.2e-05%  deck        -%  PASS
     Hoffman2018- ADCC against cancer
     Kintecus matches the SBML within 0.1% (max 7.2e-05% of peak, worst species R).
@@ -3355,10 +3311,10 @@ BIOMD0000000807  YES  Kintecus  4.8e-05%  deck        -%  PASS
     Fassoni2019 - Oncogenesis encompassing mutations and genetic instability
     Kintecus matches the SBML within 0.1% (max 4.8e-05% of peak, worst species
     normalized_pre_cancer_cell_g).
-BIOMD0000000808  YES  Kintecus    0.895%  deck  6.3e-07%  PASS
+BIOMD0000000808  YES  Kintecus    0.895%  deck  5.7e-07%  PASS
     Kronik2008 - Improving alloreactive CTL immunotherapy for malignant gliomas using a simulation model
     PASS under the 4% rule: Kintecus is off by 0.895% of peak (worst species C); before 2026-10-30 (0.1%
-    rule) this was ?. The deck itself reproduces the SBML to 6.3e-07% (independent SciPy run of the same
+    rule) this was ?. The deck itself reproduces the SBML to 5.7e-07% (independent SciPy run of the same
     deck), so the remaining difference arises inside Kintecus (integration or evaluation).
 BIOMD0000000809  YES  Kintecus  0.00031%  deck        -%  PASS
     Malinzi2018 - tumour-immune interaction model
@@ -3417,19 +3373,19 @@ BIOMD0000000825  NO   Kintecus     1020%  deck     1020%  MISMATCH_PARTIAL
     Kintecus finishes but is off by 1020% of peak (worst species Sensitive_tumor_S). The deck itself is also
     off (1020% in the independent run), consistent with the unconverted parts below. Not converted (1):
     event 'treatment' not converted (state-triggered (not a time >= t0 trigger))
-BIOMD0000000826  YES  Kintecus   0.0391%  deck  3.2e-07%  PASS
+BIOMD0000000826  YES  Kintecus  0.00054%  deck        -%  PASS
     Shin_2018_EGFR-PYK2-c-Met interaction network_model
-    Kintecus matches the SBML within 0.1% (max 0.0391% of peak, worst species pcMET).
+    Kintecus matches the SBML within 0.1% (max 0.00054% of peak, worst species pcMET).
 BIOMD0000000827  YES  Kintecus  0.00047%  deck        -%  PASS
     Ito2019 - gefitnib resistance of lung adenocarcinoma caused by MET amplification
     Kintecus matches the SBML within 0.1% (max 0.00047% of peak, worst species X_4_EGFR_EGFR).
 BIOMD0000000828  YES  Kintecus  0.00032%  deck        -%  PASS
     Jung2019 - Regulating glioblastoma signaling pathways and anti-invasion therapy - core control model
     Kintecus matches the SBML within 0.1% (max 0.00032% of peak, worst species Glucose_G).
-BIOMD0000000829  YES  Kintecus    0.182%  deck  5.6e-06%  PASS
+BIOMD0000000829  YES  Kintecus    0.182%  deck    8e-06%  PASS
     Jung2019 - egulating glioblastoma signaling pathways and anti-invasion therapy cell cycle dynamics m
     PASS under the 4% rule: Kintecus is off by 0.182% of peak (worst species Cdh1); before 2026-10-30 (0.1%
-    rule) this was ?. The deck itself reproduces the SBML to 5.6e-06% (independent SciPy run of the same
+    rule) this was ?. The deck itself reproduces the SBML to 8e-06% (independent SciPy run of the same
     deck), so the remaining difference arises inside Kintecus (integration or evaluation).
 BIOMD0000000830  YES  Kintecus   0.0004%  deck        -%  PASS
     GiantsosAdams2013 - Growth of glycocalyx under static conditions
@@ -3525,13 +3481,9 @@ BIOMD0000000857  YES  Kintecus  0.00041%  deck        -%  PASS
 BIOMD0000000858  YES  Kintecus   0.0011%  deck        -%  PASS
     Larbat2016.2 - Modeling the diversion of primary carbon flux into secondary metabolism under variabl
     Kintecus matches the SBML within 0.1% (max 0.0011% of peak, worst species trioseP).
-BIOMD0000000859  NO   Kintecus        -%  deck      inf%  KINTECUS_FAILED
+BIOMD0000000859  YES  Kintecus   0.0018%  deck        -%  PASS
     Larbat2016.3 - Modeling the diversion of primary carbon flux into secondary metabolism under variabl
-    Kintecus did not finish within the time limit (-INT:1: stalled (no output row for 30 s at t=7.968);
-    -INT:5: reached the end time, but the output contains NaN; -INT:5:10:0: reached the end time, but the
-    output contains NaN; -INT:1 (deck before 11-01): stalled (no output row for 30 s at t=8.0192); -INT:5
-    (deck before 11-01): reached the end time, but the output contains NaN; -INT:1 on James's PC: projected
-    4338 s > cap 3600 s (at t=7.968 of 48)). Independent run of the deck: off by inf%.
+    Kintecus matches the SBML within 0.1% (max 0.0018% of peak, worst species ETP).
 BIOMD0000000860  YES  Kintecus   0.0002%  deck        -%  PASS
     Proctor2017- Role of microRNAs in osteoarthritis (Positive Feedforward Incoherent By MicroRNA)_1
     Kintecus matches the SBML within 0.1% (max 0.0002% of peak, worst species miR).
@@ -3593,9 +3545,9 @@ BIOMD0000000876  YES  Kintecus   0.0064%  deck        -%  PASS
 BIOMD0000000877  YES  Kintecus  0.00041%  deck        -%  PASS
     Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus and chemotherapy with 
     Kintecus matches the SBML within 0.1% (max 0.00041% of peak, worst species V).
-BIOMD0000000878  YES  Kintecus   0.0011%  deck        -%  PASS
+BIOMD0000000878  YES  Kintecus   0.0019%  deck        -%  PASS
     Lenbury2001_InsulinKineticsModel_A
-    Kintecus matches the SBML within 0.1% (max 0.0011% of peak, worst species z).
+    Kintecus matches the SBML within 0.1% (max 0.0019% of peak, worst species z).
 BIOMD0000000879  YES  Kintecus  0.00032%  deck        -%  PASS
     Rodrigues2019 - A mathematical model for chemoimmunotherapy of chronic lymphocytic leukemia
     Kintecus matches the SBML within 0.1% (max 0.00032% of peak, worst species I).
@@ -3609,9 +3561,9 @@ BIOMD0000000881  YES  Kintecus   0.0001%  deck        -%  PASS
 BIOMD0000000882  YES  Kintecus  0.00021%  deck        -%  PASS
     Munz2009 - Zombie SIZRC
     Kintecus matches the SBML within 0.1% (max 0.00021% of peak, worst species Zombie).
-BIOMD0000000883  YES  Kintecus  0.00048%  deck        -%  PASS
+BIOMD0000000883  YES  Kintecus  0.00047%  deck        -%  PASS
     Giani2019 - Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafeni
-    Kintecus matches the SBML within 0.1% (max 0.00048% of peak, worst species species_10).
+    Kintecus matches the SBML within 0.1% (max 0.00047% of peak, worst species species_10).
 BIOMD0000000884  YES  Kintecus  0.00029%  deck        -%  PASS
     Cortes2019 - Optimality of the spontaneous prophage induction rate.
     Kintecus matches the SBML within 0.1% (max 0.00029% of peak, worst species V).
@@ -3667,9 +3619,9 @@ BIOMD0000000901  YES  Kintecus   0.0001%  deck        -%  PASS
     ChowHall2008 Dynamics of Human Weight Change_ODE_1
     Kintecus matches the SBML within 0.1% (max 0.0001% of peak, worst species Lean_Mass). Duration 10000
     chosen from the dynamics (no curated SED-ML time course).
-BIOMD0000000902  YES  Kintecus  0.00025%  deck        -%  PASS
+BIOMD0000000902  YES  Kintecus  0.00023%  deck        -%  PASS
     Wang2019 - A mathematical model of oncolytic virotherapy with time delay
-    Kintecus matches the SBML within 0.1% (max 0.00025% of peak, worst species x).
+    Kintecus matches the SBML within 0.1% (max 0.00023% of peak, worst species x).
 BIOMD0000000903  YES  Kintecus  0.00043%  deck        -%  PASS
     Solis-perez2019 - A fractional mathematical model of breast cancer competition model
     Kintecus matches the SBML within 0.1% (max 0.00043% of peak, worst species I).
@@ -3803,9 +3755,9 @@ BIOMD0000000943  YES  Kintecus     0.17%  deck     96.4%  PASS
     Hat2016 - Reponse of p53 System to irradiation in cell fate decision making
     PASS under the 4% rule: Kintecus is off by 0.17% of peak (worst species Rb1_0_E2F1_complex); before
     2026-10-30 (0.1% rule) this was ?. The deck itself is also off (96.4% in the independent run).
-BIOMD0000000944  YES  Kintecus  7.8e-05%  deck        -%  PASS
+BIOMD0000000944  YES  Kintecus  8.1e-05%  deck        -%  PASS
     Goldbeter2013-Oscillatory activity of cyclin-dependent kinases in the cell cycle
-    Kintecus matches the SBML within 0.1% (max 7.8e-05% of peak, worst species Cyclin).
+    Kintecus matches the SBML within 0.1% (max 8.1e-05% of peak, worst species Cyclin).
 BIOMD0000000945  YES  Kintecus  0.00031%  deck        -%  PASS
     Evans2004 - Cell based mathematical model of topotecan
     Kintecus matches the SBML within 0.1% (max 0.00031% of peak, worst species L_c).
@@ -3857,14 +3809,9 @@ BIOMD0000000959  YES  Kintecus  0.00048%  deck        -%  PASS
 BIOMD0000000960  YES  Kintecus   0.0011%  deck        -%  PASS
     Paiva2020 - SEIAHRD model of transmission dynamics of COVID-19
     Kintecus matches the SBML within 0.1% (max 0.0011% of peak, worst species Asymptomatic).
-BIOMD0000000961  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
+BIOMD0000000961  YES  Kintecus  0.00045%  deck        -%  PASS
     McDougal2017 - Metabolism in ischemic cardiomyocytes
-    Kintecus did not finish within the time limit (-INT:1: FATAL #167; -INT:5: too slow (projected 421 s at
-    t=120); -INT:5:10:0: too slow (projected 404 s at t=125); -INT:1 (deck before 11-01): FATAL #167; -INT:5
-    (deck before 11-01): too slow (projected 404 s at t=125); -INT:5:10:0 (deck before 11-01): too slow
-    (projected 404 s at t=125); -INT:1 (deck before 11-01): FATAL #167; -INT:5 (deck before 11-01): too slow
-    (projected 481 s at t=105); -INT:1 on James's PC: ended early at t=5050). The independent deck run also
-    failed (All components of the initial state `y0` must be finite.).
+    Kintecus matches the SBML within 0.1% (max 0.00045% of peak, worst species s65).
 BIOMD0000000962  YES  Kintecus  0.00015%  deck        -%  PASS
     Zhao2020 - SUQC model of COVID-19 transmission dynamics in Wuhan, Hubei, and China
     Kintecus matches the SBML within 0.1% (max 0.00015% of peak, worst species Quarantined_Infected).
@@ -3949,12 +3896,9 @@ BIOMD0000000987  YES  Kintecus  9.3e-05%  deck        -%  PASS
     Aubry1995 - Nine-compartment model of fluid-phase endocytosis kinetics in Dictyostelium discoideum
     Kintecus matches the SBML within 0.1% (max 9.3e-05% of peak, worst species
     FITC_Dextran_three_compartment_model_compartment_2).
-BIOMD0000000988  NO   Kintecus      100%  deck      100%  MISMATCH_PARTIAL
+BIOMD0000000988  YES  Kintecus   0.0217%  deck        -%  PASS
     Westerhoff2020 - systems biology model of the coronavirus pandemic 2020
-    Kintecus finishes but is off by 100% of peak (worst species infected_nontested_0). The deck itself is
-    also off (100% in the independent run), consistent with the unconverted parts below. Not converted (2):
-    reaction 're1' not converted (rate term is 4495 characters (> 2153)); reaction 're3' not converted (rate
-    term is 4495 characters (> 2153))
+    Kintecus matches the SBML within 0.1% (max 0.0217% of peak, worst species infected_nontested_0).
 BIOMD0000000989  YES  Kintecus  0.00045%  deck        -%  PASS
     Strasen2018 - TGFb SMAD Signalling - Dose dependent dynamics upon TGFb stimulation
     Kintecus matches the SBML within 0.1% (max 0.00045% of peak, worst species Smad7mRNA1).
@@ -4006,27 +3950,25 @@ BIOMD0000001003  YES  Kintecus  0.00042%  deck        -%  PASS
 BIOMD0000001004  YES  Kintecus  0.00027%  deck        -%  PASS
     Intosalmi2015 - Th17 core network model
     Kintecus matches the SBML within 0.1% (max 0.00027% of peak, worst species STAT3mRNA).
-BIOMD0000001005  YES  Kintecus   0.0261%  deck        -%  PASS
+BIOMD0000001005  YES  Kintecus   0.0711%  deck        -%  PASS
     Bae2017 - Mathematical analysis of circadian disruption and metabolic re-entrainment of hepatic gluc
-    Kintecus matches the SBML within 0.1% (max 0.0261% of peak, worst species y1).
+    Kintecus matches the SBML within 0.1% (max 0.0711% of peak, worst species y1).
 BIOMD0000001006  YES  Kintecus  0.00037%  deck        -%  PASS
     Ciliberto2005 - Steady states and oscillations in the p53/Mdm2 network
     Kintecus matches the SBML within 0.1% (max 0.00037% of peak, worst species Mdm2_p_nuc).
-BIOMD0000001007  YES  Kintecus    0.613%  deck        -%  PASS
+BIOMD0000001007  YES  Kintecus   0.0047%  deck        -%  PASS
     Zhang2007 - Mechanism of DNA damage response (Model1)
-    PASS under the 4% rule: Kintecus is off by 0.613% of peak (worst species p53); before 2026-10-30 (0.1%
-    rule) this was ?. Independent deck check not available (deck simulation over 180 s).
+    Kintecus matches the SBML within 0.1% (max 0.0047% of peak, worst species MDM2cyt).
 BIOMD0000001008  NO   Kintecus        -%  deck        -%  NOT_CONVERTIBLE
     Scaramellini1997 - Two-receptor:One-transducer (2R1T) model for analysis of interactions between ago
     No pack: no reactions or rate rules could be converted Not converted (2): no reactions or rate rules
     could be converted; nothing convertible
-BIOMD0000001009  YES  Kintecus    0.006%  deck        -%  PASS
+BIOMD0000001009  YES  Kintecus  0.00019%  deck        -%  PASS
     Zhang2007 - Mechanism of DNA damage response (Model2)
-    Kintecus matches the SBML within 0.1% (max 0.006% of peak, worst species p53_act).
-BIOMD0000001010  YES  Kintecus     3.99%  deck        -%  PASS
+    Kintecus matches the SBML within 0.1% (max 0.00019% of peak, worst species p53_act).
+BIOMD0000001010  YES  Kintecus    0.001%  deck        -%  PASS
     Zhang2007 - Mechanism of DNA damage response (Model3)
-    PASS under the 4% rule: Kintecus is off by 3.99% of peak (worst species MDM2); before 2026-10-30 (0.1%
-    rule) this was ?. Independent deck check not available (deck simulation over 180 s).
+    Kintecus matches the SBML within 0.1% (max 0.001% of peak, worst species MDM2).
 BIOMD0000001011  YES  Kintecus   0.0003%  deck        -%  PASS
     Leon-Triana2020 - CAR T-cell therapy in B-cell acute lymphoblastic leukaemia
     Kintecus matches the SBML within 0.1% (max 0.0003% of peak, worst species CAR_T_cells).
@@ -4069,9 +4011,9 @@ BIOMD0000001023  YES  Kintecus  0.00041%  deck        -%  PASS
 BIOMD0000001024  YES  Kintecus  0.00044%  deck        -%  PASS
     Chaudhury2020 - Lotka-Volterra mathematical model of CAR-T cell and tumour kinetics
     Kintecus matches the SBML within 0.1% (max 0.00044% of peak, worst species Tumor_cells).
-BIOMD0000001025  YES  Kintecus  0.00038%  deck        -%  PASS
+BIOMD0000001025  YES  Kintecus  0.00041%  deck        -%  PASS
     Chaudhury2020 - EC50 expansion and killing mathematical model of CAR-T cell and tumour kinetics
-    Kintecus matches the SBML within 0.1% (max 0.00038% of peak, worst species Persistent_CAR_T_cells).
+    Kintecus matches the SBML within 0.1% (max 0.00041% of peak, worst species Persistent_CAR_T_cells).
 BIOMD0000001026  YES  Kintecus  0.00036%  deck        -%  PASS
     Kurlovics2021 - Metformin partitioning between plasma and RBC with independent Kin and Kout coeffici
     Kintecus matches the SBML within 0.1% (max 0.00036% of peak, worst species Mrbc).

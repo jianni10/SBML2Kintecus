@@ -1,10 +1,10 @@
 {
  "version": 3,
- "created": "2026-11-05T16:30:03.134765+00:00",
- "description": "Wang2008 - Mimicking the inhibitory effect of riluzole on membrane conductance in skeletal fibres\nBioModels BIOMD0000000693 (curated). SBML file: BIOMD0000000693_url.xml.\nSimulation: 0 to 150 time units (SED-ML: MODEL7817907010.sedml), sampling 0.14705882352941177.\nRun switches: -ig:mass -INT:5:10:0 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.17e-03 of species peak (worst: Vm)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 5.50e-09 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'INa' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IT' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IKCa' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ICa' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IL' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IK' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Stimulus' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'beta_n' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'beta_m' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'beta_h' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'alpha_n' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'alpha_m' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'alpha_h' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'w' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'jmem' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'jleak' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'jserca' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'jer' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dVm/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - Vm: zero order, signed\n  [info] rate rule dVm/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - Vm: zero order, signed\n  [info] rate rule dVm/dt term 12: rate order differs from the stoichiometry; consumed on separate line(s) - Vm: zero order, signed\n  [info] rate rule dVm/dt term 13: rate order differs from the stoichiometry; consumed on separate line(s) - Vm: zero order, signed\nRenamed species (Kintecus name = SBML id): m1 = m",
+ "created": "2026-11-07T22:10:24.449266+00:00",
+ "description": "Wang2008 - Mimicking the inhibitory effect of riluzole on membrane conductance in skeletal fibres\nBioModels BIOMD0000000693 (curated). SBML file: BIOMD0000000693_url.xml.\nSimulation: 0 to 150 time units (SED-ML: MODEL7817907010.sedml), sampling 0.14285714285714285.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.64e-03 of species peak (worst: Vm)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 4.68e-09 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'INa' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IT' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IKCa' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ICa' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IL' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IK' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Stimulus' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'beta_n' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'beta_m' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'beta_h' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'alpha_n' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'alpha_m' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'alpha_h' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'w' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'jmem' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'jleak' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'jserca' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'jer' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dVm/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - Vm: zero order, signed\n  [info] rate rule dVm/dt term 9: rate order differs from the stoichiometry; consumed on separate line(s) - Vm: zero order, signed\n  [info] rate rule do/dt term 1: USER expression is 852 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] 1 condition(s) on time alone written as switch species with time/value pairs (6 changes)\nRenamed species (Kintecus name = SBML id): m1 = m",
  "settings": {
   "kpath": "",
-  "switches": "-ig:mass -INT:5:10:0 -obeymaxint",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
   "nation": false
  },
  "grids": {
@@ -49,14 +49,14 @@
      "#",
      "",
      "",
-     "rate rule dVm/dt term 1 (consumes Vm)",
+     "rate rule dVm/dt term 1",
      ""
     ],
     [
-     "-20",
+     "1",
      "0",
      "0",
-     "source==>Vm",
+     "source+S[USER;cSW1,cSW2:(222.22222222222223*cSW1*cSW2-20)]==>Vm",
      ""
     ],
     [
@@ -64,20 +64,6 @@
      "",
      "",
      "rate rule dVm/dt term 2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1:(111.11111111111111*cSW1)]==>Vm",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dVm/dt term 3",
      ""
     ],
     [
@@ -91,7 +77,7 @@
      "#",
      "",
      "",
-     "rate rule dVm/dt term 4 (consumes Vm)",
+     "rate rule dVm/dt term 3 (consumes Vm)",
      ""
     ],
     [
@@ -105,7 +91,7 @@
      "#",
      "",
      "",
-     "rate rule dVm/dt term 5",
+     "rate rule dVm/dt term 4",
      ""
     ],
     [
@@ -119,7 +105,7 @@
      "#",
      "",
      "",
-     "rate rule dVm/dt term 6",
+     "rate rule dVm/dt term 5",
      ""
     ],
     [
@@ -133,21 +119,7 @@
      "#",
      "",
      "",
-     "rate rule dVm/dt term 7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cTIME_:(1333.3333333333335*cSW1/(2*abs(-cTIME_+50*floor(0.02*cTIME_-0.1)+6)+2e-300))]==>Vm",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dVm/dt term 8",
+     "rate rule dVm/dt term 6",
      ""
     ],
     [
@@ -161,21 +133,7 @@
      "#",
      "",
      "",
-     "rate rule dVm/dt term 9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cTIME_:(11111.111111111111*cSW1*floor(0.02*cTIME_-0.1)/(2*abs(-cTIME_+50*floor(0.02*cTIME_-0.1)+6)+2e-300))]==>Vm",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dVm/dt term 10",
+     "rate rule dVm/dt term 7",
      ""
     ],
     [
@@ -189,7 +147,7 @@
      "#",
      "",
      "",
-     "rate rule dVm/dt term 11",
+     "rate rule dVm/dt term 8",
      ""
     ],
     [
@@ -203,21 +161,7 @@
      "#",
      "",
      "",
-     "rate rule dVm/dt term 12 (consumes Vm)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cTIME_:((-1*222.22222222222223*cSW1*cTIME_/(2*abs(-cTIME_+50*floor(0.02*cTIME_-0.1)+6)+2e-300)))]==>Vm",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dVm/dt term 13 (consumes Vm)",
+     "rate rule dVm/dt term 9 (consumes Vm)",
      ""
     ],
     [
@@ -231,7 +175,7 @@
      "#",
      "",
      "",
-     "rate rule dVm/dt term 14",
+     "rate rule dVm/dt term 10",
      ""
     ],
     [
@@ -252,7 +196,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cVm:(8.735999999999999/(1-0.014995576820477707*exp((-1*0.1*cVm))))]==>m1",
+     "source+S[USER;cVm:(8.735999999999999/(1-exp(-0.1*cVm-4.2)))]==>m1",
      ""
     ],
     [
@@ -266,7 +210,7 @@
      "1",
      "0",
      "0",
-     "Vm+S[USER;cVm:(0.208/(1-0.014995576820477707*exp((-1*0.1*cVm))))]==>m1+Vm",
+     "Vm+S[USER;cVm:(0.208/(1-exp(-0.1*cVm-4.2)))]==>m1+Vm",
      ""
     ],
     [
@@ -280,7 +224,7 @@
      "1",
      "0",
      "0",
-     "m1+S[USER;cVm:(8.735999999999999/(1-0.014995576820477707*exp((-1*0.1*cVm))))]==>sink",
+     "m1+S[USER;cVm:(2.081*exp(-0.05555555555555555*cVm-2.3333333333333335))]==>sink",
      ""
     ],
     [
@@ -294,7 +238,7 @@
      "1",
      "0",
      "0",
-     "m1+S[USER;cVm:(0.20179866512582692*exp((-1*0.05555555555555555*cVm)))]==>sink",
+     "m1+S[USER;cVm:(8.735999999999999/(1-exp(-0.1*cVm-4.2)))]==>sink",
      ""
     ],
     [
@@ -308,7 +252,7 @@
      "1",
      "0",
      "0",
-     "m1+Vm+S[USER;cVm:(0.208/(1-0.014995576820477707*exp((-1*0.1*cVm))))]==>Vm",
+     "m1+Vm+S[USER;cVm:(0.208/(1-exp(-0.1*cVm-4.2)))]==>Vm",
      ""
     ],
     [
@@ -322,7 +266,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cVm:(0.00025853373626747545*exp((-1*0.1*cVm)))]==>h",
+     "source+S[USER;cVm:(0.0156*exp(-0.1*cVm-4.1))]==>h",
      ""
     ],
     [
@@ -336,7 +280,7 @@
      "1",
      "0",
      "0",
-     "h+S[USER;cVm:(3.382/(1+0.0045404150876735905*exp((-1*0.13157894736842105*cVm))))]==>sink",
+     "h+S[USER;cVm:(0.0156*exp(-0.1*cVm-4.1))]==>sink",
      ""
     ],
     [
@@ -350,7 +294,7 @@
      "1",
      "0",
      "0",
-     "h+S[USER;cVm:(0.00025853373626747545*exp((-1*0.1*cVm)))]==>sink",
+     "h+S[USER;cVm:(3.382/(exp(-0.13157894736842105*cVm-5.394736842105264)+1))]==>sink",
      ""
     ],
     [
@@ -364,7 +308,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cVm:(0.916/(1-0.003298505755939092*exp((-1*0.14285714285714285*cVm))))]==>n",
+     "source+S[USER;cVm:(0.916/(1-exp(-0.14285714285714285*cVm-5.714285714285714)))]==>n",
      ""
     ],
     [
@@ -378,7 +322,7 @@
      "1",
      "0",
      "0",
-     "Vm+S[USER;cVm:(0.0229/(1-0.003298505755939092*exp((-1*0.14285714285714285*cVm))))]==>n+Vm",
+     "Vm+S[USER;cVm:(0.0229/(1-exp(-0.14285714285714285*cVm-5.714285714285714)))]==>n+Vm",
      ""
     ],
     [
@@ -392,7 +336,7 @@
      "1",
      "0",
      "0",
-     "n+S[USER;cVm:(0.916/(1-0.003298505755939092*exp((-1*0.14285714285714285*cVm))))]==>sink",
+     "n+S[USER;cVm:(0.09616*exp(-0.025*cVm-1))]==>sink",
      ""
     ],
     [
@@ -406,7 +350,7 @@
      "1",
      "0",
      "0",
-     "n+S[USER;cVm:(0.03537528706304589*exp((-1*0.025*cVm)))]==>sink",
+     "n+S[USER;cVm:(0.916/(1-exp(-0.14285714285714285*cVm-5.714285714285714)))]==>sink",
      ""
     ],
     [
@@ -420,7 +364,7 @@
      "1",
      "0",
      "0",
-     "n+Vm+S[USER;cVm:(0.0229/(1-0.003298505755939092*exp((-1*0.14285714285714285*cVm))))]==>Vm",
+     "n+Vm+S[USER;cVm:(0.0229/(1-exp(-0.14285714285714285*cVm-5.714285714285714)))]==>Vm",
      ""
     ],
     [
@@ -462,7 +406,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cVm:(0.0125/(1*cosh(0.031*cVm+1.1501000000000001)+0.11338216780590397*exp((-1*0.08849557522123894*cVm))*cosh(0.031*cVm+1.1501000000000001)))]==>d",
+     "source+S[USER;cVm:(0.0125/(cosh(0.031*cVm+1.1501000000000001)*exp(-0.08849557522123894*cVm-2.1769911504424777)+1*cosh(0.031*cVm+1.1501000000000001)))]==>d",
      ""
     ],
     [
@@ -490,7 +434,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cVm,cc:(0.13440000000000002/(4.581818181818182*cc*exp(0.07487695454577344*cVm)/(90.90909090909092*cc^2*exp(0.13777359636422312*cVm)+1*cc*exp(0.06289664181844969*cVm))+25.454545454545457*cc*exp(0.07487695454577344*cVm)/(90.90909090909092*cc*exp(0.07487695454577344*cVm)+1)+7.8545454545454545*cc*exp(0.07487695454577344*cVm)/(1*cc*exp(0.06289664181844969*cVm)+0.18)+43.63636363636364*cc*exp(0.07487695454577344*cVm)/(1+0.18*exp((-1*0.06289664181844969*cVm))/cc)+0.0504/(90.90909090909092*cc^2*exp(0.13777359636422312*cVm)+1*cc*exp(0.06289664181844969*cVm))+0.28/(90.90909090909092*cc*exp(0.07487695454577344*cVm)+1)+0.08639999999999999/(1*cc*exp(0.06289664181844969*cVm)+0.18)+0.48/(1+0.18*exp((-1*0.06289664181844969*cVm))/cc)))]==>o",
+     "source+S[USER;cVm,cc:(0.13440000000000002/(43.63636363636364*cc/(1*exp((-1*0.07487695454577344*cVm))+0.18*exp((-1*0.07487695454577344*cVm))*exp((-1*0.06289664181844969*cVm))/cc)+7.8545454545454545*cc*exp((-1*0.06289664181844969*cVm))/(1*cc*exp((-1*0.07487695454577344*cVm))+0.18*exp((-1*0.07487695454577344*cVm))*exp((-1*0.06289664181844969*cVm)))+4.581818181818182*cc*exp((-1*0.06289664181844969*cVm))/(90.90909090909092*(cc*cc)+1*cc*exp((-1*0.07487695454577344*cVm)))+25.454545454545457*cc/(90.90909090909092*cc+1*exp((-1*0.07487695454577344*cVm)))+0.0504*exp((-1*0.06289664181844969*cVm))/(90.90909090909092*(cc*cc)/exp((-1*0.07487695454577344*cVm))+1*cc)+0.28/(90.90909090909092*cc/exp((-1*0.07487695454577344*cVm))+1)+0.08639999999999999*exp((-1*0.06289664181844969*cVm))/(1*cc+0.18*exp((-1*0.06289664181844969*cVm)))+0.48/(1+0.18*exp((-1*0.06289664181844969*cVm))/cc)))]==>o",
      ""
     ],
     [
@@ -504,7 +448,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cVm,cc:(0.2304/(0.009072/(90.90909090909092*cc^3*exp(0.2006702381826728*cVm)+1*cc^2*exp(0.12579328363689937*cVm))+0.1008/(90.90909090909092*cc^2*exp(0.13777359636422312*cVm)+1*cc*exp(0.06289664181844969*cVm))+0.015551999999999998/(1*cc^2*exp(0.12579328363689937*cVm)+0.18*cc*exp(0.06289664181844969*cVm))+0.28/(90.90909090909092*cc*exp(0.07487695454577344*cVm)+1)+0.17279999999999998/(1*cc*exp(0.06289664181844969*cVm)+0.18)+0.48/(1+0.18*exp((-1*0.06289664181844969*cVm))/cc)))]==>o",
+     "source+S[USER;cVm,cc:(0.2304/(0.009072*exp((-1*0.06289664181844969*cVm))^2/(90.90909090909092*cc^3/exp((-1*0.07487695454577344*cVm))+1*cc^2)+0.1008*exp((-1*0.06289664181844969*cVm))/(90.90909090909092*cc^2/exp((-1*0.07487695454577344*cVm))+1*cc)+0.28/(90.90909090909092*cc/exp((-1*0.07487695454577344*cVm))+1)+0.015551999999999998*exp((-1*0.06289664181844969*cVm))^2/(1*cc^2+0.18*cc*exp((-1*0.06289664181844969*cVm)))+0.17279999999999998*exp((-1*0.06289664181844969*cVm))/(1*cc+0.18*exp((-1*0.06289664181844969*cVm)))+0.48/(1+0.18*exp((-1*0.06289664181844969*cVm))/cc)))]==>o",
      ""
     ],
     [
@@ -532,7 +476,7 @@
      "1",
      "0",
      "0",
-     "o+S[USER;cVm,cc:(0.28/(90.90909090909092*cc*exp(0.07487695454577344*cVm)+1))]==>sink",
+     "o+S[USER;cVm,cc:(0.28/(90.90909090909092*cc/exp((-1*0.07487695454577344*cVm))+1))]==>sink",
      ""
     ],
     [
@@ -603,20 +547,6 @@
      "0",
      "0",
      "cer==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -763,17 +693,6 @@
      ""
     ],
     [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
-     ""
-    ],
-    [
      "source",
      "0",
      "1",
@@ -804,6 +723,17 @@
      "No",
      "SW1.TXT-SET",
      "time switch at 5 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time condition: 6 change(s), first at 5 [__switch__]",
      ""
     ],
     [
@@ -847,7 +777,7 @@
     ],
     [
      "1e-6",
-     "0.1470588237",
+     "0.142857143",
      "KCAL",
      "MOLES/LITER",
      "0",
@@ -895,9 +825,9 @@
     ],
     [
      "None1",
-     "0.1470588237",
+     "0.142857143",
      "0",
-     "1e-10",
+     "1e-8",
      "0",
      ""
     ],
@@ -959,6 +889,48 @@
     [
      "5",
      "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "5",
+     "1"
+    ],
+    [
+     "6",
+     "0"
+    ],
+    [
+     "55",
+     "1"
+    ],
+    [
+     "56",
+     "0"
+    ],
+    [
+     "105",
+     "1"
+    ],
+    [
+     "106",
+     "0"
     ],
     [
      "END",

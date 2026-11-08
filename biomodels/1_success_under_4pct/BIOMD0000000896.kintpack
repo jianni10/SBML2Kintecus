@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T16:30:47.519837+00:00",
- "description": "Szymanska2009 - Mathematical modeling of heat shock protein synthesis in response to temperature change\nBioModels BIOMD0000000896 (curated). SBML file: Szymanska2009.xml.\nSimulation: 0 to 1000 time units (SED-ML: Szymanska2009.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.79e-06 of species peak (worst: HSF_3_HSE)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Protein_Denaturation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - S1: zero order, signed\nRenamed species (Kintecus name = SBML id): S1 = S",
+ "created": "2026-11-07T22:27:43.171111+00:00",
+ "description": "Szymanska2009 - Mathematical modeling of heat shock protein synthesis in response to temperature change\nBioModels BIOMD0000000896 (curated). SBML file: Szymanska2009.xml.\nSimulation: 0 to 1000 time units (SED-ML: Szymanska2009.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.79e-06 of species peak (worst: HSF_3_HSE)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): S1 = S",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -245,28 +245,14 @@
      "#",
      "",
      "",
-     "Protein_Denaturation term 1/2",
+     "Protein_Denaturation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1:(0.16499999999999998*1.4^(5-5*cSW1))]==>S1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Protein_Denaturation term 2/2 (consumes S1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1:((-1*0.0004447045019396408*1.4^(5-5*cSW1)*exp(5*cSW1)))]==>S1",
+     "source+S[USER;cSW1:(5.5*1.4^(5-5*cSW1)*(0.03-0.012/exp(5-5*cSW1)))]==>S1",
      ""
     ],
     [

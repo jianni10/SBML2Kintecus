@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T06:52:23.618138+00:00",
- "description": "Cronwright2002_Glycerol_Synthesis\nBioModels BIOMD0000000076 (curated). SBML file: BIOMD0000000076_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000076_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.09e-06 of species peak (worst: G3P)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Gpd_p term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Gpp_p: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T20:22:06.053321+00:00",
+ "description": "Cronwright2002_Glycerol_Synthesis\nBioModels BIOMD0000000076 (curated). SBML file: BIOMD0000000076_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000076_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.09e-06 of species peak (worst: G3P)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Gpp_p: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Gpd_p term 1/2",
+     "Gpd_p",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cG3P:(4175.12882447665/(460.1071481609566*cG3P+1155.3801720486244))]==>G3P",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Gpd_p term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "G3P+S[USER;cG3P:(0.5487117552334944/(460.1071481609566*cG3P+1155.3801720486244))]==>sink",
+     "source+S[USER;cG3P:(1*(4175.12882447665-0.5487117552334944*cG3P)/(460.1071481609566*cG3P+1155.3801720486244))]==>G3P",
      ""
     ],
     [

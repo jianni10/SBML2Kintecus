@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-02T03:09:13.248561+00:00",
- "description": "DallaMan2007_MealModel_GlucoseInsulinSystem\nBioModels BIOMD0000000379 (curated). SBML file: BIOMD0000000379_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000379_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.50e-06 of species peak (worst: I_d)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'X' goes below zero in the SBML: integrated as X_o = value + 5, output as X = OUTC[X_o;-5*source]\n  [info] 'Y' goes below zero in the SBML: integrated as Y_o = value + 1, output as Y = OUTC[Y_o;-1*source]\n  [info] rate rule dG_p/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - G_p: zero order, signed\n  [info] rate rule dG_p/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - G_p: zero order, signed\n  [info] rate rule dG_t/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dG_t/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dQ_gut/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - Q_gut: zero order, signed\n  [info] rate rule dI_po/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - I_po: zero order, signed\n  [info] rate rule dI_po/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - I_po: zero order, signed",
+ "created": "2026-11-07T21:10:17.854148+00:00",
+ "description": "DallaMan2007_MealModel_GlucoseInsulinSystem\nBioModels BIOMD0000000379 (curated). SBML file: BIOMD0000000379_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000379_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.50e-06 of species peak (worst: I_d)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'X' goes below zero in the SBML: integrated as X_o = value + 5, output as X = OUTC[X_o;-5*source]\n  [info] 'Y' goes below zero in the SBML: integrated as Y_o = value + 1, output as Y = OUTC[Y_o;-1*source]\n  [info] rate rule dG_p/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - G_p: zero order, signed\n  [info] rate rule dG_p/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - G_p: zero order, signed\n  [info] rate rule dG_t/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dG_t/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dI_po/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - I_po: zero order, signed\n  [info] rate rule dI_po/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - I_po: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -238,21 +238,7 @@
      "1",
      "0",
      "0",
-     "I_l+S[USER;cI_po:(0.122949/(0.0152*cI_po+0.3529))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dI_l/dt term 5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "I_l+I_po+S[USER;cI_po:(0.002888/(0.0152*cI_po+0.3529))]==>2I_l+I_po",
+     "I_l+S[USER;cI_po:((0.002888*cI_po-0.122949)/(0.0152*cI_po+0.3529))]==>2I_l",
      ""
     ],
     [
@@ -336,21 +322,7 @@
      "1",
      "0",
      "0",
-     "Q_sto2+S[USER;cQ_sto1,cQ_sto2:(0.0239*tanh(0.003205128205128205*cQ_sto1+0.003205128205128205*cQ_sto2-2.5))]==>2Q_sto2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dQ_sto2/dt term 4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Q_sto2+S[USER;cQ_sto1,cQ_sto2:(0.0239*tanh(0.00017806267806267802*cQ_sto1+0.00017806267806267802*cQ_sto2-11.388888888888886))]==>sink",
+     "Q_sto2+S[USER;cQ_sto1,cQ_sto2:(-0.0239*tanh(0.00017806267806267802*cQ_sto1+0.00017806267806267802*cQ_sto2-11.388888888888886)+0.0239*tanh(0.003205128205128205*cQ_sto1+0.003205128205128205*cQ_sto2-2.5))]==>2Q_sto2",
      ""
     ],
     [
@@ -392,21 +364,7 @@
      "1",
      "0",
      "0",
-     "Q_sto2+S[USER;cQ_sto1,cQ_sto2:(0.0239*tanh(0.00017806267806267802*cQ_sto1+0.00017806267806267802*cQ_sto2-11.388888888888886))]==>Q_gut+Q_sto2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dQ_gut/dt term 4 (consumes Q_gut)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cQ_sto1,cQ_sto2:((-1*0.0239*cQ_sto2*tanh(0.003205128205128205*cQ_sto1+0.003205128205128205*cQ_sto2-2.5)))]==>Q_gut",
+     "Q_sto2+S[USER;cQ_sto1,cQ_sto2:(0.0239*tanh(0.00017806267806267802*cQ_sto1+0.00017806267806267802*cQ_sto2-11.388888888888886)-0.0239*tanh(0.003205128205128205*cQ_sto1+0.003205128205128205*cQ_sto2-2.5))]==>Q_gut+Q_sto2",
      ""
     ],
     [

@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:12:35.516679+00:00",
+ "created": "2026-11-07T22:28:07.540229+00:00",
  "description": "dePillis2003 - The dynamics of an optimally controlled tumor model: A case study\nBioModels BIOMD0000000909 (curated). SBML file: dePillis2003.xml.\nSimulation: 0 to 150 time units (SED-ML: dePillis2003.sedml), sampling 0.15.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.85e-07 of species peak (worst: T)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): T1 = T",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Presence_of_Normal_Cell term 1/2",
+     "Presence_of_Normal_Cell",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "N==>2N",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Presence_of_Normal_Cell term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "N+N==>N",
+     "N+S[USER;cN:(1-1*cN)]==>2N",
      ""
     ],
     [
@@ -119,28 +105,14 @@
      "#",
      "",
      "",
-     "Induction_of_tumor_cell term 1/2",
+     "Induction_of_tumor_cell",
      ""
     ],
     [
-     "1.5",
+     "1",
      "0",
      "0",
-     "T1==>2T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Induction_of_tumor_cell term 2/2",
-     ""
-    ],
-    [
-     "1.5",
-     "0",
-     "0",
-     "T1+T1==>T1",
+     "T1+S[USER;cT1:(1.5-1.5*cT1)]==>2T1",
      ""
     ],
     [

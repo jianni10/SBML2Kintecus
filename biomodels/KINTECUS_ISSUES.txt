@@ -130,6 +130,16 @@ INTERFACE NOTES
     spacing-format profiles keep the grid. Values are correct; row times move. The references in this
     release are written at the times Kintecus prints (if the grid changes, kintcheck interpolates between
     rows, which is inexact across a dose). Repro: repros/TIMEPAIRS_OUTPUT_GRID (pairs/ and spacing/).
+24. (2026-11-07) -INT:1 never applies Time/value-pair changes in one deck: BIOMD0000000554 (3 switch files at
+    t=200, 500, 723). Under -INT:1 the switch species keep their initial values all run and the output jumps
+    197.5 -> 212.077 (no row at the pair time); -INT:5 applies them and matches the SBML (0.027%). Small decks
+    with the same pair files switch correctly. Repro: repros/PAIR_SKIP_INT1_BIOMD0000000554 (README.txt).
+25. (2026-11-07) Kintecus's stiff integrators are much slower than CVODE/LSODA on a few correct decks:
+    BIOMD0000000506 (56 species, 108k characters of USER: LSODA 3 s, CVODE 0.02 s, -INT:1 reaches t=220 of 1000
+    in 150 s regardless of sampling or maximum step), BIOMD0000000608 (LSODA 0.4 s; -INT:1 t=41,000 of 100,000
+    in 600 s, view.txt "Stepsize underflow in stiff sub" x1139), BIOMD0000000603 after t=5425 (-INT:1 stops where
+    the cell volume sits on the turgor threshold, a kink; -INT:5 passes it). Long USER lines cost time per
+    evaluation: 160 lines of 366 characters added 10 s to a 0.8 s run (slowdiag/jac/LONG*).
 22. FIXED in the build compiled 2026-11-03 16:34:03: USER rates were re-parsed on every call on the 11-03
     12:39/13:35 builds (interpreter cache key 1,024 characters < 2,159-character caller buffer; earlier builds
     thrashed a 64-entry round-robin cache). New hashed cache: same output bit-for-bit, 33-64x faster on USER

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T21:00:49.932378+00:00",
- "description": "Cao2008 - Network of a toggle switch\nBioModels BIOMD0000000483 (curated). SBML file: BIOMD0000000483_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000483_url.sedml (auto-generated placeholder); duration chosen from the dynamics: no dynamics), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): NOTHING_COMPARED, max |difference| = 0.00e+00 of species peak (worst: None)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] re2: rate order differs from the stoichiometry; consumed on separate line(s) - ESA: zero order, signed\n  [info] re1: rate order differs from the stoichiometry; consumed on separate line(s) - ESB: zero order, signed\n  [info] re13 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - BDb: zero order, signed\n  [info] re5 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - BDa: zero order, signed",
+ "created": "2026-11-07T21:36:26.818743+00:00",
+ "description": "Cao2008 - Network of a toggle switch\nBioModels BIOMD0000000483 (curated). SBML file: BIOMD0000000483_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000483_url.sedml (auto-generated placeholder); duration chosen from the dynamics: no dynamics), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): NOTHING_COMPARED, max |difference| = 0.00e+00 of species peak (worst: None)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] re2: rate order differs from the stoichiometry; consumed on separate line(s) - ESA: zero order, signed\n  [info] re1: rate order differs from the stoichiometry; consumed on separate line(s) - ESB: zero order, signed\n  [info] re13: rate order differs from the stoichiometry; consumed on separate line(s) - Pa: first order\n  [info] re5: rate order differs from the stoichiometry; consumed on separate line(s) - Pb: first order",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -133,84 +133,56 @@
      "#",
      "",
      "",
-     "re13 term 1/2",
-     ""
-    ],
-    [
-     "5e-6",
-     "0",
-     "0",
-     "Pa+Pa+Db==>BDb",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "re13 term 2/2",
+     "re13",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cDb,cPa:(5e-6*cDb*cPa)]==>2Pa+Db",
+     "Db+S[USER;cPa:(5e-6*cPa^2-5e-6*cPa)]==>BDb",
      ""
     ],
     [
      "#",
      "",
      "",
-     "re13 term 2/2 (consumes BDb)",
+     "re13 (consumes Pa)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cDb,cPa:((-1*5e-6*cDb*cPa))]==>BDb",
+     "Pa+S[USER;cDb,cPa:(1e-5*cDb*cPa-1e-5*cDb)]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "re5 term 1/2",
-     ""
-    ],
-    [
-     "5e-6",
-     "0",
-     "0",
-     "Pb+Pb+Da==>BDa",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "re5 term 2/2",
+     "re5",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cDa,cPb:(5e-6*cDa*cPb)]==>2Pb+Da",
+     "Da+S[USER;cPb:(5e-6*cPb^2-5e-6*cPb)]==>BDa",
      ""
     ],
     [
      "#",
      "",
      "",
-     "re5 term 2/2 (consumes BDa)",
+     "re5 (consumes Pb)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cDa,cPb:((-1*5e-6*cDa*cPb))]==>BDa",
+     "Pb+S[USER;cDa,cPb:(1e-5*cDa*cPb-1e-5*cDa)]==>sink",
      ""
     ],
     [
@@ -382,6 +354,17 @@
      "No",
      "1",
      "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
      ""
     ],
     [

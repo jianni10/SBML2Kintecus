@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:14:24.372016+00:00",
+ "created": "2026-11-07T22:29:23.738457+00:00",
  "description": "Tang2020 - Estimation of transmission risk of COVID-19 and impact of public health interventions - update\nBioModels BIOMD0000000972 (curated). SBML file: Tang2020.xml.\nSimulation: 0 to 40 time units (SED-ML: Tang2020.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.55e-06 of species peak (worst: Hospitalised)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -210,7 +210,7 @@
      "1",
      "0",
      "0",
-     "Infected+S[USER;cTIME_:(0.363050622/(0.13266+2.60404*exp((-1*0.3283*cTIME_))))]==>Hospitalised",
+     "Infected+S[USER;cTIME_:(0.363050622/(2.60404*exp((-1*0.3283*cTIME_))+0.13266))]==>Hospitalised",
      ""
     ],
     [

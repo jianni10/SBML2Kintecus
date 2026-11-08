@@ -4,10 +4,10 @@ Built 2026-11-07. Source: the curated BioModels set as mirrored in github.com/sy
 (entries up to BIOMD0000001080, mirror dated June 2025).
 
 1072 curated models -> 1045 .kintpack files.
-SUCCESS (Kintecus output under 4% of the original SBML; rule set 2026-10-30): 943 packs
-  (922 of them within 0.1%, the earlier rule; column within_0.1pct in the table).
+SUCCESS (Kintecus output under 4% of the original SBML; rule set 2026-10-30): 961 packs
+  (942 of them within 0.1%, the earlier rule; column within_0.1pct in the table).
 Packs shown to reproduce the SBML (SUCCESS, or folder 2 where an independent SciPy run of the deck matches
-  within 0.1% but Kintecus is too slow or differs): 947.
+  within 0.1% but Kintecus is too slow or differs): 965.
 1072 entries (including every former #39/#999 pack) were rebuilt with the latest converter
 fixes; the others keep their earlier build and result (column built_with_latest_fixes in the table).
 
@@ -15,10 +15,10 @@ START HERE: FINAL_RESULTS_TABLE.csv (open in Excel) or FINAL_RESULTS_TABLE.txt -
 match %, SUCCESS yes/no, and a note on why it failed or how far off it is.
 
 WHAT IS IN THIS ZIP   (full table of contents: CONTENTS.txt)
-  1_success_under_4pct/                           943  Kintecus output matches the SBML to under 4%
+  1_success_under_4pct/                           961  Kintecus output matches the SBML to under 4%
   2_deck_verified_kintecus_too_slow_or_differs/     4  the deck reproduces the SBML (independent
                                                        check), but Kintecus is too slow, stops, or differs
-  3_off_partial_or_unverified/                     98  off by 4% or more, too slow, parts not convertible,
+  3_off_partial_or_unverified/                     80  off by 4% or more, too slow, parts not convertible,
                                                        or no SBML reference to check against
   (no pack)                                        27  nothing convertible / converter error
   FINAL_RESULTS_TABLE.csv / .txt   the results table (see above)
@@ -54,7 +54,7 @@ CHECKING THE PACKS ON YOUR OWN PC (RUN_ALL_CHECKS.bat)
      --stall 120 --cap 1800      more patience (seconds)            --tol 0.04                   threshold (4%)
      --switches "-ig:mass -INT:5:59:1e-20 -obeymaxint"  force other switches     --show  show Kintecus windows
   A full run of all packs takes hours (each stuck pack waits --stall seconds; slow ones up to --cap).
-  Start with  RUN_ALL_CHECKS.bat --folder 1_success  (about 943 packs).
+  Start with  RUN_ALL_CHECKS.bat --folder 1_success  (about 961 packs).
 
 FINISHING THE PACKS THAT RAN OUT OF TIME HERE (RUN_SLOW_JOBS.bat)
   SLOW_JOBS.csv lists every pack that ran out of time on all integrators tried here, with the integrator that
@@ -153,6 +153,17 @@ CONVERSION CONVENTIONS (also in each pack's description)
     the double range (e.g. exp(3800) inside a switch) are written as +-1e308, which is what IEEE arithmetic in
     Kintecus gives; a time trigger whose threshold the events themselves change (time >= t_int*cups + t_lag,
     cups = cups + 1) is unrolled like the time-only events below.
+  * Step functions, signs and exp() (since 2026-11-07; why the slow jobs were slow). Kintecus USER has no
+    conditionals, so SBML piecewise/relations on the state are written with H(z) = (z/(abs(z)+1e-300)+1)/2.
+    That step, and max(z,0) = (z+abs(z))/2, are now kept as one factor while rates are simplified; before,
+    sympy multiplied them out into terms of size ~1/|z| on separate lines that cancel, so near the switch
+    point the rate was rounding noise and the integrators crawled (deck round trip through CVODE: 158,707 steps
+    for BIOMD0000000603 against 1,767 for the SBML; now 1,832). Terms of opposite sign that depend on the same
+    species stay one rate instead of separate (signed) lines; exp() is kept whole (sympy wrote exp(3800-4t) as
+    1e308*exp(-4t), which overflows to inf/NaN); conditions on time alone (daily light windows with
+    floor(time/24), time - c >= 0, i == k) become switch species with Time/value pairs; and a negative
+    product of a sum is printed -1*(a+b), not -1*a+b. Packs kept from before this change are rebuilt the old
+    way by sbml2kintpack (release_settings.csv variant "...+pre1107").
   * Events that depend only on time (since 2026-11-05): triggers built from time, constants and variables that
     only the events themselves change - time windows ((time > 50) && (time <= 300)), periodic doses written with
     % or floor ((time - t1) % P == 0), self-resetting clocks (Day = Day + 24), exact instants (time == 20) - are

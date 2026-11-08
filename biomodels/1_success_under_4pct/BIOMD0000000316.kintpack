@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T15:54:10.417071+00:00",
- "description": "Shen-Orr2002_FeedForward_AND_gate\nBioModels BIOMD0000000316 (curated). SBML file: BIOMD0000000316_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000316_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled; extended past the last time event (15)), sampling 0.1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.77e-07 of species peak (worst: Y)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r1: piecewise/conditional rate encoded with abs()-based step functions\n  [info] r1 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - Y: zero order, signed\n  [info] r3: piecewise/conditional rate encoded with abs()-based step functions\n  [info] r3 term 3/9: rate order differs from the stoichiometry; consumed on separate line(s) - Z: zero order, signed\n  [info] r3 term 4/9: rate order differs from the stoichiometry; consumed on separate line(s) - Z: zero order, signed\n  [info] r3 term 7/9: rate order differs from the stoichiometry; consumed on separate line(s) - Z: zero order, signed\n  [info] r3 term 8/9: rate order differs from the stoichiometry; consumed on separate line(s) - Z: zero order, signed\n  [info] time event(s) on 'X' encoded as time/value pairs in EV_X.TXT (SET)",
+ "created": "2026-11-07T20:53:44.929106+00:00",
+ "description": "Shen-Orr2002_FeedForward_AND_gate\nBioModels BIOMD0000000316 (curated). SBML file: BIOMD0000000316_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000316_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled; extended past the last time event (15)), sampling 0.1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.77e-07 of species peak (worst: Y)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r1: piecewise/conditional rate encoded with abs()-based step functions\n  [info] r3: piecewise/conditional rate encoded with abs()-based step functions\n  [info] time event(s) on 'X' encoded as time/value pairs in EV_X.TXT (SET)",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:5 -obeymaxint",
@@ -49,42 +49,14 @@
      "#",
      "",
      "",
-     "r1 term 1/3",
-     ""
-    ],
-    [
-     "0.5",
-     "0",
-     "0",
-     "source==>Y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r1 term 2/3 (consumes Y)",
+     "r1",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cX:((-1*0.5/(2*abs(cX-0.5)+2e-300)))]==>Y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r1 term 3/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cX:(1*cX/(2*abs(cX-0.5)+2e-300))]==>Y",
+     "source+S[USER;cX:(1*((cX-0.5)/(2*(abs(cX-0.5)+1e-300))+0.5))]==>Y",
      ""
     ],
     [
@@ -105,126 +77,14 @@
      "#",
      "",
      "",
-     "r3 term 1/9",
-     ""
-    ],
-    [
-     "0.25",
-     "0",
-     "0",
-     "source==>Z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r3 term 2/9",
+     "r3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cX,cY:(0.25/(4*abs(cX-0.5)*abs(cY-0.5)+4e-300*abs(cX-0.5)+4e-300*abs(cY-0.5)+0))]==>Z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r3 term 3/9 (consumes Z)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cX:((-1*0.25/(2*abs(cX-0.5)+2e-300)))]==>Z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r3 term 4/9 (consumes Z)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cY:((-1*0.25/(2*abs(cY-0.5)+2e-300)))]==>Z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r3 term 5/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cX:(1*cX/(4*abs(cX-0.5)+4e-300))]==>Z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r3 term 6/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Y+S[USER;cY:(1/(4*abs(cY-0.5)+4e-300))]==>Z+Y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r3 term 7/9 (consumes Z)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cX,cY:((-1*0.5*cX/(4*abs(cX-0.5)*abs(cY-0.5)+4e-300*abs(cX-0.5)+4e-300*abs(cY-0.5)+0)))]==>Z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r3 term 8/9 (consumes Z)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cX,cY:((-1*0.5*cY/(4*abs(cX-0.5)*abs(cY-0.5)+4e-300*abs(cX-0.5)+4e-300*abs(cY-0.5)+0)))]==>Z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r3 term 9/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Y+S[USER;cX,cY:(1*cX/(4*abs(cX-0.5)*abs(cY-0.5)+4e-300*abs(cX-0.5)+4e-300*abs(cY-0.5)+0))]==>Z+Y",
+     "source+S[USER;cX,cY:(1*((cX-0.5)/(2*(abs(cX-0.5)+1e-300))+0.5)*((cY-0.5)/(2*(abs(cY-0.5)+1e-300))+0.5))]==>Z",
      ""
     ],
     [

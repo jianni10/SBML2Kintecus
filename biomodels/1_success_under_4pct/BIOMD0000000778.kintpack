@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:09:00.675939+00:00",
+ "created": "2026-11-07T22:20:30.657395+00:00",
  "description": "Wei2017 - tumor, T cell and cytokine interaction\nBioModels BIOMD0000000778 (curated). SBML file: Wei2017.xml.\nSimulation: 0 to 10000 time units (SED-ML: Wei2017.sedml), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 9.95e-07 of species peak (worst: I)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] tumor_killing: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): T1 = T",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "tumor_growth term 1/2",
+     "tumor_growth",
      ""
     ],
     [
-     "0.01",
+     "1",
      "0",
      "0",
-     "T1==>2T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth term 2/2",
-     ""
-    ],
-    [
-     "1e-5",
-     "0",
-     "0",
-     "T1+T1==>T1",
+     "T1+S[USER;cT1:(0.01-1e-5*cT1)]==>2T1",
      ""
     ],
     [

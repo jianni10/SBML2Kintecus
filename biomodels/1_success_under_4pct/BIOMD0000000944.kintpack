@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T07:13:51.089038+00:00",
- "description": "Goldbeter2013-Oscillatory activity of cyclin-dependent kinases in the cell cycle\nBioModels BIOMD0000000944 (curated). SBML file: Goldbeter2013.xml.\nSimulation: 0 to 100 time units (SED-ML: Goldbeter2013.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 7.85e-07 of species peak (worst: Cyclin)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_for_C_decay term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_M_production term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_M_decay: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_X_production term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_X_decay: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T22:28:57.547685+00:00",
+ "description": "Goldbeter2013-Oscillatory activity of cyclin-dependent kinases in the cell cycle\nBioModels BIOMD0000000944 (curated). SBML file: Goldbeter2013.xml.\nSimulation: 0 to 100 time units (SED-ML: Goldbeter2013.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.10e-07 of species peak (worst: Cyclin)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_for_C_decay term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_M_decay: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_X_decay: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -91,28 +91,14 @@
      "#",
      "",
      "",
-     "reaction_for_M_production term 1/2",
+     "reaction_for_M_production",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Cyclin+S[USER;cActive_Cdc2_kinase,cCyclin:(4/(-cActive_Cdc2_kinase*cCyclin-0.5*cActive_Cdc2_kinase+1.002*cCyclin+0.501))]==>Active_Cdc2_kinase+Cyclin",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_for_M_production term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Active_Cdc2_kinase+Cyclin+S[USER;cActive_Cdc2_kinase,cCyclin:((-1*4/(0.5*cActive_Cdc2_kinase+1*cCyclin*(cActive_Cdc2_kinase+1e-30)-1.002*cCyclin-0.501)))]==>Cyclin",
+     "Cyclin+S[USER;cActive_Cdc2_kinase,cCyclin:(4*(1-cActive_Cdc2_kinase)/((1.002-cActive_Cdc2_kinase)*(cCyclin+0.5)))]==>Active_Cdc2_kinase+Cyclin",
      ""
     ],
     [
@@ -133,28 +119,14 @@
      "#",
      "",
      "",
-     "reaction_for_X_production term 1/2",
+     "reaction_for_X_production",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Active_Cdc2_kinase+S[USER;cActive_APC:(1/(1.01-cActive_APC))]==>Active_APC+Active_Cdc2_kinase",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_for_X_production term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Active_APC+Active_Cdc2_kinase+S[USER;cActive_APC:((-1*1/(1*cActive_APC-1.01)))]==>Active_Cdc2_kinase",
+     "Active_Cdc2_kinase+S[USER;cActive_APC:(1*(1-cActive_APC)/(1.01-cActive_APC))]==>Active_APC+Active_Cdc2_kinase",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:45:17.050777+00:00",
- "description": "Nazaret2009_TCA_RC_ATP\nBioModels BIOMD0000000232 (curated). SBML file: BIOMD0000000232_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000232_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.25e-06 of species peak (worst: Pyr)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'ADP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'NADH' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] v5: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for KG, NAD\n  [info] vresp term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vATP term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - ATP: zero order, signed\n  [info] rate rule dDeltaPsi/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - p_DeltaPsi: zero order, signed\n  [info] rate rule dDeltaPsi/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - p_DeltaPsi: zero order, signed\n  [info] rate rule dDeltaPsi/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - p_DeltaPsi: zero order, signed\nRenamed species (Kintecus name = SBML id): p_DeltaPsi = DeltaPsi",
+ "created": "2026-11-07T20:39:04.653502+00:00",
+ "description": "Nazaret2009_TCA_RC_ATP\nBioModels BIOMD0000000232 (curated). SBML file: BIOMD0000000232_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000232_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.25e-06 of species peak (worst: Pyr)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'ADP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'NADH' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] v5: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for KG, NAD\n  [info] vATP term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - ATP: zero order, signed\n  [info] rate rule dDeltaPsi/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - p_DeltaPsi: zero order, signed\n  [info] rate rule dDeltaPsi/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - p_DeltaPsi: zero order, signed\nRenamed species (Kintecus name = SBML id): p_DeltaPsi = DeltaPsi",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -70,7 +70,7 @@
      "0.152",
      "0",
      "0",
-     "Pyr+NAD==>AcCoA",
+     "NAD+Pyr==>AcCoA",
      ""
     ],
     [
@@ -84,7 +84,7 @@
      "57.142",
      "0",
      "0",
-     "OAA+AcCoA==>Cit",
+     "AcCoA+OAA==>Cit",
      ""
     ],
     [
@@ -98,7 +98,7 @@
      "0.053",
      "0",
      "0",
-     "NAD+Cit==>KG",
+     "Cit+NAD==>KG",
      ""
     ],
     [
@@ -182,7 +182,7 @@
      "0.04",
      "0",
      "0",
-     "Pyr+ATP==>OAA",
+     "ATP+Pyr==>OAA",
      ""
     ],
     [
@@ -203,28 +203,14 @@
      "#",
      "",
      "",
-     "vresp term 1/2",
+     "vresp",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cNAD,cp_DeltaPsi:(2.6750000000000003/(-3.059023205018255e-7*cNAD*exp(0.1*cp_DeltaPsi)-cNAD+9.391201239406044e-7*exp(0.1*cp_DeltaPsi)+3.0700000000000003))]==>NAD",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "vresp term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "NAD+S[USER;cNAD,cp_DeltaPsi:((-1*2.5/(1*cNAD+3.059023205018255e-7*(cNAD+1e-30)*exp(0.1*cp_DeltaPsi)-9.391201239406044e-7*exp(0.1*cp_DeltaPsi)-3.0700000000000003)))]==>sink",
+     "source+S[USER;cNAD,cp_DeltaPsi:(2.5*(1.07-cNAD)/((3.0700000000000003-cNAD)*(exp(0.1*cp_DeltaPsi-15)+1)))]==>NAD",
      ""
     ],
     [
@@ -252,7 +238,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cATP,cp_DeltaPsi:(263.8/(exp(0.004*cATP-0.016640000000000002/(1+93144560.35767512*exp((-1*0.1401961274990192*cp_DeltaPsi))))+1))]==>ATP",
+     "source+S[USER;cATP,cp_DeltaPsi:(263.8/(exp(0.004*cATP-0.016640000000000002/(93144560.35767512*exp((-1*0.1401961274990192*cp_DeltaPsi))+1))+1))]==>ATP",
      ""
     ],
     [
@@ -294,7 +280,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cNAD,cp_DeltaPsi:(3962962.962962963/(-3.059023205018255e-7*cNAD*exp(0.1*cp_DeltaPsi)-cNAD+9.391201239406044e-7*exp(0.1*cp_DeltaPsi)+3.0700000000000003))]==>p_DeltaPsi",
+     "source+S[USER;cNAD,cp_DeltaPsi:((3962962.962962963-3703703.703703704*cNAD)/(-cNAD*exp(0.1*cp_DeltaPsi-15)-cNAD+3.0700000000000003*exp(0.1*cp_DeltaPsi-15)+3.0700000000000003))]==>p_DeltaPsi",
      ""
     ],
     [
@@ -322,7 +308,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cATP,cp_DeltaPsi:((-1*117244444.44444445/(exp(0.004*cATP-0.016640000000000002/(1+93144560.35767512*exp((-1*0.1401961274990192*cp_DeltaPsi))))+1)))]==>p_DeltaPsi",
+     "source+S[USER;cATP,cp_DeltaPsi:((-1*117244444.44444445/(exp(0.004*cATP-0.016640000000000002/(93144560.35767512*exp((-1*0.1401961274990192*cp_DeltaPsi))+1))+1)))]==>p_DeltaPsi",
      ""
     ],
     [
@@ -337,20 +323,6 @@
      "0",
      "0",
      "source+S[USER;cATP:((-1*7980.740740740741*cATP))]==>p_DeltaPsi",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dDeltaPsi/dt term 6 (consumes p_DeltaPsi)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cNAD,cp_DeltaPsi:((-1*3703703.703703704*cNAD/(-3.059023205018255e-7*cNAD*exp(0.1*cp_DeltaPsi)-cNAD+9.391201239406044e-7*exp(0.1*cp_DeltaPsi)+3.0700000000000003)))]==>p_DeltaPsi",
      ""
     ],
     [

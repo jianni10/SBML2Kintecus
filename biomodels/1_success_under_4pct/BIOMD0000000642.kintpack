@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:05:53.521947+00:00",
+ "created": "2026-11-07T22:04:13.657507+00:00",
  "description": "Mufudza2012 - Estrogen effect on the dynamics of breast cancer\nBioModels BIOMD0000000642 (curated). SBML file: BIOMD0000000642_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000642_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.62e-06 of species peak (worst: I)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): T1 = T; E1 = E",
  "settings": {
   "kpath": "",
@@ -53,10 +53,10 @@
      ""
     ],
     [
-     "0.10000000000000117",
+     "1",
      "0",
      "0",
-     "H==>2H",
+     "H+S[USER;cH:(0.10000000000000117-0.3*cH)]==>2H",
      ""
     ],
     [
@@ -64,20 +64,6 @@
      "",
      "",
      "rate rule dH/dt term 2",
-     ""
-    ],
-    [
-     "0.3",
-     "0",
-     "0",
-     "H+H==>H",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dH/dt term 3",
      ""
     ],
     [
@@ -98,7 +84,7 @@
      "1",
      "0",
      "0",
-     "T1==>2T1",
+     "T1+S[USER;cT1:(1-0.4*cT1)]==>2T1",
      ""
     ],
     [
@@ -120,20 +106,6 @@
      "",
      "",
      "rate rule dT/dt term 3",
-     ""
-    ],
-    [
-     "0.4",
-     "0",
-     "0",
-     "T1+T1==>T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dT/dt term 4",
      ""
     ],
     [
@@ -179,24 +151,10 @@
      ""
     ],
     [
-     "0.085",
-     "0",
-     "0",
-     "I+T1==>T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dI/dt term 4",
-     ""
-    ],
-    [
      "1",
      "0",
      "0",
-     "I+T1+S[USER;cT1:(0.2/(cT1+0.3))]==>2I+T1",
+     "I+T1+S[USER;cT1:(-0.085+0.2/(cT1+0.3))]==>2I+T1",
      ""
     ],
     [

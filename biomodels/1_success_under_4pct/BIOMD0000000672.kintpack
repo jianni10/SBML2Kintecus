@@ -1,10 +1,10 @@
 {
  "version": 3,
- "created": "2026-11-05T16:28:37.729411+00:00",
- "description": "Brown1997 - Plasma Melatonin Levels\nBioModels BIOMD0000000672 (curated). SBML file: BIOMD0000000672_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: MODEL1006230019.sedml), sampling 2.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.43e-06 of species peak (worst: H2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dH1/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - p_H1: zero order, signed\n  [info] rate rule dH1/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - p_H1: zero order, signed\nRenamed species (Kintecus name = SBML id): p_H1 = H1; p_H2 = H2",
+ "created": "2026-11-07T22:05:19.478822+00:00",
+ "description": "Brown1997 - Plasma Melatonin Levels\nBioModels BIOMD0000000672 (curated). SBML file: BIOMD0000000672_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: MODEL1006230019.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.25e-06 of species peak (worst: H2)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): p_H1 = H1; p_H2 = H2",
  "settings": {
   "kpath": "",
-  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
   "nation": false
  },
  "grids": {
@@ -70,49 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cSW2,cSW3:(6.510006730436857*cSW2*cSW3)]==>p_H1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dH1/dt term 3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cTIME_:(4.454089394850807e21*cSW1*exp((-1*0.02674178937345468*cTIME_)))]==>p_H1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dH1/dt term 4 (consumes p_H1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW2,cSW3,cTIME_:((-1*1.9615279976054246e17*cSW2*cSW3*exp((-1*0.02883307739434049*cTIME_))))]==>p_H1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dH1/dt term 5 (consumes p_H1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cSW2,cSW3,cTIME_:((-1*4.454089394850807e21*cSW1*cSW2*cSW3*exp((-1*0.02674178937345468*cTIME_))))]==>p_H1",
+     "source+S[USER;cSW1,cSW2,cSW3,cTIME_:(-6.51*cSW1*cSW2*cSW3*exp(47.97477013597769-0.02674178937345468*cTIME_)+6.51*cSW1*exp(47.97477013597769-0.02674178937345468*cTIME_)-6.510006730436857*cSW2*cSW3*exp(37.94432985095208-0.02883307739434049*cTIME_)+6.510006730436857*cSW2*cSW3)]==>p_H1",
      ""
     ],
     [
@@ -380,7 +338,7 @@
      "None1",
      "2.000000002",
      "0",
-     "1e-10",
+     "1e-8",
      "0",
      ""
     ],

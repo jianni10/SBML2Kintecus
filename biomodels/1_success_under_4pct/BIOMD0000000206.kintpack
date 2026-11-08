@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:44:44.451000+00:00",
- "description": "Wolf2000_Glycolytic_Oscillations\nBioModels BIOMD0000000206 (curated). SBML file: BIOMD0000000206_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000206_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.17e-05 of species peak (worst: at)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] v1: rate order differs from the stoichiometry; consumed on separate line(s) - at: first order\n  [info] v3 term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v3 term 2/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v3 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - s3: zero order, signed\n  [info] v3 term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - s4: zero order, signed\n  [info] v4 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - s5: zero order, signed\n  [info] v10 term 2/2: non-integer reactant coefficient 0.1 on s6o written as a Kintecus coefficient",
+ "created": "2026-11-07T20:38:35.844489+00:00",
+ "description": "Wolf2000_Glycolytic_Oscillations\nBioModels BIOMD0000000206 (curated). SBML file: BIOMD0000000206_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000206_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.17e-05 of species peak (worst: at)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] v1: rate order differs from the stoichiometry; consumed on separate line(s) - at: first order\n  [info] v3 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v3 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - na: zero order, signed; s3: zero order, signed\n  [info] v4 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - s5: zero order, signed\n  [info] v10 term 2/2: non-integer reactant coefficient 0.1 on s6o written as a Kintecus coefficient",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -91,84 +91,56 @@
      "#",
      "",
      "",
-     "v3 term 1/4",
+     "v3 term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "na+s3+S[USER;cat,cna:((-1*98967656.72000001/(76411.1*cat+57823.1*cna-363467.5)))]==>s4+at",
+     "na+s3+S[USER;cat,cna:((24741914.180000003*cat-98967656.72000001)/(76411.1*cat+57823.1*cna-363467.5))]==>at+s4",
      ""
     ],
     [
      "#",
      "",
      "",
-     "v3 term 2/4",
+     "v3 term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s4+at+S[USER;cat,cna:((-1*1370407.47/(76411.1*cat+57823.1*cna-363467.5)))]==>na+s3",
+     "source+S[USER;cat,cna,cs4:(1370407.47*cat*cs4*(cna-1)/(-76411.1*cat-57823.1*cna+363467.5))]==>at+s4",
      ""
     ],
     [
      "#",
      "",
      "",
-     "v3 term 3/4",
+     "v3 term 2/2 (consumes na)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "na+S[USER;cat,cna,cs4:((-1*1370407.47*cat*cs4/(76411.1*cat+57823.1*cna-363467.5)))]==>s4+at",
+     "source+S[USER;cat,cna,cs4:((-1*1370407.47*cat*cs4*(cna-1)/(-76411.1*cat-57823.1*cna+363467.5)))]==>na",
      ""
     ],
     [
      "#",
      "",
      "",
-     "v3 term 3/4 (consumes s3)",
+     "v3 term 2/2 (consumes s3)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cat,cna,cs4:((-1*1370407.47*cat*cna*cs4/(-76411.1*cat-57823.1*cna+363467.5)))]==>s3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v3 term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "at+S[USER;cat,cna,cs3:((-1*24741914.180000003*cna*cs3/(76411.1*cat+57823.1*cna-363467.5)))]==>na+s3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v3 term 4/4 (consumes s4)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cat,cna,cs3:((-1*24741914.180000003*cat*cna*cs3/(-76411.1*cat-57823.1*cna+363467.5)))]==>s4",
+     "source+S[USER;cat,cna,cs4:((-1*1370407.47*cat*cs4*(cna-1)/(-76411.1*cat-57823.1*cna+363467.5)))]==>s3",
      ""
     ],
     [

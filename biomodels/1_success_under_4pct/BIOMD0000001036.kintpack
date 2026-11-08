@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:15:56.181946+00:00",
+ "created": "2026-11-07T22:33:15.131778+00:00",
  "description": "Cappuccio2007 - Tumor-immune system interactions and determination of the optimal therapeutic protocol in immunotherapy\nBioModels BIOMD0000001036 (curated). SBML file: Cappuccio2007.xml.\nSimulation: 0 to 500 time units (SED-ML: Cappuccio2007 - Fig1.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.95e-06 of species peak (worst: Tumor_cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_killing: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
@@ -91,28 +91,14 @@
      "#",
      "",
      "",
-     "Tumor_growth term 1/2",
+     "Tumor_growth",
      ""
     ],
     [
-     "0.123",
+     "1",
      "0",
      "0",
-     "Tumor_cells==>2Tumor_cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_growth term 2/2",
-     ""
-    ],
-    [
-     "0.123",
-     "0",
-     "0",
-     "Tumor_cells+Tumor_cells==>Tumor_cells",
+     "Tumor_cells+S[USER;cTumor_cells:(0.123-0.123*cTumor_cells)]==>2Tumor_cells",
      ""
     ],
     [

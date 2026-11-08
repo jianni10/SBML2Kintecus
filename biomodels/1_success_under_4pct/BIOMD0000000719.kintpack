@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T06:41:42.732488+00:00",
+ "created": "2026-11-07T22:12:56.673276+00:00",
  "description": "Tsai2014 - Cell cycle duration control by oscillatory Dynamics  in Early Xenopus laevis Embryos\nBioModels BIOMD0000000719 (curated). SBML file: Tsai2014.xml.\nSimulation: 0 to 153.000000036 time units (SED-ML: tsai2014.sedml), sampling 0.15300000003599998.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.37e-06 of species peak (worst: Cyclin_B1_Cdk1_complex_unphosphorylated)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Cyclin_B1_Cdk1_complex_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Cyclin_B1_Cdk1_phosphorylated_dephosphorylation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): CyclinB1Cdk1complexphosph1 = Cyclin_B1_Cdk1_complex_phosphorylated; CyclinB1Cdk1complexunphos1 = Cyclin_B1_Cdk1_complex_unphosphorylated",
  "settings": {
   "kpath": "",
@@ -98,7 +98,7 @@
      "1",
      "0",
      "0",
-     "CyclinB1Cdk1complexphosph1+S[USER;cTIME_:(0.025031580054003782*(1/((1+3/(1+39824784.39757623*exp((-1*0.25*cTIME_))))^2))^0.5)]==>CyclinB1Cdk1complexunphos1",
+     "CyclinB1Cdk1complexphosph1+S[USER;cTIME_:(0.025031580054003782*(1/((1+3/(exp(17.5-0.25*cTIME_)+1))^2))^0.5)]==>CyclinB1Cdk1complexunphos1",
      ""
     ],
     [
@@ -112,7 +112,7 @@
      "1",
      "0",
      "0",
-     "CyclinB1Cdk1complexphosph1+S[USER;cCyclinB1Cdk1complexphosph1,cTIME_:(0.1251579002700189*(1/((1+3/(1+39824784.39757623*exp((-1*0.25*cTIME_))))^2))^0.5/(3.942410517684042e-6*(cCyclinB1Cdk1complexphosph1+1e-30)^3.5+1))]==>CyclinB1Cdk1complexunphos1",
+     "CyclinB1Cdk1complexphosph1+S[USER;cCyclinB1Cdk1complexphosph1,cTIME_:(0.1251579002700189*(1/((1+3/(exp(17.5-0.25*cTIME_)+1))^2))^0.5/(3.942410517684042e-6*(cCyclinB1Cdk1complexphosph1+1e-30)^3.5+1))]==>CyclinB1Cdk1complexunphos1",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "CyclinB1Cdk1complexunphos1+S[USER;cCyclinB1Cdk1complexphosph1,cTIME_:(0.2503158005400378/(1.77147e16*(1/cCyclinB1Cdk1complexphosph1)^11*(1/((1+3/(1+39824784.39757623*exp((-1*0.25*cTIME_))))^2))^0.5+1*(1/((1+3/(1+39824784.39757623*exp((-1*0.25*cTIME_))))^2))^0.5))]==>CyclinB1Cdk1complexphosph1",
+     "CyclinB1Cdk1complexunphos1+S[USER;cCyclinB1Cdk1complexphosph1,cTIME_:(0.2503158005400378/(1.77147e16*(1/cCyclinB1Cdk1complexphosph1)^11*(1/((1+3/(exp(17.5-0.25*cTIME_)+1))^2))^0.5+1*(1/((1+3/(exp(17.5-0.25*cTIME_)+1))^2))^0.5))]==>CyclinB1Cdk1complexphosph1",
      ""
     ],
     [
@@ -140,7 +140,7 @@
      "1",
      "0",
      "0",
-     "CyclinB1Cdk1complexunphos1+S[USER;cTIME_:(0.050063160108007564/(1/((1+3/(1+39824784.39757623*exp((-1*0.25*cTIME_))))^2))^0.5)]==>CyclinB1Cdk1complexphosph1",
+     "CyclinB1Cdk1complexunphos1+S[USER;cTIME_:(0.050063160108007564/(1/((1+3/(exp(17.5-0.25*cTIME_)+1))^2))^0.5)]==>CyclinB1Cdk1complexphosph1",
      ""
     ],
     [

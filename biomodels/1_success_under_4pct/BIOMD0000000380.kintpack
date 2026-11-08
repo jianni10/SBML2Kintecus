@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T06:59:26.372653+00:00",
- "description": "Smallbone2011_TrehaloseBiosynthesis\nBioModels BIOMD0000000380 (curated). SBML file: BIOMD0000000380_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000380_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.97e-06 of species peak (worst: g1p)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] pgi term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] hxt term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] hxk term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] hxk term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] pgm term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] pgm term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] tpp: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] tps: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] nth: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ugp: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T21:10:20.890730+00:00",
+ "description": "Smallbone2011_TrehaloseBiosynthesis\nBioModels BIOMD0000000380 (curated). SBML file: BIOMD0000000380_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000380_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.97e-06 of species peak (worst: g1p)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] pgi: rate order differs from the stoichiometry; consumed on separate line(s) - g6p: zero order, signed\n  [info] hxk: rate order differs from the stoichiometry; consumed on separate line(s) - glc: zero order, signed\n  [info] pgm: rate order differs from the stoichiometry; consumed on separate line(s) - g6p: zero order, signed\n  [info] tpp: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] tps: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] nth: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ugp: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,112 +49,84 @@
      "#",
      "",
      "",
-     "pgi term 1/2",
+     "pgi (consumes g6p)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cg6p:(1593.7500000000002/(0.7142857142857143*cg6p+3.1551724137931036))]==>g6p",
+     "source+S[USER;cg6p:((-1*1*(765*cg6p-1593.7500000000002)/(0.7142857142857143*cg6p+3.1551724137931036)))]==>g6p",
      ""
     ],
     [
      "#",
      "",
      "",
-     "pgi term 2/2",
+     "hxt",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "g6p+S[USER;cg6p:(765/(0.7142857142857143*cg6p+3.1551724137931036))]==>sink",
+     "source+S[USER;cglc:(1*(8159.087095150193-81.59087095150193*cglc)/(64.90610264845805*cglc+84.90669575432119))]==>glc",
      ""
     ],
     [
      "#",
      "",
      "",
-     "hxt term 1/2",
+     "hxk",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cglc:(8159.087095150193/(64.90610264845805*cglc+84.90669575432119))]==>glc",
+     "source+S[USER;cg6p,cglc,ct6p:(1*(-15.46946666666667*cg6p+60936.66666666667*cglc)/(0.7802415458937199*cg6p+292.59057971014494*cglc+585.1811594202899*ct6p+23.407246376811592))]==>g6p",
      ""
     ],
     [
      "#",
      "",
      "",
-     "hxt term 2/2",
+     "hxk (consumes glc)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "glc+S[USER;cglc:(81.59087095150193/(64.90610264845805*cglc+84.90669575432119))]==>sink",
+     "source+S[USER;cg6p,cglc,ct6p:((-1*1*(-15.46946666666667*cg6p+60936.66666666667*cglc)/(0.7802415458937199*cg6p+292.59057971014494*cglc+585.1811594202899*ct6p+23.407246376811592)))]==>glc",
      ""
     ],
     [
      "#",
      "",
      "",
-     "hxk term 1/2",
+     "pgm",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "glc+S[USER;cg6p,cglc,ct6p:(60936.66666666667/(0.7802415458937199*cg6p+292.59057971014494*cglc+585.1811594202899*ct6p+23.407246376811592))]==>g6p",
+     "source+S[USER;cg1p,cg6p:(1*(-42.53149370125975*cg1p+7.089999999999999*cg6p)/(43.47826086956522*cg1p+20*cg6p+1))]==>g1p",
      ""
     ],
     [
      "#",
      "",
      "",
-     "hxk term 2/2",
+     "pgm (consumes g6p)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "g6p+S[USER;cg6p,cglc,ct6p:(15.46946666666667/(0.7802415458937199*cg6p+292.59057971014494*cglc+585.1811594202899*ct6p+23.407246376811592))]==>glc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "pgm term 1/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "g6p+S[USER;cg1p,cg6p:(7.089999999999999/(43.47826086956522*cg1p+20*cg6p+1))]==>g1p",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "pgm term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "g1p+S[USER;cg1p,cg6p:(42.53149370125975/(43.47826086956522*cg1p+20*cg6p+1))]==>g6p",
+     "source+S[USER;cg1p,cg6p:((-1*1*(-42.53149370125975*cg1p+7.089999999999999*cg6p)/(43.47826086956522*cg1p+20*cg6p+1)))]==>g6p",
      ""
     ],
     [
@@ -442,17 +414,6 @@
      "No",
      "1",
      "constant 1.0: nothing consumed [__source__]",
-     ""
-    ],
-    [
-     "sink",
-     "0",
-     "1",
-     "N",
-     "0",
-     "No",
-     "1",
-     "constant 1.0: nothing produced [__sink__]",
      ""
     ],
     [

@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-01T23:02:38.819099+00:00",
+ "created": "2026-11-07T22:28:45.224937+00:00",
  "description": "Rhodes2019 - Immune-Mediated theory of Metastasis\nBioModels BIOMD0000000926 (curated). SBML file: Rhodes2019-Immune-Mediated theory of Metastasis_V1.xml.\nSimulation: 0 to 100 time units (SED-ML: Rhodes2019-Immune-Mediated theory of Metastasis.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.95e-06 of species peak (worst: CT_immune_Cell_x_2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Necrotic_Cell_v1__rise term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - Necrotic_Cell_v_1: zero order, signed\n  [info] Necrotic_Cell_v1__rise term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - Necrotic_Cell_v_1: zero order, signed\n  [info] Necrotic_Cell_v2__rise term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - Necrotic_Cell_v_2: zero order, signed\n  [info] Necrotic_Cell_v2__rise term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - Necrotic_Cell_v_2: zero order, signed\n  [info] Tumor_Cell_u2__Metastatic term 4/8: rate order differs from the stoichiometry; consumed on separate line(s) - Tumor_Cell_u_2: zero order, signed\n  [info] Tumor_Cell_u2__Metastatic term 6/8: rate order differs from the stoichiometry; consumed on separate line(s) - Tumor_Cell_u_2: zero order, signed\n  [info] Tumor_Cell_u2__Metastatic term 7/8: rate order differs from the stoichiometry; consumed on separate line(s) - Tumor_Cell_u_2: zero order, signed\n  [info] Tumor_Cell_u2__Metastatic term 8/8: rate order differs from the stoichiometry; consumed on separate line(s) - Tumor_Cell_u_2: zero order, signed",
  "settings": {
   "kpath": "",
@@ -49,112 +49,56 @@
      "#",
      "",
      "",
-     "Tumor_Cell_u1__growth term 1/4",
-     ""
-    ],
-    [
-     "0.47498713332251175",
-     "0",
-     "0",
-     "Tumor_Cell_u_1==>2Tumor_Cell_u_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Cell_u1__growth term 2/4",
-     ""
-    ],
-    [
-     "8.929000927184596e-10",
-     "0",
-     "0",
-     "Tumor_Cell_u_1+Tumor_Cell_u_1==>Tumor_Cell_u_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Cell_u1__growth term 3/4",
+     "Tumor_Cell_u1__growth term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Tumor_Cell_u_1+S[USER;cTE_immune_Cell_y_1:(0.095*tanh(7.080063720573485e-5*cTE_immune_Cell_y_1-4.8000354003186025))]==>2Tumor_Cell_u_1",
+     "Tumor_Cell_u_1+S[USER;cTumor_Cell_u_1:(0.47498713332251175-8.929000927184596e-10*cTumor_Cell_u_1)]==>2Tumor_Cell_u_1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Tumor_Cell_u1__growth term 4/4",
+     "Tumor_Cell_u1__growth term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Tumor_Cell_u_1+Tumor_Cell_u_1+S[USER;cTE_immune_Cell_y_1:(1.7858485600421084e-10*tanh(7.080063720573485e-5*cTE_immune_Cell_y_1-4.8000354003186025))]==>Tumor_Cell_u_1",
+     "Tumor_Cell_u_1+S[USER;cTE_immune_Cell_y_1,cTumor_Cell_u_1:(1*(0.095-1.7858485600421084e-10*cTumor_Cell_u_1)*tanh(7.080063720573485e-5*cTE_immune_Cell_y_1-4.8000354003186025))]==>2Tumor_Cell_u_1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Tumor_Cell_u2__growth term 1/4",
-     ""
-    ],
-    [
-     "0.47498713332251175",
-     "0",
-     "0",
-     "Tumor_Cell_u_2==>2Tumor_Cell_u_2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Cell_u2__growth term 2/4",
-     ""
-    ],
-    [
-     "8.929000927184596e-10",
-     "0",
-     "0",
-     "Tumor_Cell_u_2+Tumor_Cell_u_2==>Tumor_Cell_u_2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Cell_u2__growth term 3/4",
+     "Tumor_Cell_u2__growth term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Tumor_Cell_u_2+S[USER;cTE_immune_Cell_y_2:(0.095*tanh(7.080063720573485e-5*cTE_immune_Cell_y_2-4.8000354003186025))]==>2Tumor_Cell_u_2",
+     "Tumor_Cell_u_2+S[USER;cTumor_Cell_u_2:(0.47498713332251175-8.929000927184596e-10*cTumor_Cell_u_2)]==>2Tumor_Cell_u_2",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Tumor_Cell_u2__growth term 4/4",
+     "Tumor_Cell_u2__growth term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Tumor_Cell_u_2+Tumor_Cell_u_2+S[USER;cTE_immune_Cell_y_2:(1.7858485600421084e-10*tanh(7.080063720573485e-5*cTE_immune_Cell_y_2-4.8000354003186025))]==>Tumor_Cell_u_2",
+     "Tumor_Cell_u_2+S[USER;cTE_immune_Cell_y_2,cTumor_Cell_u_2:(1*(0.095-1.7858485600421084e-10*cTumor_Cell_u_2)*tanh(7.080063720573485e-5*cTE_immune_Cell_y_2-4.8000354003186025))]==>2Tumor_Cell_u_2",
      ""
     ],
     [

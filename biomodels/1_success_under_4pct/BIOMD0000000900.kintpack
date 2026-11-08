@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:12:10.301706+00:00",
+ "created": "2026-11-07T22:27:52.170850+00:00",
  "description": "Bianca2013 - Persistence analysis in a Kolmogorov-type model for cancer-immune system competition\nBioModels BIOMD0000000900 (curated). SBML file: Bianca2013.xml.\nSimulation: 0 to 4000 time units (SED-ML: Bianca2013.sedml), sampling 4.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.40e-05 of species peak (worst: T)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Removal_of_cancer_cell_by_the_action_of_B_cell_and_T_cell term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Removal_of_cancer_cell_by_the_action_of_B_cell_and_T_cell term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): T1 = T",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Formation_of_cancer_cell term 1/2",
+     "Formation_of_cancer_cell",
      ""
     ],
     [
-     "0.05",
+     "1",
      "0",
      "0",
-     "C==>2C",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Formation_of_cancer_cell term 2/2",
-     ""
-    ],
-    [
-     "0.005",
-     "0",
-     "0",
-     "C+C==>C",
+     "C+S[USER;cC:(0.05-0.005*cC)]==>2C",
      ""
     ],
     [
@@ -105,28 +91,14 @@
      "#",
      "",
      "",
-     "activation_of_B_cell_induced_by_cancer_cell term 1/2",
+     "activation_of_B_cell_induced_by_cancer_cell",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "B+C+S[USER;cC:(0.155/(0.5*cC+1))]==>2B+C",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "activation_of_B_cell_induced_by_cancer_cell term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "B+B+C+S[USER;cC:(0.051666666666666666/(0.5*cC+1))]==>B+C",
+     "B+C+S[USER;cB,cC:(0.155*(1-0.3333333333333333*cB)/(0.5*cC+1))]==>2B+C",
      ""
     ],
     [
@@ -147,28 +119,14 @@
      "#",
      "",
      "",
-     "Activation_of_T_cell_induced_by_cancer_cell term 1/2",
+     "Activation_of_T_cell_induced_by_cancer_cell",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "C+T1+S[USER;cC:(0.325/(0.65*cC+1))]==>2T1+C",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Activation_of_T_cell_induced_by_cancer_cell term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "T1+T1+C+S[USER;cC:(0.10833333333333334/(0.65*cC+1))]==>C+T1",
+     "C+T1+S[USER;cC,cT1:(0.325*(1-0.3333333333333333*cT1)/(0.65*cC+1))]==>2T1+C",
      ""
     ],
     [

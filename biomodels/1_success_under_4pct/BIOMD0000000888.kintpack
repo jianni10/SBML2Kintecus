@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:11:52.766634+00:00",
+ "created": "2026-11-07T22:27:30.888551+00:00",
  "description": "Unni2019 - Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics with Drug Interventions\nBioModels BIOMD0000000888 (curated). SBML file: unni2019.xml.\nSimulation: 0 to 100 time units (SED-ML: unni2019.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.93e-06 of species peak (worst: T)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): T1 = T",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Growth_of_tumor_cell term 1/2",
+     "Growth_of_tumor_cell",
      ""
     ],
     [
-     "0.431",
+     "1",
      "0",
      "0",
-     "T1==>2T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Growth_of_tumor_cell term 2/2",
-     ""
-    ],
-    [
-     "9.3527e-9",
-     "0",
-     "0",
-     "T1+T1==>T1",
+     "T1+S[USER;cT1:(0.431-9.3527e-9*cT1)]==>2T1",
      ""
     ],
     [

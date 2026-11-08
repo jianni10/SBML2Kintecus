@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:28:47.165139+00:00",
- "description": "Larbat2016.2 - Modeling the diversion of primary carbon flux into secondary metabolism under variable nitrate and light or dark conditions (Light Dark Cycles)\nBioModels BIOMD0000000858 (curated). SBML file: Larbat2016.2.xml.\nSimulation: 0 to 72 time units (SED-ML: Larbat2016.2.sedml), sampling 0.072.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.08e-05 of species peak (worst: trioseP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] EtrioseP_Consumption_Sucrose: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Ephe_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Enitrate_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] TrioseP_Formation term 4/6: rate order differs from the stoichiometry; consumed on separate line(s) - trioseP: zero order, signed\n  [info] TrioseP_Formation term 6/6: rate order differs from the stoichiometry; consumed on separate line(s) - trioseP: zero order, signed\n  [info] Estarch_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [partial] TrioseP_Formation term 3/6: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] TrioseP_Formation term 6/6 (consumes trioseP): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried",
+ "created": "2026-11-07T22:26:48.566821+00:00",
+ "description": "Larbat2016.2 - Modeling the diversion of primary carbon flux into secondary metabolism under variable nitrate and light or dark conditions (Light Dark Cycles)\nBioModels BIOMD0000000858 (curated). SBML file: Larbat2016.2.xml.\nSimulation: 0 to 72 time units (SED-ML: Larbat2016.2.sedml), sampling 0.072.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.08e-05 of species peak (worst: trioseP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] EtrioseP_Consumption_Sucrose: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Ephe_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Enitrate_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Estarch_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:5 -obeymaxint",
@@ -245,84 +245,14 @@
      "#",
      "",
      "",
-     "TrioseP_Formation term 1/6",
+     "TrioseP_Formation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "N+S[USER;cN:(5.05/(cN+1e-11))]==>trioseP+N",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "TrioseP_Formation term 2/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "N+S[USER;cN,cSW1,cTIME_:(60.599999999999994/(cN*abs(24*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))-24*cSW1*floor(0.041666666666666664*cTIME_)-cTIME_+24*floor(0.041666666666666664*cTIME_)+12)+1e-300*cN+1e-11*abs(24*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))-24*cSW1*floor(0.041666666666666664*cTIME_)-cTIME_+24*floor(0.041666666666666664*cTIME_)+12)+1e-311))]==>trioseP+N",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "TrioseP_Formation term 3/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "N+S[USER;cN,cSW1,cTIME_:(121.19999999999999*floor(0.041666666666666664*cTIME_)/(cN*abs(24*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))-24*cSW1*floor(0.041666666666666664*cTIME_)-cTIME_+24*floor(0.041666666666666664*cTIME_)+12)+1e-300*cN+1e-11*abs(24*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))-24*cSW1*floor(0.041666666666666664*cTIME_)-cTIME_+24*floor(0.041666666666666664*cTIME_)+12)+1e-311))]==>trioseP+N",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "TrioseP_Formation term 4/6 (consumes trioseP)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cN,cSW1,cTIME_:((-1*5.05*cN*cTIME_/(cN*abs(24*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))-24*cSW1*floor(0.041666666666666664*cTIME_)-cTIME_+24*floor(0.041666666666666664*cTIME_)+12)+1e-300*cN+1e-11*abs(24*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))-24*cSW1*floor(0.041666666666666664*cTIME_)-cTIME_+24*floor(0.041666666666666664*cTIME_)+12)+1e-311)))]==>trioseP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "TrioseP_Formation term 5/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "N+S[USER;cN,cSW1,cTIME_:(121.19999999999999*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))/(cN*abs(24*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))-24*cSW1*floor(0.041666666666666664*cTIME_)-cTIME_+24*floor(0.041666666666666664*cTIME_)+12)+1e-300*cN+1e-11*abs(24*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))-24*cSW1*floor(0.041666666666666664*cTIME_)-cTIME_+24*floor(0.041666666666666664*cTIME_)+12)+1e-311))]==>trioseP+N",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "TrioseP_Formation term 6/6 (consumes trioseP)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cN,cSW1,cTIME_:((-1*121.19999999999999*cN*cSW1*floor(0.041666666666666664*cTIME_)/(cN*abs(24*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))-24*cSW1*floor(0.041666666666666664*cTIME_)-cTIME_+24*floor(0.041666666666666664*cTIME_)+12)+1e-300*cN+1e-11*abs(24*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))-24*cSW1*floor(0.041666666666666664*cTIME_)-cTIME_+24*floor(0.041666666666666664*cTIME_)+12)+1e-311)))]==>trioseP",
+     "N+S[USER;cN,cSW1,cTIME_:(10.1*(0.5+(24*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))-24*cSW1*floor(0.041666666666666664*cTIME_)-cTIME_+24*floor(0.041666666666666664*cTIME_)+12)/(2*(abs(24*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))-24*cSW1*floor(0.041666666666666664*cTIME_)-cTIME_+24*floor(0.041666666666666664*cTIME_)+12)+1e-300)))/(cN+1e-11))]==>trioseP+N",
      ""
     ],
     [

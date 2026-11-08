@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T06:53:06.686695+00:00",
- "description": "Rozi2003_GlycogenPhosphorylase_Activation\nBioModels BIOMD0000000100 (curated). SBML file: BIOMD0000000100_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000100_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.36e-06 of species peak (worst: Y)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R7 term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R7 term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T20:24:48.032915+00:00",
+ "description": "Rozi2003_GlycogenPhosphorylase_Activation\nBioModels BIOMD0000000100 (curated). SBML file: BIOMD0000000100_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000100_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.36e-06 of species peak (worst: Y)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -161,56 +161,14 @@
      "#",
      "",
      "",
-     "R7 term 1/4",
+     "R7",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cGP,cZ:(1.5/(-cGP+1+0.1/(16*cZ^4+1)))]==>GP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R7 term 2/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cGP,cZ:(13.5*cZ^4/(-cGP*cZ^4-0.0625*cGP+cZ^4+0.1*cZ^4/(16*cZ^4+1)+0.0625+0.00625/(16*cZ^4+1)))]==>GP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R7 term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "GP+S[USER;cGP,cZ:((-24*cZ^4-1.5)/(1*cGP+16*cZ^4*(cGP+1e-30)-16*cZ^4-1.1))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R7 term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "GP+S[USER;cGP,cZ:((-1*216*cZ^4/(1*cGP+16*cZ^4*(cGP+1e-30)-16*cZ^4-1.1)))]==>sink",
+     "source+S[USER;cGP,cZ:(1*(1-cGP)*(13.5*cZ^4/(cZ^4+0.0625)+1.5)/(-cGP+1+0.1/(16*cZ^4+1)))]==>GP",
      ""
     ],
     [

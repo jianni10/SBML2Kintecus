@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:12:45.500435+00:00",
+ "created": "2026-11-07T22:28:13.585615+00:00",
  "description": "Caravagna2010 - Tumour suppression by immune system\nBioModels BIOMD0000000912 (curated). SBML file: Caravagna2010.xml.\nSimulation: 0 to 1000 time units (SED-ML: Caravagna2010.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.10e-06 of species peak (worst: T)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Removal_of_tumor_from_the_system_by_the_action_of_immune_response: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): T1 = T; E1 = E",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Induction_of_tumor term 1/2",
+     "Induction_of_tumor",
      ""
     ],
     [
-     "0.18",
+     "1",
      "0",
      "0",
-     "T1==>2T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Induction_of_tumor term 2/2",
-     ""
-    ],
-    [
-     "5.625e-11",
-     "0",
-     "0",
-     "T1+T1==>T1",
+     "T1+S[USER;cT1:(0.18-5.625e-11*cT1)]==>2T1",
      ""
     ],
     [

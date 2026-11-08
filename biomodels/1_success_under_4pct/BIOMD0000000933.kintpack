@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T23:02:45.380710+00:00",
- "description": "Kosiuk2015-Geometric analysis of the Goldbeter minimal model for the embryonic cell cycle\nBioModels BIOMD0000000933 (curated). SBML file: Kosiuk2015.xml.\nSimulation: 0 to 40 time units (SED-ML: Kosiuk2015.sedml), sampling 0.4.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.19e-07 of species peak (worst: C)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Production_of_Cyclin term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - C: zero order, signed\n  [info] Cdc2_kinase_activation term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Cdc2_kinase_activation term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] activation_of_cyclin_protease term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] activation_of_cyclin_protease term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): M1 = M",
+ "created": "2026-11-07T22:28:50.293022+00:00",
+ "description": "Kosiuk2015-Geometric analysis of the Goldbeter minimal model for the embryonic cell cycle\nBioModels BIOMD0000000933 (curated). SBML file: Kosiuk2015.xml.\nSimulation: 0 to 40 time units (SED-ML: Kosiuk2015.sedml), sampling 0.4.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.19e-07 of species peak (worst: C)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Production_of_Cyclin term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - C: zero order, signed\n  [info] Cdc2_kinase_activation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] activation_of_cyclin_protease term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): M1 = M",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -91,21 +91,21 @@
      "#",
      "",
      "",
-     "Cdc2_kinase_activation term 1/3",
+     "Cdc2_kinase_activation term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "C+S[USER;cC,cM1:(6/(-2*cC*cM1+2.002*cC-1*cM1+1.001))]==>M1+C",
+     "C+S[USER;cC,cM1:(6*(1-cM1)/(-2*cC*cM1+2.002*cC-1*cM1+1.001))]==>M1+C",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Cdc2_kinase_activation term 2/3",
+     "Cdc2_kinase_activation term 2/2",
      ""
     ],
     [
@@ -119,35 +119,21 @@
      "#",
      "",
      "",
-     "Cdc2_kinase_activation term 3/3",
+     "activation_of_cyclin_protease term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "M1+C+S[USER;cC,cM1:((-1*6/(2*cC*(cM1+1e-30)-2.002*cC+1*cM1-1.001)))]==>C",
+     "M1+S[USER;cX:(1*(1-cX)/(1.001-cX))]==>X+M1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "activation_of_cyclin_protease term 1/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "M1+S[USER;cX:(1/(1.001-cX))]==>X+M1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "activation_of_cyclin_protease term 2/3",
+     "activation_of_cyclin_protease term 2/2",
      ""
     ],
     [
@@ -155,20 +141,6 @@
      "0",
      "0",
      "X+S[USER;cX:(0.7/(1*cX+0.001))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "activation_of_cyclin_protease term 3/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "X+M1+S[USER;cX:((-1*1/(1*cX-1.001)))]==>M1",
      ""
     ],
     [

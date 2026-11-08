@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-05T21:12:13.330516+00:00",
+ "created": "2026-11-07T22:10:30.191714+00:00",
  "description": "FelixGarza2017 - Blue Light Treatment of Psoriasis (simplified)\nBioModels BIOMD0000000695 (curated). SBML file: BIOMD0000000695_url.xml.\nSimulation: 0 to 800 time units (SED-ML: MODEL1701090001.sedml), sampling 0.3333333333333333.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.62e-06 of species peak (worst: xFinal_2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 3 event(s) depend only on time (and on variables only they change): unrolled into 49 firing(s) up to t = 800\n  [info] R_16 term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R_27: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] R_28: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] R_32: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] R_33: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for xFinal_1\n  [info] R_34: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] time event(s) on 'doseBL' encoded as time/value pairs in EV_P_DOSEBL.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_doseBL = doseBL",
  "settings": {
   "kpath": "",
@@ -196,7 +196,7 @@
      "1",
      "0",
      "0",
-     "xFinal_8+S[USER;cp_doseBL:(0.056*exp((-1*0.006808*cp_doseBL)))]==>2xFinal_8",
+     "xFinal_8+S[USER;cp_doseBL:(0.056*exp((-1*0.003404*cp_doseBL))^2)]==>2xFinal_8",
      ""
     ],
     [
@@ -518,7 +518,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_doseBL,cxFinal_1,cxFinal_2,cxFinal_8:(0.33*cxFinal_1/(99*(8.940717684631407e-5*cxFinal_2+8.940717684631407e-5*cxFinal_8)^3*exp(0.003404*cp_doseBL)+1*exp(0.003404*cp_doseBL)))]==>xFinal_1",
+     "source+S[USER;cp_doseBL,cxFinal_1,cxFinal_2,cxFinal_8:(0.33*cxFinal_1*exp((-1*0.003404*cp_doseBL))/(99*(8.940717684631407e-5*cxFinal_2+8.940717684631407e-5*cxFinal_8)^3+1))]==>xFinal_1",
      ""
     ],
     [
@@ -546,7 +546,7 @@
      "1",
      "0",
      "0",
-     "xFinal_1+S[USER;cp_doseBL,cxFinal_2,cxFinal_7,cxFinal_8:(2.0952380952380954e-5*cxFinal_7/(7.075421868564722e-11*(cxFinal_2+cxFinal_8)^3*exp(0.003404*cp_doseBL)+1*exp(0.003404*cp_doseBL)))]==>sink",
+     "xFinal_1+S[USER;cp_doseBL,cxFinal_2,cxFinal_7,cxFinal_8:(2.0952380952380954e-5*cxFinal_7*exp((-1*0.003404*cp_doseBL))/(7.075421868564722e-11*(cxFinal_2+cxFinal_8)^3+1))]==>sink",
      ""
     ],
     [

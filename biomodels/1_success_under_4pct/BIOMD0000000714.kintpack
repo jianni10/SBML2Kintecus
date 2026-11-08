@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:07:14.992293+00:00",
+ "created": "2026-11-07T22:12:51.865185+00:00",
  "description": "Reynolds2006 - Reduced model of the acute inflammatory response\nBioModels BIOMD0000000714 (curated). SBML file: HealthyOutcome.xml.\nSimulation: 0 to 200 time units (SED-ML: AsepticDeath.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.52e-06 of species peak (worst: Nstar)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): P1 = P",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "reaction_1 term 1/2",
+     "reaction_1",
      ""
     ],
     [
-     "0.3",
+     "1",
      "0",
      "0",
-     "P1==>2P1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 2/2",
-     ""
-    ],
-    [
-     "0.015",
-     "0",
-     "0",
-     "P1+P1==>P1",
+     "P1+S[USER;cP1:(0.3-0.015*cP1)]==>2P1",
      ""
     ],
     [

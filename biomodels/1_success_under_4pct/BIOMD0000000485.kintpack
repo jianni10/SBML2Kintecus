@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-02T03:52:24.189254+00:00",
+ "created": "2026-11-07T21:36:29.793359+00:00",
  "description": "Cao2013 - Application of ABSIS method in the bistable Schl\u00f6gl model\nBioModels BIOMD0000000485 (curated). SBML file: BIOMD0000000485_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000485_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.64e-06 of species peak (worst: ES)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'ES' goes below zero in the SBML: integrated as ES_o = value + 10, output as ES = OUTC[ES_o;-10*source]",
  "settings": {
   "kpath": "",
@@ -49,140 +49,56 @@
      "#",
      "",
      "",
-     "Reaction1 term 1/2 (shifted ES_o)",
+     "Reaction1 (shifted ES_o)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cX:((-1*0.12*cX^2))]==>ES_o",
+     "source+S[USER;cX:((-1*0.12*cX*(cX-1)))]==>ES_o",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Reaction1 term 1/2",
+     "Reaction1",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cX:(0.12*cX^2)]==>X",
+     "source+S[USER;cX:(0.12*cX*(cX-1))]==>X",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Reaction1 term 2/2 (shifted ES_o)",
+     "Reaction2 (shifted ES_o)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cX:(0.12*cX)]==>ES_o",
+     "source+S[USER;cX:(0.0009599999999999999*cX*(cX-2)*(cX-1))]==>ES_o",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Reaction1 term 2/2",
-     ""
-    ],
-    [
-     "0.12",
-     "0",
-     "0",
-     "X==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Reaction2 term 1/3 (shifted ES_o)",
+     "Reaction2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cX:(0.0009599999999999999*cX^3)]==>ES_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Reaction2 term 1/3",
-     ""
-    ],
-    [
-     "0.0009599999999999999",
-     "0",
-     "0",
-     "X+X+X==>2X",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Reaction2 term 2/3 (shifted ES_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cX:(0.0019199999999999998*cX)]==>ES_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Reaction2 term 2/3",
-     ""
-    ],
-    [
-     "0.0019199999999999998",
-     "0",
-     "0",
-     "X==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Reaction2 term 3/3 (shifted ES_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cX:((-1*0.0028799999999999997*cX^2))]==>ES_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Reaction2 term 3/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cX:(0.0028799999999999997*cX^2)]==>X",
+     "X+S[USER;cX:(0.0009599999999999999*(cX-2)*(cX-1))]==>sink",
      ""
     ],
     [

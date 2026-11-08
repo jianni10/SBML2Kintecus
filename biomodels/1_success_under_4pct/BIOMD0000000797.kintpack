@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:09:40.355177+00:00",
+ "created": "2026-11-07T22:21:07.843091+00:00",
  "description": "Hu2018 - Dynamics of tumor-CD4+-cytokine-host cells interactions with treatments\nBioModels BIOMD0000000797 (curated). SBML file: Hu2018.xml.\nSimulation: 0 to 100 time units (SED-ML: Hu2018.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.55e-06 of species peak (worst: y_CD4_T_Cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_Killing_Cytokine: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Tumor_Growth term 1/2",
+     "Tumor_Growth",
      ""
     ],
     [
-     "0.514",
+     "1",
      "0",
      "0",
-     "x_Tumor_Cells==>2x_Tumor_Cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Growth term 2/2",
-     ""
-    ],
-    [
-     "5.2428e-10",
-     "0",
-     "0",
-     "x_Tumor_Cells+x_Tumor_Cells==>x_Tumor_Cells",
+     "x_Tumor_Cells+S[USER;cx_Tumor_Cells:(0.514-5.2428e-10*cx_Tumor_Cells)]==>2x_Tumor_Cells",
      ""
     ],
     [
@@ -175,28 +161,14 @@
      "#",
      "",
      "",
-     "Normal_Tissue_Growth term 1/2",
+     "Normal_Tissue_Growth",
      ""
     ],
     [
-     "0.2822",
+     "1",
      "0",
      "0",
-     "w_Healthy_Tissue==>2w_Healthy_Tissue",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Normal_Tissue_Growth term 2/2",
-     ""
-    ],
-    [
-     "2.822e-10",
-     "0",
-     "0",
-     "w_Healthy_Tissue+w_Healthy_Tissue==>w_Healthy_Tissue",
+     "w_Healthy_Tissue+S[USER;cw_Healthy_Tissue:(0.2822-2.822e-10*cw_Healthy_Tissue)]==>2w_Healthy_Tissue",
      ""
     ],
     [

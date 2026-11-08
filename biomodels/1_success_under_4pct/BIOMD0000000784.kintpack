@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:09:18.995874+00:00",
+ "created": "2026-11-07T22:20:41.632876+00:00",
  "description": "Lopez2014 - A Validated Mathematical Model of Tumor Growth Including Tumor-Host Interaction and Cell-Mediated Immune Response\nBioModels BIOMD0000000784 (curated). SBML file: Lopez2014.xml.\nSimulation: 0 to 30 time units (SED-ML: Lopez2014.sedml), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.33e-06 of species peak (worst: z_Effector_Cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_Killing: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Tumor_Growth term 1/2",
+     "Tumor_Growth",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "x_Tumor_Cells==>2x_Tumor_Cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Growth term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "x_Tumor_Cells+x_Tumor_Cells==>x_Tumor_Cells",
+     "x_Tumor_Cells+S[USER;cx_Tumor_Cells:(1-1*cx_Tumor_Cells)]==>2x_Tumor_Cells",
      ""
     ],
     [
@@ -105,28 +91,14 @@
      "#",
      "",
      "",
-     "Healthy_Cells_Production term 1/2",
+     "Healthy_Cells_Production",
      ""
     ],
     [
-     "0.35",
+     "1",
      "0",
      "0",
-     "y_Healthy_Cells==>2y_Healthy_Cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Healthy_Cells_Production term 2/2",
-     ""
-    ],
-    [
-     "0.35",
-     "0",
-     "0",
-     "y_Healthy_Cells+y_Healthy_Cells==>y_Healthy_Cells",
+     "y_Healthy_Cells+S[USER;cy_Healthy_Cells:(0.35-0.35*cy_Healthy_Cells)]==>2y_Healthy_Cells",
      ""
     ],
     [

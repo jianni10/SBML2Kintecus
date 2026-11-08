@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:58:23.281226+00:00",
- "description": "Hancioglu2007 - Human Immune Response to Influenza A virus Infection\nBioModels BIOMD0000000711 (curated). SBML file: Hancioglu2007 - Human Immune Response to Influenza A virus.xml.\nSimulation: 0 to 15 time units (SED-ML: Hancioglu2007 - Human Immune Response to Influenza A virus.sedml), sampling 0.015.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS_PARTIAL, max |difference| = 4.79e-06 of species peak (worst: Plasma_cells__P)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'Event_to_keep_viral_load_non_negative' not converted (state-triggered (not a time >= t0 trigger))\n  [info] species 'Dead_cells__D' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Non_Specific_Removal_of_Virus__V___aV1_aV2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Regeneration_of_Healthy_Epithelial_cells__H term 4/7: rate order differs from the stoichiometry; consumed on separate line(s) - HealthyEpithelialcellsH1: zero order, signed\n  [info] Regeneration_of_Healthy_Epithelial_cells__H term 6/7: rate order differs from the stoichiometry; consumed on separate line(s) - HealthyEpithelialcellsH1: zero order, signed\n  [info] Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 4/10: rate order differs from the stoichiometry; consumed on separate line(s) - APC_cells__M: zero order, signed\n  [info] Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 5/10: rate order differs from the stoichiometry; consumed on separate line(s) - APC_cells__M: zero order, signed\n  [info] Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 6/10: rate order differs from the stoichiometry; consumed on separate line(s) - APC_cells__M: zero order, signed\nRenamed species (Kintecus name = SBML id): HealthyEpithelialcellsH1 = Healthy_Epithelial_cells__H; InfectedEpithelialcellsI1 = Infected_Epithelial_cells__I",
+ "created": "2026-11-07T22:12:43.823586+00:00",
+ "description": "Hancioglu2007 - Human Immune Response to Influenza A virus Infection\nBioModels BIOMD0000000711 (curated). SBML file: Hancioglu2007 - Human Immune Response to Influenza A virus.xml.\nSimulation: 0 to 15 time units (SED-ML: Hancioglu2007 - Human Immune Response to Influenza A virus.sedml), sampling 0.015.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS_PARTIAL, max |difference| = 4.79e-06 of species peak (worst: Plasma_cells__P)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] events not unrolled as time events (trigger uses 'Viral_Load__V', which changes continuously)\n  [blocker] event 'Event_to_keep_viral_load_non_negative' not converted (state-triggered (not a time >= t0 trigger))\n  [info] species 'Dead_cells__D' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Non_Specific_Removal_of_Virus__V___aV1_aV2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Regeneration_of_Healthy_Epithelial_cells__H term 4/5: rate order differs from the stoichiometry; consumed on separate line(s) - HealthyEpithelialcellsH1: zero order, signed\n  [info] Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 4/10: rate order differs from the stoichiometry; consumed on separate line(s) - APC_cells__M: zero order, signed\n  [info] Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 5/10: rate order differs from the stoichiometry; consumed on separate line(s) - APC_cells__M: zero order, signed\n  [info] Stimulation_of_APC_cells__M__by_Dead_cells__D__and_Virus__V term 6/10: rate order differs from the stoichiometry; consumed on separate line(s) - APC_cells__M: zero order, signed\nRenamed species (Kintecus name = SBML id): HealthyEpithelialcellsH1 = Healthy_Epithelial_cells__H; InfectedEpithelialcellsI1 = Infected_Epithelial_cells__I",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -119,63 +119,35 @@
      "#",
      "",
      "",
-     "Regeneration_of_Healthy_Epithelial_cells__H term 1/7",
-     ""
-    ],
-    [
-     "4",
-     "0",
-     "0",
-     "HealthyEpithelialcellsH1==>2HealthyEpithelialcellsH1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Regeneration_of_Healthy_Epithelial_cells__H term 2/7",
-     ""
-    ],
-    [
-     "4",
-     "0",
-     "0",
-     "Resistant_cells__R==>HealthyEpithelialcellsH1+Resistant_cells__R",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Regeneration_of_Healthy_Epithelial_cells__H term 3/7",
-     ""
-    ],
-    [
-     "4",
-     "0",
-     "0",
-     "HealthyEpithelialcellsH1+HealthyEpithelialcellsH1==>HealthyEpithelialcellsH1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Regeneration_of_Healthy_Epithelial_cells__H term 4/7 (consumes HealthyEpithelialcellsH1)",
+     "Regeneration_of_Healthy_Epithelial_cells__H term 1/5",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cResistant_cells__R:((-1*4*cResistant_cells__R^2))]==>HealthyEpithelialcellsH1",
+     "HealthyEpithelialcellsH1+S[USER;cHealthyEpithelialcellsH1:(4-4*cHealthyEpithelialcellsH1)]==>2HealthyEpithelialcellsH1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Regeneration_of_Healthy_Epithelial_cells__H term 5/7",
+     "Regeneration_of_Healthy_Epithelial_cells__H term 2/5",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Resistant_cells__R+S[USER;cResistant_cells__R:(4-4*cResistant_cells__R)]==>HealthyEpithelialcellsH1+Resistant_cells__R",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Regeneration_of_Healthy_Epithelial_cells__H term 3/5",
      ""
     ],
     [
@@ -189,7 +161,7 @@
      "#",
      "",
      "",
-     "Regeneration_of_Healthy_Epithelial_cells__H term 6/7 (consumes HealthyEpithelialcellsH1)",
+     "Regeneration_of_Healthy_Epithelial_cells__H term 4/5 (consumes HealthyEpithelialcellsH1)",
      ""
     ],
     [
@@ -203,7 +175,7 @@
      "#",
      "",
      "",
-     "Regeneration_of_Healthy_Epithelial_cells__H term 7/7",
+     "Regeneration_of_Healthy_Epithelial_cells__H term 5/5",
      ""
     ],
     [

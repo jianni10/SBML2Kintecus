@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-05T15:38:48.042325+00:00",
+ "created": "2026-11-07T20:26:01.148806+00:00",
  "description": "Dupont1991_CaOscillation\nBioModels BIOMD0000000117 (curated). SBML file: BIOMD0000000117_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000117_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.029850746268656716.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.61e-05 of species peak (worst: z)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_0000004: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_0000005: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] time event(s) on 'flag' encoded as time/value pairs in EV_P_FLAG.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_flag = flag",
  "settings": {
   "kpath": "",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,cp_flag:(15.596590826875213*cp_flag*exp((-1*0.2*cTIME_)))]==>z",
+     "source+S[USER;cTIME_,cp_flag:(7.008*cp_flag*exp(0.8-0.2*cTIME_))]==>z",
      ""
     ],
     [

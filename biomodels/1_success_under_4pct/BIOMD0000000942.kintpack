@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T23:02:45.957497+00:00",
- "description": "Sible2007 - Mitotic cell cycle mecanism in Xenopus Laevis\nBioModels BIOMD0000000942 (curated). SBML file: Sible2007.xml.\nSimulation: 0 to 200 time units (SED-ML: Sible2007.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.75e-06 of species peak (worst: Cyclin_Cdk1_preMPF)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Cdc25' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Wee1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Cdk1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IE' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Cyclin_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] R1_Dephosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R2_Phosphorylation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R4_Phosphorylation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Cyclin_Cdk1_preMPF: zero order, signed\n  [info] R5_Dephosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R6_Phosphorylation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R9_Dephosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R10_Phosphorylation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R11_Inactivation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R12_Activation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T22:28:54.410985+00:00",
+ "description": "Sible2007 - Mitotic cell cycle mecanism in Xenopus Laevis\nBioModels BIOMD0000000942 (curated). SBML file: Sible2007.xml.\nSimulation: 0 to 200 time units (SED-ML: Sible2007.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.75e-06 of species peak (worst: Cyclin_Cdk1_preMPF)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Cdc25' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Wee1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Cdk1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IE' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Cyclin_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] R1_Dephosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R4_Phosphorylation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Cyclin_Cdk1_preMPF: zero order, signed\n  [info] R5_Dephosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R9_Dephosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R11_Inactivation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -63,28 +63,14 @@
      "#",
      "",
      "",
-     "R2_Phosphorylation term 1/2",
+     "R2_Phosphorylation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Cyclin_Cdk1_MPF+S[USER;cCdc25_phosphorylated:(0.02/(1.1-cCdc25_phosphorylated))]==>Cdc25_phosphorylated+Cyclin_Cdk1_MPF",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R2_Phosphorylation term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Cdc25_phosphorylated+Cyclin_Cdk1_MPF+S[USER;cCdc25_phosphorylated:((-1*0.02/(1*cCdc25_phosphorylated-1.1)))]==>Cyclin_Cdk1_MPF",
+     "Cyclin_Cdk1_MPF+S[USER;cCdc25_phosphorylated:(0.02*(1-cCdc25_phosphorylated)/(1.1-cCdc25_phosphorylated))]==>Cdc25_phosphorylated+Cyclin_Cdk1_MPF",
      ""
     ],
     [
@@ -175,28 +161,14 @@
      "#",
      "",
      "",
-     "R6_Phosphorylation term 1/2",
+     "R6_Phosphorylation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Cyclin_Cdk1_MPF+S[USER;cWee1_phosphorylated:(0.02/(1.1-cWee1_phosphorylated))]==>Wee1_phosphorylated+Cyclin_Cdk1_MPF",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R6_Phosphorylation term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Wee1_phosphorylated+Cyclin_Cdk1_MPF+S[USER;cWee1_phosphorylated:((-1*0.02/(1*cWee1_phosphorylated-1.1)))]==>Cyclin_Cdk1_MPF",
+     "Cyclin_Cdk1_MPF+S[USER;cWee1_phosphorylated:(0.02*(1-cWee1_phosphorylated)/(1.1-cWee1_phosphorylated))]==>Wee1_phosphorylated+Cyclin_Cdk1_MPF",
      ""
     ],
     [
@@ -245,28 +217,14 @@
      "#",
      "",
      "",
-     "R10_Phosphorylation term 1/2",
+     "R10_Phosphorylation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Cyclin_Cdk1_MPF+S[USER;cIE_phosphorylated:(0.02/(1.01-cIE_phosphorylated))]==>IE_phosphorylated+Cyclin_Cdk1_MPF",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R10_Phosphorylation term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "IE_phosphorylated+Cyclin_Cdk1_MPF+S[USER;cIE_phosphorylated:((-1*0.02/(1*cIE_phosphorylated-1.01)))]==>Cyclin_Cdk1_MPF",
+     "Cyclin_Cdk1_MPF+S[USER;cIE_phosphorylated:(0.02*(1-cIE_phosphorylated)/(1.01-cIE_phosphorylated))]==>IE_phosphorylated+Cyclin_Cdk1_MPF",
      ""
     ],
     [
@@ -287,28 +245,14 @@
      "#",
      "",
      "",
-     "R12_Activation term 1/2",
+     "R12_Activation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "IE_phosphorylated+S[USER;cAPC_active:(0.13/(1.01-cAPC_active))]==>APC_active+IE_phosphorylated",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R12_Activation term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "APC_active+IE_phosphorylated+S[USER;cAPC_active:((-1*0.13/(1*cAPC_active-1.01)))]==>IE_phosphorylated",
+     "IE_phosphorylated+S[USER;cAPC_active:(0.13*(1-cAPC_active)/(1.01-cAPC_active))]==>APC_active+IE_phosphorylated",
      ""
     ],
     [

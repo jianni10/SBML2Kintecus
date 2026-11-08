@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:02:40.049344+00:00",
+ "created": "2026-11-07T21:53:46.698603+00:00",
  "description": "Ribba2012 - Low-grade gliomas, tumour growth inhibition model\nBioModels BIOMD0000000521 (curated). SBML file: BIOMD0000000521_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000521_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.50e-07 of species peak (worst: P)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): P1 = P",
  "settings": {
   "kpath": "",
@@ -81,10 +81,10 @@
      ""
     ],
     [
-     "0.11805",
+     "1",
      "0",
      "0",
-     "P1==>2P1",
+     "P1+S[USER;cP1:(0.11805-0.00121*cP1)]==>2P1",
      ""
     ],
     [
@@ -98,7 +98,7 @@
      "0.00121",
      "0",
      "0",
-     "P1+P1==>P1",
+     "P1+Q==>Q",
      ""
     ],
     [
@@ -112,20 +112,6 @@
      "0.00121",
      "0",
      "0",
-     "P1+Q==>Q",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dP/dt term 5",
-     ""
-    ],
-    [
-     "0.00121",
-     "0",
-     "0",
      "P1+Qp==>Qp",
      ""
     ],
@@ -133,7 +119,7 @@
      "#",
      "",
      "",
-     "rate rule dP/dt term 6",
+     "rate rule dP/dt term 5",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T23:03:06.791834+00:00",
- "description": "Gex-Fabry1984 - model of receptor-mediated endocytosis of EGF in BALB/c 3T3 cells\nBioModels BIOMD0000000985 (curated). SBML file: Gex-Fabry1984.xml.\nSimulation: 0 to 50 time units (SED-ML: Gex-Fabry1984.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.96e-06 of species peak (worst: Internalised_Ligand)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Receptor_internalisation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Internalised_receptors: zero order, signed\n  [info] Receptor_Ligand_internal_dissociation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Internalised_receptors: zero order, signed; Internalised_Ligand: zero order, signed\n  [info] Receptor_Ligand_internal_Pit_protein_dissociation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Internalised_receptors: zero order, signed; Internalised_Ligand: zero order, signed\nRenamed species (Kintecus name = SBML id): ReceptorLigandPitProteinc1 = Receptor_Ligand_Pit_Protein_complex",
+ "created": "2026-11-07T22:30:10.456206+00:00",
+ "description": "Gex-Fabry1984 - model of receptor-mediated endocytosis of EGF in BALB/c 3T3 cells\nBioModels BIOMD0000000985 (curated). SBML file: Gex-Fabry1984.xml.\nSimulation: 0 to 50 time units (SED-ML: Gex-Fabry1984.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.96e-06 of species peak (worst: Internalised_Ligand)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): ReceptorLigandPitProteinc1 = Receptor_Ligand_Pit_Protein_complex",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -91,154 +91,42 @@
      "#",
      "",
      "",
-     "Receptor_internalisation term 1/2",
-     ""
-    ],
-    [
-     "0.13999999999999999",
-     "0",
-     "0",
-     "Surface_Receptor_External==>Internalised_receptors",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Receptor_internalisation term 2/2",
+     "Receptor_internalisation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cSurface_Receptor_External,cTIME_:(0.1232*cSurface_Receptor_External*exp((-1*0.15384615384615385*cTIME_))^3)]==>Surface_Receptor_External",
+     "Surface_Receptor_External+S[USER;cTIME_:(0.13999999999999999-0.1232*exp((-1*0.15384615384615385*cTIME_))^3)]==>Internalised_receptors",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Receptor_internalisation term 2/2 (consumes Internalised_receptors)",
+     "Receptor_Ligand_internal_dissociation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cSurface_Receptor_External,cTIME_:((-1*0.1232*cSurface_Receptor_External*exp((-1*0.15384615384615385*cTIME_))^3))]==>Internalised_receptors",
+     "Receptor_Ligand_Complex+S[USER;cTIME_:(0.13999999999999999-0.1232*exp((-1*0.15384615384615385*cTIME_))^3)]==>Internalised_Ligand+Internalised_receptors",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Receptor_Ligand_internal_dissociation term 1/2",
-     ""
-    ],
-    [
-     "0.13999999999999999",
-     "0",
-     "0",
-     "Receptor_Ligand_Complex==>Internalised_receptors+Internalised_Ligand",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Receptor_Ligand_internal_dissociation term 2/2",
+     "Receptor_Ligand_internal_Pit_protein_dissociation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cReceptor_Ligand_Complex,cTIME_:(0.1232*cReceptor_Ligand_Complex*exp((-1*0.15384615384615385*cTIME_))^3)]==>Receptor_Ligand_Complex",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Receptor_Ligand_internal_dissociation term 2/2 (consumes Internalised_receptors)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cReceptor_Ligand_Complex,cTIME_:((-1*0.1232*cReceptor_Ligand_Complex*exp((-1*0.15384615384615385*cTIME_))^3))]==>Internalised_receptors",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Receptor_Ligand_internal_dissociation term 2/2 (consumes Internalised_Ligand)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cReceptor_Ligand_Complex,cTIME_:((-1*0.1232*cReceptor_Ligand_Complex*exp((-1*0.15384615384615385*cTIME_))^3))]==>Internalised_Ligand",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Receptor_Ligand_internal_Pit_protein_dissociation term 1/2",
-     ""
-    ],
-    [
-     "0.7",
-     "0",
-     "0",
-     "ReceptorLigandPitProteinc1==>Internalised_receptors+Internalised_Ligand",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Receptor_Ligand_internal_Pit_protein_dissociation term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cReceptorLigandPitProteinc1,cTIME_:(0.616*cReceptorLigandPitProteinc1*exp((-1*0.15384615384615385*cTIME_))^3)]==>ReceptorLigandPitProteinc1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Receptor_Ligand_internal_Pit_protein_dissociation term 2/2 (consumes Internalised_receptors)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cReceptorLigandPitProteinc1,cTIME_:((-1*0.616*cReceptorLigandPitProteinc1*exp((-1*0.15384615384615385*cTIME_))^3))]==>Internalised_receptors",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Receptor_Ligand_internal_Pit_protein_dissociation term 2/2 (consumes Internalised_Ligand)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cReceptorLigandPitProteinc1,cTIME_:((-1*0.616*cReceptorLigandPitProteinc1*exp((-1*0.15384615384615385*cTIME_))^3))]==>Internalised_Ligand",
+     "ReceptorLigandPitProteinc1+S[USER;cTIME_:(0.7-0.616*exp((-1*0.15384615384615385*cTIME_))^3)]==>Internalised_Ligand+Internalised_receptors",
      ""
     ],
     [

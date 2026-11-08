@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:11:04.288178+00:00",
+ "created": "2026-11-07T22:25:55.084301+00:00",
  "description": "Cooper2015 - Modeling the effects of systemic mediators on the inflammatory phase of wound healing\nBioModels BIOMD0000000855 (curated). SBML file: Cooper2015.xml.\nSimulation: 0 to 20 time units (SED-ML: Cooper2015.sedml), sampling 0.02.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.36e-06 of species peak (worst: N)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Pathogen_Destruction_Background_Response: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Neutrophil_Destruction_Macrophage: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): P1 = P; M1 = M",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Pathogen_Growth term 1/2",
+     "Pathogen_Growth",
      ""
     ],
     [
-     "14.4",
+     "1",
      "0",
      "0",
-     "P1==>2P1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Pathogen_Growth term 2/2",
-     ""
-    ],
-    [
-     "0.72",
-     "0",
-     "0",
-     "P1+P1==>P1",
+     "P1+S[USER;cP1:(14.4-0.72*cP1)]==>2P1",
      ""
     ],
     [

@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-01T22:54:33.771523+00:00",
+ "created": "2026-11-07T21:57:55.076038+00:00",
  "description": "Philipson2015 - Innate immune response modulated by NLRX1\nBioModels BIOMD0000000596 (curated). SBML file: Philipson2015.xml.\nSimulation: 0 to 1200 time units (SED-ML: Philipson2015.sedml), sampling 12.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.88e-06 of species peak (worst: MAVS)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] HP_CytoL: rate order differs from the stoichiometry; consumed on separate line(s) - HP: zero order, signed\n  [info] HP_IFN: rate order differs from the stoichiometry; consumed on separate line(s) - HP: zero order, signed\n  [info] HP_CytoE: rate order differs from the stoichiometry; consumed on separate line(s) - HP: zero order, signed",
  "settings": {
   "kpath": "",
@@ -175,28 +175,14 @@
      "#",
      "",
      "",
-     "HP_a term 1/2",
+     "HP_a",
      ""
     ],
     [
-     "0.0231262",
+     "1",
      "0",
      "0",
-     "HP==>2HP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "HP_a term 2/2",
-     ""
-    ],
-    [
-     "0.0035702133834758253",
-     "0",
-     "0",
-     "HP+HP==>HP",
+     "HP+S[USER;cHP:(0.0231262-0.0035702133834758253*cHP)]==>2HP",
      ""
     ],
     [

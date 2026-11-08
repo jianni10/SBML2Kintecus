@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T16:31:35.586327+00:00",
- "description": "Kronik2008 - Improving alloreactive CTL immunotherapy for malignant gliomas using a simulation model of their interactive dynamics\nBioModels BIOMD0000000808 (curated). SBML file: Kronik2008.xml.\nSimulation: 0 to 17280 time units (SED-ML: Kronik2008.sedml), sampling 17.142857142857142.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.95e-03 of species peak (worst: C)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 6.33e-09 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_Elimination_CTL term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Tumor_Elimination_CTL term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [partial] CTL_Infusion term 1/5: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] CTL_Infusion term 2/5: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] CTL_Infusion term 3/5: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] CTL_Infusion term 4/5: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] CTL_Infusion term 5/5: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\nRenamed species (Kintecus name = SBML id): T1 = T",
+ "created": "2026-11-07T22:25:14.270230+00:00",
+ "description": "Kronik2008 - Improving alloreactive CTL immunotherapy for malignant gliomas using a simulation model of their interactive dynamics\nBioModels BIOMD0000000808 (curated). SBML file: Kronik2008.xml.\nSimulation: 0 to 17280 time units (SED-ML: Kronik2008.sedml), sampling 17.142857142857142.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.95e-03 of species peak (worst: C)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 5.74e-09 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_Elimination_CTL term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Tumor_Elimination_CTL term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [partial] CTL_Infusion term 1/5: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] CTL_Infusion term 2/5: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] CTL_Infusion term 3/5: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] CTL_Infusion term 4/5: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] CTL_Infusion term 5/5: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\nRenamed species (Kintecus name = SBML id): T1 = T",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Tumor_Growth term 1/2",
+     "Tumor_Growth",
      ""
     ],
     [
-     "0.00035",
+     "1",
      "0",
      "0",
-     "T1==>2T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Growth term 2/2",
-     ""
-    ],
-    [
-     "3.5e-15",
-     "0",
-     "0",
-     "T1+T1==>T1",
+     "T1+S[USER;cT1:(0.00035-3.5e-15*cT1)]==>2T1",
      ""
     ],
     [
@@ -154,7 +140,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cSW2,cTIME_:(30000000*cSW2*(0.5+(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)/(2*(abs(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)+1e-300)))*((cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))/(2*(abs(cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))+1e-300))+0.5))]==>C",
+     "source+S[USER;cSW1,cSW2,cTIME_:(30000000*cSW2*((cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))/(2*(abs(cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))+1e-300))+0.5)*(0.5+(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)/(2*(abs(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)+1e-300))))]==>C",
      ""
     ],
     [
@@ -168,7 +154,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cSW10,cSW9,cTIME_:(30000000*cSW10*cSW9*(0.5+(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)/(2*(abs(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)+1e-300)))*((cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))/(2*(abs(cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))+1e-300))+0.5))]==>C",
+     "source+S[USER;cSW1,cSW10,cSW9,cTIME_:(30000000*cSW10*cSW9*((cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))/(2*(abs(cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))+1e-300))+0.5)*(0.5+(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)/(2*(abs(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)+1e-300))))]==>C",
      ""
     ],
     [
@@ -182,7 +168,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cSW3,cSW4,cTIME_:(30000000*cSW3*cSW4*(0.5+(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)/(2*(abs(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)+1e-300)))*((cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))/(2*(abs(cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))+1e-300))+0.5))]==>C",
+     "source+S[USER;cSW1,cSW3,cSW4,cTIME_:(30000000*cSW3*cSW4*((cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))/(2*(abs(cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))+1e-300))+0.5)*(0.5+(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)/(2*(abs(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)+1e-300))))]==>C",
      ""
     ],
     [
@@ -196,7 +182,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cSW5,cSW6,cTIME_:(30000000*cSW5*cSW6*(0.5+(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)/(2*(abs(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)+1e-300)))*((cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))/(2*(abs(cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))+1e-300))+0.5))]==>C",
+     "source+S[USER;cSW1,cSW5,cSW6,cTIME_:(30000000*cSW5*cSW6*((cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))/(2*(abs(cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))+1e-300))+0.5)*(0.5+(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)/(2*(abs(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)+1e-300))))]==>C",
      ""
     ],
     [
@@ -210,7 +196,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cSW7,cSW8,cTIME_:(30000000*cSW7*cSW8*(0.5+(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)/(2*(abs(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)+1e-300)))*((cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))/(2*(abs(cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))+1e-300))+0.5))]==>C",
+     "source+S[USER;cSW1,cSW7,cSW8,cTIME_:(30000000*cSW7*cSW8*((cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))/(2*(abs(cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))+(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_)))+1e-300))+0.5)*(0.5+(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)/(2*(abs(-cSW1*(cTIME_-120*(-1*floor(-1*0.008333333333333333*cTIME_)))-(1-cSW1)*(cTIME_-120*floor(0.008333333333333333*cTIME_))+10)+1e-300))))]==>C",
      ""
     ],
     [

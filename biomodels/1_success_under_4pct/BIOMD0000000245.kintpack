@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-06T06:00:44.152209+00:00",
- "description": "Lei2001_Yeast_Aerobic_Metabolism\nBioModels BIOMD0000000245 (curated). SBML file: BIOMD0000000245_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000245_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.33e-06 of species peak (worst: s_glu)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'a' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'AcDH' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] r1 term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r1 term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r1 term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r5 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r5 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r6 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r6 term 2/2: non-integer reactant coefficient 1.045 on s_EtOH written as a Kintecus coefficient\n  [info] r6 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - s_EtOH: first order\n  [info] r7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): p_X_a = X_a; p_X_AcDH = X_AcDH",
+ "created": "2026-11-07T20:46:24.653423+00:00",
+ "description": "Lei2001_Yeast_Aerobic_Metabolism\nBioModels BIOMD0000000245 (curated). SBML file: BIOMD0000000245_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000245_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.33e-06 of species peak (worst: s_glu)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'a' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'AcDH' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] r1 term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r1 term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r1 term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r5 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r5 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r6: rate order differs from the stoichiometry; consumed on separate line(s) - s_acetald: zero order, signed\n  [info] r7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): p_X_a = X_a; p_X_AcDH = X_AcDH",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -161,42 +161,28 @@
      "#",
      "",
      "",
-     "r6 term 1/2",
+     "r6",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s_acetald+x+S[USER;cp_X_a,cs_EtOH,cs_acetald:(2.82*cp_X_a/(0.057*cs_EtOH+1*cs_acetald+0.034))]==>1.045s_EtOH+x",
+     "source+S[USER;cp_X_a,cs_EtOH,cs_acetald,cx:(1*cp_X_a*cx*(-0.03525*cs_EtOH+2.82*cs_acetald)/(0.057*cs_EtOH+cs_acetald+0.034))]==>1.045s_EtOH",
      ""
     ],
     [
      "#",
      "",
      "",
-     "r6 term 2/2",
+     "r6 (consumes s_acetald)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cp_X_a,cs_EtOH,cs_acetald,cx:(0.03525*cp_X_a*cs_EtOH*cx/(0.057*cs_EtOH+cs_acetald+0.034))]==>s_acetald",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r6 term 2/2 (consumes s_EtOH)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "s_EtOH+S[USER;cp_X_a,cs_EtOH,cs_acetald,cx:(0.03683625*cp_X_a*cx/(0.057*cs_EtOH+1*cs_acetald+0.034))]==>sink",
+     "source+S[USER;cp_X_a,cs_EtOH,cs_acetald,cx:((-1*1*cp_X_a*cx*(-0.03525*cs_EtOH+2.82*cs_acetald)/(0.057*cs_EtOH+cs_acetald+0.034)))]==>s_acetald",
      ""
     ],
     [
@@ -336,7 +322,7 @@
      "1",
      "0",
      "0",
-     "s_glu+S[USER;cp_X_a,cs_glu:(0.880596*cp_X_a/(cs_glu+0.0101))]==>p_X_a+s_glu",
+     "s_glu+S[USER;cp_X_a,cs_glu:(cp_X_a*(-0.880596*cp_X_a/(cs_glu+0.0101)-0.008/(25*cs_glu^2+1.000025*cs_glu+1e-6)+0.880596/(cs_glu+0.0101)-0.392/(cs_glu+0.0023)-0.00399/(cs_glu+1e-6)))]==>p_X_a+s_glu",
      ""
     ],
     [
@@ -350,7 +336,7 @@
      "1",
      "0",
      "0",
-     "s_acetate+S[USER;cp_X_a,cs_acetate,cs_glu:(0.364591*cp_X_a/(440*cs_acetate*cs_glu+cs_acetate+44*cs_glu+0.1))]==>p_X_a+s_acetate",
+     "s_acetate+S[USER;cp_X_a,cs_acetate,cs_glu:(0.364591*cp_X_a*(1-cp_X_a)/(440*cs_acetate*cs_glu+cs_acetate+44*cs_glu+0.1))]==>p_X_a+s_acetate",
      ""
     ],
     [
@@ -364,7 +350,7 @@
      "1",
      "0",
      "0",
-     "p_X_a+s_glu+S[USER;cs_glu:(0.008/(25*cs_glu^2+1.000025*cs_glu+1e-6))]==>s_glu",
+     "p_X_a+s_EtOH+S[USER;cs_EtOH,cs_glu:(0.0751/(25*cs_EtOH*cs_glu+cs_EtOH+325*cs_glu+13))]==>s_EtOH",
      ""
     ],
     [
@@ -378,77 +364,7 @@
      "1",
      "0",
      "0",
-     "p_X_a+s_EtOH+S[USER;cs_EtOH,cs_glu:(0.0751/(25*cs_EtOH*cs_glu+cs_EtOH+325*cs_glu+13))]==>s_EtOH",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dX_a/dt term 5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "p_X_a+s_glu+S[USER;cs_glu:(0.392/(cs_glu+0.0023))]==>s_glu",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dX_a/dt term 6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
      "p_X_a+s_EtOH+S[USER;cs_EtOH:(0.00339/(cs_EtOH+0.0018))]==>s_EtOH",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dX_a/dt term 7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "p_X_a+s_glu+S[USER;cs_glu:(0.00399/(cs_glu+1e-6))]==>s_glu",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dX_a/dt term 8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "p_X_a+s_glu+S[USER;cp_X_a,cs_glu:(0.880596*cp_X_a/(cs_glu+0.0101))]==>s_glu",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dX_a/dt term 9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "p_X_a+s_acetate+S[USER;cp_X_a,cs_acetate,cs_glu:(0.364591*cp_X_a/(440*cs_acetate*cs_glu+cs_acetate+44*cs_glu+0.1))]==>s_acetate",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:47:44.031957+00:00",
- "description": "Nag2011_ChloroplasticStarchDegradation\nBioModels BIOMD0000000353 (curated). SBML file: BIOMD0000000353_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000353_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.50e-06 of species peak (worst: cpd_C00569Glc_CY)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'cpd_C00369_CS' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rn_R02112CS_G2 term 3/3: non-integer reactant coefficient 2923.98 on cpd_C00208_CS consumed on a separate line (n > 4.0)\n  [info] rn_R02112CS_G2 term 3/3 consumption of cpd_C00208_CS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rn_R02112CS_G5: non-integer reactant coefficient 1207.73 on cpd_G00343_CS consumed on a separate line (n > 4.0)\n  [info] rn_R02112CS_G5 consumption of cpd_G00343_CS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] tr_TC_2_A_84_1_2 (volume 3.5340000000000004e-13): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] tr_TC_2_A_1_1_17 (volume 3.5340000000000004e-13): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rn_R00299CY term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rn_R06050CY term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rn_R06050CY term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rn_AT2G40840CY term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rn_AT2G40840CY term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rn_R05196CS term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rn_R05196CS term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dcpd_C00369db_CS/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T20:57:10.174145+00:00",
+ "description": "Nag2011_ChloroplasticStarchDegradation\nBioModels BIOMD0000000353 (curated). SBML file: BIOMD0000000353_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000353_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.50e-06 of species peak (worst: cpd_C00569Glc_CY)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'cpd_C00369_CS' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rn_R02112CS_G5: non-integer reactant coefficient 1207.73 on cpd_G00343_CS consumed on a separate line (n > 4.0)\n  [info] rn_R02112CS_G5 consumption of cpd_G00343_CS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] tr_TC_2_A_84_1_2 (volume 3.5340000000000004e-13): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] tr_TC_2_A_1_1_17 (volume 3.5340000000000004e-13): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rn_R00299CY: rate order differs from the stoichiometry; consumed on separate line(s) - cpd_C00031_CY: zero order, signed\n  [info] rn_R06050CY: rate order differs from the stoichiometry; consumed on separate line(s) - cpd_C00569Glc_CY: zero order, signed\n  [info] rn_AT2G40840CY: rate order differs from the stoichiometry; consumed on separate line(s) - cpd_C00208_CY: zero order, signed; cpd_C00569_CY: zero order, signed\n  [info] rn_R05196CS: rate order differs from the stoichiometry; consumed on separate line(s) - cpd_C01835_CS: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,56 +49,14 @@
      "#",
      "",
      "",
-     "rn_R02112CS_G2 term 1/3",
+     "rn_R02112CS_G2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;ccpd_C00208_CS,ccpd_C00369db_CS:(4.6876483360527876e-5/(1.3957517899761337e-8*ccpd_C00208_CS^2+0.87*ccpd_C00369db_CS+0.5820106778644271))]==>2923.98cpd_C00208_CS",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rn_R02112CS_G2 term 2/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cpd_C00369db_CS+S[USER;ccpd_C00208_CS,ccpd_C00369db_CS:(0.0004972832999999999/(1.3957517899761337e-8*ccpd_C00208_CS^2+0.87*ccpd_C00369db_CS+0.5820106778644271))]==>2923.98cpd_C00208_CS+cpd_C00369db_CS",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rn_R02112CS_G2 term 3/3 consumption of cpd_C00208_CS",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cpd_C00208_CS+cpd_C00208_CS+S[USER;ccpd_C00208_CS,ccpd_C00369db_CS:(1.0398085466020467e-11/(0.87*ccpd_C00369db_CS+1.3957517899761337e-8*(ccpd_C00208_CS+1e-30)^2+0.5820106778644271))]==>cpd_C00208_CS",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rn_R02112CS_G2 term 3/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cpd_C00208_CS+cpd_C00208_CS+S[USER;ccpd_C00208_CS,ccpd_C00369db_CS:(3.5561411042553185e-15/(1.3957517899761337e-8*ccpd_C00208_CS^2+0.87*ccpd_C00369db_CS+0.5820106778644271))]==>2cpd_C00208_CS",
+     "source+S[USER;ccpd_C00208_CS,ccpd_C00369db_CS:(1*(-3.5561411042553185e-15*ccpd_C00208_CS^2+0.0004972832999999999*ccpd_C00369db_CS+4.6876483360527876e-5)/(1.3957517899761337e-8*ccpd_C00208_CS^2+0.87*ccpd_C00369db_CS+0.5820106778644271))]==>2923.98cpd_C00208_CS",
      ""
     ],
     [
@@ -161,20 +119,6 @@
      "#",
      "",
      "",
-     "tr_TC_2_A_84_1_2 (volume 1.579698e-12)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;ccpd_C00208_CS:(2.668008948545861*ccpd_C00208_CS/(1*ccpd_C00208_CS+4000))]==>cpd_C00208_CY",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
      "tr_TC_2_A_84_1_2 (volume 3.5340000000000004e-13)",
      ""
     ],
@@ -189,14 +133,14 @@
      "#",
      "",
      "",
-     "tr_TC_2_A_1_1_17 (volume 1.579698e-12)",
+     "tr_TC_2_A_84_1_2 (volume 1.579698e-12)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;ccpd_C00031_CS:(1075.069351230425*ccpd_C00031_CS/(1*ccpd_C00031_CS+19300))]==>cpd_C00031_CY",
+     "source+S[USER;ccpd_C00208_CS:(2.668008948545861*ccpd_C00208_CS/(1*ccpd_C00208_CS+4000))]==>cpd_C00208_CY",
      ""
     ],
     [
@@ -217,112 +161,126 @@
      "#",
      "",
      "",
-     "rn_R00299CY term 1/2",
+     "tr_TC_2_A_1_1_17 (volume 1.579698e-12)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;ccpd_C00031_CY:(24708.304735758404/(28.663120567375884*ccpd_C00031_CY+2361.4255319148933))]==>cpd_C00031_CY",
+     "source+S[USER;ccpd_C00031_CS:(1075.069351230425*ccpd_C00031_CS/(1*ccpd_C00031_CS+19300))]==>cpd_C00031_CY",
      ""
     ],
     [
      "#",
      "",
      "",
-     "rn_R00299CY term 2/2",
+     "rn_R00299CY (consumes cpd_C00031_CY)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cpd_C00031_CY+S[USER;ccpd_C00031_CY:(382.9787234042553/(28.663120567375884*ccpd_C00031_CY+2361.4255319148933))]==>sink",
+     "source+S[USER;ccpd_C00031_CY:((-1*1*(382.9787234042553*ccpd_C00031_CY-24708.304735758404)/(28.663120567375884*ccpd_C00031_CY+2361.4255319148933)))]==>cpd_C00031_CY",
      ""
     ],
     [
      "#",
      "",
      "",
-     "rn_R06050CY term 1/2",
+     "rn_R06050CY",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cpd_C00569Glc_CY+S[USER;ccpd_C00569Glc_CY,ccpd_C00569_CY:(999999.9999999999/(15899.999999999998*ccpd_C00569Glc_CY+22838.709677419352*ccpd_C00569_CY+115742580.64516129))]==>cpd_C00569_CY",
+     "source+S[USER;ccpd_C00569Glc_CY,ccpd_C00569_CY:(1*(999999.9999999999*ccpd_C00569Glc_CY-1626016260.1626015*ccpd_C00569_CY)/(15899.999999999998*ccpd_C00569Glc_CY+22838.709677419352*ccpd_C00569_CY+115742580.64516129))]==>cpd_C00569_CY",
      ""
     ],
     [
      "#",
      "",
      "",
-     "rn_R06050CY term 2/2",
+     "rn_R06050CY (consumes cpd_C00569Glc_CY)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cpd_C00569_CY+S[USER;ccpd_C00569Glc_CY,ccpd_C00569_CY:(1626016260.1626015/(15899.999999999998*ccpd_C00569Glc_CY+22838.709677419352*ccpd_C00569_CY+115742580.64516129))]==>cpd_C00569Glc_CY",
+     "source+S[USER;ccpd_C00569Glc_CY,ccpd_C00569_CY:((-1*1*(999999.9999999999*ccpd_C00569Glc_CY-1626016260.1626015*ccpd_C00569_CY)/(15899.999999999998*ccpd_C00569Glc_CY+22838.709677419352*ccpd_C00569_CY+115742580.64516129)))]==>cpd_C00569Glc_CY",
      ""
     ],
     [
      "#",
      "",
      "",
-     "rn_AT2G40840CY term 1/2",
+     "rn_AT2G40840CY",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cpd_C00569_CY+cpd_C00208_CY+S[USER;ccpd_C00031_CY,ccpd_C00208_CY,ccpd_C00569Glc_CY,ccpd_C00569_CY:(100/(0.39316239316239315*ccpd_C00031_CY*ccpd_C00569Glc_CY+0.19743591460423782*ccpd_C00031_CY*(ccpd_C00208_CY+1e-30)+432.4786324786325*ccpd_C00031_CY+1100*ccpd_C00208_CY+4.6*ccpd_C00569Glc_CY*(ccpd_C00569_CY+1e-30)+4600*ccpd_C00569Glc_CY+4600*ccpd_C00569_CY+1*(ccpd_C00208_CY+1e-30)*(ccpd_C00569_CY+1e-30)+5.7000000000000004e-27))]==>cpd_C00031_CY+cpd_C00569Glc_CY",
+     "source+S[USER;ccpd_C00031_CY,ccpd_C00208_CY,ccpd_C00569Glc_CY,ccpd_C00569_CY:(1*(-100*ccpd_C00031_CY*ccpd_C00569Glc_CY+100*ccpd_C00208_CY*ccpd_C00569_CY)/(0.39316239316239315*ccpd_C00031_CY*ccpd_C00569Glc_CY+432.4786324786325*ccpd_C00031_CY*(0.0004565217788279807*ccpd_C00208_CY+1)+1*ccpd_C00208_CY*ccpd_C00569_CY+1100*ccpd_C00208_CY+4600*ccpd_C00569Glc_CY*(0.001*ccpd_C00569_CY+1)+4600*ccpd_C00569_CY))]==>cpd_C00031_CY+cpd_C00569Glc_CY",
      ""
     ],
     [
      "#",
      "",
      "",
-     "rn_AT2G40840CY term 2/2",
+     "rn_AT2G40840CY (consumes cpd_C00208_CY)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cpd_C00031_CY+cpd_C00569Glc_CY+S[USER;ccpd_C00031_CY,ccpd_C00208_CY,ccpd_C00569Glc_CY,ccpd_C00569_CY:(100/(432.4786324786325*ccpd_C00031_CY+1*ccpd_C00208_CY*ccpd_C00569_CY+0.19743591460423782*ccpd_C00208_CY*(ccpd_C00031_CY+1e-30)+1100*ccpd_C00208_CY+4600*ccpd_C00569Glc_CY+4.6*ccpd_C00569_CY*(ccpd_C00569Glc_CY+1e-30)+4600*ccpd_C00569_CY+0.39316239316239315*(ccpd_C00031_CY+1e-30)*(ccpd_C00569Glc_CY+1e-30)+5.032478632478633e-27))]==>cpd_C00569_CY+cpd_C00208_CY",
+     "source+S[USER;ccpd_C00031_CY,ccpd_C00208_CY,ccpd_C00569Glc_CY,ccpd_C00569_CY:((-1*1*(-100*ccpd_C00031_CY*ccpd_C00569Glc_CY+100*ccpd_C00208_CY*ccpd_C00569_CY)/(0.39316239316239315*ccpd_C00031_CY*ccpd_C00569Glc_CY+432.4786324786325*ccpd_C00031_CY*(0.0004565217788279807*ccpd_C00208_CY+1)+1*ccpd_C00208_CY*ccpd_C00569_CY+1100*ccpd_C00208_CY+4600*ccpd_C00569Glc_CY*(0.001*ccpd_C00569_CY+1)+4600*ccpd_C00569_CY)))]==>cpd_C00208_CY",
      ""
     ],
     [
      "#",
      "",
      "",
-     "rn_R05196CS term 1/2",
+     "rn_AT2G40840CY (consumes cpd_C00569_CY)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cpd_C01835_CS+cpd_C01835_CS+S[USER;ccpd_C00031_CS,ccpd_C01835_CS,ccpd_G00343_CS:(99.99999999999999/(2.1052871794871795*ccpd_C00031_CS*ccpd_G00343_CS+0.5923076923076923*ccpd_C00031_CS*(ccpd_C01835_CS+1e-30)+442.1103076923077*ccpd_C00031_CS+3300*ccpd_C01835_CS+33*ccpd_G00343_CS*(ccpd_C01835_CS+1e-30)+24631.859999999997*ccpd_G00343_CS+1*(ccpd_C01835_CS+1e-30)^2+3.3e-27))]==>cpd_C00031_CS+cpd_G00343_CS",
+     "source+S[USER;ccpd_C00031_CY,ccpd_C00208_CY,ccpd_C00569Glc_CY,ccpd_C00569_CY:((-1*1*(-100*ccpd_C00031_CY*ccpd_C00569Glc_CY+100*ccpd_C00208_CY*ccpd_C00569_CY)/(0.39316239316239315*ccpd_C00031_CY*ccpd_C00569Glc_CY+432.4786324786325*ccpd_C00031_CY*(0.0004565217788279807*ccpd_C00208_CY+1)+1*ccpd_C00208_CY*ccpd_C00569_CY+1100*ccpd_C00208_CY+4600*ccpd_C00569Glc_CY*(0.001*ccpd_C00569_CY+1)+4600*ccpd_C00569_CY)))]==>cpd_C00569_CY",
      ""
     ],
     [
      "#",
      "",
      "",
-     "rn_R05196CS term 2/2",
+     "rn_R05196CS",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cpd_C00031_CS+cpd_G00343_CS+S[USER;ccpd_C00031_CS,ccpd_C01835_CS,ccpd_G00343_CS:(99.99999999999999/(442.1103076923077*ccpd_C00031_CS+1*ccpd_C01835_CS^2+0.5923076923076923*ccpd_C01835_CS*(ccpd_C00031_CS+1e-30)+33*ccpd_C01835_CS*(ccpd_G00343_CS+1e-30)+3300*ccpd_C01835_CS+24631.859999999997*ccpd_G00343_CS+2.1052871794871795*(ccpd_C00031_CS+1e-30)*(ccpd_G00343_CS+1e-30)+2.5073970307692308e-26))]==>2cpd_C01835_CS",
+     "source+S[USER;ccpd_C00031_CS,ccpd_C01835_CS,ccpd_G00343_CS:(1*(-99.99999999999999*ccpd_C00031_CS*ccpd_G00343_CS+99.99999999999999*ccpd_C01835_CS^2)/(2.1052871794871795*ccpd_C00031_CS*ccpd_G00343_CS+442.1103076923077*ccpd_C00031_CS*(0.0013397283031001315*ccpd_C01835_CS+1)+1*ccpd_C01835_CS^2+3300*ccpd_C01835_CS+24631.859999999997*ccpd_G00343_CS*(0.0013397283031001315*ccpd_C01835_CS+1)))]==>cpd_C00031_CS+cpd_G00343_CS",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "rn_R05196CS (consumes cpd_C01835_CS)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;ccpd_C00031_CS,ccpd_C01835_CS,ccpd_G00343_CS:((-1*2*(-99.99999999999999*ccpd_C00031_CS*ccpd_G00343_CS+99.99999999999999*ccpd_C01835_CS^2)/(2.1052871794871795*ccpd_C00031_CS*ccpd_G00343_CS+442.1103076923077*ccpd_C00031_CS*(0.0013397283031001315*ccpd_C01835_CS+1)+1*ccpd_C01835_CS^2+3300*ccpd_C01835_CS+24631.859999999997*ccpd_G00343_CS*(0.0013397283031001315*ccpd_C01835_CS+1))))]==>cpd_C01835_CS",
      ""
     ],
     [
@@ -350,21 +308,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;ccpd_C00369db_CS:(0.000100161468/(1+10686474581524.451*exp((-1*1477.051213893319*ccpd_C00369db_CS))))]==>cpd_C00369db_CS",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dcpd_C00369db_CS/dt term 3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cpd_C00369db_CS+S[USER;ccpd_C00369db_CS:(0.004931453929824562*exp(1477.051213893319*ccpd_C00369db_CS)/(1*exp(1477.051213893319*ccpd_C00369db_CS)+10686474581524.451))]==>sink",
+     "source+S[USER;ccpd_C00369db_CS:((0.000100161468-0.004931453929824562*ccpd_C00369db_CS)/(exp(30-1477.051213893319*ccpd_C00369db_CS)+1))]==>cpd_C00369db_CS",
      ""
     ],
     [

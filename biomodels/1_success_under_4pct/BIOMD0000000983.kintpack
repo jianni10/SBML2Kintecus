@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T16:34:57.731052+00:00",
- "description": "Zongo2020 - model of COVID-19 transmission dynamics under containment measures in France\nBioModels BIOMD0000000983 (curated). SBML file: Zongo2020.xml.\nSimulation: 0 to 125 time units (SED-ML: Zongo2020.sedml), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.24e-05 of species peak (worst: I_u)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction term 2/6: rate order differs from the stoichiometry; consumed on separate line(s) - S_u: zero order, signed\n  [info] reaction term 3/6: rate order differs from the stoichiometry; consumed on separate line(s) - S_u: zero order, signed\n  [info] reaction term 4/6: rate order differs from the stoichiometry; consumed on separate line(s) - S_u: zero order, signed\n  [info] reaction_1 term 4/5: rate order differs from the stoichiometry; consumed on separate line(s) - S_c: zero order, signed\n  [info] reaction_1 term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - S_c: zero order, signed\n  [info] time event(s) on 'm_t_phase_1' encoded as time/value pairs in EV_P_M_T_PHASE_1.TXT (SET)\n  [info] time event(s) on 'm_t_phase_2' encoded as time/value pairs in EV_P_M_T_PHASE_2.TXT (SET)\n  [info] time event(s) on 'm_t_phase_3' encoded as time/value pairs in EV_P_M_T_PHASE_3.TXT (SET)\nRenamed species (Kintecus name = SBML id): E1 = E; R1 = R; p_m_t_phase_1 = m_t_phase_1; p_m_t_phase_2 = m_t_phase_2; p_m_t_phase_3 = m_t_phase_3",
+ "created": "2026-11-07T22:30:07.397276+00:00",
+ "description": "Zongo2020 - model of COVID-19 transmission dynamics under containment measures in France\nBioModels BIOMD0000000983 (curated). SBML file: Zongo2020.xml.\nSimulation: 0 to 125 time units (SED-ML: Zongo2020.sedml), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.24e-05 of species peak (worst: I_u)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - S_u: zero order, signed\n  [info] time event(s) on 'm_t_phase_1' encoded as time/value pairs in EV_P_M_T_PHASE_1.TXT (SET)\n  [info] time event(s) on 'm_t_phase_2' encoded as time/value pairs in EV_P_M_T_PHASE_2.TXT (SET)\n  [info] time event(s) on 'm_t_phase_3' encoded as time/value pairs in EV_P_M_T_PHASE_3.TXT (SET)\nRenamed species (Kintecus name = SBML id): E1 = E; R1 = R; p_m_t_phase_1 = m_t_phase_1; p_m_t_phase_2 = m_t_phase_2; p_m_t_phase_3 = m_t_phase_3",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:5 -obeymaxint",
@@ -49,7 +49,7 @@
      "#",
      "",
      "",
-     "reaction term 1/6",
+     "reaction term 1/4",
      ""
     ],
     [
@@ -63,35 +63,21 @@
      "#",
      "",
      "",
-     "reaction term 2/6",
+     "reaction term 2/4",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cS_c,cp_m_t_phase_1:(1*cS_c*cp_m_t_phase_1)]==>S_c",
+     "S_c+S[USER;cTIME_,cp_m_t_phase_1:(1*cp_m_t_phase_1*(exp(2.1478638759841675-0.10227923218972226*cTIME_)-1))]==>S_u",
      ""
     ],
     [
      "#",
      "",
      "",
-     "reaction term 2/6 (consumes S_u)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cS_c,cp_m_t_phase_1:((-1*1*cS_c*cp_m_t_phase_1))]==>S_u",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction term 3/6",
+     "reaction term 3/4",
      ""
     ],
     [
@@ -105,7 +91,7 @@
      "#",
      "",
      "",
-     "reaction term 3/6 (consumes S_u)",
+     "reaction term 3/4 (consumes S_u)",
      ""
     ],
     [
@@ -119,77 +105,35 @@
      "#",
      "",
      "",
-     "reaction term 4/6",
+     "reaction term 4/4",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cS_c,cp_m_t_phase_3:(1.5554867256637168*cS_c*cp_m_t_phase_3)]==>S_c",
+     "S_c+S[USER;cTIME_,cp_m_t_phase_3:(1*cp_m_t_phase_3*(0.008230088495575221*cTIME_-1.5554867256637168))]==>S_u",
      ""
     ],
     [
      "#",
      "",
      "",
-     "reaction term 4/6 (consumes S_u)",
+     "reaction_1 term 1/3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cS_c,cp_m_t_phase_3:((-1*1.5554867256637168*cS_c*cp_m_t_phase_3))]==>S_u",
+     "S_u+S[USER;cTIME_,cp_m_t_phase_1:(1*cp_m_t_phase_1*(1-exp(2.1478638759841675-0.10227923218972226*cTIME_)))]==>S_c",
      ""
     ],
     [
      "#",
      "",
      "",
-     "reaction term 5/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "S_c+S[USER;cTIME_,cp_m_t_phase_3:(0.008230088495575221*cTIME_*cp_m_t_phase_3)]==>S_u",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction term 6/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "S_c+S[USER;cTIME_,cp_m_t_phase_1:(8.566539647509458*cp_m_t_phase_1*exp((-1*0.10227923218972226*cTIME_)))]==>S_u",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 1/5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "S_u+S[USER;cp_m_t_phase_1:(1*cp_m_t_phase_1)]==>S_c",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 2/5",
+     "reaction_1 term 2/3",
      ""
     ],
     [
@@ -203,70 +147,14 @@
      "#",
      "",
      "",
-     "reaction_1 term 3/5",
+     "reaction_1 term 3/3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "S_u+S[USER;cp_m_t_phase_3:(1.5554867256637168*cp_m_t_phase_3)]==>S_c",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 4/5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cS_u,cTIME_,cp_m_t_phase_3:(0.008230088495575221*cS_u*cTIME_*cp_m_t_phase_3)]==>S_u",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 4/5 (consumes S_c)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cS_u,cTIME_,cp_m_t_phase_3:((-1*0.008230088495575221*cS_u*cTIME_*cp_m_t_phase_3))]==>S_c",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 5/5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cS_u,cTIME_,cp_m_t_phase_1:(8.566539647509458*cS_u*cp_m_t_phase_1*exp((-1*0.10227923218972226*cTIME_)))]==>S_u",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 5/5 (consumes S_c)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cS_u,cTIME_,cp_m_t_phase_1:((-1*8.566539647509458*cS_u*cp_m_t_phase_1*exp((-1*0.10227923218972226*cTIME_))))]==>S_c",
+     "S_u+S[USER;cTIME_,cp_m_t_phase_3:(1*cp_m_t_phase_3*(1.5554867256637168-0.008230088495575221*cTIME_))]==>S_c",
      ""
     ],
     [

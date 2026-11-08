@@ -413,6 +413,9 @@ def main():
         notes.append("duration defaulted to 100; pass --t-end")
     # states the SBML takes below zero are written shifted (state + shift > 0) with an OUTC[] output of the true value
     variant = rel["variant"] if rel and rel.get("variant") else "plain"
+    variant, _, pre1107 = variant.partition("+")
+    if pre1107 == "pre1107":                 # pack kept from before the 2026-11-07 converter changes (its deck is
+        K.ATOMIC_STEP = K.MERGE_OPPOSITE = K.TIME_SWITCH = K.WHOLE_EXP = K.PRINT_NEG_FIX = False     # written as it was then)
     if rel and variant == "shifted":
         shifts = {k: float(v) for k, v in json.loads(rel["offsets"] or "{}").items()}
     elif rel or rr is None or a.no_shift:

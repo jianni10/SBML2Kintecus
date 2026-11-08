@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T07:13:34.114913+00:00",
- "description": "Gerard2013 - Model 3 - Embryonic-type eukaryotic Cell Cycle regulation based on negative feedback between Cdk/cyclin and APC and competitive inhibition between Cdk/cyclin and securin for polyubiquitylation_1\nBioModels BIOMD0000000938 (curated). SBML file: Gerard2013.xml.\nSimulation: 0 to 120 time units (SED-ML: Gerard2013.sedml), sampling 1.2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.05e-07 of species peak (worst: Securin)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Anaphase_promoting_complex' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Degradation_Cdk_mediated_by_APC_P: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Phosphorylation_of_APC term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Dephosphorylation_of_APC: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Degradation_of_Sec_mediated_by_APC_P: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): AnaphasepromotingcomplexP1 = Anaphase_promoting_complex_Phosphorylated; Anaphasepromotingcomplext1 = Anaphase_promoting_complex_total",
+ "created": "2026-11-07T22:28:51.423673+00:00",
+ "description": "Gerard2013 - Model 3 - Embryonic-type eukaryotic Cell Cycle regulation based on negative feedback between Cdk/cyclin and APC and competitive inhibition between Cdk/cyclin and securin for polyubiquitylation_1\nBioModels BIOMD0000000938 (curated). SBML file: Gerard2013.xml.\nSimulation: 0 to 120 time units (SED-ML: Gerard2013.sedml), sampling 1.2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.05e-07 of species peak (worst: Securin)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Anaphase_promoting_complex' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Degradation_Cdk_mediated_by_APC_P: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Dephosphorylation_of_APC: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Degradation_of_Sec_mediated_by_APC_P: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): AnaphasepromotingcomplexP1 = Anaphase_promoting_complex_Phosphorylated; Anaphasepromotingcomplext1 = Anaphase_promoting_complex_total",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -91,28 +91,14 @@
      "#",
      "",
      "",
-     "Phosphorylation_of_APC term 1/2",
+     "Phosphorylation_of_APC",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Cdk+S[USER;cAnaphasepromotingcomplexP1:(0.3/(1.01-cAnaphasepromotingcomplexP1))]==>AnaphasepromotingcomplexP1+Cdk",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Phosphorylation_of_APC term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "AnaphasepromotingcomplexP1+Cdk+S[USER;cAnaphasepromotingcomplexP1:((-1*0.3/(1*cAnaphasepromotingcomplexP1-1.01)))]==>Cdk",
+     "Cdk+S[USER;cAnaphasepromotingcomplexP1:(0.3*(1-cAnaphasepromotingcomplexP1)/(1.01-cAnaphasepromotingcomplexP1))]==>AnaphasepromotingcomplexP1+Cdk",
      ""
     ],
     [

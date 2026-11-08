@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T06:55:27.215879+00:00",
- "description": "Romond1999_CellCycle\nBioModels BIOMD0000000207 (curated). SBML file: BIOMD0000000207_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000207_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.80e-06 of species peak (worst: M1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dM1/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dM1/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dX1/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dX1/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dM2/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dM2/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dX2/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dX2/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T20:38:39.719942+00:00",
+ "description": "Romond1999_CellCycle\nBioModels BIOMD0000000207 (curated). SBML file: BIOMD0000000207_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000207_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.99e-06 of species peak (worst: M2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dM1/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dX1/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dM2/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dX2/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -140,7 +140,7 @@
      "1",
      "0",
      "0",
-     "C1+S[USER;cC1,cM1:(0.3/(-1*cC1*cM1+1.01*cC1-0.5*cM1+0.505))]==>M1+C1",
+     "C1+S[USER;cC1,cM1:(0.3*(1-cM1)/(-1*cC1*cM1+1.01*cC1-0.5*cM1+0.505))]==>M1+C1",
      ""
     ],
     [
@@ -161,20 +161,6 @@
      "#",
      "",
      "",
-     "rate rule dM1/dt term 3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "M1+C1+S[USER;cC1,cM1:((-1*0.3/(1*cC1*(cM1+1e-30)-1.01*cC1+0.5*cM1-0.505)))]==>C1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
      "rate rule dX1/dt term 1",
      ""
     ],
@@ -182,7 +168,7 @@
      "1",
      "0",
      "0",
-     "M1+S[USER;cX1:(0.1/(1.01-1*cX1))]==>X1+M1",
+     "M1+S[USER;cX1:(0.1*(1-cX1)/(1.01-1*cX1))]==>X1+M1",
      ""
     ],
     [
@@ -203,20 +189,6 @@
      "#",
      "",
      "",
-     "rate rule dX1/dt term 3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "X1+M1+S[USER;cX1:((-1*0.1/(1*cX1-1.01)))]==>M1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
      "rate rule dM2/dt term 1",
      ""
     ],
@@ -224,7 +196,7 @@
      "1",
      "0",
      "0",
-     "C2+S[USER;cC2,cM2:(0.3/(-1*cC2*cM2+1.01*cC2-0.5*cM2+0.505))]==>M2+C2",
+     "C2+S[USER;cC2,cM2:(0.3*(1-cM2)/(-1*cC2*cM2+1.01*cC2-0.5*cM2+0.505))]==>M2+C2",
      ""
     ],
     [
@@ -245,20 +217,6 @@
      "#",
      "",
      "",
-     "rate rule dM2/dt term 3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "M2+C2+S[USER;cC2,cM2:((-1*0.3/(1*cC2*(cM2+1e-30)-1.01*cC2+0.5*cM2-0.505)))]==>C2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
      "rate rule dX2/dt term 1",
      ""
     ],
@@ -266,7 +224,7 @@
      "1",
      "0",
      "0",
-     "M2+S[USER;cX2:(0.1/(1.01-1*cX2))]==>X2+M2",
+     "M2+S[USER;cX2:(0.1*(1-cX2)/(1.01-1*cX2))]==>X2+M2",
      ""
     ],
     [
@@ -281,20 +239,6 @@
      "0",
      "0",
      "X2+S[USER;cX2:(0.05/(1*cX2+0.01))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dX2/dt term 3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "X2+M2+S[USER;cX2:((-1*0.1/(1*cX2-1.01)))]==>M2",
      ""
     ],
     [

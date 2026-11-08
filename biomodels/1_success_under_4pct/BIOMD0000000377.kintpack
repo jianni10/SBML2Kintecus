@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-02T03:45:22.616177+00:00",
- "description": "Bertram2000_PancreaticBetaCells_Oscillations\nBioModels BIOMD0000000377 (curated). SBML file: BIOMD0000000377_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: 377.sedml), sampling 30.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.12e-03 of species peak (worst: n)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 2.73e-04 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V' goes below zero in the SBML: integrated as V_o = value + 200, output as V = OUTC[V_o;-200*source]",
+ "created": "2026-11-07T21:10:08.744724+00:00",
+ "description": "Bertram2000_PancreaticBetaCells_Oscillations\nBioModels BIOMD0000000377 (curated). SBML file: BIOMD0000000377_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: 377.sedml), sampling 30.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.12e-03 of species peak (worst: n)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 4.46e-04 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V' goes below zero in the SBML: integrated as V_o = value + 200, output as V = OUTC[V_o;-200*source]",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_o:(6.18921308576481/(1+0.0532193443389215*exp((-1*0.13333333333333333*(cV_o-200)))))]==>V_o",
+     "source+S[USER;cV_o:(-0.005526083112290009*(cV_o-200)-0.0618921308576481*(cV_o-200)/(exp((-1*(0.13333333333333333*(cV_o-200)+2.933333333333333)))+1)+6.18921308576481/(exp((-1*(0.13333333333333333*(cV_o-200)+2.933333333333333)))+1))]==>V_o",
      ""
     ],
     [
@@ -98,7 +98,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_o:((-1*0.005526083112290009*(cV_o-200)))]==>V_o",
+     "source+S[USER;cs1:((-1*0.3536693191865606*cs1))]==>V_o",
      ""
     ],
     [
@@ -112,7 +112,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cs1:((-1*0.3536693191865606*cs1))]==>V_o",
+     "source+S[USER;cn:((-1*22.988505747126435*cn))]==>V_o",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cn:((-1*22.988505747126435*cn))]==>V_o",
+     "source+S[USER;cV_o,cs1:((-1*0.004420866489832007*cs1*(cV_o-200)))]==>V_o",
      ""
     ],
     [
@@ -140,7 +140,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_o,cs1:((-1*0.004420866489832007*cs1*(cV_o-200)))]==>V_o",
+     "source+S[USER;cV_o,cs2:((-1*0.007073386383731211*cs2*(cV_o-200)))]==>V_o",
      ""
     ],
     [
@@ -154,35 +154,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_o,cs2:((-1*0.007073386383731211*cs2*(cV_o-200)))]==>V_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dV/dt term 9 (shifted V_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
      "source+S[USER;cV_o,cn:((-1*0.28735632183908044*cn*(cV_o-200)))]==>V_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dV/dt term 10 (shifted V_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cV_o:((-1*0.0618921308576481*(cV_o-200)/(1+0.0532193443389215*exp((-1*0.13333333333333333*(cV_o-200))))))]==>V_o",
      ""
     ],
     [
@@ -196,7 +168,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_o:(0.12048192771084336/(1+0.4065696597405991*exp((-1*0.1*(cV_o-200)))))]==>n",
+     "source+S[USER;cV_o:(0.12048192771084336/(exp(-0.1*(cV_o-200)-0.9)+1))]==>n",
      ""
     ],
     [
@@ -224,7 +196,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_o:(0.29633772423577703*exp(0.1*(cV_o-200))/(1+0.4065696597405991*exp((-1*0.1*(cV_o-200)))))]==>n",
+     "source+S[USER;cV_o:(0.12048192771084336*exp(0.1*(cV_o-200)+0.9)/(exp(-0.1*(cV_o-200)-0.9)+1))]==>n",
      ""
     ],
     [
@@ -238,7 +210,7 @@
      "1",
      "0",
      "0",
-     "n+S[USER;cV_o:(0.29633772423577703*exp(0.1*(cV_o-200)))]==>sink",
+     "n+S[USER;cV_o:(0.12048192771084336*exp(0.1*(cV_o-200)+0.9))]==>sink",
      ""
     ],
     [
@@ -252,7 +224,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_o:(0.001/(1+1.8048513878454153e-35*exp((-1*2*(cV_o-200)))))]==>s1",
+     "source+S[USER;cV_o:(0.001/(exp(-2*(cV_o-200)-80)+1))]==>s1",
      ""
     ],
     [
@@ -280,7 +252,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_o:(8.333333333333334e-6/(1+2.5065674758999675e-46*exp((-1*2.5*(cV_o-200)))))]==>s2",
+     "source+S[USER;cV_o:(8.333333333333334e-6/(exp(-2.5*(cV_o-200)-105)+1))]==>s2",
      ""
     ],
     [

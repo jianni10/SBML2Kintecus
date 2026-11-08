@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:38:00.870535+00:00",
- "description": "Hynne2001_Glycolysis\nBioModels BIOMD0000000061 (curated). SBML file: BIOMD0000000061_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000061_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.89e-06 of species peak (worst: GAP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] vGlcTrans term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vGlcTrans term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Glc: first order\n  [info] vHK: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vPGI term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vPGI term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vPFK: rate order differs from the stoichiometry; consumed on separate line(s) - ATP: zero order, signed\n  [info] vALD term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vALD term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vTIM term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vTIM term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vGAPDH term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vGAPDH term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vPK: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vPDC: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vADH: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vdifEtOH term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - EtOH: first order\n  [info] vlpGlyc: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vdifGlyc term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - Glyc: first order\n  [info] vdifACA term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - ACA: first order\nRenamed species (Kintecus name = SBML id): P1 = P",
+ "created": "2026-11-07T20:21:02.839778+00:00",
+ "description": "Hynne2001_Glycolysis\nBioModels BIOMD0000000061 (curated). SBML file: BIOMD0000000061_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000061_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.89e-06 of species peak (worst: GAP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] vGlcTrans term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vGlcTrans term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Glc: first order\n  [info] vHK: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vPGI: rate order differs from the stoichiometry; consumed on separate line(s) - G6P: zero order, signed\n  [info] vPFK: rate order differs from the stoichiometry; consumed on separate line(s) - ATP: zero order, signed\n  [info] vALD: rate order differs from the stoichiometry; consumed on separate line(s) - FBP: zero order, signed\n  [info] vTIM: rate order differs from the stoichiometry; consumed on separate line(s) - DHAP: zero order, signed\n  [info] vGAPDH: rate order differs from the stoichiometry; consumed on separate line(s) - GAP: zero order, signed; NAD: zero order, signed\n  [info] vPK: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vPDC: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vADH: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vdifEtOH term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - EtOH: first order\n  [info] vlpGlyc: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vdifGlyc term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - Glyc: first order\n  [info] vdifACA term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - ACA: first order\nRenamed species (Kintecus name = SBML id): P1 = P",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -126,35 +126,35 @@
      "1",
      "0",
      "0",
-     "Glc+ATP+S[USER;cATP,cGlc:(51.7547/(0.1*cGlc+1*(cATP+1e-30)*(cGlc+1e-30)+0.037))]==>G6P+ADP",
+     "ATP+Glc+S[USER;cATP,cGlc:(51.7547/(0.1*cGlc+1*(cATP+1e-30)*(cGlc+1e-30)+0.037))]==>ADP+G6P",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vPGI term 1/2",
+     "vPGI",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "G6P+S[USER;cF6P,cG6P:(496.042/(5.333333333333334*cF6P+1*cG6P+0.8))]==>F6P",
+     "source+S[USER;cF6P,cG6P:(-3815.707692307692*cF6P/(5.333333333333334*cF6P+cG6P+0.8)+496.042*cG6P/(5.333333333333334*cF6P+cG6P+0.8))]==>F6P",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vPGI term 2/2",
+     "vPGI (consumes G6P)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "F6P+S[USER;cF6P,cG6P:(3815.707692307692/(5.333333333333334*cF6P+1*cG6P+0.8))]==>G6P",
+     "source+S[USER;cF6P,cG6P:(3815.707692307692*cF6P/(5.333333333333334*cF6P+cG6P+0.8)-496.042*cG6P/(5.333333333333334*cF6P+cG6P+0.8))]==>G6P",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "1",
      "0",
      "0",
-     "F6P+S[USER;cAMP,cATP,cF6P:(45.4327*cAMP^2*cF6P/(1*cAMP^2*cF6P^2+0.021*cAMP^2+0.00315*cATP^2))]==>FBP+ADP",
+     "F6P+S[USER;cAMP,cATP,cF6P:(45.4327*cAMP^2*cF6P/(1*cAMP^2*cF6P^2+0.021*cAMP^2+0.00315*cATP^2))]==>ADP+FBP",
      ""
     ],
     [
@@ -189,84 +189,98 @@
      "#",
      "",
      "",
-     "vALD term 1/2",
+     "vALD",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "FBP+S[USER;cDHAP,cFBP,cGAP:(2207.82/(2.4691358024691357*cDHAP*cGAP+9.876543209876543*cDHAP+1*cFBP+0.1*cGAP*(cFBP+1e-30)+4.938271604938271*cGAP+0.3))]==>DHAP+GAP",
+     "source+S[USER;cDHAP,cFBP,cGAP:(-27257.037037037036*cDHAP*cGAP/(2.4691358024691357*cDHAP*cGAP+9.876543209876543*cDHAP+0.1*cFBP*cGAP+cFBP+4.938271604938271*cGAP+0.3)+2207.82*cFBP/(2.4691358024691357*cDHAP*cGAP+9.876543209876543*cDHAP+0.1*cFBP*cGAP+cFBP+4.938271604938271*cGAP+0.3))]==>DHAP+GAP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vALD term 2/2",
+     "vALD (consumes FBP)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "DHAP+GAP+S[USER;cDHAP,cFBP,cGAP:(27257.037037037036/(9.876543209876543*cDHAP+0.1*cFBP*(cGAP+1e-30)+1*cFBP+4.938271604938271*cGAP+2.4691358024691357*(cDHAP+1e-30)*(cGAP+1e-30)+0.3))]==>FBP",
+     "source+S[USER;cDHAP,cFBP,cGAP:(27257.037037037036*cDHAP*cGAP/(2.4691358024691357*cDHAP*cGAP+9.876543209876543*cDHAP+0.1*cFBP*cGAP+cFBP+4.938271604938271*cGAP+0.3)-2207.82*cFBP/(2.4691358024691357*cDHAP*cGAP+9.876543209876543*cDHAP+0.1*cFBP*cGAP+cFBP+4.938271604938271*cGAP+0.3))]==>FBP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vTIM term 1/2",
+     "vTIM",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "DHAP+S[USER;cDHAP,cGAP:(116.365/(1*cDHAP+0.968503937007874*cGAP+1.23))]==>GAP",
+     "source+S[USER;cDHAP,cGAP:(116.365*cDHAP/(cDHAP+0.968503937007874*cGAP+1.23)-2115.7272727272725*cGAP/(cDHAP+0.968503937007874*cGAP+1.23))]==>GAP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vTIM term 2/2",
+     "vTIM (consumes DHAP)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "GAP+S[USER;cDHAP,cGAP:(2115.7272727272725/(1*cDHAP+0.968503937007874*cGAP+1.23))]==>DHAP",
+     "source+S[USER;cDHAP,cGAP:(-116.365*cDHAP/(cDHAP+0.968503937007874*cGAP+1.23)+2115.7272727272725*cGAP/(cDHAP+0.968503937007874*cGAP+1.23))]==>DHAP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vGAPDH term 1/2",
+     "vGAPDH",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "NAD+GAP+S[USER;cBPG,cGAP,cNAD,cNADH:(13897.633333333331/(1666.6666666666667*cBPG*cNADH+999.9999999999999*cBPG*(cNAD+1e-30)+100*cBPG+1.6666666666666667*cGAP+10*cNAD+27.77777777777778*cNADH*(cGAP+1e-30)+16.666666666666668*cNADH+16.666666666666668*(cGAP+1e-30)*(cNAD+1e-30)+1))]==>NADH+BPG",
+     "source+S[USER;cBPG,cGAP,cNAD,cNADH:(-2526842.4242424243*cBPG*cNADH/((100*cBPG+1.6666666666666667*cGAP+1)*(10*cNAD+16.666666666666668*cNADH+1))+13897.633333333331*cGAP*cNAD/((100*cBPG+1.6666666666666667*cGAP+1)*(10*cNAD+16.666666666666668*cNADH+1)))]==>BPG+NADH",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vGAPDH term 2/2",
+     "vGAPDH (consumes GAP)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "NADH+BPG+S[USER;cBPG,cGAP,cNAD,cNADH:(2526842.4242424243/(100*cBPG+16.666666666666668*cGAP*cNAD+27.77777777777778*cGAP*(cNADH+1e-30)+1.6666666666666667*cGAP+999.9999999999999*cNAD*(cBPG+1e-30)+10*cNAD+16.666666666666668*cNADH+1666.6666666666667*(cBPG+1e-30)*(cNADH+1e-30)+1))]==>NAD+GAP",
+     "source+S[USER;cBPG,cGAP,cNAD,cNADH:(2526842.4242424243*cBPG*cNADH/((100*cBPG+1.6666666666666667*cGAP+1)*(10*cNAD+16.666666666666668*cNADH+1))-13897.633333333331*cGAP*cNAD/((100*cBPG+1.6666666666666667*cGAP+1)*(10*cNAD+16.666666666666668*cNADH+1)))]==>GAP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "vGAPDH (consumes NAD)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cBPG,cGAP,cNAD,cNADH:(2526842.4242424243*cBPG*cNADH/((100*cBPG+1.6666666666666667*cGAP+1)*(10*cNAD+16.666666666666668*cNADH+1))-13897.633333333331*cGAP*cNAD/((100*cBPG+1.6666666666666667*cGAP+1)*(10*cNAD+16.666666666666668*cNADH+1)))]==>NAD",
      ""
     ],
     [
@@ -308,7 +322,7 @@
      "1",
      "0",
      "0",
-     "ADP+PEP+S[USER;cADP,cPEP:(343.096/(0.2*cADP+0.17*cPEP+1*(cADP+1e-30)*(cPEP+1e-30)+0.034))]==>Pyr+ATP",
+     "ADP+PEP+S[USER;cADP,cPEP:(343.096/(0.2*cADP+0.17*cPEP+1*(cADP+1e-30)*(cPEP+1e-30)+0.034))]==>ATP+Pyr",
      ""
     ],
     [
@@ -336,7 +350,7 @@
      "1",
      "0",
      "0",
-     "NADH+ACA+S[USER;cACA,cNADH:(89.8023/(0.1*cACA+0.71*cNADH+1*(cACA+1e-30)*(cNADH+1e-30)+0.071))]==>NAD+EtOH",
+     "ACA+NADH+S[USER;cACA,cNADH:(89.8023/(0.1*cACA+0.71*cNADH+1*(cACA+1e-30)*(cNADH+1e-30)+0.071))]==>EtOH+NAD",
      ""
     ],
     [
@@ -406,7 +420,7 @@
      "1",
      "0",
      "0",
-     "NADH+DHAP+S[USER;cDHAP,cNAD,cNADH:(81.4797/(0.13*cDHAP+1*cNAD*(cDHAP+1e-30)+6.538461538461538*cNAD+25*cNADH+1*(cDHAP+1e-30)*(cNADH+1e-30)+0.8500000000000001))]==>NAD+Glyc",
+     "DHAP+NADH+S[USER;cDHAP,cNAD,cNADH:(81.4797/(0.13*cDHAP+1*cNAD*(cDHAP+1e-30)+6.538461538461538*cNAD+25*cNADH+1*(cDHAP+1e-30)*(cNADH+1e-30)+0.8500000000000001))]==>Glyc+NAD",
      ""
     ],
     [
@@ -532,7 +546,7 @@
      "0.00283828",
      "0",
      "0",
-     "CNX+ACAX==>sink",
+     "ACAX+CNX==>sink",
      ""
     ],
     [
@@ -574,7 +588,7 @@
      "2.25932",
      "0",
      "0",
-     "G6P+ATP==>ADP",
+     "ATP+G6P==>ADP",
      ""
     ],
     [

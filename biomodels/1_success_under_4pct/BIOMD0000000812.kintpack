@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T23:01:08.494823+00:00",
- "description": "Galante2012 - B7-H1 and a Mathematical Model for Cytotoxic T Cell and Tumor Cell Interaction\nBioModels BIOMD0000000812 (curated). SBML file: Galante2012.xml.\nSimulation: 0 to 12 time units (SED-ML: Galante2012.sedml), sampling 0.12.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.51e-06 of species peak (worst: C_Cancer_Uncomplexed)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'E_CTL' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'T_Cancer_Cell_Total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] P_Production term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - P_Perforin: zero order, signed",
+ "created": "2026-11-07T22:23:50.281364+00:00",
+ "description": "Galante2012 - B7-H1 and a Mathematical Model for Cytotoxic T Cell and Tumor Cell Interaction\nBioModels BIOMD0000000812 (curated). SBML file: Galante2012.xml.\nSimulation: 0 to 12 time units (SED-ML: Galante2012.sedml), sampling 0.12.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.51e-06 of species peak (worst: C_Cancer_Uncomplexed)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'E_CTL' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'T_Cancer_Cell_Total' is defined by an assignment rule; not a Kintecus state (not output)",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -105,28 +105,14 @@
      "#",
      "",
      "",
-     "P_Production term 1/2",
+     "P_Production",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cC_Cancer_Uncomplexed,cX_Complex:(0.097/(-80*cC_Cancer_Uncomplexed*cX_Complex+256*cC_Cancer_Uncomplexed))]==>P_Perforin",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "P_Production term 2/2 (consumes P_Perforin)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cC_Cancer_Uncomplexed,cX_Complex:((-1*0.097*cX_Complex/(-80*cC_Cancer_Uncomplexed*cX_Complex+256*cC_Cancer_Uncomplexed)))]==>P_Perforin",
+     "source+S[USER;cC_Cancer_Uncomplexed,cX_Complex:(1*(0.097-0.097*cX_Complex)/(cC_Cancer_Uncomplexed*(256-80*cX_Complex)))]==>P_Perforin",
      ""
     ],
     [

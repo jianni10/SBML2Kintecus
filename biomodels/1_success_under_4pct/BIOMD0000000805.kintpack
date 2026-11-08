@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:59:27.621152+00:00",
- "description": "Al-Husari2013 - pH and lactate in tumor\nBioModels BIOMD0000000805 (curated). SBML file: Al-Husari2013.xml.\nSimulation: 0 to 10 time units (SED-ML: Al-Husari2013.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.56e-06 of species peak (worst: Hi)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] H_antiporter: piecewise/conditional rate encoded with abs()-based step functions\n  [info] H_antiporter term 3/5: rate order differs from the stoichiometry; consumed on separate line(s) - Hi: zero order, signed\n  [info] H_antiporter term 4/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] H_antiporter term 5/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] glycolysis_H: piecewise/conditional rate encoded with abs()-based step functions\n  [info] glycolysis_L: piecewise/conditional rate encoded with abs()-based step functions",
+ "created": "2026-11-07T22:23:33.875887+00:00",
+ "description": "Al-Husari2013 - pH and lactate in tumor\nBioModels BIOMD0000000805 (curated). SBML file: Al-Husari2013.xml.\nSimulation: 0 to 10 time units (SED-ML: Al-Husari2013.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.56e-06 of species peak (worst: Hi)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] H_antiporter: piecewise/conditional rate encoded with abs()-based step functions\n  [info] H_antiporter: rate order differs from the stoichiometry; consumed on separate line(s) - Hi: zero order, signed\n  [info] glycolysis_H: piecewise/conditional rate encoded with abs()-based step functions\n  [info] glycolysis_L: piecewise/conditional rate encoded with abs()-based step functions",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -77,84 +77,28 @@
      "#",
      "",
      "",
-     "H_antiporter term 1/5",
-     ""
-    ],
-    [
-     "8587",
-     "0",
-     "0",
-     "Hi==>He",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "H_antiporter term 2/5",
-     ""
-    ],
-    [
-     "8587",
-     "0",
-     "0",
-     "He==>Hi",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "H_antiporter term 3/5",
+     "H_antiporter",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cHe,cHi:(8587*cHe^2/(abs(cHe-cHi)+1e-300))]==>He",
+     "source+S[USER;cHe,cHi:(1*(-17174*cHe+17174*cHi)*((-cHe+cHi)/(2*(abs(cHe-cHi)+1e-300))+0.5))]==>He",
      ""
     ],
     [
      "#",
      "",
      "",
-     "H_antiporter term 3/5 (consumes Hi)",
+     "H_antiporter (consumes Hi)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cHe,cHi:((-1*8587*cHe^2/(abs(cHe-cHi)+1e-300)))]==>Hi",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "H_antiporter term 4/5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Hi+Hi+S[USER;cHe,cHi:(8587/(1*abs(-cHe+cHi+1e-30)+1e-300))]==>He+Hi",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "H_antiporter term 5/5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "He+Hi+S[USER;cHe,cHi:(17174/(1*abs(cHe-cHi+1e-30)+1e-300))]==>2Hi",
+     "source+S[USER;cHe,cHi:((-1*1*(-17174*cHe+17174*cHi)*((-cHe+cHi)/(2*(abs(cHe-cHi)+1e-300))+0.5)))]==>Hi",
      ""
     ],
     [

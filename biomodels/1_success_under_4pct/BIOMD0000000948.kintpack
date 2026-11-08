@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T16:31:42.012386+00:00",
- "description": "Landberg2009 - Alkylresorcinol Dose Response\nBioModels BIOMD0000000948 (curated). SBML file: Landberg2009.xml.\nSimulation: 0 to 25 time units (SED-ML: Landberg2009.sedml), sampling 0.025.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.34e-06 of species peak (worst: AR_Central)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'F1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'F2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - AR_A1: zero order, signed\n  [info] reaction term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - AR_A1: zero order, signed\n  [info] reaction_1 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - AR_A2: zero order, signed",
+ "created": "2026-11-07T22:29:00.707851+00:00",
+ "description": "Landberg2009 - Alkylresorcinol Dose Response\nBioModels BIOMD0000000948 (curated). SBML file: Landberg2009.xml.\nSimulation: 0 to 25 time units (SED-ML: Landberg2009.sedml), sampling 0.025.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.34e-06 of species peak (worst: AR_Central)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'F1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'F2' is defined by an assignment rule; not a Kintecus state (not output)",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,126 +49,28 @@
      "#",
      "",
      "",
-     "reaction term 1/4",
-     ""
-    ],
-    [
-     "0.052",
-     "0",
-     "0",
-     "AR_Dose==>AR_A1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction term 2/4",
+     "reaction",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cAR_Dose,cSW3:(0.052*cAR_Dose*cSW3)]==>AR_Dose",
+     "AR_Dose+S[USER;cSW1,cSW2,cSW3:(1*(1-cSW3)*(0.04800000000000001*cSW1*cSW2+0.052))]==>AR_A1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "reaction term 2/4 (consumes AR_A1)",
+     "reaction_1",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cAR_Dose,cSW3:((-1*0.052*cAR_Dose*cSW3))]==>AR_A1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "AR_Dose+S[USER;cSW1,cSW2:(0.04800000000000001*cSW1*cSW2)]==>AR_A1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cAR_Dose,cSW1,cSW2,cSW3:(0.04800000000000001*cAR_Dose*cSW1*cSW2*cSW3)]==>AR_Dose",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction term 4/4 (consumes AR_A1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cAR_Dose,cSW1,cSW2,cSW3:((-1*0.04800000000000001*cAR_Dose*cSW1*cSW2*cSW3))]==>AR_A1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 1/2",
-     ""
-    ],
-    [
-     "0.048",
-     "0",
-     "0",
-     "AR_Dose==>AR_A2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cAR_Dose,cSW2:(0.048*cAR_Dose*cSW2)]==>AR_Dose",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 2/2 (consumes AR_A2)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cAR_Dose,cSW2:((-1*0.048*cAR_Dose*cSW2))]==>AR_A2",
+     "AR_Dose+S[USER;cSW2:(0.048-0.048*cSW2)]==>AR_A2",
      ""
     ],
     [

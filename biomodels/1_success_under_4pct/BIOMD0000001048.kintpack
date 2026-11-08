@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:16:19.614516+00:00",
+ "created": "2026-11-07T22:34:49.349382+00:00",
  "description": "Siddhartha2002 - Kinetic modelling of cancer therapies\nBioModels BIOMD0000001048 (curated). SBML file: cancer_therapy.xml.\nSimulation: 0 to 300 time units (SED-ML: cancer_therapy.sedml), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.21e-06 of species peak (worst: Tplas)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -119,56 +119,28 @@
      "#",
      "",
      "",
-     "new_tumor_auto_amplification term 1/2",
+     "new_tumor_auto_amplification",
      ""
     ],
     [
-     "0.013800000000000002",
+     "1",
      "0",
      "0",
-     "Tnew==>2Tnew",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "new_tumor_auto_amplification term 2/2",
-     ""
-    ],
-    [
-     "4.600000000000001e-9",
-     "0",
-     "0",
-     "Tnew+Tnew==>Tnew",
+     "Tnew+S[USER;cTnew:(0.013800000000000002-4.600000000000001e-9*cTnew)]==>2Tnew",
      ""
     ],
     [
      "#",
      "",
      "",
-     "old_tumor_auto_amplification term 1/2",
+     "old_tumor_auto_amplification",
      ""
     ],
     [
-     "0.013800000000000002",
+     "1",
      "0",
      "0",
-     "Ttum==>2Ttum",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "old_tumor_auto_amplification term 2/2",
-     ""
-    ],
-    [
-     "4.600000000000001e-9",
-     "0",
-     "0",
-     "Ttum+Ttum==>Ttum",
+     "Ttum+S[USER;cTtum:(0.013800000000000002-4.600000000000001e-9*cTtum)]==>2Ttum",
      ""
     ],
     [

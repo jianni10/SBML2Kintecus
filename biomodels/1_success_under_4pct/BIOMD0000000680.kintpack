@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:56:06.062090+00:00",
- "description": "Waugh2006 - Diabetic Wound Healing - TGF-B Dynamics\nBioModels BIOMD0000000680 (curated). SBML file: BIOMD0000000680_url.xml.\nSimulation: 0 to 80 time units (SED-ML: Waugh2006_2.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.20e-06 of species peak (worst: phi_R)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'K_T' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dphi_I/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - phi_I: zero order, signed\n  [info] rate rule dphi_R/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - phi_R: zero order, signed\nRenamed species (Kintecus name = SBML id): T1 = T",
+ "created": "2026-11-07T22:08:56.562369+00:00",
+ "description": "Waugh2006 - Diabetic Wound Healing - TGF-B Dynamics\nBioModels BIOMD0000000680 (curated). SBML file: BIOMD0000000680_url.xml.\nSimulation: 0 to 80 time units (SED-ML: Waugh2006_2.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.20e-06 of species peak (worst: phi_R)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'K_T' is defined by an assignment rule; not a Kintecus state (not output)\nRenamed species (Kintecus name = SBML id): T1 = T",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cT1:(17.552000000000003*cT1^2)]==>phi_I",
+     "source+S[USER;cT1:(5.128*cT1+17.552000000000003*cT1^2-1.9760000000000002*cT1^3)]==>phi_I",
      ""
     ],
     [
@@ -78,20 +78,6 @@
      "",
      "",
      "rate rule dphi_I/dt term 3",
-     ""
-    ],
-    [
-     "5.128",
-     "0",
-     "0",
-     "T1==>phi_I+T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dphi_I/dt term 4",
      ""
     ],
     [
@@ -105,7 +91,7 @@
      "#",
      "",
      "",
-     "rate rule dphi_I/dt term 5",
+     "rate rule dphi_I/dt term 4",
      ""
     ],
     [
@@ -119,21 +105,7 @@
      "#",
      "",
      "",
-     "rate rule dphi_I/dt term 6 (consumes phi_I)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cT1:((-1*1.9760000000000002*cT1^3))]==>phi_I",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dphi_I/dt term 7",
+     "rate rule dphi_I/dt term 5",
      ""
     ],
     [
@@ -165,10 +137,10 @@
      ""
     ],
     [
-     "1.2819999999999998",
+     "1",
      "0",
      "0",
-     "T1==>phi_R+T1",
+     "source+S[USER;cT1:(1.2819999999999998*cT1+4.387999999999999*cT1^2-0.49399999999999994*cT1^3)]==>phi_R",
      ""
     ],
     [
@@ -176,20 +148,6 @@
      "",
      "",
      "rate rule dphi_R/dt term 3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cT1:(4.387999999999999*cT1^2)]==>phi_R",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dphi_R/dt term 4",
      ""
     ],
     [
@@ -203,7 +161,7 @@
      "#",
      "",
      "",
-     "rate rule dphi_R/dt term 5",
+     "rate rule dphi_R/dt term 4",
      ""
     ],
     [
@@ -217,21 +175,7 @@
      "#",
      "",
      "",
-     "rate rule dphi_R/dt term 6 (consumes phi_R)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cT1:((-1*0.49399999999999994*cT1^3))]==>phi_R",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dphi_R/dt term 7",
+     "rate rule dphi_R/dt term 5",
      ""
     ],
     [

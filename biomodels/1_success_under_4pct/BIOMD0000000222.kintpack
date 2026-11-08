@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:45:10.478346+00:00",
- "description": "Singh2006_TCA_Ecoli_glucose\nBioModels BIOMD0000000222 (curated). SBML file: BIOMD0000000222_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000222_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.22e-06 of species peak (worst: fa)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] CS term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ACN term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ACN term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ICD term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ICD term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] KDH term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] KDH term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ScAS term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ScAS term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SDH term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SDH term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] FUM term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] FUM term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MDH term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ICL term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ICL term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MS term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MS term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] SYN term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - akg: zero order, signed",
+ "created": "2026-11-07T20:39:04.823806+00:00",
+ "description": "Singh2006_TCA_Ecoli_glucose\nBioModels BIOMD0000000222 (curated). SBML file: BIOMD0000000222_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000222_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.22e-06 of species peak (worst: fa)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] ACN: rate order differs from the stoichiometry; consumed on separate line(s) - cit: zero order, signed\n  [info] ICD: rate order differs from the stoichiometry; consumed on separate line(s) - icit: zero order, signed\n  [info] KDH: rate order differs from the stoichiometry; consumed on separate line(s) - akg: zero order, signed\n  [info] ScAS: rate order differs from the stoichiometry; consumed on separate line(s) - sca: zero order, signed\n  [info] SDH: rate order differs from the stoichiometry; consumed on separate line(s) - suc: zero order, signed\n  [info] FUM: rate order differs from the stoichiometry; consumed on separate line(s) - fa: zero order, signed\n  [info] MDH: rate order differs from the stoichiometry; consumed on separate line(s) - mal: zero order, signed\n  [info] ICL: rate order differs from the stoichiometry; consumed on separate line(s) - icit: zero order, signed\n  [info] MS: rate order differs from the stoichiometry; consumed on separate line(s) - gly: zero order, signed\n  [info] SYN: rate order differs from the stoichiometry; consumed on separate line(s) - akg: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,308 +49,266 @@
      "#",
      "",
      "",
-     "CS term 1/2",
+     "CS",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;ccit:(86.85714285714286/(25.23857142857143*ccit+18.67654285714286))]==>cit",
+     "source+S[USER;ccit:(1*(86.85714285714286-0.00043428571428571436*ccit)/(25.23857142857143*ccit+18.67654285714286))]==>cit",
      ""
     ],
     [
      "#",
      "",
      "",
-     "CS term 2/2",
+     "ACN",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cit+S[USER;ccit:(0.00043428571428571436/(25.23857142857143*ccit+18.67654285714286))]==>sink",
+     "source+S[USER;ccit,cicit:(1*(53.64705882352941*ccit-0.27387387387387385*cicit)/(0.5882352941176471*ccit+0.3003003003003003*cicit+1))]==>icit",
      ""
     ],
     [
      "#",
      "",
      "",
-     "ACN term 1/2",
+     "ACN (consumes cit)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cit+S[USER;ccit,cicit:(53.64705882352941/(0.5882352941176471*ccit+0.3003003003003003*cicit+1))]==>icit",
+     "source+S[USER;ccit,cicit:((-1*1*(53.64705882352941*ccit-0.27387387387387385*cicit)/(0.5882352941176471*ccit+0.3003003003003003*cicit+1)))]==>cit",
      ""
     ],
     [
      "#",
      "",
      "",
-     "ACN term 2/2",
+     "ICD",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "icit+S[USER;ccit,cicit:(0.27387387387387385/(0.5882352941176471*ccit+0.3003003003003003*cicit+1))]==>cit",
+     "source+S[USER;cakg,cicit:(1*(-1.1323076923076922*cakg+1840*cicit)/(7.692307692307692*cakg+125*cicit+1))]==>akg",
      ""
     ],
     [
      "#",
      "",
      "",
-     "ICD term 1/2",
+     "ICD (consumes icit)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "icit+S[USER;cakg,cicit:(1840/(7.692307692307692*cakg+125*cicit+1))]==>akg",
+     "source+S[USER;cakg,cicit:((-1*1*(-1.1323076923076922*cakg+1840*cicit)/(7.692307692307692*cakg+125*cicit+1)))]==>icit",
      ""
     ],
     [
      "#",
      "",
      "",
-     "ICD term 2/2",
+     "KDH",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "akg+S[USER;cakg,cicit:(1.1323076923076922/(7.692307692307692*cakg+125*cicit+1))]==>icit",
+     "source+S[USER;cakg,csca:(1*(358.40000000000003*cakg-0.3584*csca)/(10*cakg+1*csca+1))]==>sca",
      ""
     ],
     [
      "#",
      "",
      "",
-     "KDH term 1/2",
+     "KDH (consumes akg)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "akg+S[USER;cakg,csca:(358.40000000000003/(10*cakg+1*csca+1))]==>sca",
+     "source+S[USER;cakg,csca:((-1*1*(358.40000000000003*cakg-0.3584*csca)/(10*cakg+1*csca+1)))]==>akg",
      ""
     ],
     [
      "#",
      "",
      "",
-     "KDH term 2/2",
+     "ScAS",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "sca+S[USER;cakg,csca:(0.3584/(10*cakg+1*csca+1))]==>akg",
+     "source+S[USER;csca,csuc:(1*(175*csca-0.007000000000000001*csuc)/(50*csca+0.2*csuc+1))]==>suc",
      ""
     ],
     [
      "#",
      "",
      "",
-     "ScAS term 1/2",
+     "ScAS (consumes sca)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "sca+S[USER;csca,csuc:(175/(50*csca+0.2*csuc+1))]==>suc",
+     "source+S[USER;csca,csuc:((-1*1*(175*csca-0.007000000000000001*csuc)/(50*csca+0.2*csuc+1)))]==>sca",
      ""
     ],
     [
      "#",
      "",
      "",
-     "ScAS term 2/2",
+     "SDH",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "suc+S[USER;csca,csuc:(0.007000000000000001/(50*csca+0.2*csuc+1))]==>sca",
+     "source+S[USER;cfa,csuc:(1*(-18.275*cfa+369*csuc)/(2.5*cfa+50*csuc+1))]==>fa",
      ""
     ],
     [
      "#",
      "",
      "",
-     "SDH term 1/2",
+     "SDH (consumes suc)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "suc+S[USER;cfa,csuc:(369/(2.5*cfa+50*csuc+1))]==>fa",
+     "source+S[USER;cfa,csuc:((-1*1*(-18.275*cfa+369*csuc)/(2.5*cfa+50*csuc+1)))]==>suc",
      ""
     ],
     [
      "#",
      "",
      "",
-     "SDH term 2/2",
+     "FUM",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "fa+S[USER;cfa,csuc:(18.275/(2.5*cfa+50*csuc+1))]==>suc",
+     "source+S[USER;cfa,cmal:(1*(297.6*cfa-930*cmal)/(6.666666666666667*cfa+25*cmal+1))]==>mal",
      ""
     ],
     [
      "#",
      "",
      "",
-     "FUM term 1/2",
+     "FUM (consumes fa)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "fa+S[USER;cfa,cmal:(297.6/(6.666666666666667*cfa+25*cmal+1))]==>mal",
+     "source+S[USER;cfa,cmal:((-1*1*(297.6*cfa-930*cmal)/(6.666666666666667*cfa+25*cmal+1)))]==>fa",
      ""
     ],
     [
      "#",
      "",
      "",
-     "FUM term 2/2",
+     "MDH (consumes mal)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "mal+S[USER;cfa,cmal:(930/(6.666666666666667*cfa+25*cmal+1))]==>fa",
+     "source+S[USER;cmal:((-1*1*(137.16923076923075*cmal-35.311)/(0.3846153846153846*cmal+1.1)))]==>mal",
      ""
     ],
     [
      "#",
      "",
      "",
-     "MDH term 1/2",
+     "ICL",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cmal:(35.311/(0.3846153846153846*cmal+1.1))]==>mal",
+     "source+S[USER;cgly,cicit,csuc:(1*(-0.24771838331160365*cgly*csuc+3.1456953642384105*cicit)/(13.03780964797914*cgly*csuc+7.692307692307692*cgly+2.8061510831743184*cicit*csuc+1.6556291390728477*cicit+1.6949152542372883*csuc+1))]==>gly+suc",
      ""
     ],
     [
      "#",
      "",
      "",
-     "MDH term 2/2",
+     "ICL (consumes icit)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "mal+S[USER;cmal:(137.16923076923075/(0.3846153846153846*cmal+1.1))]==>sink",
+     "source+S[USER;cgly,cicit,csuc:((-1*1*(-0.24771838331160365*cgly*csuc+3.1456953642384105*cicit)/(13.03780964797914*cgly*csuc+7.692307692307692*cgly+2.8061510831743184*cicit*csuc+1.6556291390728477*cicit+1.6949152542372883*csuc+1)))]==>icit",
      ""
     ],
     [
      "#",
      "",
      "",
-     "ICL term 1/2",
+     "MS",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "icit+S[USER;cgly,cicit,csuc:(3.1456953642384105/(13.03780964797914*cgly*csuc+7.692307692307692*cgly+1.6556291390728477*cicit+2.8061510831743184*csuc*(cicit+1e-30)+1.6949152542372883*csuc+1))]==>gly+suc",
+     "source+S[USER;cgly,cmal:(1*(47.5*cgly-1.9e-5*cmal)/(25.5005*cgly+51.001*cmal+51.001))]==>mal",
      ""
     ],
     [
      "#",
      "",
      "",
-     "ICL term 2/2",
+     "MS (consumes gly)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "gly+suc+S[USER;cgly,cicit,csuc:(0.24771838331160365/(7.692307692307692*cgly+2.8061510831743184*cicit*(csuc+1e-30)+1.6556291390728477*cicit+1.6949152542372883*csuc+13.03780964797914*(cgly+1e-30)*(csuc+1e-30)+1))]==>icit",
+     "source+S[USER;cgly,cmal:((-1*1*(47.5*cgly-1.9e-5*cmal)/(25.5005*cgly+51.001*cmal+51.001)))]==>gly",
      ""
     ],
     [
      "#",
      "",
      "",
-     "MS term 1/2",
+     "SYN (consumes akg)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "gly+S[USER;cgly,cmal:(47.5/(25.5005*cgly+51.001*cmal+51.001))]==>mal",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MS term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "mal+S[USER;cgly,cmal:(1.9e-5/(25.5005*cgly+51.001*cmal+51.001))]==>gly",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SYN term 1/2 (consumes akg)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cakg,cicit:((-1*345.92*cicit/(7.692307692307692*cakg+125*cicit+1)))]==>akg",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SYN term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "akg+S[USER;cakg,cicit:(0.21287384615384614/(7.692307692307692*cakg+125*cicit+1))]==>2akg",
+     "source+S[USER;cakg,cicit:((-1*0.188*(-1.1323076923076922*cakg+1840*cicit)/(7.692307692307692*cakg+125*cicit+1)))]==>akg",
      ""
     ],
     [
@@ -538,17 +496,6 @@
      "No",
      "1",
      "constant 1.0: nothing consumed [__source__]",
-     ""
-    ],
-    [
-     "sink",
-     "0",
-     "1",
-     "N",
-     "0",
-     "No",
-     "1",
-     "constant 1.0: nothing produced [__sink__]",
      ""
     ],
     [

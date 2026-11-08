@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T06:52:32.793852+00:00",
- "description": "Goldbeter2006_weightCycling\nBioModels BIOMD0000000079 (curated). SBML file: BIOMD0000000079_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000079_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.02e-06 of species peak (worst: P)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_2 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_4 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): P1 = P; R1 = R",
+ "created": "2026-11-07T20:22:08.994539+00:00",
+ "description": "Goldbeter2006_weightCycling\nBioModels BIOMD0000000079 (curated). SBML file: BIOMD0000000079_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000079_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.02e-06 of species peak (worst: P)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): P1 = P; R1 = R",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -77,28 +77,14 @@
      "#",
      "",
      "",
-     "reaction_2 term 1/2",
+     "reaction_2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cQ:(1/(1.01-1*cQ))]==>Q",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_2 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Q+S[USER;cQ:((-1*1/(1*cQ-1.01)))]==>sink",
+     "source+S[USER;cQ:(1*(1-1*cQ)/(1.01-1*cQ))]==>Q",
      ""
     ],
     [
@@ -119,28 +105,14 @@
      "#",
      "",
      "",
-     "reaction_4 term 1/2",
+     "reaction_4",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "P1+S[USER;cR1:(6/(1.01-1*cR1))]==>R1+P1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_4 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "R1+P1+S[USER;cR1:((-1*6/(1*cR1-1.01)))]==>P1",
+     "P1+S[USER;cR1:(6*(1-1*cR1)/(1.01-1*cR1))]==>R1+P1",
      ""
     ],
     [

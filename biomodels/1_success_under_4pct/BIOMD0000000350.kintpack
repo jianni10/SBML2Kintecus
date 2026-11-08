@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:47:37.114050+00:00",
- "description": "Troein2011_ClockCircuit_OstreococcusTauri\nBioModels BIOMD0000000350 (curated). SBML file: BIOMD0000000350_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000350_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.58e-06 of species peak (worst: cca1_c)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_6 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - toc1_2: zero order, signed\n  [info] reaction_21 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - toc1luc_2: zero order, signed",
+ "created": "2026-11-07T20:57:04.270223+00:00",
+ "description": "Troein2011_ClockCircuit_OstreococcusTauri\nBioModels BIOMD0000000350 (curated). SBML file: BIOMD0000000350_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000350_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.58e-06 of species peak (worst: cca1_c)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -147,42 +147,14 @@
      "#",
      "",
      "",
-     "reaction_6 term 1/2",
-     ""
-    ],
-    [
-     "0.326619492089715",
-     "0",
-     "0",
-     "toc1_1==>toc1_2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_6 term 2/2",
+     "reaction_6",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,ctoc1_1:(0.19012890872106702*ctoc1_1*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>toc1_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_6 term 2/2 (consumes toc1_2)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ctoc1_1:((-1*0.19012890872106702*ctoc1_1*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_)))))]==>toc1_2",
+     "toc1_1+S[USER;cTIME_:(0.326619492089715-0.19012890872106702*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>toc1_2",
      ""
     ],
     [
@@ -385,42 +357,14 @@
      "#",
      "",
      "",
-     "reaction_21 term 1/2",
-     ""
-    ],
-    [
-     "0.326619492089715",
-     "0",
-     "0",
-     "toc1luc_1==>toc1luc_2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_21 term 2/2",
+     "reaction_21",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,ctoc1luc_1:(0.19012890872106702*ctoc1luc_1*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>toc1luc_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_21 term 2/2 (consumes toc1luc_2)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ctoc1luc_1:((-1*0.19012890872106702*ctoc1luc_1*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_)))))]==>toc1luc_2",
+     "toc1luc_1+S[USER;cTIME_:(0.326619492089715-0.19012890872106702*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>toc1luc_2",
      ""
     ],
     [

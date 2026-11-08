@@ -1,10 +1,10 @@
 {
  "version": 3,
- "created": "2026-10-31T06:50:45.698221+00:00",
- "description": "Zhang2007 - Mechanism of DNA damage response (Model3)\nBioModels BIOMD0000001010 (curated). SBML file: Zhang2007_M3_low_DD.xml.\nSimulation: 0 to 200 time units (SED-ML: Zhang2007_M3_high_DD.sedml), sampling 0.2.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.99e-02 of species peak (worst: MDM2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'DNAdamage' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] p53_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T22:32:12.149616+00:00",
+ "description": "Zhang2007 - Mechanism of DNA damage response (Model3)\nBioModels BIOMD0000001010 (curated). SBML file: Zhang2007_M3_low_DD.xml.\nSimulation: 0 to 200 time units (SED-ML: Zhang2007_M3_high_DD.sedml), sampling 0.0023332866675999813.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.00e-05 of species peak (worst: MDM2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'DNAdamage' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] p53_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] 3 condition(s) on time alone written as switch species with time/value pairs (3 changes)",
  "settings": {
   "kpath": "",
-  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
   "nation": false
  },
  "grids": {
@@ -91,392 +91,14 @@
      "#",
      "",
      "",
-     "MDM2_degradation term 1/28",
-     ""
-    ],
-    [
-     "1.431000375",
-     "0",
-     "0",
-     "MDM2==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 2/28",
+     "MDM2_degradation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "MDM2+S[USER;cTIME_:(155.001875/(2*abs(cTIME_-50)^2+4e-300*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 3/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.010983122858750001/(2*abs(0.0021429*cTIME_-0.17714500000000002)+2e-300))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 4/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(54.915614293750004/(4*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)^2+8e-300*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)+0*abs(0.0021429*cTIME_-0.17714500000000002)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 5/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.0003750075*cTIME_)]==>2MDM2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 6/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.5491561429375/(2*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)+2e-300*abs(0.0021429*cTIME_-0.17714500000000002)+2e-300*abs(cTIME_-50)+0))]==>2MDM2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 7/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(1.098312285875/(4*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)+4e-300*abs(0.0021429*cTIME_-0.17714500000000002)+4e-300*abs(cTIME_-50)+0))]==>2MDM2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 8/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(1.55001875/(abs(cTIME_-50)+1e-300))]==>2MDM2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 9/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(3.1000375/(2*abs(cTIME_-50)+2e-300))]==>2MDM2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 10/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.024269263576250002*cTIME_/(2*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)+2e-300*abs(0.0021429*cTIME_-0.17714500000000002)+2e-300*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 11/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.048538527152500004*cTIME_/(4*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)+4e-300*abs(0.0021429*cTIME_-0.17714500000000002)+4e-300*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 12/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.08314684430500001*cTIME_^2/(4*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)^2+8e-300*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)+0*abs(0.0021429*cTIME_-0.17714500000000002)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 13/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.13700225*cTIME_^2/(2*abs(cTIME_-50)^2+4e-300*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 14/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.049750749999999996*cTIME_/(abs(cTIME_-50)+1e-300))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 15/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.09950149999999999*cTIME_/(2*abs(cTIME_-50)+2e-300))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 16/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(1.6072071435e-6*cTIME_^2/(2*abs(0.0021429*cTIME_-0.17714500000000002)+2e-300))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 17/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(1.6072071435e-6*cTIME_^3/(2*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)+2e-300*abs(0.0021429*cTIME_-0.17714500000000002)+2e-300*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 18/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(3.214414287e-6*cTIME_^3/(4*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)+4e-300*abs(0.0021429*cTIME_-0.17714500000000002)+4e-300*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 19/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(3.214414287e-6*cTIME_^4/(4*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)^2+8e-300*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)+0*abs(0.0021429*cTIME_-0.17714500000000002)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 20/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.0003750075*cTIME_^2/(abs(cTIME_-50)+1e-300))]==>2MDM2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 21/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.000750015*cTIME_^2/(2*abs(cTIME_-50)+2e-300))]==>2MDM2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 22/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.000750015*cTIME_^3/(2*abs(cTIME_-50)^2+4e-300*abs(cTIME_-50)+0))]==>2MDM2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 23/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.000346083171525*cTIME_^2/(2*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)+2e-300*abs(0.0021429*cTIME_-0.17714500000000002)+2e-300*abs(cTIME_-50)+0))]==>2MDM2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 24/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.00069216634305*cTIME_^2/(4*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)+4e-300*abs(0.0021429*cTIME_-0.17714500000000002)+4e-300*abs(cTIME_-50)+0))]==>2MDM2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 25/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.00026572281435*cTIME_/(2*abs(0.0021429*cTIME_-0.17714500000000002)+2e-300))]==>2MDM2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 26/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(3.5252386435000003*cTIME_/(4*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)^2+8e-300*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)+0*abs(0.0021429*cTIME_-0.17714500000000002)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>2MDM2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 27/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(8.0751125*cTIME_/(2*abs(cTIME_-50)^2+4e-300*abs(cTIME_-50)+0))]==>2MDM2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2_degradation term 28/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2+S[USER;cTIME_:(0.0008528870574*cTIME_^3/(4*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)^2+8e-300*abs(0.0021429*cTIME_-0.17714500000000002)*abs(cTIME_-50)+0*abs(0.0021429*cTIME_-0.17714500000000002)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>2MDM2",
+     "MDM2+S[USER;cSW1,cSW2,cSW3,cTIME_:(1.4*cSW1*(0.17714500000000002-0.0021429*cTIME_)*(1-cSW2)*(1-cSW3)+1.4)]==>sink",
      ""
     ],
     [
@@ -635,6 +257,39 @@
      ""
     ],
     [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time condition: 1 change(s), first at 50 [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time condition: 1 change(s), first at 50 [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW3.TXT-SET",
+     "time condition: 1 change(s), first at 82.6660133464 [__switch__]",
+     ""
+    ],
+    [
      "END",
      "",
      "",
@@ -675,7 +330,7 @@
     ],
     [
      "1e-6",
-     "0.2",
+     "0.00233328667",
      "KCAL",
      "MOLES/LITER",
      "0",
@@ -723,9 +378,9 @@
     ],
     [
      "None1",
-     "0.2",
+     "0.00233328667",
      "0",
-     "1e-10",
+     "1e-8",
      "0",
      ""
     ],
@@ -771,5 +426,72 @@
    "rows": []
   }
  },
- "ofiles": []
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "50",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "50",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW3.TXT",
+   "key": "O_SW3.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "82.6660133464",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
 }

@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-02T03:45:30.519547+00:00",
+ "created": "2026-11-07T21:10:14.313089+00:00",
  "description": "Chay1997_CalciumConcentration\nBioModels BIOMD0000000378 (curated). SBML file: BIOMD0000000378_url.xml.\nSimulation: 0 to 64 time units (SED-ML: 378.sedml), sampling 0.064.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.75e-06 of species peak (worst: Ca_lum)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V_membrane' goes below zero in the SBML: integrated as V_membrane_o = value + 200, output as V_membrane = OUTC[V_membrane_o;-200*source]\n  [info] rate rule dCa_i_cytosolic_calcium/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - Ca_i_cytosolic_calcium: zero order, signed",
  "settings": {
   "kpath": "",
@@ -98,7 +98,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cCa_lum,cV_membrane_o:((-1*250000/(1*cCa_lum^2-0.13533528323661267*cCa_lum^2*exp((-1*0.1*(cV_membrane_o-200)))+2500-338.33820809153167*exp((-1*0.1*(cV_membrane_o-200))))))]==>V_membrane_o",
+     "source+S[USER;cCa_lum,cV_membrane_o:((-1*250000/(-cCa_lum^2*exp(-0.1*(cV_membrane_o-200)-2)+1*cCa_lum^2-2500*exp(-0.1*(cV_membrane_o-200)-2)+2500)))]==>V_membrane_o",
      ""
     ],
     [
@@ -112,7 +112,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_membrane_o:((-1*2.3*(cV_membrane_o-200)))]==>V_membrane_o",
+     "source+S[USER;cCa_lum,cV_membrane_o:((-1*12500*(cV_membrane_o-200)/(-cCa_lum^2*exp(-0.1*(cV_membrane_o-200)-2)+1*cCa_lum^2-2500*exp(-0.1*(cV_membrane_o-200)-2)+2500)))]==>V_membrane_o",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_membrane_o,ch:(48000*ch*(1/(1+0.06217652402211631*exp((-1*0.1111111111111111*(cV_membrane_o-200)))))^3)]==>V_membrane_o",
+     "source+S[USER;cV_membrane_o:((-1*2.3*(cV_membrane_o-200)))]==>V_membrane_o",
      ""
     ],
     [
@@ -140,7 +140,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_membrane_o,cn:((-1*600*cn^4*(cV_membrane_o-200)))]==>V_membrane_o",
+     "source+S[USER;cV_membrane_o,ch:(ch*(48000-600*(cV_membrane_o-200))*(1/(exp((-1*(0.1111111111111111*(cV_membrane_o-200)+2.7777777777777777)))+1))^3)]==>V_membrane_o",
      ""
     ],
     [
@@ -154,7 +154,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cCa_i_cytosolic_calcium:((-1*375*cCa_i_cytosolic_calcium^3/(cCa_i_cytosolic_calcium^3+1)))]==>V_membrane_o",
+     "source+S[USER;cV_membrane_o,cn:((-1*600*cn^4*(cV_membrane_o-200)))]==>V_membrane_o",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cCa_lum,cV_membrane_o:((-1*12500*(cV_membrane_o-200)/(1*cCa_lum^2-0.13533528323661267*cCa_lum^2*exp((-1*0.1*(cV_membrane_o-200)))+2500-338.33820809153167*exp((-1*0.1*(cV_membrane_o-200))))))]==>V_membrane_o",
+     "source+S[USER;cCa_i_cytosolic_calcium:((-1*375*cCa_i_cytosolic_calcium^3/(cCa_i_cytosolic_calcium^3+1)))]==>V_membrane_o",
      ""
     ],
     [
@@ -196,20 +196,6 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_membrane_o,ch:((-1*600*ch*(1/(1+0.06217652402211631*exp((-1*0.1111111111111111*(cV_membrane_o-200)))))^3*(cV_membrane_o-200)))]==>V_membrane_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dV_membrane/dt term 12 (shifted V_membrane_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
      "source+S[USER;cV_membrane_o,cd:((-1*187.1794175390131*cd*(cV_membrane_o-200)/(1-exp(0.07487176701560523*(cV_membrane_o-200)))))]==>V_membrane_o",
      ""
     ],
@@ -217,7 +203,7 @@
      "#",
      "",
      "",
-     "rate rule dV_membrane/dt term 13 (shifted V_membrane_o)",
+     "rate rule dV_membrane/dt term 12 (shifted V_membrane_o)",
      ""
     ],
     [
@@ -238,7 +224,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_membrane_o:(0.40541551118494396/(1*exp(0.07142857142857142*(cV_membrane_o-200))+950.6470491748704*exp(0.21428571428571427*(cV_membrane_o-200))))]==>h",
+     "source+S[USER;cV_membrane_o:(12.5*exp(0.07142857142857142*(cV_membrane_o-200)+3.4285714285714284)/(exp(0.14285714285714285*(cV_membrane_o-200)+6.857142857142857)+1))]==>h",
      ""
     ],
     [
@@ -252,7 +238,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_membrane_o:(385.4070593976886*exp(0.07142857142857142*(cV_membrane_o-200))/(950.6470491748704*exp(0.14285714285714285*(cV_membrane_o-200))+1))]==>h",
+     "source+S[USER;cV_membrane_o:(12.5*exp(-0.07142857142857142*(cV_membrane_o-200)-3.4285714285714284)/(exp(0.14285714285714285*(cV_membrane_o-200)+6.857142857142857)+1))]==>h",
      ""
     ],
     [
@@ -266,7 +252,7 @@
      "1",
      "0",
      "0",
-     "h+S[USER;cV_membrane_o:(385.4070593976886*exp(0.07142857142857142*(cV_membrane_o-200)))]==>sink",
+     "h+S[USER;cV_membrane_o:(12.5*exp(0.07142857142857142*(cV_membrane_o-200)+3.4285714285714284))]==>sink",
      ""
     ],
     [
@@ -280,7 +266,7 @@
      "1",
      "0",
      "0",
-     "h+S[USER;cV_membrane_o:(0.40541551118494396*exp((-1*0.07142857142857142*(cV_membrane_o-200))))]==>sink",
+     "h+S[USER;cV_membrane_o:(12.5*exp(-0.07142857142857142*(cV_membrane_o-200)-3.4285714285714284))]==>sink",
      ""
     ],
     [
@@ -294,7 +280,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_membrane_o:(0.9196986029286058/(1*exp(0.1*(cV_membrane_o-200))+0.1353352832366127*exp((-1*0.1*(cV_membrane_o-200)))))]==>d",
+     "source+S[USER;cV_membrane_o:(2.5*exp(0.1*(cV_membrane_o-200)+1)/(exp(-0.2*(cV_membrane_o-200)-2)+1))]==>d",
      ""
     ],
     [
@@ -308,7 +294,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_membrane_o:(6.795704571147613*exp(0.1*(cV_membrane_o-200))/(1+0.1353352832366127*exp((-1*0.2*(cV_membrane_o-200)))))]==>d",
+     "source+S[USER;cV_membrane_o:(2.5*exp(-0.1*(cV_membrane_o-200)-1)/(exp(-0.2*(cV_membrane_o-200)-2)+1))]==>d",
      ""
     ],
     [
@@ -322,7 +308,7 @@
      "1",
      "0",
      "0",
-     "d+S[USER;cV_membrane_o:(6.795704571147613*exp(0.1*(cV_membrane_o-200)))]==>sink",
+     "d+S[USER;cV_membrane_o:(2.5*exp(0.1*(cV_membrane_o-200)+1))]==>sink",
      ""
     ],
     [
@@ -336,7 +322,7 @@
      "1",
      "0",
      "0",
-     "d+S[USER;cV_membrane_o:(0.9196986029286058*exp((-1*0.1*(cV_membrane_o-200))))]==>sink",
+     "d+S[USER;cV_membrane_o:(2.5*exp(-0.1*(cV_membrane_o-200)-1))]==>sink",
      ""
     ],
     [
@@ -350,7 +336,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_membrane_o:(6.572350305322247/(1*exp(0.03571428571428571*(cV_membrane_o-200))+0.2764530466295644*exp((-1*0.03571428571428571*(cV_membrane_o-200)))))]==>n",
+     "source+S[USER;cV_membrane_o:(12.5*exp(0.03571428571428571*(cV_membrane_o-200)+0.6428571428571429)/(exp(-0.07142857142857142*(cV_membrane_o-200)-1.2857142857142858)+1))]==>n",
      ""
     ],
     [
@@ -364,7 +350,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_membrane_o:(23.773839302733112*exp(0.03571428571428571*(cV_membrane_o-200))/(1+0.2764530466295644*exp((-1*0.07142857142857142*(cV_membrane_o-200)))))]==>n",
+     "source+S[USER;cV_membrane_o:(12.5*exp(-0.03571428571428571*(cV_membrane_o-200)-0.6428571428571429)/(exp(-0.07142857142857142*(cV_membrane_o-200)-1.2857142857142858)+1))]==>n",
      ""
     ],
     [
@@ -378,7 +364,7 @@
      "1",
      "0",
      "0",
-     "n+S[USER;cV_membrane_o:(23.773839302733112*exp(0.03571428571428571*(cV_membrane_o-200)))]==>sink",
+     "n+S[USER;cV_membrane_o:(12.5*exp(0.03571428571428571*(cV_membrane_o-200)+0.6428571428571429))]==>sink",
      ""
     ],
     [
@@ -392,7 +378,7 @@
      "1",
      "0",
      "0",
-     "n+S[USER;cV_membrane_o:(6.572350305322247*exp((-1*0.03571428571428571*(cV_membrane_o-200))))]==>sink",
+     "n+S[USER;cV_membrane_o:(12.5*exp(-0.03571428571428571*(cV_membrane_o-200)-0.6428571428571429))]==>sink",
      ""
     ],
     [

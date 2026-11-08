@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:09:03.991137+00:00",
+ "created": "2026-11-07T22:20:33.711211+00:00",
  "description": "dePillis2009 - Mathematical model creation for cancer chemo-immunotherapy\nBioModels BIOMD0000000779 (curated). SBML file: dePillis2009.xml.\nSimulation: 0 to 200 time units (SED-ML: dePillis2009.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.26e-06 of species peak (worst: I_IL_2)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Logistic_Tumour_Growth term 1/2",
+     "Logistic_Tumour_Growth",
      ""
     ],
     [
-     "0.431",
+     "1",
      "0",
      "0",
-     "T_Tumour_Cells==>2T_Tumour_Cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Logistic_Tumour_Growth term 2/2",
-     ""
-    ],
-    [
-     "4.3962e-10",
-     "0",
-     "0",
-     "T_Tumour_Cells+T_Tumour_Cells==>T_Tumour_Cells",
+     "T_Tumour_Cells+S[USER;cT_Tumour_Cells:(0.431-4.3962e-10*cT_Tumour_Cells)]==>2T_Tumour_Cells",
      ""
     ],
     [

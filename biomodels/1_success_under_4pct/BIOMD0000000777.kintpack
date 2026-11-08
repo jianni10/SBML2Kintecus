@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:08:57.378159+00:00",
+ "created": "2026-11-07T22:20:27.718410+00:00",
  "description": "Chakrabarty2010 - A control theory approach to cancer remission aided by an optimal therapy\nBioModels BIOMD0000000777 (curated). SBML file: Chakrabarty2010.xml.\nSimulation: 0 to 60 time units (SED-ML: Chakrabarty2010.sedml), sampling 0.6.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.50e-06 of species peak (worst: N_CTL)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Tumor_Growth term 1/2",
+     "Tumor_Growth",
      ""
     ],
     [
-     "0.18",
+     "1",
      "0",
      "0",
-     "M_Tumor_Cells==>2M_Tumor_Cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Growth term 2/2",
-     ""
-    ],
-    [
-     "3.6e-8",
-     "0",
-     "0",
-     "M_Tumor_Cells+M_Tumor_Cells==>M_Tumor_Cells",
+     "M_Tumor_Cells+S[USER;cM_Tumor_Cells:(0.18-3.6e-8*cM_Tumor_Cells)]==>2M_Tumor_Cells",
      ""
     ],
     [
@@ -119,28 +105,14 @@
      "#",
      "",
      "",
-     "THL_Growth term 1/2",
+     "THL_Growth",
      ""
     ],
     [
-     "0.0245",
+     "1",
      "0",
      "0",
-     "Z_THL==>2Z_THL",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "THL_Growth term 2/2",
-     ""
-    ],
-    [
-     "2.45e-9",
-     "0",
-     "0",
-     "Z_THL+Z_THL==>Z_THL",
+     "Z_THL+S[USER;cZ_THL:(0.0245-2.45e-9*cZ_THL)]==>2Z_THL",
      ""
     ],
     [

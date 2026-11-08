@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:15:42.645780+00:00",
+ "created": "2026-11-07T22:32:21.283560+00:00",
  "description": "Alharbi2020 - An ODE-based model of the dynamics of tumor cell progression and its effects on normal cell growth and immune system functionality\nBioModels BIOMD0000001023 (curated). SBML file: Alharbi2020.xml.\nSimulation: 0 to 30 time units (SED-ML: Alharbi2020 - Fig 5.sedml), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.09e-06 of species peak (worst: Immune_cells)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Normal_cell_growth term 1/2",
+     "Normal_cell_growth",
      ""
     ],
     [
-     "0.4312",
+     "1",
      "0",
      "0",
-     "Normal_cells==>2Normal_cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Normal_cell_growth term 2/2",
-     ""
-    ],
-    [
-     "1.2892880000000002e-6",
-     "0",
-     "0",
-     "Normal_cells+Normal_cells==>Normal_cells",
+     "Normal_cells+S[USER;cNormal_cells:(0.4312-1.2892880000000002e-6*cNormal_cells)]==>2Normal_cells",
      ""
     ],
     [
@@ -105,35 +91,21 @@
      "#",
      "",
      "",
-     "Tumor_cell_growth term 1/3",
+     "Tumor_cell_growth term 1/2",
      ""
     ],
     [
-     "0.4426",
+     "1",
      "0",
      "0",
-     "Tumor_cells==>2Tumor_cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_cell_growth term 2/3",
-     ""
-    ],
-    [
-     "0.17704",
-     "0",
-     "0",
-     "Tumor_cells+Tumor_cells==>Tumor_cells",
+     "Tumor_cells+S[USER;cTumor_cells:(0.4426-0.17704*cTumor_cells)]==>2Tumor_cells",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Tumor_cell_growth term 3/3",
+     "Tumor_cell_growth term 2/2",
      ""
     ],
     [

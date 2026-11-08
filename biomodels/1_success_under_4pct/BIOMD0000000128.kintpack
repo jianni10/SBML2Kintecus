@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T15:40:32.128317+00:00",
- "description": "Bertram2006_Endothelin\nBioModels BIOMD0000000128 (curated). SBML file: BIOMD0000000128_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000128_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating; extended past the last time event (60000)), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.79e-06 of species peak (worst: n)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V' goes below zero in the SBML: integrated as p_V_o = value + 200, output as p_V = OUTC[p_V_o;-200*source]\n  [info] reaction_0000001 term 4/6: rate order differs from the stoichiometry; consumed on separate line(s) - c: zero order, signed\n  [info] reaction_0000001 term 6/6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_0000001 term 6/6: USER expression is 1694 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] time event(s) on 'IP3' encoded as time/value pairs in EV_Q1.TXT (SET)\n  [info] time event(s) on 'girk' encoded as time/value pairs in EV_P_GIRK.TXT (SET)\n  [info] time event(s) on 'ETswitch' encoded as time/value pairs in EV_P_ETSWITCH.TXT (SET)\n  [info] 1 species/parameters given short names (Q1...) so USER expressions fit Kintecus's expression length limit; original ids are in the SPECIES comments column\nRenamed species (Kintecus name = SBML id): p_girk = girk; Q1 = IP3; p_ETswitch = ETswitch; p_h = h; p_inh = inh; p_n = n; p_V = V",
+ "created": "2026-11-07T20:27:07.019000+00:00",
+ "description": "Bertram2006_Endothelin\nBioModels BIOMD0000000128 (curated). SBML file: BIOMD0000000128_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000128_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating; extended past the last time event (60000)), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.73e-06 of species peak (worst: n)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V' goes below zero in the SBML: integrated as p_V_o = value + 200, output as p_V = OUTC[p_V_o;-200*source]\n  [info] reaction_0000001 term 5/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_0000001 term 5/5: USER expression is 1694 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] time event(s) on 'IP3' encoded as time/value pairs in EV_Q1.TXT (SET)\n  [info] time event(s) on 'girk' encoded as time/value pairs in EV_P_GIRK.TXT (SET)\n  [info] time event(s) on 'ETswitch' encoded as time/value pairs in EV_P_ETSWITCH.TXT (SET)\n  [info] 1 species/parameters given short names (Q1...) so USER expressions fit Kintecus's expression length limit; original ids are in the SPECIES comments column\nRenamed species (Kintecus name = SBML id): p_girk = girk; Q1 = IP3; p_ETswitch = ETswitch; p_h = h; p_inh = inh; p_n = n; p_V = V",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,7 +49,7 @@
      "#",
      "",
      "",
-     "reaction_0000001 term 1/6",
+     "reaction_0000001 term 1/5",
      ""
     ],
     [
@@ -63,21 +63,21 @@
      "#",
      "",
      "",
-     "reaction_0000001 term 2/6",
+     "reaction_0000001 term 2/5",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(0.0022500000000000003/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200)))))]==>c",
+     "source+S[USER;cp_V_o:(1*(0.0022500000000000003-9e-5*(cp_V_o-200))/(exp((-1*(0.08333333333333333*(cp_V_o-200)+1.6666666666666667)))+1))]==>c",
      ""
     ],
     [
      "#",
      "",
      "",
-     "reaction_0000001 term 3/6",
+     "reaction_0000001 term 3/5",
      ""
     ],
     [
@@ -91,21 +91,7 @@
      "#",
      "",
      "",
-     "reaction_0000001 term 4/6 (consumes c)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cp_V_o:((-1*9e-5*(cp_V_o-200)/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200))))))]==>c",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_0000001 term 5/6",
+     "reaction_0000001 term 4/5",
      ""
     ],
     [
@@ -119,7 +105,7 @@
      "#",
      "",
      "",
-     "reaction_0000001 term 6/6",
+     "reaction_0000001 term 5/5",
      ""
     ],
     [
@@ -224,7 +210,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(0.05/(1+0.751477293075286*exp((-1*0.014285714285714285*(cp_V_o-200)))))]==>p_h",
+     "source+S[USER;cp_V_o:(0.05/(exp(-0.014285714285714285*(cp_V_o-200)-0.2857142857142857)+1))]==>p_h",
      ""
     ],
     [
@@ -280,7 +266,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(9.433962264150944/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200)))))]==>p_V_o",
+     "source+S[USER;cp_V_o:((9.433962264150944-0.37735849056603776*(cp_V_o-200))/(exp((-1*(0.08333333333333333*(cp_V_o-200)+1.6666666666666667)))+1))]==>p_V_o",
      ""
     ],
     [
@@ -336,20 +322,6 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:((-1*0.37735849056603776*(cp_V_o-200)/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200))))))]==>p_V_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dV/dt term 6 (shifted p_V_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
      "source+S[USER;cp_V_o,cp_girk,cp_h:((-1*0.00018867924528301886*cp_girk*cp_h*(cp_V_o-200)))]==>p_V_o",
      ""
     ],
@@ -364,7 +336,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(0.0625/(1+0.04076220397836622*exp((-1*0.2*(cp_V_o-200)))))]==>p_n",
+     "source+S[USER;cp_V_o:(0.0625/(exp(-0.2*(cp_V_o-200)-3.2)+1))]==>p_n",
      ""
     ],
     [

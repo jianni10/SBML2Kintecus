@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:45:41.769724+00:00",
- "description": "Komarova2005_PTHaction_OsteoclastOsteoblastCoupling\nBioModels BIOMD0000000279 (curated). SBML file: BIOMD0000000279_url.xml.\nSimulation: 0 to 150 time units (SED-ML: figA_blue.sedml), sampling 0.15.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.52e-07 of species peak (worst: x1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dz/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed\n  [info] rate rule dz/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed\n  [info] rate rule dz/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed\n  [info] rate rule dz/dt term 8: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed\n  [info] rate rule dz/dt term 9: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed",
+ "created": "2026-11-07T20:49:22.085387+00:00",
+ "description": "Komarova2005_PTHaction_OsteoclastOsteoblastCoupling\nBioModels BIOMD0000000279 (curated). SBML file: BIOMD0000000279_url.xml.\nSimulation: 0 to 150 time units (SED-ML: figA_blue.sedml), sampling 0.15.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.52e-07 of species peak (worst: x1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dz/dt term 2: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -105,126 +105,28 @@
      "#",
      "",
      "",
-     "rate rule dz/dt term 1 (consumes z)",
-     ""
-    ],
-    [
-     "-0.05303300858899105",
-     "0",
-     "0",
-     "source==>z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 2",
-     ""
-    ],
-    [
-     "0.00085",
-     "0",
-     "0",
-     "x2==>z+x2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 3",
+     "rate rule dz/dt term 1",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cx2:(76.49999999999999/(2*abs(cx2-212.13203435596424)+2e-300))]==>z",
+     "source+S[USER;cx2:(0.0017*(cx2/2+abs(cx2-212.13203435596424)/2-106.06601717798212))]==>z",
      ""
     ],
     [
      "#",
      "",
      "",
-     "rate rule dz/dt term 4 (consumes z)",
+     "rate rule dz/dt term 2 (consumes z)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cx1:((-1*0.12*cx1))]==>z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 5 (consumes z)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cx1:((-1*0.26999999999999996/(2*abs(cx1-1.0606601717798212)+2e-300)))]==>z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "x2+x2+S[USER;cx2:(0.0017/(2*abs(cx2-212.13203435596424)+2e-300))]==>z+2x2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "x1+S[USER;cx1:(0.5091168824543142/(2*abs(cx1-1.0606601717798212)+2e-300))]==>z+x1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 8 (consumes z)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cx1:((-1*0.24*cx1^2/(2*abs(cx1-1.0606601717798212)+2e-300)))]==>z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 9 (consumes z)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cx2:((-1*0.7212489168102784*cx2/(2*abs(cx2-212.13203435596424)+2e-300)))]==>z",
+     "source+S[USER;cx1:((-1*0.24*(cx1/2+abs(cx1-1.0606601717798212)/2-0.5303300858899106)))]==>z",
      ""
     ],
     [

@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:08:04.110012+00:00",
+ "created": "2026-11-07T22:19:32.645712+00:00",
  "description": "Lolas2016 - tumour-induced neoneurogenesis and perineural tumour growth\nBioModels BIOMD0000000750 (curated). SBML file: Lolas2016.xml.\nSimulation: 0 to 15 time units (SED-ML: Lolas2016.sedml), sampling 0.15.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.17e-06 of species peak (worst: S)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): S1 = S; P1 = P",
  "settings": {
   "kpath": "",
@@ -49,140 +49,56 @@
      "#",
      "",
      "",
-     "tumor_growth_NGF__logistic term 1/10",
-     ""
-    ],
-    [
-     "4.2508374999999996e-8",
-     "0",
-     "0",
-     "Tp+Tp==>3Tp",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth_NGF__logistic term 2/10",
-     ""
-    ],
-    [
-     "0.00042087499999999997",
-     "0",
-     "0",
-     "Tp==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth_NGF__logistic term 3/10",
-     ""
-    ],
-    [
-     "4.2087499999999996e-14",
-     "0",
-     "0",
-     "Tp+Tp+Tp==>2Tp",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth_NGF__logistic term 4/10",
-     ""
-    ],
-    [
-     "4.20875e-8",
-     "0",
-     "0",
-     "Nn+Tp+Tp==>3Tp+Nn",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth_NGF__logistic term 5/10",
+     "tumor_growth_NGF__logistic term 1/4",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Tp+Nn+S[USER;cTp:(4.2087499999999996e-14*cTp^2)]==>Nn",
+     "Tp+S[USER;cTp:(-4.2087499999999996e-14*cTp^2+4.2508374999999996e-8*cTp-0.00042087499999999997)]==>2Tp",
      ""
     ],
     [
      "#",
      "",
      "",
-     "tumor_growth_NGF__logistic term 6/10",
+     "tumor_growth_NGF__logistic term 2/4",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "G+Tp+Tp+S[USER;cG:(8.8375e-5/(2.39*cG+134.27))]==>3Tp+G",
+     "Nn+Tp+Tp+S[USER;cTp:(4.20875e-8-4.2087499999999996e-14*cTp)]==>3Tp+Nn",
      ""
     ],
     [
      "#",
      "",
      "",
-     "tumor_growth_NGF__logistic term 7/10",
+     "tumor_growth_NGF__logistic term 3/4",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Tp+G+S[USER;cG:(0.875/(2.39*cG+134.27))]==>G",
+     "G+Tp+S[USER;cG,cTp:(1*(-8.75e-11*cTp^2+8.8375e-5*cTp-0.875)/(2.39*cG+134.27))]==>2Tp+G",
      ""
     ],
     [
      "#",
      "",
      "",
-     "tumor_growth_NGF__logistic term 8/10",
+     "tumor_growth_NGF__logistic term 4/4",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Tp+G+S[USER;cG,cTp:(8.75e-11*cTp^2/(2.39*cG+134.27))]==>G",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth_NGF__logistic term 9/10",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "G+Nn+S[USER;cG,cTp:(8.75e-5*cTp^2/(2.39*cG+134.27))]==>Tp+G+Nn",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth_NGF__logistic term 10/10",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Tp+G+Nn+S[USER;cG,cTp:(8.75e-11*cTp^2/(2.39*cG+134.27))]==>G+Nn",
+     "G+Nn+S[USER;cG,cTp:(1*cTp^2*(8.75e-5-8.75e-11*cTp)/(2.39*cG+134.27))]==>Tp+G+Nn",
      ""
     ],
     [
@@ -427,28 +343,14 @@
      "#",
      "",
      "",
-     "sympathetic_neuron_growth term 1/2",
+     "sympathetic_neuron_growth",
      ""
     ],
     [
-     "0.06",
+     "1",
      "0",
      "0",
-     "S1==>2S1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "sympathetic_neuron_growth term 2/2",
-     ""
-    ],
-    [
-     "0.23076923076923075",
-     "0",
-     "0",
-     "S1+S1==>S1",
+     "S1+S[USER;cS1:(0.06-0.23076923076923075*cS1)]==>2S1",
      ""
     ],
     [
@@ -483,28 +385,14 @@
      "#",
      "",
      "",
-     "parasym_neuron_growth term 1/2",
+     "parasym_neuron_growth",
      ""
     ],
     [
-     "7",
+     "1",
      "0",
      "0",
-     "P1==>2P1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "parasym_neuron_growth term 2/2",
-     ""
-    ],
-    [
-     "233.33333333333334",
-     "0",
-     "0",
-     "P1+P1==>P1",
+     "P1+S[USER;cP1:(7-233.33333333333334*cP1)]==>2P1",
      ""
     ],
     [

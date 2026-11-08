@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:46:59.769872+00:00",
- "description": "Proctor2011_ProteinHomeostasis_NormalCondition\nBioModels BIOMD0000000344 (curated). SBML file: BIOMD0000000344_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000344_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS_PARTIAL, max |difference| = 4.95e-06 of species peak (worst: Mkp1_P)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'DeathOfCell' not converted (state-triggered (not a time >= t0 trigger))\n  [info] dimerisation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Hsf1_Hsf1: zero order, signed\n  [info] Hsf1_Hsf1_Hsf1Phosphorylation: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] Aggregation1 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - AggP: zero order, signed\n  [info] Hsp70DamAggregation1 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - AggP: zero order, signed\n  [info] Hsp90DamAggregation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - AggP: zero order, signed\nRenamed species (Kintecus name = SBML id): Source1 = Source; Sink1 = Sink",
+ "created": "2026-11-07T20:56:43.383500+00:00",
+ "description": "Proctor2011_ProteinHomeostasis_NormalCondition\nBioModels BIOMD0000000344 (curated). SBML file: BIOMD0000000344_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000344_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS_PARTIAL, max |difference| = 4.95e-06 of species peak (worst: Mkp1_P)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] events not unrolled as time events (trigger uses 'CellDeath', which changes continuously)\n  [blocker] event 'DeathOfCell' not converted (state-triggered (not a time >= t0 trigger))\n  [info] dimerisation: rate order differs from the stoichiometry; consumed on separate line(s) - Hsf1: first order\n  [info] Hsf1_Hsf1_Hsf1Phosphorylation: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] Aggregation1: rate order differs from the stoichiometry; consumed on separate line(s) - MisP: first order\n  [info] Hsp70DamAggregation1: rate order differs from the stoichiometry; consumed on separate line(s) - Hsp70_dam: first order\n  [info] Hsp90DamAggregation: rate order differs from the stoichiometry; consumed on separate line(s) - Hsp90_dam: first order\nRenamed species (Kintecus name = SBML id): Source1 = Source; Sink1 = Sink",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -126,7 +126,7 @@
      "8e-6",
      "0",
      "0",
-     "MisP+Hsp70==>Hsp70_MisP",
+     "Hsp70+MisP==>Hsp70_MisP",
      ""
     ],
     [
@@ -140,7 +140,7 @@
      "8e-5",
      "0",
      "0",
-     "Hsp70_MisP==>MisP+Hsp70",
+     "Hsp70_MisP==>Hsp70+MisP",
      ""
     ],
     [
@@ -224,7 +224,7 @@
      "0.02",
      "0",
      "0",
-     "Hsp90+Hsf1==>Hsf1_Hsp90",
+     "Hsf1+Hsp90==>Hsf1_Hsp90",
      ""
     ],
     [
@@ -238,49 +238,35 @@
      "0.5",
      "0",
      "0",
-     "Hsf1_Hsp90==>Hsp90+Hsf1",
+     "Hsf1_Hsp90==>Hsf1+Hsp90",
      ""
     ],
     [
      "#",
      "",
      "",
-     "dimerisation term 1/2",
-     ""
-    ],
-    [
-     "4e-5",
-     "0",
-     "0",
-     "Hsf1+Hsf1==>Hsf1_Hsf1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "dimerisation term 2/2",
+     "dimerisation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cHsf1:(4e-5*cHsf1)]==>2Hsf1",
+     "source+S[USER;cHsf1:(0.5*cHsf1*(8e-5*cHsf1-8e-5))]==>Hsf1_Hsf1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "dimerisation term 2/2 (consumes Hsf1_Hsf1)",
+     "dimerisation (consumes Hsf1)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cHsf1:((-1*4e-5*cHsf1))]==>Hsf1_Hsf1",
+     "Hsf1+S[USER;cHsf1:(8e-5*cHsf1-8e-5)]==>sink",
      ""
     ],
     [
@@ -336,7 +322,7 @@
      "0.05",
      "0",
      "0",
-     "Hsf1_Hsf1_Hsf1+HSEHsp70==>HSEHsp70_Hsf1_Hsf1_Hsf1",
+     "HSEHsp70+Hsf1_Hsf1_Hsf1==>HSEHsp70_Hsf1_Hsf1_Hsf1",
      ""
     ],
     [
@@ -350,7 +336,7 @@
      "0.08",
      "0",
      "0",
-     "HSEHsp70_Hsf1_Hsf1_Hsf1==>Hsf1_Hsf1_Hsf1+HSEHsp70",
+     "HSEHsp70_Hsf1_Hsf1_Hsf1==>HSEHsp70+Hsf1_Hsf1_Hsf1",
      ""
     ],
     [
@@ -364,7 +350,7 @@
      "0.05",
      "0",
      "0",
-     "Hsf1_Hsf1_Hsf1+HSEHsp90==>HSEHsp90_Hsf1_Hsf1_Hsf1",
+     "HSEHsp90+Hsf1_Hsf1_Hsf1==>HSEHsp90_Hsf1_Hsf1_Hsf1",
      ""
     ],
     [
@@ -420,7 +406,7 @@
      "0.1",
      "0",
      "0",
-     "Hsf1_Hsf1_Hsf1_P+HSEHsp70==>HSEHsp70_Hsf1_Hsf1_Hsf1_P",
+     "HSEHsp70+Hsf1_Hsf1_Hsf1_P==>HSEHsp70_Hsf1_Hsf1_Hsf1_P",
      ""
     ],
     [
@@ -434,7 +420,7 @@
      "0.08",
      "0",
      "0",
-     "HSEHsp70_Hsf1_Hsf1_Hsf1_P==>Hsf1_Hsf1_Hsf1_P+HSEHsp70",
+     "HSEHsp70_Hsf1_Hsf1_Hsf1_P==>HSEHsp70+Hsf1_Hsf1_Hsf1_P",
      ""
     ],
     [
@@ -560,7 +546,7 @@
      "1.2e-8",
      "0",
      "0",
-     "Proteasome+Hsp70==>Hsp70_Proteasome",
+     "Hsp70+Proteasome==>Hsp70_Proteasome",
      ""
     ],
     [
@@ -602,7 +588,7 @@
      "1e-7",
      "0",
      "0",
-     "Proteasome+Hsp90_MisP==>Hsp90+MisP_Proteasome",
+     "Hsp90_MisP+Proteasome==>Hsp90+MisP_Proteasome",
      ""
     ],
     [
@@ -714,7 +700,7 @@
      "0.02",
      "0",
      "0",
-     "p38+ROS==>p38_P+ROS",
+     "ROS+p38==>ROS+p38_P",
      ""
     ],
     [
@@ -735,42 +721,28 @@
      "#",
      "",
      "",
-     "Aggregation1 term 1/2",
-     ""
-    ],
-    [
-     "5e-9",
-     "0",
-     "0",
-     "MisP+MisP==>AggP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Aggregation1 term 2/2",
+     "Aggregation1",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cMisP:(5e-9*cMisP)]==>2MisP",
+     "source+S[USER;cMisP:(5e-9*cMisP*(1*cMisP-1))]==>AggP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Aggregation1 term 2/2 (consumes AggP)",
+     "Aggregation1 (consumes MisP)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cMisP:((-1*5e-9*cMisP))]==>AggP",
+     "MisP+S[USER;cMisP:(1e-8*cMisP-1e-8)]==>sink",
      ""
     ],
     [
@@ -784,7 +756,7 @@
      "1e-8",
      "0",
      "0",
-     "MisP+AggP==>SeqAggP",
+     "AggP+MisP==>SeqAggP",
      ""
     ],
     [
@@ -812,7 +784,7 @@
      "1e-5",
      "0",
      "0",
-     "Proteasome+AggP==>AggP_Proteasome",
+     "AggP+Proteasome==>AggP_Proteasome",
      ""
     ],
     [
@@ -868,7 +840,7 @@
      "0.00037",
      "0",
      "0",
-     "Hsp90+Akt==>Akt_Hsp90",
+     "Akt+Hsp90==>Akt_Hsp90",
      ""
     ],
     [
@@ -882,7 +854,7 @@
      "7",
      "0",
      "0",
-     "Akt_Hsp90==>Hsp90+Akt",
+     "Akt_Hsp90==>Akt+Hsp90",
      ""
     ],
     [
@@ -896,7 +868,7 @@
      "2e-7",
      "0",
      "0",
-     "CHIP+Akt_Hsp90==>Akt_CHIP_Hsp90",
+     "Akt_Hsp90+CHIP==>Akt_CHIP_Hsp90",
      ""
     ],
     [
@@ -910,7 +882,7 @@
      "1e-8",
      "0",
      "0",
-     "Akt_CHIP_Hsp90==>CHIP+Akt_Hsp90",
+     "Akt_CHIP_Hsp90==>Akt_Hsp90+CHIP",
      ""
     ],
     [
@@ -924,7 +896,7 @@
      "6e-8",
      "0",
      "0",
-     "Akt_CHIP_Hsp90+Proteasome==>Hsp90+CHIP+Akt_Proteasome",
+     "Akt_CHIP_Hsp90+Proteasome==>Akt_Proteasome+CHIP+Hsp90",
      ""
     ],
     [
@@ -938,7 +910,7 @@
      "1e-8",
      "0",
      "0",
-     "Akt_Proteasome==>Proteasome+Akt",
+     "Akt_Proteasome==>Akt+Proteasome",
      ""
     ],
     [
@@ -980,7 +952,7 @@
      "9.6e-9",
      "0",
      "0",
-     "Proteasome+Mkp1==>Mkp1_Proteasome",
+     "Mkp1+Proteasome==>Mkp1_Proteasome",
      ""
     ],
     [
@@ -1008,7 +980,7 @@
      "0.02",
      "0",
      "0",
-     "Hsp70+Mkp1==>Mkp1_P+Hsp70",
+     "Hsp70+Mkp1==>Hsp70+Mkp1_P",
      ""
     ],
     [
@@ -1036,7 +1008,7 @@
      "0.0001",
      "0",
      "0",
-     "p38_P==>p38_P+ROS",
+     "p38_P==>ROS+p38_P",
      ""
     ],
     [
@@ -1078,7 +1050,7 @@
      "1.2e-8",
      "0",
      "0",
-     "Proteasome+Hsp70_dam==>Hsp70_Proteasome",
+     "Hsp70_dam+Proteasome==>Hsp70_Proteasome",
      ""
     ],
     [
@@ -1099,42 +1071,28 @@
      "#",
      "",
      "",
-     "Hsp70DamAggregation1 term 1/2",
-     ""
-    ],
-    [
-     "5e-9",
-     "0",
-     "0",
-     "Hsp70_dam+Hsp70_dam==>AggP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Hsp70DamAggregation1 term 2/2",
+     "Hsp70DamAggregation1",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cHsp70_dam:(5e-9*cHsp70_dam)]==>2Hsp70_dam",
+     "source+S[USER;cHsp70_dam:(5e-9*cHsp70_dam*(1*cHsp70_dam-1))]==>AggP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Hsp70DamAggregation1 term 2/2 (consumes AggP)",
+     "Hsp70DamAggregation1 (consumes Hsp70_dam)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cHsp70_dam:((-1*5e-9*cHsp70_dam))]==>AggP",
+     "Hsp70_dam+S[USER;cHsp70_dam:(1e-8*cHsp70_dam-1e-8)]==>sink",
      ""
     ],
     [
@@ -1148,49 +1106,35 @@
      "1e-8",
      "0",
      "0",
-     "Hsp70_dam+AggP==>SeqAggP",
+     "AggP+Hsp70_dam==>SeqAggP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Hsp90DamAggregation term 1/2",
-     ""
-    ],
-    [
-     "5e-9",
-     "0",
-     "0",
-     "Hsp90_dam+Hsp90_dam==>AggP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Hsp90DamAggregation term 2/2",
+     "Hsp90DamAggregation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cHsp90_dam:(5e-9*cHsp90_dam)]==>2Hsp90_dam",
+     "source+S[USER;cHsp90_dam:(5e-9*cHsp90_dam*(1*cHsp90_dam-1))]==>AggP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Hsp90DamAggregation term 2/2 (consumes AggP)",
+     "Hsp90DamAggregation (consumes Hsp90_dam)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cHsp90_dam:((-1*5e-9*cHsp90_dam))]==>AggP",
+     "Hsp90_dam+S[USER;cHsp90_dam:(1e-8*cHsp90_dam-1e-8)]==>sink",
      ""
     ],
     [
@@ -1204,7 +1148,7 @@
      "1e-8",
      "0",
      "0",
-     "Hsp90_dam+AggP==>SeqAggP",
+     "AggP+Hsp90_dam==>SeqAggP",
      ""
     ],
     [
@@ -1246,7 +1190,7 @@
      "1.5e-7",
      "0",
      "0",
-     "p38_P==>p38Death+p38_P+CellDeath",
+     "p38_P==>CellDeath+p38Death+p38_P",
      ""
     ],
     [
@@ -1260,7 +1204,7 @@
      "1.5e-7",
      "0",
      "0",
-     "Jnk_P==>JNKDeath+Jnk_P+CellDeath",
+     "Jnk_P==>CellDeath+JNKDeath+Jnk_P",
      ""
     ],
     [
@@ -1274,7 +1218,7 @@
      "2e-8",
      "0",
      "0",
-     "AggP_Proteasome==>PIDeath+AggP_Proteasome+CellDeath",
+     "AggP_Proteasome==>AggP_Proteasome+CellDeath+PIDeath",
      ""
     ],
     [

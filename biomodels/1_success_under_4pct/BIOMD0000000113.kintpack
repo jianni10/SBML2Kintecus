@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T06:53:27.707415+00:00",
- "description": "Dupont1992_Ca_dpt_protein_phospho\nBioModels BIOMD0000000113 (curated). SBML file: BIOMD0000000113_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000113_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.58e-06 of species peak (worst: Z)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Protein_Phosphorylation term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Protein_Phosphorylation term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T20:25:58.374994+00:00",
+ "description": "Dupont1992_Ca_dpt_protein_phospho\nBioModels BIOMD0000000113 (curated). SBML file: BIOMD0000000113_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000113_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.58e-06 of species peak (worst: Z)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Protein_Phosphorylation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -133,21 +133,21 @@
      "#",
      "",
      "",
-     "Protein_Phosphorylation term 1/3",
+     "Protein_Phosphorylation term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cW_star,cZ:(20*cZ/(-cW_star*cZ-2.5*cW_star+1.01*cZ+2.525))]==>W_star",
+     "source+S[USER;cW_star,cZ:(20*cZ*(1-cW_star)/(-cW_star*cZ-2.5*cW_star+1.01*cZ+2.525))]==>W_star",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Protein_Phosphorylation term 2/3",
+     "Protein_Phosphorylation term 2/2",
      ""
     ],
     [
@@ -155,20 +155,6 @@
      "0",
      "0",
      "W_star+S[USER;cW_star:(2.5/(1*cW_star+0.01))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Protein_Phosphorylation term 3/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "W_star+S[USER;cW_star,cZ:((-1*20*cZ/(2.5*cW_star+1*cZ*(cW_star+1e-30)-1.01*cZ-2.525)))]==>sink",
      ""
     ],
     [

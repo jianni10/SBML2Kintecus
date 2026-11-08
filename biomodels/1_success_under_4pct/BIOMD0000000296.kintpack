@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T06:57:09.215026+00:00",
+ "created": "2026-11-07T20:52:12.350863+00:00",
  "description": "Balagadd\u00e92008_E_coli_Predator_Prey\nBioModels BIOMD0000000296 (curated). SBML file: BIOMD0000000296_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000296_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.43e-06 of species peak (worst: A2)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): sink1 = sink; source1 = source",
  "settings": {
   "kpath": "",
@@ -49,35 +49,21 @@
      "#",
      "",
      "",
-     "J0 term 1/3",
+     "J0 term 1/2",
      ""
     ],
     [
-     "0.8",
+     "1",
      "0",
      "0",
-     "C1==>2C1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "J0 term 2/3",
-     ""
-    ],
-    [
-     "0.008",
-     "0",
-     "0",
-     "C1+C1==>C1",
+     "C1+S[USER;cC1:(0.8-0.008*cC1)]==>2C1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "J0 term 3/3",
+     "J0 term 2/2",
      ""
     ],
     [
@@ -119,35 +105,21 @@
      "#",
      "",
      "",
-     "J2 term 1/3",
+     "J2 term 1/2",
      ""
     ],
     [
-     "0.4",
+     "1",
      "0",
      "0",
-     "C2==>2C2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "J2 term 2/3",
-     ""
-    ],
-    [
-     "0.004",
-     "0",
-     "0",
-     "C2+C2==>C2",
+     "C2+S[USER;cC2:(0.4-0.004*cC2)]==>2C2",
      ""
     ],
     [
      "#",
      "",
      "",
-     "J2 term 3/3",
+     "J2 term 2/2",
      ""
     ],
     [

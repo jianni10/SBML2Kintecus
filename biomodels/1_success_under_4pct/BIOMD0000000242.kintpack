@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:45:24.405584+00:00",
- "description": "Bai2003_G1phaseRegulation\nBioModels BIOMD0000000242 (curated). SBML file: BIOMD0000000242_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000242_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.20e-06 of species peak (worst: RS_1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] pRBsynthesis_1 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - R_1: zero order, signed\n  [info] pRBsynthesis_1 term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] _2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] null2_1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T20:39:39.098441+00:00",
+ "description": "Bai2003_G1phaseRegulation\nBioModels BIOMD0000000242 (curated). SBML file: BIOMD0000000242_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000242_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.20e-06 of species peak (worst: RS_1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] _2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] null2_1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -119,42 +119,14 @@
      "#",
      "",
      "",
-     "pRBsynthesis_1 term 1/3",
+     "pRBsynthesis_1",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "X_1+S[USER;cRS_1,cR_1,cX_1:(1.2/(-cRS_1-cR_1+cX_1+3.3))]==>R_1+X_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "pRBsynthesis_1 term 2/3 (consumes R_1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cRS_1,cR_1,cX_1:((-1*0.48*cRS_1*cX_1/(-cRS_1-cR_1+cX_1+3.3)))]==>R_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "pRBsynthesis_1 term 3/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "R_1+X_1+S[USER;cRS_1,cR_1,cX_1:((-1*0.48/(1*cRS_1+1*cR_1-1*cX_1-3.3)))]==>X_1",
+     "X_1+S[USER;cRS_1,cR_1,cX_1:(1*(-0.48*cRS_1-0.48*cR_1+1.2)/(-cRS_1-cR_1+cX_1+3.3))]==>R_1+X_1",
      ""
     ],
     [
@@ -168,7 +140,7 @@
      "0.6",
      "0",
      "0",
-     "theta_1+R_1==>RS_1",
+     "R_1+theta_1==>RS_1",
      ""
     ],
     [

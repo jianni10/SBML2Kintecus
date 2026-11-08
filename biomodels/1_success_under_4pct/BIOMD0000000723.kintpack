@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:58:40.582480+00:00",
- "description": "Weis2014 - Data driven Mammalian Cell Cycle Model\nBioModels BIOMD0000000723 (curated). SBML file: Weis2014.xml.\nSimulation: 0 to 1.1 time units (SED-ML: Weis2014.sedml), sampling 0.0011.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.20e-06 of species peak (worst: ERG)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_8 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Rb: zero order, signed\n  [info] reaction_25 term 3/5: rate order differs from the stoichiometry; consumed on separate line(s) - TriD: zero order, signed\n  [info] reaction_25 term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - TriD: zero order, signed\n  [info] reaction_39 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_41 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_54 term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_54 term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_55 term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_55 term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_55 term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_60 term 4/5: rate order differs from the stoichiometry; consumed on separate line(s) - TriA: zero order, signed\n  [info] reaction_60 term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - TriA: zero order, signed\n  [info] reaction_65 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_66: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_67 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_68: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T22:13:44.686997+00:00",
+ "description": "Weis2014 - Data driven Mammalian Cell Cycle Model\nBioModels BIOMD0000000723 (curated). SBML file: Weis2014.xml.\nSimulation: 0 to 1.1 time units (SED-ML: Weis2014.sedml), sampling 0.0011.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.20e-06 of species peak (worst: ERG)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_8 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Rb: zero order, signed\n  [info] reaction_25 term 3/5: rate order differs from the stoichiometry; consumed on separate line(s) - TriD: zero order, signed\n  [info] reaction_25 term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - TriD: zero order, signed\n  [info] reaction_39 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_41 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_55 term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_55 term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_55 term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_60 term 4/5: rate order differs from the stoichiometry; consumed on separate line(s) - TriA: zero order, signed\n  [info] reaction_60 term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - TriA: zero order, signed\n  [info] reaction_66: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_68: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -126,7 +126,7 @@
      "88.175",
      "0",
      "0",
-     "E2FRB+actCycB==>ppRB+E2F+actCycB",
+     "E2FRB+actCycB==>E2F+ppRB+actCycB",
      ""
     ],
     [
@@ -140,7 +140,7 @@
      "1763.5",
      "0",
      "0",
-     "E2FRB+actCycE==>ppRB+E2F+actCycE",
+     "E2FRB+actCycE==>E2F+ppRB+actCycE",
      ""
     ],
     [
@@ -154,7 +154,7 @@
      "5290.5",
      "0",
      "0",
-     "E2FRB+actCycACdk1==>ppRB+E2F+actCycACdk1",
+     "E2FRB+actCycACdk1==>E2F+ppRB+actCycACdk1",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "5290.5",
      "0",
      "0",
-     "E2FRB+actCycACdk2==>ppRB+E2F+actCycACdk2",
+     "E2FRB+actCycACdk2==>E2F+ppRB+actCycACdk2",
      ""
     ],
     [
@@ -182,7 +182,7 @@
      "581.9549999999999",
      "0",
      "0",
-     "E2FRB+TriD==>ppRB+E2F+TriD",
+     "E2FRB+TriD==>E2F+ppRB+TriD",
      ""
     ],
     [
@@ -196,7 +196,7 @@
      "581.9549999999999",
      "0",
      "0",
-     "E2FRB+actCycD==>ppRB+E2F+actCycD",
+     "E2FRB+actCycD==>E2F+ppRB+actCycD",
      ""
     ],
     [
@@ -210,7 +210,7 @@
      "88.175",
      "0",
      "0",
-     "pE2FRB+actCycB==>ppRB+pE2F+actCycB",
+     "pE2FRB+actCycB==>pE2F+ppRB+actCycB",
      ""
     ],
     [
@@ -224,7 +224,7 @@
      "1763.5",
      "0",
      "0",
-     "pE2FRB+actCycE==>ppRB+pE2F+actCycE",
+     "pE2FRB+actCycE==>pE2F+ppRB+actCycE",
      ""
     ],
     [
@@ -238,7 +238,7 @@
      "5290.5",
      "0",
      "0",
-     "pE2FRB+actCycACdk1==>ppRB+pE2F+actCycACdk1",
+     "pE2FRB+actCycACdk1==>pE2F+ppRB+actCycACdk1",
      ""
     ],
     [
@@ -252,7 +252,7 @@
      "5290.5",
      "0",
      "0",
-     "pE2FRB+actCycACdk2==>ppRB+pE2F+actCycACdk2",
+     "pE2FRB+actCycACdk2==>pE2F+ppRB+actCycACdk2",
      ""
     ],
     [
@@ -266,7 +266,7 @@
      "581.9549999999999",
      "0",
      "0",
-     "pE2FRB+TriD==>ppRB+pE2F+TriD",
+     "pE2FRB+TriD==>pE2F+ppRB+TriD",
      ""
     ],
     [
@@ -280,7 +280,7 @@
      "581.9549999999999",
      "0",
      "0",
-     "pE2FRB+actCycD==>ppRB+pE2F+actCycD",
+     "pE2FRB+actCycD==>pE2F+ppRB+actCycD",
      ""
     ],
     [
@@ -420,7 +420,7 @@
      "35.27",
      "0",
      "0",
-     "E2FRB==>Rb+E2F",
+     "E2FRB==>E2F+Rb",
      ""
     ],
     [
@@ -490,7 +490,7 @@
      "17635",
      "0",
      "0",
-     "Rb+E2F==>E2FRB",
+     "E2F+Rb==>E2FRB",
      ""
     ],
     [
@@ -1568,7 +1568,7 @@
      "3.124922",
      "0",
      "0",
-     "mass==>cycE+actCycE+mass",
+     "mass==>actCycE+cycE+mass",
      ""
     ],
     [
@@ -1582,7 +1582,7 @@
      "17.635",
      "0",
      "0",
-     "E2F+mass==>cycE+actCycE+E2F+mass",
+     "E2F+mass==>actCycE+cycE+E2F+mass",
      ""
     ],
     [
@@ -2191,56 +2191,28 @@
      "#",
      "",
      "",
-     "reaction_54 term 1/4",
+     "reaction_54 term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cCdh1:(155.8708/(1.15-cCdh1))]==>Cdh1",
+     "source+S[USER;cCdh1:(155.8708*(1-cCdh1)/(1.15-cCdh1))]==>Cdh1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "reaction_54 term 2/4",
+     "reaction_54 term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Cdc20A+S[USER;cCdh1:(176350/(1.15-cCdh1))]==>Cdh1+Cdc20A",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_54 term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Cdh1+S[USER;cCdh1:((-1*155.8708/(1*cCdh1-1.15)))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_54 term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Cdh1+Cdc20A+S[USER;cCdh1:((-1*176350/(1*cCdh1-1.15)))]==>Cdc20A",
+     "Cdc20A+S[USER;cCdh1:(176350*(1-cCdh1)/(1.15-cCdh1))]==>Cdh1+Cdc20A",
      ""
     ],
     [
@@ -2681,28 +2653,14 @@
      "#",
      "",
      "",
-     "reaction_65 term 1/2",
+     "reaction_65",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "actCycB+S[USER;cAPCP:(2.33401/(1.01-cAPCP))]==>APCP+actCycB",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_65 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "APCP+actCycB+S[USER;cAPCP:((-1*2.33401/(1*cAPCP-1.01)))]==>actCycB",
+     "actCycB+S[USER;cAPCP:(2.33401*(1-cAPCP)/(1.01-cAPCP))]==>APCP+actCycB",
      ""
     ],
     [
@@ -2723,28 +2681,14 @@
      "#",
      "",
      "",
-     "reaction_67 term 1/2",
+     "reaction_67",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "APCP+Cdc20T+S[USER;cCdc20A,cCdc20T:(292.669/(-cCdc20A+cCdc20T+0.005))]==>Cdc20A+APCP+Cdc20T",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_67 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Cdc20A+APCP+S[USER;cCdc20A,cCdc20T:((-1*292.669/(1*cCdc20A-1*cCdc20T-0.005)))]==>APCP",
+     "APCP+S[USER;cCdc20A,cCdc20T:(292.669*(-cCdc20A+cCdc20T)/(-cCdc20A+cCdc20T+0.005))]==>Cdc20A+APCP",
      ""
     ],
     [

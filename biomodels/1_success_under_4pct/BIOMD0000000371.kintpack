@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-02T03:33:56.732525+00:00",
+ "created": "2026-11-07T20:58:51.160107+00:00",
  "description": "DeVries2000_PancreaticBetaCells_InsulinSecretion\nBioModels BIOMD0000000371 (curated). SBML file: BIOMD0000000371_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000371_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.82e-06 of species peak (worst: n)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V_membrane' goes below zero in the SBML: integrated as V_membrane_o = value + 200, output as V_membrane = OUTC[V_membrane_o;-200*source]\nRenamed species (Kintecus name = SBML id): s1 = s",
  "settings": {
   "kpath": "",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_membrane_o:(4.5/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cV_membrane_o-200)))))]==>V_membrane_o",
+     "source+S[USER;cV_membrane_o:(-0.03*(cV_membrane_o-200)-0.18*(cV_membrane_o-200)/(exp((-1*(0.08333333333333333*(cV_membrane_o-200)+1.6666666666666667)))+1)+4.5/(exp((-1*(0.08333333333333333*(cV_membrane_o-200)+1.6666666666666667)))+1))]==>V_membrane_o",
      ""
     ],
     [
@@ -112,20 +112,6 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_membrane_o:((-1*0.03*(cV_membrane_o-200)))]==>V_membrane_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dV_membrane/dt term 6 (shifted V_membrane_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
      "source+S[USER;cV_membrane_o,cn:((-1*0.5*cn*(cV_membrane_o-200)))]==>V_membrane_o",
      ""
     ],
@@ -133,21 +119,7 @@
      "#",
      "",
      "",
-     "rate rule dV_membrane/dt term 7 (shifted V_membrane_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cV_membrane_o:((-1*0.18*(cV_membrane_o-200)/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cV_membrane_o-200))))))]==>V_membrane_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dV_membrane/dt term 8 (shifted V_membrane_o)",
+     "rate rule dV_membrane/dt term 6 (shifted V_membrane_o)",
      ""
     ],
     [
@@ -168,7 +140,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_membrane_o:(0.04/(1+0.04804033609170918*exp((-1*0.17857142857142858*(cV_membrane_o-200)))))]==>n",
+     "source+S[USER;cV_membrane_o:(0.04/(exp(-0.17857142857142858*(cV_membrane_o-200)-3.035714285714286)+1))]==>n",
      ""
     ],
     [
@@ -196,7 +168,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_membrane_o:(5e-5/(1+0.06392786120670757*exp((-1*0.125*(cV_membrane_o-200)))))]==>s1",
+     "source+S[USER;cV_membrane_o:(5e-5/(exp(-0.125*(cV_membrane_o-200)-2.75)+1))]==>s1",
      ""
     ],
     [

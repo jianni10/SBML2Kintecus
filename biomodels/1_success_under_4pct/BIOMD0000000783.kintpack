@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:09:13.969077+00:00",
+ "created": "2026-11-07T22:20:36.651483+00:00",
  "description": "Dong2014 - Mathematical modeling on helper t cells in a tumor immune system\nBioModels BIOMD0000000783 (curated). SBML file: Dong2014.xml.\nSimulation: 0 to 1000 time units (SED-ML: Dong2014.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.60e-06 of species peak (worst: y_Effector_Cells)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Tumor_Growth term 1/2",
+     "Tumor_Growth",
      ""
     ],
     [
-     "1.636",
+     "1",
      "0",
      "0",
-     "x_Tumor_Cells==>2x_Tumor_Cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Growth term 2/2",
-     ""
-    ],
-    [
-     "0.0032719999999999997",
-     "0",
-     "0",
-     "x_Tumor_Cells+x_Tumor_Cells==>x_Tumor_Cells",
+     "x_Tumor_Cells+S[USER;cx_Tumor_Cells:(1.636-0.0032719999999999997*cx_Tumor_Cells)]==>2x_Tumor_Cells",
      ""
     ],
     [

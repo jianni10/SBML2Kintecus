@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:09:27.464373+00:00",
+ "created": "2026-11-07T22:20:49.753456+00:00",
  "description": "Alvarez2019 - A nonlinear mathematical model of cell-mediated immune response for tumor phenotypic heterogeneity\nBioModels BIOMD0000000790 (curated). SBML file: Alvarez2019.xml.\nSimulation: 0 to 2000 time units (SED-ML: Alvarez2019.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.33e-06 of species peak (worst: E_1_Innate)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -49,56 +49,28 @@
      "#",
      "",
      "",
-     "Tumor_Growth_1 term 1/2",
+     "Tumor_Growth_1",
      ""
     ],
     [
-     "0.514",
+     "1",
      "0",
      "0",
-     "T_1==>2T_1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Growth_1 term 2/2",
-     ""
-    ],
-    [
-     "1.0280000000000002e-9",
-     "0",
-     "0",
-     "T_1+T_1==>T_1",
+     "T_1+S[USER;cT_1:(0.514-1.0280000000000002e-9*cT_1)]==>2T_1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Tumor_Growth_2 term 1/2",
+     "Tumor_Growth_2",
      ""
     ],
     [
-     "0.1799",
+     "1",
      "0",
      "0",
-     "T_2==>2T_2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Growth_2 term 2/2",
-     ""
-    ],
-    [
-     "3.598e-10",
-     "0",
-     "0",
-     "T_2+T_2==>T_2",
+     "T_2+S[USER;cT_2:(0.1799-3.598e-10*cT_2)]==>2T_2",
      ""
     ],
     [

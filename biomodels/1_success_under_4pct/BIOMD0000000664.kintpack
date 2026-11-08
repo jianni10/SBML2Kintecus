@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T16:27:59.183715+00:00",
- "description": "Muller2008 - Simplified MAPK activation Dynamics (Model B)\nBioModels BIOMD0000000664 (curated). SBML file: BIOMD0000000664_url.xml.\nSimulation: 0 to 100 time units (SED-ML: MODEL8687732743.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.07e-06 of species peak (worst: B_Raf)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'g2_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'g1_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] FGFR_Activation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - FGFR: zero order, signed\n  [info] C_Raf_Activation_1 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - C_Raf: zero order, signed\n  [info] C_Raf_Activation_2 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - C_Raf: zero order, signed",
+ "created": "2026-11-07T22:04:32.653780+00:00",
+ "description": "Muller2008 - Simplified MAPK activation Dynamics (Model B)\nBioModels BIOMD0000000664 (curated). SBML file: BIOMD0000000664_url.xml.\nSimulation: 0 to 100 time units (SED-ML: MODEL8687732743.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.07e-06 of species peak (worst: B_Raf)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'g2_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'g1_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] C_Raf_Activation_1 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - C_Raf: zero order, signed\n  [info] C_Raf_Activation_2 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - C_Raf: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "FGFR_Activation term 1/2",
+     "FGFR_Activation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cSW2,cSW3,cSW4:(10*cSW1*cSW2/(-1*cSW1*cSW2*cSW3*cSW4+1*cSW1*cSW2+10))]==>FGFR",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "FGFR_Activation term 2/2 (consumes FGFR)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cSW2,cSW3,cSW4:((-1*10*cSW1*cSW2*cSW3*cSW4/(-1*cSW1*cSW2*cSW3*cSW4+1*cSW1*cSW2+10)))]==>FGFR",
+     "source+S[USER;cSW1,cSW2,cSW3,cSW4:(10*cSW1*cSW2*(-cSW3*cSW4+1)/(1*cSW1*cSW2*(-cSW3*cSW4+1)+10))]==>FGFR",
      ""
     ],
     [

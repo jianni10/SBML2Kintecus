@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:13:11.182633+00:00",
+ "created": "2026-11-07T22:28:44.203172+00:00",
  "description": "Li2016 - Model for pancreatic cancer patients receiving immunotherapy\nBioModels BIOMD0000000929 (curated). SBML file: Li2016.xml.\nSimulation: 0 to 1000 time units (SED-ML: Li2016.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.14e-06 of species peak (worst: helper_T_cells__H)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Lysis_of_cancer_cells_by_CD8__T_cells: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): PancreaticstellatecellsP1 = Pancreatic_stellate_cells__P",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Logistic_growth_of_cancer_cells term 1/2",
+     "Logistic_growth_of_cancer_cells",
      ""
     ],
     [
-     "0.0195",
+     "1",
      "0",
      "0",
-     "Pancreatic_cancer_cells__C==>2Pancreatic_cancer_cells__C",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Logistic_growth_of_cancer_cells term 2/2",
-     ""
-    ],
-    [
-     "1.989e-13",
-     "0",
-     "0",
-     "Pancreatic_cancer_cells__C+Pancreatic_cancer_cells__C==>Pancreatic_cancer_cells__C",
+     "Pancreatic_cancer_cells__C+S[USER;cPancreatic_cancer_cells__C:(0.0195-1.989e-13*cPancreatic_cancer_cells__C)]==>2Pancreatic_cancer_cells__C",
      ""
     ],
     [
@@ -105,28 +91,14 @@
      "#",
      "",
      "",
-     "Basal_growth_of_stellate_cells term 1/2",
+     "Basal_growth_of_stellate_cells",
      ""
     ],
     [
-     "0.0019500000000000001",
+     "1",
      "0",
      "0",
-     "PancreaticstellatecellsP1==>2PancreaticstellatecellsP1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Basal_growth_of_stellate_cells term 2/2",
-     ""
-    ],
-    [
-     "3.482115e-12",
-     "0",
-     "0",
-     "PancreaticstellatecellsP1+PancreaticstellatecellsP1==>PancreaticstellatecellsP1",
+     "PancreaticstellatecellsP1+S[USER;cPancreaticstellatecellsP1:(0.0019500000000000001-3.482115e-12*cPancreaticstellatecellsP1)]==>2PancreaticstellatecellsP1",
      ""
     ],
     [
@@ -469,56 +441,28 @@
      "#",
      "",
      "",
-     "Stellate_cells_promotes_cancer_growth_through_cytokines term 1/2",
-     ""
-    ],
-    [
-     "3.482115e-12",
-     "0",
-     "0",
-     "Pancreatic_cancer_cells__C+PancreaticstellatecellsP1==>2Pancreatic_cancer_cells__C+PancreaticstellatecellsP1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Stellate_cells_promotes_cancer_growth_through_cytokines term 2/2",
-     ""
-    ],
-    [
-     "3.5517572999999997e-23",
-     "0",
-     "0",
-     "Pancreatic_cancer_cells__C+Pancreatic_cancer_cells__C+PancreaticstellatecellsP1==>Pancreatic_cancer_cells__C+PancreaticstellatecellsP1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "TGF_beta__induced_growth_of_stellate_cells term 1/2",
+     "Stellate_cells_promotes_cancer_growth_through_cytokines",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Pancreatic_cancer_cells__C+PancreaticstellatecellsP1+S[USER;cPancreatic_cancer_cells__C:(0.125/(cPancreatic_cancer_cells__C+56000000))]==>2PancreaticstellatecellsP1+Pancreatic_cancer_cells__C",
+     "Pancreatic_cancer_cells__C+PancreaticstellatecellsP1+S[USER;cPancreatic_cancer_cells__C:(3.482115e-12-3.5517572999999997e-23*cPancreatic_cancer_cells__C)]==>2Pancreatic_cancer_cells__C+PancreaticstellatecellsP1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "TGF_beta__induced_growth_of_stellate_cells term 2/2",
+     "TGF_beta__induced_growth_of_stellate_cells",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "PancreaticstellatecellsP1+PancreaticstellatecellsP1+Pancreatic_cancer_cells__C+S[USER;cPancreatic_cancer_cells__C:(2.232125e-10/(cPancreatic_cancer_cells__C+56000000))]==>Pancreatic_cancer_cells__C+PancreaticstellatecellsP1",
+     "Pancreatic_cancer_cells__C+PancreaticstellatecellsP1+S[USER;cPancreatic_cancer_cells__C,cPancreaticstellatecellsP1:(0.125*(1-1.7857e-9*cPancreaticstellatecellsP1)/(cPancreatic_cancer_cells__C+56000000))]==>2PancreaticstellatecellsP1+Pancreatic_cancer_cells__C",
      ""
     ],
     [

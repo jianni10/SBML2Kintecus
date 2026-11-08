@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:52:59.342631+00:00",
- "description": "Smallbone2013 - Colon Crypt cycle - Version 2\nBioModels BIOMD0000000518 (curated). SBML file: BIOMD0000000518_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000518_url.sedml (auto-generated placeholder); duration chosen from the dynamics: no dynamics), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.80e-06 of species peak (worst: N1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R01 term 2/5: rate order differs from the stoichiometry; consumed on separate line(s) - N1: zero order, signed\n  [info] R01 term 4/5: rate order differs from the stoichiometry; consumed on separate line(s) - N1: zero order, signed\n  [info] R01 term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - N1: zero order, signed\n  [info] R00 term 4/10: rate order differs from the stoichiometry; consumed on separate line(s) - N0: first order\n  [info] R00 term 5/10: rate order differs from the stoichiometry; consumed on separate line(s) - N0: first order\n  [info] R00 term 6/10: rate order differs from the stoichiometry; consumed on separate line(s) - N0: first order\n  [info] R00 term 7/10: rate order differs from the stoichiometry; consumed on separate line(s) - N0: first order\n  [info] R12 term 2/5: rate order differs from the stoichiometry; consumed on separate line(s) - N2: zero order, signed\n  [info] R12 term 3/5: rate order differs from the stoichiometry; consumed on separate line(s) - N2: zero order, signed\n  [info] R12 term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - N2: zero order, signed\n  [info] R11 term 3/5: rate order differs from the stoichiometry; consumed on separate line(s) - N1: first order\n  [info] R11 term 4/5: rate order differs from the stoichiometry; consumed on separate line(s) - N1: first order\n  [info] R11 term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - N1: first order\n  [info] R03 term 2/5: rate order differs from the stoichiometry; consumed on separate line(s) - N3: zero order, signed\n  [info] R03 term 3/5: rate order differs from the stoichiometry; consumed on separate line(s) - N3: zero order, signed\n  [info] R03 term 4/5: rate order differs from the stoichiometry; consumed on separate line(s) - N3: zero order, signed\n  [info] R03 term 5/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T21:53:40.733757+00:00",
+ "description": "Smallbone2013 - Colon Crypt cycle - Version 2\nBioModels BIOMD0000000518 (curated). SBML file: BIOMD0000000518_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000518_url.sedml (auto-generated placeholder); duration chosen from the dynamics: no dynamics), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.80e-06 of species peak (worst: N1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R01 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - N1: zero order, signed\n  [info] R01 term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - N1: zero order, signed\n  [info] R00 term 3/6: rate order differs from the stoichiometry; consumed on separate line(s) - N0: first order\n  [info] R00 term 4/6: rate order differs from the stoichiometry; consumed on separate line(s) - N0: first order\n  [info] R12 term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - N2: zero order, signed\n  [info] R12 term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - N2: zero order, signed\n  [info] R11 term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - N1: first order\n  [info] R11 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - N1: first order\n  [info] R11 term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - N1: first order\n  [info] R03 term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - N3: zero order, signed\n  [info] R03 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - N3: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -63,35 +63,21 @@
      "#",
      "",
      "",
-     "R01 term 1/5",
-     ""
-    ],
-    [
-     "1.6302566267382808",
-     "0",
-     "0",
-     "N0==>N0+N1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R01 term 2/5 (consumes N1)",
+     "R01 term 1/4",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cN0:((-1*0.013585471889485673*cN0^2))]==>N1",
+     "N0+S[USER;cN0:(1.6302566267382808-0.013585471889485673*cN0)]==>N0+N1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R01 term 3/5",
+     "R01 term 2/4",
      ""
     ],
     [
@@ -105,7 +91,7 @@
      "#",
      "",
      "",
-     "R01 term 4/5 (consumes N1)",
+     "R01 term 3/4 (consumes N1)",
      ""
     ],
     [
@@ -119,7 +105,7 @@
      "#",
      "",
      "",
-     "R01 term 5/5 (consumes N1)",
+     "R01 term 4/4 (consumes N1)",
      ""
     ],
     [
@@ -133,63 +119,35 @@
      "#",
      "",
      "",
-     "R00 term 1/10",
-     ""
-    ],
-    [
-     "0.36836779701196926",
-     "0",
-     "0",
-     "N0==>2N0",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R00 term 2/10",
-     ""
-    ],
-    [
-     "0.0030697316417664104",
-     "0",
-     "0",
-     "N0+N0==>N0",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R00 term 3/10",
+     "R00 term 1/6",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "N0+N0+S[USER;cN3:(0.0024468307802846777/(cN3+1.5709821429))]==>3N0",
+     "N0+S[USER;cN0:(0.36836779701196926-0.0030697316417664104*cN0)]==>2N0",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R00 term 4/10 (consumes N0)",
+     "R00 term 2/6",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "N0+S[USER;cN3:(0.2936196936341613/(1*cN3+1.5709821429))]==>sink",
+     "N0+S[USER;cN0,cN3:(0.0024468307802846777*cN0/(cN3+1.5709821429)-0.0030697316417664104*cN3+0.0024468307802846777*cN3/(cN3+1.5709821429)-0.2936196936341613/(cN3+1.5709821429))]==>2N0",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R00 term 5/10 (consumes N0)",
+     "R00 term 3/6 (consumes N0)",
      ""
     ],
     [
@@ -203,7 +161,7 @@
      "#",
      "",
      "",
-     "R00 term 6/10 (consumes N0)",
+     "R00 term 4/6 (consumes N0)",
      ""
     ],
     [
@@ -217,21 +175,7 @@
      "#",
      "",
      "",
-     "R00 term 7/10 (consumes N0)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "N0+S[USER;cN3:(0.0030697316417664104*cN3)]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R00 term 8/10",
+     "R00 term 5/6",
      ""
     ],
     [
@@ -245,7 +189,7 @@
      "#",
      "",
      "",
-     "R00 term 9/10",
+     "R00 term 6/6",
      ""
     ],
     [
@@ -253,20 +197,6 @@
      "0",
      "0",
      "N0+N2+S[USER;cN3:(0.0024468307802846777/(cN3+1.5709821429))]==>2N0+N2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R00 term 10/10",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "N0+N3+S[USER;cN3:(0.0024468307802846777/(cN3+1.5709821429))]==>2N0+N3",
      ""
     ],
     [
@@ -287,35 +217,21 @@
      "#",
      "",
      "",
-     "R12 term 1/5",
-     ""
-    ],
-    [
-     "5.04016173564854",
-     "0",
-     "0",
-     "N1==>N1+N2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R12 term 2/5 (consumes N2)",
+     "R12 term 1/4",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cN1:((-1*0.04200134779707116*cN1^2))]==>N2",
+     "N1+S[USER;cN1:(5.04016173564854-0.04200134779707116*cN1)]==>N1+N2",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R12 term 3/5 (consumes N2)",
+     "R12 term 2/4 (consumes N2)",
      ""
     ],
     [
@@ -329,7 +245,7 @@
      "#",
      "",
      "",
-     "R12 term 4/5",
+     "R12 term 3/4",
      ""
     ],
     [
@@ -343,7 +259,7 @@
      "#",
      "",
      "",
-     "R12 term 5/5 (consumes N2)",
+     "R12 term 4/4 (consumes N2)",
      ""
     ],
     [
@@ -357,35 +273,21 @@
      "#",
      "",
      "",
-     "R11 term 1/5",
+     "R11 term 1/4",
      ""
     ],
     [
-     "1.0515700653445998",
+     "1",
      "0",
      "0",
-     "N1==>2N1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R11 term 2/5",
-     ""
-    ],
-    [
-     "0.008763083877871666",
-     "0",
-     "0",
-     "N1+N1==>N1",
+     "N1+S[USER;cN1:(1.0515700653445998-0.008763083877871666*cN1)]==>2N1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R11 term 3/5 (consumes N1)",
+     "R11 term 2/4 (consumes N1)",
      ""
     ],
     [
@@ -399,7 +301,7 @@
      "#",
      "",
      "",
-     "R11 term 4/5 (consumes N1)",
+     "R11 term 3/4 (consumes N1)",
      ""
     ],
     [
@@ -413,7 +315,7 @@
      "#",
      "",
      "",
-     "R11 term 5/5 (consumes N1)",
+     "R11 term 4/4 (consumes N1)",
      ""
     ],
     [
@@ -441,35 +343,21 @@
      "#",
      "",
      "",
-     "R03 term 1/5",
+     "R03 term 1/3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "N0+S[USER;cN3:(0.2936196936341613/(cN3+1.5709821429))]==>N0+N3",
+     "N0+S[USER;cN0,cN3:(1*(-0.0024468307802846777*cN0-0.0024468307802846777*cN3+0.2936196936341613)/(cN3+1.5709821429))]==>N0+N3",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R03 term 2/5 (consumes N3)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cN0,cN3:((-1*0.0024468307802846777*cN0^2/(cN3+1.5709821429)))]==>N3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R03 term 3/5 (consumes N3)",
+     "R03 term 2/3 (consumes N3)",
      ""
     ],
     [
@@ -483,7 +371,7 @@
      "#",
      "",
      "",
-     "R03 term 4/5 (consumes N3)",
+     "R03 term 3/3 (consumes N3)",
      ""
     ],
     [
@@ -491,20 +379,6 @@
      "0",
      "0",
      "source+S[USER;cN0,cN2,cN3:((-1*0.0024468307802846777*cN0*cN2/(cN3+1.5709821429)))]==>N3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R03 term 5/5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "N0+N3+S[USER;cN3:(0.0024468307802846777/(1*cN3+1.5709821429))]==>N0",
      ""
     ],
     [

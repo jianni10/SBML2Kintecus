@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:12:56.374888+00:00",
+ "created": "2026-11-07T22:28:29.514237+00:00",
  "description": "Jarrett2015 - Modelling the interaction between immune response, bacterial dynamics and inflammatory damage\nBioModels BIOMD0000000920 (curated). SBML file: Jarrett2015.xml.\nSimulation: 0 to 70 time units (SED-ML: Jarrett2015.sedml), sampling 0.7.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.97e-06 of species peak (worst: inflammation__I)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -161,7 +161,7 @@
      "#",
      "",
      "",
-     "reaction_for_B term 1/5",
+     "reaction_for_B term 1/4",
      ""
     ],
     [
@@ -175,35 +175,21 @@
      "#",
      "",
      "",
-     "reaction_for_B term 2/5",
+     "reaction_for_B term 2/4",
      ""
     ],
     [
-     "0.9",
+     "1",
      "0",
      "0",
-     "bacterial_infection__B==>2bacterial_infection__B",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_for_B term 3/5",
-     ""
-    ],
-    [
-     "0.9",
-     "0",
-     "0",
-     "bacterial_infection__B+bacterial_infection__B==>bacterial_infection__B",
+     "bacterial_infection__B+S[USER;cbacterial_infection__B:(0.9-0.9*cbacterial_infection__B)]==>2bacterial_infection__B",
      ""
     ],
     [
      "#",
      "",
      "",
-     "reaction_for_B term 4/5",
+     "reaction_for_B term 3/4",
      ""
     ],
     [
@@ -217,7 +203,7 @@
      "#",
      "",
      "",
-     "reaction_for_B term 5/5",
+     "reaction_for_B term 4/4",
      ""
     ],
     [

@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:08:29.362015+00:00",
+ "created": "2026-11-07T22:19:58.658023+00:00",
  "description": "Macnamara2015/1 - virotherapy full model\nBioModels BIOMD0000000766 (curated). SBML file: Macnamara2015_1.xml.\nSimulation: 0 to 200 time units (SED-ML: Macnamara2015_1.sedml), sampling 1.4814814814814814.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 7.44e-06 of species peak (worst: I)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] tumor_infection: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): M1 = M; E1 = E",
  "settings": {
   "kpath": "",
@@ -49,35 +49,21 @@
      "#",
      "",
      "",
-     "tumor_growth term 1/3",
+     "tumor_growth term 1/2",
      ""
     ],
     [
-     "0.927",
+     "1",
      "0",
      "0",
-     "U==>2U",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth term 2/3",
-     ""
-    ],
-    [
-     "5.098449015509845e-9",
-     "0",
-     "0",
-     "U+U==>U",
+     "U+S[USER;cU:(0.927-5.098449015509845e-9*cU)]==>2U",
      ""
     ],
     [
      "#",
      "",
      "",
-     "tumor_growth term 3/3",
+     "tumor_growth term 2/2",
      ""
     ],
     [
@@ -147,28 +133,14 @@
      "#",
      "",
      "",
-     "memory_cell_growth term 1/2",
+     "memory_cell_growth",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "M1+V+S[USER;cV:(2.5/(cV+10000))]==>2M1+V",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "memory_cell_growth term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "M1+M1+V+S[USER;cV:(0.00025/(cV+10000))]==>M1+V",
+     "M1+V+S[USER;cM1,cV:(2.5*(1-0.0001*cM1)/(cV+10000))]==>2M1+V",
      ""
     ],
     [

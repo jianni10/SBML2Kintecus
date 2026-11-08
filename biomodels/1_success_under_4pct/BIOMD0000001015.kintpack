@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:15:32.486744+00:00",
+ "created": "2026-11-07T22:32:15.125066+00:00",
  "description": "Jarrah2014 - mathematical model of the immune response in muscle degeneration and subsequent regeneration in Duchenne muscular dystrophy in mdx mice\nBioModels BIOMD0000001015 (curated). SBML file: Jarrah2014.xml.\nSimulation: 0 to 15 time units (SED-ML: Jarrah2014.sedml), sampling 0.015.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.47e-06 of species peak (worst: M)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): M1 = M; R1 = R",
  "settings": {
   "kpath": "",
@@ -182,7 +182,7 @@
      "1",
      "0",
      "0",
-     "N+S[USER;cTIME_:(0.3617961343415654/(2.2*3.141592653589793^0.5*cTIME_*exp(0.10330578512396693*(log(cTIME_+1e-11)-4.22686)^2)+2.2e-11*3.141592653589793^0.5*exp(0.10330578512396693*(log(cTIME_+1e-11)-4.22686)^2)))]==>D",
+     "N+S[USER;cTIME_:(0.3617961343415654*exp((-1*0.10330578512396693*(log(cTIME_+1e-11)-4.22686)^2))/(2.2*3.141592653589793^0.5*cTIME_+2.2e-11*3.141592653589793^0.5))]==>D",
      ""
     ],
     [

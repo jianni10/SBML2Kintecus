@@ -1,0 +1,2745 @@
+{
+ "version": 3,
+ "created": "2026-11-07T22:34:14.155098+00:00",
+ "description": "Westerhoff2020 - systems biology model of the coronavirus pandemic 2020\nBioModels BIOMD0000000988 (curated). SBML file: Westerhoff2020.xml.\nSimulation: 0 to 365 time units (SED-ML: Westerhoff2020.sedml), sampling 0.3333333333333333.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.17e-04 of species peak (worst: infected_nontested_0)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'total_population_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'registered_corona_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'dead_corona_perc_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'recovered_corona_perc_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'dead_noncorona_perc_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'frac_coronaDeadOfAllDead_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'epidemic_extinguished_bool_0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'infected_tested_div10' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] re1 term 1/8: USER expression is 862 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re1 term 2/8: USER expression is 863 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re1 term 3/8: USER expression is 863 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re1 term 4/8: USER expression is 863 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re1 term 5/8: USER expression is 929 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re1 term 5/8 (consumes Q1): USER expression is 934 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re1 term 5/8: rate order differs from the stoichiometry; consumed on separate line(s) - Q1: zero order, signed\n  [info] re1 term 6/8: USER expression is 922 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re1 term 7/8: USER expression is 930 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re1 term 7/8 (consumes Q1): USER expression is 935 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re1 term 7/8: rate order differs from the stoichiometry; consumed on separate line(s) - Q1: zero order, signed\n  [info] re1 term 8/8: USER expression is 930 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re1 term 8/8 (consumes Q1): USER expression is 935 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re1 term 8/8: rate order differs from the stoichiometry; consumed on separate line(s) - Q1: zero order, signed\n  [info] re3 term 1/8: USER expression is 862 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re3 term 2/8: USER expression is 863 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re3 term 3/8: USER expression is 863 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re3 term 4/8: USER expression is 863 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re3 term 5/8: USER expression is 929 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re3 term 5/8 (consumes Q1): USER expression is 934 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re3 term 5/8: rate order differs from the stoichiometry; consumed on separate line(s) - Q1: zero order, signed\n  [info] re3 term 6/8: USER expression is 922 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re3 term 7/8: USER expression is 930 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re3 term 7/8 (consumes Q1): USER expression is 935 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re3 term 7/8: rate order differs from the stoichiometry; consumed on separate line(s) - Q1: zero order, signed\n  [info] re3 term 8/8: USER expression is 930 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re3 term 8/8 (consumes Q1): USER expression is 935 characters; Kintecus V2027 mis-evaluates USER expressions longer than about 840 characters (see KINTECUS_ISSUES)\n  [info] re3 term 8/8: rate order differs from the stoichiometry; consumed on separate line(s) - Q1: zero order, signed\n  [info] 50 condition(s) on time alone written as switch species with time/value pairs (50 changes)\n  [partial] 52 profile files exceed the GUI's 10 O_ file limit\n  [info] 6 species/parameters given short names (Q1...) so USER expressions fit Kintecus's expression length limit; original ids are in the SPECIES comments column\n  [partial] re1 term 5/8: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] re1 term 5/8 (consumes Q1): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] re1 term 6/8: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] re1 term 7/8: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] re1 term 7/8 (consumes Q1): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] re1 term 8/8: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] re1 term 8/8 (consumes Q1): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] re3 term 5/8: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] re3 term 5/8 (consumes Q1): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] re3 term 6/8: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] re3 term 7/8: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] re3 term 7/8 (consumes Q1): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] re3 term 8/8: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] re3 term 8/8 (consumes Q1): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\nRenamed species (Kintecus name = SBML id): Q1 = infected_nontested_0; Q2 = infected_tested_0; Q5 = uninfected_nontested_0; Q6 = uninfected_tested_0; Q4 = symptoms_tested_0; Q3 = symptoms_nontested_0",
+ "settings": {
+  "kpath": "",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "nation": false
+ },
+ "grids": {
+  "model": {
+   "cols": [
+    "Rate Const (A)",
+    "T^m",
+    "Ea",
+    "Reaction Equation",
+    "Comments"
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "Model Description SpreadSheet",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Westerhoff2020 - systems biology model of the coronavirus pandemic 2020  (BIOMD0000000988, curated BioModels; source file Westerhoff2020.xml)",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)",
+     ""
+    ],
+    [
+     "#",
+     "T^m",
+     "Ea",
+     "Reaction",
+     "Comments"
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1 term 1/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q5+Q3+S[USER;cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.25/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>Q1+Q3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1 term 2/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q5+Q1+S[USER;cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.508/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>2Q1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1 term 3/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q5+Q2+S[USER;cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.025/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>Q1+Q2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1 term 4/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q5+Q4+S[USER;cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.025/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>Q1+Q4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1 term 5/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cQ1,cQ2,cQ3,cQ4,cQ5,cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.25*cQ3*cQ5*(0.5+(-cQ1-cQ2-cQ3-cQ4)/(2*(abs(cQ1+cQ2+cQ3+cQ4)+1e-300)))/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>Q5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1 term 5/8 (consumes Q1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cQ1,cQ2,cQ3,cQ4,cQ5,cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:((-1*0.25*cQ3*cQ5*(0.5+(-cQ1-cQ2-cQ3-cQ4)/(2*(abs(cQ1+cQ2+cQ3+cQ4)+1e-300)))/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700)))]==>Q1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1 term 6/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q1+Q5+S[USER;cQ1,cQ2,cQ3,cQ4,cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.508*(0.5+(-cQ1-cQ2-cQ3-cQ4)/(2*(abs(cQ1+cQ2+cQ3+cQ4)+1e-300)))/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>2Q5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1 term 7/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cQ1,cQ2,cQ3,cQ4,cQ5,cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.025*cQ2*cQ5*(0.5+(-cQ1-cQ2-cQ3-cQ4)/(2*(abs(cQ1+cQ2+cQ3+cQ4)+1e-300)))/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>Q5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1 term 7/8 (consumes Q1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cQ1,cQ2,cQ3,cQ4,cQ5,cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:((-1*0.025*cQ2*cQ5*(0.5+(-cQ1-cQ2-cQ3-cQ4)/(2*(abs(cQ1+cQ2+cQ3+cQ4)+1e-300)))/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700)))]==>Q1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1 term 8/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cQ1,cQ2,cQ3,cQ4,cQ5,cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.025*cQ4*cQ5*(0.5+(-cQ1-cQ2-cQ3-cQ4)/(2*(abs(cQ1+cQ2+cQ3+cQ4)+1e-300)))/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>Q5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re1 term 8/8 (consumes Q1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cQ1,cQ2,cQ3,cQ4,cQ5,cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:((-1*0.025*cQ4*cQ5*(0.5+(-cQ1-cQ2-cQ3-cQ4)/(2*(abs(cQ1+cQ2+cQ3+cQ4)+1e-300)))/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700)))]==>Q1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re2",
+     ""
+    ],
+    [
+     "0.0008",
+     "0",
+     "0",
+     "Q5==>Q6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 term 1/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q6+Q3+S[USER;cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.25/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>Q1+Q3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 term 2/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q6+Q1+S[USER;cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.508/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>2Q1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 term 3/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q6+Q2+S[USER;cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.025/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>Q1+Q2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 term 4/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q6+Q4+S[USER;cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.025/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>Q1+Q4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 term 5/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cQ1,cQ2,cQ3,cQ4,cQ6,cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.25*cQ3*cQ6*(0.5+(-cQ1-cQ2-cQ3-cQ4)/(2*(abs(cQ1+cQ2+cQ3+cQ4)+1e-300)))/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>Q6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 term 5/8 (consumes Q1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cQ1,cQ2,cQ3,cQ4,cQ6,cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:((-1*0.25*cQ3*cQ6*(0.5+(-cQ1-cQ2-cQ3-cQ4)/(2*(abs(cQ1+cQ2+cQ3+cQ4)+1e-300)))/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700)))]==>Q1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 term 6/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "Q1+Q6+S[USER;cQ1,cQ2,cQ3,cQ4,cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.508*(0.5+(-cQ1-cQ2-cQ3-cQ4)/(2*(abs(cQ1+cQ2+cQ3+cQ4)+1e-300)))/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>2Q6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 term 7/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cQ1,cQ2,cQ3,cQ4,cQ6,cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.025*cQ2*cQ6*(0.5+(-cQ1-cQ2-cQ3-cQ4)/(2*(abs(cQ1+cQ2+cQ3+cQ4)+1e-300)))/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>Q6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 term 7/8 (consumes Q1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cQ1,cQ2,cQ3,cQ4,cQ6,cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:((-1*0.025*cQ2*cQ6*(0.5+(-cQ1-cQ2-cQ3-cQ4)/(2*(abs(cQ1+cQ2+cQ3+cQ4)+1e-300)))/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700)))]==>Q1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 term 8/8",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cQ1,cQ2,cQ3,cQ4,cQ6,cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:(0.025*cQ4*cQ6*(0.5+(-cQ1-cQ2-cQ3-cQ4)/(2*(abs(cQ1+cQ2+cQ3+cQ4)+1e-300)))/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700))]==>Q6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re3 term 8/8 (consumes Q1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cQ1,cQ2,cQ3,cQ4,cQ6,cSW1,cSW10,cSW11,cSW12,cSW13,cSW14,cSW15,cSW16,cSW17,cSW18,cSW19,cSW2,cSW20,cSW21,cSW22,cSW23,cSW24,cSW25,cSW26,cSW27,cSW28,cSW29,cSW3,cSW30,cSW31,cSW32,cSW33,cSW34,cSW35,cSW36,cSW37,cSW38,cSW39,cSW4,cSW40,cSW41,cSW42,cSW43,cSW44,cSW45,cSW46,cSW47,cSW48,cSW49,cSW5,cSW50,cSW51,cSW6,cSW7,cSW8,cSW9,cTIME_:((-1*0.025*cQ4*cQ6*(0.5+(-cQ1-cQ2-cQ3-cQ4)/(2*(abs(cQ1+cQ2+cQ3+cQ4)+1e-300)))/(4812300*cSW1*(0.5+(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)/(2*(abs(7*cSW10+7*cSW11+7*cSW12+7*cSW13+7*cSW14+7*cSW15+7*cSW16+7*cSW17+7*cSW18+7*cSW19+7*cSW2+7*cSW20+7*cSW21+7*cSW22+7*cSW23+7*cSW24+7*cSW25+7*cSW26+7*cSW27+7*cSW28+7*cSW29+7*cSW3+7*cSW30+7*cSW31+7*cSW32+7*cSW33+7*cSW34+7*cSW35+7*cSW36+7*cSW37+7*cSW38+7*cSW39+7*cSW4+7*cSW40+7*cSW41+7*cSW42+7*cSW43+7*cSW44+7*cSW45+7*cSW46+7*cSW47+7*cSW48+7*cSW49+7*cSW5+7*cSW50+7*cSW51+7*cSW6+7*cSW7+7*cSW8+7*cSW9-cTIME_+11.85)+1e-300)))+534700)))]==>Q1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re4",
+     ""
+    ],
+    [
+     "0.0008",
+     "0",
+     "0",
+     "Q1==>Q2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re5",
+     ""
+    ],
+    [
+     "0.30165",
+     "0",
+     "0",
+     "Q1==>Q3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re6",
+     ""
+    ],
+    [
+     "0.30165",
+     "0",
+     "0",
+     "Q2==>Q4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re7",
+     ""
+    ],
+    [
+     "500",
+     "0",
+     "0",
+     "Q3==>Q4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re8",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "Q4==>dead_corona_tested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re9",
+     ""
+    ],
+    [
+     "0.067",
+     "0",
+     "0",
+     "Q4==>recovered_tested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re10",
+     ""
+    ],
+    [
+     "0.067",
+     "0",
+     "0",
+     "Q3==>recovered_nontested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 1/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "Q1==>Q5+Q1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 2/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "Q2==>Q5+Q2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 3/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "Q3==>Q5+Q3",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 4/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "Q4==>Q5+Q4",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 5/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "Q5==>2Q5",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 6/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "Q6==>Q5+Q6",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 7/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "recovered_nontested_0==>Q5+recovered_nontested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re11 term 8/8",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "recovered_tested_0==>Q5+recovered_tested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re12",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "Q5==>dead_noncorona_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re13",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "recovered_tested_0==>dead_noncorona_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re14",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "recovered_nontested_0==>dead_noncorona_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re15",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "Q2==>dead_corona_tested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re16",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "Q1==>dead_corona_nontested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re17",
+     ""
+    ],
+    [
+     "3.29e-5",
+     "0",
+     "0",
+     "Q6==>dead_noncorona_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "re18",
+     ""
+    ],
+    [
+     "0.002",
+     "0",
+     "0",
+     "Q3==>dead_corona_nontested_0",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "SBML time as a pseudo-species (d TIME_/dt = 1)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source==>TIME_",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "species": {
+   "cols": [
+    "Species",
+    "Residence (CSTR,s)",
+    "Initial Conc.",
+    "Display (Y/N)",
+    "External Conc.",
+    "SSA? (Y/N)",
+    "Const File/#/No",
+    "Comments",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Species Description Spreadsheet",
+     ""
+    ],
+    [
+     "# Species",
+     "Residence",
+     "Initial",
+     "Display",
+     "External",
+     "Species Special",
+     "Constant File?",
+     "Comments",
+     ""
+    ],
+    [
+     "Q1",
+     "0",
+     "2",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "infected_nontested [infected_nontested_0]",
+     ""
+    ],
+    [
+     "Q2",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "infected_tested [infected_tested_0]",
+     ""
+    ],
+    [
+     "Q5",
+     "0",
+     "630000",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "uninfected_nontested [uninfected_nontested_0]",
+     ""
+    ],
+    [
+     "Q6",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "uninfected_tested [uninfected_tested_0]",
+     ""
+    ],
+    [
+     "Q4",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "symptoms_tested [symptoms_tested_0]",
+     ""
+    ],
+    [
+     "Q3",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "symptoms_nontested [symptoms_nontested_0]",
+     ""
+    ],
+    [
+     "recovered_tested_0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "recovered_tested [recovered_tested_0]",
+     ""
+    ],
+    [
+     "recovered_nontested_0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "recovered_nontested [recovered_nontested_0]",
+     ""
+    ],
+    [
+     "susceptible_0",
+     "0",
+     "1",
+     "Y",
+     "0",
+     "No",
+     "1",
+     "susceptible [susceptible_0]",
+     ""
+    ],
+    [
+     "dead_corona_tested_0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "dead_corona_tested [dead_corona_tested_0]",
+     ""
+    ],
+    [
+     "dead_corona_nontested_0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "dead_corona_nontested [dead_corona_nontested_0]",
+     ""
+    ],
+    [
+     "dead_noncorona_0",
+     "0",
+     "0",
+     "Y",
+     "0",
+     "No",
+     "No",
+     "dead_noncorona [dead_noncorona_0]",
+     ""
+    ],
+    [
+     "TIME_",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "No",
+     "time [__time__]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 15 (off->on) [__switch__]",
+     ""
+    ],
+    [
+     "SW52",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW52.TXT-SET",
+     "time switch at 15 (on->off) [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time condition: 1 change(s), first at 15 [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW3.TXT-SET",
+     "time condition: 1 change(s), first at 22 [__switch__]",
+     ""
+    ],
+    [
+     "SW4",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW4.TXT-SET",
+     "time condition: 1 change(s), first at 29 [__switch__]",
+     ""
+    ],
+    [
+     "SW5",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW5.TXT-SET",
+     "time condition: 1 change(s), first at 36 [__switch__]",
+     ""
+    ],
+    [
+     "SW6",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW6.TXT-SET",
+     "time condition: 1 change(s), first at 43 [__switch__]",
+     ""
+    ],
+    [
+     "SW7",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW7.TXT-SET",
+     "time condition: 1 change(s), first at 50 [__switch__]",
+     ""
+    ],
+    [
+     "SW8",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW8.TXT-SET",
+     "time condition: 1 change(s), first at 57 [__switch__]",
+     ""
+    ],
+    [
+     "SW9",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW9.TXT-SET",
+     "time condition: 1 change(s), first at 64 [__switch__]",
+     ""
+    ],
+    [
+     "SW10",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW10.TXT-SET",
+     "time condition: 1 change(s), first at 71 [__switch__]",
+     ""
+    ],
+    [
+     "SW11",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW11.TXT-SET",
+     "time condition: 1 change(s), first at 78 [__switch__]",
+     ""
+    ],
+    [
+     "SW12",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW12.TXT-SET",
+     "time condition: 1 change(s), first at 85 [__switch__]",
+     ""
+    ],
+    [
+     "SW13",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW13.TXT-SET",
+     "time condition: 1 change(s), first at 92 [__switch__]",
+     ""
+    ],
+    [
+     "SW14",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW14.TXT-SET",
+     "time condition: 1 change(s), first at 99 [__switch__]",
+     ""
+    ],
+    [
+     "SW15",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW15.TXT-SET",
+     "time condition: 1 change(s), first at 106 [__switch__]",
+     ""
+    ],
+    [
+     "SW16",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW16.TXT-SET",
+     "time condition: 1 change(s), first at 113 [__switch__]",
+     ""
+    ],
+    [
+     "SW17",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW17.TXT-SET",
+     "time condition: 1 change(s), first at 120 [__switch__]",
+     ""
+    ],
+    [
+     "SW18",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW18.TXT-SET",
+     "time condition: 1 change(s), first at 127 [__switch__]",
+     ""
+    ],
+    [
+     "SW19",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW19.TXT-SET",
+     "time condition: 1 change(s), first at 134 [__switch__]",
+     ""
+    ],
+    [
+     "SW20",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW20.TXT-SET",
+     "time condition: 1 change(s), first at 141 [__switch__]",
+     ""
+    ],
+    [
+     "SW21",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW21.TXT-SET",
+     "time condition: 1 change(s), first at 148 [__switch__]",
+     ""
+    ],
+    [
+     "SW22",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW22.TXT-SET",
+     "time condition: 1 change(s), first at 155 [__switch__]",
+     ""
+    ],
+    [
+     "SW23",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW23.TXT-SET",
+     "time condition: 1 change(s), first at 162 [__switch__]",
+     ""
+    ],
+    [
+     "SW24",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW24.TXT-SET",
+     "time condition: 1 change(s), first at 169 [__switch__]",
+     ""
+    ],
+    [
+     "SW25",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW25.TXT-SET",
+     "time condition: 1 change(s), first at 176 [__switch__]",
+     ""
+    ],
+    [
+     "SW26",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW26.TXT-SET",
+     "time condition: 1 change(s), first at 183 [__switch__]",
+     ""
+    ],
+    [
+     "SW27",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW27.TXT-SET",
+     "time condition: 1 change(s), first at 190 [__switch__]",
+     ""
+    ],
+    [
+     "SW28",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW28.TXT-SET",
+     "time condition: 1 change(s), first at 197 [__switch__]",
+     ""
+    ],
+    [
+     "SW29",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW29.TXT-SET",
+     "time condition: 1 change(s), first at 204 [__switch__]",
+     ""
+    ],
+    [
+     "SW30",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW30.TXT-SET",
+     "time condition: 1 change(s), first at 211 [__switch__]",
+     ""
+    ],
+    [
+     "SW31",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW31.TXT-SET",
+     "time condition: 1 change(s), first at 218 [__switch__]",
+     ""
+    ],
+    [
+     "SW32",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW32.TXT-SET",
+     "time condition: 1 change(s), first at 225 [__switch__]",
+     ""
+    ],
+    [
+     "SW33",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW33.TXT-SET",
+     "time condition: 1 change(s), first at 232 [__switch__]",
+     ""
+    ],
+    [
+     "SW34",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW34.TXT-SET",
+     "time condition: 1 change(s), first at 239 [__switch__]",
+     ""
+    ],
+    [
+     "SW35",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW35.TXT-SET",
+     "time condition: 1 change(s), first at 246 [__switch__]",
+     ""
+    ],
+    [
+     "SW36",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW36.TXT-SET",
+     "time condition: 1 change(s), first at 253 [__switch__]",
+     ""
+    ],
+    [
+     "SW37",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW37.TXT-SET",
+     "time condition: 1 change(s), first at 260 [__switch__]",
+     ""
+    ],
+    [
+     "SW38",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW38.TXT-SET",
+     "time condition: 1 change(s), first at 267 [__switch__]",
+     ""
+    ],
+    [
+     "SW39",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW39.TXT-SET",
+     "time condition: 1 change(s), first at 274 [__switch__]",
+     ""
+    ],
+    [
+     "SW40",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW40.TXT-SET",
+     "time condition: 1 change(s), first at 281 [__switch__]",
+     ""
+    ],
+    [
+     "SW41",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW41.TXT-SET",
+     "time condition: 1 change(s), first at 288 [__switch__]",
+     ""
+    ],
+    [
+     "SW42",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW42.TXT-SET",
+     "time condition: 1 change(s), first at 295 [__switch__]",
+     ""
+    ],
+    [
+     "SW43",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW43.TXT-SET",
+     "time condition: 1 change(s), first at 302 [__switch__]",
+     ""
+    ],
+    [
+     "SW44",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW44.TXT-SET",
+     "time condition: 1 change(s), first at 309 [__switch__]",
+     ""
+    ],
+    [
+     "SW45",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW45.TXT-SET",
+     "time condition: 1 change(s), first at 316 [__switch__]",
+     ""
+    ],
+    [
+     "SW46",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW46.TXT-SET",
+     "time condition: 1 change(s), first at 323 [__switch__]",
+     ""
+    ],
+    [
+     "SW47",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW47.TXT-SET",
+     "time condition: 1 change(s), first at 330 [__switch__]",
+     ""
+    ],
+    [
+     "SW48",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW48.TXT-SET",
+     "time condition: 1 change(s), first at 337 [__switch__]",
+     ""
+    ],
+    [
+     "SW49",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW49.TXT-SET",
+     "time condition: 1 change(s), first at 344 [__switch__]",
+     ""
+    ],
+    [
+     "SW50",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW50.TXT-SET",
+     "time condition: 1 change(s), first at 351 [__switch__]",
+     ""
+    ],
+    [
+     "SW51",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW51.TXT-SET",
+     "time condition: 1 change(s), first at 358 [__switch__]",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "parm": {
+   "cols": [
+    "Starting Time",
+    "Max Time",
+    "Ea Units",
+    "Conc Units",
+    "X0",
+    ""
+   ],
+   "rows": [
+    [
+     "#",
+     "Parameter Description SpreadSheet",
+     "",
+     "",
+     "",
+     ""
+    ],
+    [
+     "# Starting Integration Time",
+     "Maximum Integration Time",
+     "Ea UNITS (Kcal, KJ,J,CAL,K)",
+     "Conc. Units(moles/L, moles/cc, molecules/cc)",
+     "X0",
+     ""
+    ],
+    [
+     "1e-6",
+     "0.3333333337",
+     "KCAL",
+     "MOLES/LITER",
+     "0",
+     ""
+    ],
+    [
+     "#Temperature (K) or Filename",
+     "Pressure (Constant ? (Yes/No) )",
+     "Volume Profile (Filename/No)",
+     "External Heat Source",
+     "X0",
+     ""
+    ],
+    [
+     "298",
+     "NOPE",
+     "NO",
+     "No",
+     "0",
+     ""
+    ],
+    [
+     "#       DAYS",
+     "Hours",
+     "Minutes",
+     "Seconds",
+     "PicoSeconds",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "365",
+     "0",
+     ""
+    ],
+    [
+     "#hv(filename)",
+     "Sampling Interval (s)",
+     "Percent(%)",
+     "Accuracy",
+     "X0",
+     ""
+    ],
+    [
+     "None1",
+     "0.3333333337",
+     "0",
+     "1e-8",
+     "0",
+     ""
+    ],
+    [
+     "# CSTR/PFR inlet Flow Temperature",
+     "X0",
+     "X0",
+     "X0",
+     "X0",
+     ""
+    ],
+    [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     ""
+    ],
+    [
+     "END",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  "therm": {
+   "cols": [
+    "DB Filename",
+    "Input Format",
+    "MAP Fields",
+    "Special Switches",
+    "Reservation List",
+    ""
+   ],
+   "rows": []
+  },
+  "fitdata": {
+   "cols": [],
+   "rows": []
+  }
+ },
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "15",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW52.TXT",
+   "key": "O_SW52.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "15",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "15",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW3.TXT",
+   "key": "O_SW3.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "22",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW4.TXT",
+   "key": "O_SW4.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "29",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW5.TXT",
+   "key": "O_SW5.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "36",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW6.TXT",
+   "key": "O_SW6.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "43",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW7.TXT",
+   "key": "O_SW7.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "50",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW8.TXT",
+   "key": "O_SW8.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "57",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW9.TXT",
+   "key": "O_SW9.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "64",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW10.TXT",
+   "key": "O_SW10.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "71",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW11.TXT",
+   "key": "O_SW11.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "78",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW12.TXT",
+   "key": "O_SW12.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "85",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW13.TXT",
+   "key": "O_SW13.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "92",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW14.TXT",
+   "key": "O_SW14.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "99",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW15.TXT",
+   "key": "O_SW15.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "106",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW16.TXT",
+   "key": "O_SW16.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "113",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW17.TXT",
+   "key": "O_SW17.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "120",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW18.TXT",
+   "key": "O_SW18.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "127",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW19.TXT",
+   "key": "O_SW19.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "134",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW20.TXT",
+   "key": "O_SW20.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "141",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW21.TXT",
+   "key": "O_SW21.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "148",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW22.TXT",
+   "key": "O_SW22.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "155",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW23.TXT",
+   "key": "O_SW23.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "162",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW24.TXT",
+   "key": "O_SW24.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "169",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW25.TXT",
+   "key": "O_SW25.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "176",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW26.TXT",
+   "key": "O_SW26.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "183",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW27.TXT",
+   "key": "O_SW27.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "190",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW28.TXT",
+   "key": "O_SW28.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "197",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW29.TXT",
+   "key": "O_SW29.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "204",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW30.TXT",
+   "key": "O_SW30.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "211",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW31.TXT",
+   "key": "O_SW31.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "218",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW32.TXT",
+   "key": "O_SW32.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "225",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW33.TXT",
+   "key": "O_SW33.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "232",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW34.TXT",
+   "key": "O_SW34.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "239",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW35.TXT",
+   "key": "O_SW35.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "246",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW36.TXT",
+   "key": "O_SW36.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "253",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW37.TXT",
+   "key": "O_SW37.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "260",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW38.TXT",
+   "key": "O_SW38.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "267",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW39.TXT",
+   "key": "O_SW39.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "274",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW40.TXT",
+   "key": "O_SW40.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "281",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW41.TXT",
+   "key": "O_SW41.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "288",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW42.TXT",
+   "key": "O_SW42.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "295",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW43.TXT",
+   "key": "O_SW43.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "302",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW44.TXT",
+   "key": "O_SW44.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "309",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW45.TXT",
+   "key": "O_SW45.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "316",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW46.TXT",
+   "key": "O_SW46.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "323",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW47.TXT",
+   "key": "O_SW47.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "330",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW48.TXT",
+   "key": "O_SW48.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "337",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW49.TXT",
+   "key": "O_SW49.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "344",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW50.TXT",
+   "key": "O_SW50.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "351",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW51.TXT",
+   "key": "O_SW51.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "358",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
+}

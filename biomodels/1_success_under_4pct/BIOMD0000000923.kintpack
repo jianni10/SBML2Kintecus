@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T23:02:24.955853+00:00",
- "description": "Li\u00f22012_Modelling osteomyelitis_Control Model\nBioModels BIOMD0000000923 (curated). SBML file: Lio2012_Modelling osteomyelitis_Control Model.xml.\nSimulation: 0 to 1200 time units (SED-ML: Lio2012_Modelling osteomyelitis_Control Model.sedml), sampling 1.2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.57e-05 of species peak (worst: Osteoclasts__O_c)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_fo_z: piecewise/conditional rate encoded with abs()-based step functions\n  [info] reaction_fo_z term 4/9: rate order differs from the stoichiometry; consumed on separate line(s) - Bone_Density__z: zero order, signed\n  [info] reaction_fo_z term 5/9: rate order differs from the stoichiometry; consumed on separate line(s) - Bone_Density__z: zero order, signed\n  [info] reaction_fo_z term 8/9: rate order differs from the stoichiometry; consumed on separate line(s) - Bone_Density__z: zero order, signed\n  [info] reaction_fo_z term 9/9: rate order differs from the stoichiometry; consumed on separate line(s) - Bone_Density__z: zero order, signed",
+ "created": "2026-11-07T22:28:35.558624+00:00",
+ "description": "Li\u00f22012_Modelling osteomyelitis_Control Model\nBioModels BIOMD0000000923 (curated). SBML file: Lio2012_Modelling osteomyelitis_Control Model.xml.\nSimulation: 0 to 1200 time units (SED-ML: Lio2012_Modelling osteomyelitis_Control Model.sedml), sampling 1.2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.57e-05 of species peak (worst: Osteoclasts__O_c)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_fo_z: piecewise/conditional rate encoded with abs()-based step functions\n  [info] reaction_fo_z term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Bone_Density__z: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,126 +49,28 @@
      "#",
      "",
      "",
-     "reaction_fo_z term 1/9",
-     ""
-    ],
-    [
-     "0.009685277500000007",
-     "0",
-     "0",
-     "source==>Bone_Density__z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_fo_z term 2/9",
-     ""
-    ],
-    [
-     "0.00031975",
-     "0",
-     "0",
-     "Osteoblasts__O_b==>Bone_Density__z+Osteoblasts__O_b",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_fo_z term 3/9",
+     "reaction_fo_z term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cOsteoblasts__O_b:(20.24143359995/(2*abs(cOsteoblasts__O_b-177.91)+2e-300))]==>Bone_Density__z",
+     "source+S[USER;cOsteoblasts__O_b:(0.0006395*(cOsteoblasts__O_b/2+abs(cOsteoblasts__O_b-177.91)/2-88.955))]==>Bone_Density__z",
      ""
     ],
     [
      "#",
      "",
      "",
-     "reaction_fo_z term 4/9 (consumes Bone_Density__z)",
+     "reaction_fo_z term 2/2 (consumes Bone_Density__z)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cOsteoclasts__O_c:((-1*0.0374*cOsteoclasts__O_c))]==>Bone_Density__z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_fo_z term 5/9 (consumes Bone_Density__z)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cOsteoclasts__O_c:((-1*0.23699632000000004/(2*abs(cOsteoclasts__O_c-1.78)+2e-300)))]==>Bone_Density__z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_fo_z term 6/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Osteoblasts__O_b+Osteoblasts__O_b+S[USER;cOsteoblasts__O_b:(0.0006395/(2*abs(cOsteoblasts__O_b-177.91)+2e-300))]==>Bone_Density__z+2Osteoblasts__O_b",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_fo_z term 7/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Osteoclasts__O_c+S[USER;cOsteoclasts__O_c:(0.266288/(2*abs(cOsteoclasts__O_c-1.78)+2e-300))]==>Bone_Density__z+Osteoclasts__O_c",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_fo_z term 8/9 (consumes Bone_Density__z)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cOsteoclasts__O_c:((-1*0.0748*cOsteoclasts__O_c^2/(2*abs(cOsteoclasts__O_c-1.78)+2e-300)))]==>Bone_Density__z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_fo_z term 9/9 (consumes Bone_Density__z)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cOsteoblasts__O_b:((-1*0.22754689*cOsteoblasts__O_b/(2*abs(cOsteoblasts__O_b-177.91)+2e-300)))]==>Bone_Density__z",
+     "source+S[USER;cOsteoclasts__O_c:((-1*0.0748*(cOsteoclasts__O_c/2+abs(cOsteoclasts__O_c-1.78)/2-0.89)))]==>Bone_Density__z",
      ""
     ],
     [

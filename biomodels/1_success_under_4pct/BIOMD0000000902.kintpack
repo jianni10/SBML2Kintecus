@@ -1,10 +1,10 @@
 {
  "version": 3,
- "created": "2026-11-01T23:02:39.212135+00:00",
- "description": "Wang2019 - A mathematical model of oncolytic virotherapy with time delay\nBioModels BIOMD0000000902 (curated). SBML file: Wang2019.xml.\nSimulation: 0 to 50 time units (SED-ML: Wang2019.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.50e-06 of species peak (worst: x)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Length_of_Eclipse_Phase: rate order differs from the stoichiometry; consumed on separate line(s) - I: zero order, signed",
+ "created": "2026-11-07T22:27:58.123151+00:00",
+ "description": "Wang2019 - A mathematical model of oncolytic virotherapy with time delay\nBioModels BIOMD0000000902 (curated). SBML file: Wang2019.xml.\nSimulation: 0 to 50 time units (SED-ML: Wang2019.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.32e-06 of species peak (worst: x)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Length_of_Eclipse_Phase: rate order differs from the stoichiometry; consumed on separate line(s) - I: zero order, signed",
  "settings": {
   "kpath": "",
-  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
   "nation": false
  },
  "grids": {
@@ -49,35 +49,21 @@
      "#",
      "",
      "",
-     "Uninfected_Cells_Proliferation term 1/3",
+     "Uninfected_Cells_Proliferation term 1/2",
      ""
     ],
     [
-     "0.206",
+     "1",
      "0",
      "0",
-     "x==>2x",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Uninfected_Cells_Proliferation term 2/3",
-     ""
-    ],
-    [
-     "9.630668536699392e-5",
-     "0",
-     "0",
-     "x+x==>x",
+     "x+S[USER;cx:(0.206-9.630668536699392e-5*cx)]==>2x",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Uninfected_Cells_Proliferation term 3/3",
+     "Uninfected_Cells_Proliferation term 2/2",
      ""
     ],
     [
@@ -98,7 +84,7 @@
      "0.000448",
      "0",
      "0",
-     "y+x==>I",
+     "x+y==>I",
      ""
     ],
     [
@@ -386,7 +372,7 @@
      "None1",
      "0.5",
      "0",
-     "1e-10",
+     "1e-8",
      "0",
      ""
     ],

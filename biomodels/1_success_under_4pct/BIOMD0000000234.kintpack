@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-05T21:11:49.788126+00:00",
+ "created": "2026-11-07T20:39:07.483804+00:00",
  "description": "Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin\nBioModels BIOMD0000000234 (curated). SBML file: GemcitabineCorrected.xml.\nSimulation: 0 to 60 time units (SED-ML: GemcitabineCorrected.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.55e-06 of species peak (worst: Ce)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 2 event(s) depend only on time (and on variables only they change): unrolled into 11 firing(s) up to t = 60\n  [info] time event(s) on 'Ce' encoded as time/value pairs in EV_P_CE.TXT (ADD)\nRenamed species (Kintecus name = SBML id): p_Ce = Ce; p_TumorSize = TumorSize",
  "settings": {
   "kpath": "",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_TumorSize:(0.3055045871559633*cp_TumorSize)]==>p_TumorSize",
+     "source+S[USER;cp_TumorSize:(cp_TumorSize*(0.3055045871559633-0.04587155963302752*cp_TumorSize))]==>p_TumorSize",
      ""
     ],
     [
@@ -78,20 +78,6 @@
      "",
      "",
      "rate rule dTumorSize/dt term 2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "p_TumorSize+S[USER;cp_TumorSize:(0.04587155963302752*cp_TumorSize)]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dTumorSize/dt term 3",
      ""
     ],
     [

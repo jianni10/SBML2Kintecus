@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T15:47:59.907118+00:00",
- "description": "Schaber2006_Pheromone_Starvation_Crosstalk\nBioModels BIOMD0000000237 (curated). SBML file: BIOMD0000000237_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000237_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.29411764705882354.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.84e-06 of species peak (worst: Ste5Ste11GbgFus3)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] v2 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - Ste5Ste11Gbg: zero order, signed\n  [info] v2 term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - Ste5Ste11Gbg: zero order, signed\n  [info] v7: rate order differs from the stoichiometry; consumed on separate line(s) - Ste5: zero order, signed\n  [info] v13 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - Ste11P: zero order, signed\n  [info] v13 term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - Ste11P: zero order, signed\n  [info] v18: rate order differs from the stoichiometry; consumed on separate line(s) - Kss1: first order\nRenamed species (Kintecus name = SBML id): p1 = p; s1 = s",
+ "created": "2026-11-07T20:39:15.416350+00:00",
+ "description": "Schaber2006_Pheromone_Starvation_Crosstalk\nBioModels BIOMD0000000237 (curated). SBML file: BIOMD0000000237_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000237_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.29411764705882354.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.84e-06 of species peak (worst: Ste5Ste11GbgFus3)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] v7: rate order differs from the stoichiometry; consumed on separate line(s) - Ste5: zero order, signed\n  [info] v18: rate order differs from the stoichiometry; consumed on separate line(s) - Kss1: first order\nRenamed species (Kintecus name = SBML id): p1 = p; s1 = s",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -63,84 +63,14 @@
      "#",
      "",
      "",
-     "v2 term 1/4",
+     "v2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Gbg+Ste5Ste11+S[USER;cSW1,cTIME_:(0.01*cSW1*exp((-1*0.5*cTIME_)))]==>Ste5Ste11Gbg",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v2 term 2/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Gbg+Ste5Ste11+S[USER;cSW2,cSW3:(0.01*cSW2*cSW3)]==>Ste5Ste11Gbg",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v2 term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cGbg,cSW2,cSW3,cSte5Ste11,cTIME_:(0.01*cGbg*cSW2*cSW3*cSte5Ste11*exp((-1*0.5*cTIME_)))]==>Gbg+Ste5Ste11",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v2 term 3/4 (consumes Ste5Ste11Gbg)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cGbg,cSW2,cSW3,cSte5Ste11,cTIME_:((-1*0.01*cGbg*cSW2*cSW3*cSte5Ste11*exp((-1*0.5*cTIME_))))]==>Ste5Ste11Gbg",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v2 term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cGbg,cSW1,cSW2,cSW3,cSte5Ste11,cTIME_:(0.01*cGbg*cSW1*cSW2*cSW3*cSte5Ste11*exp((-1*0.5*cTIME_)))]==>Gbg+Ste5Ste11",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v2 term 4/4 (consumes Ste5Ste11Gbg)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cGbg,cSW1,cSW2,cSW3,cSte5Ste11,cTIME_:((-1*0.01*cGbg*cSW1*cSW2*cSW3*cSte5Ste11*exp((-1*0.5*cTIME_))))]==>Ste5Ste11Gbg",
+     "Gbg+Ste5Ste11+S[USER;cSW1,cSW2,cSW3,cTIME_:(0.01*cSW1*(-cSW2*cSW3+1)*exp((-1*0.5*cTIME_))+0.01*cSW2*cSW3*(1-1*exp((-1*0.5*cTIME_))))]==>Ste5Ste11Gbg",
      ""
     ],
     [
@@ -301,84 +231,14 @@
      "#",
      "",
      "",
-     "v13 term 1/4",
+     "v13",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Ste11+S[USER;cSW2,cSW5:(1*cSW2*cSW5)]==>Ste11P",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v13 term 2/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Ste11+S[USER;cSW4,cTIME_:(65659969.13733051*cSW4*exp((-1*0.05*cTIME_)))]==>Ste11P",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v13 term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW2,cSW5,cSte11,cTIME_:(1*cSW2*cSW5*cSte11*exp((-1*0.05*cTIME_)))]==>Ste11",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v13 term 3/4 (consumes Ste11P)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW2,cSW5,cSte11,cTIME_:((-1*1*cSW2*cSW5*cSte11*exp((-1*0.05*cTIME_))))]==>Ste11P",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v13 term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW2,cSW4,cSW5,cSte11,cTIME_:(65659969.13733051*cSW2*cSW4*cSW5*cSte11*exp((-1*0.05*cTIME_)))]==>Ste11",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v13 term 4/4 (consumes Ste11P)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW2,cSW4,cSW5,cSte11,cTIME_:((-1*65659969.13733051*cSW2*cSW4*cSW5*cSte11*exp((-1*0.05*cTIME_))))]==>Ste11P",
+     "Ste11+S[USER;cSW2,cSW4,cSW5,cTIME_:(1*cSW2*cSW5*(1-exp((-1*0.05*cTIME_)))+1*cSW4*(-cSW2*cSW5+1)*exp(18-0.05*cTIME_))]==>Ste11P",
      ""
     ],
     [

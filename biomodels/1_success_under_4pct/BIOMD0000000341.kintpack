@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T06:58:06.312835+00:00",
+ "created": "2026-11-07T20:56:20.866240+00:00",
  "description": "Topp2000_BetaCellMass_Diabetes\nBioModels BIOMD0000000341 (curated). SBML file: BIOMD0000000341_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000341_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.05e-06 of species peak (worst: G)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -137,24 +137,10 @@
      ""
     ],
     [
-     "0.00084",
-     "0",
-     "0",
-     "B+G==>2B+G",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dB/dt term 3",
-     ""
-    ],
-    [
      "1",
      "0",
      "0",
-     "B+S[USER;cG:(2.4e-6*cG^2)]==>sink",
+     "B+S[USER;cG:(0.00084*cG-2.4e-6*cG^2)]==>2B",
      ""
     ],
     [

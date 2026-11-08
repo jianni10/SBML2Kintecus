@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-02T04:07:13.412987+00:00",
+ "created": "2026-11-07T22:28:20.009551+00:00",
  "description": "Phillips2007_AscendingArousalSystem_SleepWakeDynamics\nBioModels BIOMD0000000917 (curated). SBML file: Phillips2007_Curated.xml.\nSimulation: 0 to 72 time units (SED-ML: Phillips2007.sedml), sampling 0.072.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.31e-06 of species peak (worst: Monoaminergic__MA__voltage)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'Monoaminergic__MA__voltage' goes below zero in the SBML: integrated as Monoaminergic__MA__volta_o = value + 50, output as Monoaminergic__MA__voltage = OUTC[Monoaminergic__MA__volta_o;-50*source]\n  [info] 'Ventrolateral_preopticarea__VLPO__voltage' goes below zero in the SBML: integrated as Ventrolateralpreopticare_o = value + 50, output as Ventrolateralpreopticarea1 = OUTC[Ventrolateralpreopticare_o;-50*source]\nRenamed species (Kintecus name = SBML id): Ventrolateralpreopticarea1 = Ventrolateral_preopticarea__VLPO__voltage",
  "settings": {
   "kpath": "",
@@ -84,7 +84,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cVentrolateralpreopticare_o:((-1*68400/(1+28.031624894526136*exp((-1*0.3333333333333333*(cVentrolateralpreopticare_o-50))))))]==>Monoaminergic__MA__volta_o",
+     "source+S[USER;cVentrolateralpreopticare_o:((-1*68400/(exp(3.3333333333333335-0.3333333333333333*(cVentrolateralpreopticare_o-50))+1)))]==>Monoaminergic__MA__volta_o",
      ""
     ],
     [
@@ -140,7 +140,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cMonoaminergic__MA__volta_o:((-1*68400/(1+28.031624894526136*exp((-1*0.3333333333333333*(cMonoaminergic__MA__volta_o-50))))))]==>Ventrolateralpreopticare_o",
+     "source+S[USER;cMonoaminergic__MA__volta_o:((-1*68400/(exp(3.3333333333333335-0.3333333333333333*(cMonoaminergic__MA__volta_o-50))+1)))]==>Ventrolateralpreopticare_o",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cMonoaminergic__MA__volta_o:(33.33333333333333/(1+28.031624894526136*exp((-1*0.3333333333333333*(cMonoaminergic__MA__volta_o-50)))))]==>Somnogen_level_H",
+     "source+S[USER;cMonoaminergic__MA__volta_o:(33.33333333333333/(exp(3.3333333333333335-0.3333333333333333*(cMonoaminergic__MA__volta_o-50))+1))]==>Somnogen_level_H",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T06:51:19.651878+00:00",
- "description": "Rohwer2001_Sucrose\nBioModels BIOMD0000000023 (curated). SBML file: BIOMD0000000023_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000023_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.80e-06 of species peak (worst: Suc)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] v3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v6 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v6 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v8 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v8 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v11: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T20:20:32.132340+00:00",
+ "description": "Rohwer2001_Sucrose\nBioModels BIOMD0000000023 (curated). SBML file: BIOMD0000000023_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000023_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.80e-06 of species peak (worst: Suc)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] v3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v6: rate order differs from the stoichiometry; consumed on separate line(s) - HexP: zero order, signed\n  [info] v7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v8: rate order differs from the stoichiometry; consumed on separate line(s) - Fru: zero order, signed; HexP: zero order, signed\n  [info] v9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] v11: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -119,28 +119,28 @@
      "#",
      "",
      "",
-     "v6 term 1/2",
+     "v6",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "HexP+HexP+S[USER;cHexP,cSuc6P:(0.017937406750000003/(1.4370949563492064*cHexP+0.6761178571428571*cSuc6P*(cHexP+1e-30)^2+0.038871864285714285*cSuc6P*(cHexP+1e-30)+0.09475*cSuc6P+0.04732825*(cHexP+1e-30)^2+2.2717899999999998))]==>Suc6P",
+     "source+S[USER;cHexP,cSuc6P:(1*(0.017937406750000003*cHexP^2-0.007580000000000001*cSuc6P)/(0.04732825*cHexP^2*(14.285714285714285*cSuc6P+1)+1.4370949563492064*cHexP+0.0379*cSuc6P*(0.14375*cHexP+1)+0.05685*cSuc6P*(0.5879285714285715*cHexP+1)+2.2717899999999998))]==>Suc6P",
      ""
     ],
     [
      "#",
      "",
      "",
-     "v6 term 2/2",
+     "v6 (consumes HexP)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Suc6P+S[USER;cHexP,cSuc6P:(0.007580000000000001/(0.6761178571428571*cHexP^2*(cSuc6P+1e-30)+0.04732825*cHexP^2+0.038871864285714285*cHexP*(cSuc6P+1e-30)+1.4370949563492064*cHexP+0.09475*cSuc6P+2.2717899999999998))]==>2HexP",
+     "source+S[USER;cHexP,cSuc6P:((-1*2*(0.017937406750000003*cHexP^2-0.007580000000000001*cSuc6P)/(0.04732825*cHexP^2*(14.285714285714285*cSuc6P+1)+1.4370949563492064*cHexP+0.0379*cSuc6P*(0.14375*cHexP+1)+0.05685*cSuc6P*(0.5879285714285715*cHexP+1)+2.2717899999999998)))]==>HexP",
      ""
     ],
     [
@@ -161,28 +161,42 @@
      "#",
      "",
      "",
-     "v8 term 1/2",
+     "v8",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Suc+S[USER;cFru,cHexP,cSuc:(0.13540000000000002/(0.009287311666666668*cFru*cHexP*(cSuc+1e-30)+0.37149246666666674*cFru*cHexP+0.05*cFru*(cSuc+1e-30)+0.22566666666666668*cFru+0.029719397333333338*cHexP*(cSuc+1e-30)+1.485969866666667*cHexP+0.5*cSuc+25))]==>Fru+HexP",
+     "source+S[USER;cFru,cHexP,cSuc:(1*(0.11144774000000002*cFru*cHexP-0.13540000000000002*cSuc)/(0.22566666666666668*cFru+0.37149246666666674*cHexP*(cFru*(0.025*cSuc+1)+0.08*cSuc+4)+0.2*cSuc*(0.25*cFru+1)+0.3*cSuc+25))]==>Suc",
      ""
     ],
     [
      "#",
      "",
      "",
-     "v8 term 2/2",
+     "v8 (consumes Fru)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Fru+HexP+S[USER;cFru,cHexP,cSuc:(0.11144774000000002/(0.22566666666666668*cFru+1.485969866666667*cHexP+0.009287311666666668*cSuc*(cFru+1e-30)*(cHexP+1e-30)+0.05*cSuc*(cFru+1e-30)+0.029719397333333338*cSuc*(cHexP+1e-30)+0.5*cSuc+0.37149246666666674*(cFru+1e-30)*(cHexP+1e-30)+25))]==>Suc",
+     "source+S[USER;cFru,cHexP,cSuc:((-1*1*(0.11144774000000002*cFru*cHexP-0.13540000000000002*cSuc)/(0.22566666666666668*cFru+0.37149246666666674*cHexP*(cFru*(0.025*cSuc+1)+0.08*cSuc+4)+0.2*cSuc*(0.25*cFru+1)+0.3*cSuc+25)))]==>Fru",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "v8 (consumes HexP)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cFru,cHexP,cSuc:((-1*1*(0.11144774000000002*cFru*cHexP-0.13540000000000002*cSuc)/(0.22566666666666668*cFru+0.37149246666666674*cHexP*(cFru*(0.025*cSuc+1)+0.08*cSuc+4)+0.2*cSuc*(0.25*cFru+1)+0.3*cSuc+25)))]==>HexP",
      ""
     ],
     [

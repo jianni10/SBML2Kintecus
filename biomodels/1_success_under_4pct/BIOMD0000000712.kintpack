@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:07:09.766000+00:00",
+ "created": "2026-11-07T22:12:46.794968+00:00",
  "description": "Manchanda2014 - Effect on Immune System by 4 different Influenza A virus strains\nBioModels BIOMD0000000712 (curated). SBML file: Jena5258.xml.\nSimulation: 0 to 22 time units (SED-ML: Bakum1832.sedml), sampling 0.22.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.75e-06 of species peak (worst: P)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'S' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction_2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): P1 = P",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "reaction_1 term 1/2",
+     "reaction_1",
      ""
     ],
     [
-     "3.63",
+     "1",
      "0",
      "0",
-     "P1==>2P1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 2/2",
-     ""
-    ],
-    [
-     "1.1238390092879256",
-     "0",
-     "0",
-     "P1+P1==>P1",
+     "P1+S[USER;cP1:(3.63-1.1238390092879256*cP1)]==>2P1",
      ""
     ],
     [

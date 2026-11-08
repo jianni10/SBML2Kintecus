@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-26T22:52:55.698002+00:00",
+ "created": "2026-11-07T22:29:20.748789+00:00",
  "description": "Palmer2008 - Negative Feedback in IL-7 mediated Jak-Stat signaling\nBioModels BIOMD0000000968 (curated). SBML file: Palmer2008.xml.\nSimulation: 0 to 60 time units (SED-ML: Palmer2008.sedml), sampling 0.6666666666666666.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.04e-06 of species peak (worst: pSTAT5)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -112,7 +112,7 @@
      "0.1",
      "0",
      "0",
-     "IL7IL7RpJAK1STAT5==>STAT5+IL7IL7RpJAK1",
+     "IL7IL7RpJAK1STAT5==>IL7IL7RpJAK1+STAT5",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "STAT5+IL7IL7RpJAK1==>IL7IL7RpJAK1STAT5",
+     "IL7IL7RpJAK1+STAT5==>IL7IL7RpJAK1STAT5",
      ""
     ],
     [
@@ -380,7 +380,7 @@
     ],
     [
      "1e-6",
-     "0.6666666666666666",
+     "0.6666666667",
      "KCAL",
      "MOLES/LITER",
      "0",
@@ -428,7 +428,7 @@
     ],
     [
      "None1",
-     "0.6666666666666666",
+     "0.6666666667",
      "0",
      "1e-8",
      "0",

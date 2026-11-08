@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T23:01:18.259945+00:00",
- "description": "Smith1980 - Hypothalamic Regulation\nBioModels BIOMD0000000831 (curated). SBML file: Smith1980_HypothalamicRegulation.xml.\nSimulation: 0 to 20 time units (SED-ML: Smith1980_HypothalamicRegulation.sedml), sampling 0.2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.10e-04 of species peak (worst: R)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R_formation term 3/5: rate order differs from the stoichiometry; consumed on separate line(s) - R1: zero order, signed\n  [info] R_formation term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - R1: zero order, signed\nRenamed species (Kintecus name = SBML id): R1 = R; T1 = T",
+ "created": "2026-11-07T22:24:40.209753+00:00",
+ "description": "Smith1980 - Hypothalamic Regulation\nBioModels BIOMD0000000831 (curated). SBML file: Smith1980_HypothalamicRegulation.xml.\nSimulation: 0 to 20 time units (SED-ML: Smith1980_HypothalamicRegulation.sedml), sampling 0.2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.10e-04 of species peak (worst: R)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): R1 = R; T1 = T",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -119,11 +119,11 @@
      "#",
      "",
      "",
-     "R_formation term 1/5",
+     "R_formation term 1/2",
      ""
     ],
     [
-     "50",
+     "100",
      "0",
      "0",
      "source==>R1",
@@ -133,56 +133,14 @@
      "#",
      "",
      "",
-     "R_formation term 2/5",
+     "R_formation term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cT1:(416.6666666666667/(abs(cT1-8.333333333333334)+1e-300))]==>R1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R_formation term 3/5 (consumes R1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cT1:((-1*6*cT1))]==>R1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R_formation term 4/5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "T1+T1+S[USER;cT1:(6/(abs(cT1-8.333333333333334)+1e-300))]==>R1+2T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R_formation term 5/5 (consumes R1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cT1:((-1*100*cT1/(abs(cT1-8.333333333333334)+1e-300)))]==>R1",
+     "source+S[USER;cT1:(12*cT1*((cT1-8.333333333333334)/(2*(abs(cT1-8.333333333333334)+1e-300))+0.5)-12*cT1-100*((cT1-8.333333333333334)/(2*(abs(cT1-8.333333333333334)+1e-300))+0.5))]==>R1",
      ""
     ],
     [

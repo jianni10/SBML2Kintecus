@@ -67,11 +67,96 @@ PAIR_FILES_MAX = 95    # pair files per model (J. Ianni 11-05: TSX1(95,1052), TS
 FRAC_MAX = 4.0          # non-integer reactant coefficients up to this are written as Kintecus coefficients (rate ~ [A]^n)
 
 
+class KSTEP(sp.Function):
+    """Heaviside step H(z): 1 for z>0, 0 for z<0. Kept as ONE opaque factor while rates are cancelled, expanded and
+    split into lines, and written only when printed, as (z/(abs(z)+1e-300)+1)/2 (Kintecus USER has no
+    conditionals). Before 2026-11-07 the abs() form itself went through sympy: cancel/expand_mul multiplied it into
+    the rest of the rate, e.g. max(x,0) = x*H(x) became x^2/(2|x|) + x/2 expanded into terms ~1/|x| that cancel only
+    in exact arithmetic - each of those terms on its own Kintecus line. Near the switch point (x -> 0) the lines are
+    huge and of opposite sign: the integrator crawls (0474, 0603-0606, 0610, 0589, ...)."""
+    nargs = 1
+
+    @classmethod
+    def eval(cls, z):
+        if z.is_Number:
+            return sp.Integer(1) if z > 0 else sp.Integer(0)
+
+    def fdiff(self, argindex=1):
+        return sp.Integer(0)
+
+    def _eval_evalf(self, prec):
+        return ((self.args[0] / (sp.Abs(self.args[0]) + STEP_EPS) + 1) / 2).evalf(prec)
+
+
+class KPOS(sp.Function):
+    """max(z, 0) = (z+abs(z))/2, opaque like KSTEP (piecewise(z, z>0, 0) and its multiples)."""
+    nargs = 1
+
+    @classmethod
+    def eval(cls, z):
+        if z.is_Number:
+            return z if z > 0 else sp.Integer(0)
+
+    def fdiff(self, argindex=1):
+        return KSTEP(self.args[0])
+
+    def _eval_evalf(self, prec):
+        return ((self.args[0] + sp.Abs(self.args[0])) / 2).evalf(prec)
+
+
+class KEXP(sp.Function):
+    """exp(x) kept whole. sympy's own exp pulls Float terms out of its argument when it is built: exp(3800.0 - 4*t)
+    becomes 2.08e+1650*exp(-4*t), a constant beyond double range (written 1e308) times exp(-4*t); in Kintecus
+    1e308*exp(-4*t)*[A] overflows to inf and the rate to NaN (0554: sigmoid stimulus 1/(1+exp(-sr*(t - t0))))."""
+    nargs = 1
+
+    @classmethod
+    def eval(cls, x):
+        if x.is_Number:
+            return sp.exp(x)
+
+    def fdiff(self, argindex=1):
+        return self
+
+    def _eval_evalf(self, prec):
+        return sp.exp(self.args[0]).evalf(prec)
+
+
+ATOMIC_STEP = os.environ.get("KIN_ATOMIC_STEP", "1") == "1"
+WHOLE_EXP = os.environ.get("KIN_WHOLE_EXP", "1") == "1"
+MERGE_OPPOSITE = os.environ.get("KIN_MERGE_OPPOSITE", "1") == "1"
+TIME_SWITCH = os.environ.get("KIN_TIME_SWITCH", "1") == "1"   # time-only conditions -> switch species
+PRINT_NEG_FIX = os.environ.get("KIN_PRINT_NEG_FIX", "1") == "1"   # parenthesize -1*(sum) (wrong as -1*a+b before 11-07)
+TSWITCH_MAX = 60   # see Converter._merge_opposite
+
+
 def step(z):
-    """Heaviside step built from abs(): 1 for z>0, 0 for z<0 (Kintecus USER has no conditionals)."""
+    """Heaviside step: 1 for z>0, 0 for z<0 (see KSTEP)."""
     if z.is_Number:
         return sp.Integer(1) if z > 0 else sp.Integer(0)
+    if ATOMIC_STEP:
+        return KSTEP(z)
     return (z / (sp.Abs(z) + STEP_EPS) + 1) / 2
+
+
+def _times_step(v, c):
+    """v * c for a piecewise branch value v and condition c; when c = H(z) and v = a*z (a constant: v vanishes where
+    the condition switches, e.g. max(x,0) or a turgor-pressure law), the product is written a*max(z,0)."""
+    if ATOMIC_STEP and isinstance(c, KSTEP) and not v.is_Number:
+        z = c.args[0]
+        try:
+            if sp.count_ops(v) < 60:
+                a = sp.cancel(v / z)
+                if a.is_number:
+                    return a * KPOS(z)
+        except Exception:
+            pass
+    return v * c
+
+
+def _not_step(c):
+    """1 - c, written H(-z) when c = H(z) (equal except at z = 0) so it stays one factor."""
+    return KSTEP(-c.args[0]) if ATOMIC_STEP and isinstance(c, KSTEP) else 1 - c
 
 
 class MathConv:
@@ -124,7 +209,7 @@ class MathConv:
         if t == T.AST_CONSTANT_PI:
             return sp.pi
         if t == T.AST_FUNCTION_EXP:
-            return sp.exp(k[0])
+            return KEXP(k[0]) if WHOLE_EXP else sp.exp(k[0])
         if t == T.AST_FUNCTION_LN:
             return sp.log(k[0])
         if t == T.AST_FUNCTION_LOG:
@@ -150,7 +235,7 @@ class MathConv:
             out = other
             for val, cond in reversed(pairs):
                 c = self.conv(cond)
-                out = self.conv(val) * c + (1 - c) * out
+                out = _times_step(self.conv(val), c) + (_times_step(out, _not_step(c)) if out != 0 else 0)
             self.used_step = True
             return out
         rel = {T.AST_RELATIONAL_GT: 1, T.AST_RELATIONAL_GEQ: 1, T.AST_RELATIONAL_LT: -1, T.AST_RELATIONAL_LEQ: -1}
@@ -163,12 +248,24 @@ class MathConv:
                 up = (rel[t] > 0) == (kids[0] == tsym)        # time > t0  -> 0 before, 1 after
                 return self.switch(t0, up)
             out = sp.Integer(1)
+            conv_ = getattr(self.switch, "__self__", None)
             for a, b in zip(kids, kids[1:]):
-                out *= step(rel[t] * (a - b))
-            self.used_step = True
+                g = rel[t] * (a - b)
+                sw = conv_.tswitch(g, "ge" if t in (T.AST_RELATIONAL_GEQ, T.AST_RELATIONAL_LEQ) else "gt") \
+                    if conv_ is not None and TIME_SWITCH else None
+                if sw is not None:
+                    out *= sw
+                    continue
+                out *= step(g)
+                self.used_step = True
             return out
         if t in (T.AST_RELATIONAL_EQ, T.AST_RELATIONAL_NEQ):
             a, b = self.conv(n.getChild(0)), self.conv(n.getChild(1))
+            conv_ = getattr(self.switch, "__self__", None)
+            sw = conv_.tswitch(a - b, "eq" if t == T.AST_RELATIONAL_EQ else "ne") \
+                if conv_ is not None and TIME_SWITCH else None
+            if sw is not None:
+                return sw
             ne = step(sp.Abs(a - b))
             self.used_step = True
             return ne if t == T.AST_RELATIONAL_NEQ else 1 - ne
@@ -270,7 +367,11 @@ class KPrinter(StrPrinter):
     def _print_Mul(self, e):
         c, rest = e.as_coeff_Mul()
         if c < 0:
-            return f"(-1*{self._print(-e)})"
+            ne = -e
+            inner = self._print(ne)
+            if ne.is_Add and PRINT_NEG_FIX:      # Mul(-1, a+b) left unevaluated: -1*(a+b), not -1*a+b
+                inner = f"({inner})"
+            return f"(-1*{inner})"
         return super()._print_Mul(e)
 
     def _print_Add(self, e, order=None):
@@ -284,6 +385,14 @@ class KPrinter(StrPrinter):
     def _print_Function(self, e):
         if e.func.__name__ == "OFFSET":          # shifted state: (c<state> - shift), kept as one factor
             return f"({self._print(e.args[0])}-{self._print(e.args[1])})"
+        if e.func.__name__ == "KEXP":
+            return f"exp({self._print(e.args[0])})"
+        if e.func.__name__ == "KSTEP":           # H(z) = (z/(abs(z)+1e-300)+1)/2, one parenthesized factor
+            z = e.args[0]
+            return "(" + self._print((z / (sp.Abs(z) + STEP_EPS) + 1) / 2) + ")"
+        if e.func.__name__ == "KPOS":            # max(z,0) = (z+abs(z))/2
+            z = e.args[0]
+            return "(" + self._print((z + sp.Abs(z)) / 2) + ")"
         fmap = {"exp": "exp", "log": "log", "sin": "sin", "cos": "cos", "tan": "tan", "asin": "asin",
                 "acos": "acos", "atan": "atn", "sinh": "sinh", "cosh": "cosh", "tanh": "tanh", "Abs": "abs",
                 "floor": "floor"}
@@ -335,7 +444,28 @@ def safe_cancel(u):
     the result as expanded polynomial / expanded polynomial, which turns factored rate laws such as
     (1+a/Ka)(1+b/Kb)... into thousands of characters. When the cancelled form would not fit on a Kintecus line,
     the expression is kept as written."""
-    c = sp.cancel(u)
+    # exp(...) is kept whole: cancel writes exp(3800 - 4t) as exp(3800)*exp(-4t), and exp(3800) is beyond double
+    # range (printed 1e308): 1e308*exp(-4t)*[A] overflows to inf and the rate to NaN (0554 sigmoid switches)
+    cache, back = {}, {}
+    def _hide(e):
+        if e not in cache:
+            d = sp.Dummy(); cache[e] = d; back[d] = e
+        return cache[e]
+    try:
+        u2 = u.replace(lambda e: isinstance(e, sp.exp), _hide) if WHOLE_EXP else u
+    except Exception:
+        u2, back = u, {}
+    c = sp.cancel(u2)
+    for _ in range(10):
+        if not back or not (c.free_symbols & set(back)):
+            break
+        c = c.xreplace(back)
+    if back:
+        try:
+            c = c.replace(lambda e: e.is_Mul and sum(isinstance(f, sp.exp) for f in e.args) > 1,
+                          lambda e: sp.powsimp(e, combine="exp"))       # exp(a)*exp(-a) -> 1
+        except Exception:
+            pass
     if len(str(c)) > USER_MAX_LEN and len(str(c)) > 2 * len(str(u)):
         return u                 # keep the SBML's own (factored) form; sp.factor can run for hours on these
     return c
@@ -629,6 +759,7 @@ class Converter:
         self.init = rr_init or {}          # values at t=0 from roadrunner: id -> value
         self.time_used = False
         self.switches = {}                 # (t0, up) -> kintecus name
+        self.tswitches = {}                # (v0, ((t, v), ...)) -> kintecus name (time-only conditions, tswitch)
 
     def flag(self, sev, text):
         if (sev, text) not in self.flags:
@@ -919,14 +1050,100 @@ class Converter:
     def switch(self, t0, up):
         key = (round(t0, 12), up)
         if key not in self.switches:
-            self.switches[key] = f"SW{len(self.switches) + 1}"
+            self.switches[key] = f"SW{len(self.switches) + len(self.tswitches) + 1}"
         self.time_used = True                       # keeps the time pseudo-species out of the way of names
         return sp.Symbol("c" + self.switches[key])
+
+    def tswitch(self, g, mode):
+        """A condition on time alone (g > 0, g >= 0, g == 0 or g != 0 with g a function of time only, e.g. a daily
+        light window written with floor(time/24), or 'time - (to + tend) >= 0'): its 0/1 value over [0, t_end] is
+        worked out here and written as a switch species with a Time/value-pair Constant File, instead of an abs()
+        step of time inside the rate (a step the integrator has to find by shrinking its step, every period).
+        None (caller falls back to the abs() step) if g is not time-only, or the schedule is not found reliably."""
+        tsym = sp.Symbol("cTIME_")
+        if not hasattr(self, "t_end") or g.is_Number or g.free_symbols != {tsym} or PROFILE_FORMAT != "pairs":
+            return None
+        T_ = float(self.t_end)
+        try:
+            f = sp.lambdify(tsym, g, modules=[{"floor": math.floor, "ceiling": math.ceil, "KEXP": math.exp,
+                                               "KSTEP": lambda z: 1.0 if z > 0 else 0.0,
+                                               "KPOS": lambda z: max(z, 0.0)}, "math"])
+            f(0.0)
+        except Exception:
+            return None
+        brk = set()
+        for fl in g.atoms(sp.floor, sp.ceiling):
+            try:
+                P = sp.Poly(fl.args[0], tsym)
+            except Exception:
+                return None
+            if P.degree() > 1 or any(x.free_symbols for x in P.all_coeffs()):
+                return None
+            co = [float(x) for x in P.all_coeffs()]
+            sl, b = (co[0], co[1]) if len(co) == 2 else (0.0, co[0])
+            if sl == 0:
+                continue
+            k0, k1 = sorted((b, sl * T_ + b))
+            if math.floor(k1) - math.ceil(k0) > 20000:
+                return None
+            brk |= {(k - b) / sl for k in range(math.ceil(k0), math.floor(k1) + 1)}
+        tol = 1e-12 * max(1.0, T_)
+        val = lambda x: f(x)
+        def cond(x):
+            v = val(x)
+            return (v > 0 if mode == "gt" else v >= 0 if mode == "ge" else abs(v) <= 1e-12 * max(1.0, abs(x))
+                    if mode == "eq" else abs(v) > 1e-12 * max(1.0, abs(x)))
+        pts = sorted({0.0, T_} | {x for x in brk if 0 < x < T_})
+        changes = []
+        try:
+            for x0, x1 in zip(pts, pts[1:]):
+                if x1 - x0 <= tol:
+                    continue
+                n = 512
+                tiny = 1e-9 * (x1 - x0)
+                xs = [x0 + tiny] + [x0 + (x1 - x0) * (i + 0.5) / n for i in range(n)] + [x1 - tiny]
+                cs = [cond(x) for x in xs]
+                changes.append((x0, cs[0]))                  # value just after the breakpoint x0
+                for (xa, ca), (xb, cb) in zip(zip(xs, cs), zip(xs[1:], cs[1:])):
+                    if ca == cb:
+                        continue
+                    lo, hi = xa, xb
+                    ga, gb = val(xa), val(xb)
+                    if mode in ("gt", "ge") and ga != gb:     # affine inside the segment: exact root
+                        r = xa - ga * (xb - xa) / (gb - ga)
+                        eps = 1e-9 * (xb - xa)
+                        if lo < r < hi and cond(r - eps) == ca and cond(r + eps) == cb:
+                            changes.append((r, cb)); continue
+                    for _ in range(200):
+                        mid = 0.5 * (lo + hi)
+                        if cond(mid) == ca: lo = mid
+                        else: hi = mid
+                    changes.append((hi, cb))
+        except Exception:
+            return None
+        v0 = 1.0 if cond(0.0) else 0.0
+        sched, cur = [], v0
+        for x, c in changes:
+            c = 1.0 if c else 0.0
+            if c != cur:
+                sched.append((x, c)); cur = c
+        sched = [(x, c) for x, c in sched if x < T_]
+        if sched and sched[0][0] <= tol:                    # changes at t = 0+ (e.g. time > 0): initial value
+            v0 = sched[0][1]; sched = sched[1:]
+        if not sched:
+            return sp.Integer(int(v0))
+        if len(sched) > PAIR_MAX or len(self.switches) + len(self.tswitches) >= TSWITCH_MAX:
+            return None
+        key = (v0, tuple((round(t_, 12), c) for t_, c in sched))
+        if key not in self.tswitches:
+            self.tswitches[key] = f"SW{len(self.switches) + len(self.tswitches) + 1}"
+        self.time_used = True
+        return sp.Symbol("c" + self.tswitches[key])
 
     # reactions -----------------------------------------------------------------
     def split_terms(self, v):
         if sp.count_ops(v) > 150:                  # expansion of large nested laws can explode
-            return list(sp.Add.make_args(v)) if len(sp.Add.make_args(v)) <= 40 else [v]
+            return self._merge_opposite(list(sp.Add.make_args(v)), v) if len(sp.Add.make_args(v)) <= 40 else [v]
         try:
             ex = sp.expand_mul(v)
         except Exception:
@@ -936,7 +1153,34 @@ class Converter:
             return [v]
         if max(len(str(t)) for t in terms) > USER_MAX_LEN and len(str(ex)) > 2 * len(str(v)):
             return [v]          # expand_mul multiplied a factored law out into a term too long for a line
-        return terms
+        return self._merge_opposite(terms, v)
+
+    def _merge_opposite(self, terms, v):
+        """Terms of opposite sign that depend on the same species are one rate split apart by the expansion, not
+        separate reactions: a2*Ag/(K1+Ag)*I/(K2+I) with Ag = 1 - t^10/(K+t^10) (0215), k*A*max(x,0) (0474),
+        k*A*(1 - H) ... Written as separate lines they are large and cancel (a negative one becomes a signed
+        zero-order line), which leaves the integrator a rate made of rounding error near the cancellation point.
+        Such terms are kept together (the whole rate as written if all terms are one group). Terms with different
+        species (kf*A - kr*B) stay separate lines."""
+        if not MERGE_OPPOSITE or getattr(self, "_nomerge", False) or len(terms) < 2:
+            return terms
+        spec = {sp.Symbol("c" + n) for n in self.kname.values() if n != "TIME_" and not re.match(r"SW\d+$", n)}
+        groups = {}
+        for t in terms:
+            groups.setdefault(frozenset(t.free_symbols & spec), []).append(t)
+        neg = lambda t: t.as_coeff_Mul()[0] < 0
+        mixed = {k for k, ts in groups.items() if any(neg(t) for t in ts) and not all(neg(t) for t in ts)}
+        if not mixed:
+            return terms
+        if len(groups) == 1:
+            return [v]
+        out = []
+        for k, ts in groups.items():
+            if k in mixed:
+                out.append(sp.factor_terms(sp.Add(*ts)))
+            else:
+                out.extend(ts)
+        return out
 
     def emit(self, term, lhs, rhs, comment, allowed=frozenset()):
         """lhs/rhs: gross (kintecus name, stoich) lists. term: rate contribution in conc/time, already divided by
@@ -1326,9 +1570,35 @@ class Converter:
                           f"{rid}" + (f" term {i+1}/{len(terms)}" if len(terms) > 1 else "") +
                           (f" (volume {num(V)})" if len(groups) > 1 else ""), allowed)
 
+    def _retry_unmerged(self, fn, what):
+        """Run one conversion; if it fails with merged opposite-sign terms (a merged rate can grow past the line
+        length once divided by its reactants), undo its lines and flags and convert it again term by term."""
+        n_l, n_f, n_o = len(self.lines), len(self.flags), len(self.ofiles)
+        try:
+            fn()
+            return
+        except Unsupported as ex:
+            err = ex
+        if MERGE_OPPOSITE and not getattr(self, "_nomerge", False):
+            del self.lines[n_l:]; del self.flags[n_f:]; del self.ofiles[n_o:]
+            self._nomerge = True
+            try:
+                fn()
+                self.flag("info", f"{what}: converted term by term (merged rate too long: {err})")
+                return
+            except Unsupported as ex2:
+                err = ex2
+            finally:
+                self._nomerge = False
+        self.flag("blocker", f"{what} not converted ({err})")
+
     def convert_rate_rules(self):
         for var, rule in self.rrule.items():
-            try:
+            self._retry_unmerged(lambda: self._convert_rate_rule(var, rule), f"rate rule for '{var}'")
+
+    def _convert_rate_rule(self, var, rule):
+        if True:
+            if True:
                 f = MathConv(self.resolver(), self.switch)(rule.getMath())
                 if var in self.spec:
                     s = self.spec[var]
@@ -1342,8 +1612,6 @@ class Converter:
                 vol_ok = frozenset(self.kname[x] for x in self.reacting_ids)
                 for i, tm in enumerate(self.split_terms(f)):
                     self.emit(tm, [], [(name, 1)], f"rate rule d{var}/dt term {i+1}", vol_ok)
-            except Unsupported as ex:
-                self.flag("blocker", f"rate rule for '{var}' not converted ({ex})")
 
     # profiles --------------------------------------------------------------------
     @staticmethod
@@ -1545,10 +1813,7 @@ class Converter:
         self.reacting_ids |= {v for v in self.rrule if v in self.spec}
         self.varying = set(self.reacting_ids) | {t for t in self.changed_by_event if t in self.spec}
         for r in self.m.getListOfReactions():
-            try:
-                self.convert_reaction(r)
-            except Unsupported as ex:
-                self.flag("blocker", f"reaction '{r.getId()}' not converted ({ex})")
+            self._retry_unmerged(lambda: self.convert_reaction(r), f"reaction '{r.getId()}'")
         self.convert_rate_rules()
         if any("cTIME_" in rx for _, rx, _ in self.lines):
             self.lines.append(("1", f"{SOURCE}==>TIME_", "SBML time as a pseudo-species (d TIME_/dt = 1)"))
@@ -1618,6 +1883,15 @@ class Converter:
             rows.append((nm, 0.0 if up else 1.0, "N", fn, f"time switch at {num(t0)} ({'off->on' if up else 'on->off'})",
                          "__switch__"))
             self.switch_times = getattr(self, "switch_times", []) + [t0]
+        for (v0, sched), nm in self.tswitches.items():
+            fn = f"{nm}.TXT"
+            self.ofiles.append({"filename": fn, "rows": self.pair_rows(list(sched))})
+            rows.append((nm, v0, "N", fn + "-SET", f"time condition: {len(sched)} change(s), first at {num(sched[0][0])}",
+                         "__switch__"))
+            self.switch_times = getattr(self, "switch_times", []) + [t_ for t_, _ in sched]
+        if self.tswitches:
+            self.flag("info", f"{len(self.tswitches)} condition(s) on time alone written as switch species with "
+                              f"time/value pairs ({sum(len(s_) for (_, s_) in self.tswitches)} changes)")
         if len(self.ofiles) > 10:
             self.flag("partial", f"{len(self.ofiles)} profile files exceed the GUI's 10 O_ file limit")
         npair = sum(1 for o in self.ofiles if self.is_pair_file(o))

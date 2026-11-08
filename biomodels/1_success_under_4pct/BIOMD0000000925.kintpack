@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T23:02:31.065170+00:00",
- "description": "Dunster2016 - Nondimensional Coagulation Model\nBioModels BIOMD0000000925 (curated). SBML file: Dunster2016_Nondimensional_Model_Curated.xml.\nSimulation: 0 to 1000 time units (SED-ML: Dunster2016_Nondimensional_Model1.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.81e-06 of species peak (worst: Inactive_Thrombin)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Xa_L' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Va_Xa_L' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Reaction_for_Inactivation_of_Va: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_Inactivation_of_prothrombinase_2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_Generation_of_thrombin term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_Generation_of_thrombin term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_Generation_of_thrombin term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - Thrombin__IIa: zero order, signed\n  [info] Reaction_of_V_Inactivation term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Reaction_of_V_Inactivation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Reaction_for_Thrombin_Inactivation term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - Thrombin__IIa: zero order, signed\n  [info] Reaction_for_Prothrombin_inactivation term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Reaction_for_Prothrombin_inactivation term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T22:28:41.147100+00:00",
+ "description": "Dunster2016 - Nondimensional Coagulation Model\nBioModels BIOMD0000000925 (curated). SBML file: Dunster2016_Nondimensional_Model_Curated.xml.\nSimulation: 0 to 1000 time units (SED-ML: Dunster2016_Nondimensional_Model1.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.81e-06 of species peak (worst: Inactive_Thrombin)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Xa_L' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Va_Xa_L' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Reaction_for_Inactivation_of_Va: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_Inactivation_of_prothrombinase_2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_Generation_of_thrombin term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_for_Generation_of_thrombin term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Reaction_of_V_Inactivation term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Reaction_of_V_Inactivation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Reaction_for_Prothrombin_inactivation term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Reaction_for_Prothrombin_inactivation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -217,7 +217,7 @@
      "#",
      "",
      "",
-     "reaction_for_Generation_of_thrombin term 1/3",
+     "reaction_for_Generation_of_thrombin term 1/2",
      ""
     ],
     [
@@ -231,42 +231,14 @@
      "#",
      "",
      "",
-     "reaction_for_Generation_of_thrombin term 2/3",
+     "reaction_for_Generation_of_thrombin term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Prothrombin__II+Factor_Xa+S[USER;cFactor_V,cProthrombin__II:(0.002/(1*cFactor_V+1*cProthrombin__II+1))]==>Thrombin__IIa+Factor_Xa",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_for_Generation_of_thrombin term 3/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cFactor_V,cFactor_Xa,cProthrombin__II:(0.002*cProthrombin__II*(-30.76*cFactor_Xa+(cFactor_Xa+392.69)^2)^0.5/(cFactor_V+cProthrombin__II+1))]==>Prothrombin__II",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_for_Generation_of_thrombin term 3/3 (consumes Thrombin__IIa)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cFactor_V,cFactor_Xa,cProthrombin__II:((-1*0.002*cProthrombin__II*(-30.76*cFactor_Xa+(cFactor_Xa+392.69)^2)^0.5/(cFactor_V+cProthrombin__II+1)))]==>Thrombin__IIa",
+     "Prothrombin__II+S[USER;cFactor_V,cFactor_Xa,cProthrombin__II:((0.002*cFactor_Xa-0.002*(-30.76*cFactor_Xa+(cFactor_Xa+392.69)^2)^0.5)/(1*cFactor_V+1*cProthrombin__II+1))]==>Thrombin__IIa",
      ""
     ],
     [
@@ -357,7 +329,7 @@
      "#",
      "",
      "",
-     "Reaction_for_Thrombin_Inactivation term 1/3",
+     "Reaction_for_Thrombin_Inactivation term 1/2",
      ""
     ],
     [
@@ -371,35 +343,21 @@
      "#",
      "",
      "",
-     "Reaction_for_Thrombin_Inactivation term 2/3",
+     "Reaction_for_Thrombin_Inactivation term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Prothrombin__II+Prothrombinase__Va_Xa+S[USER;cProthrombin__II:(1.06/(0.004*cProthrombin__II+0.014400000000000001))]==>Thrombin__IIa+Prothrombin__II+Prothrombinase__Va_Xa",
+     "Prothrombin__II+S[USER;cProthrombin__II,cProthrombinase__Va_Xa:(1.06*(cProthrombinase__Va_Xa-(-0.2*cProthrombinase__Va_Xa+(cProthrombinase__Va_Xa+0.0505)^2)^0.5)/(0.004*cProthrombin__II+0.014400000000000001))]==>Thrombin__IIa+Prothrombin__II",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Reaction_for_Thrombin_Inactivation term 3/3 (consumes Thrombin__IIa)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cProthrombin__II,cProthrombinase__Va_Xa:((-1*1.06*cProthrombin__II*(-0.2*cProthrombinase__Va_Xa+(cProthrombinase__Va_Xa+0.0505)^2)^0.5/(0.004*cProthrombin__II+0.014400000000000001)))]==>Thrombin__IIa",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Reaction_for_Prothrombin_inactivation term 1/3",
+     "Reaction_for_Prothrombin_inactivation term 1/2",
      ""
     ],
     [
@@ -413,28 +371,14 @@
      "#",
      "",
      "",
-     "Reaction_for_Prothrombin_inactivation term 2/3",
+     "Reaction_for_Prothrombin_inactivation term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Prothrombin__II+Prothrombinase__Va_Xa+S[USER;cProthrombin__II:(265/(1*cProthrombin__II+3.6))]==>Prothrombinase__Va_Xa",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Reaction_for_Prothrombin_inactivation term 3/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Prothrombin__II+S[USER;cProthrombin__II,cProthrombinase__Va_Xa:(265*(-0.2*cProthrombinase__Va_Xa+(cProthrombinase__Va_Xa+0.0505)^2)^0.5/(cProthrombin__II+3.6))]==>2Prothrombin__II",
+     "Prothrombin__II+S[USER;cProthrombin__II,cProthrombinase__Va_Xa:((265*cProthrombinase__Va_Xa-265*(-0.2*cProthrombinase__Va_Xa+(cProthrombinase__Va_Xa+0.0505)^2)^0.5)/(1*cProthrombin__II+3.6))]==>sink",
      ""
     ],
     [

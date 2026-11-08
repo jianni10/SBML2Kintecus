@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T16:39:43.055742+00:00",
- "description": "Phillips2013 - physiologically based modeling explaining Mammalian rest/activity patterns\nBioModels BIOMD0000001072 (curated). SBML file: Phillips2013.xml.\nSimulation: 0 to 86400 time units (SED-ML: Phillips2013.sedml), sampling 86.4.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS_PARTIAL, max |difference| = 4.69e-06 of species peak (worst: X)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'asleep' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'awake' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'day_0' not converted (trigger fires while time is below a threshold)\n  [info] 'V_v' goes below zero in the SBML: integrated as V_v_o = value + 50, output as V_v = OUTC[V_v_o;-50*source]\n  [info] 'V_m' goes below zero in the SBML: integrated as V_m_o = value + 50, output as V_m = OUTC[V_m_o;-50*source]\n  [info] 'X' goes below zero in the SBML: integrated as X_o = value + 5, output as X = OUTC[X_o;-5*source]\n  [info] 'Y' goes below zero in the SBML: integrated as Y_o = value + 2, output as Y = OUTC[Y_o;-2*source]\n  [info] time event(s) on 'I' encoded as time/value pairs in EV_P_I.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_I = I",
+ "created": "2026-11-07T22:35:05.858143+00:00",
+ "description": "Phillips2013 - physiologically based modeling explaining Mammalian rest/activity patterns\nBioModels BIOMD0000001072 (curated). SBML file: Phillips2013.xml.\nSimulation: 0 to 86400 time units (SED-ML: Phillips2013.sedml), sampling 86.4.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS_PARTIAL, max |difference| = 4.69e-06 of species peak (worst: X)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] events not unrolled as time events (event with delay)\n  [blocker] event 'asleep' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'awake' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'day_0' not converted (trigger fires while time is below a threshold)\n  [info] 'V_v' goes below zero in the SBML: integrated as V_v_o = value + 50, output as V_v = OUTC[V_v_o;-50*source]\n  [info] 'V_m' goes below zero in the SBML: integrated as V_m_o = value + 50, output as V_m = OUTC[V_m_o;-50*source]\n  [info] 'X' goes below zero in the SBML: integrated as X_o = value + 5, output as X = OUTC[X_o;-5*source]\n  [info] 'Y' goes below zero in the SBML: integrated as Y_o = value + 2, output as Y = OUTC[Y_o;-2*source]\n  [info] time event(s) on 'I' encoded as time/value pairs in EV_P_I.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_I = I",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_m_o:((-1*21/(1+28.031624894526136*exp((-1*0.3333333333333333*(cV_m_o-50))))))]==>V_v_o",
+     "source+S[USER;cV_m_o:((-1*21/(exp(3.3333333333333335-0.3333333333333333*(cV_m_o-50))+1)))]==>V_v_o",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_v_o:((-1*18/(1+28.031624894526136*exp((-1*0.3333333333333333*(cV_v_o-50))))))]==>V_m_o",
+     "source+S[USER;cV_v_o:((-1*18/(exp(3.3333333333333335-0.3333333333333333*(cV_v_o-50))+1)))]==>V_m_o",
      ""
     ],
     [
@@ -182,7 +182,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cV_m_o:(0.005555555555555556/(1+28.031624894526136*exp((-1*0.3333333333333333*(cV_m_o-50)))))]==>H",
+     "source+S[USER;cV_m_o:(0.005555555555555556/(exp(3.3333333333333335-0.3333333333333333*(cV_m_o-50))+1))]==>H",
      ""
     ],
     [
@@ -203,7 +203,7 @@
      "#",
      "",
      "",
-     "X_syn term 1/5 (shifted X_o)",
+     "X_syn term 1/2 (shifted X_o)",
      ""
     ],
     [
@@ -217,56 +217,14 @@
      "#",
      "",
      "",
-     "X_syn term 2/5 (shifted X_o)",
+     "X_syn term 2/2 (shifted X_o)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cX_o:(3.1512889272119844e-6*(cX_o-5))]==>X_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "X_syn term 3/5 (shifted X_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cX_o:(1.2605155708847937e-5*(cX_o-5)^3)]==>X_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "X_syn term 4/5 (shifted X_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cX_o:((-1*2.304942758189337e-5*(cX_o-5)^7))]==>X_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "X_syn term 5/5 (shifted X_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cX_o:((-1*7.757018897752576e-7*tanh(10*(cX_o-5))))]==>X_o",
+     "source+S[USER;cX_o:(3.1512889272119844e-6*(cX_o-5)+1.2605155708847937e-5*(cX_o-5)^3-2.304942758189337e-5*(cX_o-5)^7-7.757018897752576e-7*tanh(10*(cX_o-5)))]==>X_o",
      ""
     ],
     [

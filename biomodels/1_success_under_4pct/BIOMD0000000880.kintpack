@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:11:39.738261+00:00",
+ "created": "2026-11-07T22:27:11.537543+00:00",
  "description": "Trisilowati2018 - Optimal control of tumor-immune system interaction with treatment\nBioModels BIOMD0000000880 (curated). SBML file: Trisilowati2018.xml.\nSimulation: 0 to 30 time units (SED-ML: Trisilowati2018.sedml), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.03e-07 of species peak (worst: H_CD4_T_Cells)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Tumor_Growth term 1/2",
+     "Tumor_Growth",
      ""
     ],
     [
-     "0.431",
+     "1",
      "0",
      "0",
-     "T_Tumor_Cells==>2T_Tumor_Cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Growth term 2/2",
-     ""
-    ],
-    [
-     "4.3962e-10",
-     "0",
-     "0",
-     "T_Tumor_Cells+T_Tumor_Cells==>T_Tumor_Cells",
+     "T_Tumor_Cells+S[USER;cT_Tumor_Cells:(0.431-4.3962e-10*cT_Tumor_Cells)]==>2T_Tumor_Cells",
      ""
     ],
     [
@@ -147,28 +133,14 @@
      "#",
      "",
      "",
-     "DC_Growth term 1/2",
+     "DC_Growth",
      ""
     ],
     [
-     "0.234",
+     "1",
      "0",
      "0",
-     "D_Dendritic_Cells==>2D_Dendritic_Cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "DC_Growth term 2/2",
-     ""
-    ],
-    [
-     "2.9250000000000004e-6",
-     "0",
-     "0",
-     "D_Dendritic_Cells+D_Dendritic_Cells==>D_Dendritic_Cells",
+     "D_Dendritic_Cells+S[USER;cD_Dendritic_Cells:(0.234-2.9250000000000004e-6*cD_Dendritic_Cells)]==>2D_Dendritic_Cells",
      ""
     ],
     [
@@ -189,28 +161,14 @@
      "#",
      "",
      "",
-     "CD4_Growth term 1/2",
+     "CD4_Growth",
      ""
     ],
     [
-     "0.017",
+     "1",
      "0",
      "0",
-     "H_CD4_T_Cells==>2H_CD4_T_Cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "CD4_Growth term 2/2",
-     ""
-    ],
-    [
-     "8.500000000000002e-6",
-     "0",
-     "0",
-     "H_CD4_T_Cells+H_CD4_T_Cells==>H_CD4_T_Cells",
+     "H_CD4_T_Cells+S[USER;cH_CD4_T_Cells:(0.017-8.500000000000002e-6*cH_CD4_T_Cells)]==>2H_CD4_T_Cells",
      ""
     ],
     [

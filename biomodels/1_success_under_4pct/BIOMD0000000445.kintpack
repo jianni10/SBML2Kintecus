@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:51:44.689347+00:00",
- "description": "Pokhilko2013 - TOC1 signalling in Arabidopsis circadian clock\nBioModels BIOMD0000000445 (curated). SBML file: BIOMD0000000445_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000445_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.55e-06 of species peak (worst: cP9_m)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] cL_m_trscr term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - cL_m: zero order, signed\n  [info] cL_trsl term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - cL: zero order, signed\n  [info] cL_degr term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cP_trsl term 4/8: rate order differs from the stoichiometry; consumed on separate line(s) - cP: zero order, signed\n  [info] cP_trsl term 5/8: rate order differs from the stoichiometry; consumed on separate line(s) - cP: zero order, signed\n  [info] cP9_m_trscr term 6/6: rate order differs from the stoichiometry; consumed on separate line(s) - cP9_m: zero order, signed\n  [info] cE3n_degr term 4/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cLUX_degr term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cCOP1d_activ term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - cCOP1d: zero order, signed\n  [info] cG_m_trscr term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - cG_m: zero order, signed\n  [info] cG_cZTL_assoc term 3/8: rate order differs from the stoichiometry; consumed on separate line(s) - cZTL: zero order, signed; cG: zero order, signed\n  [info] cG_cZTL_assoc term 4/8: rate order differs from the stoichiometry; consumed on separate line(s) - cZTL: zero order, signed; cG: zero order, signed\n  [info] cG_cZTL_assoc term 8/8: rate order differs from the stoichiometry; consumed on separate line(s) - cZG: zero order, signed\n  [info] reaction_7 term 5/8: rate order differs from the stoichiometry; consumed on separate line(s) - species_4: zero order, signed",
+ "created": "2026-11-07T21:17:46.218334+00:00",
+ "description": "Pokhilko2013 - TOC1 signalling in Arabidopsis circadian clock\nBioModels BIOMD0000000445 (curated). SBML file: BIOMD0000000445_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000445_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.55e-06 of species peak (worst: cP9_m)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] cL_degr term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cE3n_degr term 4/5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cLUX_degr term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cG_cZTL_assoc term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - cG: zero order, signed; cZTL: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,21 +49,21 @@
      "#",
      "",
      "",
-     "cL_m_trscr term 1/5",
+     "cL_m_trscr term 1/2",
      ""
     ],
     [
-     "0.5",
+     "1",
      "0",
      "0",
-     "cP==>cL_m+cP",
+     "cP+S[USER;cTIME_:(0.5*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+0.5*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-0.5*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+0.5)]==>cL_m+cP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cL_m_trscr term 2/5",
+     "cL_m_trscr term 2/2",
      ""
     ],
     [
@@ -77,154 +77,28 @@
      "#",
      "",
      "",
-     "cL_m_trscr term 3/5",
+     "cL_m_degr",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cP+S[USER;cTIME_:(0.5*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>cL_m+cP",
+     "cL_m+S[USER;cTIME_:(0.15000000000000002*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+0.15000000000000002*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-0.15000000000000002*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+0.39)]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cL_m_trscr term 4/5",
+     "cL_trsl",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cP+S[USER;cTIME_:(0.5*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>cL_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_m_trscr term 5/5 (consumes cL_m)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccP:((-1*0.5*ccP*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)))]==>cL_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_m_degr term 1/4",
-     ""
-    ],
-    [
-     "0.39",
-     "0",
-     "0",
-     "cL_m==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_m_degr term 2/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cL_m+S[USER;cTIME_:(0.15000000000000002*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_m_degr term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cL_m+S[USER;cTIME_:(0.15000000000000002*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_m_degr term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cL_m+S[USER;cTIME_:(0.15000000000000002*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>2cL_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_trsl term 1/4",
-     ""
-    ],
-    [
-     "0.335",
-     "0",
-     "0",
-     "cL_m==>cL+cL_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_trsl term 2/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cL_m+S[USER;cTIME_:(0.065*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>cL+cL_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_trsl term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cL_m+S[USER;cTIME_:(0.065*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>cL+cL_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_trsl term 4/4 (consumes cL)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccL_m:((-1*0.065*ccL_m*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)))]==>cL",
+     "cL_m+S[USER;cTIME_:(0.065*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+0.065*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-0.065*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+0.335)]==>cL+cL_m",
      ""
     ],
     [
@@ -287,175 +161,49 @@
      "#",
      "",
      "",
-     "cP_trsl term 1/8",
-     ""
-    ],
-    [
-     "0.15",
-     "0",
-     "0",
-     "source==>cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_trsl term 2/8",
+     "cP_trsl term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.15*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>cP",
+     "source+S[USER;cTIME_:(-0.15*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))-0.15*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)+0.15*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+0.15)]==>cP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cP_trsl term 3/8",
-     ""
-    ],
-    [
-     "0.15",
-     "0",
-     "0",
-     "cP==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_trsl term 4/8 (consumes cP)",
+     "cP_trsl term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:((-1*0.15*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))))]==>cP",
+     "cP+S[USER;cTIME_:(0.15*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+0.15*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-0.15*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)-0.15)]==>2cP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cP_trsl term 5/8 (consumes cP)",
+     "cP_degr",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:((-1*0.15*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)))]==>cP",
+     "cP+S[USER;cTIME_:(0.5*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+0.5*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-0.5*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+0.5)]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cP_trsl term 6/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.15*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>2cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_trsl term 7/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.15*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>2cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_trsl term 8/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.15*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_degr term 1/4",
-     ""
-    ],
-    [
-     "0.5",
-     "0",
-     "0",
-     "cP==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_degr term 2/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.5*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_degr term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.5*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_degr term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.5*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>2cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_m_trscr term 1/6",
+     "cP9_m_trscr term 1/3",
      ""
     ],
     [
@@ -469,7 +217,7 @@
      "#",
      "",
      "",
-     "cP9_m_trscr term 2/6",
+     "cP9_m_trscr term 2/3",
      ""
     ],
     [
@@ -483,56 +231,14 @@
      "#",
      "",
      "",
-     "cP9_m_trscr term 3/6",
+     "cP9_m_trscr term 3/3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cP+S[USER;ccT:(0.24000000000000002/(ccT^2+0.16000000000000003))]==>cP9_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_m_trscr term 4/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_,ccT:(0.24000000000000002*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))/(ccT^2+0.16000000000000003))]==>cP9_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_m_trscr term 5/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_,ccT:(0.24000000000000002*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)/(ccT^2+0.16000000000000003))]==>cP9_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_m_trscr term 6/6 (consumes cP9_m)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccP,ccT:((-1*0.24000000000000002*ccP*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)/(ccT^2+0.16000000000000003)))]==>cP9_m",
+     "cP+S[USER;cTIME_,ccT:(0.24000000000000002*(tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+1)/(ccT^2+0.16000000000000003))]==>cP9_m+cP",
      ""
     ],
     [
@@ -567,56 +273,14 @@
      "#",
      "",
      "",
-     "cP9_degr term 1/4",
-     ""
-    ],
-    [
-     "0.37",
-     "0",
-     "0",
-     "cP9==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_degr term 2/4",
+     "cP9_degr",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cP9+S[USER;cTIME_:(0.05*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_degr term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP9+S[USER;cTIME_:(0.05*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>2cP9",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_degr term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP9+S[USER;cTIME_:(0.05*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>2cP9",
+     "cP9+S[USER;cTIME_:(-0.05*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))-0.05*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)+0.05*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+0.37)]==>sink",
      ""
     ],
     [
@@ -679,56 +343,14 @@
      "#",
      "",
      "",
-     "cP7_degr term 1/4",
-     ""
-    ],
-    [
-     "0.95",
-     "0",
-     "0",
-     "cP7==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP7_degr term 2/4",
+     "cP7_degr",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cP7+S[USER;cTIME_:(0.25*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP7_degr term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP7+S[USER;cTIME_:(0.25*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>2cP7",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP7_degr term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP7+S[USER;cTIME_:(0.25*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>2cP7",
+     "cP7+S[USER;cTIME_:(-0.25*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))-0.25*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)+0.25*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+0.95)]==>sink",
      ""
     ],
     [
@@ -791,56 +413,14 @@
      "#",
      "",
      "",
-     "cNI_degr term 1/4",
-     ""
-    ],
-    [
-     "0.75",
-     "0",
-     "0",
-     "cNI==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cNI_degr term 2/4",
+     "cNI_degr",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cNI+S[USER;cTIME_:(0.25*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cNI_degr term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cNI+S[USER;cTIME_:(0.25*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>2cNI",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cNI_degr term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cNI+S[USER;cTIME_:(0.25*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>2cNI",
+     "cNI+S[USER;cTIME_:(-0.25*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))-0.25*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)+0.25*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+0.75)]==>sink",
      ""
     ],
     [
@@ -889,7 +469,7 @@
      "#",
      "",
      "",
-     "cT_degr term 1/9",
+     "cT_degr term 1/3",
      ""
     ],
     [
@@ -903,112 +483,28 @@
      "#",
      "",
      "",
-     "cT_degr term 2/9",
-     ""
-    ],
-    [
-     "0.25",
-     "0",
-     "0",
-     "cT+cZG==>cZG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cT_degr term 3/9",
-     ""
-    ],
-    [
-     "0.25",
-     "0",
-     "0",
-     "cT+cZTL==>cZTL",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cT_degr term 4/9",
+     "cT_degr term 2/3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cT+cZG+S[USER;cTIME_:(0.05*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>cZG",
+     "cT+cZG+S[USER;cTIME_:(-0.05*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))-0.05*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)+0.05*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+0.25)]==>cZG",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cT_degr term 5/9",
+     "cT_degr term 3/3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cT+cZTL+S[USER;cTIME_:(0.05*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>cZTL",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cT_degr term 6/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cT+cZG+S[USER;cTIME_:(0.05*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>2cT+cZG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cT_degr term 7/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cT+cZG+S[USER;cTIME_:(0.05*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>2cT+cZG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cT_degr term 8/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cT+cZTL+S[USER;cTIME_:(0.05*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>2cT+cZTL",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cT_degr term 9/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cT+cZTL+S[USER;cTIME_:(0.05*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>2cT+cZTL",
+     "cT+cZTL+S[USER;cTIME_:(-0.05*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))-0.05*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)+0.05*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+0.25)]==>cZTL",
      ""
     ],
     [
@@ -1337,56 +833,14 @@
      "#",
      "",
      "",
-     "cCOP1c_degr term 1/4",
-     ""
-    ],
-    [
-     "0.2",
-     "0",
-     "0",
-     "cCOP1c==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cCOP1c_degr term 2/4",
+     "cCOP1c_degr",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cCOP1c+S[USER;cTIME_:(0.1*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cCOP1c_degr term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cCOP1c+S[USER;cTIME_:(0.1*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cCOP1c_degr term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cCOP1c+S[USER;cTIME_:(0.1*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>2cCOP1c",
+     "cCOP1c+S[USER;cTIME_:(0.1*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+0.1*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-0.1*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+0.2)]==>sink",
      ""
     ],
     [
@@ -1407,63 +861,21 @@
      "#",
      "",
      "",
-     "cCOP1n_degr term 1/4",
-     ""
-    ],
-    [
-     "0.2",
-     "0",
-     "0",
-     "cCOP1n==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cCOP1n_degr term 2/4",
+     "cCOP1n_degr",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cCOP1n+S[USER;cTIME_:(0.1*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>sink",
+     "cCOP1n+S[USER;cTIME_:(0.1*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+0.1*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-0.1*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+0.2)]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cCOP1n_degr term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cCOP1n+S[USER;cTIME_:(0.1*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cCOP1n_degr term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cCOP1n+S[USER;cTIME_:(0.1*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>2cCOP1n",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cCOP1d_activ term 1/5",
+     "cCOP1d_activ term 1/2",
      ""
     ],
     [
@@ -1477,133 +889,35 @@
      "#",
      "",
      "",
-     "cCOP1d_activ term 2/5",
-     ""
-    ],
-    [
-     "10",
-     "0",
-     "0",
-     "cCOP1n+cP==>cCOP1d+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cCOP1d_activ term 3/5",
+     "cCOP1d_activ term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cCOP1n+cP+S[USER;cTIME_:(10*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>cCOP1d+cP",
+     "cCOP1n+cP+S[USER;cTIME_:(10*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+10*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-10*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+10)]==>cCOP1d+cP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cCOP1d_activ term 4/5",
+     "cCOP1d_degr",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cCOP1n+cP+S[USER;cTIME_:(10*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>cCOP1d+cP",
+     "cCOP1d+S[USER;cTIME_:(-0.65*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))-0.65*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)+0.65*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+0.75)]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cCOP1d_activ term 5/5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccCOP1n,ccP:(10*ccCOP1n*ccP*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>cCOP1n",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cCOP1d_activ term 5/5 (consumes cCOP1d)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccCOP1n,ccP:((-1*10*ccCOP1n*ccP*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)))]==>cCOP1d",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cCOP1d_degr term 1/4",
-     ""
-    ],
-    [
-     "0.75",
-     "0",
-     "0",
-     "cCOP1d==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cCOP1d_degr term 2/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cCOP1d+S[USER;cTIME_:(0.65*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cCOP1d_degr term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cCOP1d+S[USER;cTIME_:(0.65*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>2cCOP1d",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cCOP1d_degr term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cCOP1d+S[USER;cTIME_:(0.65*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>2cCOP1d",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_m_trscr term 1/5",
+     "cG_m_trscr term 1/2",
      ""
     ],
     [
@@ -1617,56 +931,14 @@
      "#",
      "",
      "",
-     "cG_m_trscr term 2/5",
+     "cG_m_trscr term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cP+S[USER;ccT:(0.2808/(ccT^2+0.36))]==>cG_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_m_trscr term 3/5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_,ccT:(0.2808*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))/(ccT^2+0.36))]==>cG_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_m_trscr term 4/5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_,ccT:(0.2808*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)/(ccT^2+0.36))]==>cG_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_m_trscr term 5/5 (consumes cG_m)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccP,ccT:((-1*0.2808*ccP*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)/(ccT^2+0.36)))]==>cG_m",
+     "cP+S[USER;cTIME_,ccT:(0.2808*(tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+1)/(ccT^2+0.36))]==>cG_m+cP",
      ""
     ],
     [
@@ -1729,182 +1001,56 @@
      "#",
      "",
      "",
-     "cG_cZTL_assoc term 1/8",
-     ""
-    ],
-    [
-     "0.05",
-     "0",
-     "0",
-     "cZG==>cZTL+cG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 2/8",
-     ""
-    ],
-    [
-     "5",
-     "0",
-     "0",
-     "cZTL+cG==>cZG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 3/8",
+     "cG_cZTL_assoc term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,ccZG:(0.05*ccZG*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>cZG",
+     "source+S[USER;cTIME_,ccZG:(0.05*ccZG*(tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)-1))]==>cZG",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cG_cZTL_assoc term 3/8 (consumes cZTL)",
+     "cG_cZTL_assoc term 1/2 (consumes cG)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,ccZG:((-1*0.05*ccZG*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))))]==>cZTL",
+     "source+S[USER;cTIME_,ccZG:((-1*0.05*ccZG*(tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)-1)))]==>cG",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cG_cZTL_assoc term 3/8 (consumes cG)",
+     "cG_cZTL_assoc term 1/2 (consumes cZTL)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,ccZG:((-1*0.05*ccZG*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))))]==>cG",
+     "source+S[USER;cTIME_,ccZG:((-1*0.05*ccZG*(tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)-1)))]==>cZTL",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cG_cZTL_assoc term 4/8",
+     "cG_cZTL_assoc term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,ccZG:(0.05*ccZG*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>cZG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 4/8 (consumes cZTL)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccZG:((-1*0.05*ccZG*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)))]==>cZTL",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 4/8 (consumes cG)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccZG:((-1*0.05*ccZG*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)))]==>cG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 5/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cZG+S[USER;cTIME_:(0.05*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>cZTL+cG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 6/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cZTL+cG+S[USER;cTIME_:(5*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_))))]==>cZG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 7/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cZTL+cG+S[USER;cTIME_:(5*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240))]==>cZG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 8/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccG,ccZTL:(5*ccG*ccZTL*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480))]==>cZTL+cG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 8/8 (consumes cZG)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccG,ccZTL:((-1*5*ccG*ccZTL*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)))]==>cZG",
+     "cG+cZTL+S[USER;cTIME_:(5*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+5*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-5*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+5)]==>cZG",
      ""
     ],
     [
@@ -2037,7 +1183,7 @@
      "#",
      "",
      "",
-     "cEC_degr term 1/7",
+     "cEC_degr term 1/4",
      ""
     ],
     [
@@ -2051,7 +1197,7 @@
      "#",
      "",
      "",
-     "cEC_degr term 2/7",
+     "cEC_degr term 2/4",
      ""
     ],
     [
@@ -2065,7 +1211,7 @@
      "#",
      "",
      "",
-     "cEC_degr term 3/7",
+     "cEC_degr term 3/4",
      ""
     ],
     [
@@ -2079,56 +1225,14 @@
      "#",
      "",
      "",
-     "cEC_degr term 4/7",
+     "cEC_degr term 4/4",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cEC+S[USER;ccCOP1d,ccCOP1n,ccE3n,ccEG,ccG:(1.1*(34*ccE3n*ccG/(3.4000000000000004*ccCOP1d*ccE3n+0.2*ccCOP1d+1.7000000000000002*ccCOP1n*ccE3n+0.1*ccCOP1n+1.7000000000000002*ccE3n+0.1)+4*ccEG/(0.2*ccCOP1d+0.1*ccCOP1n+0.1)+2*ccG/(17*ccE3n+1))^2/((34*ccE3n*ccG/(3.4000000000000004*ccCOP1d*ccE3n+0.2*ccCOP1d+1.7000000000000002*ccCOP1n*ccE3n+0.1*ccCOP1n+1.7000000000000002*ccE3n+0.1)+4*ccEG/(0.2*ccCOP1d+0.1*ccCOP1n+0.1)+2*ccG/(17*ccE3n+1))^2+1))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cEC_degr term 5/7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cEC+S[USER;cTIME_,ccCOP1d,ccCOP1n,ccE3n,ccEG,ccG:(1.1*(34*ccE3n*ccG/(3.4000000000000004*ccCOP1d*ccE3n+0.2*ccCOP1d+1.7000000000000002*ccCOP1n*ccE3n+0.1*ccCOP1n+1.7000000000000002*ccE3n+0.1)+4*ccEG/(0.2*ccCOP1d+0.1*ccCOP1n+0.1)+2*ccG/(17*ccE3n+1))^2*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))/((34*ccE3n*ccG/(3.4000000000000004*ccCOP1d*ccE3n+0.2*ccCOP1d+1.7000000000000002*ccCOP1n*ccE3n+0.1*ccCOP1n+1.7000000000000002*ccE3n+0.1)+4*ccEG/(0.2*ccCOP1d+0.1*ccCOP1n+0.1)+2*ccG/(17*ccE3n+1))^2+1))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cEC_degr term 6/7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cEC+S[USER;cTIME_,ccCOP1d,ccCOP1n,ccE3n,ccEG,ccG:(1.1*(34*ccE3n*ccG/(3.4000000000000004*ccCOP1d*ccE3n+0.2*ccCOP1d+1.7000000000000002*ccCOP1n*ccE3n+0.1*ccCOP1n+1.7000000000000002*ccE3n+0.1)+4*ccEG/(0.2*ccCOP1d+0.1*ccCOP1n+0.1)+2*ccG/(17*ccE3n+1))^2*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)/((34*ccE3n*ccG/(3.4000000000000004*ccCOP1d*ccE3n+0.2*ccCOP1d+1.7000000000000002*ccCOP1n*ccE3n+0.1*ccCOP1n+1.7000000000000002*ccE3n+0.1)+4*ccEG/(0.2*ccCOP1d+0.1*ccCOP1n+0.1)+2*ccG/(17*ccE3n+1))^2+1))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cEC_degr term 7/7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cEC+S[USER;cTIME_,ccCOP1d,ccCOP1n,ccE3n,ccEG,ccG:(1.1*(34*ccE3n*ccG/(3.4000000000000004*ccCOP1d*ccE3n+0.2*ccCOP1d+1.7000000000000002*ccCOP1n*ccE3n+0.1*ccCOP1n+1.7000000000000002*ccE3n+0.1)+4*ccEG/(0.2*ccCOP1d+0.1*ccCOP1n+0.1)+2*ccG/(17*ccE3n+1))^2*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)/((34*ccE3n*ccG/(3.4000000000000004*ccCOP1d*ccE3n+0.2*ccCOP1d+1.7000000000000002*ccCOP1n*ccE3n+0.1*ccCOP1n+1.7000000000000002*ccE3n+0.1)+4*ccEG/(0.2*ccCOP1d+0.1*ccCOP1n+0.1)+2*ccG/(17*ccE3n+1))^2+1))]==>2cEC",
+     "cEC+S[USER;cTIME_,ccCOP1d,ccCOP1n,ccE3n,ccEG,ccG:(1.1*(34*ccE3n*ccG/(3.4000000000000004*ccCOP1d*ccE3n+0.2*ccCOP1d+1.7000000000000002*ccCOP1n*ccE3n+0.1*ccCOP1n+1.7000000000000002*ccE3n+0.1)+4*ccEG/(0.2*ccCOP1d+0.1*ccCOP1n+0.1)+2*ccG/(17*ccE3n+1))^2*(tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+1)/((34*ccE3n*ccG/(3.4000000000000004*ccCOP1d*ccE3n+0.2*ccCOP1d+1.7000000000000002*ccCOP1n*ccE3n+0.1*ccCOP1n+1.7000000000000002*ccE3n+0.1)+4*ccEG/(0.2*ccCOP1d+0.1*ccCOP1n+0.1)+2*ccG/(17*ccE3n+1))^2+1))]==>sink",
      ""
     ],
     [
@@ -2219,112 +1323,28 @@
      "#",
      "",
      "",
-     "reaction_7 term 1/8",
+     "reaction_7 term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cspecies_3:(0.0405/(cspecies_3^2+0.09))]==>species_4",
+     "source+S[USER;cTIME_,cspecies_3:(1*(0.0225*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))+0.0225*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)-0.0225*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)+0.0405)/(cspecies_3^2+0.09))]==>species_4",
      ""
     ],
     [
      "#",
      "",
      "",
-     "reaction_7 term 2/8",
+     "reaction_7 term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,cspecies_3:(0.0225*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))/(cspecies_3^2+0.09))]==>species_4",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_7 term 3/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,cspecies_3:(0.0225*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)/(cspecies_3^2+0.09))]==>species_4",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_7 term 4/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "species_4+S[USER;cspecies_3:(0.0405/(cspecies_3^2+0.09))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_7 term 5/8 (consumes species_4)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,cspecies_3:((-1*0.0225*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)/(cspecies_3^2+0.09)))]==>species_4",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_7 term 6/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "species_4+S[USER;cTIME_,cspecies_3:(0.0225*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)/(cspecies_3^2+0.09))]==>2species_4",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_7 term 7/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "species_4+S[USER;cTIME_,cspecies_3:(0.0225*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))/(cspecies_3^2+0.09))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_7 term 8/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "species_4+S[USER;cTIME_,cspecies_3:(0.0225*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)/(cspecies_3^2+0.09))]==>sink",
+     "species_4+S[USER;cTIME_,cspecies_3:(1*(-0.0225*tanh(20*cTIME_-480*floor(0.041666666666666664*floor(cTIME_)))-0.0225*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+240)+0.0225*tanh(-20*cTIME_+480*floor(0.041666666666666664*floor(cTIME_))+480)-0.0405)/(cspecies_3^2+0.09))]==>2species_4",
      ""
     ],
     [

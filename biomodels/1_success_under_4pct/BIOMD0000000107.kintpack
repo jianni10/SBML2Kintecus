@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:42:58.850224+00:00",
- "description": "Novak1993 - Cell cycle M-phase control\nBioModels BIOMD0000000107 (curated). SBML file: BIOMD0000000107_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000107_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.01e-04 of species peak (worst: UbE_star)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'cdc2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'cdc25' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'wee1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IE' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'UbE' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] R3 term 3/5: rate order differs from the stoichiometry; consumed on separate line(s) - dimer: zero order, signed\n  [info] R3 term 4/5: rate order differs from the stoichiometry; consumed on separate line(s) - dimer: zero order, signed\n  [info] R3 term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - dimer: zero order, signed\n  [info] R5 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - p_dimer: zero order, signed\n  [info] R12 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - p_dimer_p: zero order, signed\n  [info] R17 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R18: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R19 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R20: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R21 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R22: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R23 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R24: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T20:26:23.148588+00:00",
+ "description": "Novak1993 - Cell cycle M-phase control\nBioModels BIOMD0000000107 (curated). SBML file: BIOMD0000000107_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000107_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 9.79e-05 of species peak (worst: UbE_star)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'cdc2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'cdc25' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'wee1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'IE' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'UbE' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] R3 term 3/5: rate order differs from the stoichiometry; consumed on separate line(s) - dimer: zero order, signed\n  [info] R3 term 4/5: rate order differs from the stoichiometry; consumed on separate line(s) - dimer: zero order, signed\n  [info] R3 term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - dimer: zero order, signed\n  [info] R5 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - p_dimer: zero order, signed\n  [info] R12 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - p_dimer_p: zero order, signed\n  [info] R18: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R20: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R22: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] R24: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -511,28 +511,14 @@
      "#",
      "",
      "",
-     "R17 term 1/2",
+     "R17",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "dimer_p+S[USER;ccdc25_p:(0.01/(1.1-ccdc25_p))]==>cdc25_p+dimer_p",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R17 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cdc25_p+dimer_p+S[USER;ccdc25_p:((-1*0.01/(1*ccdc25_p-1.1)))]==>dimer_p",
+     "dimer_p+S[USER;ccdc25_p:(0.01*(1-ccdc25_p)/(1.1-ccdc25_p))]==>cdc25_p+dimer_p",
      ""
     ],
     [
@@ -553,28 +539,14 @@
      "#",
      "",
      "",
-     "R19 term 1/2",
+     "R19",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "dimer_p+S[USER;cwee1_p:(0.0133/(1.3-cwee1_p))]==>wee1_p+dimer_p",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R19 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "wee1_p+dimer_p+S[USER;cwee1_p:((-1*0.0133/(1*cwee1_p-1.3)))]==>dimer_p",
+     "dimer_p+S[USER;cwee1_p:(0.0133*(1-cwee1_p)/(1.3-cwee1_p))]==>wee1_p+dimer_p",
      ""
     ],
     [
@@ -595,28 +567,14 @@
      "#",
      "",
      "",
-     "R21 term 1/2",
+     "R21",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "dimer_p+S[USER;cIE_p:(0.0065/(1.01-cIE_p))]==>IE_p+dimer_p",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R21 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "IE_p+dimer_p+S[USER;cIE_p:((-1*0.0065/(1*cIE_p-1.01)))]==>dimer_p",
+     "dimer_p+S[USER;cIE_p:(0.0065*(1-cIE_p)/(1.01-cIE_p))]==>IE_p+dimer_p",
      ""
     ],
     [
@@ -637,28 +595,14 @@
      "#",
      "",
      "",
-     "R23 term 1/2",
+     "R23",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "IE_p+S[USER;cUbE_star:(0.1/(1.01-cUbE_star))]==>UbE_star+IE_p",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R23 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "UbE_star+IE_p+S[USER;cUbE_star:((-1*0.1/(1*cUbE_star-1.01)))]==>IE_p",
+     "IE_p+S[USER;cUbE_star:(0.1*(1-cUbE_star)/(1.01-cUbE_star))]==>UbE_star+IE_p",
      ""
     ],
     [

@@ -2,7 +2,7 @@ SLOW JOBS - BioModels packs that did not finish within the time limits used here
 =====================================================================================================  (2026-11-07)
 
 WHICH PACKS
-  SLOW_JOBS.csv lists 25 packs. Each one ran out of time (too slow, or no new output row for the stall
+  SLOW_JOBS.csv lists 13 packs. Each one ran out of time (too slow, or no new output row for the stall
   window) on -INT:1 and -INT:5, 300 s each. -INT:2 (explicit Cash-Karp Runge-Kutta) is no longer used: it
   cannot integrate stiff systems (runs end with NaN/Inf), so only -INT:1 and -INT:5 are suggested. Kept run
   folders have VIEW.TXT / KWARN.OUT over 20 MB cut to their first and last 1,000 lines (*_head_tail.txt).
@@ -61,7 +61,7 @@ THE COLUMNS OF SLOW_JOBS.csv
   if_it_stalls_try    the other integrators to try (with --only ID --switches "...")
   previous_attempts   what each integrator did here
 
-  Estimates here: 23 of 25 have one; 15 are estimated at under 1 hour and 8 more at
+  Estimates here: 13 of 13 have one; 7 are estimated at under 1 hour and 6 more at
   1-24 hours. Linear extrapolation is rough: stiff systems often speed up or slow down part-way through.
   The Gear integrator (-INT:3) is deliberately not suggested.
 

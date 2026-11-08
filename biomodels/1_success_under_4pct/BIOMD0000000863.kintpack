@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-01T23:01:50.831815+00:00",
+ "created": "2026-11-07T22:26:53.786716+00:00",
  "description": "Kosinsky2018 - Radiation and PD-(L)1 treatment combinations\nBioModels BIOMD0000000863 (curated). SBML file: Kosinsky2018.xml.\nSimulation: 0 to 40 time units (SED-ML: Kosinsky2018.sedml), sampling 0.4.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.83e-06 of species peak (worst: nTeff)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Diff_T_Cells_Activation term 2/6: rate order differs from the stoichiometry; consumed on separate line(s) - dTeff: zero order, signed\n  [info] Diff_T_Cells_Activation term 3/6: rate order differs from the stoichiometry; consumed on separate line(s) - dTeff: zero order, signed\n  [info] Diff_T_Cells_Activation term 4/6: rate order differs from the stoichiometry; consumed on separate line(s) - dTeff: zero order, signed",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Tumor_Growth term 1/2",
+     "Tumor_Growth",
      ""
     ],
     [
-     "0.4",
+     "1",
      "0",
      "0",
-     "TV==>2TV",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Growth term 2/2",
-     ""
-    ],
-    [
-     "0.00016",
-     "0",
-     "0",
-     "TV+TV==>TV",
+     "TV+S[USER;cTV:(0.4-0.00016*cTV)]==>2TV",
      ""
     ],
     [

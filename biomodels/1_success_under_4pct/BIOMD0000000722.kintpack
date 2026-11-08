@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:59:07.120274+00:00",
- "description": "Bianchi2015 -Model for lymphangiogenesis in normal and diabetic wounds\nBioModels BIOMD0000000722 (curated). SBML file: Wound Healing with Normal health condition.xml.\nSimulation: 0 to 100 time units (SED-ML: Wound Healing with Diabetic health condition.sedml), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.08e-06 of species peak (worst: Capillaries)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Inflow_and_chemotaxis_of_LECs_by_VEGF term 3/10: rate order differs from the stoichiometry; consumed on separate line(s) - LECs: zero order, signed\n  [info] Inflow_and_chemotaxis_of_LECs_by_VEGF term 7/10: rate order differs from the stoichiometry; consumed on separate line(s) - LECs: zero order, signed\n  [info] Inflow_and_chemotaxis_of_LECs_by_VEGF term 9/10: rate order differs from the stoichiometry; consumed on separate line(s) - LECs: zero order, signed\n  [info] Inflow_and_chemotaxis_of_LECs_by_VEGF term 10/10: rate order differs from the stoichiometry; consumed on separate line(s) - LECs: zero order, signed\n  [info] Transdifferentiation_of_LECs_into_the_capillaries term 3/8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Transdifferentiation_of_LECs_into_the_capillaries term 4/8: rate order differs from the stoichiometry; consumed on separate line(s) - Capillaries: zero order, signed\n  [info] Transdifferentiation_of_LECs_into_the_capillaries term 5/8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Transdifferentiation_of_LECs_into_the_capillaries term 6/8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Transdifferentiation_of_LECs_into_the_capillaries term 7/8: rate order differs from the stoichiometry; consumed on separate line(s) - Capillaries: zero order, signed\n  [info] Transdifferentiation_of_LECs_into_the_capillaries term 8/8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T22:13:34.788494+00:00",
+ "description": "Bianchi2015 -Model for lymphangiogenesis in normal and diabetic wounds\nBioModels BIOMD0000000722 (curated). SBML file: Wound Healing with Normal health condition.xml.\nSimulation: 0 to 100 time units (SED-ML: Wound Healing with Diabetic health condition.sedml), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.08e-06 of species peak (worst: Capillaries)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:5 -obeymaxint",
@@ -147,28 +147,14 @@
      "#",
      "",
      "",
-     "Logistic_growth_of_Macrophages term 1/2",
+     "Logistic_growth_of_Macrophages",
      ""
     ],
     [
-     "0.0061",
+     "1",
      "0",
      "0",
-     "Macrophages==>2Macrophages",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Logistic_growth_of_Macrophages term 2/2",
-     ""
-    ],
-    [
-     "1.0166666666666667e-8",
-     "0",
-     "0",
-     "Macrophages+Macrophages==>Macrophages",
+     "Macrophages+S[USER;cMacrophages:(0.0061-1.0166666666666667e-8*cMacrophages)]==>2Macrophages",
      ""
     ],
     [
@@ -287,140 +273,28 @@
      "#",
      "",
      "",
-     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 1/10",
-     ""
-    ],
-    [
-     "250",
-     "0",
-     "0",
-     "source==>LECs",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 2/10",
+     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cCapillaries:(5000000/(2*abs(cCapillaries-10000)+2e-300))]==>LECs",
+     "source+S[USER;cCapillaries:(0.05*(-cCapillaries/2+abs(cCapillaries-10000)/2+5000))]==>LECs",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 3/10 (consumes LECs)",
+     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cCapillaries:((-1*0.025*cCapillaries))]==>LECs",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 4/10",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cVEGF:(5000000*cVEGF^2/(cVEGF^4+8100000000))]==>LECs",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 5/10",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCapillaries,cVEGF:(100000000000*cVEGF^2/(2*cVEGF^4*abs(cCapillaries-10000)+2e-300*cVEGF^4+16200000000*abs(cCapillaries-10000)+1.6200000000000002e-290))]==>LECs",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 6/10",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Capillaries+Capillaries+S[USER;cCapillaries:(0.05/(2*abs(cCapillaries-10000)+2e-300))]==>LECs+2Capillaries",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 7/10 (consumes LECs)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCapillaries:((-1*1000*cCapillaries/(2*abs(cCapillaries-10000)+2e-300)))]==>LECs",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 8/10",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Capillaries+Capillaries+S[USER;cCapillaries,cVEGF:(1000*cVEGF^2/(2*cVEGF^4*abs(cCapillaries-10000)+2e-300*cVEGF^4+16200000000*abs(cCapillaries-10000)+1.6200000000000002e-290))]==>LECs+2Capillaries",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 9/10 (consumes LECs)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCapillaries,cVEGF:((-1*500*cCapillaries*cVEGF^2/(cVEGF^4+8100000000)))]==>LECs",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Inflow_and_chemotaxis_of_LECs_by_VEGF term 10/10 (consumes LECs)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCapillaries,cVEGF:((-1*20000000*cCapillaries*cVEGF^2/(2*cVEGF^4*abs(cCapillaries-10000)+2e-300*cVEGF^4+16200000000*abs(cCapillaries-10000)+1.6200000000000002e-290)))]==>LECs",
+     "source+S[USER;cCapillaries,cVEGF:(1000*cVEGF^2*(-cCapillaries/2+abs(cCapillaries-10000)/2+5000)/(cVEGF^4+8100000000))]==>LECs",
      ""
     ],
     [
@@ -469,140 +343,28 @@
      "#",
      "",
      "",
-     "Transdifferentiation_of_LECs_into_the_capillaries term 1/8",
-     ""
-    ],
-    [
-     "0.025",
-     "0",
-     "0",
-     "LECs==>Capillaries",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Transdifferentiation_of_LECs_into_the_capillaries term 2/8",
-     ""
-    ],
-    [
-     "0.0005",
-     "0",
-     "0",
-     "LECs+VEGF==>Capillaries+VEGF",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Transdifferentiation_of_LECs_into_the_capillaries term 3/8",
+     "Transdifferentiation_of_LECs_into_the_capillaries term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "LECs+LECs+S[USER;cCapillaries,cLECs:(0.025/(1*abs(cCapillaries+cLECs-10000)+1e-300))]==>Capillaries+LECs",
+     "LECs+S[USER;cCapillaries,cLECs:(0.05*(0.5+(cCapillaries+cLECs-10000)/(2*(abs(cCapillaries+cLECs-10000)+1e-300))))]==>Capillaries",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Transdifferentiation_of_LECs_into_the_capillaries term 4/8",
+     "Transdifferentiation_of_LECs_into_the_capillaries term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cCapillaries,cLECs:(250*cLECs/(abs(cCapillaries+cLECs-10000)+1e-300))]==>LECs",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Transdifferentiation_of_LECs_into_the_capillaries term 4/8 (consumes Capillaries)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCapillaries,cLECs:((-1*250*cLECs/(abs(cCapillaries+cLECs-10000)+1e-300)))]==>Capillaries",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Transdifferentiation_of_LECs_into_the_capillaries term 5/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "LECs+LECs+VEGF+S[USER;cCapillaries,cLECs:(0.0005/(1*abs(cCapillaries+cLECs-10000)+1e-300))]==>Capillaries+LECs+VEGF",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Transdifferentiation_of_LECs_into_the_capillaries term 6/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "LECs+Capillaries+S[USER;cCapillaries,cLECs:(0.025/(1*abs(cCapillaries+cLECs-10000)+1e-300))]==>2Capillaries",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Transdifferentiation_of_LECs_into_the_capillaries term 7/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCapillaries,cLECs,cVEGF:(5*cLECs*cVEGF/(abs(cCapillaries+cLECs-10000)+1e-300))]==>LECs",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Transdifferentiation_of_LECs_into_the_capillaries term 7/8 (consumes Capillaries)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCapillaries,cLECs,cVEGF:((-1*5*cLECs*cVEGF/(abs(cCapillaries+cLECs-10000)+1e-300)))]==>Capillaries",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Transdifferentiation_of_LECs_into_the_capillaries term 8/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "LECs+Capillaries+VEGF+S[USER;cCapillaries,cLECs:(0.0005/(1*abs(cCapillaries+cLECs-10000)+1e-300))]==>2Capillaries+VEGF",
+     "LECs+VEGF+S[USER;cCapillaries,cLECs:(0.001*(0.5+(cCapillaries+cLECs-10000)/(2*(abs(cCapillaries+cLECs-10000)+1e-300))))]==>Capillaries+VEGF",
      ""
     ],
     [

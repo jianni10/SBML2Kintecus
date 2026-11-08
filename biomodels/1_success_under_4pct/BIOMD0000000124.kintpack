@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T15:39:34.929386+00:00",
- "description": "Wu2006_K+Channel\nBioModels BIOMD0000000124 (curated). SBML file: BIOMD0000000124_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000124_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating; extended past the last time event (30000)), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 9.52e-06 of species peak (worst: n)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V' goes below zero in the SBML: integrated as p_V_o = value + 200, output as p_V = OUTC[p_V_o;-200*source]\n  [info] reaction_0000005 term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - c: zero order, signed\n  [info] time event(s) on 'gkatp' encoded as time/value pairs in EV_P_GKATP.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_gkatp = gkatp; p_n = n; p_a = a; p_nIR = nIR; p_rIR = rIR; p_V = V",
+ "created": "2026-11-07T20:26:33.752530+00:00",
+ "description": "Wu2006_K+Channel\nBioModels BIOMD0000000124 (curated). SBML file: BIOMD0000000124_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000124_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating; extended past the last time event (30000)), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.16e-05 of species peak (worst: n)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'V' goes below zero in the SBML: integrated as p_V_o = value + 200, output as p_V = OUTC[p_V_o;-200*source]\n  [info] time event(s) on 'gkatp' encoded as time/value pairs in EV_P_GKATP.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_gkatp = gkatp; p_n = n; p_a = a; p_nIR = nIR; p_rIR = rIR; p_V = V",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,7 +49,7 @@
      "#",
      "",
      "",
-     "reaction_0000005 term 1/4",
+     "reaction_0000005 term 1/3",
      ""
     ],
     [
@@ -63,21 +63,21 @@
      "#",
      "",
      "",
-     "reaction_0000005 term 2/4",
+     "reaction_0000005 term 2/3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(0.0022500000000000003/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200)))))]==>c",
+     "source+S[USER;cp_V_o:(1*(0.0022500000000000003-4.5e-5*(cp_V_o-200))/(exp((-1*(0.08333333333333333*(cp_V_o-200)+1.6666666666666667)))+1))]==>c",
      ""
     ],
     [
      "#",
      "",
      "",
-     "reaction_0000005 term 3/4",
+     "reaction_0000005 term 3/3",
      ""
     ],
     [
@@ -85,20 +85,6 @@
      "0",
      "0",
      "c==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_0000005 term 4/4 (consumes c)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cp_V_o:((-1*4.5e-5*(cp_V_o-200)/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200))))))]==>c",
      ""
     ],
     [
@@ -140,7 +126,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(0.09/(0.022379010406688955*exp(0.07*(cp_V_o-200))+59874.141715197824*exp(0.11*(cp_V_o-200))+2679.848081071963*exp(0.18*(cp_V_o-200))+80226801.89065182*exp(0.29000000000000004*(cp_V_o-200))+1))]==>p_nIR",
+     "source+S[USER;cp_V_o:(0.09/(0.0038888888888888888*exp(0.07*(cp_V_o-200)+1.7500000000000002)*exp(0.11*(cp_V_o-200)+11)^2+0.0077777777777777776*exp(0.07*(cp_V_o-200)+1.7500000000000002)*exp(0.11*(cp_V_o-200)+11)+0.0038888888888888888*exp(0.07*(cp_V_o-200)+1.7500000000000002)+exp(0.11*(cp_V_o-200)+11)+1))]==>p_nIR",
      ""
     ],
     [
@@ -154,7 +140,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(0.002014110936602006*exp(0.07*(cp_V_o-200))/(0.022379010406688955*exp(0.07*(cp_V_o-200))+1339.9240405359815*exp(0.18*(cp_V_o-200))+1))]==>p_nIR",
+     "source+S[USER;cp_V_o:(0.00035*exp(0.07*(cp_V_o-200)+1.7500000000000002)/(0.0038888888888888888*exp(0.07*(cp_V_o-200)+1.7500000000000002)*exp(0.11*(cp_V_o-200)+11)+0.0038888888888888888*exp(0.07*(cp_V_o-200)+1.7500000000000002)+1))]==>p_nIR",
      ""
     ],
     [
@@ -168,7 +154,7 @@
      "1",
      "0",
      "0",
-     "p_nIR+S[USER;cp_V_o:(0.09/(59874.141715197824*exp(0.11*(cp_V_o-200))+1))]==>sink",
+     "p_nIR+S[USER;cp_V_o:(0.09/(exp(0.11*(cp_V_o-200)+11)+1))]==>sink",
      ""
     ],
     [
@@ -182,7 +168,7 @@
      "1",
      "0",
      "0",
-     "p_nIR+S[USER;cp_V_o:(0.002014110936602006*exp(0.07*(cp_V_o-200)))]==>sink",
+     "p_nIR+S[USER;cp_V_o:(0.00035*exp(0.07*(cp_V_o-200)+1.7500000000000002))]==>sink",
      ""
     ],
     [
@@ -196,7 +182,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(30/(9897.129058743918*exp(0.04*(cp_V_o-200))+1+98.97129058743917*exp(0.04*(cp_V_o-200))/(1+0.0024787521766663576*exp((-1*0.05*(cp_V_o-200))))+489765.8180271663*exp(0.08*(cp_V_o-200))/(1+0.0024787521766663576*exp((-1*0.05*(cp_V_o-200))))+0.005/(1+0.0024787521766663576*exp((-1*0.05*(cp_V_o-200))))))]==>p_rIR",
+     "source+S[USER;cp_V_o:(30/(exp(0.04*(cp_V_o-200)+9.200000000000001)+1+0.005*exp(0.04*(cp_V_o-200)+9.200000000000001)^2/(exp(-0.05*(cp_V_o-200)-6)+1)+0.01*exp(0.04*(cp_V_o-200)+9.200000000000001)/(exp(-0.05*(cp_V_o-200)-6)+1)+0.005/(exp(-0.05*(cp_V_o-200)-6)+1)))]==>p_rIR",
      ""
     ],
     [
@@ -210,7 +196,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(0.15/(1+0.0024787521766663576*exp((-1*0.05*(cp_V_o-200)))+1.2393760883331787e-5/(exp(0.05*(cp_V_o-200))+0.0024787521766663576)+0.12266265098554673/(exp(0.010000000000000002*(cp_V_o-200))+0.0024787521766663576*exp((-1*0.04*(cp_V_o-200))))+49.485645293719585*exp(0.04*(cp_V_o-200))/(1+0.0024787521766663576*exp((-1*0.05*(cp_V_o-200))))+0.005/(1+0.0024787521766663576*exp((-1*0.05*(cp_V_o-200))))))]==>p_rIR",
+     "source+S[USER;cp_V_o:(0.15/(exp(-0.05*(cp_V_o-200)-6)+1+0.005*exp(-0.05*(cp_V_o-200)-6)*exp(0.04*(cp_V_o-200)+9.200000000000001)/(exp(-0.05*(cp_V_o-200)-6)+1)+0.005*exp(-0.05*(cp_V_o-200)-6)/(exp(-0.05*(cp_V_o-200)-6)+1)+0.005*exp(0.04*(cp_V_o-200)+9.200000000000001)/(exp(-0.05*(cp_V_o-200)-6)+1)+0.005/(exp(-0.05*(cp_V_o-200)-6)+1)))]==>p_rIR",
      ""
     ],
     [
@@ -224,7 +210,7 @@
      "1",
      "0",
      "0",
-     "p_rIR+S[USER;cp_V_o:(30/(9897.129058743918*exp(0.04*(cp_V_o-200))+1))]==>sink",
+     "p_rIR+S[USER;cp_V_o:(30/(exp(0.04*(cp_V_o-200)+9.200000000000001)+1))]==>sink",
      ""
     ],
     [
@@ -238,7 +224,7 @@
      "1",
      "0",
      "0",
-     "p_rIR+S[USER;cp_V_o:(0.15/(1+0.0024787521766663576*exp((-1*0.05*(cp_V_o-200)))))]==>sink",
+     "p_rIR+S[USER;cp_V_o:(0.15/(exp(-0.05*(cp_V_o-200)-6)+1))]==>sink",
      ""
     ],
     [
@@ -252,7 +238,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(0.0625/(1+0.04076220397836622*exp((-1*0.2*(cp_V_o-200)))))]==>p_n",
+     "source+S[USER;cp_V_o:(0.0625/(exp(-0.2*(cp_V_o-200)-3.2)+1))]==>p_n",
      ""
     ],
     [
@@ -280,7 +266,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cc:(3.3333333333333333e-6/(1+4.0551999668446745*exp((-1*10*cc))))]==>p_a",
+     "source+S[USER;cc:(3.3333333333333333e-6/(exp(1.4000000000000001-10*cc)+1))]==>p_a",
      ""
     ],
     [
@@ -308,7 +294,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:(9.433962264150944/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200)))))]==>p_V_o",
+     "source+S[USER;cp_V_o:((9.433962264150944-0.18867924528301888*(cp_V_o-200))/(exp((-1*(0.08333333333333333*(cp_V_o-200)+1.6666666666666667)))+1))]==>p_V_o",
      ""
     ],
     [
@@ -392,7 +378,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o:((-1*0.18867924528301888*(cp_V_o-200)/(1+0.18887560283756183*exp((-1*0.08333333333333333*(cp_V_o-200))))))]==>p_V_o",
+     "source+S[USER;cp_V_o,cp_a,cp_gkatp:((-1*0.00018867924528301886*cp_a*cp_gkatp*(cp_V_o-200)))]==>p_V_o",
      ""
     ],
     [
@@ -406,20 +392,6 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cp_V_o,cp_a,cp_gkatp:((-1*0.00018867924528301886*cp_a*cp_gkatp*(cp_V_o-200)))]==>p_V_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dV/dt term 9 (shifted p_V_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
      "source+S[USER;cc,cp_V_o:((-1*0.16981132075471697*cc^5*(cp_V_o-200)/(cc^5+0.0024299999999999994)))]==>p_V_o",
      ""
     ],
@@ -427,7 +399,7 @@
      "#",
      "",
      "",
-     "rate rule dV/dt term 10 (shifted p_V_o)",
+     "rate rule dV/dt term 9 (shifted p_V_o)",
      ""
     ],
     [

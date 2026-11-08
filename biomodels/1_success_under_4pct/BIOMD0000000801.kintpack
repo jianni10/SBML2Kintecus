@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T23:01:46.004277+00:00",
- "description": "Sturrock2015 - glioma growth\nBioModels BIOMD0000000801 (curated). SBML file: Sturrock2015.xml.\nSimulation: 0 to 3300 time units (SED-ML: Sturrock2015.sedml), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.56e-04 of species peak (worst: B)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] glucose_intake term 5/6: rate order differs from the stoichiometry; consumed on separate line(s) - S1: zero order, signed\n  [info] glucose_intake term 6/6: rate order differs from the stoichiometry; consumed on separate line(s) - S1: zero order, signed\nRenamed species (Kintecus name = SBML id): T1 = T; S1 = S",
+ "created": "2026-11-07T22:23:27.990938+00:00",
+ "description": "Sturrock2015 - glioma growth\nBioModels BIOMD0000000801 (curated). SBML file: Sturrock2015.xml.\nSimulation: 0 to 3300 time units (SED-ML: Sturrock2015.sedml), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.37e-04 of species peak (worst: B)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): T1 = T; S1 = S",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "tumor_growth term 1/2",
+     "tumor_growth",
      ""
     ],
     [
-     "1.575",
+     "1",
      "0",
      "0",
-     "B+T1==>2T1+B",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth term 2/2",
-     ""
-    ],
-    [
-     "0.7875",
-     "0",
-     "0",
-     "T1+T1+B==>B+T1",
+     "B+T1+S[USER;cT1:(1.575-0.7875*cT1)]==>2T1+B",
      ""
     ],
     [
@@ -231,84 +217,28 @@
      "#",
      "",
      "",
-     "glucose_intake term 1/6",
-     ""
-    ],
-    [
-     "0.0004",
-     "0",
-     "0",
-     "source==>S1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "glucose_intake term 2/6",
+     "glucose_intake term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.0008*sin(6*3.141592653589793*cTIME_))]==>S1",
+     "source+S[USER;cTIME_:(0.0008*((0.0008-0.0016*sin(6*3.141592653589793*cTIME_))/(2*(abs(0.0016*sin(6*3.141592653589793*cTIME_)-0.0008)+1e-300))+0.5))]==>S1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "glucose_intake term 3/6",
+     "glucose_intake term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(3.2e-7/(abs(0.0016*sin(6*3.141592653589793*cTIME_)-0.0008)+1e-300))]==>S1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "glucose_intake term 4/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_:(2.56e-6*sin(6*3.141592653589793*cTIME_)^2/(2*abs(0.0016*sin(6*3.141592653589793*cTIME_)-0.0008)+2e-300))]==>S1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "glucose_intake term 5/6 (consumes S1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_:((-1*6.4e-7*sin(6*3.141592653589793*cTIME_)/(abs(0.0016*sin(6*3.141592653589793*cTIME_)-0.0008)+1e-300)))]==>S1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "glucose_intake term 6/6 (consumes S1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_:((-1*1.28e-6*sin(6*3.141592653589793*cTIME_)/(2*abs(0.0016*sin(6*3.141592653589793*cTIME_)-0.0008)+2e-300)))]==>S1",
+     "source+S[USER;cTIME_:(0.0016*sin(6*3.141592653589793*cTIME_)*((0.0016*sin(6*3.141592653589793*cTIME_)-0.0008)/(2*(abs(0.0016*sin(6*3.141592653589793*cTIME_)-0.0008)+1e-300))+0.5))]==>S1",
      ""
     ],
     [

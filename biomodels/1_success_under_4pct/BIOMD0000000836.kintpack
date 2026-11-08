@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-25T11:36:48.615743+00:00",
+ "created": "2026-11-07T22:25:17.196128+00:00",
  "description": "Radosavljevic2009_BioterroristAttack_PanicProtection_1\nBioModels BIOMD0000000836 (curated). SBML file: Radosavljevic2009.xml.\nSimulation: 0 to 2 time units (SED-ML: Radosavljevic2009.sedml), sampling 0.02.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 9.32e-07 of species peak (worst: P)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): S1 = S; P1 = P",
  "settings": {
   "kpath": "",
@@ -53,10 +53,10 @@
      ""
     ],
     [
-     "6",
+     "1",
      "0",
      "0",
-     "S1==>2S1",
+     "S1+S[USER;cS1:(6-0.6*cS1)]==>2S1",
      ""
     ],
     [
@@ -64,20 +64,6 @@
      "",
      "",
      "rate rule dS/dt term 2",
-     ""
-    ],
-    [
-     "0.6",
-     "0",
-     "0",
-     "S1+S1==>S1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dS/dt term 3",
      ""
     ],
     [
@@ -207,7 +193,7 @@
      ""
     ],
     [
-     "1e-06",
+     "1e-6",
      "0.02",
      "KCAL",
      "MOLES/LITER",
@@ -258,7 +244,7 @@
      "None1",
      "0.02",
      "0",
-     "1e-08",
+     "1e-8",
      "0",
      ""
     ],

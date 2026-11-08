@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T06:46:56.065344+00:00",
- "description": "Zhang2007 - Mechanism of DNA damage response (Model2)\nBioModels BIOMD0000001009 (curated). SBML file: Zhang2007_M2_low_dose.xml.\nSimulation: 0 to 100 time units (SED-ML: Zhang2007_M2_high_dose.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.01e-05 of species peak (worst: p53_act)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'p53_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'DNAdamage' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] p53_inact_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] p53_act_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T22:31:56.172589+00:00",
+ "description": "Zhang2007 - Mechanism of DNA damage response (Model2)\nBioModels BIOMD0000001009 (curated). SBML file: Zhang2007_M2_low_dose.xml.\nSimulation: 0 to 100 time units (SED-ML: Zhang2007_M2_high_dose.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.86e-06 of species peak (worst: p53_act)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'p53_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'DNAdamage' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] p53_inact_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] p53_act_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] 3 condition(s) on time alone written as switch species with time/value pairs (3 changes)",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -119,392 +119,14 @@
      "#",
      "",
      "",
-     "MDM2nuc_degradation term 1/28",
-     ""
-    ],
-    [
-     "0.14125000000000001",
-     "0",
-     "0",
-     "MDM2nuc==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 2/28",
+     "MDM2nuc_degradation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "MDM2nuc+S[USER;cTIME_:(0.27225000000000005/(2*abs(0.05*cTIME_-3.3000000000000003)+2e-300))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 3/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(1361.2500000000002/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)^2+8e-300*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+0*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 4/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(206.25000000000003/(2*abs(cTIME_-50)^2+4e-300*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 5/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(13.612500000000002/(2*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+2e-300*abs(0.05*cTIME_-3.3000000000000003)+2e-300*abs(cTIME_-50)+0))]==>2MDM2nuc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 6/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(27.225000000000005/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+4e-300*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)+0))]==>2MDM2nuc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 7/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(2.0625000000000004/(abs(cTIME_-50)+1e-300))]==>2MDM2nuc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 8/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(4.125000000000001/(2*abs(cTIME_-50)+2e-300))]==>2MDM2nuc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 9/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(0.0006250000000000001*cTIME_)]==>2MDM2nuc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 10/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(0.07250000000000001*cTIME_/(abs(cTIME_-50)+1e-300))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 11/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(0.14500000000000002*cTIME_/(2*abs(cTIME_-50)+2e-300))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 12/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(0.20750000000000002*cTIME_^2/(2*abs(cTIME_-50)^2+4e-300*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 13/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(6.250000000000001e-5*cTIME_^2/(2*abs(0.05*cTIME_-3.3000000000000003)+2e-300))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 14/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(6.250000000000001e-5*cTIME_^3/(2*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+2e-300*abs(0.05*cTIME_-3.3000000000000003)+2e-300*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 15/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(0.00012500000000000003*cTIME_^3/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+4e-300*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 16/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(0.00012500000000000003*cTIME_^4/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)^2+8e-300*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+0*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 17/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(0.6847500000000001*cTIME_/(2*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+2e-300*abs(0.05*cTIME_-3.3000000000000003)+2e-300*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 18/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(1.3695000000000002*cTIME_/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+4e-300*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 19/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(2.5070000000000006*cTIME_^2/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)^2+8e-300*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+0*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 20/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(11.375000000000002*cTIME_/(2*abs(cTIME_-50)^2+4e-300*abs(cTIME_-50)+0))]==>2MDM2nuc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 21/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(95.70000000000002*cTIME_/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)^2+8e-300*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+0*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>2MDM2nuc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 22/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(0.008250000000000002*cTIME_/(2*abs(0.05*cTIME_-3.3000000000000003)+2e-300))]==>2MDM2nuc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 23/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(0.0006250000000000001*cTIME_^2/(abs(cTIME_-50)+1e-300))]==>2MDM2nuc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 24/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(0.0012500000000000002*cTIME_^2/(2*abs(cTIME_-50)+2e-300))]==>2MDM2nuc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 25/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(0.0012500000000000002*cTIME_^3/(2*abs(cTIME_-50)^2+4e-300*abs(cTIME_-50)+0))]==>2MDM2nuc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 26/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(0.011375000000000001*cTIME_^2/(2*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+2e-300*abs(0.05*cTIME_-3.3000000000000003)+2e-300*abs(cTIME_-50)+0))]==>2MDM2nuc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 27/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(0.022750000000000003*cTIME_^2/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+4e-300*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)+0))]==>2MDM2nuc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "MDM2nuc_degradation term 28/28",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "MDM2nuc+S[USER;cTIME_:(0.029000000000000005*cTIME_^3/(4*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)^2+8e-300*abs(0.05*cTIME_-3.3000000000000003)*abs(cTIME_-50)+0*abs(0.05*cTIME_-3.3000000000000003)+4e-300*abs(cTIME_-50)^2+0*abs(cTIME_-50)+0))]==>2MDM2nuc",
+     "MDM2nuc+S[USER;cSW1,cSW2,cSW3,cTIME_:(0.1*cSW1*(1-cSW2)*(1-cSW3)*(3.3000000000000003-0.05*cTIME_)+0.1)]==>sink",
      ""
     ],
     [
@@ -755,6 +377,39 @@
      ""
     ],
     [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time condition: 1 change(s), first at 50 [__switch__]",
+     ""
+    ],
+    [
+     "SW2",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW2.TXT-SET",
+     "time condition: 1 change(s), first at 50 [__switch__]",
+     ""
+    ],
+    [
+     "SW3",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW3.TXT-SET",
+     "time condition: 1 change(s), first at 66 [__switch__]",
+     ""
+    ],
+    [
      "END",
      "",
      "",
@@ -795,7 +450,7 @@
     ],
     [
      "1e-6",
-     "0.1",
+     "0.1000000002",
      "KCAL",
      "MOLES/LITER",
      "0",
@@ -843,7 +498,7 @@
     ],
     [
      "None1",
-     "0.1",
+     "0.1000000002",
      "0",
      "1e-8",
      "0",
@@ -891,5 +546,72 @@
    "rows": []
   }
  },
- "ofiles": []
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "50",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW2.TXT",
+   "key": "O_SW2.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "50",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  },
+  {
+   "filename": "SW3.TXT",
+   "key": "O_SW3.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "66",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
 }

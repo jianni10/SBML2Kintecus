@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:16:20.553013+00:00",
- "description": "Barr2017 - Dynamics of p21 in hTert-RPE1 cells\nBioModels BIOMD0000000660 (curated). SBML file: BIOMD0000000660_url.xml.\nSimulation: 0 to 1200 time units (SED-ML: MODEL1607210001.sedml), sampling 1.2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH (Kintecus within 100% of the SBML; run on James's PC in 1884 s)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'tP21' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'tCy' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'tPcna' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Dissassembly_of_RC: piecewise/conditional rate encoded with abs()-based step functions\n  [info] Dissassembly_of_pRC: piecewise/conditional rate encoded with abs()-based step functions\n  [info] Dissassembly_of_aRC: piecewise/conditional rate encoded with abs()-based step functions\n  [info] Dissassembly_of_aRC term 3/6: rate order differs from the stoichiometry; consumed on separate line(s) - aPcna: zero order, signed\n  [info] Dissassembly_of_aRC term 6/6: rate order differs from the stoichiometry; consumed on separate line(s) - aPcna: zero order, signed\n  [info] Dissassembly_of_iRC: piecewise/conditional rate encoded with abs()-based step functions\n  [info] Dissassembly_of_iRC term 3/6: rate order differs from the stoichiometry; consumed on separate line(s) - iPcna: zero order, signed\n  [info] Dissassembly_of_iRC term 6/6: rate order differs from the stoichiometry; consumed on separate line(s) - iPcna: zero order, signed\n  [info] Repair_of_DNA_damage term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T22:04:29.612009+00:00",
+ "description": "Barr2017 - Dynamics of p21 in hTert-RPE1 cells\nBioModels BIOMD0000000660 (curated). SBML file: BIOMD0000000660_url.xml.\nSimulation: 0 to 1200 time units (SED-ML: MODEL1607210001.sedml), sampling 1.2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.56e-06 of species peak (worst: Dna)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'tP21' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'tCy' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'tPcna' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Dissassembly_of_RC: piecewise/conditional rate encoded with abs()-based step functions\n  [info] Dissassembly_of_pRC: piecewise/conditional rate encoded with abs()-based step functions\n  [info] Dissassembly_of_aRC: piecewise/conditional rate encoded with abs()-based step functions\n  [info] Dissassembly_of_iRC: piecewise/conditional rate encoded with abs()-based step functions\n  [info] Repair_of_DNA_damage term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -70,7 +70,7 @@
      "0.08",
      "0",
      "0",
-     "P53==>P53+MrnaP21",
+     "P53==>MrnaP21+P53",
      ""
     ],
     [
@@ -154,7 +154,7 @@
      "0.0018",
      "0",
      "0",
-     "MrnaP21==>P21+MrnaP21",
+     "MrnaP21==>MrnaP21+P21",
      ""
     ],
     [
@@ -210,7 +210,7 @@
      "0.005",
      "0",
      "0",
-     "MrnaCy==>MrnaCy+Cy",
+     "MrnaCy==>Cy+MrnaCy",
      ""
     ],
     [
@@ -392,7 +392,7 @@
      "0.01",
      "0",
      "0",
-     "iPcna==>aPcna+P21",
+     "iPcna==>P21+aPcna",
      ""
     ],
     [
@@ -406,7 +406,7 @@
      "100",
      "0",
      "0",
-     "aPcna+P21==>iPcna",
+     "P21+aPcna==>iPcna",
      ""
     ],
     [
@@ -616,399 +616,119 @@
      "0.007",
      "0",
      "0",
-     "aRc==>aRc+Dna",
+     "aRc==>Dna+aRc",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Dissassembly_of_RC term 1/6",
-     ""
-    ],
-    [
-     "0.375",
-     "0",
-     "0",
-     "Rc==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_RC term 2/6",
+     "Dissassembly_of_RC term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Rc+S[USER;cDna:(0.5/(2*abs(cDna-1)+2e-300)^2)]==>sink",
+     "Rc+S[USER;cDna:(1*((cDna-1)/(2*(abs(cDna-1)+1e-300))+0.5)^2)]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Dissassembly_of_RC term 3/6",
+     "Dissassembly_of_RC term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Rc+S[USER;cDna:(1/(2*abs(cDna-1)+2e-300))]==>2Rc",
+     "Rc+S[USER;cDna:(0.5*((1-cDna)/(2*(abs(cDna-1)+1e-300))+0.5)*((cDna-1)/(2*(abs(cDna-1)+1e-300))+0.5))]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Dissassembly_of_RC term 4/6",
+     "Dissassembly_of_pRC term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Rc+Dna+Dna+S[USER;cDna:(0.5/(2*abs(cDna-1)+2e-300)^2)]==>2Dna",
+     "pRc+S[USER;cDna:(1*((cDna-1)/(2*(abs(cDna-1)+1e-300))+0.5)^2)]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Dissassembly_of_RC term 5/6",
+     "Dissassembly_of_pRC term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Rc+Dna+S[USER;cDna:(1/(2*abs(cDna-1)+2e-300))]==>Dna",
+     "pRc+S[USER;cDna:(0.5*((1-cDna)/(2*(abs(cDna-1)+1e-300))+0.5)*((cDna-1)/(2*(abs(cDna-1)+1e-300))+0.5))]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Dissassembly_of_RC term 6/6",
+     "Dissassembly_of_aRC term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Dna+Rc+S[USER;cDna:(1/(2*abs(cDna-1)+2e-300)^2)]==>2Rc+Dna",
+     "aRc+S[USER;cDna:(1*((cDna-1)/(2*(abs(cDna-1)+1e-300))+0.5)^2)]==>aPcna",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Dissassembly_of_pRC term 1/6",
-     ""
-    ],
-    [
-     "0.375",
-     "0",
-     "0",
-     "pRc==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_pRC term 2/6",
+     "Dissassembly_of_aRC term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "pRc+S[USER;cDna:(0.5/(2*abs(cDna-1)+2e-300)^2)]==>sink",
+     "aRc+S[USER;cDna:(0.5*((1-cDna)/(2*(abs(cDna-1)+1e-300))+0.5)*((cDna-1)/(2*(abs(cDna-1)+1e-300))+0.5))]==>aPcna",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Dissassembly_of_pRC term 3/6",
+     "Dissassembly_of_iRC term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "pRc+S[USER;cDna:(1/(2*abs(cDna-1)+2e-300))]==>2pRc",
+     "iRc+S[USER;cDna:(1*((cDna-1)/(2*(abs(cDna-1)+1e-300))+0.5)^2)]==>iPcna",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Dissassembly_of_pRC term 4/6",
+     "Dissassembly_of_iRC term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "pRc+Dna+Dna+S[USER;cDna:(0.5/(2*abs(cDna-1)+2e-300)^2)]==>2Dna",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_pRC term 5/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "pRc+Dna+S[USER;cDna:(1/(2*abs(cDna-1)+2e-300))]==>Dna",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_pRC term 6/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Dna+pRc+S[USER;cDna:(1/(2*abs(cDna-1)+2e-300)^2)]==>2pRc+Dna",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_aRC term 1/6",
-     ""
-    ],
-    [
-     "0.375",
-     "0",
-     "0",
-     "aRc==>aPcna",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_aRC term 2/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "aRc+S[USER;cDna:(0.5/(2*abs(cDna-1)+2e-300)^2)]==>aPcna",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_aRC term 3/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cDna,caRc:(1*caRc/(2*abs(cDna-1)+2e-300))]==>aRc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_aRC term 3/6 (consumes aPcna)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cDna,caRc:((-1*1*caRc/(2*abs(cDna-1)+2e-300)))]==>aPcna",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_aRC term 4/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "aRc+Dna+Dna+S[USER;cDna:(0.5/(2*abs(cDna-1)+2e-300)^2)]==>aPcna+2Dna",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_aRC term 5/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "aRc+Dna+S[USER;cDna:(1/(2*abs(cDna-1)+2e-300))]==>aPcna+Dna",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_aRC term 6/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cDna,caRc:(1*cDna*caRc/(2*abs(cDna-1)+2e-300)^2)]==>aRc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_aRC term 6/6 (consumes aPcna)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cDna,caRc:((-1*1*cDna*caRc/(2*abs(cDna-1)+2e-300)^2))]==>aPcna",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_iRC term 1/6",
-     ""
-    ],
-    [
-     "0.375",
-     "0",
-     "0",
-     "iRc==>iPcna",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_iRC term 2/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "iRc+S[USER;cDna:(0.5/(2*abs(cDna-1)+2e-300)^2)]==>iPcna",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_iRC term 3/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cDna,ciRc:(1*ciRc/(2*abs(cDna-1)+2e-300))]==>iRc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_iRC term 3/6 (consumes iPcna)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cDna,ciRc:((-1*1*ciRc/(2*abs(cDna-1)+2e-300)))]==>iPcna",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_iRC term 4/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "iRc+Dna+Dna+S[USER;cDna:(0.5/(2*abs(cDna-1)+2e-300)^2)]==>iPcna+2Dna",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_iRC term 5/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "iRc+Dna+S[USER;cDna:(1/(2*abs(cDna-1)+2e-300))]==>iPcna+Dna",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_iRC term 6/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cDna,ciRc:(1*cDna*ciRc/(2*abs(cDna-1)+2e-300)^2)]==>iRc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dissassembly_of_iRC term 6/6 (consumes iPcna)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cDna,ciRc:((-1*1*cDna*ciRc/(2*abs(cDna-1)+2e-300)^2))]==>iPcna",
+     "iRc+S[USER;cDna:(0.5*((1-cDna)/(2*(abs(cDna-1)+1e-300))+0.5)*((cDna-1)/(2*(abs(cDna-1)+1e-300))+0.5))]==>iPcna",
      ""
     ],
     [

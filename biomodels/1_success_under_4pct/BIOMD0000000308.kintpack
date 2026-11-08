@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T05:15:36.348011+00:00",
- "description": "Tyson2003_NegFB_Oscillator\nBioModels BIOMD0000000308 (curated). SBML file: BIOMD0000000308_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000308_url.sedml (auto-generated placeholder); duration chosen from the dynamics: no dynamics), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): NOTHING_COMPARED, max |difference| = 0.00e+00 of species peak (worst: None)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Y' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'R' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] r3 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r5 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): S1 = S",
+ "created": "2026-11-07T20:53:10.416170+00:00",
+ "description": "Tyson2003_NegFB_Oscillator\nBioModels BIOMD0000000308 (curated). SBML file: BIOMD0000000308_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000308_url.sedml (auto-generated placeholder); duration chosen from the dynamics: no dynamics), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): NOTHING_COMPARED, max |difference| = 0.00e+00 of species peak (worst: None)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Y' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'R' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] r4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): S1 = S",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -77,28 +77,14 @@
      "#",
      "",
      "",
-     "r3 term 1/2",
+     "r3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "X+S[USER;cYp:(0.1/(1.01-cYp))]==>Yp+X",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r3 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Yp+X+S[USER;cYp:((-1*0.1/(1*cYp-1.01)))]==>X",
+     "X+S[USER;cYp:(0.1*(1-cYp)/(1.01-cYp))]==>Yp+X",
      ""
     ],
     [
@@ -119,28 +105,14 @@
      "#",
      "",
      "",
-     "r5 term 1/2",
+     "r5",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Yp+S[USER;cRp:(0.1/(1.01-cRp))]==>Rp+Yp",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r5 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Rp+Yp+S[USER;cRp:((-1*0.1/(1*cRp-1.01)))]==>Yp",
+     "Yp+S[USER;cRp:(0.1*(1-cRp)/(1.01-cRp))]==>Rp+Yp",
      ""
     ],
     [

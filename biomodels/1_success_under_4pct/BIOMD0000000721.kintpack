@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:58:26.387677+00:00",
- "description": "Graham2013 - Role of osteocytes in targeted bone remodeling\nBioModels BIOMD0000000721 (curated). SBML file: Model.xml.\nSimulation: 0 to 100 time units (SED-ML: V3 - ANNOTATED.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.94e-06 of species peak (worst: Osteoclasts__C)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Differentiation_of_MSC_cells_to_Pre_Osteoblast_cells term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Pre_Osteoblasts__P: zero order, signed\n  [info] Resorption_of_bone: rate order differs from the stoichiometry; consumed on separate line(s) - Bone_volume__z: zero order, signed",
+ "created": "2026-11-07T22:12:59.782910+00:00",
+ "description": "Graham2013 - Role of osteocytes in targeted bone remodeling\nBioModels BIOMD0000000721 (curated). SBML file: Model.xml.\nSimulation: 0 to 100 time units (SED-ML: V3 - ANNOTATED.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.94e-06 of species peak (worst: Osteoclasts__C)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Resorption_of_bone: rate order differs from the stoichiometry; consumed on separate line(s) - Bone_volume__z: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -77,28 +77,14 @@
      "#",
      "",
      "",
-     "Differentiation_of_MSC_cells_to_Pre_Osteoblast_cells term 1/2",
+     "Differentiation_of_MSC_cells_to_Pre_Osteoblast_cells",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cOsteocytes__S:(0.1*cOsteocytes__S^2)]==>Pre_Osteoblasts__P",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Differentiation_of_MSC_cells_to_Pre_Osteoblast_cells term 2/2 (consumes Pre_Osteoblasts__P)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cOsteocytes__S:((-1*0.0005*cOsteocytes__S^3))]==>Pre_Osteoblasts__P",
+     "source+S[USER;cOsteocytes__S:(0.1*cOsteocytes__S^2*(1-0.005*cOsteocytes__S))]==>Pre_Osteoblasts__P",
      ""
     ],
     [

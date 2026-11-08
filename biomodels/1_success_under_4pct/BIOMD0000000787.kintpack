@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:59:17.350483+00:00",
- "description": "Frascoli2014 - A dynamical model of tumour immunotherapy\nBioModels BIOMD0000000787 (curated). SBML file: Frascoli2014.xml.\nSimulation: 0 to 1000 time units (SED-ML: Frascoli2014.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.55e-04 of species peak (worst: C_Cytotoxic_T_Lymphocytes_Coverage)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_Killing_CTL term 1/6: rate order differs from the stoichiometry; consumed on separate line(s) - V_Tumor_Volume: zero order, signed\n  [info] Tumor_Killing_CTL term 2/6: rate order differs from the stoichiometry; consumed on separate line(s) - V_Tumor_Volume: zero order, signed\n  [info] Tumor_Killing_CTL term 4/6: rate order differs from the stoichiometry; consumed on separate line(s) - V_Tumor_Volume: zero order, signed\n  [info] Tumor_Killing_CTL term 5/6: rate order differs from the stoichiometry; consumed on separate line(s) - V_Tumor_Volume: zero order, signed\nRenamed species (Kintecus name = SBML id): CCytotoxicTLymphocytesCov1 = C_Cytotoxic_T_Lymphocytes_Coverage",
+ "created": "2026-11-07T22:20:46.777937+00:00",
+ "description": "Frascoli2014 - A dynamical model of tumour immunotherapy\nBioModels BIOMD0000000787 (curated). SBML file: Frascoli2014.xml.\nSimulation: 0 to 1000 time units (SED-ML: Frascoli2014.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.55e-04 of species peak (worst: C_Cytotoxic_T_Lymphocytes_Coverage)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_Killing_CTL: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for V_Tumor_Volume\nRenamed species (Kintecus name = SBML id): CCytotoxicTLymphocytesCov1 = C_Cytotoxic_T_Lymphocytes_Coverage",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -63,84 +63,14 @@
      "#",
      "",
      "",
-     "Tumor_Killing_CTL term 1/6 (consumes V_Tumor_Volume)",
+     "Tumor_Killing_CTL (consumes V_Tumor_Volume)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cV_Tumor_Volume:((-1*0.33019272488946266*3.141592653589793^0.3333333333333333*cV_Tumor_Volume^0.6666666666666666))]==>V_Tumor_Volume",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Killing_CTL term 2/6 (consumes V_Tumor_Volume)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCCytotoxicTLymphocytesCov1,cV_Tumor_Volume:((-1*0.33019272488946266*3.141592653589793^0.3333333333333333*cCCytotoxicTLymphocytesCov1*cV_Tumor_Volume^0.6666666666666666))]==>V_Tumor_Volume",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Killing_CTL term 3/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCCytotoxicTLymphocytesCov1,cV_Tumor_Volume:(0.33019272488946266*3.141592653589793^0.3333333333333333*cV_Tumor_Volume^0.6666666666666666/(abs(cCCytotoxicTLymphocytesCov1-1)+1e-300))]==>V_Tumor_Volume",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Killing_CTL term 4/6 (consumes V_Tumor_Volume)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCCytotoxicTLymphocytesCov1,cV_Tumor_Volume:((-1*0.33019272488946266*3.141592653589793^0.3333333333333333*cCCytotoxicTLymphocytesCov1*cV_Tumor_Volume^0.6666666666666666/(abs(cCCytotoxicTLymphocytesCov1-1)+1e-300)))]==>V_Tumor_Volume",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Killing_CTL term 5/6 (consumes V_Tumor_Volume)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCCytotoxicTLymphocytesCov1,cV_Tumor_Volume:((-1*0.6603854497789253*3.141592653589793^0.3333333333333333*cCCytotoxicTLymphocytesCov1*cV_Tumor_Volume^0.6666666666666666/(2*abs(cCCytotoxicTLymphocytesCov1-1)+2e-300)))]==>V_Tumor_Volume",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Killing_CTL term 6/6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "CCytotoxicTLymphocytesCov1+CCytotoxicTLymphocytesCov1+S[USER;cCCytotoxicTLymphocytesCov1,cV_Tumor_Volume:(0.6603854497789253*3.141592653589793^0.3333333333333333*cV_Tumor_Volume^0.6666666666666666/(2*abs(cCCytotoxicTLymphocytesCov1-1)+2e-300))]==>V_Tumor_Volume+2CCytotoxicTLymphocytesCov1",
+     "source+S[USER;cCCytotoxicTLymphocytesCov1,cV_Tumor_Volume:((-1*0.6603854497789253*3.141592653589793^0.3333333333333333*cV_Tumor_Volume^0.6666666666666666*(cCCytotoxicTLymphocytesCov1*((1-cCCytotoxicTLymphocytesCov1)/(2*(abs(cCCytotoxicTLymphocytesCov1-1)+1e-300))+0.5)+1*((cCCytotoxicTLymphocytesCov1-1)/(2*(abs(cCCytotoxicTLymphocytesCov1-1)+1e-300))+0.5))))]==>V_Tumor_Volume",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T23:01:54.110961+00:00",
- "description": "Lenbury2001_InsulinKineticsModel_A\nBioModels BIOMD0000000878 (curated). SBML file: Lenbury2001.xml.\nSimulation: 0 to 33000 time units (SED-ML: Lenbury2001.sedml), sampling 412.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.11e-05 of species peak (worst: z)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] utilisation_of_glucose: rate order differs from the stoichiometry; consumed on separate line(s) - y: zero order, signed\n  [info] Production_of_Beta_cell term 1/5: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed",
+ "created": "2026-11-07T22:27:00.844670+00:00",
+ "description": "Lenbury2001_InsulinKineticsModel_A\nBioModels BIOMD0000000878 (curated). SBML file: Lenbury2001.xml.\nSimulation: 0 to 33000 time units (SED-ML: Lenbury2001.sedml), sampling 412.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.91e-05 of species peak (worst: z)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] utilisation_of_glucose: rate order differs from the stoichiometry; consumed on separate line(s) - y: zero order, signed\n  [info] Production_of_Beta_cell term 1/4: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -133,7 +133,7 @@
      "#",
      "",
      "",
-     "Production_of_Beta_cell term 1/5 (consumes z)",
+     "Production_of_Beta_cell term 1/4 (consumes z)",
      ""
     ],
     [
@@ -147,7 +147,7 @@
      "#",
      "",
      "",
-     "Production_of_Beta_cell term 2/5",
+     "Production_of_Beta_cell term 2/4",
      ""
     ],
     [
@@ -161,35 +161,21 @@
      "#",
      "",
      "",
-     "Production_of_Beta_cell term 3/5",
+     "Production_of_Beta_cell term 3/4",
      ""
     ],
     [
-     "0.381039578276886",
+     "1",
      "0",
      "0",
-     "z==>2z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Production_of_Beta_cell term 4/5",
-     ""
-    ],
-    [
-     "0.1",
-     "0",
-     "0",
-     "z+z==>z",
+     "z+S[USER;cz:(0.381039578276886-0.1*cz)]==>2z",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Production_of_Beta_cell term 5/5",
+     "Production_of_Beta_cell term 4/4",
      ""
     ],
     [

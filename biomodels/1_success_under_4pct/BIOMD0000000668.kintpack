@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:06:14.555008+00:00",
+ "created": "2026-11-07T22:04:57.229992+00:00",
  "description": "Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - basic PD model\nBioModels BIOMD0000000668 (curated). SBML file: BIOMD0000000668_url.xml.\nSimulation: 0 to 100 time units (SED-ML: MODEL1604270000_basic.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.90e-06 of species peak (worst: Ra)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Inh_g' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Inh_b' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Sti_g' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Sti_b' is defined by an assignment rule; not a Kintecus state (not output)",
  "settings": {
   "kpath": "",
@@ -165,10 +165,10 @@
      ""
     ],
     [
-     "0.020515",
+     "1",
      "0",
      "0",
-     "Ra==>2Ra",
+     "Ra+S[USER;cRa:(0.020515-3.806921675774134e-9*cRa)]==>2Ra",
      ""
     ],
     [
@@ -176,20 +176,6 @@
      "",
      "",
      "rate rule dRa/dt term 2",
-     ""
-    ],
-    [
-     "3.806921675774134e-9",
-     "0",
-     "0",
-     "Ra+Ra==>Ra",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dRa/dt term 3",
      ""
     ],
     [
@@ -203,7 +189,7 @@
      "#",
      "",
      "",
-     "rate rule dRa/dt term 4",
+     "rate rule dRa/dt term 3",
      ""
     ],
     [
@@ -217,7 +203,7 @@
      "#",
      "",
      "",
-     "rate rule dRa/dt term 5",
+     "rate rule dRa/dt term 4",
      ""
     ],
     [

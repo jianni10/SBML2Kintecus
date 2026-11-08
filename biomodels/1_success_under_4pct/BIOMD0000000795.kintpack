@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:09:37.060625+00:00",
+ "created": "2026-11-07T22:21:01.964085+00:00",
  "description": "Chen2011/2 - bone marrow invasion relative model\nBioModels BIOMD0000000795 (curated). SBML file: Chen2011_2.xml.\nSimulation: 0 to 1000 time units (SED-ML: Chen2011_2.sedml), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.39e-06 of species peak (worst: T)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): T1 = T",
  "settings": {
   "kpath": "",
@@ -49,35 +49,21 @@
      "#",
      "",
      "",
-     "HSC_growth term 1/3",
+     "HSC_growth term 1/2",
      ""
     ],
     [
-     "0.8",
+     "1",
      "0",
      "0",
-     "H==>2H",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "HSC_growth term 2/3",
-     ""
-    ],
-    [
-     "0.8",
-     "0",
-     "0",
-     "H+H==>H",
+     "H+S[USER;cH:(0.8-0.8*cH)]==>2H",
      ""
     ],
     [
      "#",
      "",
      "",
-     "HSC_growth term 3/3",
+     "HSC_growth term 2/2",
      ""
     ],
     [
@@ -105,35 +91,21 @@
      "#",
      "",
      "",
-     "Tumor_growth term 1/3",
+     "Tumor_growth term 1/2",
      ""
     ],
     [
-     "0.2",
+     "1",
      "0",
      "0",
-     "T1==>2T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_growth term 2/3",
-     ""
-    ],
-    [
-     "0.2",
-     "0",
-     "0",
-     "T1+T1==>T1",
+     "T1+S[USER;cT1:(0.2-0.2*cT1)]==>2T1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Tumor_growth term 3/3",
+     "Tumor_growth term 2/2",
      ""
     ],
     [

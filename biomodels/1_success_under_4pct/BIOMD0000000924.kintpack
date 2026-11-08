@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:13:02.801732+00:00",
+ "created": "2026-11-07T22:28:38.647905+00:00",
  "description": "Smith2011 - Three Stage Innate Immune Response to a Pneumococcal Lung Infection\nBioModels BIOMD0000000924 (curated). SBML file: Smith2011_V1.xml.\nSimulation: 0 to 120 time units (SED-ML: Smith2011_V1.sedml), sampling 0.8.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.16e-06 of species peak (worst: Neutrophils__N)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_for_P_Decay term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): Susceptibleepithelialcell1 = Susceptible_epithelial_cells__EU; Epithelialcellswithbacter1 = Epithelial_cells_with_bacteria_attached__Ea; proinflammatorycytokineC1 = proinflammatory_cytokine__C",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "reaction_for__P_production term 1/2",
+     "reaction_for__P_production",
      ""
     ],
     [
-     "1.13",
+     "1",
      "0",
      "0",
-     "Pneumococci___P==>2Pneumococci___P",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_for__P_production term 2/2",
-     ""
-    ],
-    [
-     "3.30636357217947e-9",
-     "0",
-     "0",
-     "Pneumococci___P+Pneumococci___P==>Pneumococci___P",
+     "Pneumococci___P+S[USER;cPneumococci___P:(1.13-3.30636357217947e-9*cPneumococci___P)]==>2Pneumococci___P",
      ""
     ],
     [

@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-05T16:30:04.428590+00:00",
+ "created": "2026-11-07T22:23:36.903448+00:00",
  "description": "Eftimie2019-Macrophages Plasticity\nBioModels BIOMD0000000806 (curated). SBML file: model.xml.\nSimulation: 0 to 22 time units (SED-ML: Macrophages Plasticity a.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.57e-06 of species peak (worst: M2_Macrophage_Xm2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Uninfected_tumour_cell_infection: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] time event(s) on 'H' encoded as time/value pairs in EV_P_H.TXT (SET)\n  [info] time event(s) on 'd_m1' encoded as time/value pairs in EV_P_D_M1.TXT (SET)\n  [info] time event(s) on 'd_u' encoded as time/value pairs in EV_P_D_U.TXT (SET)\nRenamed species (Kintecus name = SBML id): EffectorCytotoxicCD8TCell1 = Effector_Cytotoxic_CD8_TCells__Xe; p_d_u = d_u; p_d_m1 = d_m1; p_H = H",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Uninfected_tumour_cell_logistic_growth term 1/2",
+     "Uninfected_tumour_cell_logistic_growth",
      ""
     ],
     [
-     "0.924",
+     "1",
      "0",
      "0",
-     "UnInfected_Tumour_Cells_Xu==>2UnInfected_Tumour_Cells_Xu",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Uninfected_tumour_cell_logistic_growth term 2/2",
-     ""
-    ],
-    [
-     "2.8e-10",
-     "0",
-     "0",
-     "UnInfected_Tumour_Cells_Xu+UnInfected_Tumour_Cells_Xu==>UnInfected_Tumour_Cells_Xu",
+     "UnInfected_Tumour_Cells_Xu+S[USER;cUnInfected_Tumour_Cells_Xu:(0.924-2.8e-10*cUnInfected_Tumour_Cells_Xu)]==>2UnInfected_Tumour_Cells_Xu",
      ""
     ],
     [
@@ -287,35 +273,21 @@
      "#",
      "",
      "",
-     "M1_recruitment term 1/3",
+     "M1_recruitment term 1/2",
      ""
     ],
     [
-     "0.22",
+     "1",
      "0",
      "0",
-     "M1_Macrophage_Xm1==>2M1_Macrophage_Xm1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "M1_recruitment term 2/3",
-     ""
-    ],
-    [
-     "2.2e-9",
-     "0",
-     "0",
-     "M1_Macrophage_Xm1+M1_Macrophage_Xm1==>M1_Macrophage_Xm1",
+     "M1_Macrophage_Xm1+S[USER;cM1_Macrophage_Xm1:(0.22-2.2e-9*cM1_Macrophage_Xm1)]==>2M1_Macrophage_Xm1",
      ""
     ],
     [
      "#",
      "",
      "",
-     "M1_recruitment term 3/3",
+     "M1_recruitment term 2/2",
      ""
     ],
     [
@@ -413,35 +385,21 @@
      "#",
      "",
      "",
-     "M2_growth term 1/3",
+     "M2_growth term 1/2",
      ""
     ],
     [
-     "0.22",
+     "1",
      "0",
      "0",
-     "M2_Macrophage_Xm2==>2M2_Macrophage_Xm2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "M2_growth term 2/3",
-     ""
-    ],
-    [
-     "2.2e-9",
-     "0",
-     "0",
-     "M2_Macrophage_Xm2+M2_Macrophage_Xm2==>M2_Macrophage_Xm2",
+     "M2_Macrophage_Xm2+S[USER;cM2_Macrophage_Xm2:(0.22-2.2e-9*cM2_Macrophage_Xm2)]==>2M2_Macrophage_Xm2",
      ""
     ],
     [
      "#",
      "",
      "",
-     "M2_growth term 3/3",
+     "M2_growth term 2/2",
      ""
     ],
     [

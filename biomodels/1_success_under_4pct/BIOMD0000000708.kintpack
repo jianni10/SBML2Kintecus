@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:07:03.116155+00:00",
+ "created": "2026-11-07T22:12:37.809127+00:00",
  "description": "Liu2017 - Dynamics of Avian Influenza with Logistic Growth\nBioModels BIOMD0000000708 (curated). SBML file: Liu2017 - Dynamics of Avian Influenza with Logistic Growth.xml.\nSimulation: 0 to 100000 time units (SED-ML: Liu2017 - Dynamics of Avian Influenza with Logistic Growth.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.97e-06 of species peak (worst: I_h)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "reaction_1 term 1/2",
+     "reaction_1",
      ""
     ],
     [
-     "0.005",
+     "1",
      "0",
      "0",
-     "S_a==>2S_a",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 2/2",
-     ""
-    ],
-    [
-     "1e-7",
-     "0",
-     "0",
-     "S_a+S_a==>S_a",
+     "S_a+S[USER;cS_a:(0.005-1e-7*cS_a)]==>2S_a",
      ""
     ],
     [

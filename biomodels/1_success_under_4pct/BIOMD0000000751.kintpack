@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:08:05.695808+00:00",
+ "created": "2026-11-07T22:19:35.596285+00:00",
  "description": "Wilkie2013b - immune-induced cancer dormancy and immune evasion-basic\nBioModels BIOMD0000000751 (curated). SBML file: Wilkie2013b.xml.\nSimulation: 0 to 1000 time units (SED-ML: Wilkie2013b.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.16e-06 of species peak (worst: I)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] immune_growth term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
@@ -77,28 +77,14 @@
      "#",
      "",
      "",
-     "cancer_logistic_growth term 1/2",
+     "cancer_logistic_growth",
      ""
     ],
     [
-     "0.2",
+     "1",
      "0",
      "0",
-     "C==>2C",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cancer_logistic_growth term 2/2",
-     ""
-    ],
-    [
-     "2.0000000000000002e-11",
-     "0",
-     "0",
-     "C+C==>C",
+     "C+S[USER;cC:(0.2-2.0000000000000002e-11*cC)]==>2C",
      ""
     ],
     [

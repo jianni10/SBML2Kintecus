@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:03:35.536698+00:00",
+ "created": "2026-11-07T21:54:36.607236+00:00",
  "description": "Ouyang2014 - photomorphogenic UV-B signalling network\nBioModels BIOMD0000000545 (curated). SBML file: BIOMD0000000545_url.xml.\nSimulation: 0 to 30 time units (SED-ML: BIOMD0000000545_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.22e-06 of species peak (worst: CDW)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r4 term 2/2: 4 reactants split over 2 lines (Kintecus allows 3 per line)",
  "settings": {
   "kpath": "",
@@ -154,7 +154,7 @@
      "94.3524",
      "0",
      "0",
-     "UCS==>2UVR8M+2CS",
+     "UCS==>2CS+2UVR8M",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "1",
      "0",
      "0",
-     "UVR8M+UVR8M+CS+S[USER;cCS:(0.0372*cCS)]==>UCS",
+     "CS+CS+UVR8M+S[USER;cUVR8M:(0.0372*cUVR8M)]==>UCS",
      ""
     ],
     [
@@ -182,7 +182,7 @@
      "1",
      "0",
      "0",
-     "CS+S[USER;cCS,cUVR8M:(0.0372*cCS*cUVR8M^2)]==>sink",
+     "UVR8M+S[USER;cCS,cUVR8M:(0.0372*cCS^2*cUVR8M)]==>sink",
      ""
     ],
     [
@@ -196,7 +196,7 @@
      "50.6973",
      "0",
      "0",
-     "CDCS==>2CS+CD",
+     "CDCS==>CD+2CS",
      ""
     ],
     [
@@ -210,7 +210,7 @@
      "0.0611",
      "0",
      "0",
-     "CS+CS+CD==>CDCS",
+     "CD+CS+CS==>CDCS",
      ""
     ],
     [
@@ -224,7 +224,7 @@
      "4.7207",
      "0",
      "0",
-     "UVR8M+RUP==>UR",
+     "RUP+UVR8M==>UR",
      ""
     ],
     [
@@ -322,7 +322,7 @@
      "1.1999",
      "0",
      "0",
-     "CDW==>DWD+CD",
+     "CDW==>CD+DWD",
      ""
     ],
     [
@@ -336,7 +336,7 @@
      "10.1285",
      "0",
      "0",
-     "DWD+CD==>CDW",
+     "CD+DWD==>CDW",
      ""
     ],
     [

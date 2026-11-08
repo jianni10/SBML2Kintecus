@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:49:11.960434+00:00",
- "description": "Sivakumar2011 - EGF Receptor Signaling Pathway\nBioModels BIOMD0000000394 (curated). SBML file: BIOMD0000000394_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000394_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.43e-06 of species peak (worst: s129)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r8 term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r8 term 2/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r8 term 3/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r8 term 4/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r9 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r9 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r11 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r11 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r14 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r14 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] r4: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for s125\n  [info] re11: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T21:11:29.192294+00:00",
+ "description": "Sivakumar2011 - EGF Receptor Signaling Pathway\nBioModels BIOMD0000000394 (curated). SBML file: BIOMD0000000394_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000394_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.43e-06 of species peak (worst: s129)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] r8: rate order differs from the stoichiometry; consumed on separate line(s) - s23: zero order, signed\n  [info] r9: rate order differs from the stoichiometry; consumed on separate line(s) - s25: zero order, signed\n  [info] r11: rate order differs from the stoichiometry; consumed on separate line(s) - s29: zero order, signed\n  [info] r14: rate order differs from the stoichiometry; consumed on separate line(s) - s27: zero order, signed\n  [info] r4: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for s125\n  [info] re11: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,140 +49,112 @@
      "#",
      "",
      "",
-     "r8 term 1/4",
+     "r8",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s23+S[USER;cs22,cs23,cs24,cs29:(0.21386072426247432/(1.272264631043257*cs22*cs24*cs29+1.5508905852417303*cs22*cs24+2.127659574468085*cs22*cs29*(cs23+1e-30)+1*cs22*cs29+2.593617021276596*cs22*(cs23+1e-30)+1.219*cs22+1.5120787234042554*cs23+0.7417302798982187*cs24*cs29+0.9041692111959287*cs24+1.2404255319148936*cs29*(cs23+1e-30)+0.583*cs29+0.710677))]==>s24",
+     "source+S[USER;cs22,cs23,cs24,cs29:(0.039340328924995276*(5*(1.0872340425531917*cs23-1.3778625954198471*cs24)/(2.127659574468085*cs23+1.272264631043257*cs24+1)+5*(1.1840390879478828*cs23-0.46525237746891*cs24)/(1.6286644951140066*cs23+0.731528895391368*cs24+1))/((cs22+0.583)*(cs29+1.219)))]==>s24",
      ""
     ],
     [
      "#",
      "",
      "",
-     "r8 term 2/4",
+     "r8 (consumes s23)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s23+S[USER;cs22,cs23,cs24,cs29:(0.23290243589960558/(0.731528895391368*cs22*cs24*cs29+0.8917337234820776*cs22*cs24+1.6286644951140066*cs22*cs29*(cs23+1e-30)+1*cs22*cs29+1.9853420195439742*cs22*(cs23+1e-30)+1.219*cs22+1.157454397394137*cs23+0.4264813460131675*cs24*cs29+0.5198807607900512*cs24+0.9495114006514658*cs29*(cs23+1e-30)+0.583*cs29+0.710677))]==>s24",
+     "source+S[USER;cs22,cs23,cs24,cs29:((-1*0.039340328924995276*(5*(1.0872340425531917*cs23-1.3778625954198471*cs24)/(2.127659574468085*cs23+1.272264631043257*cs24+1)+5*(1.1840390879478828*cs23-0.46525237746891*cs24)/(1.6286644951140066*cs23+0.731528895391368*cs24+1))/((cs22+0.583)*(cs29+1.219))))]==>s23",
      ""
     ],
     [
      "#",
      "",
      "",
-     "r8 term 3/4",
+     "r9",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s24+S[USER;cs22,cs23,cs24,cs29:(0.2710278385863224/(2.127659574468085*cs22*cs23*cs29+2.593617021276596*cs22*cs23+1.272264631043257*cs22*cs29*(cs24+1e-30)+1*cs22*cs29+1.5508905852417303*cs22*(cs24+1e-30)+1.219*cs22+1.2404255319148936*cs23*cs29+1.5120787234042554*cs23+0.9041692111959287*cs24+0.7417302798982187*cs29*(cs24+1e-30)+0.583*cs29+0.710677))]==>s23",
+     "source+S[USER;cs24,cs25,cs26:(1*cs24*(3.194888178913738*cs25-1.4967602591792655*cs26)/(1.597444089456869*cs25+2.159827213822894*cs26+1))]==>s26",
      ""
     ],
     [
      "#",
      "",
      "",
-     "r8 term 4/4",
+     "r9 (consumes s25)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s24+S[USER;cs22,cs23,cs24,cs29:(0.09151590781381491/(1.6286644951140066*cs22*cs23*cs29+1.9853420195439742*cs22*cs23+0.731528895391368*cs22*cs29*(cs24+1e-30)+1*cs22*cs29+0.8917337234820776*cs22*(cs24+1e-30)+1.219*cs22+0.9495114006514658*cs23*cs29+1.157454397394137*cs23+0.5198807607900512*cs24+0.4264813460131675*cs29*(cs24+1e-30)+0.583*cs29+0.710677))]==>s23",
+     "source+S[USER;cs24,cs25,cs26:((-1*1*cs24*(3.194888178913738*cs25-1.4967602591792655*cs26)/(1.597444089456869*cs25+2.159827213822894*cs26+1)))]==>s25",
      ""
     ],
     [
      "#",
      "",
      "",
-     "r9 term 1/2",
+     "r11",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s25+s24+S[USER;cs25,cs26:(3.194888178913738/(1.597444089456869*cs25+2.159827213822894*cs26+1))]==>s26+s24",
+     "source+S[USER;cs29,cs30:(2*(0.5394105551747772*cs29-0.55435847208619*cs30)/(0.6854009595613434*cs29+0.9794319294809012*cs30+1))]==>s30",
      ""
     ],
     [
      "#",
      "",
      "",
-     "r9 term 2/2",
+     "r11 (consumes s29)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s26+s24+S[USER;cs25,cs26:(1.4967602591792655/(1.597444089456869*cs25+2.159827213822894*cs26+1))]==>s25+s24",
+     "source+S[USER;cs29,cs30:((-1*2*(0.5394105551747772*cs29-0.55435847208619*cs30)/(0.6854009595613434*cs29+0.9794319294809012*cs30+1)))]==>s29",
      ""
     ],
     [
      "#",
      "",
      "",
-     "r11 term 1/2",
+     "r14",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s29+S[USER;cs29,cs30:(1.0788211103495544/(0.6854009595613434*cs29+0.9794319294809012*cs30+1))]==>s30",
+     "source+S[USER;cs26,cs27,cs28:(1*cs26*(14.684210526315791*cs27-0.4393939393939394*cs28)/(26.315789473684212*cs27+0.6060606060606061*cs28+1))]==>s28",
      ""
     ],
     [
      "#",
      "",
      "",
-     "r11 term 2/2",
+     "r14 (consumes s27)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "s30+S[USER;cs29,cs30:(1.10871694417238/(0.6854009595613434*cs29+0.9794319294809012*cs30+1))]==>s29",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r14 term 1/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "s27+s26+S[USER;cs27,cs28:(14.684210526315791/(26.315789473684212*cs27+0.6060606060606061*cs28+1))]==>s28+s26",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "r14 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "s28+s26+S[USER;cs27,cs28:(0.4393939393939394/(26.315789473684212*cs27+0.6060606060606061*cs28+1))]==>s27+s26",
+     "source+S[USER;cs26,cs27,cs28:((-1*1*cs26*(14.684210526315791*cs27-0.4393939393939394*cs28)/(26.315789473684212*cs27+0.6060606060606061*cs28+1)))]==>s27",
      ""
     ],
     [

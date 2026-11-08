@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:55:59.420662+00:00",
- "description": "Tomida2003 - Calcium Oscillatory-induced translocation of nuclear factor of activated T cells\nBioModels BIOMD0000000678 (curated). SBML file: BIOMD0000000678_url.xml.\nSimulation: 0 to 80 time units (SED-ML: MODEL0912160005.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.32e-05 of species peak (worst: NFAT_dephosphorylated)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'NFAT_transported' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'stimulus' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Dephosphorylation term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - NFAT_dephosphorylated: zero order, signed\n  [info] Nuclear_export term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - NFAT_phosphorylated: zero order, signed",
+ "created": "2026-11-07T22:08:50.387261+00:00",
+ "description": "Tomida2003 - Calcium Oscillatory-induced translocation of nuclear factor of activated T cells\nBioModels BIOMD0000000678 (curated). SBML file: BIOMD0000000678_url.xml.\nSimulation: 0 to 80 time units (SED-ML: MODEL0912160005.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.32e-06 of species peak (worst: NFAT_dephosphorylated)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'NFAT_transported' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'stimulus' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Nuclear_export term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - NFAT_phosphorylated: zero order, signed\n  [info] 1 condition(s) on time alone written as switch species with time/value pairs (53 changes)",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,70 +49,14 @@
      "#",
      "",
      "",
-     "Dephosphorylation term 1/4",
-     ""
-    ],
-    [
-     "0.1795",
-     "0",
-     "0",
-     "NFAT_phosphorylated==>NFAT_dephosphorylated",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dephosphorylation term 2/4",
+     "Dephosphorylation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "NFAT_phosphorylated+S[USER;cTIME_:(0.1795/(abs(-cTIME_+3*floor(0.3333333333333333*cTIME_)+1)+1e-300))]==>NFAT_dephosphorylated",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dephosphorylation term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "NFAT_phosphorylated+S[USER;cTIME_:(0.5385*floor(0.3333333333333333*cTIME_)/(abs(-cTIME_+3*floor(0.3333333333333333*cTIME_)+1)+1e-300))]==>NFAT_dephosphorylated",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dephosphorylation term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cNFAT_phosphorylated,cTIME_:(0.1795*cNFAT_phosphorylated*cTIME_/(abs(-cTIME_+3*floor(0.3333333333333333*cTIME_)+1)+1e-300))]==>NFAT_phosphorylated",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Dephosphorylation term 4/4 (consumes NFAT_dephosphorylated)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cNFAT_phosphorylated,cTIME_:((-1*0.1795*cNFAT_phosphorylated*cTIME_/(abs(-cTIME_+3*floor(0.3333333333333333*cTIME_)+1)+1e-300)))]==>NFAT_dephosphorylated",
+     "NFAT_phosphorylated+S[USER;cSW1:(0.359*cSW1)]==>NFAT_dephosphorylated",
      ""
     ],
     [
@@ -186,20 +130,6 @@
      ""
     ],
     [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
-     ""
-    ],
-    [
      "END",
      "",
      "",
@@ -266,17 +196,6 @@
      ""
     ],
     [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
-     ""
-    ],
-    [
      "source",
      "0",
      "1",
@@ -296,6 +215,17 @@
      "No",
      "1",
      "constant 1.0: nothing produced [__sink__]",
+     ""
+    ],
+    [
+     "SW1",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time condition: 53 change(s), first at 1 [__switch__]",
      ""
     ],
     [
@@ -339,7 +269,7 @@
     ],
     [
      "1e-6",
-     "0.1",
+     "0.1000000002",
      "KCAL",
      "MOLES/LITER",
      "0",
@@ -387,7 +317,7 @@
     ],
     [
      "None1",
-     "0.1",
+     "0.1000000002",
      "0",
      "1e-8",
      "0",
@@ -435,5 +365,236 @@
    "rows": []
   }
  },
- "ofiles": []
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "1",
+     "0"
+    ],
+    [
+     "3",
+     "1"
+    ],
+    [
+     "4",
+     "0"
+    ],
+    [
+     "6",
+     "1"
+    ],
+    [
+     "7",
+     "0"
+    ],
+    [
+     "9",
+     "1"
+    ],
+    [
+     "10",
+     "0"
+    ],
+    [
+     "12",
+     "1"
+    ],
+    [
+     "13",
+     "0"
+    ],
+    [
+     "15",
+     "1"
+    ],
+    [
+     "16",
+     "0"
+    ],
+    [
+     "18",
+     "1"
+    ],
+    [
+     "19",
+     "0"
+    ],
+    [
+     "21",
+     "1"
+    ],
+    [
+     "22",
+     "0"
+    ],
+    [
+     "24",
+     "1"
+    ],
+    [
+     "25",
+     "0"
+    ],
+    [
+     "27",
+     "1"
+    ],
+    [
+     "28",
+     "0"
+    ],
+    [
+     "30",
+     "1"
+    ],
+    [
+     "31",
+     "0"
+    ],
+    [
+     "33",
+     "1"
+    ],
+    [
+     "34",
+     "0"
+    ],
+    [
+     "36",
+     "1"
+    ],
+    [
+     "37",
+     "0"
+    ],
+    [
+     "39",
+     "1"
+    ],
+    [
+     "40",
+     "0"
+    ],
+    [
+     "42",
+     "1"
+    ],
+    [
+     "43",
+     "0"
+    ],
+    [
+     "45",
+     "1"
+    ],
+    [
+     "46",
+     "0"
+    ],
+    [
+     "48",
+     "1"
+    ],
+    [
+     "49",
+     "0"
+    ],
+    [
+     "51",
+     "1"
+    ],
+    [
+     "52",
+     "0"
+    ],
+    [
+     "54",
+     "1"
+    ],
+    [
+     "55",
+     "0"
+    ],
+    [
+     "57",
+     "1"
+    ],
+    [
+     "58",
+     "0"
+    ],
+    [
+     "60",
+     "1"
+    ],
+    [
+     "61",
+     "0"
+    ],
+    [
+     "63",
+     "1"
+    ],
+    [
+     "64",
+     "0"
+    ],
+    [
+     "66",
+     "1"
+    ],
+    [
+     "67",
+     "0"
+    ],
+    [
+     "69",
+     "1"
+    ],
+    [
+     "70",
+     "0"
+    ],
+    [
+     "72",
+     "1"
+    ],
+    [
+     "73",
+     "0"
+    ],
+    [
+     "75",
+     "1"
+    ],
+    [
+     "76",
+     "0"
+    ],
+    [
+     "78",
+     "1"
+    ],
+    [
+     "79",
+     "0"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
 }

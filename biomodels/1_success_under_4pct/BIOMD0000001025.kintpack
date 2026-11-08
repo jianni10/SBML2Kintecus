@@ -1,10 +1,10 @@
 {
  "version": 3,
- "created": "2026-11-05T16:35:44.429703+00:00",
- "description": "Chaudhury2020 - EC50 expansion and killing mathematical model of CAR-T cell and tumour kinetics\nBioModels BIOMD0000001025 (curated). SBML file: Chaudhury2020 Eq 7-9.xml.\nSimulation: 0 to 360 time units (SED-ML: Chaudhury2020 Eq 7-9 - Fig 3(A) simulation.sedml), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.81e-06 of species peak (worst: Persistent_CAR_T_cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'CAR_T_cells' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Tumor_cell_growth term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Tumor_cell_death: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dPersistent_CAR_T_cells/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - Persistent_CAR_T_cells: zero order, signed",
+ "created": "2026-11-07T22:32:56.598364+00:00",
+ "description": "Chaudhury2020 - EC50 expansion and killing mathematical model of CAR-T cell and tumour kinetics\nBioModels BIOMD0000001025 (curated). SBML file: Chaudhury2020 Eq 7-9.xml.\nSimulation: 0 to 360 time units (SED-ML: Chaudhury2020 Eq 7-9 - Fig 3(A) simulation.sedml), sampling 0.3.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.10e-06 of species peak (worst: Persistent_CAR_T_cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'CAR_T_cells' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Tumor_cell_death: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
-  "switches": "-ig:mass -INT:1 -obeymaxint",
+  "switches": "-ig:mass -INT:5 -obeymaxint",
   "nation": false
  },
  "grids": {
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Tumor_cell_growth term 1/2",
+     "Tumor_cell_growth",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Tumor_cells+S[USER;cTumor_cells:(0.2/(0.0010000000000000002*(1/cTumor_cells)^3+1))]==>2Tumor_cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_cell_growth term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Tumor_cells+S[USER;cTumor_cells:(0.02895296546021679*log(cTumor_cells)/(0.0010000000000000002*(1/(cTumor_cells+1e-30))^3+1))]==>sink",
+     "Tumor_cells+S[USER;cTumor_cells:(0.02895296546021679*(-log(cTumor_cells)/log(10)+6.907755278982137/log(10))*log(10)/(0.0010000000000000002*(1/cTumor_cells)^3+1))]==>2Tumor_cells",
      ""
     ],
     [
@@ -95,10 +81,10 @@
      ""
     ],
     [
-     "0.1612",
+     "1",
      "0",
      "0",
-     "Expanding_CAR_T_cells==>sink",
+     "Expanding_CAR_T_cells+S[USER;cSW1:(0.1612*cSW1-0.1612)]==>2Expanding_CAR_T_cells",
      ""
     ],
     [
@@ -106,20 +92,6 @@
      "",
      "",
      "rate rule dExpanding_CAR_T_cells/dt term 2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Expanding_CAR_T_cells+S[USER;cSW1:(0.1612*cSW1)]==>2Expanding_CAR_T_cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dExpanding_CAR_T_cells/dt term 3",
      ""
     ],
     [
@@ -137,10 +109,10 @@
      ""
     ],
     [
-     "0.0012",
+     "1",
      "0",
      "0",
-     "Expanding_CAR_T_cells==>Persistent_CAR_T_cells+Expanding_CAR_T_cells",
+     "Expanding_CAR_T_cells+S[USER;cSW1:(0.0012-0.0012*cSW1)]==>Persistent_CAR_T_cells+Expanding_CAR_T_cells",
      ""
     ],
     [
@@ -151,38 +123,10 @@
      ""
     ],
     [
-     "0.0032",
-     "0",
-     "0",
-     "Persistent_CAR_T_cells==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dPersistent_CAR_T_cells/dt term 3",
-     ""
-    ],
-    [
      "1",
      "0",
      "0",
-     "Persistent_CAR_T_cells+S[USER;cSW1:(0.0032*cSW1)]==>2Persistent_CAR_T_cells",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dPersistent_CAR_T_cells/dt term 4 (consumes Persistent_CAR_T_cells)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cExpanding_CAR_T_cells,cSW1:((-1*0.0012*cExpanding_CAR_T_cells*cSW1))]==>Persistent_CAR_T_cells",
+     "Persistent_CAR_T_cells+S[USER;cSW1:(0.0032*cSW1-0.0032)]==>2Persistent_CAR_T_cells",
      ""
     ],
     [
@@ -260,28 +204,6 @@
      "No",
      "No",
      "Tumor_cells [Tumor_cells]",
-     ""
-    ],
-    [
-     "source",
-     "0",
-     "1",
-     "N",
-     "0",
-     "No",
-     "1",
-     "constant 1.0: nothing consumed [__source__]",
-     ""
-    ],
-    [
-     "sink",
-     "0",
-     "1",
-     "N",
-     "0",
-     "No",
-     "1",
-     "constant 1.0: nothing produced [__sink__]",
      ""
     ],
     [
@@ -386,7 +308,7 @@
      "None1",
      "0.3000000003",
      "0",
-     "1e-8",
+     "1e-10",
      "0",
      ""
     ],

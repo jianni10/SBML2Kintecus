@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T16:10:13.809940+00:00",
- "description": "Rosas2015 - Caffeine-induced luminal SR calcium changes\nBioModels BIOMD0000000601 (curated). SBML file: BIOMD0000000601_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000601_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.71e-06 of species peak (worst: mw40a96ef6_32da_46d1_9712_4f53f60bad43)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'mw447078ee_8bc8_4358_abcd_ade10dba93b0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'mwe1a0a651_d2d5_4f75_8d45_9336c60eb9a6' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] mw97ca2b6b_8c30_48ef_80cb_5ce4ebaa420f (volume 1): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mw18c30692_65ff_4c7a_b820_079f8ddd9b33 term 3/4 (volume 1): rate order differs from the stoichiometry; consumed on separate line(s) - mw40a96ef632da46d197124f43: zero order, signed\n  [info] mw18c30692_65ff_4c7a_b820_079f8ddd9b33 term 4/4 (volume 1): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mw18c30692_65ff_4c7a_b820_079f8ddd9b33 term 1/4 (volume 0.052): rate order differs from the stoichiometry; consumed on separate line(s) - mwd805cc434a96472fa894c111: zero order, signed\n  [info] time event(s) on 'mw168e0d8a_b9f7_4d4c_b437_a81206c5d381' encoded as time/value pairs in EV_MW168E0D8AB9F74D4.TXT (SET)\nRenamed species (Kintecus name = SBML id): mwd805cc434a96472fa894c111 = mwd805cc43_4a96_472f_a894_c119a6aa895f; mw40a96ef632da46d197124f43 = mw40a96ef6_32da_46d1_9712_4f53f60bad43; mw168e0d8ab9f74d4cb437a381 = mw168e0d8a_b9f7_4d4c_b437_a81206c5d381",
+ "created": "2026-11-07T21:58:27.517606+00:00",
+ "description": "Rosas2015 - Caffeine-induced luminal SR calcium changes\nBioModels BIOMD0000000601 (curated). SBML file: BIOMD0000000601_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000601_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.71e-06 of species peak (worst: mw40a96ef6_32da_46d1_9712_4f53f60bad43)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'mw447078ee_8bc8_4358_abcd_ade10dba93b0' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'mwe1a0a651_d2d5_4f75_8d45_9336c60eb9a6' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] mw97ca2b6b_8c30_48ef_80cb_5ce4ebaa420f (volume 1): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] mw18c30692_65ff_4c7a_b820_079f8ddd9b33 (volume 0.052): rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for mwd805cc434a96472fa894c111\n  [info] time event(s) on 'mw168e0d8a_b9f7_4d4c_b437_a81206c5d381' encoded as time/value pairs in EV_MW168E0D8AB9F74D4.TXT (SET)\nRenamed species (Kintecus name = SBML id): mwd805cc434a96472fa894c111 = mwd805cc43_4a96_472f_a894_c119a6aa895f; mw40a96ef632da46d197124f43 = mw40a96ef6_32da_46d1_9712_4f53f60bad43; mw168e0d8ab9f74d4cb437a381 = mw168e0d8a_b9f7_4d4c_b437_a81206c5d381",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -77,112 +77,42 @@
      "#",
      "",
      "",
-     "mw18c30692_65ff_4c7a_b820_079f8ddd9b33 term 1/4 (volume 1)",
+     "mw18c30692_65ff_4c7a_b820_079f8ddd9b33 term 1/2 (volume 1)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cmw168e0d8ab9f74d4cb437a381,cmw40a96ef632da46d197124f43:(8.922843646857985e-9*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8/(0.00025118864315095795*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8+1.4318047653842874e-11))]==>mw40a96ef632da46d197124f43",
+     "source+S[USER;cmw168e0d8ab9f74d4cb437a381,cmw40a96ef632da46d197124f43:(1*(cmw40a96ef632da46d197124f43*(4000*cmw168e0d8ab9f74d4cb437a381+1))^1.8*(8.922843646857985e-9-1.071813050673631e-6*cmw40a96ef632da46d197124f43)/(0.00025118864315095795*(cmw40a96ef632da46d197124f43*(4000*cmw168e0d8ab9f74d4cb437a381+1))^1.8+1.4318047653842874e-11))]==>mw40a96ef632da46d197124f43",
      ""
     ],
     [
      "#",
      "",
      "",
-     "mw18c30692_65ff_4c7a_b820_079f8ddd9b33 term 2/4 (volume 1)",
+     "mw18c30692_65ff_4c7a_b820_079f8ddd9b33 term 2/2 (volume 1)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cmw168e0d8ab9f74d4cb437a381,cmw40a96ef632da46d197124f43,cmwd805cc434a96472fa894c111:(5.3590652533681555e-5*cmwd805cc434a96472fa894c111*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8/(0.00025118864315095795*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8+1.4318047653842874e-11))]==>mw40a96ef632da46d197124f43",
+     "source+S[USER;cmw168e0d8ab9f74d4cb437a381,cmw40a96ef632da46d197124f43,cmwd805cc434a96472fa894c111:(5.3590652533681555e-5*(cmw40a96ef632da46d197124f43*(4000*cmw168e0d8ab9f74d4cb437a381+1))^1.8*(cmwd805cc434a96472fa894c111-sqrt(-0.000606*cmwd805cc434a96472fa894c111+(cmwd805cc434a96472fa894c111+0.0001665000000000001)^2))/(0.00025118864315095795*(cmw40a96ef632da46d197124f43*(4000*cmw168e0d8ab9f74d4cb437a381+1))^1.8+1.4318047653842874e-11))]==>mw40a96ef632da46d197124f43",
      ""
     ],
     [
      "#",
      "",
      "",
-     "mw18c30692_65ff_4c7a_b820_079f8ddd9b33 term 3/4 (volume 1) (consumes mw40a96ef632da46d197124f43)",
+     "mw18c30692_65ff_4c7a_b820_079f8ddd9b33 (volume 0.052) (consumes mwd805cc434a96472fa894c111)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cmw168e0d8ab9f74d4cb437a381,cmw40a96ef632da46d197124f43,cmwd805cc434a96472fa894c111:((-1*5.3590652533681555e-5*sqrt(-0.000606*cmwd805cc434a96472fa894c111+(cmwd805cc434a96472fa894c111+0.0001665000000000001)^2)*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8/(0.00025118864315095795*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8+1.4318047653842874e-11)))]==>mw40a96ef632da46d197124f43",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "mw18c30692_65ff_4c7a_b820_079f8ddd9b33 term 4/4 (volume 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "mw40a96ef632da46d197124f43+S[USER;cmw168e0d8ab9f74d4cb437a381,cmw40a96ef632da46d197124f43:(1.071813050673631e-6*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8/(0.00025118864315095795*(4000*cmw168e0d8ab9f74d4cb437a381*(cmw40a96ef632da46d197124f43+1e-30)+cmw40a96ef632da46d197124f43+1e-30)^1.8+1.4318047653842874e-11))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "mw18c30692_65ff_4c7a_b820_079f8ddd9b33 term 1/4 (volume 0.052) (consumes mwd805cc434a96472fa894c111)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cmw168e0d8ab9f74d4cb437a381,cmw40a96ef632da46d197124f43:((-1*1.7159314705496124e-7*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8/(0.00025118864315095795*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8+1.4318047653842874e-11)))]==>mwd805cc434a96472fa894c111",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "mw18c30692_65ff_4c7a_b820_079f8ddd9b33 term 2/4 (volume 0.052)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "mwd805cc434a96472fa894c111+S[USER;cmw168e0d8ab9f74d4cb437a381,cmw40a96ef632da46d197124f43:(0.0010305894718015685*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8/(0.00025118864315095795*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8+1.4318047653842874e-11))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "mw18c30692_65ff_4c7a_b820_079f8ddd9b33 term 3/4 (volume 0.052)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cmw168e0d8ab9f74d4cb437a381,cmw40a96ef632da46d197124f43,cmwd805cc434a96472fa894c111:(0.0010305894718015685*sqrt(-0.000606*cmwd805cc434a96472fa894c111+(cmwd805cc434a96472fa894c111+0.0001665000000000001)^2)*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8/(0.00025118864315095795*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8+1.4318047653842874e-11))]==>mwd805cc434a96472fa894c111",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "mw18c30692_65ff_4c7a_b820_079f8ddd9b33 term 4/4 (volume 0.052)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cmw168e0d8ab9f74d4cb437a381,cmw40a96ef632da46d197124f43:(2.061178943603137e-5*cmw40a96ef632da46d197124f43*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8/(0.00025118864315095795*(4000*cmw168e0d8ab9f74d4cb437a381*cmw40a96ef632da46d197124f43+cmw40a96ef632da46d197124f43)^1.8+1.4318047653842874e-11))]==>mwd805cc434a96472fa894c111",
+     "source+S[USER;cmw168e0d8ab9f74d4cb437a381,cmw40a96ef632da46d197124f43,cmwd805cc434a96472fa894c111:((-1*0.002061178943603137*(cmw40a96ef632da46d197124f43*(4000*cmw168e0d8ab9f74d4cb437a381+1))^1.8*(-0.01*cmw40a96ef632da46d197124f43+cmwd805cc434a96472fa894c111/2-sqrt(-0.000606*cmwd805cc434a96472fa894c111+(cmwd805cc434a96472fa894c111+0.0001665000000000001)^2)/2+8.325000000000004e-5)/(0.00025118864315095795*(cmw40a96ef632da46d197124f43*(4000*cmw168e0d8ab9f74d4cb437a381+1))^1.8+1.4318047653842874e-11)))]==>mwd805cc434a96472fa894c111",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-02T03:48:07.443994+00:00",
- "description": "Proctor2012 - Role of Amyloid-beta dimers in aggregation formation\nBioModels BIOMD0000000462 (curated). SBML file: BIOMD0000000462_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000462_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.44e-07 of species peak (worst: Abeta)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'AbDim' goes below zero in the SBML: integrated as AbDim_o = value + 0.002, output as AbDim = OUTC[AbDim_o;-0.002*source]\n  [info] AbetaPlaqueFormation: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for AbDim_o\n  [info] AbetaPlaqueGrowth: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): Source1 = Source; Sink1 = Sink",
+ "created": "2026-11-07T21:22:44.116377+00:00",
+ "description": "Proctor2012 - Role of Amyloid-beta dimers in aggregation formation\nBioModels BIOMD0000000462 (curated). SBML file: BIOMD0000000462_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000462_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.44e-07 of species peak (worst: Abeta)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'AbDim' goes below zero in the SBML: integrated as AbDim_o = value + 0.002, output as AbDim = OUTC[AbDim_o;-0.002*source]\n  [info] AbetaDimerisation: rate order differs from the stoichiometry; consumed on separate line(s) - Abeta: first order\n  [info] AbetaPlaqueGrowth: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): Source1 = Source; Sink1 = Sink",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:5 -obeymaxint",
@@ -77,56 +77,28 @@
      "#",
      "",
      "",
-     "AbetaDimerisation term 1/2 (shifted AbDim_o)",
+     "AbetaDimerisation (shifted AbDim_o)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cAbeta:(5.8915e-8*cAbeta^2)]==>AbDim_o",
+     "source+S[USER;cAbeta:(5.8915e-8*cAbeta*(1*cAbeta-1))]==>AbDim_o",
      ""
     ],
     [
      "#",
      "",
      "",
-     "AbetaDimerisation term 1/2",
-     ""
-    ],
-    [
-     "5.8915e-8",
-     "0",
-     "0",
-     "Abeta+Abeta==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "AbetaDimerisation term 2/2 (shifted AbDim_o)",
+     "AbetaDimerisation (consumes Abeta)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cAbeta:((-1*5.8915e-8*cAbeta))]==>AbDim_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "AbetaDimerisation term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cAbeta:(5.8915e-8*cAbeta)]==>2Abeta",
+     "Abeta+S[USER;cAbeta:(1.1783e-7*cAbeta-1.1783e-7)]==>sink",
      ""
     ],
     [
@@ -161,6 +133,20 @@
      "#",
      "",
      "",
+     "AbetaPlaqueFormation (shifted AbDim_o)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cAbDim_o:((-1*2.785e-6*(1*(cAbDim_o-0.002)-1)*(cAbDim_o-0.002)))]==>AbDim_o",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
      "AbetaPlaqueFormation",
      ""
     ],
@@ -169,20 +155,6 @@
      "0",
      "0",
      "source+S[USER;cAbDim_o:(1.3925e-6*(1*(cAbDim_o-0.002)-1)*(cAbDim_o-0.002))]==>4AbP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "AbetaPlaqueFormation (consumes AbDim_o)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cAbDim_o:((-1*2.785e-6*(1*(cAbDim_o-0.002)-1)*(cAbDim_o-0.002)))]==>AbDim_o",
      ""
     ],
     [

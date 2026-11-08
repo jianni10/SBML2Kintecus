@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-05T16:29:57.891285+00:00",
+ "created": "2026-11-07T22:20:52.784506+00:00",
  "description": "Wilson2012 - tumor vaccine efficacy\nBioModels BIOMD0000000791 (curated). SBML file: Wilson2012.xml.\nSimulation: 0 to 30 time units (SED-ML: Wilson2012.sedml), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.47e-06 of species peak (worst: E)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time event(s) on 'V' encoded as time/value pairs in EV_V.TXT (SET)\nRenamed species (Kintecus name = SBML id): T1 = T; E1 = E; R1 = R",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "tumor_growth term 1/2",
+     "tumor_growth",
      ""
     ],
     [
-     "0.1946",
+     "1",
      "0",
      "0",
-     "T1==>2T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_growth term 2/2",
-     ""
-    ],
-    [
-     "0.0005273712737127372",
-     "0",
-     "0",
-     "T1+T1==>T1",
+     "T1+S[USER;cT1:(0.1946-0.0005273712737127372*cT1)]==>2T1",
      ""
     ],
     [

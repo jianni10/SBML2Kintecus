@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T23:03:00.232647+00:00",
- "description": "LeBeau1999 - IP3-dependent intracellular calcium oscillations due to agonist stimulation from Cholecytokinin\nBioModels BIOMD0000000965 (curated). SBML file: LeBeau1999_Phosphorylation_CCK.xml.\nSimulation: 0 to 500 time units (SED-ML: LeBeau1999_Phosphorylation_CCK.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.81e-06 of species peak (worst: c)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'S' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Shut_to_Open term 3/9: rate order differs from the stoichiometry; consumed on separate line(s) - O: zero order, signed\n  [info] Shut_to_Open term 7/9: rate order differs from the stoichiometry; consumed on separate line(s) - O: zero order, signed\n  [info] Shut_to_Open term 8/9: rate order differs from the stoichiometry; consumed on separate line(s) - O: zero order, signed\n  [info] Inactivated1_to_Inactivated2 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - I2: zero order, signed\n  [info] Jpump: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): p_T = T",
+ "created": "2026-11-07T22:29:17.831053+00:00",
+ "description": "LeBeau1999 - IP3-dependent intracellular calcium oscillations due to agonist stimulation from Cholecytokinin\nBioModels BIOMD0000000965 (curated). SBML file: LeBeau1999_Phosphorylation_CCK.xml.\nSimulation: 0 to 500 time units (SED-ML: LeBeau1999_Phosphorylation_CCK.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.81e-06 of species peak (worst: c)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'S' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Shut_to_Open term 3/9: rate order differs from the stoichiometry; consumed on separate line(s) - O: zero order, signed\n  [info] Shut_to_Open term 4/9: rate order differs from the stoichiometry; consumed on separate line(s) - O: zero order, signed\n  [info] Shut_to_Open term 6/9: rate order differs from the stoichiometry; consumed on separate line(s) - O: zero order, signed\n  [info] Jpump: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): p_T = T",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -84,62 +84,6 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cc,cp_T:((-1*24*cc^3/(cc^3*exp(0.01*cp_T)+0.5120000000000001*exp(0.01*cp_T))))]==>O",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Shut_to_Open term 4/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "I1+S[USER;cc,cp_T:(24*cc^3/(cc^3*exp(0.01*cp_T)+0.5120000000000001*exp(0.01*cp_T)))]==>O+I1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Shut_to_Open term 5/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "I2+S[USER;cc,cp_T:(24*cc^3/(cc^3*exp(0.01*cp_T)+0.5120000000000001*exp(0.01*cp_T)))]==>O+I2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Shut_to_Open term 6/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "O+S[USER;cc,cp_T:(24*cc^3/(cc^3*exp(0.01*cp_T)+0.5120000000000001*exp(0.01*cp_T)))]==>2O",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Shut_to_Open term 7/9 (consumes O)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
      "source+S[USER;cI1,cc:((-1*24*cI1*cc^3/(cc^3+0.5120000000000001)))]==>O",
      ""
     ],
@@ -147,7 +91,7 @@
      "#",
      "",
      "",
-     "Shut_to_Open term 8/9 (consumes O)",
+     "Shut_to_Open term 4/9 (consumes O)",
      ""
     ],
     [
@@ -161,7 +105,7 @@
      "#",
      "",
      "",
-     "Shut_to_Open term 9/9",
+     "Shut_to_Open term 5/9",
      ""
     ],
     [
@@ -169,6 +113,62 @@
      "0",
      "0",
      "O+S[USER;cc:(24*cc^3/(cc^3+0.5120000000000001))]==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Shut_to_Open term 6/9 (consumes O)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cc,cp_T:((-1*24*cc^3*exp((-1*0.01*cp_T))/(cc^3+0.5120000000000001)))]==>O",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Shut_to_Open term 7/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I1+S[USER;cc,cp_T:(24*cc^3*exp((-1*0.01*cp_T))/(cc^3+0.5120000000000001))]==>O+I1",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Shut_to_Open term 8/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "I2+S[USER;cc,cp_T:(24*cc^3*exp((-1*0.01*cp_T))/(cc^3+0.5120000000000001))]==>O+I2",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Shut_to_Open term 9/9",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "O+S[USER;cc,cp_T:(24*cc^3*exp((-1*0.01*cp_T))/(cc^3+0.5120000000000001))]==>2O",
      ""
     ],
     [
@@ -203,42 +203,14 @@
      "#",
      "",
      "",
-     "Inactivated1_to_Inactivated2 term 1/2",
+     "Inactivated1_to_Inactivated2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "I1+S[USER;cp_T:(0.036/(0.61-0.6*exp((-1*0.01*cp_T))))]==>I2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Inactivated1_to_Inactivated2 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cI1,cp_T:(0.036*cI1/(0.61*exp(0.01*cp_T)-0.6))]==>I1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Inactivated1_to_Inactivated2 term 2/2 (consumes I2)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cI1,cp_T:((-1*0.036*cI1/(0.61*exp(0.01*cp_T)-0.6)))]==>I2",
+     "I1+S[USER;cp_T:(1*(0.036-0.036*exp((-1*0.01*cp_T)))/(0.61-0.6*exp((-1*0.01*cp_T))))]==>I2",
      ""
     ],
     [

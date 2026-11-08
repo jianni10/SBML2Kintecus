@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:13:12.454370+00:00",
+ "created": "2026-11-07T22:28:47.303522+00:00",
  "description": "Liu2017 - chemotherapy targeted model of tumor immune system\nBioModels BIOMD0000000930 (curated). SBML file: Liu2017.xml.\nSimulation: 0 to 50 time units (SED-ML: Liu2017.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.35e-06 of species peak (worst: Effector_immune_cell_population__N)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): Effectorimmunecellpopulat1 = Effector_immune_cell_population__N; Circulatinglymphocytepopu1 = Circulating_lymphocyte_population__C; Chemotherapeuticdrugconce1 = Chemotherapeutic_drug_concentration__M",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "reaction_1 term 1/2",
+     "reaction_1",
      ""
     ],
     [
-     "0.431",
+     "1",
      "0",
      "0",
-     "Tumor_Cell_Population__T==>2Tumor_Cell_Population__T",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "reaction_1 term 2/2",
-     ""
-    ],
-    [
-     "4.3962e-15",
-     "0",
-     "0",
-     "Tumor_Cell_Population__T+Tumor_Cell_Population__T==>Tumor_Cell_Population__T",
+     "Tumor_Cell_Population__T+S[USER;cTumor_Cell_Population__T:(0.431-4.3962e-15*cTumor_Cell_Population__T)]==>2Tumor_Cell_Population__T",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T16:29:10.681340+00:00",
- "description": "Reed2004 - Methionine Cycle\nBioModels BIOMD0000000698 (curated). SBML file: BIOMD0000000698_url.xml.\nSimulation: 0 to 10 time units (SED-ML: MODEL1006230091.sedml), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.38e-06 of species peak (worst: Homocysteine)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Metin' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] V_MAT_I: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_MAT_III: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] V_METH: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_GNMT: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_MS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_BHMT term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_BHMT term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] V_BHMT term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] V_CBS term 1/3: rate order differs from the stoichiometry; consumed on separate line(s) - Cystathionine: zero order, signed\n  [info] METIN term 3/13: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] METIN term 6/13: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] METIN term 7/13: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] METIN term 10/13: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] METIN term 11/13: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] METIN term 12/13: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\nRenamed species (Kintecus name = SBML id): X5mTHF1 = _5mTHF",
+ "created": "2026-11-07T22:12:02.489941+00:00",
+ "description": "Reed2004 - Methionine Cycle\nBioModels BIOMD0000000698 (curated). SBML file: BIOMD0000000698_url.xml.\nSimulation: 0 to 10 time units (SED-ML: MODEL1006230091.sedml), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.38e-06 of species peak (worst: Homocysteine)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Metin' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] V_MAT_I: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_MAT_III: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] V_METH: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_GNMT: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_MS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_BHMT term 1/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] V_BHMT term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] V_BHMT term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - Methionine: zero order, signed\n  [info] V_CBS term 1/3: rate order differs from the stoichiometry; consumed on separate line(s) - Cystathionine: zero order, signed\nRenamed species (Kintecus name = SBML id): X5mTHF1 = _5mTHF",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -287,182 +287,14 @@
      "#",
      "",
      "",
-     "METIN term 1/13",
-     ""
-    ],
-    [
-     "200",
-     "0",
-     "0",
-     "source==>Methionine",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "METIN term 2/13",
+     "METIN",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cSW3,cSW4:(100*cSW3*cSW4)]==>Methionine",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "METIN term 3/13 (consumes Methionine)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cSW2:((-1*100*cSW1*cSW2))]==>Methionine",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "METIN term 4/13",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cSW2,cSW5:(100*cSW1*cSW2*cSW5)]==>Methionine",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "METIN term 5/13",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cSW2,cSW6:(100*cSW1*cSW2*cSW6)]==>Methionine",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "METIN term 6/13 (consumes Methionine)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW3,cSW4,cSW5:((-1*100*cSW3*cSW4*cSW5))]==>Methionine",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "METIN term 7/13 (consumes Methionine)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW3,cSW4,cSW6:((-1*100*cSW3*cSW4*cSW6))]==>Methionine",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "METIN term 8/13",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cSW2,cSW3,cSW4:(100*cSW1*cSW2*cSW3*cSW4)]==>Methionine",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "METIN term 9/13",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW3,cSW4,cSW5,cSW6:(100*cSW3*cSW4*cSW5*cSW6)]==>Methionine",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "METIN term 10/13 (consumes Methionine)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cSW2,cSW5,cSW6:((-1*100*cSW1*cSW2*cSW5*cSW6))]==>Methionine",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "METIN term 11/13 (consumes Methionine)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cSW2,cSW3,cSW4,cSW5:((-1*100*cSW1*cSW2*cSW3*cSW4*cSW5))]==>Methionine",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "METIN term 12/13 (consumes Methionine)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cSW2,cSW3,cSW4,cSW6:((-1*100*cSW1*cSW2*cSW3*cSW4*cSW6))]==>Methionine",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "METIN term 13/13",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cSW1,cSW2,cSW3,cSW4,cSW5,cSW6:(100*cSW1*cSW2*cSW3*cSW4*cSW5*cSW6)]==>Methionine",
+     "source+S[USER;cSW1,cSW2,cSW3,cSW4,cSW5,cSW6:(-200*cSW5*cSW6+200*cSW5+200*cSW6+1*(300*cSW3*cSW4+(-100*cSW1*cSW2+200)*(-cSW3*cSW4+1))*(cSW5*cSW6-cSW5-cSW6+1))]==>Methionine",
      ""
     ],
     [

@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:11:36.584020+00:00",
+ "created": "2026-11-07T22:26:56.779725+00:00",
  "description": "Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus and chemotherapy with saturated infection rate\nBioModels BIOMD0000000877 (curated). SBML file: Ontah2019.xml.\nSimulation: 0 to 100 time units (SED-ML: Ontah2019.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.10e-06 of species peak (worst: V)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_Cell_Infection: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
@@ -49,35 +49,21 @@
      "#",
      "",
      "",
-     "Tumor_Growth term 1/3",
+     "Tumor_Growth term 1/2",
      ""
     ],
     [
-     "0.1",
+     "1",
      "0",
      "0",
-     "U==>2U",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_Growth term 2/3",
-     ""
-    ],
-    [
-     "4.675081813931744e-5",
-     "0",
-     "0",
-     "U+U==>U",
+     "U+S[USER;cU:(0.1-4.675081813931744e-5*cU)]==>2U",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Tumor_Growth term 3/3",
+     "Tumor_Growth term 2/2",
      ""
     ],
     [
@@ -98,7 +84,7 @@
      "1",
      "0",
      "0",
-     "V+U+S[USER;cI,cU:(0.01/(1*cI+1*cU+0.5))]==>I",
+     "U+V+S[USER;cI,cU:(0.01/(1*cI+1*cU+0.5))]==>I",
      ""
     ],
     [

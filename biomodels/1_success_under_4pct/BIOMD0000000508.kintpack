@@ -1,10 +1,10 @@
 {
  "version": 3,
- "created": "2026-11-01T21:26:42.146198+00:00",
- "description": "Barrack2014 - Calcium/cell cycle coupling - Cyclin D dependent ATP release\nBioModels BIOMD0000000508 (curated). SBML file: BIOMD0000000508_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000508_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.43e-04 of species peak (worst: atp)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'ad' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'kg' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'gstar' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ro' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ip3con' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'dcon' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'delta' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ca' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule de/dt term 2: rate order differs from the stoichiometry; consumed on separate line(s) - e1: zero order, signed\n  [info] rate rule dr/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dr/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - r1: zero order, signed\n  [info] rate rule drs/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule drs/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dx/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - x: zero order, signed\n  [info] rate rule datp/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule datp/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - atp: zero order, signed\n  [info] rate rule datp/dt term 8: rate order differs from the stoichiometry; consumed on separate line(s) - atp: zero order, signed\n  [info] rate rule datp/dt term 9: rate order differs from the stoichiometry; consumed on separate line(s) - atp: zero order, signed\n  [info] rate rule datp/dt term 15: rate order differs from the stoichiometry; consumed on separate line(s) - atp: zero order, signed\n  [info] rate rule dy/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - y: zero order, signed\n  [info] rate rule dy/dt term 9: rate order differs from the stoichiometry; consumed on separate line(s) - y: zero order, signed\n  [info] rate rule dy/dt term 10: rate order differs from the stoichiometry; consumed on separate line(s) - y: zero order, signed\n  [info] rate rule dy/dt term 16: rate order differs from the stoichiometry; consumed on separate line(s) - y: zero order, signed\nRenamed species (Kintecus name = SBML id): e1 = e; r1 = r",
+ "created": "2026-11-07T21:51:55.400310+00:00",
+ "description": "Barrack2014 - Calcium/cell cycle coupling - Cyclin D dependent ATP release\nBioModels BIOMD0000000508 (curated). SBML file: BIOMD0000000508_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000508_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.30e-06 of species peak (worst: rs)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'ad' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'kg' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'gstar' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ro' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ip3con' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'dcon' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'delta' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'ca' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule de/dt term 2: rate order differs from the stoichiometry; consumed on separate line(s) - e1: zero order, signed\n  [info] rate rule drs/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule drs/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dx/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - x: zero order, signed\n  [info] rate rule datp/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): e1 = e; r1 = r",
  "settings": {
   "kpath": "",
-  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
   "nation": false
  },
  "grids": {
@@ -182,35 +182,7 @@
      "1",
      "0",
      "0",
-     "x+S[USER;cr1,crs,cx:(1.2/(-cr1-crs+cx+3.3))]==>r1+x",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dr/dt term 4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "r1+x+S[USER;cr1,crs,cx:((-1*0.48/(1*cr1+1*crs-1*cx-3.3)))]==>x",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dr/dt term 5 (consumes r1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cr1,crs,cx:((-1*0.48*crs*cx/(-cr1-crs+cx+3.3)))]==>r1",
+     "x+S[USER;cr1,crs,cx:((-0.48*cr1-0.48*crs+1.2)/(-cr1-crs+cx+3.3))]==>r1+x",
      ""
     ],
     [
@@ -392,7 +364,7 @@
      "1",
      "0",
      "0",
-     "atp+S[USER;cip3:(540/(cip3+10))]==>2atp",
+     "atp+S[USER;cip3:((-45000*cip3*tanh(100*cip3-1.2)-45000*cip3+540*tanh(100*cip3-1.2)+540)/(cip3+10))]==>2atp",
      ""
     ],
     [
@@ -413,14 +385,14 @@
      "#",
      "",
      "",
-     "rate rule datp/dt term 3 (consumes atp)",
+     "rate rule datp/dt term 3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cip3,cy:((-1*540*cy/(cip3+10)))]==>atp",
+     "y+S[USER;cip3:((45000*cip3*tanh(100*cip3-1.2)+45000*cip3-540*tanh(100*cip3-1.2)-540)/(cip3+10))]==>atp+y",
      ""
     ],
     [
@@ -434,7 +406,7 @@
      "1",
      "0",
      "0",
-     "ip3+y+S[USER;cip3:(45000/(cip3+10))]==>atp+ip3+y",
+     "atp+S[USER;cd,cip3:((-45000*cip3*tanh(100*cip3-1.2)-45000*cip3+540*tanh(100*cip3-1.2)+540)*tanh(100*cd-50)/(cip3+10))]==>2atp",
      ""
     ],
     [
@@ -448,175 +420,7 @@
      "1",
      "0",
      "0",
-     "atp+S[USER;cip3:(540*tanh(100*cip3-1.2)/(cip3+10))]==>2atp",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule datp/dt term 6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "atp+S[USER;cd,cip3:(540*tanh(100*cd-50)/(cip3+10))]==>2atp",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule datp/dt term 7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "atp+ip3+S[USER;cip3:(45000/(cip3+10))]==>ip3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule datp/dt term 8 (consumes atp)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cip3,cy:((-1*540*cy*tanh(100*cip3-1.2)/(cip3+10)))]==>atp",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule datp/dt term 9 (consumes atp)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cd,cip3,cy:((-1*540*cy*tanh(100*cd-50)/(cip3+10)))]==>atp",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule datp/dt term 10",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "ip3+y+S[USER;cip3:(45000*tanh(100*cip3-1.2)/(cip3+10))]==>atp+ip3+y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule datp/dt term 11",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "ip3+y+S[USER;cd,cip3:(45000*tanh(100*cd-50)/(cip3+10))]==>atp+ip3+y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule datp/dt term 12",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "atp+S[USER;cd,cip3:(540*tanh(100*cd-50)*tanh(100*cip3-1.2)/(cip3+10))]==>2atp",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule datp/dt term 13",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "atp+ip3+S[USER;cip3:(45000*tanh(100*cip3-1.2)/(cip3+10))]==>ip3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule datp/dt term 14",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "atp+ip3+S[USER;cd,cip3:(45000*tanh(100*cd-50)/(cip3+10))]==>ip3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule datp/dt term 15 (consumes atp)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cd,cip3,cy:((-1*540*cy*tanh(100*cd-50)*tanh(100*cip3-1.2)/(cip3+10)))]==>atp",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule datp/dt term 16",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "ip3+y+S[USER;cd,cip3:(45000*tanh(100*cd-50)*tanh(100*cip3-1.2)/(cip3+10))]==>atp+ip3+y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule datp/dt term 17",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "atp+ip3+S[USER;cd,cip3:(45000*tanh(100*cd-50)*tanh(100*cip3-1.2)/(cip3+10))]==>ip3",
+     "y+S[USER;cd,cip3:((45000*cip3*tanh(100*cip3-1.2)+45000*cip3-540*tanh(100*cip3-1.2)-540)*tanh(100*cd-50)/(cip3+10))]==>atp+y",
      ""
     ],
     [
@@ -658,21 +462,21 @@
      "1",
      "0",
      "0",
-     "y+S[USER;cip3:(540/(cip3+10))]==>2y",
+     "y+S[USER;cip3:((-45000*cip3*tanh(100*cip3-1.2)-45000*cip3+540*tanh(100*cip3-1.2)+540)/(cip3+10))]==>2y",
      ""
     ],
     [
      "#",
      "",
      "",
-     "rate rule dy/dt term 4 (consumes y)",
+     "rate rule dy/dt term 4",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;catp,cip3:((-1*540*catp/(cip3+10)))]==>y",
+     "atp+S[USER;cip3:((45000*cip3*tanh(100*cip3-1.2)+45000*cip3-540*tanh(100*cip3-1.2)-540)/(cip3+10))]==>y+atp",
      ""
     ],
     [
@@ -686,7 +490,7 @@
      "1",
      "0",
      "0",
-     "atp+ip3+S[USER;cip3:(45000/(cip3+10))]==>y+atp+ip3",
+     "y+S[USER;cd,cip3:((-45000*cip3*tanh(100*cip3-1.2)-45000*cip3+540*tanh(100*cip3-1.2)+540)*tanh(100*cd-50)/(cip3+10))]==>2y",
      ""
     ],
     [
@@ -700,175 +504,7 @@
      "1",
      "0",
      "0",
-     "y+S[USER;cip3:(540*tanh(100*cip3-1.2)/(cip3+10))]==>2y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dy/dt term 7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "y+S[USER;cd,cip3:(540*tanh(100*cd-50)/(cip3+10))]==>2y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dy/dt term 8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "y+ip3+S[USER;cip3:(45000/(cip3+10))]==>ip3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dy/dt term 9 (consumes y)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;catp,cip3:((-1*540*catp*tanh(100*cip3-1.2)/(cip3+10)))]==>y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dy/dt term 10 (consumes y)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;catp,cd,cip3:((-1*540*catp*tanh(100*cd-50)/(cip3+10)))]==>y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dy/dt term 11",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "atp+ip3+S[USER;cip3:(45000*tanh(100*cip3-1.2)/(cip3+10))]==>y+atp+ip3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dy/dt term 12",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "atp+ip3+S[USER;cd,cip3:(45000*tanh(100*cd-50)/(cip3+10))]==>y+atp+ip3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dy/dt term 13",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "y+S[USER;cd,cip3:(540*tanh(100*cd-50)*tanh(100*cip3-1.2)/(cip3+10))]==>2y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dy/dt term 14",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "y+ip3+S[USER;cip3:(45000*tanh(100*cip3-1.2)/(cip3+10))]==>ip3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dy/dt term 15",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "y+ip3+S[USER;cd,cip3:(45000*tanh(100*cd-50)/(cip3+10))]==>ip3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dy/dt term 16 (consumes y)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;catp,cd,cip3:((-1*540*catp*tanh(100*cd-50)*tanh(100*cip3-1.2)/(cip3+10)))]==>y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dy/dt term 17",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "atp+ip3+S[USER;cd,cip3:(45000*tanh(100*cd-50)*tanh(100*cip3-1.2)/(cip3+10))]==>y+atp+ip3",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dy/dt term 18",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "y+ip3+S[USER;cd,cip3:(45000*tanh(100*cd-50)*tanh(100*cip3-1.2)/(cip3+10))]==>ip3",
+     "atp+S[USER;cd,cip3:((45000*cip3*tanh(100*cip3-1.2)+45000*cip3-540*tanh(100*cip3-1.2)-540)*tanh(100*cd-50)/(cip3+10))]==>y+atp",
      ""
     ],
     [
@@ -1116,7 +752,7 @@
      "None1",
      "0.01",
      "0",
-     "1e-10",
+     "1e-8",
      "0",
      ""
     ],

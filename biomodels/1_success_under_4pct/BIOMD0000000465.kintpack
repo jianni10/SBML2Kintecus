@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-02T03:48:19.764320+00:00",
- "description": "Koo2013 - Shear stress induced AKT and eNOS phosphorylation - Model 2\nBioModels BIOMD0000000465 (curated). SBML file: BIOMD0000000465_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000465_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.38e-06 of species peak (worst: s28)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 's21' goes below zero in the SBML: integrated as s21_o = value + 200000, output as s21 = OUTC[s21_o;-200000*source]\n  [info] re57: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for s22\n  [info] re58: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re59: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re61: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re62: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re63: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re64: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re65: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T21:22:53.179201+00:00",
+ "description": "Koo2013 - Shear stress induced AKT and eNOS phosphorylation - Model 2\nBioModels BIOMD0000000465 (curated). SBML file: BIOMD0000000465_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000465_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.38e-06 of species peak (worst: s28)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 's21' goes below zero in the SBML: integrated as s21_o = value + 200000, output as s21 = OUTC[s21_o;-200000*source]\n  [info] re57: rate order differs from the stoichiometry; consumed on separate line(s) - s22: zero order, signed\n  [info] re58: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re59: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re61: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re62: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re63: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re64: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re65: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cs23:(2.4654816184123542*cs23^0.8*(1-0.007638986344833238*cs23^1.8)*exp((-1*0.007638986344833238*cs23^1.8)))]==>s20",
+     "source+S[USER;cs23:(0.907*cs23^0.8*(1-0.007638986344833238*cs23^1.8)*exp(1-0.007638986344833238*cs23^1.8))]==>s20",
      ""
     ],
     [
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cs23:((-1*2.4654816184123542*cs23^0.8*(1-0.007638986344833238*cs23^1.8)*exp((-1*0.007638986344833238*cs23^1.8))))]==>s22",
+     "source+S[USER;cs23:((-1*0.907*cs23^0.8*(1-0.007638986344833238*cs23^1.8)*exp(1-0.007638986344833238*cs23^1.8)))]==>s22",
      ""
     ],
     [

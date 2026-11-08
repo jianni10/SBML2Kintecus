@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T23:01:58.479690+00:00",
- "description": "Schokker2013 - A mathematical model representing cellular immune development and response to Salmonella of chicken intestinal tissue\nBioModels BIOMD0000000895 (curated). SBML file: Schokker2013.xml.\nSimulation: 0 to 40 time units (SED-ML: Schokker2013.sedml), sampling 0.04.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.66e-06 of species peak (worst: Mi)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Mr_Infection: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CD4_Growth_Boost term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CD8_Growth_Boost term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mi_Bursting: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mi_Lysis term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mi_Lysis term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - Mi: zero order, signed\n  [info] Si_Proliferation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mi_Lysis_Si: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for Si",
+ "created": "2026-11-07T22:27:40.137561+00:00",
+ "description": "Schokker2013 - A mathematical model representing cellular immune development and response to Salmonella of chicken intestinal tissue\nBioModels BIOMD0000000895 (curated). SBML file: Schokker2013.xml.\nSimulation: 0 to 40 time units (SED-ML: Schokker2013.sedml), sampling 0.04.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.66e-06 of species peak (worst: Mi)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Mr_Infection: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mi_Bursting: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mi_Lysis term 1/4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mi_Lysis term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - Mi: zero order, signed\n  [info] Si_Proliferation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Mi_Lysis_Si: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for Si",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -63,28 +63,14 @@
      "#",
      "",
      "",
-     "Mr_Growth_Boost term 1/2",
+     "Mr_Growth_Boost",
      ""
     ],
     [
-     "1.2",
+     "1",
      "0",
      "0",
-     "Mr==>2Mr",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Mr_Growth_Boost term 2/2",
-     ""
-    ],
-    [
-     "1.3714285714285715e-7",
-     "0",
-     "0",
-     "Mr+Mr==>Mr",
+     "Mr+S[USER;cMr:(1.2-1.3714285714285715e-7*cMr)]==>2Mr",
      ""
     ],
     [
@@ -126,7 +112,7 @@
      "1",
      "0",
      "0",
-     "Se+Mr+S[USER;cSe:(0.1/(1*cSe+600000))]==>Mi",
+     "Mr+Se+S[USER;cSe:(0.1/(1*cSe+600000))]==>Mi",
      ""
     ],
     [
@@ -154,7 +140,7 @@
      "5e-8",
      "0",
      "0",
-     "Se+Mr==>sink",
+     "Mr+Se==>sink",
      ""
     ],
     [
@@ -189,28 +175,14 @@
      "#",
      "",
      "",
-     "CD4_Growth_Boost term 1/2",
+     "CD4_Growth_Boost",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cCD4:(0.19*cCD4^3/(cCD4^2+75690000000000))]==>CD4",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "CD4_Growth_Boost term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "CD4+S[USER;cCD4:(2.3170731707317074e-9*cCD4^3/(1*(cCD4+1e-30)^2+75690000000000))]==>sink",
+     "source+S[USER;cCD4:(0.19*cCD4^3*(1-1.2195121951219512e-8*cCD4)/(cCD4^2+75690000000000))]==>CD4",
      ""
     ],
     [
@@ -287,28 +259,14 @@
      "#",
      "",
      "",
-     "CD8_Growth_Boost term 1/2",
+     "CD8_Growth_Boost",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "CD8+CD8+S[USER;cCD8:(1.44/(cCD8+47000000))]==>3CD8",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "CD8_Growth_Boost term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "CD8+CD8+CD8+S[USER;cCD8:(1.1076923076923077e-7/(1*cCD8+47000000))]==>2CD8",
+     "CD8+CD8+S[USER;cCD8:(1.44*(1-7.692307692307692e-8*cCD8)/(cCD8+47000000))]==>3CD8",
      ""
     ],
     [
@@ -364,7 +322,7 @@
      "2.6e-7",
      "0",
      "0",
-     "Se+Ma==>sink",
+     "Ma+Se==>sink",
      ""
     ],
     [
@@ -455,28 +413,14 @@
      "#",
      "",
      "",
-     "Se_Proliferation term 1/2",
+     "Se_Proliferation",
      ""
     ],
     [
-     "35",
+     "1",
      "0",
      "0",
-     "Se==>2Se",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Se_Proliferation term 2/2",
-     ""
-    ],
-    [
-     "7e-5",
-     "0",
-     "0",
-     "Se+Se==>Se",
+     "Se+S[USER;cSe:(35-7e-5*cSe)]==>2Se",
      ""
     ],
     [

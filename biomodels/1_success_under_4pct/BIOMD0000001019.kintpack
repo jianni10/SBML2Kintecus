@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-05T16:35:37.774205+00:00",
+ "created": "2026-11-07T22:32:18.239937+00:00",
  "description": "Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in HDLM-2 cell line\nBioModels BIOMD0000001019 (curated). SBML file: Barros2021_HDLM2.xml.\nSimulation: 0 to 500 time units (SED-ML: Barros2021_HDLM2.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.81e-06 of species peak (worst: Ct)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time event(s) on 'Ct' encoded as time/value pairs in EV_CT.TXT (SET)\n  [info] time event(s) on 'T' encoded as time/value pairs in EV_T1.TXT (SET)\nRenamed species (Kintecus name = SBML id): T1 = T",
  "settings": {
   "kpath": "",
@@ -133,28 +133,14 @@
      "#",
      "",
      "",
-     "R7_Tumor_proliferation term 1/2",
+     "R7_Tumor_proliferation",
      ""
     ],
     [
-     "0.05650026",
+     "1",
      "0",
      "0",
-     "T1==>2T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R7_Tumor_proliferation term 2/2",
-     ""
-    ],
-    [
-     "7.932800354754e-14",
-     "0",
-     "0",
-     "T1+T1==>T1",
+     "T1+S[USER;cT1:(0.05650026-7.932800354754e-14*cT1)]==>2T1",
      ""
     ],
     [

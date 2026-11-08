@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:53:13.407651+00:00",
- "description": "Hui2016 - Age-related changes in articular cartilage\nBioModels BIOMD0000000560 (curated). SBML file: BIOMD0000000560_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000560_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.90e-06 of species peak (worst: proMMP2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Protein_Damage_by_ROS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Lysosome_damage_by_ROS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Alk5Dimerisation term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Alk5_dimer: zero order, signed\nRenamed species (Kintecus name = SBML id): Sink1 = Sink; Source1 = Source",
+ "created": "2026-11-07T21:54:52.010437+00:00",
+ "description": "Hui2016 - Age-related changes in articular cartilage\nBioModels BIOMD0000000560 (curated). SBML file: BIOMD0000000560_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000560_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.90e-06 of species peak (worst: proMMP2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Protein_Damage_by_ROS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Lysosome_damage_by_ROS: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Alk5Dimerisation: rate order differs from the stoichiometry; consumed on separate line(s) - Alk5: first order\nRenamed species (Kintecus name = SBML id): Sink1 = Sink; Source1 = Source",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -84,7 +84,7 @@
      "8e-7",
      "0",
      "0",
-     "p38_P+Caspase_I==>p38_P+Caspase_A",
+     "Caspase_I+p38_P==>Caspase_A+p38_P",
      ""
     ],
     [
@@ -140,7 +140,7 @@
      "1e-8",
      "0",
      "0",
-     "Beclin+Lys_I==>Lys_A+Beclin",
+     "Beclin+Lys_I==>Beclin+Lys_A",
      ""
     ],
     [
@@ -196,7 +196,7 @@
      "0.00167",
      "0",
      "0",
-     "ROS+Bcl2==>ROS",
+     "Bcl2+ROS==>ROS",
      ""
     ],
     [
@@ -252,7 +252,7 @@
      "7.5e-5",
      "0",
      "0",
-     "Beclin+Bcl2==>Bcl2_Beclin",
+     "Bcl2+Beclin==>Bcl2_Beclin",
      ""
     ],
     [
@@ -266,7 +266,7 @@
      "0.0005",
      "0",
      "0",
-     "Bcl2_Beclin==>Beclin+Bcl2",
+     "Bcl2_Beclin==>Bcl2+Beclin",
      ""
     ],
     [
@@ -280,7 +280,7 @@
      "7.5e-5",
      "0",
      "0",
-     "Beclin_I+Bcl2==>Bcl2_Beclin_I",
+     "Bcl2+Beclin_I==>Bcl2_Beclin_I",
      ""
     ],
     [
@@ -294,7 +294,7 @@
      "0.0005",
      "0",
      "0",
-     "Bcl2_Beclin_I==>Beclin_I+Bcl2",
+     "Bcl2_Beclin_I==>Bcl2+Beclin_I",
      ""
     ],
     [
@@ -350,7 +350,7 @@
      "1.67e-5",
      "0",
      "0",
-     "Beclin_I+Bax_Bcl2==>Bax_Bcl2_Beclin_I",
+     "Bax_Bcl2+Beclin_I==>Bax_Bcl2_Beclin_I",
      ""
     ],
     [
@@ -364,7 +364,7 @@
      "0.000167",
      "0",
      "0",
-     "Bcl2_Beclin+Bax==>Bax_Bcl2_Beclin",
+     "Bax+Bcl2_Beclin==>Bax_Bcl2_Beclin",
      ""
     ],
     [
@@ -378,7 +378,7 @@
      "0.000167",
      "0",
      "0",
-     "Bcl2_Beclin_I+Bax==>Bax_Bcl2_Beclin_I",
+     "Bax+Bcl2_Beclin_I==>Bax_Bcl2_Beclin_I",
      ""
     ],
     [
@@ -392,7 +392,7 @@
      "0.00167",
      "0",
      "0",
-     "Bax_Bcl2_Beclin==>Bcl2_Beclin+Bax",
+     "Bax_Bcl2_Beclin==>Bax+Bcl2_Beclin",
      ""
     ],
     [
@@ -406,7 +406,7 @@
      "0.00167",
      "0",
      "0",
-     "Bax_Bcl2_Beclin_I==>Bcl2_Beclin_I+Bax",
+     "Bax_Bcl2_Beclin_I==>Bax+Bcl2_Beclin_I",
      ""
     ],
     [
@@ -434,7 +434,7 @@
      "0.0167",
      "0",
      "0",
-     "Bax_Bcl2_Beclin_I==>Beclin_I+Bax_Bcl2",
+     "Bax_Bcl2_Beclin_I==>Bax_Bcl2+Beclin_I",
      ""
     ],
     [
@@ -546,7 +546,7 @@
      "1e-6",
      "0",
      "0",
-     "ROS+IkB_NFkB==>NFkB+ROS",
+     "IkB_NFkB+ROS==>NFkB+ROS",
      ""
     ],
     [
@@ -560,7 +560,7 @@
      "1e-6",
      "0",
      "0",
-     "IL1+IkB_NFkB==>NFkB+IL1",
+     "IL1+IkB_NFkB==>IL1+NFkB",
      ""
     ],
     [
@@ -574,7 +574,7 @@
      "0.1",
      "0",
      "0",
-     "NFkB+IkB==>IkB_NFkB",
+     "IkB+NFkB==>IkB_NFkB",
      ""
     ],
     [
@@ -602,7 +602,7 @@
      "0.0001",
      "0",
      "0",
-     "NFkB_P==>RAGE+NFkB_P",
+     "NFkB_P==>NFkB_P+RAGE",
      ""
     ],
     [
@@ -616,7 +616,7 @@
      "0.005",
      "0",
      "0",
-     "NFkB_P==>NFkB_P+IL1",
+     "NFkB_P==>IL1+NFkB_P",
      ""
     ],
     [
@@ -644,7 +644,7 @@
      "0.001",
      "0",
      "0",
-     "NFkB_P==>NFkB_P+IkB",
+     "NFkB_P==>IkB+NFkB_P",
      ""
     ],
     [
@@ -686,7 +686,7 @@
      "5e-6",
      "0",
      "0",
-     "IL1==>proMMP2+IL1",
+     "IL1==>IL1+proMMP2",
      ""
     ],
     [
@@ -728,7 +728,7 @@
      "0.0005",
      "0",
      "0",
-     "IL1==>IL1+ADAMTS5",
+     "IL1==>ADAMTS5+IL1",
      ""
     ],
     [
@@ -756,7 +756,7 @@
      "1e-9",
      "0",
      "0",
-     "ADAMTS5+Aggrecan_Collagen2==>AggFrag+ADAMTS5+Collagen2",
+     "ADAMTS5+Aggrecan_Collagen2==>ADAMTS5+AggFrag+Collagen2",
      ""
     ],
     [
@@ -770,7 +770,7 @@
      "1e-8",
      "0",
      "0",
-     "MMP13+Collagen2==>ColFrag+MMP13",
+     "Collagen2+MMP13==>ColFrag+MMP13",
      ""
     ],
     [
@@ -840,7 +840,7 @@
      "1e-7",
      "0",
      "0",
-     "IL1+p38==>p38_P+IL1",
+     "IL1+p38==>IL1+p38_P",
      ""
     ],
     [
@@ -854,7 +854,7 @@
      "0.0001",
      "0",
      "0",
-     "ROS+p38==>p38_P+ROS",
+     "ROS+p38==>ROS+p38_P",
      ""
     ],
     [
@@ -882,7 +882,7 @@
      "0.001",
      "0",
      "0",
-     "NFkB+p38_P==>p38_P+NFkB_P",
+     "NFkB+p38_P==>NFkB_P+p38_P",
      ""
     ],
     [
@@ -910,7 +910,7 @@
      "0.0001",
      "0",
      "0",
-     "p38_P==>p38_P+ROS",
+     "p38_P==>ROS+p38_P",
      ""
     ],
     [
@@ -924,7 +924,7 @@
      "1",
      "0",
      "0",
-     "Lys_A+ROS+S[USER;cROS:(5e-6/(1*cROS+10))]==>ROS+Lys_I",
+     "Lys_A+ROS+S[USER;cROS:(5e-6/(1*cROS+10))]==>Lys_I+ROS",
      ""
     ],
     [
@@ -1015,42 +1015,28 @@
      "#",
      "",
      "",
-     "Alk5Dimerisation term 1/2",
-     ""
-    ],
-    [
-     "0.0001",
-     "0",
-     "0",
-     "Alk5+Alk5==>Alk5_dimer",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Alk5Dimerisation term 2/2",
+     "Alk5Dimerisation",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cAlk5:(0.0001*cAlk5)]==>2Alk5",
+     "source+S[USER;cAlk5:(0.0001*cAlk5*(1*cAlk5-1))]==>Alk5_dimer",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Alk5Dimerisation term 2/2 (consumes Alk5_dimer)",
+     "Alk5Dimerisation (consumes Alk5)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cAlk5:((-1*0.0001*cAlk5))]==>Alk5_dimer",
+     "Alk5+S[USER;cAlk5:(0.0002*cAlk5-0.0002)]==>sink",
      ""
     ],
     [
@@ -1176,7 +1162,7 @@
      "2e-5",
      "0",
      "0",
-     "Tgfb_A+Alk1_Alk5==>Tgfb_Alk1_Alk5",
+     "Alk1_Alk5+Tgfb_A==>Tgfb_Alk1_Alk5",
      ""
     ],
     [
@@ -1190,7 +1176,7 @@
      "1e-6",
      "0",
      "0",
-     "Tgfb_Alk1_Alk5==>Tgfb_A+Alk1_Alk5",
+     "Tgfb_Alk1_Alk5==>Alk1_Alk5+Tgfb_A",
      ""
     ],
     [
@@ -1218,7 +1204,7 @@
      "0.0001",
      "0",
      "0",
-     "Smad4+Smad2_P==>Smad2_P_Smad4",
+     "Smad2_P+Smad4==>Smad2_P_Smad4",
      ""
     ],
     [
@@ -1232,7 +1218,7 @@
      "0.0167",
      "0",
      "0",
-     "Smad2_P_Smad4==>Smad4+Smad2_P",
+     "Smad2_P_Smad4==>Smad2_P+Smad4",
      ""
     ],
     [
@@ -1260,7 +1246,7 @@
      "1e-5",
      "0",
      "0",
-     "Smad2_P_Smad4==>Smad7+Smad2_P_Smad4",
+     "Smad2_P_Smad4==>Smad2_P_Smad4+Smad7",
      ""
     ],
     [
@@ -1344,7 +1330,7 @@
      "0.00048",
      "0",
      "0",
-     "Sox9mRNA==>Sox9mRNA+Sox9",
+     "Sox9mRNA==>Sox9+Sox9mRNA",
      ""
     ],
     [
@@ -1372,7 +1358,7 @@
      "1e-6",
      "0",
      "0",
-     "Sox9_A==>Sox9_A+Col2mRNA",
+     "Sox9_A==>Col2mRNA+Sox9_A",
      ""
     ],
     [
@@ -1386,7 +1372,7 @@
      "1e-6",
      "0",
      "0",
-     "Smad2_P_Smad4==>Smad2_P_Smad4+Col2mRNA",
+     "Smad2_P_Smad4==>Col2mRNA+Smad2_P_Smad4",
      ""
     ],
     [
@@ -1414,7 +1400,7 @@
      "1e-7",
      "0",
      "0",
-     "Col2mRNA==>Collagen2+Col2mRNA",
+     "Col2mRNA==>Col2mRNA+Collagen2",
      ""
     ],
     [
@@ -1470,7 +1456,7 @@
      "0.0001",
      "0",
      "0",
-     "Collagen2+Aggrecan==>Aggrecan_Collagen2",
+     "Aggrecan+Collagen2==>Aggrecan_Collagen2",
      ""
     ],
     [
@@ -1512,7 +1498,7 @@
      "2e-5",
      "0",
      "0",
-     "Tgfb_Alk1_Alk5+Smad1==>Tgfb_Alk1_Alk5+Smad1_P",
+     "Smad1+Tgfb_Alk1_Alk5==>Smad1_P+Tgfb_Alk1_Alk5",
      ""
     ],
     [
@@ -1540,7 +1526,7 @@
      "0.0006",
      "0",
      "0",
-     "Smad7+Smad1_P==>Smad7+Smad1",
+     "Smad1_P+Smad7==>Smad1+Smad7",
      ""
     ],
     [
@@ -1554,7 +1540,7 @@
      "5e-5",
      "0",
      "0",
-     "Smad4+Smad1_P==>Smad1_P_Smad4",
+     "Smad1_P+Smad4==>Smad1_P_Smad4",
      ""
     ],
     [
@@ -1568,7 +1554,7 @@
      "0.0167",
      "0",
      "0",
-     "Smad1_P_Smad4==>Smad4+Smad1_P",
+     "Smad1_P_Smad4==>Smad1_P+Smad4",
      ""
     ],
     [
@@ -1582,7 +1568,7 @@
      "0.001",
      "0",
      "0",
-     "Runx2_I+Smad1_P_Smad4==>Smad1_P_Smad4+Runx2_A",
+     "Runx2_I+Smad1_P_Smad4==>Runx2_A+Smad1_P_Smad4",
      ""
     ],
     [

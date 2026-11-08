@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T16:30:50.686199+00:00",
- "description": "ChowHall2008 Dynamics of Human Weight Change_ODE_1\nBioModels BIOMD0000000901 (curated). SBML file: ChowHall2008 - Dynamics of Human Weight Change.xml.\nSimulation: 0 to 10000 time units (SED-ML: ChowHall2008 - Dynamics of Human Weight Change.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.00e-06 of species peak (worst: Lean_Mass)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Body_Mass' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dFat_Mass/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - Fat_Mass: zero order, signed\n  [info] rate rule dFat_Mass/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - Fat_Mass: zero order, signed\n  [info] rate rule dLean_Mass/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - Lean_Mass: zero order, signed\n  [info] rate rule dLean_Mass/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - Lean_Mass: zero order, signed\n  [info] time event(s) on 'Fat_Mass' encoded as time/value pairs in EV_FAT_MASS.TXT (ADD)",
+ "created": "2026-11-07T22:27:55.100789+00:00",
+ "description": "ChowHall2008 Dynamics of Human Weight Change_ODE_1\nBioModels BIOMD0000000901 (curated). SBML file: ChowHall2008 - Dynamics of Human Weight Change.xml.\nSimulation: 0 to 10000 time units (SED-ML: ChowHall2008 - Dynamics of Human Weight Change.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.00e-06 of species peak (worst: Lean_Mass)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Body_Mass' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dFat_Mass/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - Fat_Mass: zero order, signed\n  [info] rate rule dLean_Mass/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - Lean_Mass: zero order, signed\n  [info] time event(s) on 'Fat_Mass' encoded as time/value pairs in EV_FAT_MASS.TXT (ADD)",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -67,10 +67,10 @@
      ""
     ],
     [
-     "0.0012658227848101266",
+     "1",
      "0",
      "0",
-     "Fat_Mass==>sink",
+     "source+S[USER;cFat_Mass:(-0.0012658227848101266*cFat_Mass+0.0012658227848101266*cFat_Mass/(0.49974696356275305*cFat_Mass+1)-0.19367088607594934/(0.49974696356275305*cFat_Mass+1))]==>Fat_Mass",
      ""
     ],
     [
@@ -91,35 +91,7 @@
      "#",
      "",
      "",
-     "rate rule dFat_Mass/dt term 4 (consumes Fat_Mass)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cFat_Mass:((-1*0.19367088607594934/(0.49974696356275305*cFat_Mass+1)))]==>Fat_Mass",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dFat_Mass/dt term 5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Fat_Mass+S[USER;cFat_Mass:(0.0012658227848101266/(0.49974696356275305*cFat_Mass+1))]==>2Fat_Mass",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dFat_Mass/dt term 6",
+     "rate rule dFat_Mass/dt term 4",
      ""
     ],
     [
@@ -133,7 +105,7 @@
      "#",
      "",
      "",
-     "rate rule dFat_Mass/dt term 7",
+     "rate rule dFat_Mass/dt term 5",
      ""
     ],
     [
@@ -168,7 +140,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cFat_Mass:(1.006578947368421/(0.49974696356275305*cFat_Mass+1))]==>Lean_Mass",
+     "source+S[USER;cFat_Mass:((1.006578947368421-0.006578947368421053*cFat_Mass)/(0.49974696356275305*cFat_Mass+1))]==>Lean_Mass",
      ""
     ],
     [
@@ -197,20 +169,6 @@
      "0",
      "0",
      "source+S[USER;cFat_Mass,cLean_Mass:((-1*0.0026315789473684214*exp(0.09615384615384615*cLean_Mass)/cFat_Mass))]==>Lean_Mass",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dLean_Mass/dt term 5 (consumes Lean_Mass)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cFat_Mass:((-1*0.006578947368421053*cFat_Mass/(0.49974696356275305*cFat_Mass+1)))]==>Lean_Mass",
      ""
     ],
     [

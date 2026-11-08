@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:09:41.247769+00:00",
+ "created": "2026-11-07T22:21:10.811805+00:00",
  "description": "Sharp2019 - AML\nBioModels BIOMD0000000798 (curated). SBML file: Sharp2019.xml.\nSimulation: 0 to 50 time units (SED-ML: Sharp2019.sedml), sampling 0.05555555555555555.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.75e-06 of species peak (worst: L)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] immune_control: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): S1 = S; T1 = T",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "HSC_growth term 1/2",
+     "HSC_growth",
      ""
     ],
     [
-     "0.5",
+     "1",
      "0",
      "0",
-     "S1==>2S1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "HSC_growth term 2/2",
-     ""
-    ],
-    [
-     "0.5",
-     "0",
-     "0",
-     "S1+S1==>S1",
+     "S1+S[USER;cS1:(0.5-0.5*cS1)]==>2S1",
      ""
     ],
     [
@@ -91,35 +77,21 @@
      "#",
      "",
      "",
-     "progenitor_growth term 1/3",
+     "progenitor_growth term 1/2",
      ""
     ],
     [
-     "0.43",
+     "1",
      "0",
      "0",
-     "A==>2A",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "progenitor_growth term 2/3",
-     ""
-    ],
-    [
-     "0.43",
-     "0",
-     "0",
-     "A+A==>A",
+     "A+S[USER;cA:(0.43-0.43*cA)]==>2A",
      ""
     ],
     [
      "#",
      "",
      "",
-     "progenitor_growth term 3/3",
+     "progenitor_growth term 2/2",
      ""
     ],
     [
@@ -161,35 +133,21 @@
      "#",
      "",
      "",
-     "LSC_growth term 1/3",
+     "LSC_growth term 1/2",
      ""
     ],
     [
-     "0.27",
+     "1",
      "0",
      "0",
-     "L==>2L",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "LSC_growth term 2/3",
-     ""
-    ],
-    [
-     "0.27",
-     "0",
-     "0",
-     "L+L==>L",
+     "L+S[USER;cL:(0.27-0.27*cL)]==>2L",
      ""
     ],
     [
      "#",
      "",
      "",
-     "LSC_growth term 3/3",
+     "LSC_growth term 2/2",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:58:15.711730+00:00",
- "description": "Ciliberto2003 - CyclinE / Cdk2 timer in the cell cycle of Xenopus laevis embryo\nBioModels BIOMD0000000697 (curated). SBML file: BIOMD0000000697_url.xml.\nSimulation: 0 to 960 time units (SED-ML: MODEL0913242281_fig5.sedml), sampling 0.96.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.20e-05 of species peak (worst: Deg_a)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Cyc_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Xic_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Degradation_increase term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - Deg_a: zero order, signed\n  [info] Kinase__regulation term 1/3: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] Kinase__regulation term 2/3: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] Kinase__regulation term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Wee1_regulation term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Wee1_regulation term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T22:11:59.374958+00:00",
+ "description": "Ciliberto2003 - CyclinE / Cdk2 timer in the cell cycle of Xenopus laevis embryo\nBioModels BIOMD0000000697 (curated). SBML file: BIOMD0000000697_url.xml.\nSimulation: 0 to 960 time units (SED-ML: MODEL0913242281_fig5.sedml), sampling 0.96.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.20e-05 of species peak (worst: Deg_a)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Cyc_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Xic_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] Kinase__regulation term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] Kinase__regulation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Wee1_regulation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:5 -obeymaxint",
@@ -56,7 +56,7 @@
      "0.1",
      "0",
      "0",
-     "Xic+Cdk2_CycE==>Xic_Cdk2_CycE",
+     "Cdk2_CycE+Xic==>Xic_Cdk2_CycE",
      ""
     ],
     [
@@ -70,7 +70,7 @@
      "0.1",
      "0",
      "0",
-     "Xic+Cdk2_CycErem==>Xic_Cdk2_CycErem",
+     "Cdk2_CycErem+Xic==>Xic_Cdk2_CycErem",
      ""
     ],
     [
@@ -98,7 +98,7 @@
      "0.001",
      "0",
      "0",
-     "Xic_Cdk2_CycErem==>Xic+Cdk2_CycErem",
+     "Xic_Cdk2_CycErem==>Cdk2_CycErem+Xic",
      ""
     ],
     [
@@ -273,42 +273,14 @@
      "#",
      "",
      "",
-     "Degradation_increase term 1/3",
-     ""
-    ],
-    [
-     "0.0115",
-     "0",
-     "0",
-     "source==>Deg_a",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Degradation_increase term 2/3 (consumes Deg_a)",
+     "Degradation_increase",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cCdk2_CycErem:((-1*0.00345/(abs(cCdk2_CycErem-0.3)+1e-300)))]==>Deg_a",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Degradation_increase term 3/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Cdk2_CycErem+S[USER;cCdk2_CycErem:(0.0115/(abs(cCdk2_CycErem-0.3)+1e-300))]==>Deg_a+Cdk2_CycErem",
+     "source+S[USER;cCdk2_CycErem:(0.023*((cCdk2_CycErem-0.3)/(2*(abs(cCdk2_CycErem-0.3)+1e-300))+0.5))]==>Deg_a",
      ""
     ],
     [
@@ -343,35 +315,21 @@
      "#",
      "",
      "",
-     "Kinase__regulation term 1/3",
+     "Kinase__regulation term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cKin_a:(0.15/(1.01-cKin_a))]==>Kin_a",
+     "source+S[USER;cKin_a:(0.15*(1-cKin_a)/(1.01-cKin_a))]==>Kin_a",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Kinase__regulation term 2/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Kin_a+S[USER;cKin_a:((-1*0.15/(1*cKin_a-1.01)))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Kinase__regulation term 3/3",
+     "Kinase__regulation term 2/2",
      ""
     ],
     [
@@ -392,7 +350,7 @@
      "0.1",
      "0",
      "0",
-     "Xic+PCdk2_CycE==>Xic_PCdk2_CycE",
+     "PCdk2_CycE+Xic==>Xic_PCdk2_CycE",
      ""
     ],
     [
@@ -406,7 +364,7 @@
      "0.1",
      "0",
      "0",
-     "Xic+PCdk2_CycErem==>Xic_PCdk2_CycErem",
+     "PCdk2_CycErem+Xic==>Xic_PCdk2_CycErem",
      ""
     ],
     [
@@ -420,7 +378,7 @@
      "0.001",
      "0",
      "0",
-     "Xic_PCdk2_CycE==>Xic+PCdk2_CycE",
+     "Xic_PCdk2_CycE==>PCdk2_CycE+Xic",
      ""
     ],
     [
@@ -434,7 +392,7 @@
      "0.001",
      "0",
      "0",
-     "Xic_PCdk2_CycErem==>Xic+PCdk2_CycErem",
+     "Xic_PCdk2_CycErem==>PCdk2_CycErem+Xic",
      ""
     ],
     [
@@ -567,35 +525,21 @@
      "#",
      "",
      "",
-     "Wee1_regulation term 1/3",
+     "Wee1_regulation term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cWee1_a:(5.999999999999985/(8.00999999999998-cWee1_a))]==>Wee1_a",
+     "source+S[USER;cWee1_a:(1*(5.999999999999985-0.75*cWee1_a)/(8.00999999999998-cWee1_a))]==>Wee1_a",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Wee1_regulation term 2/3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Wee1_a+S[USER;cWee1_a:((-1*0.75/(1*cWee1_a-8.00999999999998)))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Wee1_regulation term 3/3",
+     "Wee1_regulation term 2/2",
      ""
     ],
     [

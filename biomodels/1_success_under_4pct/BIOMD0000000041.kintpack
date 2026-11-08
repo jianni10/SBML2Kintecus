@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-10-31T06:51:40.945545+00:00",
- "description": "Kongas2007 - Creatine Kinase in energy metabolic signaling in muscle\nBioModels BIOMD0000000041 (curated). SBML file: BIOMD0000000041_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000041_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.18e-06 of species peak (worst: Cri)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] OxPhos: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MiCK term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MiCK term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MMCK term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MMCK term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): P1 = P",
+ "created": "2026-11-07T20:20:42.454125+00:00",
+ "description": "Kongas2007 - Creatine Kinase in energy metabolic signaling in muscle\nBioModels BIOMD0000000041 (curated). SBML file: BIOMD0000000041_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000041_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.18e-06 of species peak (worst: Cri)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] OxPhos: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] MiCK: rate order differs from the stoichiometry; consumed on separate line(s) - ATPi: zero order, signed; Cri: zero order, signed\n  [info] MMCK: rate order differs from the stoichiometry; consumed on separate line(s) - ATP: zero order, signed; Cr: zero order, signed\nRenamed species (Kintecus name = SBML id): P1 = P",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -56,63 +56,91 @@
      "1",
      "0",
      "0",
-     "Pi+ADPi+S[USER;cADPi,cPi:(4600/(20*cADPi+800*cPi+1*(cADPi+1e-30)*(cPi+1e-30)+16000))]==>ATPi",
+     "ADPi+Pi+S[USER;cADPi,cPi:(4600/(20*cADPi+800*cPi+1*(cADPi+1e-30)*(cPi+1e-30)+16000))]==>ATPi",
      ""
     ],
     [
      "#",
      "",
      "",
-     "MiCK term 1/2",
+     "MiCK",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "ATPi+Cri+S[USER;cADPi,cATPi,cCri,cPCri:(0.0006815384615384615/(9.765625e-6*cADPi*cPCri+1.6954210069444442e-7*cADPi*(cCri+1e-30)+0.0048828125*cADPi+0.0013333333333333333*cATPi+3.472222222222222e-5*cCri+0.000625*cPCri+2.564102564102564e-7*(cATPi+1e-30)*(cCri+1e-30)+1))]==>PCri+ADPi",
+     "source+S[USER;cADPi,cATPi,cCri,cPCri:(1*(-0.108984375*cADPi*cPCri+0.0006815384615384615*cATPi*cCri)/(cADPi*(1.6954210069444442e-7*cCri+9.765625e-6*cPCri+0.0048828125)+cATPi*(2.564102564102564e-7*cCri+0.0013333333333333333)+3.472222222222222e-5*cCri+0.000625*cPCri+1))]==>ADPi+PCri",
      ""
     ],
     [
      "#",
      "",
      "",
-     "MiCK term 2/2",
+     "MiCK (consumes ATPi)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "PCri+ADPi+S[USER;cADPi,cATPi,cCri,cPCri:(0.108984375/(0.0048828125*cADPi+2.564102564102564e-7*cATPi*cCri+0.0013333333333333333*cATPi+1.6954210069444442e-7*cCri*(cADPi+1e-30)+3.472222222222222e-5*cCri+0.000625*cPCri+9.765625e-6*(cADPi+1e-30)*(cPCri+1e-30)+1))]==>ATPi+Cri",
+     "source+S[USER;cADPi,cATPi,cCri,cPCri:((-1*1*(-0.108984375*cADPi*cPCri+0.0006815384615384615*cATPi*cCri)/(cADPi*(1.6954210069444442e-7*cCri+9.765625e-6*cPCri+0.0048828125)+cATPi*(2.564102564102564e-7*cCri+0.0013333333333333333)+3.472222222222222e-5*cCri+0.000625*cPCri+1)))]==>ATPi",
      ""
     ],
     [
      "#",
      "",
      "",
-     "MMCK term 1/2",
+     "MiCK (consumes Cri)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Cr+ATP+S[USER;cADP,cATP,cCr,cPCr:(0.0004993548387096774/(2.6924568129927193e-6*cADP*cPCr+1.2883675867329058e-7*cADP*(cCr+1e-30)+0.0044964028776978415*cADP+0.0011111111111111111*cATP+2.865329512893983e-5*cCr+0.00021141649048625792*cPCr+7.168458781362007e-8*(cATP+1e-30)*(cCr+1e-30)+1))]==>PCr+ADP",
+     "source+S[USER;cADPi,cATPi,cCri,cPCri:((-1*1*(-0.108984375*cADPi*cPCri+0.0006815384615384615*cATPi*cCri)/(cADPi*(1.6954210069444442e-7*cCri+9.765625e-6*cPCri+0.0048828125)+cATPi*(2.564102564102564e-7*cCri+0.0013333333333333333)+3.472222222222222e-5*cCri+0.000625*cPCri+1)))]==>Cri",
      ""
     ],
     [
      "#",
      "",
      "",
-     "MMCK term 2/2",
+     "MMCK",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "PCr+ADP+S[USER;cADP,cATP,cCr,cPCr:(0.07875436178003704/(0.0044964028776978415*cADP+7.168458781362007e-8*cATP*cCr+0.0011111111111111111*cATP+1.2883675867329058e-7*cCr*(cADP+1e-30)+2.865329512893983e-5*cCr+0.00021141649048625792*cPCr+2.6924568129927193e-6*(cADP+1e-30)*(cPCr+1e-30)+1))]==>Cr+ATP",
+     "source+S[USER;cADP,cATP,cCr,cPCr:(1*(-0.07875436178003704*cADP*cPCr+0.0004993548387096774*cATP*cCr)/(cADP*(1.2883675867329058e-7*cCr+2.6924568129927193e-6*cPCr+0.0044964028776978415)+cATP*(7.168458781362007e-8*cCr+0.0011111111111111111)+2.865329512893983e-5*cCr+0.00021141649048625792*cPCr+1))]==>ADP+PCr",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MMCK (consumes ATP)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cADP,cATP,cCr,cPCr:((-1*1*(-0.07875436178003704*cADP*cPCr+0.0004993548387096774*cATP*cCr)/(cADP*(1.2883675867329058e-7*cCr+2.6924568129927193e-6*cPCr+0.0044964028776978415)+cATP*(7.168458781362007e-8*cCr+0.0011111111111111111)+2.865329512893983e-5*cCr+0.00021141649048625792*cPCr+1)))]==>ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "MMCK (consumes Cr)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cADP,cATP,cCr,cPCr:((-1*1*(-0.07875436178003704*cADP*cPCr+0.0004993548387096774*cATP*cCr)/(cADP*(1.2883675867329058e-7*cCr+2.6924568129927193e-6*cPCr+0.0044964028776978415)+cATP*(7.168458781362007e-8*cCr+0.0011111111111111111)+2.865329512893983e-5*cCr+0.00021141649048625792*cPCr+1)))]==>Cr",
      ""
     ],
     [
@@ -127,34 +155,6 @@
      "0",
      "0",
      "ATP==>ADP+P1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Pi_diffusion term 1/2 (volume 0.0625)",
-     ""
-    ],
-    [
-     "18.4",
-     "0",
-     "0",
-     "Pi==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Pi_diffusion term 2/2 (volume 0.0625)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cP1:(220.79999999999998*cP1)]==>Pi",
      ""
     ],
     [
@@ -189,28 +189,28 @@
      "#",
      "",
      "",
-     "Cr_diffusion term 1/2 (volume 0.0625)",
+     "Pi_diffusion term 1/2 (volume 0.0625)",
      ""
     ],
     [
-     "14.6",
+     "18.4",
      "0",
      "0",
-     "Cri==>sink",
+     "Pi==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Cr_diffusion term 2/2 (volume 0.0625)",
+     "Pi_diffusion term 2/2 (volume 0.0625)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cCr:(175.2*cCr)]==>Cri",
+     "source+S[USER;cP1:(220.79999999999998*cP1)]==>Pi",
      ""
     ],
     [
@@ -239,6 +239,34 @@
      "0",
      "0",
      "Cr==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cr_diffusion term 1/2 (volume 0.0625)",
+     ""
+    ],
+    [
+     "14.6",
+     "0",
+     "0",
+     "Cri==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "Cr_diffusion term 2/2 (volume 0.0625)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cCr:(175.2*cCr)]==>Cri",
      ""
     ],
     [
@@ -301,34 +329,6 @@
      "#",
      "",
      "",
-     "PCr_diffusion term 1/2 (volume 0.0625)",
-     ""
-    ],
-    [
-     "14.6",
-     "0",
-     "0",
-     "PCri==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PCr_diffusion term 2/2 (volume 0.0625)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cPCr:(175.2*cPCr)]==>PCri",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
      "PCr_diffusion term 1/2 (volume 0.75)",
      ""
     ],
@@ -357,28 +357,28 @@
      "#",
      "",
      "",
-     "ATP_diffusion term 1/2 (volume 0.0625)",
+     "PCr_diffusion term 1/2 (volume 0.0625)",
      ""
     ],
     [
-     "8.16",
+     "14.6",
      "0",
      "0",
-     "ATPi==>sink",
+     "PCri==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "ATP_diffusion term 2/2 (volume 0.0625)",
+     "PCr_diffusion term 2/2 (volume 0.0625)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cATP:(97.92*cATP)]==>ATPi",
+     "source+S[USER;cPCr:(175.2*cPCr)]==>PCri",
      ""
     ],
     [
@@ -407,6 +407,34 @@
      "0",
      "0",
      "ATP==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ATP_diffusion term 1/2 (volume 0.0625)",
+     ""
+    ],
+    [
+     "8.16",
+     "0",
+     "0",
+     "ATPi==>sink",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "ATP_diffusion term 2/2 (volume 0.0625)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cATP:(97.92*cATP)]==>ATPi",
      ""
     ],
     [

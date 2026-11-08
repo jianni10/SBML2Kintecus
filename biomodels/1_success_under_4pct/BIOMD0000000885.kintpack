@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:11:47.582844+00:00",
+ "created": "2026-11-07T22:27:27.855594+00:00",
  "description": "Sumana2018 - Mathematical modeling of cancer-immune system, considering the role of antibodies.\nBioModels BIOMD0000000885 (curated). SBML file: Sumana2018.xml.\nSimulation: 0 to 0.01 time units (SED-ML: Sumana2018.sedml), sampling 1e-5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.33e-06 of species peak (worst: A)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): P1 = P; T1 = T",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "B_cell_formation term 1/2",
+     "B_cell_formation",
      ""
     ],
     [
-     "0.010000000000000002",
+     "1",
      "0",
      "0",
-     "B==>2B",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "B_cell_formation term 2/2",
-     ""
-    ],
-    [
-     "1.0000000000000002e-8",
-     "0",
-     "0",
-     "B+B==>B",
+     "B+S[USER;cB:(0.010000000000000002-1.0000000000000002e-8*cB)]==>2B",
      ""
     ],
     [
@@ -161,28 +147,14 @@
      "#",
      "",
      "",
-     "Formation_of_tumor_cell term 1/2",
+     "Formation_of_tumor_cell",
      ""
     ],
     [
-     "0.431",
+     "1",
      "0",
      "0",
-     "T1==>2T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Formation_of_tumor_cell term 2/2",
-     ""
-    ],
-    [
-     "4.3979591836734693e-10",
-     "0",
-     "0",
-     "T1+T1==>T1",
+     "T1+S[USER;cT1:(0.431-4.3979591836734693e-10*cT1)]==>2T1",
      ""
     ],
     [

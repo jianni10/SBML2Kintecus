@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-06T06:02:28.151879+00:00",
- "description": "Cooling2007_IP3transients_CardiacMyocyte\nBioModels BIOMD0000000400 (curated). SBML file: BIOMD0000000400_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000400_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.51e-06 of species peak (worst: R)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dRl/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - Rl: zero order, signed\n  [info] rate rule dRlg/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - Rlg: zero order, signed\nRenamed species (Kintecus name = SBML id): R1 = R; P1 = P",
+ "created": "2026-11-07T21:11:46.774081+00:00",
+ "description": "Cooling2007_IP3transients_CardiacMyocyte\nBioModels BIOMD0000000400 (curated). SBML file: BIOMD0000000400_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000400_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.51e-06 of species peak (worst: R)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): R1 = R; P1 = P",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -588,35 +588,7 @@
      "1",
      "0",
      "0",
-     "R1+S[USER;cSW1:(2.9999999999999997e-5*cSW1)]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dR/dt term 5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "R1+S[USER;cSW1,cSW2,cSW3:(2.9999999999999997e-5*cSW1*cSW2*cSW3)]==>2R1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dR/dt term 6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "R1+S[USER;cSW2,cSW3,cTIME_:(2.9999999999999997e-5*cSW2*cSW3/(1+1e308*exp((-1*80*cTIME_))))]==>sink",
+     "R1+S[USER;cSW1,cSW2,cSW3,cTIME_:(2.9999999999999997e-5*cSW1*cSW2*cSW3-2.9999999999999997e-5*cSW1-2.9999999999999997e-5*cSW2*cSW3/(exp(2404-80*cTIME_)+1))]==>2R1",
      ""
     ],
     [
@@ -658,7 +630,7 @@
      "1",
      "0",
      "0",
-     "R1+S[USER;cSW1:(2.9999999999999997e-5*cSW1)]==>Rl+R1",
+     "R1+S[USER;cSW1,cSW2,cSW3,cTIME_:(-2.9999999999999997e-5*cSW1*cSW2*cSW3+2.9999999999999997e-5*cSW1+2.9999999999999997e-5*cSW2*cSW3/(exp(2404-80*cTIME_)+1))]==>Rl+R1",
      ""
     ],
     [
@@ -673,34 +645,6 @@
      "0",
      "0",
      "Rl+Gd==>Gd",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dRl/dt term 5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "R1+S[USER;cSW2,cSW3,cTIME_:(2.9999999999999997e-5*cSW2*cSW3/(1+1e308*exp((-1*80*cTIME_))))]==>Rl+R1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dRl/dt term 6 (consumes Rl)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cR1,cSW1,cSW2,cSW3:((-1*2.9999999999999997e-5*cR1*cSW1*cSW2*cSW3))]==>Rl",
      ""
     ],
     [
@@ -725,10 +669,10 @@
      ""
     ],
     [
-     "7.562500000000001",
+     "1",
      "0",
      "0",
-     "Rg==>sink",
+     "Rg+S[USER;cSW1,cSW2,cSW3,cTIME_:(0.03*cSW1*cSW2*cSW3-0.03*cSW1-0.03*cSW2*cSW3/(exp(2404-80*cTIME_)+1)-7.562500000000001)]==>2Rg",
      ""
     ],
     [
@@ -743,48 +687,6 @@
      "0",
      "0",
      "Gd+R1==>Rg+Gd+R1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dRg/dt term 4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Rg+S[USER;cSW1:(0.03*cSW1)]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dRg/dt term 5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Rg+S[USER;cSW1,cSW2,cSW3:(0.03*cSW1*cSW2*cSW3)]==>2Rg",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dRg/dt term 6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Rg+S[USER;cSW2,cSW3,cTIME_:(0.03*cSW2*cSW3/(1+1e308*exp((-1*80*cTIME_))))]==>sink",
      ""
     ],
     [
@@ -840,35 +742,7 @@
      "1",
      "0",
      "0",
-     "Rg+S[USER;cSW1:(0.03*cSW1)]==>Rlg+Rg",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dRlg/dt term 4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Rg+S[USER;cSW2,cSW3,cTIME_:(0.03*cSW2*cSW3/(1+1e308*exp((-1*80*cTIME_))))]==>Rlg+Rg",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dRlg/dt term 5 (consumes Rlg)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cRg,cSW1,cSW2,cSW3:((-1*0.03*cRg*cSW1*cSW2*cSW3))]==>Rlg",
+     "Rg+S[USER;cSW1,cSW2,cSW3,cTIME_:(-0.03*cSW1*cSW2*cSW3+0.03*cSW1+0.03*cSW2*cSW3/(exp(2404-80*cTIME_)+1))]==>Rlg+Rg",
      ""
     ],
     [

@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:12:15.234219+00:00",
+ "created": "2026-11-07T22:28:01.494948+00:00",
  "description": "Solis-perez2019 - A fractional mathematical model of breast cancer competition model\nBioModels BIOMD0000000903 (curated). SBML file: Solis-perez2019.xml.\nSimulation: 0 to 30 time units (SED-ML: Solis-perez2019.sedml), sampling 0.03.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.28e-06 of species peak (worst: I)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Decrase_of_healthy_cell_due_to_cancer term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): T1 = T; E1 = E",
  "settings": {
   "kpath": "",
@@ -49,35 +49,21 @@
      "#",
      "",
      "",
-     "Formation_of_Stem_cell term 1/3",
+     "Formation_of_Stem_cell term 1/2",
      ""
     ],
     [
-     "0.75",
+     "1",
      "0",
      "0",
-     "C==>2C",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Formation_of_Stem_cell term 2/3",
-     ""
-    ],
-    [
-     "3.303964757709251e-7",
-     "0",
-     "0",
-     "C+C==>C",
+     "C+S[USER;cC:(0.75-3.303964757709251e-7*cC)]==>2C",
      ""
     ],
     [
      "#",
      "",
      "",
-     "Formation_of_Stem_cell term 3/3",
+     "Formation_of_Stem_cell term 2/2",
      ""
     ],
     [
@@ -161,28 +147,14 @@
      "#",
      "",
      "",
-     "Increase_in_the_healthy_cell_in_the_system term 1/2",
+     "Increase_in_the_healthy_cell_in_the_system",
      ""
     ],
     [
-     "0.7",
+     "1",
      "0",
      "0",
-     "H==>2H",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Increase_in_the_healthy_cell_in_the_system term 2/2",
-     ""
-    ],
-    [
-     "2.8e-8",
-     "0",
-     "0",
-     "H+H==>H",
+     "H+S[USER;cH:(0.7-2.8e-8*cH)]==>2H",
      ""
     ],
     [

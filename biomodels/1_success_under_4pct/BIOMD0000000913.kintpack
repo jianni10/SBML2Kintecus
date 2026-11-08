@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:12:47.755145+00:00",
+ "created": "2026-11-07T22:28:16.802491+00:00",
  "description": "dePillis2008 - Optimal control of mixed immunotherapy and chemotherapy of tumors\nBioModels BIOMD0000000913 (curated). SBML file: dePillis2008.xml.\nSimulation: 0 to 5 time units (SED-ML: dePillis2008.sedml), sampling 0.005.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.50e-06 of species peak (worst: I)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Elimination_of_tumor_by_the_action_of_immune_response term 3/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): T1 = T; M1 = M",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Detection_and_induction_of_tumor_cell_population term 1/2",
+     "Detection_and_induction_of_tumor_cell_population",
      ""
     ],
     [
-     "0.002",
+     "1",
      "0",
      "0",
-     "T1==>2T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Detection_and_induction_of_tumor_cell_population term 2/2",
-     ""
-    ],
-    [
-     "2.04e-12",
-     "0",
-     "0",
-     "T1+T1==>T1",
+     "T1+S[USER;cT1:(0.002-2.04e-12*cT1)]==>2T1",
      ""
     ],
     [

@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:08:26.144091+00:00",
+ "created": "2026-11-07T22:19:55.704279+00:00",
  "description": "Malinzi2019 - chemovirotherapy\nBioModels BIOMD0000000764 (curated). SBML file: Malinzi2019.xml.\nSimulation: 0 to 5 time units (SED-ML: Malinzi2019.sedml), sampling 0.05.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.48e-06 of species peak (worst: V)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
@@ -49,35 +49,21 @@
      "#",
      "",
      "",
-     "tumor_grow term 1/3",
+     "tumor_grow term 1/2",
      ""
     ],
     [
-     "0.40273704789833825",
+     "1",
      "0",
      "0",
-     "U==>2U",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "tumor_grow term 2/3",
-     ""
-    ],
-    [
-     "0.40273704789833825",
-     "0",
-     "0",
-     "U+U==>U",
+     "U+S[USER;cU:(0.40273704789833825-0.40273704789833825*cU)]==>2U",
      ""
     ],
     [
      "#",
      "",
      "",
-     "tumor_grow term 3/3",
+     "tumor_grow term 2/2",
      ""
     ],
     [

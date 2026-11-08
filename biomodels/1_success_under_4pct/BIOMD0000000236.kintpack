@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:45:21.183248+00:00",
- "description": "Westermark2003_Pancreatic_GlycOsc_extended\nBioModels BIOMD0000000236 (curated). SBML file: BIOMD0000000236_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000236_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.59e-06 of species peak (worst: FBP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'F6P' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'G3P' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'DHAP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] vpfk: rate order differs from the stoichiometry; consumed on separate line(s) - G6P_F6P: zero order, signed\n  [info] vfba term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vfba term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] vgapdh: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T20:39:12.462533+00:00",
+ "description": "Westermark2003_Pancreatic_GlycOsc_extended\nBioModels BIOMD0000000236 (curated). SBML file: BIOMD0000000236_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000236_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.59e-06 of species peak (worst: FBP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'F6P' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'G3P' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'DHAP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] vpfk: rate order differs from the stoichiometry; consumed on separate line(s) - G6P_F6P: zero order, signed\n  [info] vfba: rate order differs from the stoichiometry; consumed on separate line(s) - FBP: zero order, signed\n  [info] vgapdh: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -91,28 +91,28 @@
      "#",
      "",
      "",
-     "vfba term 1/2",
+     "vfba",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "FBP+S[USER;cDHAP_G3P,cFBP:(27.775/(0.3024602284844322*cDHAP_G3P^2+3.47825935727854*cDHAP_G3P+200*cFBP+1))]==>2DHAP_G3P",
+     "source+S[USER;cDHAP_G3P,cFBP:(1*(-0.4200416423077552*cDHAP_G3P^2+27.775*cFBP)/(0.3024602284844322*cDHAP_G3P^2+3.47825935727854*cDHAP_G3P+200*cFBP+1))]==>2DHAP_G3P",
      ""
     ],
     [
      "#",
      "",
      "",
-     "vfba term 2/2",
+     "vfba (consumes FBP)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "DHAP_G3P+DHAP_G3P+S[USER;cDHAP_G3P,cFBP:(0.4200416423077552/(3.47825935727854*cDHAP_G3P+200*cFBP+0.3024602284844322*(cDHAP_G3P+1e-30)^2+1))]==>FBP",
+     "source+S[USER;cDHAP_G3P,cFBP:((-1*1*(-0.4200416423077552*cDHAP_G3P^2+27.775*cFBP)/(0.3024602284844322*cDHAP_G3P^2+3.47825935727854*cDHAP_G3P+200*cFBP+1)))]==>FBP",
      ""
     ],
     [

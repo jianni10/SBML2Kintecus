@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:07:32.248625+00:00",
+ "created": "2026-11-07T22:19:21.446660+00:00",
  "description": "Kirschner1998_Immunotherapy_Tumour\nBioModels BIOMD0000000732 (curated). SBML file: Kirschner_1998.xml.\nSimulation: 0 to 1000 time units (SED-ML: Kirschner_1998.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.75e-06 of species peak (worst: Tumor)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Tumor_Killing: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): Source1 = Source; Sink1 = Sink",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Tumor_growth term 1/2",
+     "Tumor_growth",
      ""
     ],
     [
-     "0.18",
+     "1",
      "0",
      "0",
-     "Tumor==>2Tumor",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Tumor_growth term 2/2",
-     ""
-    ],
-    [
-     "1.8e-10",
-     "0",
-     "0",
-     "Tumor+Tumor==>Tumor",
+     "Tumor+S[USER;cTumor:(0.18-1.8e-10*cTumor)]==>2Tumor",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T15:54:33.456737+00:00",
- "description": "Ayati2010_BoneRemodelingDynamics_WithTumour+DrugTreatment\nBioModels BIOMD0000000403 (curated). SBML file: BIOMD0000000403_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000403_url.sedml (auto-generated placeholder); duration chosen from the dynamics: default), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.83e-06 of species peak (worst: z)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dz/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed\n  [info] rate rule dz/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed\n  [info] rate rule dz/dt term 8: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed\n  [info] rate rule dz/dt term 9: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed",
+ "created": "2026-11-07T21:11:55.705754+00:00",
+ "description": "Ayati2010_BoneRemodelingDynamics_WithTumour+DrugTreatment\nBioModels BIOMD0000000403 (curated). SBML file: BIOMD0000000403_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000403_url.sedml (auto-generated placeholder); duration chosen from the dynamics: default), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.83e-06 of species peak (worst: z)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dz/dt term 2: rate order differs from the stoichiometry; consumed on separate line(s) - z: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -81,10 +81,10 @@
      ""
     ],
     [
-     "0.02",
+     "1",
      "0",
      "0",
-     "B==>sink",
+     "B+S[USER;cSW1:(0.001*cSW1-0.02)]==>2B",
      ""
     ],
     [
@@ -105,140 +105,28 @@
      "#",
      "",
      "",
-     "rate rule dB/dt term 3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "B+S[USER;cSW1:(0.001*cSW1)]==>2B",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
      "rate rule dz/dt term 1",
      ""
     ],
     [
-     "0.08575899155984695",
+     "1",
      "0",
      "0",
-     "source==>z",
+     "source+S[USER;cB:(0.0006395*(cB/2+abs(cB-315.90148867241885)/2-157.95074433620943))]==>z",
      ""
     ],
     [
      "#",
      "",
      "",
-     "rate rule dz/dt term 2",
-     ""
-    ],
-    [
-     "0.00031975",
-     "0",
-     "0",
-     "B==>z+B",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 3",
+     "rate rule dz/dt term 2 (consumes z)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cB:(63.81810347381551/(2*abs(cB-315.90148867241885)+2e-300))]==>z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 4 (consumes z)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cC:((-1*0.0374*cC))]==>z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 5 (consumes z)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cC:((-1*1.8653727173369212/(2*abs(cC-4.993809961573606)+2e-300)))]==>z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 6",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "B+B+S[USER;cB:(0.0006395/(2*abs(cB-315.90148867241885)+2e-300))]==>z+2B",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "C+S[USER;cC:(0.7470739702514115/(2*abs(cC-4.993809961573606)+2e-300))]==>z+C",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 8 (consumes z)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cC:((-1*0.0748*cC^2/(2*abs(cC-4.993809961573606)+2e-300)))]==>z",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dz/dt term 9 (consumes z)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cB:((-1*0.4040380040120237*cB/(2*abs(cB-315.90148867241885)+2e-300)))]==>z",
+     "source+S[USER;cC:((-1*0.0748*(cC/2+abs(cC-4.993809961573606)/2-2.496904980786803)))]==>z",
      ""
     ],
     [
@@ -252,21 +140,7 @@
      "1",
      "0",
      "0",
-     "Tumour+S[USER;cTumour:(0.005*log(100/cTumour))]==>2Tumour",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dTumour/dt term 2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "Tumour+S[USER;cSW1,cTumour:(0.008*cSW1*log(100/cTumour))]==>sink",
+     "Tumour+S[USER;cSW1,cTumour:((0.005-0.008*cSW1)*log(100/cTumour))]==>2Tumour",
      ""
     ],
     [

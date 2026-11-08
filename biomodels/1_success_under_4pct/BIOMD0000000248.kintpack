@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-05T15:49:16.362163+00:00",
- "description": "Lai2007_O2_Transport_Metabolism\nBioModels BIOMD0000000248 (curated). SBML file: BIOMD0000000248_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000248_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.74e-06 of species peak (worst: Cr)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] ATPase term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - ADP: zero order, signed\n  [info] OxidativePhosphorylation: rate order differs from the stoichiometry; consumed on separate line(s) - ADP: first order; CTtis: zero order, signed\n  [info] ConvectionTransport term 3/8: rate order differs from the stoichiometry; consumed on separate line(s) - CTcap: zero order, signed\n  [info] ConvectionTransport term 4/8: rate order differs from the stoichiometry; consumed on separate line(s) - CTcap: zero order, signed\n  [info] DiffusionTransport term 1/4 (volume 2.0979): rate order differs from the stoichiometry; consumed on separate line(s) - CTcap: zero order, signed\n  [info] DiffusionTransport term 3/4 (volume 2.0979): rate order differs from the stoichiometry; consumed on separate line(s) - CTcap: zero order, signed\n  [info] DiffusionTransport term 2/4 (volume 27.8721): rate order differs from the stoichiometry; consumed on separate line(s) - CTtis: zero order, signed\n  [info] DiffusionTransport term 4/4 (volume 27.8721): rate order differs from the stoichiometry; consumed on separate line(s) - CTtis: zero order, signed\n  [info] CreatineKinase term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CreatineKinase term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dCFcap/dt term 2: rate order differs from the stoichiometry; consumed on separate line(s) - CFcap: zero order, signed\n  [info] rate rule dCFcap/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - CFcap: zero order, signed\n  [info] rate rule dCFcap/dt term 7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dCFcap/dt term 8: rate order differs from the stoichiometry; consumed on separate line(s) - CFcap: zero order, signed\n  [info] rate rule dCFcap/dt term 11: rate order differs from the stoichiometry; consumed on separate line(s) - CFcap: zero order, signed\n  [info] rate rule dCFcap/dt term 12: rate order differs from the stoichiometry; consumed on separate line(s) - CFcap: zero order, signed\n  [info] rate rule dCFtis/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dCFtis/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dCFtis/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - CFtis: zero order, signed\n  [partial] rate rule dCFcap/dt term 10: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] rate rule dCFcap/dt term 12 (consumes CFcap): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] rate rule dCFtis/dt term 3: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] rate rule dCFtis/dt term 5 (consumes CFtis): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried",
+ "created": "2026-11-07T20:47:49.912165+00:00",
+ "description": "Lai2007_O2_Transport_Metabolism\nBioModels BIOMD0000000248 (curated). SBML file: BIOMD0000000248_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000248_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.74e-06 of species peak (worst: Cr)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] OxidativePhosphorylation: rate order differs from the stoichiometry; consumed on separate line(s) - ADP: first order; CTtis: zero order, signed\n  [info] DiffusionTransport (volume 2.0979): rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for CTcap\n  [info] CreatineKinase: rate order differs from the stoichiometry; consumed on separate line(s) - ADP: zero order, signed; PCr: zero order, signed\n  [info] rate rule dCFtis/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,42 +49,14 @@
      "#",
      "",
      "",
-     "ATPase term 1/2",
-     ""
-    ],
-    [
-     "3.3423645",
-     "0",
-     "0",
-     "ATP==>ADP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "ATPase term 2/2",
+     "ATPase",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cATP,cSW1:(3.0216044*cATP*cSW1)]==>ATP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "ATPase term 2/2 (consumes ADP)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cATP,cSW1:((-1*3.0216044*cATP*cSW1))]==>ADP",
+     "ATP+S[USER;cSW1:(3.3423645-3.0216044*cSW1)]==>ADP",
      ""
     ],
     [
@@ -133,252 +105,112 @@
      "#",
      "",
      "",
-     "ConvectionTransport term 1/8",
-     ""
-    ],
-    [
-     "69.58556199609609",
-     "0",
-     "0",
-     "source==>CTcap",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "ConvectionTransport term 2/8",
-     ""
-    ],
-    [
-     "7.563663663663664",
-     "0",
-     "0",
-     "CTcap==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "ConvectionTransport term 3/8 (consumes CTcap)",
+     "ConvectionTransport term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:((-1*70730.91926959532*exp((-1*2.380952380952381*cTIME_))))]==>CTcap",
+     "source+S[USER;cSW1,cTIME_:(55.91210722799465*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)-55.91210722799465*cSW1-55.91210722799465*exp(7.142857142857143-2.380952380952381*cTIME_)+69.58556199609609)]==>CTcap",
      ""
     ],
     [
      "#",
      "",
      "",
-     "ConvectionTransport term 4/8 (consumes CTcap)",
+     "ConvectionTransport term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1:((-1*55.91210722799465*cSW1))]==>CTcap",
+     "CTcap+S[USER;cSW1,cTIME_:(-6.0774155107488435*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+6.0774155107488435*cSW1+6.0774155107488435*exp(7.142857142857143-2.380952380952381*cTIME_)-7.563663663663664)]==>2CTcap",
      ""
     ],
     [
      "#",
      "",
      "",
-     "ConvectionTransport term 5/8",
+     "DiffusionTransport (volume 2.0979) (consumes CTcap)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "CTcap+S[USER;cSW1:(6.0774155107488435*cSW1)]==>2CTcap",
+     "source+S[USER;cCFcap,cCFtis,cSW1,cTIME_:((-1*0.47666714333381*(20000-19865.7172*exp(-0.38975*cSW1-0.125*(1-cSW1)*(15.86781-12.74981*exp(7.142857142857143-2.380952380952381*cTIME_))+0.086))*(cCFcap-cCFtis)))]==>CTcap",
      ""
     ],
     [
      "#",
      "",
      "",
-     "ConvectionTransport term 6/8",
+     "DiffusionTransport term 1/2 (volume 27.8721)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cTIME_:(70730.91926959532*cSW1*exp((-1*2.380952380952381*cTIME_)))]==>CTcap",
+     "source+S[USER;cCFcap,cSW1,cTIME_:(0.03587817207888892*cCFcap*(20000-19865.7172*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*cTIME_)-1.89747625)))]==>CTtis",
      ""
     ],
     [
      "#",
      "",
      "",
-     "ConvectionTransport term 7/8",
+     "DiffusionTransport term 2/2 (volume 27.8721)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "CTcap+S[USER;cTIME_:(7688.159276589303*exp((-1*2.380952380952381*cTIME_)))]==>2CTcap",
+     "CFtis+S[USER;cSW1,cTIME_:(712.7456201721435*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*cTIME_)-1.89747625)-717.5634415777785)]==>CTtis+CFtis",
      ""
     ],
     [
      "#",
      "",
      "",
-     "ConvectionTransport term 8/8",
+     "CreatineKinase",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "CTcap+S[USER;cSW1,cTIME_:(7688.159276589303*cSW1*exp((-1*2.380952380952381*cTIME_)))]==>sink",
+     "source+S[USER;cADP,cATP,cCr,cPCr:(0.03587817207888892*(1115999.9999999998*cADP*cPCr-6305.084745762703*cATP*cCr)/(6.673340006673339*cADP*cPCr+7.4074074074074066*cADP+0.07518796992481204*cATP*cCr+0.2857142857142857*cATP+0.25641025641025644*cPCr+1))]==>ATP+Cr",
      ""
     ],
     [
      "#",
      "",
      "",
-     "DiffusionTransport term 1/4 (volume 2.0979) (consumes CTcap)",
+     "CreatineKinase (consumes ADP)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cCFcap:((-1*9533.3428666762*cCFcap))]==>CTcap",
+     "source+S[USER;cADP,cATP,cCr,cPCr:((-1*0.03587817207888892*(1115999.9999999998*cADP*cPCr-6305.084745762703*cATP*cCr)/(6.673340006673339*cADP*cPCr+7.4074074074074066*cADP+0.07518796992481204*cATP*cCr+0.2857142857142857*cATP+0.25641025641025644*cPCr+1)))]==>ADP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "DiffusionTransport term 2/4 (volume 2.0979)",
+     "CreatineKinase (consumes PCr)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cCFtis:(9533.3428666762*cCFtis)]==>CTcap",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "DiffusionTransport term 3/4 (volume 2.0979) (consumes CTcap)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCFtis,cSW1,cTIME_:((-1*1419.8942512921058*cCFtis*exp(1.59372625*cSW1-2016.1236682945873*cSW1*exp((-1*2.380952380952381*cTIME_))+2016.1236682945873*exp((-1*2.380952380952381*cTIME_)))))]==>CTcap",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "DiffusionTransport term 4/4 (volume 2.0979)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "CFcap+S[USER;cSW1,cTIME_:(1419.8942512921058*exp(1.59372625*cSW1-2016.1236682945873*cSW1*exp((-1*2.380952380952381*cTIME_))+2016.1236682945873*exp((-1*2.380952380952381*cTIME_))))]==>CTcap+CFcap",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "DiffusionTransport term 1/4 (volume 27.8721)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCFcap:(717.5634415777785*cCFcap)]==>CTtis",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "DiffusionTransport term 2/4 (volume 27.8721) (consumes CTtis)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCFtis:((-1*717.5634415777785*cCFtis))]==>CTtis",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "DiffusionTransport term 3/4 (volume 27.8721)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "CFtis+S[USER;cSW1,cTIME_:(106.87376084994345*exp(1.59372625*cSW1-2016.1236682945873*cSW1*exp((-1*2.380952380952381*cTIME_))+2016.1236682945873*exp((-1*2.380952380952381*cTIME_))))]==>CTtis+CFtis",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "DiffusionTransport term 4/4 (volume 27.8721) (consumes CTtis)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCFcap,cSW1,cTIME_:((-1*106.87376084994345*cCFcap*exp(1.59372625*cSW1-2016.1236682945873*cSW1*exp((-1*2.380952380952381*cTIME_))+2016.1236682945873*exp((-1*2.380952380952381*cTIME_)))))]==>CTtis",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "CreatineKinase term 1/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "ADP+PCr+S[USER;cADP,cATP,cCr,cPCr:(40040.04004004003/(7.4074074074074066*cADP+0.07518796992481204*cATP*cCr+0.2857142857142857*cATP+0.25641025641025644*cPCr+6.673340006673339*(cADP+1e-30)*(cPCr+1e-30)+1))]==>ATP+Cr",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "CreatineKinase term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "ATP+Cr+S[USER;cADP,cATP,cCr,cPCr:(226.2149154804519/(6.673340006673339*cADP*cPCr+7.4074074074074066*cADP+0.2857142857142857*cATP+0.25641025641025644*cPCr+0.07518796992481204*(cATP+1e-30)*(cCr+1e-30)+1))]==>ADP+PCr",
+     "source+S[USER;cADP,cATP,cCr,cPCr:((-1*0.03587817207888892*(1115999.9999999998*cADP*cPCr-6305.084745762703*cATP*cCr)/(6.673340006673339*cADP*cPCr+7.4074074074074066*cADP+0.07518796992481204*cATP*cCr+0.2857142857142857*cATP+0.25641025641025644*cPCr+1)))]==>PCr",
      ""
     ],
     [
@@ -392,21 +224,21 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cCFcap:(69.58556199609609/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1))]==>CFcap",
+     "source+S[USER;cCFcap,cSW1,cTIME_:((9469.334668001335*cCFcap*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*cTIME_)-1.89747625)-9533.3428666762*cCFcap+55.91210722799465*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)-55.91210722799465*cSW1-55.91210722799465*exp(7.142857142857143-2.380952380952381*cTIME_)+69.58556199609609)/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1))]==>CFcap",
      ""
     ],
     [
      "#",
      "",
      "",
-     "rate rule dCFcap/dt term 2 (consumes CFcap)",
+     "rate rule dCFcap/dt term 2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cCFcap,cTIME_:((-1*70730.91926959532/(196381.06236*cCFcap^1.7000000000000002*exp(2.380952380952381*cTIME_)/(7800.7*cCFcap^2.7+1)^2+exp(2.380952380952381*cTIME_))))]==>CFcap",
+     "CFtis+S[USER;cCFcap,cSW1,cTIME_:((9533.3428666762-9469.334668001335*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*cTIME_)-1.89747625))/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1))]==>CFcap+CFtis",
      ""
     ],
     [
@@ -420,133 +252,7 @@
      "1",
      "0",
      "0",
-     "CTcap+S[USER;cCFcap,cTIME_:(7688.159276589303/(196381.06236*cCFcap^1.7000000000000002*exp(2.380952380952381*cTIME_)/(7800.7*cCFcap^2.7+1)^2+exp(2.380952380952381*cTIME_)))]==>CFcap+CTcap",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dCFcap/dt term 4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCFcap,cSW1,cTIME_:(70730.91926959532*cSW1/(196381.06236*cCFcap^1.7000000000000002*exp(2.380952380952381*cTIME_)/(7800.7*cCFcap^2.7+1)^2+exp(2.380952380952381*cTIME_)))]==>CFcap",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dCFcap/dt term 5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "CFtis+S[USER;cCFcap:(9533.3428666762/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1))]==>CFcap+CFtis",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dCFcap/dt term 6 (consumes CFcap)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCFcap,cSW1:((-1*55.91210722799465*cSW1/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1)))]==>CFcap",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dCFcap/dt term 7",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "CFcap+S[USER;cCFcap:((148733495.40016207*cCFcap^2.7+580112688784.0221*cCFcap^5.4+9533.3428666762)/(196381.06236*(cCFcap+1e-30)^1.7000000000000002+15601.4*(cCFcap+1e-30)^2.7+60850920.489999995*(cCFcap+1e-30)^5.4+1))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dCFcap/dt term 8 (consumes CFcap)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCFcap,cCTcap:((-1*7.563663663663664*cCTcap/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1)))]==>CFcap",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dCFcap/dt term 9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "CTcap+S[USER;cCFcap,cSW1:(6.0774155107488435*cSW1/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1))]==>CFcap+CTcap",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dCFcap/dt term 10",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "CFcap+S[USER;cCFcap,cSW1,cTIME_:(1419.8942512921058*exp(1.59372625*cSW1-2016.1236682945873*cSW1*exp((-1*2.380952380952381*cTIME_))+2016.1236682945873*exp((-1*2.380952380952381*cTIME_)))/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1))]==>2CFcap",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dCFcap/dt term 11 (consumes CFcap)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCFcap,cCTcap,cSW1,cTIME_:((-1*7688.159276589303*cCTcap*cSW1/(196381.06236*cCFcap^1.7000000000000002*exp(2.380952380952381*cTIME_)/(7800.7*cCFcap^2.7+1)^2+exp(2.380952380952381*cTIME_))))]==>CFcap",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dCFcap/dt term 12 (consumes CFcap)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCFcap,cCFtis,cSW1,cTIME_:((-1*1419.8942512921058*cCFtis*exp(1.59372625*cSW1-2016.1236682945873*cSW1*exp((-1*2.380952380952381*cTIME_))+2016.1236682945873*exp((-1*2.380952380952381*cTIME_)))/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1)))]==>CFcap",
+     "CTcap+S[USER;cCFcap,cSW1,cTIME_:((-6.0774155107488435*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+6.0774155107488435*cSW1+6.0774155107488435*exp(7.142857142857143-2.380952380952381*cTIME_)-7.563663663663664)/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1))]==>CFcap+CTcap",
      ""
     ],
     [
@@ -560,7 +266,7 @@
      "1",
      "0",
      "0",
-     "CFcap+S[USER;cCFtis:(717.5634415777785/(1+124.4444544/(308.642*cCFtis+1)^2))]==>CFtis+CFcap",
+     "CFcap+S[USER;cCFtis,cSW1,cTIME_:((717.5634415777785-712.7456201721435*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*cTIME_)-1.89747625))/(1+124.4444544/(308.642*cCFtis+1)^2))]==>CFtis+CFcap",
      ""
     ],
     [
@@ -574,7 +280,7 @@
      "1",
      "0",
      "0",
-     "CFtis+S[USER;cCFtis:((68355010.32502036*cCFtis^2+442940.4314708974*cCFtis+717.5634415777785)/(617.284*cCFtis+95259.884164*(cCFtis+1e-30)^2+125.4444544))]==>sink",
+     "CFtis+S[USER;cCFtis,cSW1,cTIME_:((712.7456201721435*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*cTIME_)-1.89747625)-717.5634415777785)/(1+124.4444544/(308.642*cCFtis+1)^2))]==>2CFtis",
      ""
     ],
     [
@@ -588,35 +294,7 @@
      "1",
      "0",
      "0",
-     "CFtis+S[USER;cCFtis,cSW1,cTIME_:(106.87376084994345*exp(1.59372625*cSW1-2016.1236682945873*cSW1*exp((-1*2.380952380952381*cTIME_))+2016.1236682945873*exp((-1*2.380952380952381*cTIME_)))/(1+124.4444544/(308.642*cCFtis+1)^2))]==>2CFtis",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dCFtis/dt term 4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
      "CFtis+S[USER;cADP,cCFtis:((2202124.647416871*cADP*cCFtis^2+14269.766573679999*cADP*cCFtis+23.11702*cADP)/(95259.884164*cADP*(cCFtis+1e-30)^3+683.9659189148*cADP*(cCFtis+1e-30)^2+125.8765532*cADP*(cCFtis+1e-30)+0.08781111808*cADP+7.3008400856*cCFtis+5525.073281512*(cCFtis+1e-30)^3+39.6700232970584*(cCFtis+1e-30)^2+0.00509304484864))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dCFtis/dt term 5 (consumes CFtis)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cCFcap,cCFtis,cSW1,cTIME_:((-1*106.87376084994345*cCFcap*exp(1.59372625*cSW1-2016.1236682945873*cSW1*exp((-1*2.380952380952381*cTIME_))+2016.1236682945873*exp((-1*2.380952380952381*cTIME_)))/(1+124.4444544/(308.642*cCFtis+1)^2)))]==>CFtis",
      ""
     ],
     [

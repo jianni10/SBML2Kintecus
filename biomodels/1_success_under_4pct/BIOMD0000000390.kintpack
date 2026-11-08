@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:49:05.441507+00:00",
- "description": "Arnold2011_Giersch1990_CalvinCycle\nBioModels BIOMD0000000390 (curated). SBML file: BIOMD0000000390_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000390_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.12e-06 of species peak (worst: ATP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'totRuBP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] RuBisCO: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for RuBP\n  [info] PGA_red term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PGA_red term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] TP_red: rate order differs from the stoichiometry; consumed on separate line(s) - TP: first order\n  [info] RuBP_reg: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] TPT term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] TPT term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] ATP_S: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T21:10:28.909407+00:00",
+ "description": "Arnold2011_Giersch1990_CalvinCycle\nBioModels BIOMD0000000390 (curated). SBML file: BIOMD0000000390_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000390_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.12e-06 of species peak (worst: ATP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'totRuBP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] RuBisCO: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for RuBP\n  [info] PGA_red: rate order differs from the stoichiometry; consumed on separate line(s) - ATP: zero order, signed; PGA: zero order, signed\n  [info] TP_red: rate order differs from the stoichiometry; consumed on separate line(s) - TP: first order\n  [info] RuBP_reg: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] TPT: rate order differs from the stoichiometry; consumed on separate line(s) - TP: zero order, signed\n  [info] ATP_S: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -77,28 +77,42 @@
      "#",
      "",
      "",
-     "PGA_red term 1/2",
+     "PGA_red",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "ATP+PGA+S[USER;cADP,cATP,cPGA,cPi,cTP:(3.49/(0.07142857142857142*cADP*cPi*cTP+1*(cATP+1e-30)*(cPGA+1e-30)+1))]==>TP+ADP+Pi",
+     "source+S[USER;cADP,cATP,cPGA,cPi,cTP:(1*(-0.2492857142857143*cADP*cPi*cTP+3.49*cATP*cPGA)/(0.07142857142857142*cADP*cPi*cTP+1*cATP*cPGA+1))]==>ADP+Pi+TP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "PGA_red term 2/2",
+     "PGA_red (consumes ATP)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "TP+ADP+Pi+S[USER;cADP,cATP,cPGA,cPi,cTP:(0.2492857142857143/(1*cATP*cPGA+0.07142857142857142*(cADP+1e-30)*(cPi+1e-30)*(cTP+1e-30)+1))]==>ATP+PGA",
+     "source+S[USER;cADP,cATP,cPGA,cPi,cTP:((-1*1*(-0.2492857142857143*cADP*cPi*cTP+3.49*cATP*cPGA)/(0.07142857142857142*cADP*cPi*cTP+1*cATP*cPGA+1)))]==>ATP",
+     ""
+    ],
+    [
+     "#",
+     "",
+     "",
+     "PGA_red (consumes PGA)",
+     ""
+    ],
+    [
+     "1",
+     "0",
+     "0",
+     "source+S[USER;cADP,cATP,cPGA,cPi,cTP:((-1*1*(-0.2492857142857143*cADP*cPi*cTP+3.49*cATP*cPGA)/(0.07142857142857142*cADP*cPi*cTP+1*cATP*cPGA+1)))]==>PGA",
      ""
     ],
     [
@@ -140,35 +154,35 @@
      "1",
      "0",
      "0",
-     "ATP+Ru5P+S[USER;cATP,cPi,cRu5P:(4.81/(0.5*cATP+0.05*cPi+1*(cATP+1e-30)*(cRu5P+1e-30)+0.025))]==>RuBP+ADP",
+     "ATP+Ru5P+S[USER;cATP,cPi,cRu5P:(4.81/(0.5*cATP+0.05*cPi+1*(cATP+1e-30)*(cRu5P+1e-30)+0.025))]==>ADP+RuBP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "TPT term 1/2",
+     "TPT",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "TP+S[USER;cPi,cTP:(4.619999999999999/(0.728*cPi+2.275*cTP+0.162))]==>Pi",
+     "source+S[USER;cPi,cTP:(1*(-0.66*cPi+4.619999999999999*cTP)/(0.728*cPi+2.275*cTP+0.162))]==>Pi",
      ""
     ],
     [
      "#",
      "",
      "",
-     "TPT term 2/2",
+     "TPT (consumes TP)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Pi+S[USER;cPi,cTP:(0.66/(0.728*cPi+2.275*cTP+0.162))]==>TP",
+     "source+S[USER;cPi,cTP:((-1*1*(-0.66*cPi+4.619999999999999*cTP)/(0.728*cPi+2.275*cTP+0.162)))]==>TP",
      ""
     ],
     [
@@ -182,7 +196,7 @@
      "1",
      "0",
      "0",
-     "Pi+ADP+S[USER;cADP,cPi:(5.8801285588795/(0.5*cADP+0.08*cPi+1*(cADP+1e-30)*(cPi+1e-30)+0.04))]==>ATP",
+     "ADP+Pi+S[USER;cADP,cPi:(5.8801285588795/(0.5*cADP+0.08*cPi+1*(cADP+1e-30)*(cPi+1e-30)+0.04))]==>ATP",
      ""
     ],
     [

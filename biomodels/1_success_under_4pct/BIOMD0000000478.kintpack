@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:52:51.583196+00:00",
- "description": "Besozzi2012 - Oscillatory regimes in the Ras/cAMP/PKA pathway in S.cerevisiae\nBioModels BIOMD0000000478 (curated). SBML file: BIOMD0000000478_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000478_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.17e-05 of species peak (worst: Pde1f)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R24 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - PKA: zero order, signed\n  [info] R29: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] R34: rate order differs from the stoichiometry; consumed on separate line(s) - \nRenamed species (Kintecus name = SBML id): R1 = R",
+ "created": "2026-11-07T21:36:10.939548+00:00",
+ "description": "Besozzi2012 - Oscillatory regimes in the Ras/cAMP/PKA pathway in S.cerevisiae\nBioModels BIOMD0000000478 (curated). SBML file: BIOMD0000000478_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000478_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.11e-05 of species peak (worst: Pde1f)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R24: rate order differs from the stoichiometry; consumed on separate line(s) - R_C: first order\n  [info] R29: rate order differs from the stoichiometry; consumed on separate line(s) - \n  [info] R34: rate order differs from the stoichiometry; consumed on separate line(s) - \nRenamed species (Kintecus name = SBML id): R1 = R",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -196,7 +196,7 @@
      "0.001",
      "0",
      "0",
-     "Ras2_GTP+CYR1==>Ras2_GTP_CYR1",
+     "CYR1+Ras2_GTP==>Ras2_GTP_CYR1",
      ""
     ],
     [
@@ -238,7 +238,7 @@
      "1e-5",
      "0",
      "0",
-     "cAMP+PKA==>cAMP_PKA",
+     "PKA+cAMP==>cAMP_PKA",
      ""
     ],
     [
@@ -252,7 +252,7 @@
      "1e-5",
      "0",
      "0",
-     "cAMP_PKA+cAMP==>IIcAMP_PKA",
+     "cAMP+cAMP_PKA==>IIcAMP_PKA",
      ""
     ],
     [
@@ -322,7 +322,7 @@
      "0.1",
      "0",
      "0",
-     "IIcAMP_PKA==>cAMP_PKA+cAMP",
+     "IIcAMP_PKA==>cAMP+cAMP_PKA",
      ""
     ],
     [
@@ -336,7 +336,7 @@
      "0.1",
      "0",
      "0",
-     "cAMP_PKA==>cAMP+PKA",
+     "cAMP_PKA==>PKA+cAMP",
      ""
     ],
     [
@@ -385,42 +385,28 @@
      "#",
      "",
      "",
-     "R24 term 1/2",
-     ""
-    ],
-    [
-     "0.5",
-     "0",
-     "0",
-     "R_C+R_C==>PKA",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "R24 term 2/2",
+     "R24",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cR_C:(0.5*cR_C)]==>2R_C",
+     "source+S[USER;cR_C:(0.5*cR_C*(cR_C-1))]==>PKA",
      ""
     ],
     [
      "#",
      "",
      "",
-     "R24 term 2/2 (consumes PKA)",
+     "R24 (consumes R_C)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cR_C:((-1*0.5*cR_C))]==>PKA",
+     "R_C+S[USER;cR_C:(1*cR_C-1)]==>sink",
      ""
     ],
     [
@@ -476,7 +462,7 @@
      "7.5",
      "0",
      "0",
-     "cAMP_Pde1f==>Pde1f+AMP",
+     "cAMP_Pde1f==>AMP+Pde1f",
      ""
     ],
     [
@@ -504,7 +490,7 @@
      "0.0001",
      "0",
      "0",
-     "cAMP+Pde2==>cAMP_Pde2",
+     "Pde2+cAMP==>cAMP_Pde2",
      ""
     ],
     [
@@ -518,7 +504,7 @@
      "1",
      "0",
      "0",
-     "cAMP_Pde2==>cAMP+Pde2",
+     "cAMP_Pde2==>Pde2+cAMP",
      ""
     ],
     [
@@ -574,7 +560,7 @@
      "0.001",
      "0",
      "0",
-     "Ira2+C==>C+Ira2P",
+     "C+Ira2==>C+Ira2P",
      ""
     ],
     [
@@ -588,7 +574,7 @@
      "1.25",
      "0",
      "0",
-     "Ras2_GTP+Ira2P==>Ras2_GTP_Ira2P",
+     "Ira2P+Ras2_GTP==>Ras2_GTP_Ira2P",
      ""
     ],
     [
@@ -602,7 +588,7 @@
      "2.5",
      "0",
      "0",
-     "Ras2_GTP_Ira2P==>Ras2_GDP+Ira2P",
+     "Ras2_GTP_Ira2P==>Ira2P+Ras2_GDP",
      ""
     ],
     [
@@ -1035,6 +1021,17 @@
      "No",
      "1",
      "constant 1.0: nothing consumed [__source__]",
+     ""
+    ],
+    [
+     "sink",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing produced [__sink__]",
      ""
     ],
     [

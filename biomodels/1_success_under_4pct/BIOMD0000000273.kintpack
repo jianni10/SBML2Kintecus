@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T22:45:55.789926+00:00",
- "description": "Pokhilko2010_CircClock\nBioModels BIOMD0000000273 (curated). SBML file: BIOMD0000000273_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000273_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.90e-06 of species peak (worst: cNI_m)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] cL_m_trscr term 6/9: rate order differs from the stoichiometry; consumed on separate line(s) - cL_m: zero order, signed\n  [info] cL_m_trscr term 9/9: rate order differs from the stoichiometry; consumed on separate line(s) - cL_m: zero order, signed\n  [info] cL_trsl term 4/4: rate order differs from the stoichiometry; consumed on separate line(s) - cL: zero order, signed\n  [info] cL_degr term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cY_m_trscr term 7/8: rate order differs from the stoichiometry; consumed on separate line(s) - cY_m: zero order, signed\n  [info] cY_m_trscr term 8/8: rate order differs from the stoichiometry; consumed on separate line(s) - cY_m: zero order, signed\n  [info] cP_trsl term 4/8: rate order differs from the stoichiometry; consumed on separate line(s) - cP: zero order, signed\n  [info] cP_trsl term 5/8: rate order differs from the stoichiometry; consumed on separate line(s) - cP: zero order, signed\n  [info] cP9_m_trscr term 5/5: rate order differs from the stoichiometry; consumed on separate line(s) - cP9_m: zero order, signed\n  [info] cG_m_trscr term 7/8: rate order differs from the stoichiometry; consumed on separate line(s) - cG_m: zero order, signed\n  [info] cG_m_trscr term 8/8: rate order differs from the stoichiometry; consumed on separate line(s) - cG_m: zero order, signed\n  [info] cG_cZTL_assoc term 3/8: rate order differs from the stoichiometry; consumed on separate line(s) - cG: zero order, signed; cZTL: zero order, signed\n  [info] cG_cZTL_assoc term 4/8: rate order differs from the stoichiometry; consumed on separate line(s) - cG: zero order, signed; cZTL: zero order, signed\n  [info] cG_cZTL_assoc term 8/8: rate order differs from the stoichiometry; consumed on separate line(s) - cZG: zero order, signed",
+ "created": "2026-11-07T20:48:48.457658+00:00",
+ "description": "Pokhilko2010_CircClock\nBioModels BIOMD0000000273 (curated). SBML file: BIOMD0000000273_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000273_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.90e-06 of species peak (worst: cNI_m)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] cL_degr term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] cG_cZTL_assoc term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - cG: zero order, signed; cZTL: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,63 +49,35 @@
      "#",
      "",
      "",
-     "cL_m_trscr term 1/9",
+     "cL_m_trscr term 1/3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;ccNI,ccP7,ccP9:(0.0020000000000000005/((ccNI+ccP7+ccP9)^2+0.010000000000000002))]==>cL_m",
+     "source+S[USER;cTIME_,ccNI,ccP7,ccP9:(0.0020000000000000005*(tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+1)/((ccNI+ccP7+ccP9)^2+0.010000000000000002))]==>cL_m",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cL_m_trscr term 2/9",
+     "cL_m_trscr term 2/3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,ccNI,ccP7,ccP9:(0.0020000000000000005*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))/((ccNI+ccP7+ccP9)^2+0.010000000000000002))]==>cL_m",
+     "cP+S[USER;cTIME_,ccNI,ccP7,ccP9:(0.004000000000000001*(tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+1)/((ccNI+ccP7+ccP9)^2+0.010000000000000002))]==>cL_m+cP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cL_m_trscr term 3/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccNI,ccP7,ccP9:(0.0020000000000000005*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)/((ccNI+ccP7+ccP9)^2+0.010000000000000002))]==>cL_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_m_trscr term 4/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;ccNI,ccP7,ccP9:(0.004000000000000001/((ccNI+ccP7+ccP9)^2+0.010000000000000002))]==>cL_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_m_trscr term 5/9",
+     "cL_m_trscr term 3/3",
      ""
     ],
     [
@@ -119,168 +91,28 @@
      "#",
      "",
      "",
-     "cL_m_trscr term 6/9 (consumes cL_m)",
+     "cL_m_degr",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,ccNI,ccP7,ccP9:((-1*0.0020000000000000005*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)/((ccNI+ccP7+ccP9)^2+0.010000000000000002)))]==>cL_m",
+     "cL_m+S[USER;cTIME_:(0.15000000000000002*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+0.15000000000000002*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-0.15000000000000002*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+0.39)]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cL_m_trscr term 7/9",
+     "cL_trsl",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cP+S[USER;cTIME_,ccNI,ccP7,ccP9:(0.004000000000000001*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))/((ccNI+ccP7+ccP9)^2+0.010000000000000002))]==>cL_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_m_trscr term 8/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_,ccNI,ccP7,ccP9:(0.004000000000000001*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)/((ccNI+ccP7+ccP9)^2+0.010000000000000002))]==>cL_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_m_trscr term 9/9 (consumes cL_m)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccNI,ccP,ccP7,ccP9:((-1*0.004000000000000001*ccP*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)/((ccNI+ccP7+ccP9)^2+0.010000000000000002)))]==>cL_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_m_degr term 1/4",
-     ""
-    ],
-    [
-     "0.39",
-     "0",
-     "0",
-     "cL_m==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_m_degr term 2/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cL_m+S[USER;cTIME_:(0.15000000000000002*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_m_degr term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cL_m+S[USER;cTIME_:(0.15000000000000002*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_m_degr term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cL_m+S[USER;cTIME_:(0.15000000000000002*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48))]==>2cL_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_trsl term 1/4",
-     ""
-    ],
-    [
-     "0.335",
-     "0",
-     "0",
-     "cL_m==>cL+cL_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_trsl term 2/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cL_m+S[USER;cTIME_:(0.065*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>cL+cL_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_trsl term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cL_m+S[USER;cTIME_:(0.065*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>cL+cL_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cL_trsl term 4/4 (consumes cL)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccL_m:((-1*0.065*ccL_m*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)))]==>cL",
+     "cL_m+S[USER;cTIME_:(0.065*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+0.065*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-0.065*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+0.335)]==>cL+cL_m",
      ""
     ],
     [
@@ -399,7 +231,7 @@
      "#",
      "",
      "",
-     "cT_degr term 1/9",
+     "cT_degr term 1/3",
      ""
     ],
     [
@@ -413,112 +245,28 @@
      "#",
      "",
      "",
-     "cT_degr term 2/9",
-     ""
-    ],
-    [
-     "0.375",
-     "0",
-     "0",
-     "cT+cZG==>cZG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cT_degr term 3/9",
-     ""
-    ],
-    [
-     "0.375",
-     "0",
-     "0",
-     "cT+cZTL==>cZTL",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cT_degr term 4/9",
+     "cT_degr term 2/3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cT+cZG+S[USER;cTIME_:(0.125*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48))]==>cZG",
+     "cT+cZG+S[USER;cTIME_:(-0.125*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))-0.125*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)+0.125*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+0.375)]==>cZG",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cT_degr term 5/9",
+     "cT_degr term 3/3",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cT+cZTL+S[USER;cTIME_:(0.125*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48))]==>cZTL",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cT_degr term 6/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cT+cZG+S[USER;cTIME_:(0.125*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>2cT+cZG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cT_degr term 7/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cT+cZG+S[USER;cTIME_:(0.125*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>2cT+cZG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cT_degr term 8/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cT+cZTL+S[USER;cTIME_:(0.125*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>2cT+cZTL",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cT_degr term 9/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cT+cZTL+S[USER;cTIME_:(0.125*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>2cT+cZTL",
+     "cT+cZTL+S[USER;cTIME_:(-0.125*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))-0.125*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)+0.125*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+0.375)]==>cZTL",
      ""
     ],
     [
@@ -539,168 +287,42 @@
      "#",
      "",
      "",
-     "cTm_degr term 1/4",
-     ""
-    ],
-    [
-     "0.21000000000000002",
-     "0",
-     "0",
-     "cTm==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cTm_degr term 2/4",
+     "cTm_degr",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cTm+S[USER;cTIME_:(0.07*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>sink",
+     "cTm+S[USER;cTIME_:(0.07*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+0.07*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-0.07*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+0.21000000000000002)]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cTm_degr term 3/4",
+     "cY_m_trscr term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cTm+S[USER;cTIME_:(0.07*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>sink",
+     "cP+S[USER;cTIME_:(0.25*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+0.25*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-0.25*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+0.25)]==>cY_m+cP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cTm_degr term 4/4",
+     "cY_m_trscr term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cTm+S[USER;cTIME_:(0.07*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48))]==>2cTm",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cY_m_trscr term 1/8",
-     ""
-    ],
-    [
-     "0.25",
-     "0",
-     "0",
-     "cP==>cY_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cY_m_trscr term 2/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;ccL,ccT:(0.000542376/(ccL^2*ccT^3+0.0058319999999999995*ccL^2+0.04000000000000001*ccT^3+0.00023328))]==>cY_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cY_m_trscr term 3/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.25*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>cY_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cY_m_trscr term 4/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.25*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>cY_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cY_m_trscr term 5/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccL,ccT:(0.00025077599999999997*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))/(ccL^2*ccT^3+0.0058319999999999995*ccL^2+0.04000000000000001*ccT^3+0.00023328))]==>cY_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cY_m_trscr term 6/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccL,ccT:(0.00025077599999999997*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)/(ccL^2*ccT^3+0.0058319999999999995*ccL^2+0.04000000000000001*ccT^3+0.00023328))]==>cY_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cY_m_trscr term 7/8 (consumes cY_m)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccP:((-1*0.25*ccP*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)))]==>cY_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cY_m_trscr term 8/8 (consumes cY_m)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccL,ccT:((-1*0.00025077599999999997*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)/(ccL^2*ccT^3+0.0058319999999999995*ccL^2+0.04000000000000001*ccT^3+0.00023328)))]==>cY_m",
+     "source+S[USER;cTIME_,ccL,ccT:(1*(0.00025077599999999997*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+0.00025077599999999997*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-0.00025077599999999997*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+0.000542376)/(ccL^2*ccT^3+0.0058319999999999995*ccL^2+0.04000000000000001*ccT^3+0.00023328))]==>cY_m",
      ""
     ],
     [
@@ -749,217 +371,63 @@
      "#",
      "",
      "",
-     "cP_trsl term 1/8",
-     ""
-    ],
-    [
-     "0.15",
-     "0",
-     "0",
-     "source==>cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_trsl term 2/8",
+     "cP_trsl term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.15*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48))]==>cP",
+     "source+S[USER;cTIME_:(-0.15*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))-0.15*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)+0.15*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+0.15)]==>cP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cP_trsl term 3/8",
-     ""
-    ],
-    [
-     "0.15",
-     "0",
-     "0",
-     "cP==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_trsl term 4/8 (consumes cP)",
+     "cP_trsl term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:((-1*0.15*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))))]==>cP",
+     "cP+S[USER;cTIME_:(0.15*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+0.15*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-0.15*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)-0.15)]==>2cP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cP_trsl term 5/8 (consumes cP)",
+     "cP_degr",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:((-1*0.15*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)))]==>cP",
+     "cP+S[USER;cTIME_:(0.5*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+0.5*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-0.5*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+0.5)]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cP_trsl term 6/8",
+     "cP9_m_trscr term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cP+S[USER;cTIME_:(0.15*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>2cP",
+     "cP+S[USER;cTIME_:(1.45*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+1.45*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-1.45*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+1.45)]==>cP9_m+cP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cP_trsl term 7/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.15*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>2cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_trsl term 8/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.15*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_degr term 1/4",
-     ""
-    ],
-    [
-     "0.5",
-     "0",
-     "0",
-     "cP==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_degr term 2/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.5*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_degr term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.5*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP_degr term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.5*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48))]==>2cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_m_trscr term 1/5",
-     ""
-    ],
-    [
-     "1.45",
-     "0",
-     "0",
-     "cP==>cP9_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_m_trscr term 2/5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(1.45*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>cP9_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_m_trscr term 3/5",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(1.45*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>cP9_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_m_trscr term 4/5",
+     "cP9_m_trscr term 2/2",
      ""
     ],
     [
@@ -967,20 +435,6 @@
      "0",
      "0",
      "source+S[USER;ccL,ccT:(0.003920000000000001*ccL^3/(ccL^3*ccT^2+0.019600000000000003*ccL^3+0.026999999999999996*ccT^2+0.0005292000000000001))]==>cP9_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_m_trscr term 5/5 (consumes cP9_m)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccP:((-1*1.45*ccP*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)))]==>cP9_m",
      ""
     ],
     [
@@ -1015,56 +469,14 @@
      "#",
      "",
      "",
-     "cP9_degr term 1/4",
-     ""
-    ],
-    [
-     "1.16",
-     "0",
-     "0",
-     "cP9==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_degr term 2/4",
+     "cP9_degr",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cP9+S[USER;cTIME_:(0.84*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_degr term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP9+S[USER;cTIME_:(0.84*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>2cP9",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP9_degr term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP9+S[USER;cTIME_:(0.84*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>2cP9",
+     "cP9+S[USER;cTIME_:(-0.84*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))-0.84*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)+0.84*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+1.16)]==>sink",
      ""
     ],
     [
@@ -1127,56 +539,14 @@
      "#",
      "",
      "",
-     "cP7_degr term 1/4",
-     ""
-    ],
-    [
-     "0.655",
-     "0",
-     "0",
-     "cP7==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP7_degr term 2/4",
+     "cP7_degr",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cP7+S[USER;cTIME_:(0.345*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP7_degr term 3/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP7+S[USER;cTIME_:(0.345*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>2cP7",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cP7_degr term 4/4",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP7+S[USER;cTIME_:(0.345*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>2cP7",
+     "cP7+S[USER;cTIME_:(-0.345*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))-0.345*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)+0.345*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+0.655)]==>sink",
      ""
     ],
     [
@@ -1239,168 +609,42 @@
      "#",
      "",
      "",
-     "cNI_degr term 1/4",
-     ""
-    ],
-    [
-     "0.35250000000000004",
-     "0",
-     "0",
-     "cNI==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cNI_degr term 2/4",
+     "cNI_degr",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cNI+S[USER;cTIME_:(0.05250000000000002*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48))]==>sink",
+     "cNI+S[USER;cTIME_:(-0.05250000000000002*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))-0.05250000000000002*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)+0.05250000000000002*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+0.35250000000000004)]==>sink",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cNI_degr term 3/4",
+     "cG_m_trscr term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cNI+S[USER;cTIME_:(0.05250000000000002*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>2cNI",
+     "cP+S[USER;cTIME_:(0.3*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+0.3*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-0.3*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+0.3)]==>cG_m+cP",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cNI_degr term 4/4",
+     "cG_m_trscr term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "cNI+S[USER;cTIME_:(0.05250000000000002*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>2cNI",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_m_trscr term 1/8",
-     ""
-    ],
-    [
-     "0.3",
-     "0",
-     "0",
-     "cP==>cG_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_m_trscr term 2/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;ccL,ccT:(0.03128/(ccL^2*ccT+0.17*ccL^2+0.16000000000000003*ccT+0.027200000000000005))]==>cG_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_m_trscr term 3/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.3*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>cG_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_m_trscr term 4/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cP+S[USER;cTIME_:(0.3*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>cG_m+cP",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_m_trscr term 5/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccL,ccT:(0.03128*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))/(ccL^2*ccT+0.17*ccL^2+0.16000000000000003*ccT+0.027200000000000005))]==>cG_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_m_trscr term 6/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccL,ccT:(0.03128*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)/(ccL^2*ccT+0.17*ccL^2+0.16000000000000003*ccT+0.027200000000000005))]==>cG_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_m_trscr term 7/8 (consumes cG_m)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccP:((-1*0.3*ccP*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)))]==>cG_m",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_m_trscr term 8/8 (consumes cG_m)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccL,ccT:((-1*0.03128*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)/(ccL^2*ccT+0.17*ccL^2+0.16000000000000003*ccT+0.027200000000000005)))]==>cG_m",
+     "source+S[USER;cTIME_,ccL,ccT:(0.03128*(tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+1)/(ccL^2*ccT+0.17*ccL^2+0.16000000000000003*ccT+0.027200000000000005))]==>cG_m",
      ""
     ],
     [
@@ -1449,182 +693,56 @@
      "#",
      "",
      "",
-     "cG_cZTL_assoc term 1/8",
-     ""
-    ],
-    [
-     "0.2",
-     "0",
-     "0",
-     "cZG==>cG+cZTL",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 2/8",
-     ""
-    ],
-    [
-     "15",
-     "0",
-     "0",
-     "cG+cZTL==>cZG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 3/8",
+     "cG_cZTL_assoc term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,ccZG:(0.2*ccZG*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>cZG",
+     "source+S[USER;cTIME_,ccZG:(0.2*ccZG*(tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)-1))]==>cZG",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cG_cZTL_assoc term 3/8 (consumes cG)",
+     "cG_cZTL_assoc term 1/2 (consumes cG)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,ccZG:((-1*0.2*ccZG*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))))]==>cG",
+     "source+S[USER;cTIME_,ccZG:((-1*0.2*ccZG*(tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)-1)))]==>cG",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cG_cZTL_assoc term 3/8 (consumes cZTL)",
+     "cG_cZTL_assoc term 1/2 (consumes cZTL)",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,ccZG:((-1*0.2*ccZG*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))))]==>cZTL",
+     "source+S[USER;cTIME_,ccZG:((-1*0.2*ccZG*(tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)-1)))]==>cZTL",
      ""
     ],
     [
      "#",
      "",
      "",
-     "cG_cZTL_assoc term 4/8",
+     "cG_cZTL_assoc term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,ccZG:(0.2*ccZG*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>cZG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 4/8 (consumes cG)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccZG:((-1*0.2*ccZG*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)))]==>cG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 4/8 (consumes cZTL)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccZG:((-1*0.2*ccZG*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)))]==>cZTL",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 5/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cZG+S[USER;cTIME_:(0.2*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48))]==>cG+cZTL",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 6/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cG+cZTL+S[USER;cTIME_:(15*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_)))]==>cZG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 7/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "cG+cZTL+S[USER;cTIME_:(15*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24))]==>cZG",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 8/8",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccG,ccZTL:(15*ccG*ccZTL*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48))]==>cG+cZTL",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "cG_cZTL_assoc term 8/8 (consumes cZG)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cTIME_,ccG,ccZTL:((-1*15*ccG*ccZTL*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)))]==>cZG",
+     "cG+cZTL+S[USER;cTIME_:(15*tanh(2*cTIME_-48*floor(0.041666666666666664*cTIME_))+15*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+24)-15*tanh(-2*cTIME_+48*floor(0.041666666666666664*cTIME_)+48)+15)]==>cZG",
      ""
     ],
     [

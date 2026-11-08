@@ -83,7 +83,7 @@ def kintecus(d, switches, timeout=60, t_end=None, stall=15.0, cap=600.0):
             elapsed = now - start
             if now - last_change > stall and elapsed > stall:
                 killed = f"stalled (no output row for {stall:.0f} s at t={tsim:g})"
-            elif t_end and elapsed > 10 and tsim > 0 and elapsed * t_end / tsim > cap:
+            elif t_end and elapsed > float(os.environ.get("KIN_PROJ_GRACE", "10")) and tsim > 0 and elapsed * t_end / tsim > cap:
                 killed = f"too slow (projected {elapsed * t_end / tsim:.0f} s at t={tsim:g})"
             elif elapsed > limit:
                 killed = f"exceeded {limit:.0f} s"

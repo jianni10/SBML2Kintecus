@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-05T15:55:16.227578+00:00",
+ "created": "2026-11-07T21:37:07.104228+00:00",
  "description": "Roblitz2013 - Menstrual Cycle following GnRH analogue administration\nBioModels BIOMD0000000494 (curated). SBML file: BIOMD0000000494_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000494_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.25.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.42e-05 of species peak (worst: OvF)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 's114' goes below zero in the SBML: integrated as s114_o = value + 50, output as s114 = OUTC[s114_o;-50*source]\n  [info] time event(s) on 'Ago_d' encoded as time/value pairs in EV_AGO_D.TXT (SET)\n  [info] time event(s) on 'Ant_d' encoded as time/value pairs in EV_ANT_D.TXT (ADD)",
  "settings": {
   "kpath": "",
@@ -567,56 +567,28 @@
      "#",
      "",
      "",
-     "re57 term 1/2",
-     ""
-    ],
-    [
-     "0.122060139609808",
-     "0",
-     "0",
-     "AF3+FSH_R==>2AF3+FSH_R",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "re57 term 2/2",
-     ""
-    ],
-    [
-     "0.0122060139609808",
-     "0",
-     "0",
-     "AF3+AF3+FSH_R==>AF3+FSH_R",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "re58 term 1/2",
+     "re57",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "AF4+S[USER;cLH_R:(1.6423224721243999*cLH_R^2)]==>2AF4",
+     "AF3+FSH_R+S[USER;cAF3:(0.122060139609808-0.0122060139609808*cAF3)]==>2AF3+FSH_R",
      ""
     ],
     [
      "#",
      "",
      "",
-     "re58 term 2/2",
+     "re58",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "AF4+AF4+S[USER;cLH_R:(0.16423224721243998*cLH_R^2)]==>AF4",
+     "AF4+S[USER;cAF4,cLH_R:(1.6423224721243999*cLH_R^2*(1-0.1*cAF4))]==>2AF4",
      ""
     ],
     [

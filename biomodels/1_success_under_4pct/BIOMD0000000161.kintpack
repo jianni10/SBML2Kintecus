@@ -1,7 +1,7 @@
 {
  "version": 3,
- "created": "2026-11-01T23:59:58.439268+00:00",
- "description": "Eungdamrong2007_Ras_Activation\nBioModels BIOMD0000000161 (curated). SBML file: BIOMD0000000161_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: BIOMD0000000161_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 30.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.72e-04 of species peak (worst: CaCAPRI_PM_PM)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] PIP2_synthesis term 1/9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PIP2_synthesis term 5/9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PIP2_synthesis term 6/9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PIP2_synthesis term 9/9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Shc_phosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] RasGRP_DAG_GEF: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CAPRI_GAP: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CaRasGRP_act_RasGM: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PIP_synthesis term 1/9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PIP_synthesis term 5/9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PIP_synthesis term 6/9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] PIP_synthesis term 9/9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] RasGM_basal_GAP: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] EGF_act_PLCgamma: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Sos_act_RasPM: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] flux1 (volume 0.976): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "created": "2026-11-07T20:36:46.607333+00:00",
+ "description": "Eungdamrong2007_Ras_Activation\nBioModels BIOMD0000000161 (curated). SBML file: BIOMD0000000161_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: BIOMD0000000161_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 30.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.99e-06 of species peak (worst: SosGrb2_cyt)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Shc_phosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] RasGRP_DAG_GEF: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CAPRI_GAP: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CaRasGRP_act_RasGM: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] RasGM_basal_GAP: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] EGF_act_PLCgamma: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Sos_act_RasPM: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] flux1 (volume 0.976): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [partial] event times do not fit a practical sampling grid; events fire up to one sampling interval (30) late",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -49,126 +49,28 @@
      "#",
      "",
      "",
-     "PIP2_synthesis term 1/9",
+     "PIP2_synthesis term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "PIP2_PM+PIP_PM+S[USER;cPIP2_PM:(0.013072499999999999/(cPIP2_PM+1e-30))]==>2PIP_PM",
+     "PIP_PM+S[USER;cPIP2_PM:(0.026144999999999998*(exp(1-0.0009328358208955224*cPIP2_PM)-1)*((1072-cPIP2_PM)/(2*(abs(cPIP2_PM-1072)+1e-300))+0.5))]==>PIP2_PM",
      ""
     ],
     [
      "#",
      "",
      "",
-     "PIP2_synthesis term 2/9",
+     "PIP2_synthesis term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "PIP_PM+S[USER;cPIP2_PM:(0.03553473920253086*exp((-1*0.0009328358208955224*cPIP2_PM)))]==>PIP2_PM",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PIP2_synthesis term 3/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "PIP_PM+S[USER;cPIP2_PM:(76.18648085022618/(2*exp(0.0009328358208955224*cPIP2_PM)*abs(cPIP2_PM-1072)+2e-300*exp(0.0009328358208955224*cPIP2_PM)))]==>PIP2_PM",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PIP2_synthesis term 4/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "PIP_PM+S[USER;cTIME_:(0.005025062604297005*exp((-1*0.1*cTIME_)))]==>PIP2_PM",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PIP2_synthesis term 5/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "PIP2_PM+PIP_PM+S[USER;cPIP2_PM:(28.02744/(2e-300*cPIP2_PM+2*(cPIP2_PM+1e-30)*abs(cPIP2_PM-1072)+0))]==>2PIP_PM",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PIP2_synthesis term 6/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "PIP2_PM+PIP_PM+S[USER;cPIP2_PM,cTIME_:(0.0005025062604297006/(2*(cPIP2_PM+1e-30)*exp(0.1*cTIME_)*abs(cTIME_-0.05)+2e-300*(cPIP2_PM+1e-30)*exp(0.1*cTIME_)))]==>2PIP_PM",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PIP2_synthesis term 7/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "PIP_PM+PIP2_PM+S[USER;cPIP2_PM:(0.026144999999999998/(2*abs(cPIP2_PM-1072)+2e-300))]==>2PIP2_PM",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PIP2_synthesis term 8/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "PIP_PM+S[USER;cTIME_:(0.01005012520859401*cTIME_/(2*exp(0.1*cTIME_)*abs(cTIME_-0.05)+2e-300*exp(0.1*cTIME_)))]==>PIP2_PM",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PIP2_synthesis term 9/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "PIP2_PM+PIP_PM+S[USER;cPIP2_PM:(0.07106947840506173/(2*exp(0.0009328358208955224*cPIP2_PM)*abs(cPIP2_PM-1072)+2e-300*exp(0.0009328358208955224*cPIP2_PM)))]==>2PIP_PM",
+     "PIP_PM+S[USER;cSW1,cTIME_:(0.01*cSW1*exp(0.005-0.1*cTIME_))]==>PIP2_PM",
      ""
     ],
     [
@@ -945,126 +847,28 @@
      "#",
      "",
      "",
-     "PIP_synthesis term 1/9",
+     "PIP_synthesis term 1/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "PIP_PM+PI_PM+S[USER;cPIP_PM:(0.00043575/(cPIP_PM+1e-30))]==>2PI_PM",
+     "PI_PM+S[USER;cPIP_PM:(0.0008715*(exp(1-0.00035001750087504374*cPIP_PM)-1)*((2857-cPIP_PM)/(2*(abs(cPIP_PM-2857)+1e-300))+0.5))]==>PIP_PM",
      ""
     ],
     [
      "#",
      "",
      "",
-     "PIP_synthesis term 2/9",
+     "PIP_synthesis term 2/2",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "PI_PM+S[USER;cPIP_PM:(6.768183326775379/(2*exp(0.00035001750087504374*cPIP_PM)*abs(cPIP_PM-2857)+2e-300*exp(0.00035001750087504374*cPIP_PM)))]==>PIP_PM",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PIP_synthesis term 3/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "PI_PM+S[USER;cPIP_PM:(0.0011844913067510288*exp((-1*0.00035001750087504374*cPIP_PM)))]==>PIP_PM",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PIP_synthesis term 4/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "PI_PM+S[USER;cTIME_:(0.005025062604297005*exp((-1*0.1*cTIME_)))]==>PIP_PM",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PIP_synthesis term 5/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "PIP_PM+PI_PM+S[USER;cPIP_PM,cTIME_:(0.0005025062604297006/(2*(cPIP_PM+1e-30)*exp(0.1*cTIME_)*abs(cTIME_-0.05)+2e-300*(cPIP_PM+1e-30)*exp(0.1*cTIME_)))]==>2PI_PM",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PIP_synthesis term 6/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "PIP_PM+PI_PM+S[USER;cPIP_PM:(2.4898754999999997/(2e-300*cPIP_PM+2*(cPIP_PM+1e-30)*abs(cPIP_PM-2857)+0))]==>2PI_PM",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PIP_synthesis term 7/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "PI_PM+PIP_PM+S[USER;cPIP_PM:(0.0008715/(2*abs(cPIP_PM-2857)+2e-300))]==>2PIP_PM",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PIP_synthesis term 8/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "PI_PM+S[USER;cTIME_:(0.01005012520859401*cTIME_/(2*exp(0.1*cTIME_)*abs(cTIME_-0.05)+2e-300*exp(0.1*cTIME_)))]==>PIP_PM",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "PIP_synthesis term 9/9",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "PIP_PM+PI_PM+S[USER;cPIP_PM:(0.0023689826135020577/(2*exp(0.00035001750087504374*cPIP_PM)*abs(cPIP_PM-2857)+2e-300*exp(0.00035001750087504374*cPIP_PM)))]==>2PI_PM",
+     "PI_PM+S[USER;cSW1,cTIME_:(0.01*cSW1*exp(0.005-0.1*cTIME_))]==>PIP_PM",
      ""
     ],
     [
@@ -2309,6 +2113,17 @@
      ""
     ],
     [
+     "SW1",
+     "0",
+     "0",
+     "N",
+     "0",
+     "No",
+     "SW1.TXT-SET",
+     "time switch at 0.05 (off->on) [__switch__]",
+     ""
+    ],
+    [
      "END",
      "",
      "",
@@ -2349,7 +2164,7 @@
     ],
     [
      "1e-6",
-     "30",
+     "30.00000003",
      "KCAL",
      "MOLES/LITER",
      "0",
@@ -2397,7 +2212,7 @@
     ],
     [
      "None1",
-     "30",
+     "30.00000003",
      "0",
      "1e-8",
      "0",
@@ -2445,5 +2260,28 @@
    "rows": []
   }
  },
- "ofiles": []
+ "ofiles": [
+  {
+   "filename": "SW1.TXT",
+   "key": "O_SW1.TXT",
+   "cols": [
+    "Col1",
+    "Col2"
+   ],
+   "rows": [
+    [
+     "Time(s)",
+     "Concentrations"
+    ],
+    [
+     "0.05",
+     "1"
+    ],
+    [
+     "END",
+     ""
+    ]
+   ]
+  }
+ ]
 }

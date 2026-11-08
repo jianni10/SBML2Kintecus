@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:09:54.424017+00:00",
+ "created": "2026-11-07T22:23:44.337275+00:00",
  "description": "Malinzi2018 - tumour-immune interaction model\nBioModels BIOMD0000000809 (curated). SBML file: Malinzi2018 - tumour-immune interaction model.xml.\nSimulation: 0 to 10 time units (SED-ML: Malinzi2018 - tumour-immune interaction model.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.05e-06 of species peak (worst: ystar)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): p_R = R",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "x_logistic_growth term 1/2",
+     "x_logistic_growth",
      ""
     ],
     [
-     "1.3398",
+     "1",
      "0",
      "0",
-     "x==>2x",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "x_logistic_growth term 2/2",
-     ""
-    ],
-    [
-     "0.33495",
-     "0",
-     "0",
-     "x+x==>x",
+     "x+S[USER;cx:(1.3398-0.33495*cx)]==>2x",
      ""
     ],
     [
@@ -105,28 +91,14 @@
      "#",
      "",
      "",
-     "y_logistic_growth term 1/2",
+     "y_logistic_growth",
      ""
     ],
     [
-     "0.3",
+     "1",
      "0",
      "0",
-     "y==>2y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "y_logistic_growth term 2/2",
-     ""
-    ],
-    [
-     "0.15",
-     "0",
-     "0",
-     "y+y==>y",
+     "y+S[USER;cy:(0.3-0.15*cy)]==>2y",
      ""
     ],
     [
@@ -210,35 +182,7 @@
      "1",
      "0",
      "0",
-     "y+S[USER;cp_R,cy,cystar:(0.09999999999999999*cp_R/(cy+cystar-1))]==>p_R+y",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dR/dt term 2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "p_R+ystar+S[USER;cy,cystar:(0.08/(cy+cystar-1))]==>ystar",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "rate rule dR/dt term 3",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "p_R+y+y+S[USER;cy,cystar:(0.049999999999999996/(cy+cystar-1))]==>2y",
+     "source+S[USER;cp_R,cy,cystar:(0.3333333333333333*cp_R*(0.3*cy*(1-0.5*cy)-0.24*cystar)/(cy+cystar-1))]==>p_R",
      ""
     ],
     [
@@ -338,6 +282,17 @@
      "No",
      "No",
      "parameter R [R]",
+     ""
+    ],
+    [
+     "source",
+     "0",
+     "1",
+     "N",
+     "0",
+     "No",
+     "1",
+     "constant 1.0: nothing consumed [__source__]",
      ""
     ],
     [

@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-01T22:59:24.407190+00:00",
+ "created": "2026-11-07T22:23:30.944554+00:00",
  "description": "Hoffman2018- ADCC against cancer\nBioModels BIOMD0000000802 (curated). SBML file: Hoffman2017.xml.\nSimulation: 0 to 10 time units (SED-ML: Hoffman2017.sedml), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 7.18e-07 of species peak (worst: R)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] cancer_cell_killing_S: rate order differs from the stoichiometry; consumed on separate line(s) - S1: zero order, signed\nRenamed species (Kintecus name = SBML id): R1 = R; S1 = S",
  "settings": {
   "kpath": "",
@@ -147,21 +147,21 @@
      "#",
      "",
      "",
-     "NK_complex_formation term 1/4",
+     "NK_complex_formation term 1/3",
      ""
     ],
     [
-     "120",
+     "1",
      "0",
      "0",
-     "C+C==>3C",
+     "C+S[USER;cC:(120*cC-2400)]==>2C",
      ""
     ],
     [
      "#",
      "",
      "",
-     "NK_complex_formation term 2/4",
+     "NK_complex_formation term 2/3",
      ""
     ],
     [
@@ -175,21 +175,7 @@
      "#",
      "",
      "",
-     "NK_complex_formation term 3/4",
-     ""
-    ],
-    [
-     "2400",
-     "0",
-     "0",
-     "C==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "NK_complex_formation term 4/4",
+     "NK_complex_formation term 3/3",
      ""
     ],
     [

@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:12:03.638728+00:00",
+ "created": "2026-11-07T22:27:46.159395+00:00",
  "description": "Khajanchi2015 - The combined effects of optimal control in cancer remission\nBioModels BIOMD0000000897 (curated). SBML file: Khajanchi2015.xml.\nSimulation: 0 to 200 time units (SED-ML: Khajanchi2015.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.92e-06 of species peak (worst: E)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): E1 = E; T1 = T",
  "settings": {
   "kpath": "",
@@ -105,28 +105,14 @@
      "#",
      "",
      "",
-     "Formation_of_tumor_cell term 1/2",
+     "Formation_of_tumor_cell",
      ""
     ],
     [
-     "0.18",
+     "1",
      "0",
      "0",
-     "T1==>2T1",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Formation_of_tumor_cell term 2/2",
-     ""
-    ],
-    [
-     "3.6e-10",
-     "0",
-     "0",
-     "T1+T1==>T1",
+     "T1+S[USER;cT1:(0.18-3.6e-10*cT1)]==>2T1",
      ""
     ],
     [

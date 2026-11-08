@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-05T16:30:44.193814+00:00",
+ "created": "2026-11-07T22:27:08.535185+00:00",
  "description": "Rodrigues2019 - A mathematical model for chemoimmunotherapy of chronic lymphocytic leukemia\nBioModels BIOMD0000000879 (curated). SBML file: Rodrigues2019.xml.\nSimulation: 0 to 2000 time units (SED-ML: Rodrigues2019.sedml), sampling 0.125.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.22e-06 of species peak (worst: I)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [partial] 13 profile files exceed the GUI's 10 O_ file limit",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Cancer_Growth term 1/2",
+     "Cancer_Growth",
      ""
     ],
     [
-     "0.01",
+     "1",
      "0",
      "0",
-     "N==>2N",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Cancer_Growth term 2/2",
-     ""
-    ],
-    [
-     "1e-14",
-     "0",
-     "0",
-     "N+N==>N",
+     "N+S[USER;cN:(0.01-1e-14*cN)]==>2N",
      ""
     ],
     [

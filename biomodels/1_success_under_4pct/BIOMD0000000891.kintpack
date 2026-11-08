@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-10-31T07:11:55.966783+00:00",
+ "created": "2026-11-07T22:27:33.891372+00:00",
  "description": "Khajanchi2019 - Stability Analysis of a Mathematical Model forGlioma-Immune Interaction under OptimalTherapy\nBioModels BIOMD0000000891 (curated). SBML file: Khajanchi2019.xml.\nSimulation: 0 to 300 time units (SED-ML: Khajanchi2019.sedml), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.48e-06 of species peak (worst: w)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Decrease_in_density_of_glioma_cell term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Decrease_in_density_of_glioma_cell term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
@@ -49,28 +49,14 @@
      "#",
      "",
      "",
-     "Increase_in_density_of_glioma_cells term 1/2",
+     "Increase_in_density_of_glioma_cells",
      ""
     ],
     [
-     "0.4822",
+     "1",
      "0",
      "0",
-     "u==>2u",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Increase_in_density_of_glioma_cells term 2/2",
-     ""
-    ],
-    [
-     "0.4822",
-     "0",
-     "0",
-     "u+u==>u",
+     "u+S[USER;cu:(0.4822-0.4822*cu)]==>2u",
      ""
     ],
     [
@@ -105,28 +91,14 @@
      "#",
      "",
      "",
-     "Increase_in_density_of_macrophage_population term 1/2",
+     "Increase_in_density_of_macrophage_population",
      ""
     ],
     [
-     "0.3307",
+     "1",
      "0",
      "0",
-     "v==>2v",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "Increase_in_density_of_macrophage_population term 2/2",
-     ""
-    ],
-    [
-     "0.3307",
-     "0",
-     "0",
-     "v+v==>v",
+     "v+S[USER;cv:(0.3307-0.3307*cv)]==>2v",
      ""
     ],
     [

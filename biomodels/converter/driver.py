@@ -5,7 +5,8 @@ ids = [l.strip() for l in open(sys.argv[1]) if l.strip()]
 W = int(sys.argv[2]) if len(sys.argv) > 2 else 2
 LIMIT = int(os.environ.get("MODEL_LIMIT", "700"))
 def one(mid):
-    rj = f"/home/claude/kin/batch/out/{mid}/result.json"
+    OUT = os.environ.get("KIN_OUT", "/home/claude/kin/batch/out")
+    rj = f"{OUT}/{mid}/result.json"
     if os.environ.get("SKIP_DONE") and os.path.exists(rj):
         return
     t = time.time()
@@ -15,7 +16,7 @@ def one(mid):
     except subprocess.TimeoutExpired:
         os.makedirs(os.path.dirname(rj), exist_ok=True)
         json.dump({"id": mid, "status": "TIMEOUT_TOTAL", "seconds": LIMIT, "flags": [], "attempts": []}, open(rj, "w"))
-        base = os.path.realpath(f"/home/claude/kin/batch/out/{mid}")      # kill only this model's Kintecus
+        base = os.path.realpath(f"{OUT}/{mid}")      # kill only this model's Kintecus
         for pid in os.listdir("/proc"):
             try:
                 if pid.isdigit() and open(f"/proc/{pid}/comm").read().strip() == "Kintecus.exe" and \

@@ -1,10 +1,10 @@
 {
  "version": 3,
- "created": "2026-11-05T16:28:30.309203+00:00",
- "description": "Lee2003 - Roles of APC and Axin in Wnt Pathway (without regulatory loop)\nBioModels BIOMD0000000658 (curated). SBML file: BIOMD0000000658_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: MODEL1708310000_edited.sedml), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.39e-06 of species peak (worst: B_catenin__APC__axin__GSK3)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'W' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] v1 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Dsh_a: zero order, signed",
+ "created": "2026-11-07T22:04:26.419732+00:00",
+ "description": "Lee2003 - Roles of APC and Axin in Wnt Pathway (without regulatory loop)\nBioModels BIOMD0000000658 (curated). SBML file: BIOMD0000000658_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: MODEL1708310000_edited.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.37e-06 of species peak (worst: B_catenin)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'W' is defined by an assignment rule; not a Kintecus state (not output)",
  "settings": {
   "kpath": "",
-  "switches": "-ig:mass -INT:5 -obeymaxint",
+  "switches": "-ig:mass -INT:1 -obeymaxint",
   "nation": false
  },
  "grids": {
@@ -49,42 +49,14 @@
      "#",
      "",
      "",
-     "v1 term 1/2",
+     "v1",
      ""
     ],
     [
      "1",
      "0",
      "0",
-     "Dsh_i+S[USER;cTIME_:(1.3448082100053784*exp((-1*0.05*cTIME_)))]==>Dsh_a",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v1 term 2/2",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cDsh_i,cSW1,cTIME_:(1.3448082100053784*cDsh_i*cSW1*exp((-1*0.05*cTIME_)))]==>Dsh_i",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "v1 term 2/2 (consumes Dsh_a)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source+S[USER;cDsh_i,cSW1,cTIME_:((-1*1.3448082100053784*cDsh_i*cSW1*exp((-1*0.05*cTIME_))))]==>Dsh_a",
+     "Dsh_i+S[USER;cSW1,cTIME_:(0.182*(1-cSW1)*exp(2-0.05*cTIME_))]==>Dsh_a",
      ""
     ],
     [
@@ -739,7 +711,7 @@
      "None1",
      "1.000000001",
      "0",
-     "1e-10",
+     "1e-8",
      "0",
      ""
     ],

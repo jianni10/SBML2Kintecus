@@ -1,6 +1,6 @@
 {
  "version": 3,
- "created": "2026-11-02T03:48:16.385486+00:00",
+ "created": "2026-11-07T21:22:50.140181+00:00",
  "description": "Koo2013 - Shear stress induced calcium influx and eNOS activation - Model 1\nBioModels BIOMD0000000464 (curated). SBML file: BIOMD0000000464_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000464_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.04e-06 of species peak (worst: s10)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 's7' goes below zero in the SBML: integrated as s7_o = value + 10000000, output as s7 = OUTC[s7_o;-10000000*source]\n  [info] 's11' goes below zero in the SBML: integrated as s11_o = value + 1000000000, output as s11 = OUTC[s11_o;-1000000000*source]\n  [info] 's13' goes below zero in the SBML: integrated as s13_o = value + 200000, output as s13 = OUTC[s13_o;-200000*source]\n  [info] re5: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for s7_o\n  [info] re7 term 2/3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] re12: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
@@ -98,7 +98,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cs12:(26.4+0.004000606152447347*exp((-1*100*cs12))-26.404000606152444*exp((-1*0.015151515151515152*cs12)))]==>s6",
+     "source+S[USER;cs12:(0.004000606152447347*exp((-1*100*cs12))-26.404000606152444*exp((-1*0.015151515151515152*cs12))+26.4)]==>s6",
      ""
     ],
     [
@@ -112,7 +112,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cs12:(-26.4-0.004000606152447347*exp((-1*100*cs12))+26.404000606152444*exp((-1*0.015151515151515152*cs12)))]==>s7_o",
+     "source+S[USER;cs12:(-0.004000606152447347*exp((-1*100*cs12))+26.404000606152444*exp((-1*0.015151515151515152*cs12))-26.4)]==>s7_o",
      ""
     ],
     [
