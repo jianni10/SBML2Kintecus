@@ -1,4 +1,4 @@
-Pack descriptions - 1072 curated BioModels entries (2026-11-07)
+Pack descriptions - 1072 curated BioModels entries (2026-11-10)
 Folder meanings and scoring: see README.txt. The same notes are in FINAL_RESULTS_TABLE.csv.
 
 ====================================================================================================
@@ -3002,11 +3002,11 @@ BIOMD0000000411  Heiland2012_CircadianClock_C.reinhardtii
   note: Kintecus matches the SBML within 0.1% (max 0.0037% of peak, worst species None). Duration 100000 chosen from the dynamics (no curated SED-ML time course).
 ====================================================================================================
 BIOMD0000000412  Pokhilko2012_CircClock_RepressilatorFeedbackloop
-  pack: BIOMD0000000412.kintpack   folder: 3_off_partial_or_unverified   SUCCESS: NO   within 0.1%: NO
-  Kintecus vs SBML: n/a%   deck vs SBML: n/a%   (max |diff| / species peak)   status KINTECUS_FAILED
+  pack: BIOMD0000000412.kintpack   folder: 1_success_under_4pct   SUCCESS: YES   within 0.1%: YES
+  Kintecus vs SBML: 0.00046%   deck vs SBML: n/a%   (max |diff| / species peak)   status PASS
   run: -ig:mass -INT:1 -obeymaxint   0..100000 (dynamics), sampling 100; 56 SBML reactions -> 185 Kintecus lines, 105 species
-  Kintecus runs: -INT:1: too slow (projected 16512 s at t=100); -INT:5: stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1 (deck before 11-01): too slow (projected 15015 s at t=100); -INT:5 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:5:10:0 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:1 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:5 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:1 on James's PC: projected 8183 s > cap 3600 s (at t=8800 of 100000)
-  note: Kintecus did not finish within the time limit (-INT:1: too slow (projected 16512 s at t=100); -INT:5: stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1 (deck before 11-01): too slow (projected 15015 s at t=100); -INT:5 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:5:10:0 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:1 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:5 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:1 on James's PC: projected 8183 s > cap 3600 s (at t=8800 of 100000)). The independent deck run also failed (deck simulation over 180 s). Duration 100000 chosen from the dynamics (no curated SED-ML time course).
+  Kintecus runs: -INT:1: too slow (projected 16512 s at t=100); -INT:5: stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1 (deck before 11-01): too slow (projected 15015 s at t=100); -INT:5 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:5:10:0 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:1 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:5 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:1 on James's PC: finished, off by 0.00046%
+  note: Kintecus matches the SBML within 0.1% (max 0.00046% of peak, worst species s4). Duration 100000 chosen from the dynamics (no curated SED-ML time course).
 ====================================================================================================
 BIOMD0000000413  Band2012_DII-Venus_FullModel
   pack: BIOMD0000000413.kintpack   folder: 1_success_under_4pct   SUCCESS: YES   within 0.1%: YES
@@ -3688,11 +3688,11 @@ BIOMD0000000505  vanEunen2013 - Network dynamics of fatty acid β-oxidation (ste
   note: Kintecus matches the SBML within 0.1% (max 0.00048% of peak, worst species C10KetoacylCoAMAT). Duration 10 chosen from the dynamics (no curated SED-ML time course).
 ====================================================================================================
 BIOMD0000000506  vanEunen2013 - Network dynamics of fatty acid β-oxidation (time-course model)
-  pack: BIOMD0000000506.kintpack   folder: 2_deck_verified_kintecus_too_slow_or_differs   SUCCESS: NO   within 0.1%: NO
-  Kintecus vs SBML: n/a%   deck vs SBML: 2.7e-07%   (max |diff| / species peak)   status DECK_VERIFIED_KINTECUS_NUMERICS
+  pack: BIOMD0000000506.kintpack   folder: 1_success_under_4pct   SUCCESS: YES   within 0.1%: YES
+  Kintecus vs SBML: 0.00045%   deck vs SBML: 2.7e-07%   (max |diff| / species peak)   status PASS
   run: -ig:mass -INT:1 -obeymaxint   0..1000 (dynamics), sampling 1; 59 SBML reactions -> 176 Kintecus lines, 55 species
-  Kintecus runs: -INT:1: too slow (projected 302 s at t=199); -INT:5: too slow (projected 24518 s at t=1); -INT:5:10:0: too slow (projected 24522 s at t=1); -INT:1 (deck before 11-01): too slow (projected 301 s at t=256); -INT:5 (deck before 11-01): too slow (projected 18015 s at t=1); -INT:1 on James's PC: projected 3600 s > cap 3600 s (at t=266 of 1000)
-  note: The deck reproduces the SBML to 2.7e-07% (independent SciPy run of the same deck), but Kintecus did not finish within the time limit: -INT:1: too slow (projected 302 s at t=199); -INT:5: too slow (projected 24518 s at t=1); -INT:5:10:0: too slow (projected 24522 s at t=1); -INT:1 (deck before 11-01): too slow (projected 301 s at t=256); -INT:5 (deck before 11-01): too slow (projected 18015 s at t=1); -INT:1 on James's PC: projected 3600 s > cap 3600 s (at t=266 of 1000). Duration 1000 chosen from the dynamics (no curated SED-ML time course).
+  Kintecus runs: -INT:1: too slow (projected 302 s at t=199); -INT:5: too slow (projected 24518 s at t=1); -INT:5:10:0: too slow (projected 24522 s at t=1); -INT:1 (deck before 11-01): too slow (projected 301 s at t=256); -INT:5 (deck before 11-01): too slow (projected 18015 s at t=1); -INT:1 on James's PC: finished, off by 0.00045%
+  note: Kintecus matches the SBML within 0.1% (max 0.00045% of peak, worst species Q27). Duration 1000 chosen from the dynamics (no curated SED-ML time course).
 ====================================================================================================
 BIOMD0000000507  Gardner2000 - genetic toggle switch in E.coli
   pack: BIOMD0000000507.kintpack   folder: 1_success_under_4pct   SUCCESS: YES   within 0.1%: YES

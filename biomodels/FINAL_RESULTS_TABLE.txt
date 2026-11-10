@@ -1,4 +1,4 @@
-FINAL RESULTS - 1072 curated BioModels entries -> 1045 .kintpack files   (2026-11-07)
+FINAL RESULTS - 1072 curated BioModels entries -> 1045 .kintpack files   (2026-11-10)
 
 SUCCESS = Kintecus output agrees with the original SBML (simulated by libRoadRunner) to under 4% (rule set
           2026-10-30; it was 0.1% before - column within_0.1pct keeps the strict result):
@@ -15,11 +15,11 @@ lines -INT:5:10:0 (DASPK without non-negativity), then for packs that still did 
 15 references (55, 165, 179, 180, 250, 286, 288, 451, 540, 541, 658, 858, 859, 948, 1025) use libRoadRunner default
 tolerances because CVODE fails at rtol 1e-10.
 
-  SUCCESS (under 4%)                                   961
-    of which within 0.1%                               942
+  SUCCESS (under 4%)                                   963
+    of which within 0.1%                               944
   off by 4% or more                                     59
-  deck correct, Kintecus too slow / stops                4
-  Kintecus too slow / stops, deck not confirmed         14
+  deck correct, Kintecus too slow / stops                3
+  Kintecus too slow / stops, deck not confirmed         13
   runs, SBML reference not simulable                     7
   runs, nothing changes to compare                       8
   no pack (nothing convertible / converter error)       27
@@ -1796,16 +1796,10 @@ BIOMD0000000411  YES  Kintecus   0.0037%  deck        -%  PASS
     Heiland2012_CircadianClock_C.reinhardtii
     Kintecus matches the SBML within 0.1% (max 0.0037% of peak, worst species None). Duration 100000 chosen
     from the dynamics (no curated SED-ML time course).
-BIOMD0000000412  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
+BIOMD0000000412  YES  Kintecus  0.00046%  deck        -%  PASS
     Pokhilko2012_CircClock_RepressilatorFeedbackloop
-    Kintecus did not finish within the time limit (-INT:1: too slow (projected 16512 s at t=100); -INT:5:
-    stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1
-    (deck before 11-01): too slow (projected 15015 s at t=100); -INT:5 (deck before 11-01): stalled (no
-    output row for 30 s at t=0); -INT:5:10:0 (deck before 11-01): stalled (no output row for 30 s at t=0);
-    -INT:1 (deck before 11-01): stalled (no output row for 30 s at t=0); -INT:5 (deck before 11-01): stalled
-    (no output row for 30 s at t=0); -INT:1 on James's PC: projected 8183 s > cap 3600 s (at t=8800 of
-    100000)). The independent deck run also failed (deck simulation over 180 s). Duration 100000 chosen from
-    the dynamics (no curated SED-ML time course).
+    Kintecus matches the SBML within 0.1% (max 0.00046% of peak, worst species s4). Duration 100000 chosen
+    from the dynamics (no curated SED-ML time course).
 BIOMD0000000413  YES  Kintecus  0.00035%  deck        -%  PASS
     Band2012_DII-Venus_FullModel
     Kintecus matches the SBML within 0.1% (max 0.00035% of peak, worst species auxinTIR1). Duration 300
@@ -2204,14 +2198,10 @@ BIOMD0000000505  YES  Kintecus  0.00048%  deck        -%  PASS
     vanEunen2013 - Network dynamics of fatty acid β-oxidation (steady-state model)
     Kintecus matches the SBML within 0.1% (max 0.00048% of peak, worst species C10KetoacylCoAMAT). Duration
     10 chosen from the dynamics (no curated SED-ML time course).
-BIOMD0000000506  NO   Kintecus        -%  deck  2.7e-07%  DECK_VERIFIED_KINTECUS_NUMERICS
+BIOMD0000000506  YES  Kintecus  0.00045%  deck  2.7e-07%  PASS
     vanEunen2013 - Network dynamics of fatty acid β-oxidation (time-course model)
-    The deck reproduces the SBML to 2.7e-07% (independent SciPy run of the same deck), but Kintecus did not
-    finish within the time limit: -INT:1: too slow (projected 302 s at t=199); -INT:5: too slow (projected
-    24518 s at t=1); -INT:5:10:0: too slow (projected 24522 s at t=1); -INT:1 (deck before 11-01): too slow
-    (projected 301 s at t=256); -INT:5 (deck before 11-01): too slow (projected 18015 s at t=1); -INT:1 on
-    James's PC: projected 3600 s > cap 3600 s (at t=266 of 1000). Duration 1000 chosen from the dynamics (no
-    curated SED-ML time course).
+    Kintecus matches the SBML within 0.1% (max 0.00045% of peak, worst species Q27). Duration 1000 chosen
+    from the dynamics (no curated SED-ML time course).
 BIOMD0000000507  YES  Kintecus  0.00032%  deck        -%  PASS
     Gardner2000 - genetic toggle switch in E.coli
     Kintecus matches the SBML within 0.1% (max 0.00032% of peak, worst species species_1). Duration 10

@@ -4,7 +4,7 @@ Converts SBML Level 2 (all versions) and Level 3 core models to Kintecus MODEL.D
 
 > **BioModels collection:** [`biomodels/`](biomodels) holds the full converter (`sbml2kintpack`), run and
 > check scripts, and every curated BioModels entry converted to a Kintecus `.kintpack` and verified against
-> libRoadRunner — 961 of 1,072 match the SBML to under 4% — with results tables and overlay plots.
+> libRoadRunner — 963 of 1,072 match the SBML to under 4% — with results tables and overlay plots.
 > Kintecus itself is not included.
 
 ## Output files
