@@ -1,0 +1,8 @@
+#			Model Description SpreadSheet	
+#	T^m	Ea	Reaction	Comments
+1	0	0	source+S[USER;TIME:(TIME)]==>X	
+1	0	0	source+S[USER;cTIME_:(cTIME_)]==>Y	
+1	0	0	A+S[USER;cA,TIME:(0.1*sin(TIME))]==>sink	
+1	0	0	source+S[USER;cA,TIME:(cA*TIME/(1+TIME))]==>Z	
+1	0	0	source==>TIME_	
+END				

@@ -1,6 +1,6 @@
 BioModels -> Kintecus .kintpack collection
 ==========================================
-Built 2026-11-10. Source: the curated BioModels set as mirrored in github.com/sys-bio/temp-biomodels
+Built 2026-11-13. Source: the curated BioModels set as mirrored in github.com/sys-bio/temp-biomodels
 (entries up to BIOMD0000001080, mirror dated June 2025).
 
 1072 curated models -> 1045 .kintpack files.

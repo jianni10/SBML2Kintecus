@@ -126,7 +126,8 @@ ATOMIC_STEP = os.environ.get("KIN_ATOMIC_STEP", "1") == "1"
 WHOLE_EXP = os.environ.get("KIN_WHOLE_EXP", "1") == "1"
 MERGE_OPPOSITE = os.environ.get("KIN_MERGE_OPPOSITE", "1") == "1"
 TIME_SWITCH = os.environ.get("KIN_TIME_SWITCH", "1") == "1"   # time-only conditions -> switch species
-PRINT_NEG_FIX = os.environ.get("KIN_PRINT_NEG_FIX", "1") == "1"   # parenthesize -1*(sum) (wrong as -1*a+b before 11-07)
+PRINT_NEG_FIX = os.environ.get("KIN_PRINT_NEG_FIX", "1") == "1"
+NATIVE_TIME = os.environ.get("KIN_NATIVE_TIME", "0") == "1"   # USER uses Kintecus TIME (needs the 11-12 build)   # parenthesize -1*(sum) (wrong as -1*a+b before 11-07)
 TSWITCH_MAX = 60   # see Converter._merge_opposite
 
 
@@ -1570,6 +1571,16 @@ class Converter:
                           f"{rid}" + (f" term {i+1}/{len(terms)}" if len(terms) > 1 else "") +
                           (f" (volume {num(V)})" if len(groups) > 1 else ""), allowed)
 
+    def _native_time(self):
+        """KIN_NATIVE_TIME: USER functions read Kintecus's own TIME (build of 2026-11-12 on) instead of the
+        pseudo-species TIME_ (source==>TIME_ at k=1, so [TIME_] = t); no TIME_ line or species is written."""
+        pat = re.compile(r"(?<![A-Za-z0-9_])cTIME_(?![A-Za-z0-9_])")
+        n = sum(1 for _, rx, _ in self.lines if pat.search(rx))
+        self.lines = [(k, pat.sub("TIME", rx), c) for k, rx, c in self.lines]
+        if n and not getattr(self, "_native_flagged", False):
+            self._native_flagged = True
+            self.flag("info", f"time read as Kintecus TIME in {n} USER line(s) (no TIME_ pseudo-species)")
+
     def _retry_unmerged(self, fn, what):
         """Run one conversion; if it fails with merged opposite-sign terms (a merged rate can grow past the line
         length once divided by its reactants), undo its lines and flags and convert it again term by term."""
@@ -1815,7 +1826,9 @@ class Converter:
         for r in self.m.getListOfReactions():
             self._retry_unmerged(lambda: self.convert_reaction(r), f"reaction '{r.getId()}'")
         self.convert_rate_rules()
-        if any("cTIME_" in rx for _, rx, _ in self.lines):
+        if NATIVE_TIME:
+            self._native_time()
+        elif any("cTIME_" in rx for _, rx, _ in self.lines):
             self.lines.append(("1", f"{SOURCE}==>TIME_", "SBML time as a pseudo-species (d TIME_/dt = 1)"))
         self.reacting = set(self.reacting_ids)
         col7 = self.build_events(t_end)
@@ -1849,7 +1862,9 @@ class Converter:
                              f"__shifted__{pid}"))
                 continue
             rows.append((name, v0, "Y" if pid in self.rrule else "N", pin, f"parameter {pid}", pid))
-        if self.time_used and any("TIME_" in rx for _, rx, _ in self.lines):
+        if NATIVE_TIME:
+            self._native_time()
+        elif self.time_used and any("TIME_" in rx for _, rx, _ in self.lines):
             rows.append(("TIME_", 0.0, "N", "No", "time", "__time__"))
         for nm, side_ in ((SOURCE, 0), (SINK, 1)):
             pat = re.compile(r"(^|\+)" + nm + r"(\+|$)", re.I)

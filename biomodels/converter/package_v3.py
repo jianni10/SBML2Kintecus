@@ -355,6 +355,12 @@ INTERFACE NOTES
     t=200, 500, 723). Under -INT:1 the switch species keep their initial values all run and the output jumps
     197.5 -> 212.077 (no row at the pair time); -INT:5 applies them and matches the SBML (0.027%). Small decks
     with the same pair files switch correctly. Repro: repros/PAIR_SKIP_INT1_BIOMD0000000554 (README.txt).
+26. (2026-11-12) -INT:1 stops writing output rows when many Time/value pairs are used: BIOMD0000000450 (6 pair
+    files, 84-85 pairs each) has rows to t=83 and then only the final row at 1001; -INT:5 writes every row. Same
+    on the 11-05 and 11-12 builds. Repro: repros/OUTPUT_STOPS_MANY_PAIRS_BIOMD0000000450.
+27. (2026-11-12) TIME in USER functions (new in the 11-12 build) reads 0 when listed in the USER variables and -1
+    when used without being listed; the TIME_ pseudo-species in the same deck is exact. The converter can write
+    TIME (KIN_NATIVE_TIME=1) and will once a build evaluates it. Repro: repros/TIME_IN_USER_20261112.
 25. (2026-11-07) Kintecus's stiff integrators are much slower than CVODE/LSODA on a few correct decks:
     BIOMD0000000506 (56 species, 108k characters of USER: LSODA 3 s, CVODE 0.02 s, -INT:1 reaches t=220 of 1000
     in 150 s regardless of sampling or maximum step), BIOMD0000000608 (LSODA 0.4 s; -INT:1 t=41,000 of 100,000
@@ -533,7 +539,8 @@ with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
         z.write(f"{B}/repro_null/PROFILE_ADD_TIMING/{fn}", f"repros/PROFILE_ADD_TIMING/{fn}")
     for d in ("REACTION_FIELD_897", "REACTION_FIELD_898", "SPEED_USER_BIOMD0000000010", "TIMEPAIRS_ADD_3PAIRS",
               "TIMEPAIRS_PINNED_2PAIRS", "TIMEPAIRS_RUN_60S", "TIMEPAIRS_RUN_70S", "TIMEPAIRS_BIOMD0000000439",
-              "TIMEPAIRS_OUTPUT_GRID/pairs", "TIMEPAIRS_OUTPUT_GRID/spacing", "PAIR_SKIP_INT1_BIOMD0000000554"):
+              "TIMEPAIRS_OUTPUT_GRID/pairs", "TIMEPAIRS_OUTPUT_GRID/spacing", "PAIR_SKIP_INT1_BIOMD0000000554",
+              "OUTPUT_STOPS_MANY_PAIRS_BIOMD0000000450", "TIME_IN_USER_20261112"):
         for fn in sorted(os.listdir(f"{B}/repro_null/{d}")):
             if os.path.isfile(f"{B}/repro_null/{d}/{fn}") and fn.upper() not in ("KINTECUS.EXE",):
                 z.write(f"{B}/repro_null/{d}/{fn}", f"repros/{d}/{fn}")

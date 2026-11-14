@@ -1,0 +1,221 @@
+#			Model Description SpreadSheet	
+#			Reyes-Palomares2012 -  a combined model hepatic polyamine and sulfur aminoacid metabolism - version2  (BIOMD0000000450, curated BioModels; source file BIOMD0000000450_url.xml)	
+#			Converted from SBML by sbml2kin_batch.py; verified against libRoadRunner (see .kintpack description)	
+#	T^m	Ea	Reaction	Comments
+#			b_gsh_decomp	
+90	0	0	b_gsh==>b_cys+b_glu+b_gly	
+#			b_gsg_decomp	
+67.5	0	0	b_gsg==>2b_cys+2b_glu+2b_gly	
+#			b_cys_cystine_conv	
+0.25	0	0	b_cys==>sink	
+#			b_cys_loss	
+0.1	0	0	b_cys==>sink	
+#			b_glu_loss	
+0.1	0	0	b_glu==>sink	
+#			b_gly_loss	
+0.1	0	0	b_gly==>sink	
+#			b_gsh_loss	
+0.7	0	0	b_gsh==>sink	
+#			b_gsg_loss	
+7.5	0	0	b_gsg==>sink	
+#			b_cys_import	
+70	0	0	source==>b_cys	
+#			b_gly_import	
+630	0	0	source==>b_gly	
+#			b_glu_import	
+273	0	0	source==>b_glu	
+#			V_c_gshHb	
+1	0	0	c_gsh+S[USER;cc_gsh:(150/(1*cc_gsh+150))]==>b_gsh	
+#			V_c_gshLb	
+1	0	0	c_gsh+S[USER;cc_gsh:(1100*cc_gsh^2/(1*(cc_gsh+1e-30)^3+27000000000))]==>b_gsh	
+#			V_c_gsgHb	
+1	0	0	c_gsg+S[USER;cc_gsg:(40/(1*cc_gsg+1250))]==>b_gsg	
+#			V_c_gsgLb	
+1	0	0	c_gsg+S[USER;cc_gsg:(4025/(1*cc_gsg+7100))]==>b_gsg	
+#			V_b_CYS_c	
+1	0	0	b_cys+S[USER;cb_cys:(14950/(1*cb_cys+2100))]==>c_cys	
+#			V_b_GLU_c term 1/2	
+1	0	0	c_glu==>b_glu	
+#			V_b_GLU_c term 2/2	
+1	0	0	b_glu+S[USER;cb_glu:(28000/(1*cb_glu+300))]==>c_glu	
+#			V_b_GLY_c term 1/2	
+1	0	0	c_gly==>b_gly	
+#			V_b_GLY_c term 2/2	
+1	0	0	b_gly+S[USER;cb_gly:(4600/(1*cb_gly+150))]==>c_gly	
+#			V_b_SER_c term 1/2	
+1350	0	0	source==>c_ser	
+#			V_b_SER_c term 2/2	
+1	0	0	c_ser==>sink	
+#			V_b_MET_c term 1/2	
+152.23333333333332	0	0	source==>met	
+#			V_b_MET_c term 2/2	
+1	0	0	met==>sink	
+#			VmFTD	
+1	0	0	m_10f+S[USER;cm_10f:(1050/(1*cm_10f+20))]==>m_thf	
+#			VmSHMT term 1/2	
+1	0	0	m_ser+m_thf+S[USER;cm_ser,cm_thf:(11440/(50*cm_ser+600*cm_thf+1*(cm_ser+1e-30)*(cm_thf+1e-30)+30000))]==>m_2cf+m_gly	
+#			VmSHMT term 2/2	
+1	0	0	m_2cf+m_gly+S[USER;cm_2cf,cm_gly:(30000000/(10000*cm_2cf+3200*cm_gly+1*(cm_2cf+1e-30)*(cm_gly+1e-30)+32000000))]==>m_ser+m_thf	
+#			VmFTS term 1/2	
+1	0	0	m_10f+S[USER;cm_10f:(6300/(1*cm_10f+22))]==>m_coo+m_thf	
+#			VmFTS term 2/2	
+1	0	0	m_coo+m_thf+S[USER;cm_coo,cm_thf:(2000/(3*cm_coo+43*cm_thf+1*(cm_coo+1e-30)*(cm_thf+1e-30)+129))]==>m_10f	
+#			VmNE term 1/2	
+15	0	0	m_thf==>m_2cf	
+#			VmNE term 2/2	
+20	0	0	m_2cf==>m_thf	
+#			V_GDC	
+1	0	0	m_gly+m_thf+S[USER;cm_gly,cm_thf:(15000/(50*cm_gly+3400*cm_thf+1*(cm_gly+1e-30)*(cm_thf+1e-30)+170000))]==>m_2cf	
+#			V_SDH	
+1	0	0	m_thf+src+S[USER;cm_thf,csrc:(15000/(320*cm_thf+50*csrc+1*(cm_thf+1e-30)*(csrc+1e-30)+16000))]==>m_2cf+m_gly	
+#			V_DMGD	
+1	0	0	dmg+m_thf+S[USER;cdmg,cm_thf:(15000/(50*cdmg+50*cm_thf+1*(cdmg+1e-30)*(cm_thf+1e-30)+2500))]==>m_2cf+src	
+#			VmMTD term 1/2	
+1	0	0	m_2cf+S[USER;cm_2cf:(180000/(1*cm_2cf+2))]==>m_1cf	
+#			VmMTD term 2/2	
+1	0	0	m_1cf+S[USER;cm_1cf:(594000/(1*cm_1cf+10))]==>m_2cf	
+#			VmMTCH term 1/2	
+1	0	0	m_1cf+S[USER;cm_1cf:(790000/(1*cm_1cf+250))]==>m_10f	
+#			VmMTCH term 2/2	
+1	0	0	m_10f+S[USER;cm_10f:(20000/(1*cm_10f+100))]==>m_1cf	
+#			VmSERc term 1/2	
+1	0	0	source+S[USER;cm_ser:(3333.3333333333335*cm_ser/(cm_ser+5700))]==>c_ser	
+#			VmSERc term 1/2 (consumes m_ser)	
+1	0	0	m_ser+S[USER;cm_ser:(10000/(1*cm_ser+5700))]==>sink	
+#			VmSERc term 2/2	
+1	0	0	c_ser+S[USER;cc_ser:(10000/(1*cc_ser+5700))]==>3m_ser	
+#			VmHCOOHc term 1/2	
+1	0	0	source+S[USER;cm_coo:(33.333333333333336*cm_coo)]==>c_coo	
+#			VmHCOOHc term 1/2 (consumes m_coo)	
+100	0	0	m_coo==>sink	
+#			VmHCOOHc term 2/2	
+100	0	0	c_coo==>3m_coo	
+#			VmGLYc term 1/2	
+1	0	0	source+S[USER;cm_gly:(3333.3333333333335*cm_gly/(cm_gly+5700))]==>c_gly	
+#			VmGLYc term 1/2 (consumes m_gly)	
+1	0	0	m_gly+S[USER;cm_gly:(10000/(1*cm_gly+5700))]==>sink	
+#			VmGLYc term 2/2	
+1	0	0	c_gly+S[USER;cc_gly:(10000/(1*cc_gly+5700))]==>3m_gly	
+#			V_MS	
+1	0	0	c_5mf+hcy+S[USER;cc_5mf,chcy:(400/(1*cc_5mf+25*chcy+1*(cc_5mf+1e-30)*(chcy+1e-30)+25))]==>c_thf+met	
+#			V_DHFR	
+1	0	0	c_dhf+S[USER;cc_dhf:(100000/(54*cc_dhf+27))]==>c_thf	
+#			VcFTD	
+1	0	0	c_10f+S[USER;cc_10f:(500/(1*cc_10f+20))]==>c_thf	
+#			V_PGT	
+1	0	0	c_10f+S[USER;cc_10f:(243000/(530*cc_10f+2597))]==>aic+c_thf	
+#			VcFTS	
+1	0	0	c_coo+c_thf+S[USER;cc_coo,cc_thf:(3900/(3*cc_coo+43*cc_thf+1*(cc_coo+1e-30)*(cc_thf+1e-30)+129))]==>c_10f	
+#			VcSHMT term 1/2	
+1	0	0	c_ser+c_thf+S[USER;cc_ser,cc_thf:(5200/(50*cc_ser+600*cc_thf+1*(cc_ser+1e-30)*(cc_thf+1e-30)+30000))]==>c_2cf+c_gly	
+#			VcSHMT term 2/2	
+1	0	0	c_2cf+c_gly+S[USER;cc_2cf,cc_gly:(15000000/(10000*cc_2cf+3200*cc_gly+1*(cc_2cf+1e-30)*(cc_gly+1e-30)+32000000))]==>c_ser+c_thf	
+#			VcNE term 1/2	
+15	0	0	c_thf==>c_2cf	
+#			VcNE term 2/2	
+22	0	0	c_2cf==>c_thf	
+#			V_TS	
+1	0	0	c_2cf+S[USER;cc_2cf:(100000/(26.3*cc_2cf+368.2))]==>c_dhf	
+#			V_MTHFR	
+1	0	0	c_2cf+S[USER;cc_2cf,csah,csam:((-1*19080000/(-660*cc_2cf+66*csah*(cc_2cf+1e-30)+3300*csah-66*csam*(cc_2cf+1e-30)-3300*csam-33000)))]==>c_5mf	
+#			VcMTD term 1/2	
+1	0	0	c_2cf+S[USER;cc_2cf:(80000/(1*cc_2cf+2))]==>c_1cf	
+#			VcMTD term 2/2	
+1	0	0	c_1cf+S[USER;cc_1cf:(600000/(1*cc_1cf+10))]==>c_2cf	
+#			VcMTCH term 1/2	
+1	0	0	c_1cf+S[USER;cc_1cf:(500000/(1*cc_1cf+250))]==>c_10f	
+#			VcMTCH term 2/2	
+1	0	0	c_10f+S[USER;cc_10f:(20000/(1*cc_10f+100))]==>c_1cf	
+#			V_ART	
+1	0	0	aic+c_10f+S[USER;caic,cc_10f:(55000/(5.9*caic+100*cc_10f+1*(caic+1e-30)*(cc_10f+1e-30)+590))]==>c_thf	
+#			V_BHMT	
+1	0	0	hcy+S[USER;chcy,csah,csam:(107173.35630456518*exp(-0.0021*csah-0.0021*csam)/(150*chcy+1800))]==>dmg+met	
+#			V_GNMT	
+1	0	0	c_gly+sam+S[USER;cc_5mf,cc_gly,csah,csam:(1248/(0.05555555555555555*cc_5mf*csah*(cc_gly+1e-30)*(csam+1e-30)+3.5*cc_5mf*csah*(cc_gly+1e-30)+7.222222222222222*cc_5mf*csah*(csam+1e-30)+455*cc_5mf*csah+1*cc_5mf*(cc_gly+1e-30)*(csam+1e-30)+63*cc_5mf*(cc_gly+1e-30)+130*cc_5mf*(csam+1e-30)+8190*cc_5mf+22.049999999999997*cc_gly+0.019444444444444445*csah*(cc_gly+1e-30)*(csam+1e-30)+1.2249999999999999*csah*(cc_gly+1e-30)+2.5277777777777777*csah*(csam+1e-30)+159.25*csah+45.5*csam+0.35*(cc_gly+1e-30)*(csam+1e-30)+2866.5))]==>sah+src	
+#			V_DNMT	
+1	0	0	sam+S[USER;csah,csam:(180/(1*csah+1*csam+1.4))]==>sah	
+#			V_SAHH term 1/2	
+1	0	0	sah+S[USER;csah:(320/(1*csah+6.5))]==>hcy	
+#			V_SAHH term 2/2	
+1	0	0	hcy+S[USER;chcy:(4530/(1*chcy+150))]==>sah	
+#			gluconeogenesis_ser	
+1.2	0	0	c_ser==>sink	
+#			V_CBS	
+1	0	0	c_ser+hcy+S[USER;cc_ser,chcy,csah,csam:(506572.7615444904/(1000*cc_ser+2000*chcy+900*(cc_ser+1e-30)*(chcy+1e-30)*(1/(csah+csam))^2+1*(cc_ser+1e-30)*(chcy+1e-30)+900000*(cc_ser+1e-30)*(1/(csah+csam))^2+1800000*(chcy+1e-30)*(1/(csah+csam))^2+1800000000*(1/(csah+csam))^2+2000000))]==>cyt	
+#			V_CTGL	
+1	0	0	cyt+S[USER;ccyt:(1500/(1*ccyt+500))]==>c_cys	
+#			V_GCS	
+1	0	0	source+S[USER;cc_cys,cc_glu,cc_gsh,cglc:(1.25*(3600*cc_cys*cc_glu-0.6432017152045739*cglc)/(cc_cys*(cc_glu+0.23170731707317074*cc_gsh+1900)+100*cc_glu+0.00012195121951219512*cc_gsh+0.0033333333333333335*cglc+190000))]==>glc	
+#			V_GCS (consumes c_cys)	
+1	0	0	source+S[USER;cc_cys,cc_glu,cc_gsh,cglc:((-1*1.25*(3600*cc_cys*cc_glu-0.6432017152045739*cglc)/(cc_cys*(cc_glu+0.23170731707317074*cc_gsh+1900)+100*cc_glu+0.00012195121951219512*cc_gsh+0.0033333333333333335*cglc+190000)))]==>c_cys	
+#			V_GCS (consumes c_glu)	
+1	0	0	source+S[USER;cc_cys,cc_glu,cc_gsh,cglc:((-1*1.25*(3600*cc_cys*cc_glu-0.6432017152045739*cglc)/(cc_cys*(cc_glu+0.23170731707317074*cc_gsh+1900)+100*cc_glu+0.00012195121951219512*cc_gsh+0.0033333333333333335*cglc+190000)))]==>c_glu	
+#			cys_usage	
+1	0	0	c_cys+S[USER;cc_cys:(0.0017499999999999998*cc_cys)]==>sink	
+#			c_glu_usage	
+0.07	0	0	c_glu==>sink	
+#			V_GS	
+1	0	0	source+S[USER;cc_gly,cc_gsh,cglc:(1*(5400*cc_gly*cglc-0.9642857142857143*cc_gsh)/(cc_gly*(cglc+22)+0.03333333333333333*cc_gsh+300*cglc+6600))]==>c_gsh	
+#			V_GS (consumes c_gly)	
+1	0	0	source+S[USER;cc_gly,cc_gsh,cglc:((-1*1*(5400*cc_gly*cglc-0.9642857142857143*cc_gsh)/(cc_gly*(cglc+22)+0.03333333333333333*cc_gsh+300*cglc+6600)))]==>c_gly	
+#			V_GS (consumes glc)	
+1	0	0	source+S[USER;cc_gly,cc_gsh,cglc:((-1*1*(5400*cc_gly*cglc-0.9642857142857143*cc_gsh)/(cc_gly*(cglc+22)+0.03333333333333333*cc_gsh+300*cglc+6600)))]==>glc	
+#			V_GPX	
+1	0	0	source+S[USER;cc_gsh:(642.8571428571429*(cc_gsh/(cc_gsh+1330))^2)]==>c_gsg	
+#			V_GPX (consumes c_gsh)	
+1	0	0	source+S[USER;cc_gsh:((-1*1285.7142857142858*(cc_gsh/(cc_gsh+1330))^2))]==>c_gsh	
+#			V_GR	
+1	0	0	c_gsg+S[USER;cc_gsg:(44625/(60.4*cc_gsg+6462.8))]==>2c_gsh	
+#			c_gsh_degr	
+0.002	0	0	c_gsh==>sink	
+#			c_gsg_degr	
+0.1	0	0	c_gsg==>sink	
+#			reaction_1	
+1	0	0	source+S[USER;cp_parameter_1,cspecies_2:(300*cp_parameter_1/(0.046153846153846156*cspecies_2+360))]==>species_2	
+#			reaction_2	
+1	0	0	sam+species_2+S[USER;cp_parameter_3,csam,cspecies_1,cspecies_2,cspecies_3:(1*cp_parameter_3/(0.04*cspecies_1*cspecies_2*cspecies_3+20*cspecies_1*cspecies_2+0.002*cspecies_2*cspecies_3*(csam+1e-30)+0.1*cspecies_2*cspecies_3+1*cspecies_2*(csam+1e-30)+50*cspecies_2+0.05*cspecies_3+25))]==>species_1+species_2	
+#			reaction_3	
+1	0	0	species_3+species_8+S[USER;cp_parameter_2,cspecies_3,cspecies_4,cspecies_8,cspecies_9:(0.2252252252252252*cp_parameter_2/(1.5*cspecies_3+0.010096153846153847*cspecies_4*cspecies_9+0.2692307692307692*cspecies_4*(cspecies_8+1e-30)+0.40384615384615385*cspecies_4+35*cspecies_8+0.0375*cspecies_9*(cspecies_3+1e-30)+1.3125*cspecies_9+1*(cspecies_3+1e-30)*(cspecies_8+1e-30)+52.5))]==>species_5+species_9	
+#			reaction_4	
+1	0	0	species_4+species_8+S[USER;cp_parameter_2,cspecies_3,cspecies_4,cspecies_8,cspecies_9:(1*cp_parameter_2/(0.1392857142857143*cspecies_3*cspecies_9+3.7142857142857144*cspecies_3*(cspecies_8+1e-30)+5.571428571428571*cspecies_3+1.5*cspecies_4+130*cspecies_8+0.0375*cspecies_9*(cspecies_4+1e-30)+4.875*cspecies_9+1*(cspecies_4+1e-30)*(cspecies_8+1e-30)+195))]==>species_6+species_9	
+#			reaction_5	
+1	0	0	species_6+S[USER;cspecies_3,cspecies_4,cspecies_5,cspecies_6:(621/(0.9333333333333333*cspecies_3+0.28*cspecies_4+23.333333333333336*cspecies_5+1*cspecies_6+14))]==>species_2	
+#			reaction_6	
+1	0	0	species_5+S[USER;cspecies_3,cspecies_4,cspecies_5,cspecies_6:(621/(0.04*cspecies_3+0.012*cspecies_4+1*cspecies_5+0.04285714285714286*cspecies_6+0.6))]==>species_4	
+#			reaction_7	
+1	0	0	species_1+species_2+S[USER;cspecies_1,cspecies_2,cspecies_4:(657/(40*cspecies_1+0.3*cspecies_2+0.003*cspecies_4*(cspecies_2+1e-30)+0.32*cspecies_4+1*(cspecies_1+1e-30)*(cspecies_2+1e-30)+32))]==>species_4	
+#			reaction_8	
+1	0	0	species_1+species_4+S[USER;cspecies_1,cspecies_3,cspecies_4:(193.8/(60*cspecies_1+0.004*cspecies_3*(cspecies_4+1e-30)+0.144*cspecies_3+0.1*cspecies_4+1*(cspecies_1+1e-30)*(cspecies_4+1e-30)+3.5999999999999996))]==>species_3	
+#			reaction_9	
+0.72	0	0	species_8==>species_9	
+#			reaction_10	
+0.24	0	0	species_9==>species_8	
+#			reaction_11	
+0.6	0	0	species_2==>sink	
+#			reaction_12	
+0.6	0	0	species_6==>sink	
+#			reaction_13	
+1	0	0	source+S[USER;cmet,csam:(220/((0.08*csam/cmet+4/cmet)^0.76+1))]==>sam	
+#			reaction_13 (consumes met)	
+1	0	0	source+S[USER;cmet,csam:((-1*220/((0.08*csam/cmet+4/cmet)^0.76+1)))]==>met	
+#			rate rule dparameter_1/dt term 1	
+1	0	0	source+S[USER;csam,cspecies_3,cspecies_4:(1171080/(1*csam*cspecies_3+1*csam*cspecies_4+1*csam))]==>p_parameter_1	
+#			rate rule dparameter_1/dt term 2	
+1	0	0	p_parameter_1+S[USER;cp_parameter_4:(3*cp_parameter_4)]==>sink	
+#			rate rule dparameter_2/dt term 1	
+3.5999999999999996	0	0	source==>p_parameter_2	
+#			rate rule dparameter_2/dt term 2 (consumes p_parameter_2)	
+1	0	0	source+S[USER;cspecies_3,cspecies_4:((-1*3.5999999999999996/(1*cspecies_3+1*cspecies_4+1)))]==>p_parameter_2	
+#			rate rule dparameter_2/dt term 3	
+1	0	0	p_parameter_2+S[USER;cspecies_3,cspecies_4:(12/(1*cspecies_3+1*cspecies_4+1))]==>sink	
+#			rate rule dparameter_3/dt term 1	
+1	0	0	source+S[USER;csam,cspecies_3,cspecies_4:(234216/(1*csam*cspecies_3+1*csam*cspecies_4+1*csam))]==>p_parameter_3	
+#			rate rule dparameter_3/dt term 2	
+1.2	0	0	p_parameter_3==>sink	
+#			rate rule dparameter_4/dt term 1	
+0.02	0	0	source==>p_parameter_4	
+#			rate rule dparameter_4/dt term 2	
+0.02	0	0	p_parameter_4==>sink	
+#			rate rule dparameter_4/dt term 3 (consumes p_parameter_4)	
+1	0	0	source+S[USER;cspecies_3,cspecies_4:((-1*0.02/(0.01*cspecies_3+0.01*cspecies_4+1)))]==>p_parameter_4	
+END				
