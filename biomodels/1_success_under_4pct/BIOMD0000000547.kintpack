@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T21:54:42.035319+00:00",
- "description": "Talemi2014 - Arsenic toxicity and detoxification mechanisms in yeast\nBioModels BIOMD0000000547 (curated). SBML file: BIOMD0000000547_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: BIOMD0000000547_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 30.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.97e-06 of species peak (worst: species_1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'species_6' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction_15: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "description": "Talemi2014 - Arsenic toxicity and detoxification mechanisms in yeast\nBioModels BIOMD0000000547 (curated). SBML file: BIOMD0000000547_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: BIOMD0000000547_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 30.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.05e-06 of species peak (worst: species_10; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 1 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] species 'species_6' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction_15: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cSW2,cTIME_,cspecies_11:(33333333333333.336*3.141592653589793^0.3333333333333333*cspecies_11*(-9.659712745251433e-9*cSW1*cSW2*exp((-1*0.03333333333333333*cTIME_))-1.0625684019776577e-8*cSW1*cSW2*exp(120-0.03333333333333333*cTIME_)+1.0625684019776577e-8*cSW1*cSW2+9.659712745251433e-9*cSW1*exp((-1*0.03333333333333333*cTIME_))+1.0625684019776577e-8*cSW1*exp(120-0.03333333333333333*cTIME_)-1.0625684019776577e-8*cSW1+9.659712745251433e-9*cSW2*exp((-1*0.03333333333333333*cTIME_))-9.659712745251433e-9*cSW2-9.659712745251433e-9*exp((-1*0.03333333333333333*cTIME_))+1.0625684019776577e-8))]==>species_1",
+     "source+S[USER;cSW1,cSW2,TIME,cspecies_11:(33333333333333.336*3.141592653589793^0.3333333333333333*cspecies_11*(-9.659712745251433e-9*cSW1*cSW2*exp((-1*0.03333333333333333*TIME))-1.0625684019776577e-8*cSW1*cSW2*exp(120-0.03333333333333333*TIME)+1.0625684019776577e-8*cSW1*cSW2+9.659712745251433e-9*cSW1*exp((-1*0.03333333333333333*TIME))+1.0625684019776577e-8*cSW1*exp(120-0.03333333333333333*TIME)-1.0625684019776577e-8*cSW1+9.659712745251433e-9*cSW2*exp((-1*0.03333333333333333*TIME))-9.659712745251433e-9*cSW2-9.659712745251433e-9*exp((-1*0.03333333333333333*TIME))+1.0625684019776577e-8))]==>species_1",
      ""
     ],
     [
@@ -312,20 +312,6 @@
      ""
     ],
     [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
-     ""
-    ],
-    [
      "END",
      "",
      "",
@@ -488,17 +474,6 @@
      "No",
      "No",
      "GSH [species_7]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

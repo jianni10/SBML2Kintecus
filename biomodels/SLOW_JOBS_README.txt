@@ -20,7 +20,8 @@ WHAT TO DO ON YOUR PC
   3. Open RUN_SLOW_JOBS.bat in Notepad and set the Kintecus.exe path on the line
          if "%KINTECUS_EXE%"=="" set "KINTECUS_EXE=C:\Kintecus\Kintecus.exe"
      (use the 2026-11-05 08:40:46 build or later: earlier builds misapply Time/value-pair Constant Files and
-     fail on packs with reaction lines over 897 characters or more than 52 variables on a USER line).
+     fail on packs with reaction lines over 897 characters or more than 52 variables on a USER line; packs that
+     use time in their rates need the 2026-11-23e build, md5 88f7fe5e..., which evaluates TIME in USER functions).
   4. Double-click RUN_SLOW_JOBS.bat. It runs the jobs one after another, fastest estimate first, each with the
      switches in SLOW_JOBS.csv, with NO time limit and NO stall limit, prints progress every minute, and compares
      each finished run with the SBML reference (PASS = under 4% of peak; --tol 0.001 for the strict 0.1% check).

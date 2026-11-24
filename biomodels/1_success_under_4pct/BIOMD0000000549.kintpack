@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-10-31T07:03:47.286365+00:00",
- "description": "Baker2013 - Cytokine Mediated Inflammation in Rheumatoid Arthritis - Age Dependent\nBioModels BIOMD0000000549 (curated). SBML file: BIOMD0000000549_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000549_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.53e-06 of species peak (worst: species_2)\nSBML time units are used unchanged as Kintecus seconds.",
+ "description": "Baker2013 - Cytokine Mediated Inflammation in Rheumatoid Arthritis - Age Dependent\nBioModels BIOMD0000000549 (curated). SBML file: BIOMD0000000549_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000549_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.53e-06 of species peak (worst: species_2; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -126,21 +126,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,cspecies_1,cspecies_2:(49*cTIME_^2*cspecies_2^2/(cTIME_^2*cspecies_1^2*cspecies_2^2+1*cTIME_^2*cspecies_1^2+1*cTIME_^2*cspecies_2^2+1*cTIME_^2+225*cspecies_1^2*cspecies_2^2+225*cspecies_1^2+225*cspecies_2^2+225))]==>species_2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
+     "source+S[USER;TIME,cspecies_1,cspecies_2:(49*TIME^2*cspecies_2^2/(TIME^2*cspecies_1^2*cspecies_2^2+1*TIME^2*cspecies_1^2+1*TIME^2*cspecies_2^2+1*TIME^2+225*cspecies_1^2*cspecies_2^2+225*cspecies_1^2+225*cspecies_2^2+225))]==>species_2",
      ""
     ],
     [
@@ -207,17 +193,6 @@
      "No",
      "No",
      "p [species_2]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

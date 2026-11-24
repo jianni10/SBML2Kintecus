@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T22:33:02.437693+00:00",
- "description": "Sontag2017 - Dynamic model of immune responses to antigen presentation by tumor or pathogen\nBioModels BIOMD0000001030 (curated). SBML file: Sontag2017.xml.\nSimulation: 0 to 10 time units (SED-ML: Sontag2017 - Fig 1D new constant value simulation.sedml), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 0.00e+00 of species peak (worst: Regulatory_cells)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Antigen_expressing_cells' is defined by an assignment rule; not a Kintecus state (not output)",
+ "description": "Sontag2017 - Dynamic model of immune responses to antigen presentation by tumor or pathogen\nBioModels BIOMD0000001030 (curated). SBML file: Sontag2017.xml.\nSimulation: 0 to 10 time units (SED-ML: Sontag2017 - Fig 1D new constant value simulation.sedml), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 0.00e+00 of species peak (worst: Regulatory_cells; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 2 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] species 'Antigen_expressing_cells' is defined by an assignment rule; not a Kintecus state (not output)",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cTIME_:(1*cSW1*(cTIME_-99)-1*cSW1+1)]==>Regulatory_cells",
+     "source+S[USER;cSW1,TIME:(1*cSW1*(TIME-99)-1*cSW1+1)]==>Regulatory_cells",
      ""
     ],
     [
@@ -84,7 +84,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cRegulatory_cells,cSW1,cTIME_:(1*(cSW1*(cTIME_-99)-1*cSW1+1)/cRegulatory_cells)]==>Effector_cells",
+     "source+S[USER;cRegulatory_cells,cSW1,TIME:(1*(cSW1*(TIME-99)-1*cSW1+1)/cRegulatory_cells)]==>Effector_cells",
      ""
     ],
     [
@@ -99,20 +99,6 @@
      "0",
      "0",
      "Effector_cells==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -179,17 +165,6 @@
      "No",
      "No",
      "Effector_cells [Effector_cells]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

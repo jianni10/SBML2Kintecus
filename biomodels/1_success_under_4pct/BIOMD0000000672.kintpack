@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T22:05:19.478822+00:00",
- "description": "Brown1997 - Plasma Melatonin Levels\nBioModels BIOMD0000000672 (curated). SBML file: BIOMD0000000672_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: MODEL1006230019.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.25e-06 of species peak (worst: H2)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): p_H1 = H1; p_H2 = H2",
+ "description": "Brown1997 - Plasma Melatonin Levels\nBioModels BIOMD0000000672 (curated). SBML file: BIOMD0000000672_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: MODEL1006230019.sedml), sampling 2.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.25e-06 of species peak (worst: p_H2; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): p_H1 = H1; p_H2 = H2",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cSW2,cSW3,cTIME_:(-6.51*cSW1*cSW2*cSW3*exp(47.97477013597769-0.02674178937345468*cTIME_)+6.51*cSW1*exp(47.97477013597769-0.02674178937345468*cTIME_)-6.510006730436857*cSW2*cSW3*exp(37.94432985095208-0.02883307739434049*cTIME_)+6.510006730436857*cSW2*cSW3)]==>p_H1",
+     "source+S[USER;cSW1,cSW2,cSW3,TIME:(-6.51*cSW1*cSW2*cSW3*exp(47.97477013597769-0.02674178937345468*TIME)+6.51*cSW1*exp(47.97477013597769-0.02674178937345468*TIME)-6.510006730436857*cSW2*cSW3*exp(37.94432985095208-0.02883307739434049*TIME)+6.510006730436857*cSW2*cSW3)]==>p_H1",
      ""
     ],
     [
@@ -99,20 +99,6 @@
      "0",
      "0",
      "p_H2==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -179,17 +165,6 @@
      "No",
      "No",
      "parameter H2 [H2]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

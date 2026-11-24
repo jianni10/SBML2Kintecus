@@ -30,6 +30,10 @@ that set initial values by rules may start wrong (a warning is printed).
 --kintecus: Kintecus V2027 mis-reads some long USER expressions (see KINTECUS_ISSUES.txt #2). With this option
 every USER expression longer than 180 characters is evaluated by Kintecus in a probe deck and compared with the
 intended value; mis-read lines are re-padded with redundant parentheses until Kintecus reads them correctly.
+
+Time: SBML time in rate laws is written as Kintecus TIME in the USER functions, which needs the 2026-11-23e build
+(md5 88f7fe5e...) or later. For an older build set KIN_NATIVE_TIME=0 before running: time is then the pseudo-species
+TIME_ (source==>TIME_ at k=1, so [TIME_] = t), as in packs built before 2026-11-24.
 """
 import argparse, datetime, glob, json, math, os, random, shutil, subprocess, sys, tempfile, time, re
 import xml.etree.ElementTree as ET

@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-06T06:19:20.291934+00:00",
- "description": "Aubert2002 - Coupling between Brain electrical activity, Metabolism and Hemodynamics\nBioModels BIOMD0000000570 (curated). SBML file: BIOMD0000000570_url.xml.\nSimulation: 0 to 700 time units (SED-ML: Aubert2002.sedml), sampling 0.625.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 1.26e-01 of species peak (worst: dHb)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 1.26e-01 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] rate rule on compartment 'compartment_4' (variable volume) not convertible\n  [info] 3 event(s) depend only on time (and on variables only they change): unrolled into 3 firing(s) up to t = 700\n  [info] species 'species_2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_3' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_6' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_12' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction_2: rate order differs from the stoichiometry; consumed on separate line(s) - species_1: first order\n  [info] reaction_3 term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - species_17: first order\n  [info] reaction_3 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_5 term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - species_7: zero order, signed; species_9: zero order, signed\n  [info] reaction_5 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - species_7: zero order, signed; species_9: zero order, signed\n  [info] reaction_6 term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - species_8: zero order, signed\n  [info] reaction_7 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - species_8: zero order, signed\n  [info] reaction_8 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_8 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - species_18: first order\n  [info] reaction_10 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_10 term 1/2: 100 reactants split over 34 lines (Kintecus allows 3 per line)\n  [info] reaction_11 term 7/10: rate order differs from the stoichiometry; consumed on separate line(s) - species_19: zero order, signed\n  [info] reaction_12 term 7/10: rate order differs from the stoichiometry; consumed on separate line(s) - species_17: zero order, signed\n  [info] reaction_13 term 7/10: rate order differs from the stoichiometry; consumed on separate line(s) - species_18: zero order, signed\n  [info] mitochondrial_respiration: rate order differs from the stoichiometry; consumed on separate line(s) - species_13: first order; species_7: zero order, signed\n  [info] inflow_of_dHb term 4/10: rate order differs from the stoichiometry; consumed on separate line(s) - dHb: zero order, signed\n  [info] inflow_of_dHb term 6/10: rate order differs from the stoichiometry; consumed on separate line(s) - dHb: zero order, signed\n  [info] inflow_of_dHb term 7/10: rate order differs from the stoichiometry; consumed on separate line(s) - dHb: zero order, signed\n  [info] inflow_of_dHb term 8/10: rate order differs from the stoichiometry; consumed on separate line(s) - dHb: zero order, signed\n  [info] inflow_of_dHb term 10/10: rate order differs from the stoichiometry; consumed on separate line(s) - dHb: zero order, signed\n  [info] time event(s) on 'is_maximum' encoded as time/value pairs in EV_P_IS_MAXIMUM.TXT (SET)\n  [info] time event(s) on 'is_rising' encoded as time/value pairs in EV_P_IS_RISING.TXT (SET)\n  [info] time event(s) on 'is_falling' encoded as time/value pairs in EV_P_IS_FALLING.TXT (SET)\n  [info] time event(s) on 'v_stim_constant' encoded as time/value pairs in EV_P_V_STIM_CONSTANT.TXT (SET)\n  [partial] mitochondrial_respiration: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] mitochondrial_respiration (consumes species_13): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] mitochondrial_respiration (consumes species_7): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] rate rule dparameter_7/dt term 1: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\nRenamed species (Kintecus name = SBML id): p_parameter_7 = parameter_7; p_is_maximum = is_maximum; p_is_rising = is_rising; p_is_falling = is_falling; p_v_stim_constant = v_stim_constant",
+ "description": "Aubert2002 - Coupling between Brain electrical activity, Metabolism and Hemodynamics\nBioModels BIOMD0000000570 (curated). SBML file: BIOMD0000000570_url.xml.\nSimulation: 0 to 700 time units (SED-ML: Aubert2002.sedml), sampling 0.625.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 1.26e-01 of species peak (worst: dHb); with native TIME on the 2026-11-23e build (md5 88f7fe5e...): -INT:1: finished, off by 12.6%; -INT:5: finished, off by 12.6%\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 1.26e-01 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 18 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [blocker] rate rule on compartment 'compartment_4' (variable volume) not convertible\n  [info] 3 event(s) depend only on time (and on variables only they change): unrolled into 3 firing(s) up to t = 700\n  [info] species 'species_2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_3' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_6' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'species_12' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] reaction_2: rate order differs from the stoichiometry; consumed on separate line(s) - species_1: first order\n  [info] reaction_3 term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - species_17: first order\n  [info] reaction_3 term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_5 term 2/4: rate order differs from the stoichiometry; consumed on separate line(s) - species_7: zero order, signed; species_9: zero order, signed\n  [info] reaction_5 term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - species_7: zero order, signed; species_9: zero order, signed\n  [info] reaction_6 term 1/2: rate order differs from the stoichiometry; consumed on separate line(s) - species_8: zero order, signed\n  [info] reaction_7 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - species_8: zero order, signed\n  [info] reaction_8 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_8 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - species_18: first order\n  [info] reaction_10 term 1/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_10 term 1/2: 100 reactants split over 34 lines (Kintecus allows 3 per line)\n  [info] reaction_11 term 7/10: rate order differs from the stoichiometry; consumed on separate line(s) - species_19: zero order, signed\n  [info] reaction_12 term 7/10: rate order differs from the stoichiometry; consumed on separate line(s) - species_17: zero order, signed\n  [info] reaction_13 term 7/10: rate order differs from the stoichiometry; consumed on separate line(s) - species_18: zero order, signed\n  [info] mitochondrial_respiration: rate order differs from the stoichiometry; consumed on separate line(s) - species_13: first order; species_7: zero order, signed\n  [info] inflow_of_dHb term 4/10: rate order differs from the stoichiometry; consumed on separate line(s) - dHb: zero order, signed\n  [info] inflow_of_dHb term 6/10: rate order differs from the stoichiometry; consumed on separate line(s) - dHb: zero order, signed\n  [info] inflow_of_dHb term 7/10: rate order differs from the stoichiometry; consumed on separate line(s) - dHb: zero order, signed\n  [info] inflow_of_dHb term 8/10: rate order differs from the stoichiometry; consumed on separate line(s) - dHb: zero order, signed\n  [info] inflow_of_dHb term 10/10: rate order differs from the stoichiometry; consumed on separate line(s) - dHb: zero order, signed\n  [info] time event(s) on 'is_maximum' encoded as time/value pairs in EV_P_IS_MAXIMUM.TXT (SET)\n  [info] time event(s) on 'is_rising' encoded as time/value pairs in EV_P_IS_RISING.TXT (SET)\n  [info] time event(s) on 'is_falling' encoded as time/value pairs in EV_P_IS_FALLING.TXT (SET)\n  [info] time event(s) on 'v_stim_constant' encoded as time/value pairs in EV_P_V_STIM_CONSTANT.TXT (SET)\n  [partial] mitochondrial_respiration: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] mitochondrial_respiration (consumes species_13): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] mitochondrial_respiration (consumes species_7): Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\n  [partial] rate rule dparameter_7/dt term 1: Kintecus V2027 mis-reads this long USER expression (FATAL #999 or a wrong value) in every equivalent form tried\nRenamed species (Kintecus name = SBML id): p_parameter_7 = parameter_7; p_is_maximum = is_maximum; p_is_rising = is_rising; p_is_falling = is_falling; p_v_stim_constant = v_stim_constant",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -994,7 +994,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,cp_is_rising:(3.6392727272727274*cTIME_*cp_is_rising)]==>species_19",
+     "source+S[USER;TIME,cp_is_rising:(3.6392727272727274*TIME*cp_is_rising)]==>species_19",
      ""
     ],
     [
@@ -1022,7 +1022,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,cp_is_falling:((-1*3.6392727272727274*cTIME_*cp_is_falling))]==>species_19",
+     "source+S[USER;TIME,cp_is_falling:((-1*3.6392727272727274*TIME*cp_is_falling))]==>species_19",
      ""
     ],
     [
@@ -1050,7 +1050,7 @@
      "1",
      "0",
      "0",
-     "species_19+S[USER;cTIME_,cp_is_falling:(0.4363636363636364*cTIME_*cp_is_falling)]==>2species_19",
+     "species_19+S[USER;TIME,cp_is_falling:(0.4363636363636364*TIME*cp_is_falling)]==>2species_19",
      ""
     ],
     [
@@ -1064,7 +1064,7 @@
      "1",
      "0",
      "0",
-     "species_19+S[USER;cTIME_,cp_is_rising:(0.4363636363636364*cTIME_*cp_is_rising)]==>sink",
+     "species_19+S[USER;TIME,cp_is_rising:(0.4363636363636364*TIME*cp_is_rising)]==>sink",
      ""
     ],
     [
@@ -1134,7 +1134,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,cp_is_rising:(2.0945454545454547*cTIME_*cp_is_rising)]==>species_17",
+     "source+S[USER;TIME,cp_is_rising:(2.0945454545454547*TIME*cp_is_rising)]==>species_17",
      ""
     ],
     [
@@ -1162,7 +1162,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,cp_is_falling:((-1*2.0945454545454547*cTIME_*cp_is_falling))]==>species_17",
+     "source+S[USER;TIME,cp_is_falling:((-1*2.0945454545454547*TIME*cp_is_falling))]==>species_17",
      ""
     ],
     [
@@ -1190,7 +1190,7 @@
      "1",
      "0",
      "0",
-     "species_17+S[USER;cTIME_,cp_is_falling:(0.4363636363636364*cTIME_*cp_is_falling)]==>2species_17",
+     "species_17+S[USER;TIME,cp_is_falling:(0.4363636363636364*TIME*cp_is_falling)]==>2species_17",
      ""
     ],
     [
@@ -1204,7 +1204,7 @@
      "1",
      "0",
      "0",
-     "species_17+S[USER;cTIME_,cp_is_rising:(0.4363636363636364*cTIME_*cp_is_rising)]==>sink",
+     "species_17+S[USER;TIME,cp_is_rising:(0.4363636363636364*TIME*cp_is_rising)]==>sink",
      ""
     ],
     [
@@ -1274,7 +1274,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,cp_is_rising:(0.1365818181818182*cTIME_*cp_is_rising)]==>species_18",
+     "source+S[USER;TIME,cp_is_rising:(0.1365818181818182*TIME*cp_is_rising)]==>species_18",
      ""
     ],
     [
@@ -1302,7 +1302,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,cp_is_falling:((-1*0.1365818181818182*cTIME_*cp_is_falling))]==>species_18",
+     "source+S[USER;TIME,cp_is_falling:((-1*0.1365818181818182*TIME*cp_is_falling))]==>species_18",
      ""
     ],
     [
@@ -1330,7 +1330,7 @@
      "1",
      "0",
      "0",
-     "species_18+S[USER;cTIME_,cp_is_falling:(0.4363636363636364*cTIME_*cp_is_falling)]==>2species_18",
+     "species_18+S[USER;TIME,cp_is_falling:(0.4363636363636364*TIME*cp_is_falling)]==>2species_18",
      ""
     ],
     [
@@ -1344,7 +1344,7 @@
      "1",
      "0",
      "0",
-     "species_18+S[USER;cTIME_,cp_is_rising:(0.4363636363636364*cTIME_*cp_is_rising)]==>sink",
+     "species_18+S[USER;TIME,cp_is_rising:(0.4363636363636364*TIME*cp_is_rising)]==>sink",
      ""
     ],
     [
@@ -1470,7 +1470,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,cp_is_rising:(0.020016*cTIME_*cp_is_rising)]==>dHb",
+     "source+S[USER;TIME,cp_is_rising:(0.020016*TIME*cp_is_rising)]==>dHb",
      ""
     ],
     [
@@ -1498,7 +1498,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,cp_is_falling:((-1*0.020016*cTIME_*cp_is_falling))]==>dHb",
+     "source+S[USER;TIME,cp_is_falling:((-1*0.020016*TIME*cp_is_falling))]==>dHb",
      ""
     ],
     [
@@ -1526,7 +1526,7 @@
      "1",
      "0",
      "0",
-     "species_19+S[USER;cTIME_,cp_is_falling:(0.0024000000000000002*cTIME_*cp_is_falling)]==>dHb+species_19",
+     "species_19+S[USER;TIME,cp_is_falling:(0.0024000000000000002*TIME*cp_is_falling)]==>dHb+species_19",
      ""
     ],
     [
@@ -1540,7 +1540,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,cp_is_rising,cspecies_19:((-1*0.0024000000000000002*cTIME_*cp_is_rising*cspecies_19))]==>dHb",
+     "source+S[USER;TIME,cp_is_rising,cspecies_19:((-1*0.0024000000000000002*TIME*cp_is_rising*cspecies_19))]==>dHb",
      ""
     ],
     [
@@ -1596,7 +1596,7 @@
      "1",
      "0",
      "0",
-     "dHb+S[USER;cTIME_,cp_is_rising:(0.04792838130450784*cTIME_*cp_is_rising)]==>sink",
+     "dHb+S[USER;TIME,cp_is_rising:(0.04792838130450784*TIME*cp_is_rising)]==>sink",
      ""
     ],
     [
@@ -1610,7 +1610,7 @@
      "1",
      "0",
      "0",
-     "dHb+S[USER;cTIME_,cp_is_falling:(0.04792838130450784*cTIME_*cp_is_falling)]==>2dHb",
+     "dHb+S[USER;TIME,cp_is_falling:(0.04792838130450784*TIME*cp_is_falling)]==>2dHb",
      ""
     ],
     [
@@ -1625,20 +1625,6 @@
      "0",
      "0",
      "source+S[USER;cp_parameter_7,cspecies_1,cspecies_11,cspecies_13,cspecies_4,cspecies_5,cspecies_7,cspecies_8,cspecies_9:((-0.026099999999999998*cp_parameter_7*cspecies_1/(2*cp_parameter_7+1)+1833*cp_parameter_7*cspecies_11*((-2.8336+8.140160000000002/cp_parameter_7)^0.5-0.92)-0.24*cp_parameter_7*cspecies_4/((1*cp_parameter_7^4+1)*(1*cspecies_4+0.05))+21.3*cp_parameter_7*cspecies_5*(0.212-1*cspecies_7)*((-2.8336+8.140160000000002/cp_parameter_7)^0.5-0.92)/cspecies_7+43.35*cp_parameter_7*cspecies_9*((-2.8336+8.140160000000002/cp_parameter_7)^0.5-0.92)-1*cp_parameter_7*(200-20*cspecies_11)+0.78495*cspecies_13*cspecies_8/((1*cspecies_13+0.001)*(1*cspecies_8+0.05)*(0.6364829188326604*(1/((-2.8336+8.140160000000002/cp_parameter_7)^0.5-0.92))^0.1+1))-0.149)/(0.5*(-2.8336+8.140160000000002/cp_parameter_7)^0.5+1.54-2.0350400000000004/(cp_parameter_7*(-2.8336+8.140160000000002/cp_parameter_7)^0.5)))]==>p_parameter_7",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -1914,17 +1900,6 @@
      "No",
      "EV_P_V_STIM_CONSTANT.TXT-SET",
      "parameter v_stim_constant [v_stim_constant]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

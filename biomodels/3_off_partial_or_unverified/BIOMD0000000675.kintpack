@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-06T15:23:26.082382+00:00",
- "description": "Chen2000_CellCycle\nBioModels BIOMD0000000675 (curated). SBML file: BIOMD0000000675.xml.\nSimulation: 0 to 175 time units (SED-ML: MODEL1006230004.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 1.44e+00 of species peak (worst: BUD)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 1.44e+00 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] events not unrolled as time events (trigger uses 'SPN', which changes continuously)\n  [blocker] event 'Event_detection_for_END_M' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Event_detection_for_Cell_Division_and_BUD_SPN_reset' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Event_detection_for_START_S' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Event_detection_for_ORI_reset' not converted (state-triggered (not a time >= t0 trigger))\n  [info] species 'SBF' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Clb2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Mcm1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Sic1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Swi5' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Clb5' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Cln3' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'MBF' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Bck2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dCdc20_T/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - Cdc20_T: zero order, signed\n  [info] rate rule dHct1/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dClb2_Sic1/dt term 8: rate order differs from the stoichiometry; consumed on separate line(s) - Clb2_Sic1: zero order, signed\n  [info] rate rule dSic1_T/dt term 6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dSic1_T/dt term 7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dSic1_T/dt term 8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dSic1_T/dt term 9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dSic1_T/dt term 10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dClb5_Sic1/dt term 7: rate order differs from the stoichiometry; consumed on separate line(s) - Clb5_Sic1: zero order, signed\n  [info] rate rule dClb2_T/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - Clb2_T: zero order, signed\n  [info] rate rule dORI/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - p_ORI: zero order, signed\n  [info] rate rule dORI/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - p_ORI: zero order, signed\n  [info] rate rule dBUD/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - p_BUD: zero order, signed\n  [info] rate rule dSPN/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - p_SPN: zero order, signed\nRenamed species (Kintecus name = SBML id): p_mass = mass; p_ORI = ORI; p_BUD = BUD; p_SPN = SPN",
+ "description": "Chen2000_CellCycle\nBioModels BIOMD0000000675 (curated). SBML file: BIOMD0000000675.xml.\nSimulation: 0 to 175 time units (SED-ML: MODEL1006230004.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 1.44e+00 of species peak (worst: BUD); with native TIME on the 2026-11-23e build (md5 88f7fe5e...): -INT:1: finished, off by 144%; -INT:5: finished, off by 144%\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 1.44e+00 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 2 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] events not unrolled as time events (trigger uses 'SPN', which changes continuously)\n  [blocker] event 'Event_detection_for_END_M' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Event_detection_for_Cell_Division_and_BUD_SPN_reset' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Event_detection_for_START_S' not converted (state-triggered (not a time >= t0 trigger))\n  [blocker] event 'Event_detection_for_ORI_reset' not converted (state-triggered (not a time >= t0 trigger))\n  [info] species 'SBF' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Clb2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Mcm1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Sic1' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Swi5' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Clb5' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Cln3' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'MBF' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'Bck2' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dCdc20_T/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - Cdc20_T: zero order, signed\n  [info] rate rule dHct1/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dHct1/dt term 10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dClb2_Sic1/dt term 8: rate order differs from the stoichiometry; consumed on separate line(s) - Clb2_Sic1: zero order, signed\n  [info] rate rule dSic1_T/dt term 6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dSic1_T/dt term 7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dSic1_T/dt term 8: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dSic1_T/dt term 9: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dSic1_T/dt term 10: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dClb5_Sic1/dt term 7: rate order differs from the stoichiometry; consumed on separate line(s) - Clb5_Sic1: zero order, signed\n  [info] rate rule dClb2_T/dt term 6: rate order differs from the stoichiometry; consumed on separate line(s) - Clb2_T: zero order, signed\n  [info] rate rule dORI/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - p_ORI: zero order, signed\n  [info] rate rule dORI/dt term 5: rate order differs from the stoichiometry; consumed on separate line(s) - p_ORI: zero order, signed\n  [info] rate rule dBUD/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - p_BUD: zero order, signed\n  [info] rate rule dSPN/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - p_SPN: zero order, signed\nRenamed species (Kintecus name = SBML id): p_mass = mass; p_ORI = ORI; p_BUD = BUD; p_SPN = SPN",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "Cdc20+S[USER;cSW1,cSW2,cTIME_:(0.8250000000000001*cSW1*cSW2*cTIME_)]==>2Cdc20",
+     "Cdc20+S[USER;cSW1,cSW2,TIME:(0.8250000000000001*cSW1*cSW2*TIME)]==>2Cdc20",
      ""
     ],
     [
@@ -154,7 +154,7 @@
      "1",
      "0",
      "0",
-     "Cdc20+S[USER;cSW1,cSW2,cSW3,cSW4,cTIME_:(0.8250000000000001*cSW1*cSW2*cSW3*cSW4*cTIME_)]==>sink",
+     "Cdc20+S[USER;cSW1,cSW2,cSW3,cSW4,TIME:(0.8250000000000001*cSW1*cSW2*cSW3*cSW4*TIME)]==>sink",
      ""
     ],
     [
@@ -1222,20 +1222,6 @@
      ""
     ],
     [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
-     ""
-    ],
-    [
      "END",
      "",
      "",
@@ -1453,17 +1439,6 @@
      "No",
      "No",
      "parameter SPN [SPN]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

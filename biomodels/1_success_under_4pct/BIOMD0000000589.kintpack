@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T23:05:12.186324+00:00",
- "description": "Valero2016 - Ascorbate-Glutathione cycle in chloroplasts under light/dark conditions\nBioModels BIOMD0000000589 (curated). SBML file: BIOMD0000000589_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000589_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.08333333333333333.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.32e-05 of species peak (worst: MDA)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] rate rule dNADPH/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dNADPplus/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dNADPplus/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dGSH/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dGSSG/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dDHA/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dMDA/dt term 6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dMDA/dt term 7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dAPX/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - APX: zero order, signed\n  [info] rate rule dAPX/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - APX: zero order, signed\n  [info] 6 condition(s) on time alone written as switch species with time/value pairs (16 changes)",
+ "description": "Valero2016 - Ascorbate-Glutathione cycle in chloroplasts under light/dark conditions\nBioModels BIOMD0000000589 (curated). SBML file: BIOMD0000000589_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000589_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.08333333333333333.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.96e-05 of species peak (worst: MDA; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 7 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] rate rule dNADPH/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dNADPplus/dt term 2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dNADPplus/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dGSH/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dGSSG/dt term 4: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dDHA/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dMDA/dt term 6: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dMDA/dt term 7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] rate rule dAPX/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - APX: zero order, signed\n  [info] rate rule dAPX/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - APX: zero order, signed\n  [info] 6 condition(s) on time alone written as switch species with time/value pairs (16 changes)",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:5 -obeymaxint",
@@ -84,7 +84,7 @@
      "1",
      "0",
      "0",
-     "NADPplus+S[USER;cMDA,cNADPplus,cSW1,cTIME_:(8800000000*cSW1*sin(2*3.141592653589793*cTIME_/(0.25*floor(0.041666666666666664*cTIME_)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*cTIME_)/(0.25*floor(0.041666666666666664*cTIME_)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>NADPH+NADPplus",
+     "NADPplus+S[USER;cMDA,cNADPplus,cSW1,TIME:(8800000000*cSW1*sin(2*3.141592653589793*TIME/(0.25*floor(0.041666666666666664*TIME)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*TIME)/(0.25*floor(0.041666666666666664*TIME)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>NADPH+NADPplus",
      ""
     ],
     [
@@ -112,7 +112,7 @@
      "1",
      "0",
      "0",
-     "NADPH+NADPplus+S[USER;cMDA,cNADPplus,cSW1,cTIME_:(88000000*cSW1*sin(2*3.141592653589793*cTIME_/(0.25*floor(0.041666666666666664*cTIME_)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*cTIME_)/(0.25*floor(0.041666666666666664*cTIME_)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>NADPplus",
+     "NADPH+NADPplus+S[USER;cMDA,cNADPplus,cSW1,TIME:(88000000*cSW1*sin(2*3.141592653589793*TIME/(0.25*floor(0.041666666666666664*TIME)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*TIME)/(0.25*floor(0.041666666666666664*TIME)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>NADPplus",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "1",
      "0",
      "0",
-     "NADPplus+S[USER;cMDA,cNADPplus,cSW1,cTIME_:(8800000000*cSW1*sin(2*3.141592653589793*cTIME_/(0.25*floor(0.041666666666666664*cTIME_)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*cTIME_)/(0.25*floor(0.041666666666666664*cTIME_)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>sink",
+     "NADPplus+S[USER;cMDA,cNADPplus,cSW1,TIME:(8800000000*cSW1*sin(2*3.141592653589793*TIME/(0.25*floor(0.041666666666666664*TIME)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*TIME)/(0.25*floor(0.041666666666666664*TIME)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>sink",
      ""
     ],
     [
@@ -182,7 +182,7 @@
      "1",
      "0",
      "0",
-     "NADPH+NADPplus+S[USER;cMDA,cNADPplus,cSW1,cTIME_:(88000000*cSW1*sin(2*3.141592653589793*cTIME_/(0.25*floor(0.041666666666666664*cTIME_)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*cTIME_)/(0.25*floor(0.041666666666666664*cTIME_)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>2NADPplus+NADPH",
+     "NADPH+NADPplus+S[USER;cMDA,cNADPplus,cSW1,TIME:(88000000*cSW1*sin(2*3.141592653589793*TIME/(0.25*floor(0.041666666666666664*TIME)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*TIME)/(0.25*floor(0.041666666666666664*TIME)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>2NADPplus+NADPH",
      ""
     ],
     [
@@ -420,7 +420,7 @@
      "1",
      "0",
      "0",
-     "MDA+S[USER;cMDA,cNADPplus,cSW1,cTIME_:(60000000000*cSW1*sin(2*3.141592653589793*cTIME_/(0.25*floor(0.041666666666666664*cTIME_)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*cTIME_)/(0.25*floor(0.041666666666666664*cTIME_)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>ASC+MDA",
+     "MDA+S[USER;cMDA,cNADPplus,cSW1,TIME:(60000000000*cSW1*sin(2*3.141592653589793*TIME/(0.25*floor(0.041666666666666664*TIME)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*TIME)/(0.25*floor(0.041666666666666664*TIME)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>ASC+MDA",
      ""
     ],
     [
@@ -560,7 +560,7 @@
      "1",
      "0",
      "0",
-     "MDA+S[USER;cMDA,cNADPplus,cSW1,cTIME_:(60000000000*cSW1*sin(2*3.141592653589793*cTIME_/(0.25*floor(0.041666666666666664*cTIME_)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*cTIME_)/(0.25*floor(0.041666666666666664*cTIME_)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>sink",
+     "MDA+S[USER;cMDA,cNADPplus,cSW1,TIME:(60000000000*cSW1*sin(2*3.141592653589793*TIME/(0.25*floor(0.041666666666666664*TIME)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*TIME)/(0.25*floor(0.041666666666666664*TIME)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>sink",
      ""
     ],
     [
@@ -910,21 +910,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cMDA,cNADPplus,cSW1,cTIME_:(120000000000*cSW1*sin(2*3.141592653589793*cTIME_/(0.25*floor(0.041666666666666664*cTIME_)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*cTIME_)/(0.25*floor(0.041666666666666664*cTIME_)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>O2neg",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
+     "source+S[USER;cMDA,cNADPplus,cSW1,TIME:(120000000000*cSW1*sin(2*3.141592653589793*TIME/(0.25*floor(0.041666666666666664*TIME)+11)+4.712389-48*3.141592653589793*floor(0.041666666666666664*TIME)/(0.25*floor(0.041666666666666664*TIME)+11))/(15000*cMDA+4400*cNADPplus+30000))]==>O2neg",
      ""
     ],
     [
@@ -1112,17 +1098,6 @@
      "No",
      "No",
      "O2neg [O2neg]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

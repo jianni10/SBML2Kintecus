@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-01T22:43:08.548221+00:00",
- "description": "Clarke2006_Smad_signalling\nBioModels BIOMD0000000112 (curated). SBML file: BIOMD0000000112_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000112_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.31e-06 of species peak (worst: Pi)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction_1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_0: rate order differs from the stoichiometry; consumed on separate line(s) - receptor: zero order, signed",
+ "description": "Clarke2006_Smad_signalling\nBioModels BIOMD0000000112 (curated). SBML file: BIOMD0000000112_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000112_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.31e-06 of species peak (worst: Pi; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 1 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] reaction_1: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_7: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] reaction_0: rate order differs from the stoichiometry; consumed on separate line(s) - receptor: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -210,21 +210,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:((-1*100*exp((-1*cTIME_/90))))]==>receptor",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
+     "source+S[USER;TIME:((-1*100*exp((-1*TIME/90))))]==>receptor",
      ""
     ],
     [
@@ -379,17 +365,6 @@
      "No",
      "No",
      "Pi [Pi]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

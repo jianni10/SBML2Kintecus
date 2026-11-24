@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T20:20:45.192370+00:00",
- "description": "Oxhamre2005_Ca_oscillation\nBioModels BIOMD0000000047 (curated). SBML file: BIOMD0000000047_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000047_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.40e-06 of species peak (worst: Ca_Cyt)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 'CaER' goes below zero in the SBML: integrated as CaER_o = value + 5, output as CaER = OUTC[CaER_o;-5*source]\n  [info] Jpump: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): p_p3 = p3",
+ "description": "Oxhamre2005_Ca_oscillation\nBioModels BIOMD0000000047 (curated). SBML file: BIOMD0000000047_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000047_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.40e-06 of species peak (worst: CaER; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 2 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] 'CaER' goes below zero in the SBML: integrated as CaER_o = value + 5, output as CaER = OUTC[CaER_o;-5*source]\n  [info] Jpump: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\nRenamed species (Kintecus name = SBML id): p_p3 = p3",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cCa_Cyt,cTIME_,cp_p3:((-1*1*cCa_Cyt*cp_p3*(8*(4-3.2*exp((-1*0.5*cTIME_)))/(10-4*exp((-1*0.5*cTIME_)))+1.6)/(cCa_Cyt+0.7)))]==>CaER_o",
+     "source+S[USER;cCa_Cyt,TIME,cp_p3:((-1*1*cCa_Cyt*cp_p3*(8*(4-3.2*exp((-1*0.5*TIME)))/(10-4*exp((-1*0.5*TIME)))+1.6)/(cCa_Cyt+0.7)))]==>CaER_o",
      ""
     ],
     [
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cCa_Cyt,cTIME_,cp_p3:(1*cCa_Cyt*cp_p3*(8*(4-3.2*exp((-1*0.5*cTIME_)))/(10-4*exp((-1*0.5*cTIME_)))+1.6)/(cCa_Cyt+0.7))]==>Ca_Cyt",
+     "source+S[USER;cCa_Cyt,TIME,cp_p3:(1*cCa_Cyt*cp_p3*(8*(4-3.2*exp((-1*0.5*TIME)))/(10-4*exp((-1*0.5*TIME)))+1.6)/(cCa_Cyt+0.7))]==>Ca_Cyt",
      ""
     ],
     [
@@ -172,20 +172,6 @@
      ""
     ],
     [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
-     ""
-    ],
-    [
      "END",
      "",
      "",
@@ -260,17 +246,6 @@
      "No",
      "No",
      "parameter p3 [p3]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

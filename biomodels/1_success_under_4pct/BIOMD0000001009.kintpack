@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T22:31:56.172589+00:00",
- "description": "Zhang2007 - Mechanism of DNA damage response (Model2)\nBioModels BIOMD0000001009 (curated). SBML file: Zhang2007_M2_low_dose.xml.\nSimulation: 0 to 100 time units (SED-ML: Zhang2007_M2_high_dose.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.86e-06 of species peak (worst: p53_act)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'p53_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'DNAdamage' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] p53_inact_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] p53_act_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] 3 condition(s) on time alone written as switch species with time/value pairs (3 changes)",
+ "description": "Zhang2007 - Mechanism of DNA damage response (Model2)\nBioModels BIOMD0000001009 (curated). SBML file: Zhang2007_M2_low_dose.xml.\nSimulation: 0 to 100 time units (SED-ML: Zhang2007_M2_high_dose.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.87e-06 of species peak (worst: p53_act; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 1 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] species 'p53_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'DNAdamage' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] p53_inact_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] p53_act_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] 3 condition(s) on time alone written as switch species with time/value pairs (3 changes)",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "MDM2nuc+S[USER;cSW1,cSW2,cSW3,cTIME_:(0.1*cSW1*(1-cSW2)*(1-cSW3)*(3.3000000000000003-0.05*cTIME_)+0.1)]==>sink",
+     "MDM2nuc+S[USER;cSW1,cSW2,cSW3,TIME:(0.1*cSW1*(1-cSW2)*(1-cSW3)*(3.3000000000000003-0.05*TIME)+0.1)]==>sink",
      ""
     ],
     [
@@ -242,20 +242,6 @@
      ""
     ],
     [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
-     ""
-    ],
-    [
      "END",
      "",
      "",
@@ -341,17 +327,6 @@
      "No",
      "No",
      "p53_act [p53_act]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

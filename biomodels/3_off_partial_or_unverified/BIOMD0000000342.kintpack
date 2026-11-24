@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-10-31T05:19:16.731928+00:00",
- "description": "Zi2011_TGF-beta_Pathway\nBioModels BIOMD0000000342 (curated). SBML file: BIOMD0000000342_url.xml.\nSimulation: 0 to 480 time units (SED-ML: Zi2011_fig1Cblue.sedml), sampling 0.48.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 9.42e-02 of species peak (worst: TGF_beta_ns)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 9.42e-02 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [partial] compartment 'Vmed' has an assignment rule; its t=0 size is used\n  [blocker] event 'single_pulse_TGF_beta_washout' not converted (state-triggered (not a time >= t0 trigger))",
+ "description": "Zi2011_TGF-beta_Pathway\nBioModels BIOMD0000000342 (curated). SBML file: BIOMD0000000342_url.xml.\nSimulation: 0 to 480 time units (SED-ML: Zi2011_fig1Cblue.sedml), sampling 0.48.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 9.42e-02 of species peak (worst: TGF_beta_ns); with native TIME on the 2026-11-23e build (md5 88f7fe5e...): -INT:1: finished, off by 9.42%; -INT:5: finished, off by 9.42%\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 9.42e-02 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 2 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [partial] compartment 'Vmed' has an assignment rule; its t=0 size is used\n  [blocker] event 'single_pulse_TGF_beta_washout' not converted (state-triggered (not a time >= t0 trigger))",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -658,7 +658,7 @@
      "1",
      "0",
      "0",
-     "TGF_beta_ex+S[USER;cTIME_:(0.0505413*exp((-1*0.00025803024752255765*cTIME_)))]==>TGF_beta_ns",
+     "TGF_beta_ex+S[USER;TIME:(0.0505413*exp((-1*0.00025803024752255765*TIME)))]==>TGF_beta_ns",
      ""
     ],
     [
@@ -672,21 +672,7 @@
      "1",
      "0",
      "0",
-     "TGF_beta_ns+S[USER;cTIME_:(2.03305917141*exp((-1*0.00025803024752255765*cTIME_)))]==>TGF_beta_ex",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
+     "TGF_beta_ns+S[USER;TIME:(2.03305917141*exp((-1*0.00025803024752255765*TIME)))]==>TGF_beta_ex",
      ""
     ],
     [
@@ -962,17 +948,6 @@
      "No",
      "0",
      "empty_degraded [empty_degraded]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

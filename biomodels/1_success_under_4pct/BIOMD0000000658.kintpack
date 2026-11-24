@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T22:04:26.419732+00:00",
- "description": "Lee2003 - Roles of APC and Axin in Wnt Pathway (without regulatory loop)\nBioModels BIOMD0000000658 (curated). SBML file: BIOMD0000000658_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: MODEL1708310000_edited.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.37e-06 of species peak (worst: B_catenin)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'W' is defined by an assignment rule; not a Kintecus state (not output)",
+ "description": "Lee2003 - Roles of APC and Axin in Wnt Pathway (without regulatory loop)\nBioModels BIOMD0000000658 (curated). SBML file: BIOMD0000000658_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: MODEL1708310000_edited.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.37e-06 of species peak (worst: B_catenin; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 1 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] species 'W' is defined by an assignment rule; not a Kintecus state (not output)",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "Dsh_i+S[USER;cSW1,cTIME_:(0.182*(1-cSW1)*exp(2-0.05*cTIME_))]==>Dsh_a",
+     "Dsh_i+S[USER;cSW1,TIME:(0.182*(1-cSW1)*exp(2-0.05*TIME))]==>Dsh_a",
      ""
     ],
     [
@@ -354,20 +354,6 @@
      ""
     ],
     [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
-     ""
-    ],
-    [
      "END",
      "",
      "",
@@ -574,17 +560,6 @@
      "No",
      "No",
      "B_catenin/APC [B_catenin_APC]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

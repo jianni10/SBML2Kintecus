@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T21:48:57.127521+00:00",
- "description": "Messiha2013 - Pentose phosphate pathway model\nBioModels BIOMD0000000502 (curated). SBML file: BIOMD0000000502_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000502_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.73e-06 of species peak (worst: S7P)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'NADP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'G6P' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] GND: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] RKI: rate order differs from the stoichiometry; consumed on separate line(s) - Ru5P: zero order, signed\n  [info] RPE: rate order differs from the stoichiometry; consumed on separate line(s) - Ru5P: zero order, signed\n  [info] SOL: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] TAL: rate order differs from the stoichiometry; consumed on separate line(s) - S7P: zero order, signed\n  [info] TKL_E4P: rate order differs from the stoichiometry; consumed on separate line(s) - E4P: zero order, signed; X5P: zero order, signed\n  [info] TKL_R5P: rate order differs from the stoichiometry; consumed on separate line(s) - R5P: zero order, signed; X5P: zero order, signed",
+ "description": "Messiha2013 - Pentose phosphate pathway model\nBioModels BIOMD0000000502 (curated). SBML file: BIOMD0000000502_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000502_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.73e-06 of species peak (worst: S7P; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 1 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] species 'NADP' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'G6P' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] GND: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] RKI: rate order differs from the stoichiometry; consumed on separate line(s) - Ru5P: zero order, signed\n  [info] RPE: rate order differs from the stoichiometry; consumed on separate line(s) - Ru5P: zero order, signed\n  [info] SOL: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] TAL: rate order differs from the stoichiometry; consumed on separate line(s) - S7P: zero order, signed\n  [info] TKL_E4P: rate order differs from the stoichiometry; consumed on separate line(s) - E4P: zero order, signed; X5P: zero order, signed\n  [info] TKL_R5P: rate order differs from the stoichiometry; consumed on separate line(s) - R5P: zero order, signed; X5P: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -238,7 +238,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cG6L,cNADPH,cSW1,cTIME_:(529.1005291005291*(0.33-cNADPH)*(166.698*cSW1*cTIME_/(0.45*cTIME_^2+cTIME_+48)+3.402)/((36.60130718954248*cNADPH+8.333333333333334)*(100*cG6L+1050*cSW1*cTIME_/(0.45*cTIME_^2+cTIME_+48)+22.428571428571427)))]==>G6L+NADPH",
+     "source+S[USER;cG6L,cNADPH,cSW1,TIME:(529.1005291005291*(0.33-cNADPH)*(166.698*cSW1*TIME/(0.45*TIME^2+TIME+48)+3.402)/((36.60130718954248*cNADPH+8.333333333333334)*(100*cG6L+1050*cSW1*TIME/(0.45*TIME^2+TIME+48)+22.428571428571427)))]==>G6L+NADPH",
      ""
     ],
     [
@@ -281,20 +281,6 @@
      "0",
      "0",
      "R5P==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -548,17 +534,6 @@
      "No",
      "0.02",
      "ZWF1 [ZWF1]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

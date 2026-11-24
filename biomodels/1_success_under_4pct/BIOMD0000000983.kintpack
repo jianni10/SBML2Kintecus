@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T22:30:07.397276+00:00",
- "description": "Zongo2020 - model of COVID-19 transmission dynamics under containment measures in France\nBioModels BIOMD0000000983 (curated). SBML file: Zongo2020.xml.\nSimulation: 0 to 125 time units (SED-ML: Zongo2020.sedml), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.24e-05 of species peak (worst: I_u)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] reaction term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - S_u: zero order, signed\n  [info] time event(s) on 'm_t_phase_1' encoded as time/value pairs in EV_P_M_T_PHASE_1.TXT (SET)\n  [info] time event(s) on 'm_t_phase_2' encoded as time/value pairs in EV_P_M_T_PHASE_2.TXT (SET)\n  [info] time event(s) on 'm_t_phase_3' encoded as time/value pairs in EV_P_M_T_PHASE_3.TXT (SET)\nRenamed species (Kintecus name = SBML id): E1 = E; R1 = R; p_m_t_phase_1 = m_t_phase_1; p_m_t_phase_2 = m_t_phase_2; p_m_t_phase_3 = m_t_phase_3",
+ "description": "Zongo2020 - model of COVID-19 transmission dynamics under containment measures in France\nBioModels BIOMD0000000983 (curated). SBML file: Zongo2020.xml.\nSimulation: 0 to 125 time units (SED-ML: Zongo2020.sedml), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.18e-05 of species peak (worst: I_u; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 4 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] reaction term 3/4: rate order differs from the stoichiometry; consumed on separate line(s) - S_u: zero order, signed\n  [info] time event(s) on 'm_t_phase_1' encoded as time/value pairs in EV_P_M_T_PHASE_1.TXT (SET)\n  [info] time event(s) on 'm_t_phase_2' encoded as time/value pairs in EV_P_M_T_PHASE_2.TXT (SET)\n  [info] time event(s) on 'm_t_phase_3' encoded as time/value pairs in EV_P_M_T_PHASE_3.TXT (SET)\nRenamed species (Kintecus name = SBML id): E1 = E; R1 = R; p_m_t_phase_1 = m_t_phase_1; p_m_t_phase_2 = m_t_phase_2; p_m_t_phase_3 = m_t_phase_3",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:5 -obeymaxint",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "S_c+S[USER;cTIME_,cp_m_t_phase_1:(1*cp_m_t_phase_1*(exp(2.1478638759841675-0.10227923218972226*cTIME_)-1))]==>S_u",
+     "S_c+S[USER;TIME,cp_m_t_phase_1:(1*cp_m_t_phase_1*(exp(2.1478638759841675-0.10227923218972226*TIME)-1))]==>S_u",
      ""
     ],
     [
@@ -112,7 +112,7 @@
      "1",
      "0",
      "0",
-     "S_c+S[USER;cTIME_,cp_m_t_phase_3:(1*cp_m_t_phase_3*(0.008230088495575221*cTIME_-1.5554867256637168))]==>S_u",
+     "S_c+S[USER;TIME,cp_m_t_phase_3:(1*cp_m_t_phase_3*(0.008230088495575221*TIME-1.5554867256637168))]==>S_u",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "S_u+S[USER;cTIME_,cp_m_t_phase_1:(1*cp_m_t_phase_1*(1-exp(2.1478638759841675-0.10227923218972226*cTIME_)))]==>S_c",
+     "S_u+S[USER;TIME,cp_m_t_phase_1:(1*cp_m_t_phase_1*(1-exp(2.1478638759841675-0.10227923218972226*TIME)))]==>S_c",
      ""
     ],
     [
@@ -154,7 +154,7 @@
      "1",
      "0",
      "0",
-     "S_u+S[USER;cTIME_,cp_m_t_phase_3:(1*cp_m_t_phase_3*(1.5554867256637168-0.008230088495575221*cTIME_))]==>S_c",
+     "S_u+S[USER;TIME,cp_m_t_phase_3:(1*cp_m_t_phase_3*(1.5554867256637168-0.008230088495575221*TIME))]==>S_c",
      ""
     ],
     [
@@ -295,20 +295,6 @@
      "0",
      "0",
      "Q==>S_u",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -463,17 +449,6 @@
      "No",
      "EV_P_M_T_PHASE_3.TXT-SET",
      "parameter m_t_phase_3 [m_t_phase_3]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

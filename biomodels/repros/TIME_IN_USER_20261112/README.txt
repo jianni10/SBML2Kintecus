@@ -1,3 +1,6 @@
+STATUS: FIXED in the 2026-11-23e build (md5 88f7fe5e...). Rerun 2026-11-24 at t=10 on -INT:1, -INT:2, -INT:4 and
+-INT:5: X = 50, Y = 50, A = 0.832013, Z = 6.81989 (all exact; -INT:5 writes its last row at t=10.0001).
+
 TIME in USER functions - build compiled Nov 12 2026 18:39:31
 
 Run:  Kintecus.exe -ig:mass -INT:1 -obeymaxint      (same result with -INT:5)

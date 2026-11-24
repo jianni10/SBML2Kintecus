@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-01T20:07:14.369244+00:00",
- "description": "Schulz2009_Th1_differentiation\nBioModels BIOMD0000000215 (curated). SBML file: BIOMD0000000215_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: BIOMD0000000215_url.sedml (auto-generated placeholder); duration chosen from the dynamics: default), sampling 30.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): KINTECUS_FAILED\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'Ag' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] vtrnldeg term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Tbet_mRNA: zero order, signed\n  [info] reaction_13 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Ifn_mRNA: zero order, signed",
+ "description": "Schulz2009_Th1_differentiation\nBioModels BIOMD0000000215 (curated). SBML file: BIOMD0000000215_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: BIOMD0000000215_url.sedml (auto-generated placeholder); duration chosen from the dynamics: default), sampling 30.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): KINTECUS_FAILED; with native TIME on the 2026-11-23e build (md5 88f7fe5e...): -INT:1: stalled (no new output row for 120 s (simulated time 480 of 30000)); -INT:5: ran to the end, but the output contains NaN or inf\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 5 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] species 'Ag' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] vtrnldeg term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Tbet_mRNA: zero order, signed\n  [info] reaction_13 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - Ifn_mRNA: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "Ifn_Prot+S[USER;cIfn_Prot,cTIME_:(0.42/(-cIfn_Prot*cTIME_^10/(cTIME_^10+2064377754059776.0)+1.46*cIfn_Prot-2.1*cTIME_^10/(cTIME_^10+2064377754059776.0)+3.0660000000000003))]==>Tbet_mRNA+Ifn_Prot",
+     "Ifn_Prot+S[USER;cIfn_Prot,TIME:(0.42/(-cIfn_Prot*TIME^10/(TIME^10+2064377754059776.0)+1.46*cIfn_Prot-2.1*TIME^10/(TIME^10+2064377754059776.0)+3.0660000000000003))]==>Tbet_mRNA+Ifn_Prot",
      ""
     ],
     [
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cIfn_Prot,cTIME_:((-1*0.42*cIfn_Prot*cTIME_^10/(1.46*cIfn_Prot*cTIME_^10-2064377754059776.0*cIfn_Prot*cTIME_^10/(cTIME_^10+2064377754059776.0)-cIfn_Prot*cTIME_^20/(cTIME_^10+2064377754059776.0)+3013991520927273.0*cIfn_Prot+3.0660000000000003*cTIME_^10-4335193283525530.0*cTIME_^10/(cTIME_^10+2064377754059776.0)-2.1*cTIME_^20/(cTIME_^10+2064377754059776.0)+6329382193947274.0)))]==>Tbet_mRNA",
+     "source+S[USER;cIfn_Prot,TIME:((-1*0.42*cIfn_Prot*TIME^10/(1.46*cIfn_Prot*TIME^10-2064377754059776.0*cIfn_Prot*TIME^10/(TIME^10+2064377754059776.0)-cIfn_Prot*TIME^20/(TIME^10+2064377754059776.0)+3013991520927273.0*cIfn_Prot+3.0660000000000003*TIME^10-4335193283525530.0*TIME^10/(TIME^10+2064377754059776.0)-2.1*TIME^20/(TIME^10+2064377754059776.0)+6329382193947274.0)))]==>Tbet_mRNA",
      ""
     ],
     [
@@ -238,7 +238,7 @@
      "1",
      "0",
      "0",
-     "Tbet_Prot+S[USER;cTIME_:(3.64e-5/(-cTIME_^10/(cTIME_^10+2064377754059776.0)+1.013))]==>Rec_mRNA+Tbet_Prot",
+     "Tbet_Prot+S[USER;TIME:(3.64e-5/(-TIME^10/(TIME^10+2064377754059776.0)+1.013))]==>Rec_mRNA+Tbet_Prot",
      ""
     ],
     [
@@ -252,7 +252,7 @@
      "1",
      "0",
      "0",
-     "Rec_Prot+Tbet_Prot+S[USER;cRec_Prot,cTIME_,cTbet_Prot:(3.7/(-cRec_Prot*cTIME_^10*cTbet_Prot/(cTIME_^10+2064377754059776.0)-0.029*cRec_Prot*cTIME_^10/(cTIME_^10+2064377754059776.0)+1.014*cRec_Prot*cTbet_Prot+0.029406*cRec_Prot-66*cTIME_^10*cTbet_Prot/(cTIME_^10+2064377754059776.0)-1.9140000000000001*cTIME_^10/(cTIME_^10+2064377754059776.0)+66.924*cTbet_Prot+1.9407960000000002))]==>Ifn_mRNA+Rec_Prot+Tbet_Prot",
+     "Rec_Prot+Tbet_Prot+S[USER;cRec_Prot,TIME,cTbet_Prot:(3.7/(-cRec_Prot*TIME^10*cTbet_Prot/(TIME^10+2064377754059776.0)-0.029*cRec_Prot*TIME^10/(TIME^10+2064377754059776.0)+1.014*cRec_Prot*cTbet_Prot+0.029406*cRec_Prot-66*TIME^10*cTbet_Prot/(TIME^10+2064377754059776.0)-1.9140000000000001*TIME^10/(TIME^10+2064377754059776.0)+66.924*cTbet_Prot+1.9407960000000002))]==>Ifn_mRNA+Rec_Prot+Tbet_Prot",
      ""
     ],
     [
@@ -266,21 +266,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cRec_Prot,cTIME_,cTbet_Prot:((-1*3.7*cRec_Prot*cTIME_^10*cTbet_Prot/(1.014*cRec_Prot*cTIME_^10*cTbet_Prot-2064377754059776.0*cRec_Prot*cTIME_^10*cTbet_Prot/(cTIME_^10+2064377754059776.0)+0.029406*cRec_Prot*cTIME_^10-59866954867733.51*cRec_Prot*cTIME_^10/(cTIME_^10+2064377754059776.0)-cRec_Prot*cTIME_^20*cTbet_Prot/(cTIME_^10+2064377754059776.0)-0.029*cRec_Prot*cTIME_^20/(cTIME_^10+2064377754059776.0)+2093279042616612.8*cRec_Prot*cTbet_Prot+60705092235881.77*cRec_Prot+66.924*cTIME_^10*cTbet_Prot-1.3624893176794522e17*cTIME_^10*cTbet_Prot/(cTIME_^10+2064377754059776.0)+1.9407960000000002*cTIME_^10-3951219021270411.5*cTIME_^10/(cTIME_^10+2064377754059776.0)-66*cTIME_^20*cTbet_Prot/(cTIME_^10+2064377754059776.0)-1.9140000000000001*cTIME_^20/(cTIME_^10+2064377754059776.0)+1.3815641681269645e17*cTbet_Prot+4006536087568197.0)))]==>Ifn_mRNA",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
+     "source+S[USER;cRec_Prot,TIME,cTbet_Prot:((-1*3.7*cRec_Prot*TIME^10*cTbet_Prot/(1.014*cRec_Prot*TIME^10*cTbet_Prot-2064377754059776.0*cRec_Prot*TIME^10*cTbet_Prot/(TIME^10+2064377754059776.0)+0.029406*cRec_Prot*TIME^10-59866954867733.51*cRec_Prot*TIME^10/(TIME^10+2064377754059776.0)-cRec_Prot*TIME^20*cTbet_Prot/(TIME^10+2064377754059776.0)-0.029*cRec_Prot*TIME^20/(TIME^10+2064377754059776.0)+2093279042616612.8*cRec_Prot*cTbet_Prot+60705092235881.77*cRec_Prot+66.924*TIME^10*cTbet_Prot-1.3624893176794522e17*TIME^10*cTbet_Prot/(TIME^10+2064377754059776.0)+1.9407960000000002*TIME^10-3951219021270411.5*TIME^10/(TIME^10+2064377754059776.0)-66*TIME^20*cTbet_Prot/(TIME^10+2064377754059776.0)-1.9140000000000001*TIME^20/(TIME^10+2064377754059776.0)+1.3815641681269645e17*cTbet_Prot+4006536087568197.0)))]==>Ifn_mRNA",
      ""
     ],
     [
@@ -391,17 +377,6 @@
      "No",
      "No",
      "Rec_mRNA [Rec_mRNA]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

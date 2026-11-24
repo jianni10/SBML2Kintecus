@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-08T01:49:27.571310+00:00",
- "description": "Dunster2014 - WBC Interactions (Model1)\nBioModels BIOMD0000000616 (curated). SBML file: BIOMD0000000616_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000616_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.52e-06 of species peak (worst: m)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] R8: piecewise/conditional rate encoded with abs()-based step functions\n  [info] 1 condition(s) on time alone written as switch species with time/value pairs (1 changes)\n  [partial] event times do not fit a practical sampling grid; events fire up to one sampling interval (1) late\nRenamed species (Kintecus name = SBML id): m1 = m",
+ "description": "Dunster2014 - WBC Interactions (Model1)\nBioModels BIOMD0000000616 (curated). SBML file: BIOMD0000000616_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000616_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.52e-06 of species peak (worst: m1; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 1 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] R8: piecewise/conditional rate encoded with abs()-based step functions\n  [info] 1 condition(s) on time alone written as switch species with time/value pairs (1 changes)\n  [partial] event times do not fit a practical sampling grid; events fire up to one sampling interval (1) late\nRenamed species (Kintecus name = SBML id): m1 = m",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -154,7 +154,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cSW2,cTIME_:(0.05*cSW1*cSW2*sin(cTIME_)^2)]==>c",
+     "source+S[USER;cSW1,cSW2,TIME:(0.05*cSW1*cSW2*sin(TIME)^2)]==>c",
      ""
     ],
     [
@@ -183,20 +183,6 @@
      "0",
      "0",
      "c==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -285,17 +271,6 @@
      "No",
      "No",
      "m [m]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

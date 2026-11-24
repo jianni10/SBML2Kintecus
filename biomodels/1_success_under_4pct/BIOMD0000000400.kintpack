@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T21:11:46.774081+00:00",
- "description": "Cooling2007_IP3transients_CardiacMyocyte\nBioModels BIOMD0000000400 (curated). SBML file: BIOMD0000000400_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000400_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.51e-06 of species peak (worst: R)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): R1 = R; P1 = P",
+ "description": "Cooling2007_IP3transients_CardiacMyocyte\nBioModels BIOMD0000000400 (curated). SBML file: BIOMD0000000400_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000400_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.51e-06 of species peak (worst: R1; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): R1 = R; P1 = P",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -588,7 +588,7 @@
      "1",
      "0",
      "0",
-     "R1+S[USER;cSW1,cSW2,cSW3,cTIME_:(2.9999999999999997e-5*cSW1*cSW2*cSW3-2.9999999999999997e-5*cSW1-2.9999999999999997e-5*cSW2*cSW3/(exp(2404-80*cTIME_)+1))]==>2R1",
+     "R1+S[USER;cSW1,cSW2,cSW3,TIME:(2.9999999999999997e-5*cSW1*cSW2*cSW3-2.9999999999999997e-5*cSW1-2.9999999999999997e-5*cSW2*cSW3/(exp(2404-80*TIME)+1))]==>2R1",
      ""
     ],
     [
@@ -630,7 +630,7 @@
      "1",
      "0",
      "0",
-     "R1+S[USER;cSW1,cSW2,cSW3,cTIME_:(-2.9999999999999997e-5*cSW1*cSW2*cSW3+2.9999999999999997e-5*cSW1+2.9999999999999997e-5*cSW2*cSW3/(exp(2404-80*cTIME_)+1))]==>Rl+R1",
+     "R1+S[USER;cSW1,cSW2,cSW3,TIME:(-2.9999999999999997e-5*cSW1*cSW2*cSW3+2.9999999999999997e-5*cSW1+2.9999999999999997e-5*cSW2*cSW3/(exp(2404-80*TIME)+1))]==>Rl+R1",
      ""
     ],
     [
@@ -672,7 +672,7 @@
      "1",
      "0",
      "0",
-     "Rg+S[USER;cSW1,cSW2,cSW3,cTIME_:(0.03*cSW1*cSW2*cSW3-0.03*cSW1-0.03*cSW2*cSW3/(exp(2404-80*cTIME_)+1)-7.562500000000001)]==>2Rg",
+     "Rg+S[USER;cSW1,cSW2,cSW3,TIME:(0.03*cSW1*cSW2*cSW3-0.03*cSW1-0.03*cSW2*cSW3/(exp(2404-80*TIME)+1)-7.562500000000001)]==>2Rg",
      ""
     ],
     [
@@ -742,21 +742,7 @@
      "1",
      "0",
      "0",
-     "Rg+S[USER;cSW1,cSW2,cSW3,cTIME_:(-0.03*cSW1*cSW2*cSW3+0.03*cSW1+0.03*cSW2*cSW3/(exp(2404-80*cTIME_)+1))]==>Rlg+Rg",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
+     "Rg+S[USER;cSW1,cSW2,cSW3,TIME:(-0.03*cSW1*cSW2*cSW3+0.03*cSW1+0.03*cSW2*cSW3/(exp(2404-80*TIME)+1))]==>Rlg+Rg",
      ""
     ],
     [
@@ -944,17 +930,6 @@
      "No",
      "No",
      "Ca [Ca]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-10-31T06:59:29.525028+00:00",
- "description": "Maree2006_DuCa_Type1DiabetesModel\nBioModels BIOMD0000000381 (curated). SBML file: BIOMD0000000381_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000381_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.24e-06 of species peak (worst: M)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): M1 = M",
+ "description": "Maree2006_DuCa_Type1DiabetesModel\nBioModels BIOMD0000000381 (curated). SBML file: BIOMD0000000381_url.xml.\nSimulation: 0 to 100 time units (SED-ML: BIOMD0000000381_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.24e-06 of species peak (worst: M1; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): M1 = M",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -238,7 +238,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(40000000*exp((-1*(0.3333333333333333*cTIME_-3)^2)))]==>Ba",
+     "source+S[USER;TIME:(40000000*exp((-1*(0.3333333333333333*TIME-3)^2)))]==>Ba",
      ""
     ],
     [
@@ -323,20 +323,6 @@
      "0",
      "0",
      "Bn+Ma==>Cy+Bn+Ma",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -436,17 +422,6 @@
      "No",
      "No",
      "Cy [Cy]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

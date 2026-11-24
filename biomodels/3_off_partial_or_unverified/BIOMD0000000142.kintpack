@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-05T15:47:15.934946+00:00",
- "description": "Izhikevich2004_SpikingNeurons_Class2Excitable\nBioModels BIOMD0000000142 (curated). SBML file: BIOMD0000000142_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000142_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): KINTECUS_FAILED_PARTIAL\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = inf of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'event_0000001' not converted (state-triggered (not a time >= t0 trigger))\n  [info] 'v' goes below zero in the SBML: integrated as p_v_o = value + 200, output as p_v = OUTC[p_v_o;-200*source]\n  [info] 'u' goes below zero in the SBML: integrated as p_u_o = value + 50, output as p_u = OUTC[p_u_o;-50*source]\nRenamed species (Kintecus name = SBML id): p_v = v; p_u = u",
+ "description": "Izhikevich2004_SpikingNeurons_Class2Excitable\nBioModels BIOMD0000000142 (curated). SBML file: BIOMD0000000142_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000142_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): KINTECUS_FAILED_PARTIAL; with native TIME on the 2026-11-23e build (md5 88f7fe5e...): -INT:1: stalled (no new output row for 120 s (simulated time 108.004 of 300)); -INT:5: ran to the end, but the output contains NaN or inf\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = inf of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 2 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [blocker] event 'event_0000001' not converted (state-triggered (not a time >= t0 trigger))\n  [info] 'v' goes below zero in the SBML: integrated as p_v_o = value + 200, output as p_v = OUTC[p_v_o;-200*source]\n  [info] 'u' goes below zero in the SBML: integrated as p_u_o = value + 50, output as p_u = OUTC[p_u_o;-50*source]\nRenamed species (Kintecus name = SBML id): p_v = v; p_u = u",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -98,7 +98,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.015*cTIME_)]==>p_v_o",
+     "source+S[USER;TIME:(0.015*TIME)]==>p_v_o",
      ""
     ],
     [
@@ -140,7 +140,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cTIME_:((-1*0.015*cSW1*cTIME_))]==>p_v_o",
+     "source+S[USER;cSW1,TIME:((-1*0.015*cSW1*TIME))]==>p_v_o",
      ""
     ],
     [
@@ -169,20 +169,6 @@
      "0",
      "0",
      "source+S[USER;cp_u_o:((-1*0.2*(cp_u_o-50)))]==>p_u_o",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -249,17 +235,6 @@
      "No",
      "No",
      "parameter u + 50 (shifted state) [__shifted__u]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

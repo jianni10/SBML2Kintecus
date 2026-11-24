@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-05T21:11:42.512961+00:00",
- "description": "Hoffmann2002_WT_IkBNFkB_Signaling\nBioModels BIOMD0000000140 (curated). SBML file: BIOMD0000000140_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000140_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.17e-06 of species peak (worst: IkBeps_nuc)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] 1 event(s) depend only on time (and on variables only they change): unrolled into 1 firing(s) up to t = 10000\n  [info] rate rule dfr_after_trigger/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - p_fr_after_trigger: zero order, signed\n  [info] time event(s) on 'IKK' encoded as time/value pairs in EV_IKK.TXT (SET)\n  [info] time event(s) on 'trigger_value' encoded as time/value pairs in EV_P_TRIGGER_VALUE.TXT (SET)\n  [info] time event(s) on 'flag_for_after_trigger' encoded as time/value pairs in EV_P_FLAG_FOR_AFTER_.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_trigger_value = trigger_value; p_fr_after_trigger = fr_after_trigger; p_flag_for_after_trigger = flag_for_after_trigger",
+ "description": "Hoffmann2002_WT_IkBNFkB_Signaling\nBioModels BIOMD0000000140 (curated). SBML file: BIOMD0000000140_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000140_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.16e-06 of species peak (worst: IkBeps_nuc; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 1 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] 1 event(s) depend only on time (and on variables only they change): unrolled into 1 firing(s) up to t = 10000\n  [info] rate rule dfr_after_trigger/dt term 1: rate order differs from the stoichiometry; consumed on separate line(s) - p_fr_after_trigger: zero order, signed\n  [info] time event(s) on 'IKK' encoded as time/value pairs in EV_IKK.TXT (SET)\n  [info] time event(s) on 'trigger_value' encoded as time/value pairs in EV_P_TRIGGER_VALUE.TXT (SET)\n  [info] time event(s) on 'flag_for_after_trigger' encoded as time/value pairs in EV_P_FLAG_FOR_AFTER_.TXT (SET)\nRenamed species (Kintecus name = SBML id): p_trigger_value = trigger_value; p_fr_after_trigger = fr_after_trigger; p_flag_for_after_trigger = flag_for_after_trigger",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -966,21 +966,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,cp_trigger_value:((-1*0.5*cp_trigger_value/(cTIME_-1999)^2))]==>p_fr_after_trigger",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
+     "source+S[USER;TIME,cp_trigger_value:((-1*0.5*cp_trigger_value/(TIME-1999)^2))]==>p_fr_after_trigger",
      ""
     ],
     [
@@ -1322,17 +1308,6 @@
      "No",
      "EV_P_FLAG_FOR_AFTER_.TXT-SET",
      "parameter flag_for_after_trigger [flag_for_after_trigger]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

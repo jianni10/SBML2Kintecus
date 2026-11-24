@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T20:36:46.607333+00:00",
- "description": "Eungdamrong2007_Ras_Activation\nBioModels BIOMD0000000161 (curated). SBML file: BIOMD0000000161_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: BIOMD0000000161_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 30.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.99e-06 of species peak (worst: SosGrb2_cyt)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Shc_phosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] RasGRP_DAG_GEF: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CAPRI_GAP: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CaRasGRP_act_RasGM: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] RasGM_basal_GAP: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] EGF_act_PLCgamma: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Sos_act_RasPM: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] flux1 (volume 0.976): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [partial] event times do not fit a practical sampling grid; events fire up to one sampling interval (30) late",
+ "description": "Eungdamrong2007_Ras_Activation\nBioModels BIOMD0000000161 (curated). SBML file: BIOMD0000000161_url.xml.\nSimulation: 0 to 30000 time units (SED-ML: BIOMD0000000161_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 30.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.99e-06 of species peak (worst: SosGrb2_cyt; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 2 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] Shc_phosphorylation: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] RasGRP_DAG_GEF: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CAPRI_GAP: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] CaRasGRP_act_RasGM: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] RasGM_basal_GAP: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] EGF_act_PLCgamma: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Sos_act_RasPM: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] flux1 (volume 0.976): rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [partial] event times do not fit a practical sampling grid; events fire up to one sampling interval (30) late",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "PIP_PM+S[USER;cSW1,cTIME_:(0.01*cSW1*exp(0.005-0.1*cTIME_))]==>PIP2_PM",
+     "PIP_PM+S[USER;cSW1,TIME:(0.01*cSW1*exp(0.005-0.1*TIME))]==>PIP2_PM",
      ""
     ],
     [
@@ -868,7 +868,7 @@
      "1",
      "0",
      "0",
-     "PI_PM+S[USER;cSW1,cTIME_:(0.01*cSW1*exp(0.005-0.1*cTIME_))]==>PIP_PM",
+     "PI_PM+S[USER;cSW1,TIME:(0.01*cSW1*exp(0.005-0.1*TIME))]==>PIP_PM",
      ""
     ],
     [
@@ -1516,20 +1516,6 @@
      ""
     ],
     [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
-     ""
-    ],
-    [
      "END",
      "",
      "",
@@ -2077,17 +2063,6 @@
      "No",
      "No",
      "CaRasGRP1_cyt [CaRasGRP1_cyt]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

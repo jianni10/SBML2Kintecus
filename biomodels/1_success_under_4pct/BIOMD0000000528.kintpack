@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-10-31T04:01:20.792254+00:00",
- "description": "Fribourg2014 - Dynamics of viral antagonism and innate immune response (H1N1 influenza A virus - Cal/09)\nBioModels BIOMD0000000528 (curated). SBML file: BIOMD0000000528_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000528_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.81e-06 of species peak (worst: IFNb_mRNA)\nSBML time units are used unchanged as Kintecus seconds.",
+ "description": "Fribourg2014 - Dynamics of viral antagonism and innate immune response (H1N1 influenza A virus - Cal/09)\nBioModels BIOMD0000000528 (curated). SBML file: BIOMD0000000528_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000528_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 100.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.81e-06 of species peak (worst: IFNb_mRNA; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.001/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>IFNb_mRNA",
+     "source+S[USER;TIME:(0.001/(10*(TIME^5/(TIME^5+7776))+1))]==>IFNb_mRNA",
      ""
     ],
     [
@@ -84,7 +84,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.0029999999999999996*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>IFNb_mRNA",
+     "source+S[USER;TIME:(0.0029999999999999996*(TIME^5/(TIME^5+7776))/(10*(TIME^5/(TIME^5+7776))+1))]==>IFNb_mRNA",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(1e-7/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>SOCS1m",
+     "source+S[USER;TIME:(1e-7/(10*(TIME^5/(TIME^5+7776))+1))]==>SOCS1m",
      ""
     ],
     [
@@ -196,7 +196,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(2.9999999999999993e-7*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>SOCS1m",
+     "source+S[USER;TIME:(2.9999999999999993e-7*(TIME^5/(TIME^5+7776))/(10*(TIME^5/(TIME^5+7776))+1))]==>SOCS1m",
      ""
     ],
     [
@@ -266,7 +266,7 @@
      "1",
      "0",
      "0",
-     "IRF7m+S[USER;cTIME_:(360/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>IRF7Pn+IRF7m",
+     "IRF7m+S[USER;TIME:(360/(10*(TIME^5/(TIME^5+7776))+1))]==>IRF7Pn+IRF7m",
      ""
     ],
     [
@@ -280,7 +280,7 @@
      "1",
      "0",
      "0",
-     "IRF7m+S[USER;cTIME_:(1080*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>IRF7Pn+IRF7m",
+     "IRF7m+S[USER;TIME:(1080*(TIME^5/(TIME^5+7776))/(10*(TIME^5/(TIME^5+7776))+1))]==>IRF7Pn+IRF7m",
      ""
     ],
     [
@@ -336,7 +336,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.0001/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>TNFam",
+     "source+S[USER;TIME:(0.0001/(10*(TIME^5/(TIME^5+7776))+1))]==>TNFam",
      ""
     ],
     [
@@ -364,7 +364,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.0003*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>TNFam",
+     "source+S[USER;TIME:(0.0003*(TIME^5/(TIME^5+7776))/(10*(TIME^5/(TIME^5+7776))+1))]==>TNFam",
      ""
     ],
     [
@@ -420,7 +420,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(1e-5/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>STATm",
+     "source+S[USER;TIME:(1e-5/(10*(TIME^5/(TIME^5+7776))+1))]==>STATm",
      ""
     ],
     [
@@ -434,7 +434,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(3e-5*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>STATm",
+     "source+S[USER;TIME:(3e-5*(TIME^5/(TIME^5+7776))/(10*(TIME^5/(TIME^5+7776))+1))]==>STATm",
      ""
     ],
     [
@@ -477,20 +477,6 @@
      "0",
      "0",
      "STAT==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -678,17 +664,6 @@
      "No",
      "No",
      "STAT [STAT]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

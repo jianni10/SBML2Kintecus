@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-06T15:04:05.766428+00:00",
- "description": "Suh2004_KCNQ_Regulation\nBioModels BIOMD0000000081 (curated). SBML file: BIOMD0000000081_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000081_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH, max |difference| = 7.81e+01 of species peak (worst: ip3_C)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 7.81e+01 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'GTP_C' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] PIP5kinase: non-integer reactant coefficient 0.0009967 on ATP_C written as a Kintecus coefficient\n  [info] PIP5kinase: rate order differs from the stoichiometry; consumed on separate line(s) - ATP_C: zero order, signed\n  [info] GTPon term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - GGTP_M: zero order, signed\n  [info] GTPgSon term 2/2: non-integer reactant coefficient 0.0009967 on GTPgS_C written as a Kintecus coefficient\n  [info] GDPbSon term 2/3: non-integer reactant coefficient 0.0009967 on GDPbS_C written as a Kintecus coefficient\n  [info] GDPdissoc term 3/3: non-integer reactant coefficient 0.0009967 on GDP_C written as a Kintecus coefficient\n  [info] AlF4on term 2/2: non-integer reactant coefficient 0.0009967 on AlF4_C written as a Kintecus coefficient\n  [info] PI4Kinase: non-integer reactant coefficient 0.0009967 on ATP_C written as a Kintecus coefficient\n  [info] PI4Kinase: rate order differs from the stoichiometry; consumed on separate line(s) - ATP_C: zero order, signed\n  [info] time event(s) on 'oxoM_EX' encoded as time/value pairs in EV_OXOM_EX.TXT (SET)",
+ "description": "Suh2004_KCNQ_Regulation\nBioModels BIOMD0000000081 (curated). SBML file: BIOMD0000000081_url.xml.\nSimulation: 0 to 100000 time units (SED-ML: BIOMD0000000081_url.sedml (auto-generated placeholder); duration chosen from the dynamics: still changing at cap), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH, max |difference| = 7.81e+01 of species peak (worst: ip3_C); with native TIME on the 2026-11-23e build (md5 88f7fe5e...): -INT:1: finished, off by 7811%; -INT:5: stalled (no new output row for 600 s (simulated time 3 of 100000))\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 7.81e+01 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 2 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] species 'GTP_C' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] PIP5kinase: non-integer reactant coefficient 0.0009967 on ATP_C written as a Kintecus coefficient\n  [info] PIP5kinase: rate order differs from the stoichiometry; consumed on separate line(s) - ATP_C: zero order, signed\n  [info] GTPon term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - GGTP_M: zero order, signed\n  [info] GTPgSon term 2/2: non-integer reactant coefficient 0.0009967 on GTPgS_C written as a Kintecus coefficient\n  [info] GDPbSon term 2/3: non-integer reactant coefficient 0.0009967 on GDPbS_C written as a Kintecus coefficient\n  [info] GDPdissoc term 3/3: non-integer reactant coefficient 0.0009967 on GDP_C written as a Kintecus coefficient\n  [info] AlF4on term 2/2: non-integer reactant coefficient 0.0009967 on AlF4_C written as a Kintecus coefficient\n  [info] PI4Kinase: non-integer reactant coefficient 0.0009967 on ATP_C written as a Kintecus coefficient\n  [info] PI4Kinase: rate order differs from the stoichiometry; consumed on separate line(s) - ATP_C: zero order, signed\n  [info] time event(s) on 'oxoM_EX' encoded as time/value pairs in EV_OXOM_EX.TXT (SET)",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -182,7 +182,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cG_M,cTIME_:(2.0074166417083545*cG_M*exp((-1*0.00833333333333333*cTIME_)))]==>G_M",
+     "source+S[USER;cG_M,TIME:(2.0074166417083545*cG_M*exp((-1*0.00833333333333333*TIME)))]==>G_M",
      ""
     ],
     [
@@ -196,7 +196,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cG_M,cTIME_:((-1*2.0074166417083545*cG_M*exp((-1*0.00833333333333333*cTIME_))))]==>GGTP_M",
+     "source+S[USER;cG_M,TIME:((-1*2.0074166417083545*cG_M*exp((-1*0.00833333333333333*TIME))))]==>GGTP_M",
      ""
     ],
     [
@@ -463,20 +463,6 @@
      "0",
      "0",
      "GGDPAlF4_M==>GGDPAlF4Mg_M",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -763,17 +749,6 @@
      "No",
      "No",
      "GGDP_M [GGDP_M]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

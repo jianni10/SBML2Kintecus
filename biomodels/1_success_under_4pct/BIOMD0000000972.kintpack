@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T22:29:23.738457+00:00",
- "description": "Tang2020 - Estimation of transmission risk of COVID-19 and impact of public health interventions - update\nBioModels BIOMD0000000972 (curated). SBML file: Tang2020.xml.\nSimulation: 0 to 40 time units (SED-ML: Tang2020.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.55e-06 of species peak (worst: Hospitalised)\nSBML time units are used unchanged as Kintecus seconds.",
+ "description": "Tang2020 - Estimation of transmission risk of COVID-19 and impact of public health interventions - update\nBioModels BIOMD0000000972 (curated). SBML file: Tang2020.xml.\nSimulation: 0 to 40 time units (SED-ML: Tang2020.sedml), sampling 0.1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.55e-06 of species peak (worst: Hospitalised; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -84,7 +84,7 @@
      "1",
      "0",
      "0",
-     "Susceptible+Asymptomatic+S[USER;cTIME_:(2.490969097707509e-7*exp((-1*1.3768*cTIME_)))]==>Exposed+Asymptomatic",
+     "Susceptible+Asymptomatic+S[USER;TIME:(2.490969097707509e-7*exp((-1*1.3768*TIME)))]==>Exposed+Asymptomatic",
      ""
     ],
     [
@@ -98,7 +98,7 @@
      "1",
      "0",
      "0",
-     "Susceptible+Infected+S[USER;cTIME_:(2.490969097707509e-7*exp((-1*1.3768*cTIME_)))]==>Exposed+Infected",
+     "Susceptible+Infected+S[USER;TIME:(2.490969097707509e-7*exp((-1*1.3768*TIME)))]==>Exposed+Infected",
      ""
     ],
     [
@@ -140,7 +140,7 @@
      "1",
      "0",
      "0",
-     "Susceptible+Asymptomatic+S[USER;cTIME_:(0.00015244058739707076*exp((-1*1.3768*cTIME_)))]==>Susceptible_quarantined+Asymptomatic",
+     "Susceptible+Asymptomatic+S[USER;TIME:(0.00015244058739707076*exp((-1*1.3768*TIME)))]==>Susceptible_quarantined+Asymptomatic",
      ""
     ],
     [
@@ -154,7 +154,7 @@
      "1",
      "0",
      "0",
-     "Susceptible+Infected+S[USER;cTIME_:(0.00015244058739707076*exp((-1*1.3768*cTIME_)))]==>Susceptible_quarantined+Infected",
+     "Susceptible+Infected+S[USER;TIME:(0.00015244058739707076*exp((-1*1.3768*TIME)))]==>Susceptible_quarantined+Infected",
      ""
     ],
     [
@@ -210,7 +210,7 @@
      "1",
      "0",
      "0",
-     "Infected+S[USER;cTIME_:(0.363050622/(2.60404*exp((-1*0.3283*cTIME_))+0.13266))]==>Hospitalised",
+     "Infected+S[USER;TIME:(0.363050622/(2.60404*exp((-1*0.3283*TIME))+0.13266))]==>Hospitalised",
      ""
     ],
     [
@@ -322,7 +322,7 @@
      "1",
      "0",
      "0",
-     "Susceptible+Asymptomatic+S[USER;cTIME_:(3.2029292490966e-12*exp((-1*1.3768*cTIME_)))]==>Exposed_quarantined+Asymptomatic",
+     "Susceptible+Asymptomatic+S[USER;TIME:(3.2029292490966e-12*exp((-1*1.3768*TIME)))]==>Exposed_quarantined+Asymptomatic",
      ""
     ],
     [
@@ -336,7 +336,7 @@
      "1",
      "0",
      "0",
-     "Susceptible+Infected+S[USER;cTIME_:(3.2029292490966e-12*exp((-1*1.3768*cTIME_)))]==>Exposed_quarantined+Infected",
+     "Susceptible+Infected+S[USER;TIME:(3.2029292490966e-12*exp((-1*1.3768*TIME)))]==>Exposed_quarantined+Infected",
      ""
     ],
     [
@@ -351,20 +351,6 @@
      "0",
      "0",
      "Exposed_quarantined==>Hospitalised",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -497,17 +483,6 @@
      "No",
      "No",
      "Recovered [Recovered]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

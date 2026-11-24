@@ -13,11 +13,12 @@ Kintecus V2027 and compared with the original SBML simulated by [libRoadRunner](
 | Off, partial, or no SBML reference to check against | 79 |
 | No pack (nothing convertible / converter error) | 27 |
 
-Match error = max over species of |Kintecus − SBML| / peak of that species. Status as of 2026-11-10.
+Match error = max over species of |Kintecus − SBML| / peak of that species. Status as of 2026-11-24.
 
 **Kintecus itself is not included.** It is copyrighted, proprietary software; get it from
 [kintecus.com](http://www.kintecus.com/). The packs need the build of 2026-11-05 08:40:46 or later
-(Time/value-pair Constant Files).
+(Time/value-pair Constant Files); the 95 packs whose rate laws use time read Kintecus `TIME` in their USER
+functions and need the 2026-11-23e build (md5 `88f7fe5e…`) or later.
 
 ## Start here
 

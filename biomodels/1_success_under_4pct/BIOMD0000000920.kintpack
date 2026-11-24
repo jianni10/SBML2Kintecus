@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T22:28:29.514237+00:00",
- "description": "Jarrett2015 - Modelling the interaction between immune response, bacterial dynamics and inflammatory damage\nBioModels BIOMD0000000920 (curated). SBML file: Jarrett2015.xml.\nSimulation: 0 to 70 time units (SED-ML: Jarrett2015.sedml), sampling 0.7.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.97e-06 of species peak (worst: inflammation__I)\nSBML time units are used unchanged as Kintecus seconds.",
+ "description": "Jarrett2015 - Modelling the interaction between immune response, bacterial dynamics and inflammatory damage\nBioModels BIOMD0000000920 (curated). SBML file: Jarrett2015.xml.\nSimulation: 0 to 70 time units (SED-ML: Jarrett2015.sedml), sampling 0.7.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.97e-06 of species peak (worst: inflammation__I; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -168,7 +168,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(1*exp((-1*0.01*cTIME_)))]==>bacterial_infection__B",
+     "source+S[USER;TIME:(1*exp((-1*0.01*TIME)))]==>bacterial_infection__B",
      ""
     ],
     [
@@ -298,20 +298,6 @@
      ""
     ],
     [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
-     ""
-    ],
-    [
      "END",
      "",
      "",
@@ -397,17 +383,6 @@
      "No",
      "No",
      "pro-inflammatory (P) [pro_inflammatory__P]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

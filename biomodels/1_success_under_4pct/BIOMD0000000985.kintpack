@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T22:30:10.456206+00:00",
- "description": "Gex-Fabry1984 - model of receptor-mediated endocytosis of EGF in BALB/c 3T3 cells\nBioModels BIOMD0000000985 (curated). SBML file: Gex-Fabry1984.xml.\nSimulation: 0 to 50 time units (SED-ML: Gex-Fabry1984.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.96e-06 of species peak (worst: Internalised_Ligand)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): ReceptorLigandPitProteinc1 = Receptor_Ligand_Pit_Protein_complex",
+ "description": "Gex-Fabry1984 - model of receptor-mediated endocytosis of EGF in BALB/c 3T3 cells\nBioModels BIOMD0000000985 (curated). SBML file: Gex-Fabry1984.xml.\nSimulation: 0 to 50 time units (SED-ML: Gex-Fabry1984.sedml), sampling 0.5.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.96e-06 of species peak (worst: Internalised_Ligand; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): ReceptorLigandPitProteinc1 = Receptor_Ligand_Pit_Protein_complex",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -98,7 +98,7 @@
      "1",
      "0",
      "0",
-     "Surface_Receptor_External+S[USER;cTIME_:(0.13999999999999999-0.1232*exp((-1*0.15384615384615385*cTIME_))^3)]==>Internalised_receptors",
+     "Surface_Receptor_External+S[USER;TIME:(0.13999999999999999-0.1232*exp((-1*0.15384615384615385*TIME))^3)]==>Internalised_receptors",
      ""
     ],
     [
@@ -112,7 +112,7 @@
      "1",
      "0",
      "0",
-     "Receptor_Ligand_Complex+S[USER;cTIME_:(0.13999999999999999-0.1232*exp((-1*0.15384615384615385*cTIME_))^3)]==>Internalised_Ligand+Internalised_receptors",
+     "Receptor_Ligand_Complex+S[USER;TIME:(0.13999999999999999-0.1232*exp((-1*0.15384615384615385*TIME))^3)]==>Internalised_Ligand+Internalised_receptors",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "ReceptorLigandPitProteinc1+S[USER;cTIME_:(0.7-0.616*exp((-1*0.15384615384615385*cTIME_))^3)]==>Internalised_Ligand+Internalised_receptors",
+     "ReceptorLigandPitProteinc1+S[USER;TIME:(0.7-0.616*exp((-1*0.15384615384615385*TIME))^3)]==>Internalised_Ligand+Internalised_receptors",
      ""
     ],
     [
@@ -155,20 +155,6 @@
      "0",
      "0",
      "Internalised_receptors==>Surface_Receptor_External",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -290,17 +276,6 @@
      "No",
      "No",
      "Internalised_Ligand [Internalised_Ligand]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

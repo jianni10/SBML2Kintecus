@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T22:26:48.566821+00:00",
- "description": "Larbat2016.2 - Modeling the diversion of primary carbon flux into secondary metabolism under variable nitrate and light or dark conditions (Light Dark Cycles)\nBioModels BIOMD0000000858 (curated). SBML file: Larbat2016.2.xml.\nSimulation: 0 to 72 time units (SED-ML: Larbat2016.2.sedml), sampling 0.072.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.08e-05 of species peak (worst: trioseP)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] EtrioseP_Consumption_Sucrose: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Ephe_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Enitrate_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Estarch_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "description": "Larbat2016.2 - Modeling the diversion of primary carbon flux into secondary metabolism under variable nitrate and light or dark conditions (Light Dark Cycles)\nBioModels BIOMD0000000858 (curated). SBML file: Larbat2016.2.xml.\nSimulation: 0 to 72 time units (SED-ML: Larbat2016.2.sedml), sampling 0.072.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 8.57e-06 of species peak (worst: Estarch; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 1 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] EtrioseP_Consumption_Sucrose: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Ephe_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Enitrate_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] Estarch_Consumption: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:5 -obeymaxint",
@@ -252,7 +252,7 @@
      "1",
      "0",
      "0",
-     "N+S[USER;cN,cSW1,cTIME_:(10.1*(0.5+(24*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))-24*cSW1*floor(0.041666666666666664*cTIME_)-cTIME_+24*floor(0.041666666666666664*cTIME_)+12)/(2*(abs(24*cSW1*(-1*floor(-1*0.041666666666666664*cTIME_))-24*cSW1*floor(0.041666666666666664*cTIME_)-cTIME_+24*floor(0.041666666666666664*cTIME_)+12)+1e-300)))/(cN+1e-11))]==>trioseP+N",
+     "N+S[USER;cN,cSW1,TIME:(10.1*(0.5+(24*cSW1*(-1*floor(-1*0.041666666666666664*TIME))-24*cSW1*floor(0.041666666666666664*TIME)-TIME+24*floor(0.041666666666666664*TIME)+12)/(2*(abs(24*cSW1*(-1*floor(-1*0.041666666666666664*TIME))-24*cSW1*floor(0.041666666666666664*TIME)-TIME+24*floor(0.041666666666666664*TIME)+12)+1e-300)))/(cN+1e-11))]==>trioseP+N",
      ""
     ],
     [
@@ -281,20 +281,6 @@
      "0",
      "0",
      "Estarch+sucr+S[USER;cEstarch:(10/(1*cEstarch+0.0001))]==>sucr",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -449,17 +435,6 @@
      "No",
      "No",
      "Estarch [Estarch]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

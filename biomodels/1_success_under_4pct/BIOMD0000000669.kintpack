@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T22:05:02.417530+00:00",
- "description": "Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - mechanistic PD model\nBioModels BIOMD0000000669 (curated). SBML file: BIOMD0000000669_url.xml.\nSimulation: 0 to 100 time units (SED-ML: MODEL1604270001_mechanistic.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.44e-06 of species peak (worst: G1)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'R_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'R_live' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dS/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - S1: zero order, signed\n  [info] rate rule dS/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - S1: zero order, signed\n  [info] rate rule dS/dt term 5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [partial] event times do not fit a practical sampling grid; events fire up to one sampling interval (1) late\nRenamed species (Kintecus name = SBML id): S1 = S",
+ "description": "Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - mechanistic PD model\nBioModels BIOMD0000000669 (curated). SBML file: BIOMD0000000669_url.xml.\nSimulation: 0 to 100 time units (SED-ML: MODEL1604270001_mechanistic.sedml), sampling 1.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.46e-06 of species peak (worst: G1; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 2 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] species 'R_total' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] species 'R_live' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] rate rule dS/dt term 3: rate order differs from the stoichiometry; consumed on separate line(s) - S1: zero order, signed\n  [info] rate rule dS/dt term 4: rate order differs from the stoichiometry; consumed on separate line(s) - S1: zero order, signed\n  [info] rate rule dS/dt term 5: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [partial] event times do not fit a practical sampling grid; events fire up to one sampling interval (1) late\nRenamed species (Kintecus name = SBML id): S1 = S",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -112,7 +112,7 @@
      "1",
      "0",
      "0",
-     "S1+S[USER;cSW1,cSW2,cTIME_:(-0.0996648468521739*cSW1*cSW2*exp(2.465649462507362-0.030318750000000002*cTIME_)+0.0996648468521739*cSW1*exp(2.465649462507362-0.030318750000000002*cTIME_)+0.0996648468521739*cSW2-0.11905376502763772)]==>2S1",
+     "S1+S[USER;cSW1,cSW2,TIME:(-0.0996648468521739*cSW1*cSW2*exp(2.465649462507362-0.030318750000000002*TIME)+0.0996648468521739*cSW1*exp(2.465649462507362-0.030318750000000002*TIME)+0.0996648468521739*cSW2-0.11905376502763772)]==>2S1",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "1",
      "0",
      "0",
-     "S1+S[USER;cSW1,cSW2,cTIME_:(0.0996648468521739*cSW1*cSW2*exp(2.465649462507362-0.030318750000000002*cTIME_)-0.0996648468521739*cSW1*exp(2.465649462507362-0.030318750000000002*cTIME_)-0.0996648468521739*cSW2+0.114)]==>G2+S1",
+     "S1+S[USER;cSW1,cSW2,TIME:(0.0996648468521739*cSW1*cSW2*exp(2.465649462507362-0.030318750000000002*TIME)-0.0996648468521739*cSW1*exp(2.465649462507362-0.030318750000000002*TIME)-0.0996648468521739*cSW2+0.114)]==>G2+S1",
      ""
     ],
     [
@@ -340,20 +340,6 @@
      ""
     ],
     [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
-     ""
-    ],
-    [
      "END",
      "",
      "",
@@ -450,17 +436,6 @@
      "No",
      "No",
      "R_other [R_other]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

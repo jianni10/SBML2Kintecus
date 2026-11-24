@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T20:57:04.270223+00:00",
- "description": "Troein2011_ClockCircuit_OstreococcusTauri\nBioModels BIOMD0000000350 (curated). SBML file: BIOMD0000000350_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000350_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.58e-06 of species peak (worst: cca1_c)\nSBML time units are used unchanged as Kintecus seconds.",
+ "description": "Troein2011_ClockCircuit_OstreococcusTauri\nBioModels BIOMD0000000350 (curated). SBML file: BIOMD0000000350_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000350_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.98e-06 of species peak (worst: cca1_c; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.0820132250303287*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>acc",
+     "source+S[USER;TIME:(0.0820132250303287*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*TIME))))]==>acc",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "toc1_2+S[USER;cTIME_:(0.104936638629684*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>sink",
+     "toc1_2+S[USER;TIME:(0.104936638629684*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*TIME))))]==>sink",
      ""
     ],
     [
@@ -154,7 +154,7 @@
      "1",
      "0",
      "0",
-     "toc1_1+S[USER;cTIME_:(0.326619492089715-0.19012890872106702*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>toc1_2",
+     "toc1_1+S[USER;TIME:(0.326619492089715-0.19012890872106702*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*TIME))))]==>toc1_2",
      ""
     ],
     [
@@ -182,7 +182,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,ctoc1_2:(1*(1.88956390421566*ctoc1_2*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_)))+1.38563901682266*ctoc1_2)^2.5007062880634/(1*(1.88956390421566*ctoc1_2*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_)))+1.38563901682266*ctoc1_2)^2.5007062880634+1))]==>cca1_mrna",
+     "source+S[USER;TIME,ctoc1_2:(1*(1.88956390421566*ctoc1_2*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*TIME)))+1.38563901682266*ctoc1_2)^2.5007062880634/(1*(1.88956390421566*ctoc1_2*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*TIME)))+1.38563901682266*ctoc1_2)^2.5007062880634+1))]==>cca1_mrna",
      ""
     ],
     [
@@ -252,7 +252,7 @@
      "1",
      "0",
      "0",
-     "cca1_c+S[USER;cTIME_:(0.15479769929534704*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>sink",
+     "cca1_c+S[USER;TIME:(0.15479769929534704*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*TIME))))]==>sink",
      ""
     ],
     [
@@ -280,7 +280,7 @@
      "1",
      "0",
      "0",
-     "cca1_n+S[USER;cTIME_:(0.15479769929534704*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>sink",
+     "cca1_n+S[USER;TIME:(0.15479769929534704*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*TIME))))]==>sink",
      ""
     ],
     [
@@ -364,7 +364,7 @@
      "1",
      "0",
      "0",
-     "toc1luc_1+S[USER;cTIME_:(0.326619492089715-0.19012890872106702*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>toc1luc_2",
+     "toc1luc_1+S[USER;TIME:(0.326619492089715-0.19012890872106702*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*TIME))))]==>toc1luc_2",
      ""
     ],
     [
@@ -392,7 +392,7 @@
      "1",
      "0",
      "0",
-     "toc1luc_2+S[USER;cTIME_:(0.104936638629684*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>sink",
+     "toc1luc_2+S[USER;TIME:(0.104936638629684*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*TIME))))]==>sink",
      ""
     ],
     [
@@ -476,7 +476,7 @@
      "1",
      "0",
      "0",
-     "cca1luc+S[USER;cTIME_:(0.15479769929534704*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*cTIME_))))]==>sink",
+     "cca1luc+S[USER;TIME:(0.15479769929534704*(-1*floor(-1*0.5*sin(0.08333333333333333*3.141592653589793*TIME))))]==>sink",
      ""
     ],
     [
@@ -491,20 +491,6 @@
      "0",
      "0",
      "cca1luc==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -703,17 +689,6 @@
      "No",
      "No",
      "luc [luc]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

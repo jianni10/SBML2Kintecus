@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-10-31T07:14:36.015005+00:00",
- "description": "Law2020 - SIR model of COVID-19 transmission in Malyasia with time-varying parameters\nBioModels BIOMD0000000982 (curated). SBML file: Law2020.xml.\nSimulation: 0 to 53 time units (SED-ML: Law2020.sedml), sampling 0.6625.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.07e-06 of species peak (worst: Infected)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] Susceptible_to_Infected: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "description": "Law2020 - SIR model of COVID-19 transmission in Malyasia with time-varying parameters\nBioModels BIOMD0000000982 (curated). SBML file: Law2020.xml.\nSimulation: 0 to 53 time units (SED-ML: Law2020.sedml), sampling 0.6625.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.08e-06 of species peak (worst: Infected; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 1 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] Susceptible_to_Infected: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "Susceptible+Infected+S[USER;cInfected,cRemoved,cSusceptible,cTIME_:(0.16649358*0.9534^cTIME_/(1*cInfected+1*cRemoved+1*cSusceptible+1e-30))]==>2Infected",
+     "Susceptible+Infected+S[USER;cInfected,cRemoved,cSusceptible,TIME:(0.16649358*0.9534^TIME/(1*cInfected+1*cRemoved+1*cSusceptible+1e-30))]==>2Infected",
      ""
     ],
     [
@@ -71,20 +71,6 @@
      "0",
      "0",
      "Infected==>Removed",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -162,17 +148,6 @@
      "No",
      "No",
      "Removed [Removed]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

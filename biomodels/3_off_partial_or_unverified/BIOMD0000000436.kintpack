@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-01T20:47:18.231661+00:00",
- "description": "Gupta2009 - Eicosanoid Metabolism\nBioModels BIOMD0000000436 (curated). SBML file: BIOMD0000000436_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000436_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 9.44e-01 of species peak (worst: HETE)\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 9.44e-01 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [blocker] event 'event' not converted (state-triggered (not a time >= t0 trigger))\n  [info] r3: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for DG\n  [info] r7 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - AA: zero order, signed\n  [info] r5 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - AA: zero order, signed",
+ "description": "Gupta2009 - Eicosanoid Metabolism\nBioModels BIOMD0000000436 (curated). SBML file: BIOMD0000000436_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000436_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): MISMATCH_PARTIAL, max |difference| = 9.44e-01 of species peak (worst: HETE); with native TIME on the 2026-11-23e build (md5 88f7fe5e...): -INT:5: finished, off by 94.3%; -INT:5: finished, off by 94.3%\nIndependent check of this deck (SciPy integration with Kintecus semantics) against the SBML: max |difference| = 9.44e-01 of species peak.\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 8 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [blocker] event 'event' not converted (state-triggered (not a time >= t0 trigger))\n  [info] r3: rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for DG\n  [info] r7 term 2/2: rate order differs from the stoichiometry; consumed on separate line(s) - AA: zero order, signed\n  [info] r5 term 3/3: rate order differs from the stoichiometry; consumed on separate line(s) - AA: zero order, signed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:5 -obeymaxint",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(1e-15*cTIME_+1e-15)]==>AA",
+     "source+S[USER;TIME:(1e-15*TIME+1e-15)]==>AA",
      ""
     ],
     [
@@ -84,7 +84,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(-1e-15*cTIME_-1e-15)]==>DG",
+     "source+S[USER;TIME:(-1e-15*TIME-1e-15)]==>DG",
      ""
     ],
     [
@@ -112,7 +112,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cGPCho,cTIME_:(5.024520025612589e-16*cGPCho*cTIME_)]==>GPCho",
+     "source+S[USER;cGPCho,TIME:(5.024520025612589e-16*cGPCho*TIME)]==>GPCho",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cGPCho,cTIME_:((-1*5.024520025612589e-16*cGPCho*cTIME_))]==>AA",
+     "source+S[USER;cGPCho,TIME:((-1*5.024520025612589e-16*cGPCho*TIME))]==>AA",
      ""
     ],
     [
@@ -154,7 +154,7 @@
      "1",
      "0",
      "0",
-     "GPCho+S[USER;cTIME_:(4.975479974387411e-16*cTIME_)]==>AA",
+     "GPCho+S[USER;TIME:(4.975479974387411e-16*TIME)]==>AA",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cGPCho,cTIME_:(5.024520025612589e-16*cGPCho*cTIME_^2)]==>GPCho",
+     "source+S[USER;cGPCho,TIME:(5.024520025612589e-16*cGPCho*TIME^2)]==>GPCho",
      ""
     ],
     [
@@ -182,7 +182,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cGPCho,cTIME_:((-1*5.024520025612589e-16*cGPCho*cTIME_^2))]==>AA",
+     "source+S[USER;cGPCho,TIME:((-1*5.024520025612589e-16*cGPCho*TIME^2))]==>AA",
      ""
     ],
     [
@@ -224,7 +224,7 @@
      "1",
      "0",
      "0",
-     "AA+S[USER;cTIME_:(0.024*cTIME_)]==>PGH2",
+     "AA+S[USER;TIME:(0.024*TIME)]==>PGH2",
      ""
     ],
     [
@@ -407,20 +407,6 @@
      "0",
      "0",
      "dPGJ2==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -608,17 +594,6 @@
      "No",
      "No",
      "dPGD2 [dPGD2]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

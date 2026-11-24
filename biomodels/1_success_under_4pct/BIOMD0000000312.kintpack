@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-10-31T06:57:39.505090+00:00",
- "description": "Tyson2003_Perfect_Adaption\nBioModels BIOMD0000000312 (curated). SBML file: BIOMD0000000312_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000312_url.sedml (auto-generated placeholder); duration chosen from the dynamics: default), sampling 10.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.12e-06 of species peak (worst: R)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'S' is defined by an assignment rule; not a Kintecus state (not output)\nRenamed species (Kintecus name = SBML id): R1 = R",
+ "description": "Tyson2003_Perfect_Adaption\nBioModels BIOMD0000000312 (curated). SBML file: BIOMD0000000312_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000312_url.sedml (auto-generated placeholder); duration chosen from the dynamics: default), sampling 10.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.23e-06 of species peak (worst: R1; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 2 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] species 'S' is defined by an assignment rule; not a Kintecus state (not output)\nRenamed species (Kintecus name = SBML id): R1 = R",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:5 -obeymaxint",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(2*floor(0.25*cTIME_))]==>R1",
+     "source+S[USER;TIME:(2*floor(0.25*TIME))]==>R1",
      ""
     ],
     [
@@ -84,7 +84,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(1*floor(0.25*cTIME_))]==>X",
+     "source+S[USER;TIME:(1*floor(0.25*TIME))]==>X",
      ""
     ],
     [
@@ -99,20 +99,6 @@
      "0",
      "0",
      "X==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -179,17 +165,6 @@
      "No",
      "No",
      "X [X]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

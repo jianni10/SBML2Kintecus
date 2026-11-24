@@ -145,6 +145,10 @@ CONVERSION CONVENTIONS (also in each pack's description)
     Time/value pairs (first line contains "Time") need the 2026-11-05 08:40:46 build (md5 9b45994d...;
     KINTECUS_ISSUES 21). Kintecus holds 95 pair files of up to 1,052 pairs (TSX1/TSY1(95,1052)); the
     largest model uses 64 files (BIOMD0000000235) and the largest file 7 pairs.
+    The 95 packs whose rate laws use time read Kintecus TIME in their USER functions (since 2026-11-24) and need
+    the 2026-11-23e build (md5 88f7fe5e...) or later; on older builds TIME reads 0 or the last output time
+    (KINTECUS_ISSUES 27). To rebuild such a pack for an older build, convert it with KIN_NATIVE_TIME=0 (time
+    becomes the pseudo-species TIME_, source==>TIME_ at k=1).
   * Long rates (since 2026-11-06): a rate law the SBML writes in factored form ((1+a/Ka)(1+b/Kb)...) is kept in
     that form (sympy's cancel/expand used to multiply such laws out to 5,000-20,000 characters); a rate that is
     still longer than the 2,153-character field and is a sum (or a factor times a sum) is written as several lines

@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T20:39:15.416350+00:00",
- "description": "Schaber2006_Pheromone_Starvation_Crosstalk\nBioModels BIOMD0000000237 (curated). SBML file: BIOMD0000000237_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000237_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.29411764705882354.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 6.84e-06 of species peak (worst: Ste5Ste11GbgFus3)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] v7: rate order differs from the stoichiometry; consumed on separate line(s) - Ste5: zero order, signed\n  [info] v18: rate order differs from the stoichiometry; consumed on separate line(s) - Kss1: first order\nRenamed species (Kintecus name = SBML id): p1 = p; s1 = s",
+ "description": "Schaber2006_Pheromone_Starvation_Crosstalk\nBioModels BIOMD0000000237 (curated). SBML file: BIOMD0000000237_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000237_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.29411764705882354.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 7.95e-06 of species peak (worst: Ste5Ste11GbgFus3; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 2 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] v7: rate order differs from the stoichiometry; consumed on separate line(s) - Ste5: zero order, signed\n  [info] v18: rate order differs from the stoichiometry; consumed on separate line(s) - Kss1: first order\nRenamed species (Kintecus name = SBML id): p1 = p; s1 = s",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "Gbg+Ste5Ste11+S[USER;cSW1,cSW2,cSW3,cTIME_:(0.01*cSW1*(-cSW2*cSW3+1)*exp((-1*0.5*cTIME_))+0.01*cSW2*cSW3*(1-1*exp((-1*0.5*cTIME_))))]==>Ste5Ste11Gbg",
+     "Gbg+Ste5Ste11+S[USER;cSW1,cSW2,cSW3,TIME:(0.01*cSW1*(-cSW2*cSW3+1)*exp((-1*0.5*TIME))+0.01*cSW2*cSW3*(1-1*exp((-1*0.5*TIME))))]==>Ste5Ste11Gbg",
      ""
     ],
     [
@@ -238,7 +238,7 @@
      "1",
      "0",
      "0",
-     "Ste11+S[USER;cSW2,cSW4,cSW5,cTIME_:(1*cSW2*cSW5*(1-exp((-1*0.05*cTIME_)))+1*cSW4*(-cSW2*cSW5+1)*exp(18-0.05*cTIME_))]==>Ste11P",
+     "Ste11+S[USER;cSW2,cSW4,cSW5,TIME:(1*cSW2*cSW5*(1-exp((-1*0.05*TIME)))+1*cSW4*(-cSW2*cSW5+1)*exp(18-0.05*TIME))]==>Ste11P",
      ""
     ],
     [
@@ -547,20 +547,6 @@
      "0",
      "0",
      "FREP==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -891,17 +877,6 @@
      "No",
      "No",
      "FREP [FREP]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

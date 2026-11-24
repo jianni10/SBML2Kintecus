@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T22:13:34.788494+00:00",
- "description": "Bianchi2015 -Model for lymphangiogenesis in normal and diabetic wounds\nBioModels BIOMD0000000722 (curated). SBML file: Wound Healing with Normal health condition.xml.\nSimulation: 0 to 100 time units (SED-ML: Wound Healing with Diabetic health condition.sedml), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.08e-06 of species peak (worst: Capillaries)\nSBML time units are used unchanged as Kintecus seconds.",
+ "description": "Bianchi2015 -Model for lymphangiogenesis in normal and diabetic wounds\nBioModels BIOMD0000000722 (curated). SBML file: Wound Healing with Normal health condition.xml.\nSimulation: 0 to 100 time units (SED-ML: Wound Healing with Diabetic health condition.sedml), sampling 1.\nRun switches: -ig:mass -INT:5 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.08e-06 of species peak (worst: Capillaries; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:5 -obeymaxint",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(130500*exp((-1*0.522*cTIME_)))]==>Active_TGF_beta",
+     "source+S[USER;TIME:(130500*exp((-1*0.522*TIME)))]==>Active_TGF_beta",
      ""
     ],
     [
@@ -98,7 +98,7 @@
      "1",
      "0",
      "0",
-     "Macrophages+S[USER;cTIME_:(0.21750000000000003*exp((-1*0.522*cTIME_)))]==>Active_TGF_beta+Macrophages",
+     "Macrophages+S[USER;TIME:(0.21750000000000003*exp((-1*0.522*TIME)))]==>Active_TGF_beta+Macrophages",
      ""
     ],
     [
@@ -368,20 +368,6 @@
      ""
     ],
     [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
-     ""
-    ],
-    [
      "END",
      "",
      "",
@@ -478,17 +464,6 @@
      "No",
      "No",
      "Capillaries [Capillaries]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

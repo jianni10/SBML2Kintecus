@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-10-31T06:58:36.150075+00:00",
- "description": "Vernoux2011_AuxinSignaling_AuxinFluctuating\nBioModels BIOMD0000000352 (curated). SBML file: BIOMD0000000352_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000352_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 7.11e-06 of species peak (worst: A)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'aux' is defined by an assignment rule; not a Kintecus state (not output)\nRenamed species (Kintecus name = SBML id): R1 = R",
+ "description": "Vernoux2011_AuxinSignaling_AuxinFluctuating\nBioModels BIOMD0000000352 (curated). SBML file: BIOMD0000000352_url.xml.\nSimulation: 0 to 10000 time units (SED-ML: BIOMD0000000352_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 10.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.50e-06 of species peak (worst: I; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 6 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] species 'aux' is defined by an assignment rule; not a Kintecus state (not output)\nRenamed species (Kintecus name = SBML id): R1 = R",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -112,7 +112,7 @@
      "1",
      "0",
      "0",
-     "I+S[USER;cTIME_:(0.555/(1.11*sin(0.007854*cTIME_-1.5708)+2.1100000000000003))]==>sink",
+     "I+S[USER;TIME:(0.555/(1.11*sin(0.007854*TIME-1.5708)+2.1100000000000003))]==>sink",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "I+S[USER;cTIME_:(0.555*sin(0.007854*cTIME_-1.5708)/(1.11*sin(0.007854*cTIME_-1.5708)+2.1100000000000003))]==>sink",
+     "I+S[USER;TIME:(0.555*sin(0.007854*TIME-1.5708)/(1.11*sin(0.007854*TIME-1.5708)+2.1100000000000003))]==>sink",
      ""
     ],
     [
@@ -182,7 +182,7 @@
      "1",
      "0",
      "0",
-     "D_IA+S[USER;cTIME_:(0.555/(1.11*sin(0.007854*cTIME_-1.5708)+2.1100000000000003))]==>A",
+     "D_IA+S[USER;TIME:(0.555/(1.11*sin(0.007854*TIME-1.5708)+2.1100000000000003))]==>A",
      ""
     ],
     [
@@ -196,7 +196,7 @@
      "1",
      "0",
      "0",
-     "D_IA+S[USER;cTIME_:(0.555*sin(0.007854*cTIME_-1.5708)/(1.11*sin(0.007854*cTIME_-1.5708)+2.1100000000000003))]==>A",
+     "D_IA+S[USER;TIME:(0.555*sin(0.007854*TIME-1.5708)/(1.11*sin(0.007854*TIME-1.5708)+2.1100000000000003))]==>A",
      ""
     ],
     [
@@ -210,7 +210,7 @@
      "1",
      "0",
      "0",
-     "D_II+S[USER;cTIME_:(0.555/(1.11*sin(0.007854*cTIME_-1.5708)+2.1100000000000003))]==>I",
+     "D_II+S[USER;TIME:(0.555/(1.11*sin(0.007854*TIME-1.5708)+2.1100000000000003))]==>I",
      ""
     ],
     [
@@ -224,7 +224,7 @@
      "1",
      "0",
      "0",
-     "D_II+S[USER;cTIME_:(0.555*sin(0.007854*cTIME_-1.5708)/(1.11*sin(0.007854*cTIME_-1.5708)+2.1100000000000003))]==>I",
+     "D_II+S[USER;TIME:(0.555*sin(0.007854*TIME-1.5708)/(1.11*sin(0.007854*TIME-1.5708)+2.1100000000000003))]==>I",
      ""
     ],
     [
@@ -309,20 +309,6 @@
      "0",
      "0",
      "A+A+S[USER;cA,cD_IA,cI:(0.1/(0.001*cA^2+0.01*cA*cI+0.01*cA+0.1*cD_IA+11))]==>R1+2A",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -422,17 +408,6 @@
      "No",
      "No",
      "mRNA [R]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

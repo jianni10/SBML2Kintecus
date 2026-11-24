@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T22:32:12.149616+00:00",
- "description": "Zhang2007 - Mechanism of DNA damage response (Model3)\nBioModels BIOMD0000001010 (curated). SBML file: Zhang2007_M3_low_DD.xml.\nSimulation: 0 to 200 time units (SED-ML: Zhang2007_M3_high_DD.sedml), sampling 0.0023332866675999813.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 1.00e-05 of species peak (worst: MDM2)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] species 'DNAdamage' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] p53_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] 3 condition(s) on time alone written as switch species with time/value pairs (3 changes)",
+ "description": "Zhang2007 - Mechanism of DNA damage response (Model3)\nBioModels BIOMD0000001010 (curated). SBML file: Zhang2007_M3_low_DD.xml.\nSimulation: 0 to 200 time units (SED-ML: Zhang2007_M3_high_DD.sedml), sampling 0.0023332866675999813.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 9.19e-06 of species peak (worst: MDM2; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 1 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] species 'DNAdamage' is defined by an assignment rule; not a Kintecus state (not output)\n  [info] p53_degradation term 2/2: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] 3 condition(s) on time alone written as switch species with time/value pairs (3 changes)",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -98,7 +98,7 @@
      "1",
      "0",
      "0",
-     "MDM2+S[USER;cSW1,cSW2,cSW3,cTIME_:(1.4*cSW1*(0.17714500000000002-0.0021429*cTIME_)*(1-cSW2)*(1-cSW3)+1.4)]==>sink",
+     "MDM2+S[USER;cSW1,cSW2,cSW3,TIME:(1.4*cSW1*(0.17714500000000002-0.0021429*TIME)*(1-cSW2)*(1-cSW3)+1.4)]==>sink",
      ""
     ],
     [
@@ -141,20 +141,6 @@
      "0",
      "0",
      "p53+MDM2+S[USER;cMDM2,cp53:(0.020000000000000004/(-1*cMDM2*(cp53+1e-30)+0.1*cMDM2+0.5*cp53+1*(cp53+1e-30)*(0.4*cMDM2^2/(cp53+1e-30)-0.2*cMDM2/(cp53+1e-30)+(-cMDM2+0.1*cMDM2/(cp53+1e-30)+0.5+0.05/(cp53+1e-30))^2)^0.5+0.05))]==>MDM2",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -221,17 +207,6 @@
      "No",
      "No",
      "MDM2 [MDM2]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-10-31T07:05:09.032822+00:00",
- "description": "Boehm2014 - isoform-specific dimerization of pSTAT5A and pSTAT5B\nBioModels BIOMD0000000591 (curated). SBML file: BIOMD0000000591_url.xml.\nSimulation: 0 to 250 time units (SED-ML: Model_Fig5D.sedml), sampling 0.25.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.27e-06 of species peak (worst: nucpApB)\nSBML time units are used unchanged as Kintecus seconds.",
+ "description": "Boehm2014 - isoform-specific dimerization of pSTAT5A and pSTAT5B\nBioModels BIOMD0000000591 (curated). SBML file: BIOMD0000000591_url.xml.\nSimulation: 0 to 250 time units (SED-ML: Model_Fig5D.sedml), sampling 0.25.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.27e-06 of species peak (worst: nucpApB; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "STAT5A+STAT5A+S[USER;cTIME_:(0.0014078256242277144*exp((-1*0.0269765368088175*cTIME_)))]==>pApA",
+     "STAT5A+STAT5A+S[USER;TIME:(0.0014078256242277144*exp((-1*0.0269765368088175*TIME)))]==>pApA",
      ""
     ],
     [
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "STAT5A+STAT5B+S[USER;cTIME_:(0.0014078256242277144*exp((-1*0.0269765368088175*cTIME_)))]==>pApB",
+     "STAT5A+STAT5B+S[USER;TIME:(0.0014078256242277144*exp((-1*0.0269765368088175*TIME)))]==>pApB",
      ""
     ],
     [
@@ -84,7 +84,7 @@
      "1",
      "0",
      "0",
-     "STAT5B+STAT5B+S[USER;cTIME_:(0.0014078256242277144*exp((-1*0.0269765368088175*cTIME_)))]==>pBpB",
+     "STAT5B+STAT5B+S[USER;TIME:(0.0014078256242277144*exp((-1*0.0269765368088175*TIME)))]==>pBpB",
      ""
     ],
     [
@@ -256,20 +256,6 @@
      ""
     ],
     [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
-     ""
-    ],
-    [
      "END",
      "",
      "",
@@ -399,17 +385,6 @@
      "No",
      "No",
      "nucpBpB [nucpBpB]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T20:22:03.260787+00:00",
- "description": "Xu2003 - Phosphoinositide turnover\nBioModels BIOMD0000000075 (curated). SBML file: BIOMD0000000075_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000075_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.05.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.85e-06 of species peak (worst: IP3_Cyt)\nSBML time units are used unchanged as Kintecus seconds.",
+ "description": "Xu2003 - Phosphoinositide turnover\nBioModels BIOMD0000000075 (curated). SBML file: BIOMD0000000075_url.xml.\nSimulation: 0 to 1000 time units (SED-ML: BIOMD0000000075_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.05.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.49e-06 of species peak (worst: PI_PM; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "PI_PM+S[USER;cSW1,cTIME_:(0.019*cSW1*exp(0.05-1*cTIME_))]==>PIP_PM",
+     "PI_PM+S[USER;cSW1,TIME:(0.019*cSW1*exp(0.05-1*TIME))]==>PIP_PM",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "PLC_PM+S[USER;cSW1,cTIME_:(0.0005*cSW1*exp(0.05-1*cTIME_))]==>PLC_act_PM",
+     "PLC_PM+S[USER;cSW1,TIME:(0.0005*cSW1*exp(0.05-1*TIME))]==>PLC_act_PM",
      ""
     ],
     [
@@ -238,7 +238,7 @@
      "1",
      "0",
      "0",
-     "PIP_PM+S[USER;cSW1,cTIME_:(0.92*cSW1*exp(0.05-1*cTIME_))]==>PIP2_PM",
+     "PIP_PM+S[USER;cSW1,TIME:(0.92*cSW1*exp(0.05-1*TIME))]==>PIP2_PM",
      ""
     ],
     [
@@ -267,20 +267,6 @@
      "0",
      "0",
      "IP3_Cyt+PH_GFP_Cyt==>IP3_PHGFP_Cyt",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -468,17 +454,6 @@
      "No",
      "No",
      "IP3_Cyt [IP3_Cyt]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

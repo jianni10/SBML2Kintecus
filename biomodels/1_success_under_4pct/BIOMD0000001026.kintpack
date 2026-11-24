@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T22:32:59.463088+00:00",
- "description": "Kurlovics2021 - Metformin partitioning between plasma and RBC with independent Kin and Kout coefficients\nBioModels BIOMD0000001026 (curated). SBML file: Kurlovics2021.xml.\nSimulation: 0 to 40 time units (SED-ML: Independent.sedml), sampling 0.04.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.62e-06 of species peak (worst: Mrbc)\nSBML time units are used unchanged as Kintecus seconds.",
+ "description": "Kurlovics2021 - Metformin partitioning between plasma and RBC with independent Kin and Kout coefficients\nBioModels BIOMD0000001026 (curated). SBML file: Kurlovics2021.xml.\nSimulation: 0 to 40 time units (SED-ML: Independent.sedml), sampling 0.04.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 3.62e-06 of species peak (worst: Mrbc; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -70,21 +70,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(-60.81957380892484*exp((-1*0.783006790599975*cTIME_))+60.81957380892484*exp((-1*0.215608884195034*cTIME_)))]==>Mrbc",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
+     "source+S[USER;TIME:(-60.81957380892484*exp((-1*0.783006790599975*TIME))+60.81957380892484*exp((-1*0.215608884195034*TIME)))]==>Mrbc",
      ""
     ],
     [
@@ -140,17 +126,6 @@
      "No",
      "No",
      "Mrbc [Mrbc]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

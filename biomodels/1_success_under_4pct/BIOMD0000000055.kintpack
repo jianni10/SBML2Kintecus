@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T20:20:57.637505+00:00",
- "description": "Locke2005 - Circadian Clock\nBioModels BIOMD0000000055 (curated). SBML file: BIOMD0000000055_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000055_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.82e-04 of species peak (worst: cYm)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] three11: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] four12: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] three13: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] two14: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] four15: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] three16: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] two17: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] four18: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] three19: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] two20: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] four21: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] three22: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] two23: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "description": "Locke2005 - Circadian Clock\nBioModels BIOMD0000000055 (curated). SBML file: BIOMD0000000055_url.xml.\nSimulation: 0 to 300 time units (SED-ML: BIOMD0000000055_url.sedml (auto-generated placeholder); duration chosen from the dynamics: oscillating), sampling 0.3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 2.82e-04 of species peak (worst: cYm; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 7 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] three11: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] four12: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] three13: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] two14: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] four15: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] three16: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] two17: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] four18: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] three19: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] two20: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] four21: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] three22: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed\n  [info] two23: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "cPn+S[USER;cTIME_:(2.4514*(-1*floor(-1*sin(0.08333333333333333*3.141592653589793*cTIME_+0.001)/2)))]==>cLm+cPn",
+     "cPn+S[USER;TIME:(2.4514*(-1*floor(-1*sin(0.08333333333333333*3.141592653589793*TIME+0.001)/2)))]==>cLm+cPn",
      ""
     ],
     [
@@ -224,7 +224,7 @@
      "1",
      "0",
      "0",
-     "cTc+S[USER;cTIME_,ccTc:((3.1754000000000002-0.0013*(-1*floor(-1*sin(0.08333333333333333*3.141592653589793*cTIME_+0.001)/2)))/(1*ccTc+2.7454))]==>sink",
+     "cTc+S[USER;TIME,ccTc:((3.1754000000000002-0.0013*(-1*floor(-1*sin(0.08333333333333333*3.141592653589793*TIME+0.001)/2)))/(1*ccTc+2.7454))]==>sink",
      ""
     ],
     [
@@ -252,7 +252,7 @@
      "1",
      "0",
      "0",
-     "cTn+S[USER;cTIME_,ccTn:((4.0916-0.0492*(-1*floor(-1*sin(0.08333333333333333*3.141592653589793*cTIME_+0.001)/2)))/(1*ccTn+0.4033))]==>sink",
+     "cTn+S[USER;TIME,ccTn:((4.0916-0.0492*(-1*floor(-1*sin(0.08333333333333333*3.141592653589793*TIME+0.001)/2)))/(1*ccTn+0.4033))]==>sink",
      ""
     ],
     [
@@ -378,7 +378,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_,ccLn,ccTn:(0.009346291188263408*(-1*floor(-1*sin(0.08333333333333333*3.141592653589793*cTIME_+0.001)/2))/(ccLn^1.0237*ccTn^3.6064+1.8056000005229782*ccLn^1.0237+0.060400000113456996*ccTn^3.6064+0.10905824023644584))]==>cYm",
+     "source+S[USER;TIME,ccLn,ccTn:(0.009346291188263408*(-1*floor(-1*sin(0.08333333333333333*3.141592653589793*TIME+0.001)/2))/(ccLn^1.0237*ccTn^3.6064+1.8056000005229782*ccLn^1.0237+0.060400000113456996*ccTn^3.6064+0.10905824023644584))]==>cYm",
      ""
     ],
     [
@@ -392,7 +392,7 @@
      "1",
      "0",
      "0",
-     "cPn+S[USER;cTIME_,ccLn:(0.14506751227249876*(-1*floor(-1*sin(0.08333333333333333*3.141592653589793*cTIME_+0.001)/2))/(ccLn^1.0237+0.060400000113456996))]==>cYm+cPn",
+     "cPn+S[USER;TIME,ccLn:(0.14506751227249876*(-1*floor(-1*sin(0.08333333333333333*3.141592653589793*TIME+0.001)/2))/(ccLn^1.0237+0.060400000113456996))]==>cYm+cPn",
      ""
     ],
     [
@@ -490,7 +490,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.5-0.5*(-1*floor(-1*sin(0.08333333333333333*3.141592653589793*cTIME_+0.001)/2)))]==>cPn",
+     "source+S[USER;TIME:(0.5-0.5*(-1*floor(-1*sin(0.08333333333333333*3.141592653589793*TIME+0.001)/2)))]==>cPn",
      ""
     ],
     [
@@ -518,21 +518,7 @@
      "1",
      "0",
      "0",
-     "cPn+S[USER;cTIME_:(1*(-1*floor(-1*sin(0.08333333333333333*3.141592653589793*cTIME_+0.001)/2)))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
+     "cPn+S[USER;TIME:(1*(-1*floor(-1*sin(0.08333333333333333*3.141592653589793*TIME+0.001)/2)))]==>sink",
      ""
     ],
     [
@@ -720,17 +706,6 @@
      "No",
      "No",
      "light sensitive protein P [cPn]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

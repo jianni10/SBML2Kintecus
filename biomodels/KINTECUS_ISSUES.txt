@@ -137,9 +137,15 @@ INTERFACE NOTES
 26. (2026-11-12) -INT:1 stops writing output rows when many Time/value pairs are used: BIOMD0000000450 (6 pair
     files, 84-85 pairs each) has rows to t=83 and then only the final row at 1001; -INT:5 writes every row. Same
     on the 11-05 and 11-12 builds. Repro: repros/OUTPUT_STOPS_MANY_PAIRS_BIOMD0000000450.
-27. (2026-11-12) TIME in USER functions (new in the 11-12 build) reads 0 when listed in the USER variables and -1
-    when used without being listed; the TIME_ pseudo-species in the same deck is exact. The converter can write
-    TIME (KIN_NATIVE_TIME=1) and will once a build evaluates it. Repro: repros/TIME_IN_USER_20261112.
+27. FIXED in the 2026-11-23e build (md5 88f7fe5e...): TIME in USER functions (new in the 11-12 build) read 0 when
+    listed in the USER variables and -1 when not listed (11-12), then the last output time (11-23). It is now the
+    integrator's current time inside every step on -INT:1, 2, 4 and 5 (TIME02 set in DASPK RESEXT, DVODE F, stifbs/
+    simpr, rkqs/drkck and the driver). Repro repros/TIME_IN_USER_20261112 at t=10: X=50, A=0.832013, Z=6.81989,
+    exact on all four. The 95 packs that use time now read TIME (converter default KIN_NATIVE_TIME=1; 0 writes the
+    TIME_ pseudo-species for older builds): 80 of the 82 that passed with TIME_ pass with TIME, same errors; 0412
+    and 0506 match to 0.0004% but are too slow here (as with TIME_); none of the 13 failing ones passes.
+28. (2026-11-23) -INT:5 is slow on the TIME repro (17 s against 1 s on -INT:1/2/4): DASPK writes about 10,000
+    "DASPK-- TOUT TOO CLOSE TO T" warnings. Same on the 11-12 build, so not caused by TIME02.
 25. (2026-11-07) Kintecus's stiff integrators are much slower than CVODE/LSODA on a few correct decks:
     BIOMD0000000506 (56 species, 108k characters of USER: LSODA 3 s, CVODE 0.02 s, -INT:1 reaches t=220 of 1000
     in 150 s regardless of sampling or maximum step), BIOMD0000000608 (LSODA 0.4 s; -INT:1 t=41,000 of 100,000

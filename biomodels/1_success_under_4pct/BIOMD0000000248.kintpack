@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T20:47:49.912165+00:00",
- "description": "Lai2007_O2_Transport_Metabolism\nBioModels BIOMD0000000248 (curated). SBML file: BIOMD0000000248_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000248_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.74e-06 of species peak (worst: Cr)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] OxidativePhosphorylation: rate order differs from the stoichiometry; consumed on separate line(s) - ADP: first order; CTtis: zero order, signed\n  [info] DiffusionTransport (volume 2.0979): rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for CTcap\n  [info] CreatineKinase: rate order differs from the stoichiometry; consumed on separate line(s) - ADP: zero order, signed; PCr: zero order, signed\n  [info] rate rule dCFtis/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
+ "description": "Lai2007_O2_Transport_Metabolism\nBioModels BIOMD0000000248 (curated). SBML file: BIOMD0000000248_url.xml.\nSimulation: 0 to 10 time units (SED-ML: BIOMD0000000248_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 0.01.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.74e-06 of species peak (worst: Cr; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nConversion notes:\n  [info] time read as Kintecus TIME in 10 USER line(s) (no TIME_ pseudo-species); needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later\n  [info] OxidativePhosphorylation: rate order differs from the stoichiometry; consumed on separate line(s) - ADP: first order; CTtis: zero order, signed\n  [info] DiffusionTransport (volume 2.0979): rate not proportional to its reactants; written once as signed lines (source+S[USER;...]) for CTcap\n  [info] CreatineKinase: rate order differs from the stoichiometry; consumed on separate line(s) - ADP: zero order, signed; PCr: zero order, signed\n  [info] rate rule dCFtis/dt term 3: rate is not proportional to its reactants; divided form used with 1/(c+1e-30) so an empty species is not consumed",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -112,7 +112,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cSW1,cTIME_:(55.91210722799465*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)-55.91210722799465*cSW1-55.91210722799465*exp(7.142857142857143-2.380952380952381*cTIME_)+69.58556199609609)]==>CTcap",
+     "source+S[USER;cSW1,TIME:(55.91210722799465*cSW1*exp(7.142857142857143-2.380952380952381*TIME)-55.91210722799465*cSW1-55.91210722799465*exp(7.142857142857143-2.380952380952381*TIME)+69.58556199609609)]==>CTcap",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "CTcap+S[USER;cSW1,cTIME_:(-6.0774155107488435*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+6.0774155107488435*cSW1+6.0774155107488435*exp(7.142857142857143-2.380952380952381*cTIME_)-7.563663663663664)]==>2CTcap",
+     "CTcap+S[USER;cSW1,TIME:(-6.0774155107488435*cSW1*exp(7.142857142857143-2.380952380952381*TIME)+6.0774155107488435*cSW1+6.0774155107488435*exp(7.142857142857143-2.380952380952381*TIME)-7.563663663663664)]==>2CTcap",
      ""
     ],
     [
@@ -140,7 +140,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cCFcap,cCFtis,cSW1,cTIME_:((-1*0.47666714333381*(20000-19865.7172*exp(-0.38975*cSW1-0.125*(1-cSW1)*(15.86781-12.74981*exp(7.142857142857143-2.380952380952381*cTIME_))+0.086))*(cCFcap-cCFtis)))]==>CTcap",
+     "source+S[USER;cCFcap,cCFtis,cSW1,TIME:((-1*0.47666714333381*(20000-19865.7172*exp(-0.38975*cSW1-0.125*(1-cSW1)*(15.86781-12.74981*exp(7.142857142857143-2.380952380952381*TIME))+0.086))*(cCFcap-cCFtis)))]==>CTcap",
      ""
     ],
     [
@@ -154,7 +154,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cCFcap,cSW1,cTIME_:(0.03587817207888892*cCFcap*(20000-19865.7172*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*cTIME_)-1.89747625)))]==>CTtis",
+     "source+S[USER;cCFcap,cSW1,TIME:(0.03587817207888892*cCFcap*(20000-19865.7172*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*TIME)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*TIME)-1.89747625)))]==>CTtis",
      ""
     ],
     [
@@ -168,7 +168,7 @@
      "1",
      "0",
      "0",
-     "CFtis+S[USER;cSW1,cTIME_:(712.7456201721435*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*cTIME_)-1.89747625)-717.5634415777785)]==>CTtis+CFtis",
+     "CFtis+S[USER;cSW1,TIME:(712.7456201721435*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*TIME)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*TIME)-1.89747625)-717.5634415777785)]==>CTtis+CFtis",
      ""
     ],
     [
@@ -224,7 +224,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cCFcap,cSW1,cTIME_:((9469.334668001335*cCFcap*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*cTIME_)-1.89747625)-9533.3428666762*cCFcap+55.91210722799465*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)-55.91210722799465*cSW1-55.91210722799465*exp(7.142857142857143-2.380952380952381*cTIME_)+69.58556199609609)/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1))]==>CFcap",
+     "source+S[USER;cCFcap,cSW1,TIME:((9469.334668001335*cCFcap*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*TIME)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*TIME)-1.89747625)-9533.3428666762*cCFcap+55.91210722799465*cSW1*exp(7.142857142857143-2.380952380952381*TIME)-55.91210722799465*cSW1-55.91210722799465*exp(7.142857142857143-2.380952380952381*TIME)+69.58556199609609)/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1))]==>CFcap",
      ""
     ],
     [
@@ -238,7 +238,7 @@
      "1",
      "0",
      "0",
-     "CFtis+S[USER;cCFcap,cSW1,cTIME_:((9533.3428666762-9469.334668001335*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*cTIME_)-1.89747625))/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1))]==>CFcap+CFtis",
+     "CFtis+S[USER;cCFcap,cSW1,TIME:((9533.3428666762-9469.334668001335*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*TIME)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*TIME)-1.89747625))/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1))]==>CFcap+CFtis",
      ""
     ],
     [
@@ -252,7 +252,7 @@
      "1",
      "0",
      "0",
-     "CTcap+S[USER;cCFcap,cSW1,cTIME_:((-6.0774155107488435*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+6.0774155107488435*cSW1+6.0774155107488435*exp(7.142857142857143-2.380952380952381*cTIME_)-7.563663663663664)/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1))]==>CFcap+CTcap",
+     "CTcap+S[USER;cCFcap,cSW1,TIME:((-6.0774155107488435*cSW1*exp(7.142857142857143-2.380952380952381*TIME)+6.0774155107488435*cSW1+6.0774155107488435*exp(7.142857142857143-2.380952380952381*TIME)-7.563663663663664)/(196381.06236*cCFcap^1.7000000000000002/(7800.7*cCFcap^2.7+1)^2+1))]==>CFcap+CTcap",
      ""
     ],
     [
@@ -266,7 +266,7 @@
      "1",
      "0",
      "0",
-     "CFcap+S[USER;cCFtis,cSW1,cTIME_:((717.5634415777785-712.7456201721435*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*cTIME_)-1.89747625))/(1+124.4444544/(308.642*cCFtis+1)^2))]==>CFtis+CFcap",
+     "CFcap+S[USER;cCFtis,cSW1,TIME:((717.5634415777785-712.7456201721435*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*TIME)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*TIME)-1.89747625))/(1+124.4444544/(308.642*cCFtis+1)^2))]==>CFtis+CFcap",
      ""
     ],
     [
@@ -280,7 +280,7 @@
      "1",
      "0",
      "0",
-     "CFtis+S[USER;cCFtis,cSW1,cTIME_:((712.7456201721435*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*cTIME_)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*cTIME_)-1.89747625)-717.5634415777785)/(1+124.4444544/(308.642*cCFtis+1)^2))]==>2CFtis",
+     "CFtis+S[USER;cCFtis,cSW1,TIME:((712.7456201721435*exp(-1.59372625*cSW1*exp(7.142857142857143-2.380952380952381*TIME)+1.59372625*cSW1+1.59372625*exp(7.142857142857143-2.380952380952381*TIME)-1.89747625)-717.5634415777785)/(1+124.4444544/(308.642*cCFtis+1)^2))]==>2CFtis",
      ""
     ],
     [
@@ -295,20 +295,6 @@
      "0",
      "0",
      "CFtis+S[USER;cADP,cCFtis:((2202124.647416871*cADP*cCFtis^2+14269.766573679999*cADP*cCFtis+23.11702*cADP)/(95259.884164*cADP*(cCFtis+1e-30)^3+683.9659189148*cADP*(cCFtis+1e-30)^2+125.8765532*cADP*(cCFtis+1e-30)+0.08781111808*cADP+7.3008400856*cCFtis+5525.073281512*(cCFtis+1e-30)^3+39.6700232970584*(cCFtis+1e-30)^2+0.00509304484864))]==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -452,17 +438,6 @@
      "No",
      "No",
      "CFtis [CFtis]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

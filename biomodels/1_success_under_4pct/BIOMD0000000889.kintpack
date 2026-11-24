@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-10-31T04:37:27.600333+00:00",
- "description": "Fribourg2014 - Model of influenza A virus infection dynamics of viral antagonism and innate immune response.\nBioModels BIOMD0000000889 (curated). SBML file: Fribourg2014.xml.\nSimulation: 0 to 8 time units (SED-ML: Fribourg2014.sedml), sampling 0.008.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.99e-06 of species peak (worst: IFNBenv)\nSBML time units are used unchanged as Kintecus seconds.",
+ "description": "Fribourg2014 - Model of influenza A virus infection dynamics of viral antagonism and innate immune response.\nBioModels BIOMD0000000889 (curated). SBML file: Fribourg2014.xml.\nSimulation: 0 to 8 time units (SED-ML: Fribourg2014.sedml), sampling 0.008.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 5.00e-06 of species peak (worst: IFNBenv; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -56,7 +56,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.001/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>IFNBm",
+     "source+S[USER;TIME:(0.001/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>IFNBm",
      ""
     ],
     [
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "IRF7Pn+S[USER;cTIME_:(3.6e-5/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IFNBm+IRF7Pn",
+     "IRF7Pn+S[USER;TIME:(3.6e-5/(97.65624999999997*(TIME^5/(TIME^5+7776))^5+1))]==>IFNBm+IRF7Pn",
      ""
     ],
     [
@@ -84,7 +84,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.0029999999999999996*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>IFNBm",
+     "source+S[USER;TIME:(0.0029999999999999996*(TIME^5/(TIME^5+7776))/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>IFNBm",
      ""
     ],
     [
@@ -98,7 +98,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.03255208333333333*(cTIME_^5/(cTIME_^5+7776))^5/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>IFNBm",
+     "source+S[USER;TIME:(0.03255208333333333*(TIME^5/(TIME^5+7776))^5/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>IFNBm",
      ""
     ],
     [
@@ -112,7 +112,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.09765624999999997*(cTIME_^5/(cTIME_^5+7776))^6/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>IFNBm",
+     "source+S[USER;TIME:(0.09765624999999997*(TIME^5/(TIME^5+7776))^6/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>IFNBm",
      ""
     ],
     [
@@ -126,7 +126,7 @@
      "1",
      "0",
      "0",
-     "IRF7Pn+S[USER;cTIME_:(0.0011718749999999997*(cTIME_^5/(cTIME_^5+7776))^5/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IFNBm+IRF7Pn",
+     "IRF7Pn+S[USER;TIME:(0.0011718749999999997*(TIME^5/(TIME^5+7776))^5/(97.65624999999997*(TIME^5/(TIME^5+7776))^5+1))]==>IFNBm+IRF7Pn",
      ""
     ],
     [
@@ -210,7 +210,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(1e-7/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>SOCSm",
+     "source+S[USER;TIME:(1e-7/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>SOCSm",
      ""
     ],
     [
@@ -224,7 +224,7 @@
      "1",
      "0",
      "0",
-     "STATP2n+S[USER;cTIME_:(0.0036/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>SOCSm+STATP2n",
+     "STATP2n+S[USER;TIME:(0.0036/(97.65624999999997*(TIME^5/(TIME^5+7776))^5+1))]==>SOCSm+STATP2n",
      ""
     ],
     [
@@ -238,7 +238,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(2.9999999999999993e-7*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>SOCSm",
+     "source+S[USER;TIME:(2.9999999999999993e-7*(TIME^5/(TIME^5+7776))/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>SOCSm",
      ""
     ],
     [
@@ -252,7 +252,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(9.765624999999997e-6*(cTIME_^5/(cTIME_^5+7776))^6/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>SOCSm",
+     "source+S[USER;TIME:(9.765624999999997e-6*(TIME^5/(TIME^5+7776))^6/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>SOCSm",
      ""
     ],
     [
@@ -266,7 +266,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(3.2552083333333327e-6*(cTIME_^5/(cTIME_^5+7776))^5/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>SOCSm",
+     "source+S[USER;TIME:(3.2552083333333327e-6*(TIME^5/(TIME^5+7776))^5/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>SOCSm",
      ""
     ],
     [
@@ -280,7 +280,7 @@
      "1",
      "0",
      "0",
-     "STATP2n+S[USER;cTIME_:(0.11718749999999997*(cTIME_^5/(cTIME_^5+7776))^5/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>SOCSm+STATP2n",
+     "STATP2n+S[USER;TIME:(0.11718749999999997*(TIME^5/(TIME^5+7776))^5/(97.65624999999997*(TIME^5/(TIME^5+7776))^5+1))]==>SOCSm+STATP2n",
      ""
     ],
     [
@@ -308,7 +308,7 @@
      "1",
      "0",
      "0",
-     "STATP2n+S[USER;cTIME_:(0.00036/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IRF7m+STATP2n",
+     "STATP2n+S[USER;TIME:(0.00036/(97.65624999999997*(TIME^5/(TIME^5+7776))^5+1))]==>IRF7m+STATP2n",
      ""
     ],
     [
@@ -322,7 +322,7 @@
      "1",
      "0",
      "0",
-     "IRF7Pn+S[USER;cTIME_:(3.2040000000000004e-7/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IRF7m+IRF7Pn",
+     "IRF7Pn+S[USER;TIME:(3.2040000000000004e-7/(97.65624999999997*(TIME^5/(TIME^5+7776))^5+1))]==>IRF7m+IRF7Pn",
      ""
     ],
     [
@@ -336,7 +336,7 @@
      "1",
      "0",
      "0",
-     "IRF7Pn+S[USER;cTIME_:(1.0429687499999999e-5*(cTIME_^5/(cTIME_^5+7776))^5/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IRF7m+IRF7Pn",
+     "IRF7Pn+S[USER;TIME:(1.0429687499999999e-5*(TIME^5/(TIME^5+7776))^5/(97.65624999999997*(TIME^5/(TIME^5+7776))^5+1))]==>IRF7m+IRF7Pn",
      ""
     ],
     [
@@ -350,7 +350,7 @@
      "1",
      "0",
      "0",
-     "STATP2n+S[USER;cTIME_:(0.011718749999999998*(cTIME_^5/(cTIME_^5+7776))^5/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IRF7m+STATP2n",
+     "STATP2n+S[USER;TIME:(0.011718749999999998*(TIME^5/(TIME^5+7776))^5/(97.65624999999997*(TIME^5/(TIME^5+7776))^5+1))]==>IRF7m+STATP2n",
      ""
     ],
     [
@@ -378,7 +378,7 @@
      "1",
      "0",
      "0",
-     "IRF7m+S[USER;cTIME_:(360/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>IRF7Pn+IRF7m",
+     "IRF7m+S[USER;TIME:(360/(10*(TIME^5/(TIME^5+7776))+1))]==>IRF7Pn+IRF7m",
      ""
     ],
     [
@@ -392,7 +392,7 @@
      "1",
      "0",
      "0",
-     "IRF7m+S[USER;cTIME_:(1080*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+1))]==>IRF7Pn+IRF7m",
+     "IRF7m+S[USER;TIME:(1080*(TIME^5/(TIME^5+7776))/(10*(TIME^5/(TIME^5+7776))+1))]==>IRF7Pn+IRF7m",
      ""
     ],
     [
@@ -406,7 +406,7 @@
      "1",
      "0",
      "0",
-     "IRF7Pn+S[USER;cTIME_:(0.36/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IFNam+IRF7Pn",
+     "IRF7Pn+S[USER;TIME:(0.36/(97.65624999999997*(TIME^5/(TIME^5+7776))^5+1))]==>IFNam+IRF7Pn",
      ""
     ],
     [
@@ -420,7 +420,7 @@
      "1",
      "0",
      "0",
-     "IRF7Pn+S[USER;cTIME_:(11.718749999999998*(cTIME_^5/(cTIME_^5+7776))^5/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>IFNam+IRF7Pn",
+     "IRF7Pn+S[USER;TIME:(11.718749999999998*(TIME^5/(TIME^5+7776))^5/(97.65624999999997*(TIME^5/(TIME^5+7776))^5+1))]==>IFNam+IRF7Pn",
      ""
     ],
     [
@@ -462,7 +462,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.0001/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>TNFam",
+     "source+S[USER;TIME:(0.0001/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>TNFam",
      ""
     ],
     [
@@ -476,7 +476,7 @@
      "1",
      "0",
      "0",
-     "TFNenv+S[USER;cTFNenv,cTIME_:(0.001/(97.65624999999997*cTFNenv*(cTIME_^5/(cTIME_^5+7776))^5+1*cTFNenv+0.05859374999999998*(cTIME_^5/(cTIME_^5+7776))^5+0.0006))]==>TNFam+TFNenv",
+     "TFNenv+S[USER;cTFNenv,TIME:(0.001/(97.65624999999997*cTFNenv*(TIME^5/(TIME^5+7776))^5+1*cTFNenv+0.05859374999999998*(TIME^5/(TIME^5+7776))^5+0.0006))]==>TNFam+TFNenv",
      ""
     ],
     [
@@ -490,7 +490,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.0003*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>TNFam",
+     "source+S[USER;TIME:(0.0003*(TIME^5/(TIME^5+7776))/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>TNFam",
      ""
     ],
     [
@@ -504,7 +504,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.009765624999999998*(cTIME_^5/(cTIME_^5+7776))^6/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>TNFam",
+     "source+S[USER;TIME:(0.009765624999999998*(TIME^5/(TIME^5+7776))^6/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>TNFam",
      ""
     ],
     [
@@ -518,7 +518,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(0.003255208333333333*(cTIME_^5/(cTIME_^5+7776))^5/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>TNFam",
+     "source+S[USER;TIME:(0.003255208333333333*(TIME^5/(TIME^5+7776))^5/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>TNFam",
      ""
     ],
     [
@@ -532,7 +532,7 @@
      "1",
      "0",
      "0",
-     "TFNenv+S[USER;cTFNenv,cTIME_:(0.03255208333333333*(cTIME_^5/(cTIME_^5+7776))^5/(97.65624999999997*cTFNenv*(cTIME_^5/(cTIME_^5+7776))^5+1*cTFNenv+0.05859374999999998*(cTIME_^5/(cTIME_^5+7776))^5+0.0006))]==>TNFam+TFNenv",
+     "TFNenv+S[USER;cTFNenv,TIME:(0.03255208333333333*(TIME^5/(TIME^5+7776))^5/(97.65624999999997*cTFNenv*(TIME^5/(TIME^5+7776))^5+1*cTFNenv+0.05859374999999998*(TIME^5/(TIME^5+7776))^5+0.0006))]==>TNFam+TFNenv",
      ""
     ],
     [
@@ -574,7 +574,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(1e-6/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>STATm",
+     "source+S[USER;TIME:(1e-6/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>STATm",
      ""
     ],
     [
@@ -588,7 +588,7 @@
      "1",
      "0",
      "0",
-     "STATP2n+S[USER;cTIME_:(0.018/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>STATm+STATP2n",
+     "STATP2n+S[USER;TIME:(0.018/(97.65624999999997*(TIME^5/(TIME^5+7776))^5+1))]==>STATm+STATP2n",
      ""
     ],
     [
@@ -602,7 +602,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(2.9999999999999997e-6*(cTIME_^5/(cTIME_^5+7776))/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>STATm",
+     "source+S[USER;TIME:(2.9999999999999997e-6*(TIME^5/(TIME^5+7776))/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>STATm",
      ""
     ],
     [
@@ -616,7 +616,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(3.2552083333333326e-5*(cTIME_^5/(cTIME_^5+7776))^5/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>STATm",
+     "source+S[USER;TIME:(3.2552083333333326e-5*(TIME^5/(TIME^5+7776))^5/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>STATm",
      ""
     ],
     [
@@ -630,7 +630,7 @@
      "1",
      "0",
      "0",
-     "source+S[USER;cTIME_:(9.765624999999996e-5*(cTIME_^5/(cTIME_^5+7776))^6/(10*(cTIME_^5/(cTIME_^5+7776))+97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+976.5624999999997*(cTIME_^5/(cTIME_^5+7776))^6+1))]==>STATm",
+     "source+S[USER;TIME:(9.765624999999996e-5*(TIME^5/(TIME^5+7776))^6/(10*(TIME^5/(TIME^5+7776))+97.65624999999997*(TIME^5/(TIME^5+7776))^5+976.5624999999997*(TIME^5/(TIME^5+7776))^6+1))]==>STATm",
      ""
     ],
     [
@@ -644,7 +644,7 @@
      "1",
      "0",
      "0",
-     "STATP2n+S[USER;cTIME_:(0.5859374999999999*(cTIME_^5/(cTIME_^5+7776))^5/(97.65624999999997*(cTIME_^5/(cTIME_^5+7776))^5+1))]==>STATm+STATP2n",
+     "STATP2n+S[USER;TIME:(0.5859374999999999*(TIME^5/(TIME^5+7776))^5/(97.65624999999997*(TIME^5/(TIME^5+7776))^5+1))]==>STATm+STATP2n",
      ""
     ],
     [
@@ -687,20 +687,6 @@
      "0",
      "0",
      "STAT==>sink",
-     ""
-    ],
-    [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
      ""
     ],
     [
@@ -877,17 +863,6 @@
      "No",
      "No",
      "STAT [STAT]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [

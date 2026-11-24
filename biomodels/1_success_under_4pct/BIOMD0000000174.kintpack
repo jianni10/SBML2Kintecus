@@ -1,7 +1,7 @@
 {
  "version": 3,
  "created": "2026-11-07T20:37:20.836259+00:00",
- "description": "Del_Conte_Zerial2008_Rab5_Rab7_cut_out_switch\nBioModels BIOMD0000000174 (curated). SBML file: BIOMD0000000174_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000174_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.77e-06 of species peak (worst: r5)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): R51 = R5; R71 = R7",
+ "description": "Del_Conte_Zerial2008_Rab5_Rab7_cut_out_switch\nBioModels BIOMD0000000174 (curated). SBML file: BIOMD0000000174_url.xml.\nSimulation: 0 to 3000 time units (SED-ML: BIOMD0000000174_url.sedml (auto-generated placeholder); duration chosen from the dynamics: settled), sampling 3.\nRun switches: -ig:mass -INT:1 -obeymaxint\nVerification against libRoadRunner (SBML reference): PASS, max |difference| = 4.77e-06 of species peak (worst: r5; Kintecus 2026-11-23e build (md5 88f7fe5e...), native TIME)\nSBML time units are used unchanged as Kintecus seconds.\nRenamed species (Kintecus name = SBML id): R51 = R5; R71 = R7",
  "settings": {
   "kpath": "",
   "switches": "-ig:mass -INT:1 -obeymaxint",
@@ -70,7 +70,7 @@
      "1",
      "0",
      "0",
-     "r5+S[USER;cR51,cTIME_:(0.3*cTIME_/(cTIME_*exp(0.25-2.5*cR51)+1*cTIME_+100*exp(0.25-2.5*cR51)+100))]==>R51",
+     "r5+S[USER;cR51,TIME:(0.3*TIME/(TIME*exp(0.25-2.5*cR51)+1*TIME+100*exp(0.25-2.5*cR51)+100))]==>R51",
      ""
     ],
     [
@@ -186,20 +186,6 @@
      ""
     ],
     [
-     "#",
-     "",
-     "",
-     "SBML time as a pseudo-species (d TIME_/dt = 1)",
-     ""
-    ],
-    [
-     "1",
-     "0",
-     "0",
-     "source==>TIME_",
-     ""
-    ],
-    [
      "END",
      "",
      "",
@@ -285,17 +271,6 @@
      "No",
      "No",
      "Rab7-GTP [R7]",
-     ""
-    ],
-    [
-     "TIME_",
-     "0",
-     "0",
-     "N",
-     "0",
-     "No",
-     "No",
-     "time [__time__]",
      ""
     ],
     [
