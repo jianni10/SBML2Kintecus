@@ -2,7 +2,7 @@ SLOW JOBS - BioModels packs that did not finish within the time limits used here
 =====================================================================================================  (2026-11-13)
 
 WHICH PACKS
-  SLOW_JOBS.csv lists 11 packs. Each one ran out of time (too slow, or no new output row for the stall
+  SLOW_JOBS.csv lists 10 packs. Each one ran out of time (too slow, or no new output row for the stall
   window) on -INT:1 and -INT:5, 300 s each. -INT:2 (explicit Cash-Karp Runge-Kutta) is no longer used: it
   cannot integrate stiff systems (runs end with NaN/Inf), so only -INT:1 and -INT:5 are suggested. Kept run
   folders have VIEW.TXT / KWARN.OUT over 20 MB cut to their first and last 1,000 lines (*_head_tail.txt).

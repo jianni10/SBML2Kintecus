@@ -4,10 +4,10 @@ Built 2026-11-13; updated 2026-11-24 (95 packs read Kintecus TIME, see below). S
 (entries up to BIOMD0000001080, mirror dated June 2025).
 
 1072 curated models -> 1045 .kintpack files.
-SUCCESS (Kintecus output under 4% of the original SBML; rule set 2026-10-30): 963 packs
-  (944 of them within 0.1%, the earlier rule; column within_0.1pct in the table).
+SUCCESS (Kintecus output under 4% of the original SBML; rule set 2026-10-30): 964 packs
+  (945 of them within 0.1%, the earlier rule; column within_0.1pct in the table).
 Packs shown to reproduce the SBML (SUCCESS, or folder 2 where an independent SciPy run of the deck matches
-  within 0.1% but Kintecus is too slow or differs): 966.
+  within 0.1% but Kintecus is too slow or differs): 967.
 1072 entries (including every former #39/#999 pack) were rebuilt with the latest converter
 fixes; the others keep their earlier build and result (column built_with_latest_fixes in the table).
 
@@ -15,10 +15,10 @@ START HERE: FINAL_RESULTS_TABLE.csv (open in Excel) or FINAL_RESULTS_TABLE.txt -
 match %, SUCCESS yes/no, and a note on why it failed or how far off it is.
 
 WHAT IS IN THIS ZIP   (full table of contents: CONTENTS.txt)
-  1_success_under_4pct/                           963  Kintecus output matches the SBML to under 4%
+  1_success_under_4pct/                           964  Kintecus output matches the SBML to under 4%
   2_deck_verified_kintecus_too_slow_or_differs/     3  the deck reproduces the SBML (independent
                                                        check), but Kintecus is too slow, stops, or differs
-  3_off_partial_or_unverified/                     79  off by 4% or more, too slow, parts not convertible,
+  3_off_partial_or_unverified/                     78  off by 4% or more, too slow, parts not convertible,
                                                        or no SBML reference to check against
   (no pack)                                        27  nothing convertible / converter error
   FINAL_RESULTS_TABLE.csv / .txt   the results table (see above)
@@ -54,7 +54,7 @@ CHECKING THE PACKS ON YOUR OWN PC (RUN_ALL_CHECKS.bat)
      --stall 120 --cap 1800      more patience (seconds)            --tol 0.04                   threshold (4%)
      --switches "-ig:mass -INT:5:59:1e-20 -obeymaxint"  force other switches     --show  show Kintecus windows
   A full run of all packs takes hours (each stuck pack waits --stall seconds; slow ones up to --cap).
-  Start with  RUN_ALL_CHECKS.bat --folder 1_success  (about 963 packs).
+  Start with  RUN_ALL_CHECKS.bat --folder 1_success  (about 964 packs).
 
 FINISHING THE PACKS THAT RAN OUT OF TIME HERE (RUN_SLOW_JOBS.bat)
   SLOW_JOBS.csv lists every pack that ran out of time on all integrators tried here, with the integrator that

@@ -15,14 +15,14 @@ lines -INT:5:10:0 (DASPK without non-negativity), then for packs that still did 
 15 references (55, 165, 179, 180, 250, 286, 288, 451, 540, 541, 658, 858, 859, 948, 1025) use libRoadRunner default
 tolerances because CVODE fails at rtol 1e-10.
 Time in USER functions (2026-11-24): the 95 packs whose rates use time read Kintecus TIME (2026-11-23e build, md5
-88f7fe5e..., or later) instead of the TIME_ pseudo-species; all 95 rerun on that build. BIOMD0000000506 now runs
-on -INT:5 (passes here in 54 min).
+88f7fe5e..., or later) instead of the TIME_ pseudo-species; all 95 rerun on that build. BIOMD0000000506 and
+BIOMD0000000610 now run on -INT:5 and pass (0610 is new, 3.6 h here); BIOMD0000000412 passes on -INT:1 (3 h).
 
-  SUCCESS (under 4%)                                   963
-    of which within 0.1%                               944
+  SUCCESS (under 4%)                                   964
+    of which within 0.1%                               945
   off by 4% or more                                     59
   deck correct, Kintecus too slow / stops                3
-  Kintecus too slow / stops, deck not confirmed         13
+  Kintecus too slow / stops, deck not confirmed         12
   runs, SBML reference not simulable                     7
   runs, nothing changes to compare                       8
   no pack (nothing convertible / converter error)       27
@@ -1867,11 +1867,11 @@ BIOMD0000000411  YES  Kintecus   0.0043%  deck        -%  PASS
 BIOMD0000000412  YES  Kintecus  0.00046%  deck        -%  PASS
     Pokhilko2012_CircClock_RepressilatorFeedbackloop
     Kintecus matches the SBML within 0.1% (max 0.00046% of peak, worst species s4). Duration 100000 chosen
-    from the dynamics (no curated SED-ML time course). With native TIME the run here matched to 0.00042%
-    over the part that ran (to t=4600 of 100000) but is too slow for the 30-minute limit; full native run:
-    RUN_SLOW_JOBS.bat. -INT:5: stopped at the 1-hour limit (simulated time 29900 of 100000); off by 0.00042%
-    over the part that ran. Time is read as Kintecus TIME in 86 USER line(s) (needs the Kintecus 2026-11-23e
-    build (md5 88f7fe5e...) or later; earlier packs used a TIME_ pseudo-species).
+    from the dynamics (no curated SED-ML time course). With native TIME it also passes here: -INT:1 finished
+    in 10746 s (no time limit), off by 0.00046%. -INT:5: stopped at the 1-hour limit (simulated time 29900
+    of 100000); off by 0.00042% over the part that ran. Time is read as Kintecus TIME in 86 USER line(s)
+    (needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later; earlier packs used a TIME_ pseudo-
+    species).
 BIOMD0000000413  YES  Kintecus  0.00035%  deck        -%  PASS
     Band2012_DII-Venus_FullModel
     Kintecus matches the SBML within 0.1% (max 0.00035% of peak, worst species auxinTIR1). Duration 300
@@ -2722,18 +2722,19 @@ BIOMD0000000609  YES  Kintecus  0.00038%  deck        -%  PASS
     Reddyhoff2015 - Acetaminophen metabolism and toxicity
     Kintecus matches the SBML within 0.1% (max 0.00038% of peak, worst species Sulphate__PAPS). Duration 10
     chosen from the dynamics (no curated SED-ML time course).
-BIOMD0000000610  NO   Kintecus        -%  deck        -%  KINTECUS_FAILED
+BIOMD0000000610  YES  Kintecus   0.0051%  deck        -%  PASS
     PetelenzKuehn_osmoadaptation_gpd1D
-    Kintecus did not finish within the time limit (-INT:1: too slow (projected 304 s at t=3610); -INT:5:
-    stalled (no output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1
-    (deck before 11-01): too slow (projected 466 s at t=645); -INT:5 (deck before 11-01): stalled (no output
-    row for 30 s at t=0); -INT:1 on James's PC: projected 5987 s > cap 3600 s (at t=3610 of 30000)). The
-    independent deck run also failed (All components of the initial state `y0` must be finite.). Duration
-    30000 chosen from the dynamics (no curated SED-ML time course). Native TIME: -INT:1: stalled (no new
-    output row for 120 s (simulated time 3610 of 30000)); -INT:5: stopped at the 1-hour limit (simulated
-    time 8515 of 30000); off by 0.0048% over the part that ran. Time is read as Kintecus TIME in 83 USER
-    line(s) (needs the Kintecus 2026-11-23e build (md5 88f7fe5e...) or later; earlier packs used a TIME_
-    pseudo-species).
+    Kintecus matches the SBML within 0.1% (max 0.0051% of peak, worst species F26DP) with native TIME on
+    -INT:5 (2026-11-23e build): finished in 12801 s here with no time limit. Before 2026-11-24: Kintecus did
+    not finish within the time limit (-INT:1: too slow (projected 304 s at t=3610); -INT:5: stalled (no
+    output row for 30 s at t=0); -INT:5:10:0: stalled (no output row for 30 s at t=0); -INT:1 (deck before
+    11-01): too slow (projected 466 s at t=645); -INT:5 (deck before 11-01): stalled (no output row for 30 s
+    at t=0); -INT:1 on James's PC: projected 5987 s > cap 3600 s (at t=3610 of 30000)). The independent deck
+    run also failed (All components of the initial state `y0` must be finite.). Duration 30000 chosen from
+    the dynamics (no curated SED-ML time course). Native TIME: -INT:1: stalled (no new output row for 120 s
+    (simulated time 3610 of 30000)); -INT:5: stopped at the 1-hour limit (simulated time 8515 of 30000); off
+    by 0.0048% over the part that ran. Time is read as Kintecus TIME in 83 USER line(s) (needs the Kintecus
+    2026-11-23e build (md5 88f7fe5e...) or later; earlier packs used a TIME_ pseudo-species).
 BIOMD0000000611  NO   Kintecus 12889116%  deck  2.4e-07%  DECK_VERIFIED_KINTECUS_NUMERICS
     Nayak2015 - Blood Coagulation Network - Predicting the Effects of Various Therapies on Biomarkers
     The deck reproduces the SBML to 2.4e-07% (independent SciPy run of the same deck), but Kintecus's output
