@@ -29,7 +29,7 @@ REACTION_FIELD_MAX = int(os.environ.get("KIN_FIELD_MAX", 2153))
 USER_MAX_LEN = REACTION_FIELD_MAX
 MODEL_LINE_MAX = REACTION_FIELD_MAX + len('1\t0\t0\t') + 1
 LINE_MAX = REACTION_FIELD_MAX   # reaction field of a USER line; comments go on a '#' line above
-USER_SAFE = 840         # was 236 for builds before 2026-10-30, whose parsers mis-evaluated (FATAL #999 or silently wrong) USER expressions past
+USER_SAFE = 840         # converter preference only (long USER lines evaluate correctly since 2026-10-30; KINTECUS_ISSUES 2); was 236 for builds before 2026-10-30, whose parsers mis-evaluated (FATAL #999 or silently wrong) USER expressions past
                         # ~248 characters when they contain '^' (fewer with many '^'); len + count('^') is kept <= this
 MAX_REACTANTS = 3       # Kintecus V2027: a 4th reactant entry on one line gives FATAL #39
 USER_MAX_VARS = 92     # Kintecus build 2026-10-30 22:51: 92 variables per USER line run; 93 -> "missing a variable list" error
@@ -1473,8 +1473,6 @@ class Converter:
                 body = min([body] + pref, key=len)
             if ulen(body) > USER_SAFE:
                 self.long_lines.append((comment, ulen(body), vars_))
-                self.flag("info", f"{comment}: USER expression is {len(body)} characters; Kintecus V2027 mis-evaluates "
-                                  f"USER expressions longer than about {USER_SAFE} characters (see KINTECUS_ISSUES)")
         if len(body) > USER_MAX_LEN:
             parts = split_rate(user)
             if SPLIT_LONG and len(parts) > 1:
