@@ -259,6 +259,7 @@ STILL PRESENT
 3. At most 3 reactant entries per reaction line: A+B+C+D==>E (plain or with S[USER...]) gives FATAL #39
    "exceeded the number of reactants". (Not line length - an earlier note blaming long lines was wrong.)
    9 packs hit this; the converter now keeps lines to 3 reactants.
+   Enhancers do not count: A+B+C+S[USER;...]==>Z runs (checked on the 11-23e build); A+B+C+D+S[USER] gives the error.
 6. A species referenced only inside a USER expression (in no reaction line) stalls the run or gives
    FATAL #999 unless it is pinned with SPECIES column 7.
 7. A USER rate with a time discontinuity (step built from abs()) stalls the integrator at the step;
